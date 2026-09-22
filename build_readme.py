@@ -122,6 +122,12 @@ Source: [`neec_scores.csv`](neec_scores.csv) (field definitions in
 alternative weighting schemes is computed by Appendix A.4's script,
 [`run_a4_full_rerun_33.py`](run_a4_full_rerun_33.py).
 
+These totals are provisional. A clause-by-clause audit of the scores of 1.0
+([`NEEC_R4_MultiClause_Audit_s35.md`](NEEC_R4_MultiClause_Audit_s35.md), decision D28) found that most of
+those resting on a multi-clause Pass Threshold do not yet show every clause cleared. They are re-estimated
+before version 2.0. That can lower totals and ranks, but it cannot change a failure count, so no tier can
+change.
+
 ## Disclosure
 
 NEEC is written by Duke Johnson and Claude (Anthropic). Duke Johnson designed {TOP['system']}, one of the
