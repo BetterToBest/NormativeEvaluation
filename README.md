@@ -62,6 +62,12 @@ Source: [`neec_scores.csv`](neec_scores.csv) (field definitions in
 alternative weighting schemes is computed by Appendix A.4's script,
 [`run_a4_full_rerun_33.py`](run_a4_full_rerun_33.py).
 
+These totals are provisional. A clause-by-clause audit of the scores of 1.0
+([`NEEC_R4_MultiClause_Audit_s35.md`](NEEC_R4_MultiClause_Audit_s35.md), decision D28) found that most of
+those resting on a multi-clause Pass Threshold do not yet show every clause cleared. They are re-estimated
+before version 2.0. That can lower totals and ranks, but it cannot change a failure count, so no tier can
+change.
+
 ## Disclosure
 
 NEEC is written by Duke Johnson and Claude (Anthropic). Duke Johnson designed CCO-PTF-CIP-SZH, one of the
@@ -81,7 +87,7 @@ Requirements: Python 3.12 (standard library only) and, for three checks, Node.js
 python3 run_all_checks.py
 ```
 
-This runs 74 checks. Each copies exactly the files one script needs into a fresh temporary
+This runs 75 checks. Each copies exactly the files one script needs into a fresh temporary
 directory, runs the script there, and compares its output byte for byte with the captured copy in this
 repository; negative controls confirm that the verifiers reject superseded states. The captured output of
 the whole run is [`run_all_checks_output.txt`](run_all_checks_output.txt), and GitHub Actions repeats the

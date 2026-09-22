@@ -1,0 +1,324 @@
+NEEC revision R4: the multi-clause audit and decision D28 (NEEC_R4_MultiClause_Audit_s35.md)
+inputs: criteria.json, neec_corpus.json, neec_scores.csv, NEEC_Report_v1_6.md, 10 native scoring documents
+
+[1] CLAUSES AND POPULATION
+  PASS 21 criteria have multi-clause Pass Thresholds; 5 have one clause (C1.2a, C1.2b, C1.5, C2.2, C3.3)
+  PASS every clause is a verbatim substring of its definition Pass Threshold, located once, in order, leaving only connective text (and C1.4's shared qualifier, C5.2's shared head)
+  clauses per criterion: C1.1 2, C1.3 2, C1.4 2, C2.1 2, C2.3 3, C2.4 3, C2.5 4, C3.1 3, C3.2 3, C3.4 4, C3.5 4, C4.1 4, C4.2 4, C4.3 3, C4.4 4, C4.5 3, C5.1 2, C5.2 5, C5.3 4, C5.4 3, C5.5 4
+  PASS every corpus vector's total and failure count agree with neec_scores.csv (23 entries)
+  PASS population: 167 of the corpus's 184 scores of 1.0 rest on a multi-clause threshold
+  1.0s per criterion: C1.1 9, C1.3 9, C1.4 4, C2.1 8, C2.3 8, C2.4 8, C2.5 10, C3.1 7, C3.2 9, C3.4 17, C3.5 3, C4.1 8, C4.2 7, C4.3 7, C4.4 6, C4.5 6, C5.1 13, C5.2 7, C5.3 15, C5.4 2, C5.5 4
+  PASS the register holds exactly the population, one unit each
+
+[2] THE RATIONALES
+  PASS NEEC_Report_v1_6.md: the thirteen Part I blocks are in corpus order (SQ, NSD, CPS, MS, LM, MMT, UBI, DG, SC, FALC, PE, CCO, INT)
+  PASS all 167 rationales located exactly once; every heading states 1.0 (43 in native documents, 124 in NEEC_Report_v1_6.md)
+
+[3] THE CODES
+  PASS every unit has one code per clause; every A, P, X and N phrase is located in its rationale; lower-case codes occur only on mechanism-class entries
+  PASS every out-of-reach clause has its reason stated (18 clauses, 10 units)
+  PASS 542 clause codes: A 271, S 207, P 24, X 11, N 11, s 17, p 1
+  PASS self-test: the locator rejects a phrase absent from every rationale
+  PASS self-test: the three rules behave as defined
+  clauses never shown in any audited 1.0 (every unit A-less there):
+    C1.1 (stress ≥85%): 9 of 9 units -- codes SSSSSSSSS
+    C2.1 (revealed preference): 8 of 8 units -- codes SSSSSSSS
+    C2.3 (satisfaction ≥70): 8 of 8 units -- codes SSSSSSSS
+    C2.4 (proposals ≥35%): 8 of 8 units -- codes SSSSSSSs
+    C2.4 (responsiveness ≥65%): 8 of 8 units -- codes SSSSSSSs
+    C3.5 (correction ≥70%): 3 of 3 units -- codes SSX
+    C4.1 (debt <80% GDP): 8 of 8 units -- codes SSSSSSSs
+    C4.2 (biodiversity): 7 of 7 units -- codes SSSSSSs
+    C4.4 (removal mechanisms): 6 of 6 units -- codes SSSSSS
+    C5.4 (repeal opposition ≥65%): 2 of 2 units -- codes SS
+    C5.4 (survival ≥80%): 2 of 2 units -- codes SS
+
+[4] THE REGISTER (units in corpus order within each criterion; D28 / reach-excused / stated-shortfall)
+  code key: A addressed  P partial  X shortfall  S silent  N moot; lower case = outside a mechanism's reach
+  C1.1  clauses: base ≥90% | stress ≥85%
+    NSD   AS     0.5    0.5    stands  not shown: stress ≥85%
+    CPS   AS     0.5    0.5    stands  not shown: stress ≥85%
+    MS    AS     0.5    0.5    stands  not shown: stress ≥85%
+    MMT   AS     0.5    0.5    stands  not shown: stress ≥85%
+    UBI   AS     0.5    0.5    stands  not shown: stress ≥85%
+    DG    AS     0.5    0.5    stands  not shown: stress ≥85%
+    FALC  AS     0.5    0.5    stands  not shown: stress ≥85%
+    PE    AS     0.5    0.5    stands  not shown: stress ≥85%
+    CCO   AS     0.5    0.5    stands  not shown: stress ≥85%
+  C1.3  clauses: stability ≥88% | affordability 80% AMI
+    NSD   AS     0.5    0.5    stands  not shown: affordability 80% AMI
+    CPS   AA     stands stands stands
+    MMT   Ps     0.5    0.5    0.5     not shown: stability ≥88%; affordability 80% AMI
+    DG    AA     stands stands stands
+    FALC  AA     stands stands stands
+    PE    AA     stands stands stands
+    CCO   AA     stands stands stands
+    INT   AA     stands stands stands
+    SG    AP     0.5    0.5    0.5     not shown: affordability 80% AMI
+  C1.4  clauses: poverty <8% | demand >85%
+    UBI   AA     stands stands stands
+    FALC  SS     0.5    0.5    stands  not shown: poverty <8%; demand >85%
+    PE    AS     0.5    0.5    stands  not shown: demand >85%
+    CCO   AA     stands stands stands
+  C2.1  clauses: autonomy ≥70% | revealed preference
+    NSD   PS     0.5    0.5    0.5     not shown: autonomy ≥70%; revealed preference
+    MS    PS     0.5    0.5    0.5     not shown: autonomy ≥70%; revealed preference
+    UBI   PS     0.5    0.5    0.5     not shown: autonomy ≥70%; revealed preference
+    DG    AS     0.5    0.5    stands  not shown: revealed preference
+    FALC  AS     0.5    0.5    stands  not shown: revealed preference
+    PE    AS     0.5    0.5    stands  not shown: revealed preference
+    CCO   AS     0.5    0.5    stands  not shown: revealed preference
+    INT   AS     0.5    0.5    stands  not shown: revealed preference
+  C2.3  clauses: engagement ≥50% | 10+ h/week | satisfaction ≥70
+    NSD   XAS    0.5    0.5    0.5     not shown: engagement ≥50%; satisfaction ≥70
+    MS    SAS    0.5    0.5    stands  not shown: engagement ≥50%; satisfaction ≥70
+    LM    XPS    0.5    0.5    0.5     not shown: engagement ≥50%; 10+ h/week; satisfaction ≥70
+    DG    SAS    0.5    0.5    stands  not shown: engagement ≥50%; satisfaction ≥70
+    FALC  AAS    0.5    0.5    stands  not shown: satisfaction ≥70
+    PE    SAS    0.5    0.5    stands  not shown: engagement ≥50%; satisfaction ≥70
+    CCO   SAS    0.5    0.5    stands  not shown: engagement ≥50%; satisfaction ≥70
+    INT   AAS    0.5    0.5    stands  not shown: satisfaction ≥70
+  C2.4  clauses: participation ≥70% | proposals ≥35% | responsiveness ≥65%
+    NSD   PSS    0.5    0.5    0.5     not shown: participation ≥70%; proposals ≥35%; responsiveness ≥65%
+    MS    ASS    0.5    0.5    stands  not shown: proposals ≥35%; responsiveness ≥65%
+    LM    XSS    0.5    0.5    0.5     not shown: participation ≥70%; proposals ≥35%; responsiveness ≥65%
+    MMT   sss    0.5    0.5    stands  not shown: participation ≥70%; proposals ≥35%; responsiveness ≥65%
+    DG    ASS    0.5    0.5    stands  not shown: proposals ≥35%; responsiveness ≥65%
+    PE    ASS    0.5    0.5    stands  not shown: proposals ≥35%; responsiveness ≥65%
+    CCO   ASS    0.5    0.5    stands  not shown: proposals ≥35%; responsiveness ≥65%
+    INT   ASS    0.5    0.5    stands  not shown: proposals ≥35%; responsiveness ≥65%
+  C2.5  clauses: exit ≤3 months | no differential treatment | mobility | voluntary association
+    LM    ASAA   0.5    0.5    stands  not shown: no differential treatment
+    CCO   ASAS   0.5    0.5    stands  not shown: no differential treatment; voluntary association
+    INT   ASSA   0.5    0.5    stands  not shown: no differential treatment; mobility
+    GEO   ASAs   0.5    0.5    stands  not shown: no differential treatment; voluntary association
+    MC    ASSA   0.5    0.5    stands  not shown: no differential treatment; mobility
+    DE    AAAS   0.5    0.5    stands  not shown: voluntary association
+    UBS   ASAs   0.5    0.5    stands  not shown: no differential treatment; voluntary association
+    SWF   AAAs   0.5    stands stands  not shown: voluntary association
+    IF    ASss   0.5    0.5    stands  not shown: no differential treatment; mobility; voluntary association
+    OS    ASSS   0.5    0.5    stands  not shown: no differential treatment; mobility; voluntary association
+  C3.1  clauses: ≤72 hours | 1:1 scaling | coverage ≥90%
+    NSD   APS    0.5    0.5    0.5     not shown: 1:1 scaling; coverage ≥90%
+    MMT   AAS    0.5    0.5    stands  not shown: coverage ≥90%
+    UBI   ASA    0.5    0.5    stands  not shown: 1:1 scaling
+    DG    ASS    0.5    0.5    stands  not shown: 1:1 scaling; coverage ≥90%
+    PE    ASS    0.5    0.5    stands  not shown: 1:1 scaling; coverage ≥90%
+    CCO   APA    0.5    0.5    0.5     not shown: 1:1 scaling
+    INT   ASA    0.5    0.5    stands  not shown: 1:1 scaling
+  C3.2  clauses: long-term ≤3% | stress ≤5% | automatic adjustment
+    SQ    ASS    0.5    0.5    stands  not shown: stress ≤5%; automatic adjustment
+    NSD   ASS    0.5    0.5    stands  not shown: stress ≤5%; automatic adjustment
+    CPS   XSS    0.5    0.5    0.5     not shown: long-term ≤3%; stress ≤5%; automatic adjustment
+    FALC  ASX    0.5    0.5    0.5     not shown: stress ≤5%; automatic adjustment
+    PE    ASA    0.5    0.5    stands  not shown: stress ≤5%
+    CCO   AAA    stands stands stands
+    INT   ASA    0.5    0.5    stands  not shown: stress ≤5%
+    CN    AAA    stands stands stands
+    SG    AAA    stands stands stands
+  C3.4  clauses: range ≥30% | updates ≤6 months | democratic governance | zero collapses
+    NSD   AASS   0.5    0.5    stands  not shown: democratic governance; zero collapses
+    MS    SAAA   0.5    0.5    stands  not shown: range ≥30%
+    MMT   ASSS   0.5    0.5    stands  not shown: updates ≤6 months; democratic governance; zero collapses
+    UBI   ASSS   0.5    0.5    stands  not shown: updates ≤6 months; democratic governance; zero collapses
+    DG    AAAS   0.5    0.5    stands  not shown: zero collapses
+    SC    ASSS   0.5    0.5    stands  not shown: updates ≤6 months; democratic governance; zero collapses
+    PE    AAAS   0.5    0.5    stands  not shown: zero collapses
+    CCO   AAAS   0.5    0.5    stands  not shown: zero collapses
+    INT   AAAA   stands stands stands
+    GEO   APAA   0.5    0.5    0.5     not shown: updates ≤6 months
+    MC    ASSA   0.5    0.5    stands  not shown: updates ≤6 months; democratic governance
+    DE    APSS   0.5    0.5    0.5     not shown: updates ≤6 months; democratic governance; zero collapses
+    UBS   ASSS   0.5    0.5    stands  not shown: updates ≤6 months; democratic governance; zero collapses
+    SWF   PSAA   0.5    0.5    0.5     not shown: range ≥30%; updates ≤6 months
+    SG    AXPA   0.5    0.5    0.5     not shown: updates ≤6 months; democratic governance
+    IF    APPA   0.5    0.5    0.5     not shown: updates ≤6 months; democratic governance
+    OS    AAAP   0.5    0.5    0.5     not shown: zero collapses
+  C3.5  clauses: detection ≤1 week | diagnosis ≥80% | correction ≥70% | externalisation <10%
+    CPS   ASXS   0.5    0.5    0.5     not shown: diagnosis ≥80%; correction ≥70%; externalisation <10%
+    CCO   AASS   0.5    0.5    stands  not shown: correction ≥70%; externalisation <10%
+    INT   ASSA   0.5    0.5    stands  not shown: diagnosis ≥80%; correction ≥70%
+  C4.1  clauses: carbon -35% | use ≤ regeneration | debt <80% GDP | positive transfer
+    DG    AASA   0.5    0.5    stands  not shown: debt <80% GDP
+    FALC  SASA   0.5    0.5    stands  not shown: carbon -35%; debt <80% GDP
+    PE    SASS   0.5    0.5    stands  not shown: carbon -35%; debt <80% GDP; positive transfer
+    CCO   ASSA   0.5    0.5    stands  not shown: use ≤ regeneration; debt <80% GDP
+    INT   SASA   0.5    0.5    stands  not shown: carbon -35%; debt <80% GDP
+    DE    SASS   0.5    0.5    stands  not shown: carbon -35%; debt <80% GDP; positive transfer
+    SWF   ssSA   0.5    0.5    stands  not shown: carbon -35%; use ≤ regeneration; debt <80% GDP
+    OS    sAsA   0.5    stands stands  not shown: carbon -35%; debt <80% GDP
+  C4.2  clauses: carbon -35-45% | biodiversity | extraction ≤ regeneration | ≥7/9 boundaries
+    MMT   psss   0.5    0.5    0.5     not shown: carbon -35-45%; biodiversity; extraction ≤ regeneration; ≥7/9 boundaries
+    DG    ASSA   0.5    0.5    stands  not shown: biodiversity; extraction ≤ regeneration
+    FALC  SSAA   0.5    0.5    stands  not shown: carbon -35-45%; biodiversity
+    PE    SSAA   0.5    0.5    stands  not shown: carbon -35-45%; biodiversity
+    CCO   ASSS   0.5    0.5    stands  not shown: biodiversity; extraction ≤ regeneration; ≥7/9 boundaries
+    INT   SSSA   0.5    0.5    stands  not shown: carbon -35-45%; biodiversity; extraction ≤ regeneration
+    DE    SSSA   0.5    0.5    stands  not shown: carbon -35-45%; biodiversity; extraction ≤ regeneration
+  C4.3  clauses: -5pp per 5 years | 150%+ benefits | convergence <20%
+    NSD   ASA    0.5    0.5    stands  not shown: 150%+ benefits
+    CPS   SSA    0.5    0.5    stands  not shown: -5pp per 5 years; 150%+ benefits
+    MMT   AAS    0.5    0.5    stands  not shown: convergence <20%
+    UBI   ASS    0.5    0.5    stands  not shown: 150%+ benefits; convergence <20%
+    DG    ASS    0.5    0.5    stands  not shown: 150%+ benefits; convergence <20%
+    PE    ASS    0.5    0.5    stands  not shown: 150%+ benefits; convergence <20%
+    CCO   AAA    stands stands stands
+  C4.4  clauses: wealth Gini <0.35 | proposals ≥40% | accountability ≥80% | removal mechanisms
+    NSD   XSSS   0.5    0.5    0.5     not shown: wealth Gini <0.35; proposals ≥40%; accountability ≥80%; removal mechanisms
+    MS    PSAS   0.5    0.5    0.5     not shown: wealth Gini <0.35; proposals ≥40%; removal mechanisms
+    DG    SSSS   0.5    0.5    stands  not shown: wealth Gini <0.35; proposals ≥40%; accountability ≥80%; removal mechanisms
+    PE    ASAS   0.5    0.5    stands  not shown: proposals ≥40%; removal mechanisms
+    CCO   ASAS   0.5    0.5    stands  not shown: proposals ≥40%; removal mechanisms
+    INT   AAAS   0.5    0.5    stands  not shown: removal mechanisms
+  C4.5  clauses: extraction <10% GDP | exit rights | coercion <10%
+    CPS   XSS    0.5    0.5    0.5     not shown: extraction <10% GDP; exit rights; coercion <10%
+    LM    SSX    0.5    0.5    0.5     not shown: extraction <10% GDP; exit rights; coercion <10%
+    UBI   sAP    0.5    0.5    0.5     not shown: extraction <10% GDP; coercion <10%
+    DG    ASS    0.5    0.5    stands  not shown: exit rights; coercion <10%
+    FALC  ASA    0.5    0.5    stands  not shown: exit rights
+    INT   ASA    0.5    0.5    stands  not shown: exit rights
+  C5.1  clauses: ≥70% proven | outcomes match claims
+    SQ    AP     0.5    0.5    0.5     not shown: outcomes match claims
+    NSD   AA     stands stands stands
+    MS    AA     stands stands stands
+    UBI   AA     stands stands stands
+    CCO   AA     stands stands stands
+    MC    AA     stands stands stands
+    UBS   AA     stands stands stands
+    SWF   AA     stands stands stands
+    CN    AA     stands stands stands
+    SG    AA     stands stands stands
+    QA    AA     stands stands stands
+    IF    AP     0.5    0.5    0.5     not shown: outcomes match claims
+    OS    AA     stands stands stands
+  C5.2  clauses: staged ≥4 phases | rapid ≤36 months | milestones | resources | risk mitigation
+    SQ    NNNNN  stands stands stands
+    NSD   ASSSS  0.5    0.5    stands  not shown: rapid ≤36 months; milestones; resources; risk mitigation
+    LM    ASSSS  0.5    0.5    stands  not shown: rapid ≤36 months; milestones; resources; risk mitigation
+    MMT   PSSSS  0.5    0.5    0.5     not shown: staged ≥4 phases; rapid ≤36 months; milestones; resources; risk mitigation
+    SC    ASSSS  0.5    0.5    stands  not shown: rapid ≤36 months; milestones; resources; risk mitigation
+    CCO   PASSS  0.5    0.5    0.5     not shown: staged ≥4 phases; milestones; resources; risk mitigation
+    IF    AAASA  0.5    0.5    stands  not shown: resources
+  C5.3  clauses: viable at ≥30% | coexistence ≥90% | scaling validated | coordination protocols
+    SQ    NANN   stands stands stands
+    MS    AASS   0.5    0.5    stands  not shown: scaling validated; coordination protocols
+    UBI   AAPS   0.5    0.5    0.5     not shown: scaling validated; coordination protocols
+    SC    AASS   0.5    0.5    stands  not shown: scaling validated; coordination protocols
+    CCO   AAAA   stands stands stands
+    INT   AAPS   0.5    0.5    0.5     not shown: scaling validated; coordination protocols
+    GEO   AAAN   stands stands stands
+    MC    AASN   0.5    0.5    stands  not shown: scaling validated
+    DE    AAAS   0.5    0.5    stands  not shown: coordination protocols
+    UBS   ASAS   0.5    0.5    stands  not shown: coexistence ≥90%; coordination protocols
+    SWF   AAAN   stands stands stands
+    SG    AASA   0.5    0.5    stands  not shown: scaling validated
+    QA    AAXS   0.5    0.5    0.5     not shown: scaling validated; coordination protocols
+    IF    AAAA   stands stands stands
+    OS    AAAA   stands stands stands
+  C5.4  clauses: support ≥60% | repeal opposition ≥65% | survival ≥80%
+    NSD   ASS    0.5    0.5    stands  not shown: repeal opposition ≥65%; survival ≥80%
+    CCO   ASS    0.5    0.5    stands  not shown: repeal opposition ≥65%; survival ≥80%
+  C5.5  clauses: ≥3 economic contexts | ≥5 cultural contexts | flexibility ≥40% | validated implementations
+    PE    SAAS   0.5    0.5    stands  not shown: ≥3 economic contexts; validated implementations
+    MC    AASA   0.5    0.5    stands  not shown: flexibility ≥40%
+    IF    AAAA   stands stands stands
+    OS    AAAA   stands stands stands
+
+[5] QUOTED THRESHOLDS AGAINST THE DEFINITIONS
+  PASS every clause keyword occurs in its own definition, and no added phrase does
+  criteria.json anchor C2.5: drops ['voluntary association']
+  criteria.json anchor C3.1: drops []; adds ['legislative']
+  criteria.json anchor C5.1: drops ['matching']
+  criteria.json anchor C5.3: drops ['model', 'coordination']
+  PASS criteria.json: four anchor thresholds differ in substance from their definitions (C2.5, C3.1, C5.1, C5.3)
+  IF and OS quote C2.1: drops ['revealed preference']
+  IF and OS quote C2.3: drops ['satisfaction ≥70']
+  IF and OS quote C2.4: drops ['responsiveness ≥65%']
+  IF and OS quote C2.5: drops ['no differential treatment', 'mobility', 'voluntary association']; adds ['partial participation']
+  IF and OS quote C3.1: drops ['1:1 scaling']; adds ['legislative']
+  IF and OS quote C3.4: drops ['democratic governance']
+  IF and OS quote C4.2: drops ['biodiversity']
+  IF and OS quote C4.3: drops ['convergence <20%']
+  IF and OS quote C4.4: drops ['removal mechanisms']
+  IF and OS quote C5.1: drops ['outcomes match claims']
+  IF and OS quote C5.2: drops []; adds ['judge on specificity']
+  IF and OS quote C5.3: drops ['scaling validated', 'coordination protocols']
+  PASS the two documents quote the same working thresholds; 12 of 26 differ in substance from the definitions
+  audited 1.0s scored against a quotation that drops a clause: IF C2.5, IF C3.4, IF C5.1, IF C5.3, OS C2.5, OS C3.4, OS C5.1, OS C5.3
+  PASS eight audited 1.0s (IF and OS: C2.5, C3.4, C5.1, C5.3) were scored against a quotation that drops a clause
+
+[6] CONSEQUENCES (the bound: every 1.0 a rule does not let stand becomes 0.5)
+  D28                33 of 167 stand; 134 become 0.5 (67.0 points across the corpus)
+  reach-excused      35 of 167 stand; 132 become 0.5 (66.0 points across the corpus)
+  stated-shortfall  134 of 167 stand;  33 become 0.5 (16.5 points across the corpus)
+  PASS D28 lets 33 stand; reach-excused 35; stated-shortfall demotes 33
+  PASS how an out-of-reach clause counts decides only OS C4.1 and SWF C2.5; every unit the stated-shortfall rule demotes, D28 also demotes
+  PASS no failure count changes under any rule, so no tier changes
+
+  | Entry | Audited 1.0s | Not shown (D28) | Stated shortfall | Total now (rank) | D28 bound (rank) | Stated-shortfall bound (rank) |
+  |---|---:|---:|---:|---:|---:|---:|
+  | CCO | 19 | 13 | 2 | 24.5 (1) | 18.0 (1) | 23.5 (1) |
+  | PE | 14 | 13 | 0 | 20.5 (2) | 14.0 (2) | 20.5 (2) |
+  | NSD | 13 | 12 | 5 | 19.5 (3) | 13.5 (3) | 17.0 (5) |
+  | INT | 14 | 12 | 1 | 19.5 (3) | 13.5 (3) | 19.0 (3) |
+  | DG | 12 | 11 | 0 | 19.0 (5) | 13.5 (3) | 19.0 (3) |
+  | MS | 8 | 7 | 2 | 16.5 (6) | 13.0 (6) | 15.5 (6) |
+  | MMT | 8 | 8 | 3 | 15.5 (7) | 11.5 (13) | 14.0 (8) |
+  | UBI | 9 | 7 | 3 | 14.5 (8) | 11.0 (15) | 13.0 (12) |
+  | MC | 5 | 4 | 0 | 14.5 (8) | 12.5 (8) | 14.5 (7) |
+  | OS | 6 | 3 | 1 | 14.5 (8) | 13.0 (6) | 14.0 (8) |
+  | SWF | 5 | 3 | 1 | 14.0 (11) | 12.5 (8) | 13.5 (10) |
+  | SG | 5 | 3 | 2 | 14.0 (11) | 12.5 (8) | 13.0 (12) |
+  | GEO | 3 | 2 | 1 | 13.5 (13) | 12.5 (8) | 13.0 (12) |
+  | UBS | 4 | 3 | 0 | 13.5 (13) | 12.0 (12) | 13.5 (10) |
+  | IF | 6 | 4 | 2 | 13.5 (13) | 11.5 (13) | 12.5 (15) |
+  | FALC | 9 | 8 | 1 | 13.0 (16) | 9.0 (18) | 12.5 (15) |
+  | DE | 5 | 5 | 1 | 11.5 (17) | 9.0 (18) | 11.0 (17) |
+  | SQ | 4 | 2 | 1 | 10.5 (18) | 9.5 (17) | 10.0 (18) |
+  | CPS | 6 | 5 | 3 | 10.0 (19) | 7.5 (22) | 8.5 (21) |
+  | SC | 3 | 3 | 0 | 10.0 (19) | 8.5 (20) | 10.0 (18) |
+  | CN | 2 | 0 | 0 | 10.0 (19) | 10.0 (16) | 10.0 (18) |
+  | QA | 2 | 1 | 1 | 9.0 (22) | 8.5 (20) | 8.5 (21) |
+  | LM | 5 | 5 | 3 | 8.0 (23) | 5.5 (23) | 6.5 (23) |
+  PASS baseline dominance pairs: 14 (the canonical count)
+  D28               dominance pairs 32 (new: CCO>CPS, CCO>DG, CCO>FALC, CCO>LM, CCO>MC, CCO>PE, CCO>UBI, CN>QA, GEO>DE, GEO>LM, INT>CPS, MC>LM, MMT>LM, MMT>SC, OS>DE, OS>LM, PE>DE, UBS>DE, UBS>LM; lost: CCO>SQ); frontier 6: SQ, NSD, CCO, INT, IF, OS
+  reach-excused     dominance pairs 31 (new: CCO>CPS, CCO>DG, CCO>FALC, CCO>LM, CCO>MC, CCO>PE, CCO>UBI, CN>QA, GEO>DE, GEO>LM, INT>CPS, MC>LM, MMT>LM, MMT>SC, OS>DE, OS>LM, PE>DE, UBS>DE, UBS>LM; lost: CCO>SQ, CCO>SWF); frontier 7: SQ, NSD, CCO, INT, SWF, IF, OS
+  stated-shortfall  dominance pairs 12 (new: CCO>CPS, CN>QA; lost: CCO>MMT, CCO>SC, CCO>SQ, IF>SC); frontier 14: SQ, NSD, LM, MMT, UBI, DG, SC, FALC, PE, CCO, INT, MC, IF, OS
+  baseline          dominance pairs 14; frontier 12: NSD, CPS, LM, UBI, DG, FALC, PE, CCO, INT, MC, IF, OS
+  first place: baseline CCO; D28 bound CCO
+
+[7] THE RECORD'S TABLES (generated here; the record must contain them verbatim)
+  PASS NEEC_R4_MultiClause_Audit_s35.md contains the per-criterion table (22 rows)
+  PASS NEEC_R4_MultiClause_Audit_s35.md contains the per-entry table (23 rows)
+
+  | Criterion | Clauses | Audited 1.0s | Clause judgments | Stand under D28 | Stand if out-of-reach clauses are excused | Survive the stated-shortfall rule |
+  |---|---:|---:|---:|---:|---:|---:|
+  | C1.1 | 2 | 9 | 18 | 0 | 0 | 9 |
+  | C1.3 | 2 | 9 | 18 | 6 | 6 | 7 |
+  | C1.4 | 2 | 4 | 8 | 2 | 2 | 4 |
+  | C2.1 | 2 | 8 | 16 | 0 | 0 | 5 |
+  | C2.3 | 3 | 8 | 24 | 0 | 0 | 6 |
+  | C2.4 | 3 | 8 | 24 | 0 | 0 | 6 |
+  | C2.5 | 4 | 10 | 40 | 0 | 1 | 10 |
+  | C3.1 | 3 | 7 | 21 | 0 | 0 | 5 |
+  | C3.2 | 3 | 9 | 27 | 3 | 3 | 7 |
+  | C3.4 | 4 | 17 | 68 | 1 | 1 | 11 |
+  | C3.5 | 4 | 3 | 12 | 0 | 0 | 2 |
+  | C4.1 | 4 | 8 | 32 | 0 | 1 | 8 |
+  | C4.2 | 4 | 7 | 28 | 0 | 0 | 6 |
+  | C4.3 | 3 | 7 | 21 | 1 | 1 | 7 |
+  | C4.4 | 4 | 6 | 24 | 0 | 0 | 4 |
+  | C4.5 | 3 | 6 | 18 | 0 | 0 | 3 |
+  | C5.1 | 2 | 13 | 26 | 11 | 11 | 11 |
+  | C5.2 | 5 | 7 | 35 | 1 | 1 | 5 |
+  | C5.3 | 4 | 15 | 60 | 6 | 6 | 12 |
+  | C5.4 | 3 | 2 | 6 | 0 | 0 | 2 |
+  | C5.5 | 4 | 4 | 16 | 2 | 2 | 4 |
+  | All | | 167 | 542 | 33 | 35 | 134 |
+
+[8] DECISION D28 (adopted; text in the record, section 6)
+  A 1.0 on a multi-clause Pass Threshold requires every clause shown cleared; silence is not clearance;
+  a clause outside a mechanism's reach cannot be credited; 0.0 stays holistic (2.1), so no tier moves.
+  Textual bound: 134 of 167 audited 1.0s to be re-estimated (67.0 points); the rescoring pass also tests C5.1's full second clause on its 13 1.0s. Applied by that pass, not here.
+
+R4 AUDIT COMPUTED.

@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 9 (Session 34). Runs every verification and analysis script on file
+Version 10 (Session 35). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -83,6 +83,11 @@ regenerates README.md, the repository's landing page, with build_readme.py, whos
 and check count are computed from neec_scores.csv and from this harness (and the protocol's version from
 SCORING_PROTOCOL.md's header), and compares it byte for byte with the committed copy, so the landing page
 cannot drift from the data: 74 checks.
+Version 10 (Session 35) adds revision R4's audit: r4_audit_s35.py, which audits every corpus 1.0 resting on
+a multi-clause Pass Threshold clause by clause (167 units, 542 clause codes, each coded phrase located in its
+rationale), computes decision D28 and the two rules it was weighed against, compares the quoted thresholds in
+criteria.json and in two scoring documents with the definitions, and checks that the decision record
+(NEEC_R4_MultiClause_Audit_s35.md) contains its generated tables verbatim. It changes no file: 75 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -609,7 +614,25 @@ def pin32(chk):
     return c
 
 
-CHECKS = S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS
+# Session 35: revision R4's audit and decision D28 (appended after the version 9 checks).
+S35_CHECKS = [
+    dict(name="r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by "
+              "clause; decision D28 and its bound; the record's tables; changes no file)",
+         cmd=["python", "r4_audit_s35.py"],
+         files={k: k for k in ("r4_audit_s35.py", "criteria.json", "neec_corpus.json", "neec_scores.csv",
+                               "NEEC_Report_v1_6.md", "NEEC_R4_MultiClause_Audit_s35.md",
+                               "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_MutualCredit_LETS_scoring_scratch.md",
+                               "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+                               "NEEC_IslamicFinance_scoring_scratch.md", "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="r4_audit_s35_output.txt", stderr=EMPTY),
+]
+
+CHECKS = S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
 
 
 def md5(data):
