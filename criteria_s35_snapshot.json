@@ -1,7 +1,7 @@
 {
   "schema": "neec-criteria/1.0",
   "framework": "NEEC Applied, v2 structure: 26 criteria in five domains",
-  "generated_by": "build_criteria.py (Session 27; corrections of Session 36, protocol v2.0-draft.5); do not edit by hand",
+  "generated_by": "build_criteria.py (Session 27); do not edit by hand",
   "source": {
     "document": "NEEC_Paper_v1_4.md",
     "md5": "5e2c2c3e9dc305c95ed7536db95ba1b8",
@@ -21,182 +21,6 @@
       {
         "criterion": "C4.2",
         "clause": "NEEC's second most discriminating criterion (Section 11.2)"
-      }
-    ],
-    "corrections": [
-      {
-        "criterion": "C1.2a",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C1.2b",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C1.3",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C1.4",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C1.5",
-        "field": "anchors.note",
-        "kind": "moved",
-        "basis": "decision D28(g): band reasoning formerly appended to the threshold line"
-      },
-      {
-        "criterion": "C1.5",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C2.1",
-        "field": "anchors.threshold",
-        "kind": "substantive",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-        "departure": "dropped the revealed-preference elaboration (noted by the R4 audit, outside its four)"
-      },
-      {
-        "criterion": "C2.2",
-        "field": "anchors.threshold",
-        "kind": "substantive",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-        "departure": "dropped the population clause 'for all residents' and the list of basic needs, and added the Measurement line's conditions (found in Session 36)"
-      },
-      {
-        "criterion": "C2.3",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C2.4",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C2.5",
-        "field": "anchors.threshold",
-        "kind": "substantive",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-        "departure": "dropped 'voluntary association protected' (R4 audit)"
-      },
-      {
-        "criterion": "C3.1",
-        "field": "anchors.threshold",
-        "kind": "substantive",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-        "departure": "added 'no legislative delay' from the Measurement line and dropped the 1:1 example (R4 audit)"
-      },
-      {
-        "criterion": "C3.2",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C3.3",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C3.4",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C3.5",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C4.1",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C4.2",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C4.3",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C4.4",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C4.5",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C5.1",
-        "field": "anchors.threshold",
-        "kind": "substantive",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-        "departure": "dropped 'matching claimed benefits' (R4 audit)"
-      },
-      {
-        "criterion": "C5.2",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C5.3",
-        "field": "anchors.threshold",
-        "kind": "substantive",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-        "departure": "dropped 'through modeling' and 'coordination protocols established' (R4 audit)"
-      },
-      {
-        "criterion": "C5.4",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C5.5",
-        "field": "anchors.threshold",
-        "kind": "wording",
-        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-      },
-      {
-        "criterion": "C3.2",
-        "field": "anchors.bands.0.0",
-        "kind": "band",
-        "basis": "decision D26 (revision R3); Correction 7's stale count removed from this anchor"
-      },
-      {
-        "criterion": "C3.2",
-        "field": "anchors.bands.0.5",
-        "kind": "band",
-        "basis": "decision D26 (revision R3); Correction 7's stale count removed from this anchor"
       }
     ]
   },
@@ -350,8 +174,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -367,7 +190,7 @@
         "pass_threshold": "≥$60,000 median wealth accumulation over 20 years for 70%+ of participants (unchanged from legacy C1.2's Pass Threshold — the sub-criterion split doesn't touch this number, only separates out the now-independent question of whether the wealth built this way stays broadly distributed)."
       },
       "anchors": {
-        "threshold": "≥$60,000 median wealth accumulation over 20 years for 70%+ of participants (unchanged from legacy C1.2's Pass Threshold — the sub-criterion split doesn't touch this number, only separates out the now-independent question of whether the wealth built this way stays broadly distributed).",
+        "threshold": "≥$60,000 median wealth accumulation over 20 years for 70%+ of participants (unchanged from legacy C1.2 — Section 12.3).",
         "note": "",
         "bands": {
           "1.0": {
@@ -405,8 +228,7 @@
       },
       "sources": {
         "definition": "Paper Section 12.3",
-        "anchors": "Paper Appendix H.7v2",
-        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7v2"
       }
     },
     {
@@ -420,7 +242,7 @@
         "pass_threshold": "Gini <0.35 for wealth distribution (moved from legacy C1.5's Pass Threshold, per the boundary resolution in Section 12.2)."
       },
       "anchors": {
-        "threshold": "Gini <0.35 for wealth distribution (moved from legacy C1.5's Pass Threshold, per the boundary resolution in Section 12.2).",
+        "threshold": "Gini <0.35 for wealth distribution (moved from legacy C1.5 — Section 12.2).",
         "note": "",
         "bands": {
           "1.0": {
@@ -453,8 +275,7 @@
       },
       "sources": {
         "definition": "Paper Section 12.3",
-        "anchors": "Paper Appendix H.7v2",
-        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7v2"
       }
     },
     {
@@ -470,7 +291,7 @@
         "benchmark": "Community Land Trusts achieve 10x lower foreclosure rates than conventional mortgages (0.46% vs 3.26% during 2008-2010 crisis)."
       },
       "anchors": {
-        "threshold": "≥88% housing stability over 5-year periods, maintaining affordability at 80% area median income.",
+        "threshold": "≥88% housing stability over 5-year periods, maintaining affordability at 80% AMI.",
         "note": "",
         "bands": {
           "1.0": {
@@ -504,8 +325,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -520,7 +340,7 @@
         "pass_threshold": "Poverty <8% and aggregate demand >85% baseline across all three displacement scenarios"
       },
       "anchors": {
-        "threshold": "Poverty <8% and aggregate demand >85% baseline across all three displacement scenarios.",
+        "threshold": "poverty <8% and aggregate demand >85% baseline across all three of NEEC's 30/50/70% displacement scenarios.",
         "note": "Apply it carefully; see also Appendix G for a documented case where a candidate evidentiary source (a companion simulation) could not actually be used to evaluate a system at this criterion's higher severities.",
         "bands": {
           "1.0": {
@@ -554,8 +374,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -571,8 +390,8 @@
         "pass_threshold": "≥80% population with an active wealth-accumulation pathway (Gini clause removed — moved to C1.2b, Section 12.2)."
       },
       "anchors": {
-        "threshold": "≥80% population with an active wealth-accumulation pathway (Gini clause removed — moved to C1.2b, Section 12.2).",
-        "note": "This band's reasoning is unchanged from legacy C1.5's anchors (H.7 above); narrowing the threshold doesn't change which systems clear an access-breadth bar, only removes a second, now-separate test that used to ride alongside it.",
+        "threshold": "≥80% population with an active wealth-accumulation pathway (Gini clause removed — Section 12.2). This band's reasoning is unchanged from legacy C1.5's anchors (H.7 above); narrowing the threshold doesn't change which systems clear an access-breadth bar, only removes a second, now-separate test that used to ride alongside it.",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "Broad-based access not contingent on prior wealth or narrow membership. *Nordic Social Democracy (1.0): \"Approximately 70% have wealth accumulation pathways... meets the threshold for broad-based access\" — the same qualitative-tolerance judgment call already documented in H.7's own C1.5 entry above carries over unchanged, since it was never about the Gini clause.*",
@@ -605,8 +424,7 @@
       },
       "sources": {
         "definition": "Paper Section 12.3",
-        "anchors": "Paper Appendix H.7v2",
-        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7v2"
       }
     },
     {
@@ -621,7 +439,7 @@
         "pass_threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist"
       },
       "anchors": {
-        "threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist.",
+        "threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference.",
         "note": "",
         "bands": {
           "1.0": {
@@ -659,8 +477,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -676,7 +493,7 @@
         "pass_threshold": "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents"
       },
       "anchors": {
-        "threshold": "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents.",
+        "threshold": "unconditional provision covering 100% of basic needs, without work requirements, behavior conditions, or means testing.",
         "note": "This threshold is binary in character (unconditional or not) more than most others — score accordingly; partial credit here specifically means *time-limited or conditional* provision, not \"provision covering less than 100% of needs.\"",
         "bands": {
           "1.0": {
@@ -718,8 +535,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -734,7 +550,7 @@
         "pass_threshold": "≥50% regular creative engagement, average 10+ hours weekly on non-subsistence pursuits, meaning/purpose satisfaction scores ≥70/100"
       },
       "anchors": {
-        "threshold": "≥50% regular creative engagement, average 10+ hours weekly on non-subsistence pursuits, meaning/purpose satisfaction scores ≥70/100.",
+        "threshold": "≥50% regular creative engagement, 10+ hours/week on non-subsistence pursuits, satisfaction ≥70/100.",
         "note": "",
         "bands": {
           "1.0": {
@@ -768,8 +584,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -784,7 +599,7 @@
         "pass_threshold": "≥70% participation in democratic processes, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness"
       },
       "anchors": {
-        "threshold": "≥70% participation in democratic processes, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness.",
+        "threshold": "≥70% participation, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness.",
         "note": "",
         "bands": {
           "1.0": {
@@ -822,8 +637,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -838,7 +652,7 @@
         "pass_threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained, voluntary association protected"
       },
       "anchors": {
-        "threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained, voluntary association protected.",
+        "threshold": "exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained.",
         "note": "Read carefully: the failure mode is almost always *funding or coherence dependent on near-universal participation*, not an intent to trap individuals.",
         "bands": {
           "1.0": {
@@ -876,8 +690,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -893,7 +706,7 @@
         "comparison": "Traditional stimulus: 3-6 months legislative delay, limited coverage. Unemployment insurance: 2-4 weeks processing, 40% coverage. Automatic stabilizers: Immediate response, universal coverage."
       },
       "anchors": {
-        "threshold": "Response within 72 hours, scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase), ≥90% population coverage.",
+        "threshold": "response within 72 hours, scaling 1:1 with crisis severity, ≥90% population coverage, no legislative delay.",
         "note": "",
         "bands": {
           "1.0": {
@@ -931,8 +744,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -948,7 +760,7 @@
         "mechanisms_required": "Sectoral demand isolation (basic income for essentials only). Velocity controls (expiration mechanisms preventing hoarding). Supply response (production capacity scaling with demand). Automatic parameter adjustment (rates adjust based on inflation data)."
       },
       "anchors": {
-        "threshold": "Long-term inflation ≤3%, stress test inflation ≤5% (when external 8%), automatic adjustment preventing runaway inflation.",
+        "threshold": "long-term inflation ≤3%, stress-test inflation ≤5% (under external 8%), automatic adjustment.",
         "note": "",
         "bands": {
           "1.0": {
@@ -961,7 +773,7 @@
             ]
           },
           "0.5": {
-            "text": "Relies on conventional monetary policy without novel safeguards, or a proposed mechanism is theoretically plausible but unproven at scale, or the system specifies no inflation-control mechanism of its own and has no active inflationary mechanism (decision D26). *MMT+Job Guarantee (0.5): \"Buffer stock employment theoretically anchors wages and prices. However, the mechanism is unproven at scale.\"*",
+            "text": "Relies on conventional monetary policy without novel safeguards, or a proposed mechanism is theoretically plausible but unproven at scale. *MMT+Job Guarantee (0.5): \"Buffer stock employment theoretically anchors wages and prices. However, the mechanism is unproven at scale.\"*",
             "examples": [
               {
                 "system": "MMT + Job Guarantee",
@@ -970,15 +782,14 @@
             ]
           },
           "0.0": {
-            "text": "The system's design actively risks compounding inflation, with no counterbalancing design element. Reserve this band for an active inflationary mechanism: a system that specifies no inflation-control mechanism of its own, or has no monetary function, scores 0.5, not 0.0 (decision D26).",
+            "text": "No credible inflation-control mechanism is specified, or the system's design actively risks compounding inflation with no offset. This band is rare in the corpus (no system in the 13 scores 0.0 here); reserve it for cases with an active inflationary mechanism and literally no counterbalancing design element, rather than merely \"unaddressed.\"",
             "examples": []
           }
         }
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7 (0.0 and 0.5 bands corrected: decision D26 (revision R3); Correction 7's stale count removed from this anchor)",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -994,7 +805,7 @@
         "pass_threshold": "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%"
       },
       "anchors": {
-        "threshold": "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%.",
+        "threshold": "maintain core functions across ≥3 of 4 compound stress scenarios with degradation <20%.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1032,8 +843,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1049,7 +859,7 @@
         "pass_threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, democratic governance for changes, zero collapses during parameter adjustments"
       },
       "anchors": {
-        "threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, democratic governance for changes, zero collapses during parameter adjustments.",
+        "threshold": "≥30% parameter adjustability, policy updates within 6 months of evidence, democratic governance for changes, zero collapses during adjustment.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1087,8 +897,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1103,7 +912,7 @@
         "pass_threshold": "Failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs"
       },
       "anchors": {
-        "threshold": "Failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs.",
+        "threshold": "failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1141,8 +950,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1157,7 +965,7 @@
         "pass_threshold": "35% carbon reduction by 2030, resource use ≤90% regeneration, debt-to-GDP <80%, positive wealth transfer to next generation"
       },
       "anchors": {
-        "threshold": "35% carbon reduction by 2030, resource use ≤90% regeneration, debt-to-GDP <80%, positive wealth transfer to next generation.",
+        "threshold": "35% carbon reduction by 2030, resource use ≤90% regeneration, debt-to-GDP <80%, positive intergenerational wealth transfer.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1191,8 +999,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1207,7 +1014,7 @@
         "pass_threshold": "Absolute carbon reductions 35-45% by 2030, biodiversity neutral or positive, resource extraction ≤ regeneration, ≥7 of 9 planetary boundaries respected"
       },
       "anchors": {
-        "threshold": "Absolute carbon reductions 35-45% by 2030, biodiversity neutral or positive, resource extraction ≤ regeneration, ≥7 of 9 planetary boundaries respected.",
+        "threshold": "absolute carbon reductions 35-45% by 2030, biodiversity neutral or positive, resource extraction ≤ regeneration, ≥7 of 9 planetary boundaries respected.",
         "note": "Hold this one to absolute-reduction standards, not relative/efficiency framing.",
         "bands": {
           "1.0": {
@@ -1241,8 +1048,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1258,7 +1064,7 @@
         "evidence_of_need": "Black household median wealth: $24,100 vs $188,200 white (87% gap). Black women 5.56x trafficking vulnerability; Native women 8.75x. Gender wage gap persists: women earn 80-84% of male wages. Systems perpetuating these disparities fail ethical standards."
       },
       "anchors": {
-        "threshold": "Disparity reduction ≥5 percentage points every 5 years, disadvantaged groups receive 150%+ proportional benefits, convergence trajectory toward <20% disparities within 30 years.",
+        "threshold": "disparity reduction ≥5pp/5yr, disadvantaged groups receive 150%+ proportional benefits, convergence toward <20% disparity within 30 years.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1295,8 +1101,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1311,7 +1116,7 @@
         "pass_threshold": "Gini <0.35 for wealth, ≥40% citizen proposals adopted, democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional"
       },
       "anchors": {
-        "threshold": "Gini <0.35 for wealth, ≥40% citizen proposals adopted, democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional.",
+        "threshold": "Gini <0.35 for wealth, ≥40% citizen proposals adopted, democratic accountability for ≥80% of major decisions, functional removal/replacement mechanisms.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1349,8 +1154,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1365,7 +1169,7 @@
         "pass_threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships, residual coercion <10% of decisions"
       },
       "anchors": {
-        "threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships, residual coercion <10% of decisions.",
+        "threshold": "extraction rates <10% GDP, genuine exit rights from exploitative relationships, residual coercion <10% of decisions.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1402,8 +1206,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1419,7 +1222,7 @@
         "examples_of_proven_components": "Alternative currencies: WIR Bank (90 years operation, billions in annual turnover). Community land trusts: 313 U.S. CLTs, 10x lower foreclosure rates. Sovereign wealth funds: Alaska PFD (40+ years), Norway (271% GDP). Cooperative governance: Mondragón (70+ years, 97% survival rate)."
       },
       "anchors": {
-        "threshold": "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants, with documented outcomes matching claimed benefits.",
+        "threshold": "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants, with documented outcomes.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1453,8 +1256,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1471,7 +1273,7 @@
         "historical_precedents": "New Deal (1933-1936): 3 years for comprehensive programs. Marshall Plan (1948-1951): 3 years for economic restructuring. CCO-PTF modeling: Both pathways validated through simulation."
       },
       "anchors": {
-        "threshold": "Detailed implementation plan for both staged (≥4 phases) and rapid (≤36 months) deployment, with specific milestones, resource requirements, and risk mitigation.",
+        "threshold": "detailed plan for both staged (≥4 phases) and rapid (≤36 months) deployment, with milestones, resources, and risk mitigation.",
         "note": "Judge this on specificity, not on whether a pathway exists in principle — \"starts small and expands\" is not a pathway under this threshold, however true it may be.",
         "bands": {
           "1.0": {
@@ -1509,8 +1311,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1525,7 +1326,7 @@
         "pass_threshold": "Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established"
       },
       "anchors": {
-        "threshold": "Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established.",
+        "threshold": "viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, validated scaling pathway.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1563,8 +1364,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1580,7 +1380,7 @@
         "cross_ideological_appeal_examples": "Alaska PFD: 80%+ approval across political spectrum for 40+ years. Community wealth building: Attracts both cooperative socialists and property rights conservatives. Cooperative movements: Bridge socialist and market advocate divisions."
       },
       "anchors": {
-        "threshold": "≥60% support across political spectrum, ≥65% opposition to repeal, survival probability ≥80% across administration changes.",
+        "threshold": "≥60% support across the political spectrum, ≥65% opposition to repeal, ≥80% survival probability across administration changes.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1622,8 +1422,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     },
     {
@@ -1641,7 +1440,7 @@
         "cultural_variation_accommodated": "Aesthetic criteria: Different communities set different phi-rate standards. Governance structures: Consensus, majority, elder councils—all compatible. Social organization: Multigenerational, nuclear, communal—all supported."
       },
       "anchors": {
-        "threshold": "Viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, parameter flexibility ≥40% adjustment range, successful operation validated across diverse implementations.",
+        "threshold": "viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, ≥40% parameter-flexibility range, validated across diverse implementations.",
         "note": "",
         "bands": {
           "1.0": {
@@ -1679,8 +1478,7 @@
       },
       "sources": {
         "definition": "Paper Section 6",
-        "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
+        "anchors": "Paper Appendix H.7"
       }
     }
   ]

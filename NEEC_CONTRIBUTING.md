@@ -3,8 +3,9 @@
 **Better To Best Research Hub** · CC BY 4.0
 
 *Revised in Session 28 for the v2 structure (26 criteria, 23 scored systems)
-and the reproducibility kit. The section numbers are unchanged, because every
-scoring document's reviewer disclosure cites §2.*
+and the reproducibility kit, and in Session 36 for scoring protocol
+v2.0-draft.5. The section numbers are unchanged, because every scoring
+document's reviewer disclosure cites §2.*
 
 ---
 
@@ -48,7 +49,7 @@ Everything a contributor needs is in the repository, and nothing outside it:
 |---|---|
 | `SCORING_PROTOCOL.md` | how a system is scored, how uncertainty is recorded, and what a scoring document must contain; it supersedes Paper Appendix H for the v2 structure |
 | `criteria.json` | the 26 criteria and their 1.0 / 0.5 / 0.0 anchors |
-| `neec_scores.csv` | the canonical corpus (columns in `neec_scores_data_dictionary.md`) |
+| `neec_scores.csv`, `neec_corpus.json` | the canonical corpus: totals and tiers (columns in `neec_scores_data_dictionary.md`), and every system's 26 scores |
 | `summary_block_schema.json` | the schema of the summary block that ends every scoring document |
 | `neec_entry.py` | validates a summary block against the corpus and computes the enumeration, tier robustness and peer matrix (Python standard library only) |
 | `NEEC_*_scoring_scratch.md` | the evidence record: one scoring document per system |
@@ -113,8 +114,9 @@ criterion: the vectors, the flags and their alternatives, the scope
 declaration, the joint readings and tier robustness, and the tier. The
 replication record names each disagreement and attributes it to evidence,
 interpretation, scope, or an ambiguity in the protocol; ambiguities become
-revisions of the protocol. The first pilot re-scores Ostrom-style commons
-governance.
+revisions of the protocol. The first pilot re-scored Ostrom-style commons
+governance (`NEEC_OstromCommons_replication_record.md`); the second will
+re-score CCO-PTF-CIP-SZH, with a replicator outside the Claude model family.
 
 **If you are auditing a score (human or AI):**
 
@@ -123,7 +125,9 @@ governance.
   the actual rationale.
 - Reason continuously, then round once (protocol 2.2): form your own estimate
   from the evidence, then round at the criterion level. Score against the
-  Pass Threshold, using the evidence standards of protocol section 4.
+  Pass Threshold clause by clause (protocol 2.3 and Appendix B: a 1.0 needs
+  every clause shown cleared), using the evidence standards of protocol
+  section 4.
 - Where you differ from the published score, say **how much and why**. A
   criterion-level difference ("I would score Nordic's C3.5 as 0.0, not 0.5,
   because...") is far more useful than a different overall impression.
@@ -161,14 +165,17 @@ system a contributor can justify is welcome.
 
 1. **Declare the scope first** (section 3): mechanism, configured national
    economy, or comprehensive system. The class fixes how population-scope
-   thresholds are read; a different scope is a scenario, never a flag.
+   thresholds are read; a different scope is a scenario, never a flag. Then
+   declare the archetype (section 5.1) and, for a mechanism, which extensions
+   you count in or out and the source that decides each (section 3.2).
 2. **Establish the evidentiary tier and the source mix** (section 4): real-world
    implementation, historical, component-validated theoretical or purely
    theoretical, with sources spread across founding literature, peer-reviewed
    work, implementation records and critics from more than one direction.
 3. **Calibrate against peers before fixing scores** (section 5): compare your
-   vector, criterion by criterion, with those of the entries you declare as
-   peers, and resolve or flag each difference.
+   vector, criterion by criterion, with those of the peers section 5.1's rule
+   gives you (your archetype, widened to your scope class when the archetype
+   is small), and resolve or flag each difference.
 4. **Flag every close call, naming the alternative** (section 6), and state
    coherent joint readings where several flags turn on one question.
 5. **Write the scoring document** to the template of section 7 (it replaces
@@ -176,10 +183,10 @@ system a contributor can justify is welcome.
 6. **Make comparative claims only as section 8 allows**: every statement about
    another system's score, a rank, a tie or a dominance relation must be
    assertable by the corpus-level checker, or it is not made.
-7. **End with the summary block** (section 9). `neec_entry.py` validates a
-   block against the canonical corpus, so it checks yours at insertion; until
-   a mode for candidate entries is added, check the arithmetic, flags and
-   joint readings against sections 2 and 6 yourself.
+7. **End with the summary block** (section 9), and check it with
+   `python3 neec_entry.py --candidate YOUR_DOCUMENT.md` (protocol 9.3), which
+   validates its arithmetic, flags and joint readings and prints your peer
+   matrix; the maintainers run the same check at insertion.
 8. **Open a pull request with the scoring document only.** Do not edit
    `neec_scores.csv` or the canonical script: insertion is a separate
    maintainers' pass (protocol section 10) that reads your block, re-checks it

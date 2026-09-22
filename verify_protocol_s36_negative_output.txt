@@ -1,0 +1,80 @@
+verify_protocol_s36.py -- the scoring protocol's own statements, checked
+protocol: SCORING_PROTOCOL.md; corpus: neec_corpus.json (23 entries); 23 summary blocks from 11 documents
+
+A  header and structure
+  [A1] FAIL  the header states version 2.0-draft.5
+  [A2] FAIL  the header records D2 to D31 and the delegation
+  [A3] FAIL  draft.5's new sections are present, in order
+  [A4] PASS  every horizontal rule follows a blank line (so none renders as a heading underline)
+
+B  3.1: the classes assigned under D17
+  [B1] PASS  3.1's three class lines name exactly the 15 entries whose blocks say 'assigned', with the corpus's classes
+
+C  5.1: the archetype table (D30)
+  [C1] FAIL  five archetypes; every one of the 23 corpus entries is a member of exactly one
+  [C2] PASS  each archetype's members all have the scope class its row states
+  [C3] FAIL  D30's note: by the rule the pilot had six peers; the replicator declared four, omitting MMT + JG and UBI  -- phrase not found
+  [C4] FAIL  R8 readiness: the second pilot's target is named on one line of 3.1 and one line of 5.1
+
+D  statements about entries
+  [D1] PASS  3.4(a): Singapore's register as it stands
+  [D2] FAIL  3.4(b): Ostrom's four scope questions are scenarios, its two borderline flags stay  -- phrase not found
+  [D3.1] FAIL  3.5: The entry now stands at 14.5/26 with 3 failures, Partially Adequate  -- phrase not found
+  [D3.2] FAIL  3.5: its joint readings are the two extremes of its fifteen flags  -- phrase not found
+  [D3.3] FAIL  3.5: every call upward, 18.0/26 with 0 failures  -- phrase not found
+  [D3.4] FAIL  3.5: every call downward, 10.5/26 with 9 failures  -- phrase not found
+  [D3.5] FAIL  3.5: which still reach all three tiers  -- phrase not found
+  [D3.6] FAIL  3.5: the knowledge and digital commons counted in (15.5/26, 2 failures, Pot  -- phrase not found
+  [D3.7] FAIL  3.5: community land trusts counted out (14.0/26, 4 failures, Partially Adeq  -- phrase not found
+  [D3.8] FAIL  3.5: the thresholds read against the governed resource and its members (16.  -- phrase not found
+  [D4] PASS  6.1: Georgism under D16
+  [D5] PASS  6.1: Sovereign Wealth Fund Statism under D16
+  [D6] FAIL  6.4: the D13 order of the two least tier-robust entries  -- phrase not found
+  [D7] FAIL  6.4: the enumeration shares reverse the order  -- phrase not found
+  [D8] PASS  6.4: Qatar
+  [D9] PASS  6.5: Qatar's scenario
+  [D10] PASS  6.5: Islamic finance's scenario
+  [D11] FAIL  13, D26: no 0.0 on C3.2 now  -- phrase not found
+  [D12] FAIL  13, D29: Ostrom's C4.3  -- phrase not found
+  [D13] FAIL  13, D29: the mechanism-class 0.5s the rescoring pass reads  -- phrase not found
+  [D14] FAIL  13, D31: Ostrom's C1.3, and with C4.3  -- phrase not found
+  [D15] FAIL  13, D31: Ostrom's tier under D29 and D31  -- phrase not found
+  [D16] PASS  3.2's extension precedents are carried as scope scenarios in their documents
+
+E  4.6 against criteria.json
+  [E1] PASS  every anchor's threshold line is its definition's Pass Threshold, verbatim (D28(g))
+  [E2] FAIL  4.6: the corrections as counted  -- phrase not found
+  [E3] FAIL  4.6: C3.2's bands carry D26, without the stale count
+  [E4] PASS  4.6: the two wrong examples are exactly those the file marks
+
+F  Appendix B
+  [F1] FAIL  Appendix B lists the 21 multi-clause thresholds' clauses exactly as r4_audit_s35.py splits them
+  [F2] PASS  every clause is a verbatim substring of criteria.json's definition, once, in order, leaving connectives only
+  [F3] FAIL  the one-clause criteria are named as the audit names them
+
+G  section 13: the register
+  [G1] FAIL  the register lists 26 decisions, D2 to D31, each once and in order  -- got ['D2', 'D3(a)', 'D3(b)', 'D6', 'D8', 'D9', 'D12', 'D13', 'D14', 'D15', 'D16', 'D17', 'D18', 'D19', 'D20', 'D21', 'D22', 'D23', 'D24']
+  [G2] FAIL  a note for D19 to D31 (D25 closed in its row)
+  [G3] FAIL  the delegation settles draft.4's two open confirmations
+
+H  revisions R1 to R8
+  [H1] FAIL  R1 is written into 3.4
+  [H2] FAIL  R2 is written into 4.1
+  [H3] FAIL  R3 is written into 4.6
+  [H4] FAIL  R4 is written into 2.3
+  [H5] FAIL  R5 is written into 5.1
+  [H6] FAIL  R6 is written into 3.2
+  [H7] FAIL  R7 is written into 11.
+  [H8] FAIL  R8 is written into 11.
+
+I  superseded statements of draft.4
+  [I1] FAIL  absent: "review of the whole text is pending"
+  [I2] FAIL  absent: "One question is deferred by decision"
+  [I3] FAIL  absent: "10.0 points and 11 failures"
+  [I4] FAIL  absent: "46.7% of Ostrom's 1,048,576"
+  [I5] FAIL  absent: "awaits the owner's confirmation"
+  [I6] PASS  absent: "no system in the 13 scores 0.0 here"
+  [I7] FAIL  absent: "the register is reconsidered then"
+  [I8] FAIL  absent: "is the owner's decision"
+
+58 checks: 14 passed, 44 failed.

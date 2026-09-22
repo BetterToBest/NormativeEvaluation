@@ -1,0 +1,15 @@
+================================================================================================
+build_replication_kit.py --selftest-r8 -- revision R8 on SCORING_PROTOCOL.md (no kit is built)
+================================================================================================
+  PASS  the synthetic target is named on exactly one line of 3.1 and one line of 5.1
+  PASS  the dropped entry no longer appears in 3.1 or 5.1
+  PASS  no marker stands in 3.1 or 5.1
+  PASS  the passage outside 3.1 and 5.1 is marked where it stood
+  PASS  the note under the title says that lists were shortened
+  PASS  the note names no section, scope class, archetype or entry
+  PASS  refused under R8: a marked withhold in 3.1 or 5.1
+  PASS  refused under R8: a drop that carries a marker
+  PASS  the first kit's 3.1 marker (Session 30 protocol) is one R8 refuses
+  PASS  the OS target itself, built before R8, is unaffected
+
+R8 self-test: ALL PASS

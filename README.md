@@ -20,7 +20,7 @@ Potentially Adequate; 3 to 5, Partially Adequate; 6 or more, Structurally Inadeq
 therefore sit in a lower tier: Universal Basic Income (14.5/26, 7 failures) outscores
 Georgism / Land Value Tax (13.5/26, 2 failures) and sits two tiers lower.
 
-[`SCORING_PROTOCOL.md`](SCORING_PROTOCOL.md) (version 2.0-draft.4, owner review pending) states how each
+[`SCORING_PROTOCOL.md`](SCORING_PROTOCOL.md) (version 2.0-draft.5) states how each
 criterion is scored and what a scoring document must contain. Close calls are recorded rather than
 smoothed over: each scoring document registers the scores a reasonable scorer could set differently, in
 which direction, and what they would do to the total and the tier.
@@ -65,8 +65,11 @@ alternative weighting schemes is computed by Appendix A.4's script,
 These totals are provisional. A clause-by-clause audit of the scores of 1.0
 ([`NEEC_R4_MultiClause_Audit_s35.md`](NEEC_R4_MultiClause_Audit_s35.md), decision D28) found that most of
 those resting on a multi-clause Pass Threshold do not yet show every clause cleared. They are re-estimated
-before version 2.0. That can lower totals and ranks, but it cannot change a failure count, so no tier can
-change.
+in a rescoring pass before version 2.0, which can lower totals and ranks but, under that decision, cannot
+change a failure count or a tier. The same pass applies two rules adopted with scoring protocol draft.5
+(decisions D29 and D31: how implementation failures count, and what belongs to a scored mechanism), which
+can turn a 0.5 into a structural failure; the two such cases identified so far, both in Ostrom-Style Commons
+Governance, cannot change its tier, and the pass reports any failure count it changes.
 
 ## Disclosure
 
@@ -87,7 +90,7 @@ Requirements: Python 3.12 (standard library only) and, for three checks, Node.js
 python3 run_all_checks.py
 ```
 
-This runs 75 checks. Each copies exactly the files one script needs into a fresh temporary
+This runs 79 checks. Each copies exactly the files one script needs into a fresh temporary
 directory, runs the script there, and compares its output byte for byte with the captured copy in this
 repository; negative controls confirm that the verifiers reject superseded states. The captured output of
 the whole run is [`run_all_checks_output.txt`](run_all_checks_output.txt), and GitHub Actions repeats the
