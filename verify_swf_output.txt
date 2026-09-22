@@ -1,0 +1,79 @@
+========================================================================================
+PART 1: SELF-CONSISTENCY CHECK
+========================================================================================
+--- Sovereign Wealth Fund Statism (primary reading: C1.2a=C1.5=0.5) ---
+  Recomputed: D1=2.5/6 D2=3.0/5 D3=3.0/5 D4=2.0/5 D5=3.5/5  Total=14.0/26 (54%)
+  Stated:     D1=2.5 D2=3.0 D3=3.0 D4=2.0 D5=3.5  Total=14.0
+  Domain/total match: PASS
+  Failures: 3 -- ['C1.3', 'C4.2', 'C4.5']  ->  Tier: Partially Adequate
+
+--- Sovereign Wealth Fund Statism (disclosed alternate: C1.2a=C1.5=0.0) ---
+  Recomputed: D1=1.5/6 D2=3.0/5 D3=3.0/5 D4=2.0/5 D5=3.5/5  Total=13.0/26 (50%)
+  Stated:     D1=1.5 D2=3.0 D3=3.0 D4=2.0 D5=3.5  Total=13.0
+  Domain/total match: PASS
+  Failures: 5 -- ['C1.2a', 'C1.3', 'C1.5', 'C4.2', 'C4.5']  ->  Tier: Partially Adequate
+
+Scratch doc's claim: resolving the flagged C1.2a/C1.5 call does NOT move the adequacy tier either way.
+Checked: primary tier = 'Partially Adequate' (3 failures); alternate tier = 'Partially Adequate' (5 failures).
+Claim verified: PASS -- tier unchanged, as claimed
+
+========================================================================================
+PART 2: CORPUS-COMPARISON CHECK AGAINST THE REAL CANONICAL SCORES
+========================================================================================
+Canonical 17-system corpus loaded and self-verified (verify_transcription() PASS).
+
+-- No-exact-tie check --
+  SWF total = 14.0/26. Existing systems at the exact same total: none
+  Claim (no exact tie): PASS
+
+-- Failure-set overlap check (Final Assessment's claims) --
+  SWF fails:                ['C1.3', 'C4.2', 'C4.5']
+  Mutual Credit/LETS fails: ['C1.2a', 'C1.3', 'C1.5']  -> overlap: ['C1.3']
+  UBS fails:                ['C1.2a', 'C1.2b', 'C1.5']  -> overlap: []
+  Claim (overlaps MC/LETS on exactly {C1.3}): PASS
+  Claim (overlaps UBS on nothing):              PASS
+
+-- Wealth-cluster clearance check (C1.2a, C1.2b, C1.5) --
+  Georgism / Land Value Tax    wealth-cluster zeros: ['C1.2a', 'C1.5']
+  Mutual Credit / LETS         wealth-cluster zeros: ['C1.2a', 'C1.5']
+  Doughnut Economics           wealth-cluster zeros: ['C1.2a', 'C1.2b', 'C1.5']
+  Universal Basic Services     wealth-cluster zeros: ['C1.2a', 'C1.2b', 'C1.5']
+  Sovereign Wealth Fund Statism wealth-cluster zeros: NONE (clears all three)
+  Claim (SWF is first of the four new Step 1b systems to clear all three): PASS
+
+-- Dominance checks --
+  Sovereign Wealth Fund Statism  vs  CCO-PTF-CIP-SZH                  CCO-PTF-CIP-SZH strictly DOMINATES SWF
+  Sovereign Wealth Fund Statism  vs  Georgism / Land Value Tax        non-dominated pair
+  Sovereign Wealth Fund Statism  vs  Mutual Credit / LETS             non-dominated pair
+  Sovereign Wealth Fund Statism  vs  Universal Basic Services         non-dominated pair
+  Sovereign Wealth Fund Statism  vs  Nordic Social Democracy          non-dominated pair
+
+-- Ranking among the (prospective) 18-system corpus --
+   1. CCO-PTF-CIP-SZH                                          24.5/26 (94%)
+   2. Participatory Economics                                  20.5/26 (79%)
+   3. Nordic Social Democracy                                  19.5/26 (75%)
+   4. Integral                                                 19.5/26 (75%)
+   5. Degrowth Economics                                       19.0/26 (73%)
+   6. Market Socialism                                         16.5/26 (63%)
+   7. MMT + Job Guarantee                                      15.5/26 (60%)
+   8. Universal Basic Income                                   14.5/26 (56%)
+   9. Mutual Credit / LETS                                     14.5/26 (56%)
+  10. Sovereign Wealth Fund Statism [scratch, not yet inserted]  14.0/26 (54%)  <==
+  11. Georgism / Land Value Tax                                13.5/26 (52%)
+  12. Universal Basic Services                                 13.5/26 (52%)
+  13. Fully Automated Luxury Communism                         13.0/26 (50%)
+  14. Doughnut Economics                                       11.5/26 (44%)
+  15. Status Quo Market Capitalism                             10.5/26 (40%)
+  16. Centrally Planned Socialism                              10.0/26 (38%)
+  17. Stakeholder Capitalism                                   10.0/26 (38%)
+  18. Libertarian Minarchism                                    8.0/26 (31%)
+
+========================================================================================
+SUMMARY
+========================================================================================
+ALL CHECKS PASS. Self-consistency confirmed (both the primary reading and the
+disclosed alternate reading); every comparative claim in the Final Assessment is
+independently verified against the real canonical corpus, loaded rather than
+retyped. Consistent with this project's scratch-before-insert discipline, this
+does not insert the system anywhere -- it only confirms the scratch document's
+own arithmetic and comparative claims ahead of that later, separate pass.

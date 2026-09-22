@@ -1,0 +1,29 @@
+================================================================================================
+verify_insertion_s33.py -- decision D26 (Session 33) against the Session 32 corpus
+================================================================================================
+Session 33: neec_weighting_robustness_analysis_v2.py, neec_scores.csv, neec_corpus.json; Session 32: neec_weighting_robustness_analysis_v2_s32_snapshot.py (md5 d5041b13), neec_scores_s32_snapshot.csv (md5 ca2eb1f4), neec_corpus_s32_snapshot.json (md5 ba3c7f70)
+  PASS  [1] both canonical scripts pass their own transcription self-check
+  PASS  [1] same 23 systems and the same 26 criteria
+  PASS  [1] exactly one SCORES cell differs: Ostrom-Style Commons Governance, C3.2, 0.0 -> 0.5
+  PASS  [1] exactly one PUBLISHED row differs (Ostrom: D3 2.5 -> 3.0, total 14.0 -> 14.5), and it equals the vector
+  PASS  [2] same header and row order (23 systems)
+  PASS  [2] only two rows differ: Ostrom's (Domain 3, total, percent, failures, revision note, notes) and UBI's notes
+  PASS  [2] Ostrom's row agrees with the canonical vector: 3.0 / 14.5 / 56% / 3 failures, Partially Adequate
+  PASS  [2] every row agrees with its canonical vector (CSV names mapped to canonical keys)
+  PASS  [2] UBI's notes name the three-way tie at 14.5/26
+  PASS  [2] Ostrom's revision note records decision D26
+  PASS  [3] neec_corpus.json: only Ostrom's C3.2 differs
+  PASS  [3] neec_corpus.json carries the canonical vectors
+  PASS  [4] Ostrom: 14.0/26, 4 failures -> 14.5/26, 3 failures; tier unchanged (Partially Adequate)
+  PASS  [4] ties: with SWF Statism and Singapore at 14.0 -> with Mutual Credit / LETS and UBI at 14.5
+  PASS  [4] SWF Statism and Singapore still tie each other at 14.0, and are the only entries there
+  PASS  [4] no strict-dominance pair gained or lost (14 ordered pairs)
+  PASS  [4] the Pareto frontier is unchanged (12 systems, Ostrom among them)
+  PASS  [4] every entry's tier is unchanged (6 Potentially, 8 Partially, 9 Structurally Inadequate)
+  PASS  [4] Ostrom's competition rank 10 -> 8; SWF Statism's and Singapore's 10 -> 11
+  PASS  [4] entries at 0.0 on C3.2: Ostrom alone -> none
+  PASS  [5] a second changed cell is rejected by the one-cell test
+  PASS  [5] a CSV row that disagrees with the vector is rejected
+  PASS  [5] a corpus file with another change is rejected
+
+SUMMARY: 23 passed, 0 failed (of 23).

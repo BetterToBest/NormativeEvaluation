@@ -1,0 +1,183 @@
+==========================================================================================
+verify_singapore.py -- NEEC Step 1b, Session 19 (State Capitalism / Singapore)
+==========================================================================================
+
+(1) SELF-CONSISTENCY
+  D1 = 0.5 + 1.0 + 0.5 + 1.0 + 0.5 + 0.5 = 4.0/6
+  PASS  D1 equals stated 4.0
+  D2 = 0.5 + 0.0 + 0.5 + 0.5 + 0.5 = 2.0/5
+  PASS  D2 equals stated 2.0
+  D3 = 0.5 + 1.0 + 0.5 + 1.0 + 0.5 = 3.5/5
+  PASS  D3 equals stated 3.5
+  D4 = 0.5 + 0.0 + 0.5 + 0.0 + 0.0 = 1.0/5
+  PASS  D4 equals stated 1.0
+  D5 = 1.0 + 0.5 + 1.0 + 0.5 + 0.5 = 3.5/5
+  PASS  D5 equals stated 3.5
+  Total = 4.0 + 2.0 + 3.5 + 1.0 + 3.5 = 14.0/26 (54%)
+  PASS  Total equals stated 14.0/26 (54%)
+  PASS  Failure count equals stated 4
+  PASS  Tier equals stated 'Partially Adequate'
+  Distribution: 6 at 1.0, 16 at 0.5, 4 at 0.0 -> 6(1.0) + 16(0.5) = 14.0
+  PASS  Distribution (6 / 16 / 4) re-derives the total
+  PASS  The six Passes are exactly C1.2a, C1.3, C3.2, C3.4, C5.1, C5.3
+  Failures: ['C2.2', 'C4.2', 'C4.4', 'C4.5']
+  PASS  Failures = 2 undisputed (C2.2, C4.5) + 2 flagged (C4.2, C4.4)
+  PASS  Every flagged alternative differs from its primary score by exactly 0.5
+  PASS  Flagged calls that would CREATE a failure are exactly C2.1, C2.4, C3.5, C4.3
+  PASS  Flagged calls that would REMOVE a failure are exactly C4.2, C4.4
+
+(2) TRANSCRIPTION CHECK AGAINST THE SCRATCH DOCUMENT ITSELF
+  PASS  Document has exactly one scored heading per criterion (26, no duplicates)
+  PASS  Every heading score matches this script's vector
+  PASS  Headings marked 'flagged as contestable' are exactly this script's 12 flagged calls
+  PASS  Document states all five domain-sum lines
+  PASS  D1 line: addends in criterion order re-sum to stated 4.0/6
+  PASS  D2 line: addends in criterion order re-sum to stated 2.0/5
+  PASS  D3 line: addends in criterion order re-sum to stated 3.5/5
+  PASS  D4 line: addends in criterion order re-sum to stated 1.0/5
+  PASS  D5 line: addends in criterion order re-sum to stated 3.5/5
+  PASS  Document's Overall Score line states 14.0/26 (54%)
+  PASS  Document's failure line lists exactly the vector's 4 failures
+  PASS  Document's distribution line (6 / 16 / 4, Passes named) matches
+  PASS  Sensitivity table has exactly one row per flagged call (12)
+  PASS  Every table row (primary, alternative, total, failures, tier) matches a fresh computation
+
+(3) CONTESTABLE-CALL SENSITIVITY
+  crit   primary   alt   total  fails  tier                      reading
+  C1.1       0.5   1.0    14.5      4  Partially Adequate        extreme-line / CPS-precedent reading
+  C1.2a      1.0   0.5    13.5      4  Partially Adequate        lease-decay / illiquidity / excluded-fifth reading
+  C1.5       0.5   1.0    14.5      4  Partially Adequate        citizen-and-PR-only population scope
+  C2.1       0.5   0.0    13.5      5  Partially Adequate        permit regime plus political constraints as comparable coercion
+  C2.4       0.5   0.0    13.5      5  Partially Adequate        no alternation since 1959 as foreclosing participation
+  C3.2       1.0   0.5    13.5      4  Partially Adequate        headline-inflation stress-test reading (6.1% in 2022)
+  C3.4       1.0   0.5    13.5      4  Partially Adequate        slow social-protection reform / dominant-party governance
+  C3.5       0.5   0.0    13.5      5  Partially Adequate        POFMA and unmeasured poverty as active suppression
+  C4.2       0.0   0.5    14.5      3  Partially Adequate        carbon-price / Nordic-analogy reading
+  C4.3       0.5   0.0    13.5      5  Partially Adequate        literal reading of the H.7 0.0 anchor
+  C4.4       0.0   0.5    14.5      3  Partially Adequate        broad ownership plus elections as partial diffusion
+  C5.4       0.5   1.0    14.5      4  Partially Adequate        six decades of contested majorities as cross-spectrum support
+  PASS  No single flagged call, resolved alone, changes the tier
+
+  All upward readings together:   16.5/26, 2 failures, Potentially Adequate
+  All downward readings together: 10.5/26, 8 failures, Structurally Inadequate
+  PASS  Joint upward reading = 16.5/26 with 2 failures (Potentially Adequate)
+  PASS  Joint downward reading = 10.5/26 with 8 failures (Structurally Inadequate)
+  C4.2 and C4.4 both upward, nothing else moved: 15.0/26, 2 failures, Potentially Adequate
+  PASS  Both flagged failures upward alone = 15.0/26 with 2 failures (Potentially Adequate)
+  C2.1 and C2.4 at 0.0: 13.0/26, 6 failures, Structurally Inadequate
+  C2.1 and C3.5 at 0.0: 13.0/26, 6 failures, Structurally Inadequate
+  C2.1 and C4.3 at 0.0: 13.0/26, 6 failures, Structurally Inadequate
+  C2.4 and C3.5 at 0.0: 13.0/26, 6 failures, Structurally Inadequate
+  C2.4 and C4.3 at 0.0: 13.0/26, 6 failures, Structurally Inadequate
+  C3.5 and C4.3 at 0.0: 13.0/26, 6 failures, Structurally Inadequate
+  PASS  Any two of C2.1 / C2.4 / C3.5 / C4.3 at 0.0 = 13.0/26 with 6 failures (Structurally Inadequate)
+  Exhaustive check over ['C2.1', 'C2.4', 'C3.5', 'C4.2', 'C4.3', 'C4.4']: 64 combinations -> {'Potentially Adequate': 1, 'Partially Adequate': 41, 'Structurally Inadequate': 22}
+  PASS  All 64 combinations: failures = 2 + j, and Partially Adequate exactly when 1 <= j <= 3 (primary j = 2)
+  PASS  This evaluation's joint readings reach all three tiers
+  PASS  China vector and flagged calls extracted from verify_china.py (10.0/26, 8 failures, 9 flags)
+  China, for comparison -- joint upward: 13.0/26, 5 failures, Partially Adequate; joint downward: 8.5/26, 10 failures, Structurally Inadequate
+  PASS  China's joint readings span two tiers (Partially Adequate, Structurally Inadequate)
+
+(4) POPULATION-SCOPE SENSITIVITY (citizen-and-PR-only reading)
+  Criteria changed: [('C1.5', 0.5, 1.0), ('C4.5', 0.0, 0.5)]
+  PASS  Scope reading changes exactly C1.5 (0.5 -> 1.0) and C4.5 (0.0 -> 0.5)
+  Scope reading alone: 15.0/26, 3 failures, Partially Adequate
+  PASS  Scope reading alone = 15.0/26 with 3 failures (Partially Adequate)
+  Scope reading plus every upward flag: 17.0/26, 1 failure, Potentially Adequate
+  PASS  Scope reading plus every upward flag = 17.0/26 with 1 failure (Potentially Adequate)
+  PASS  C4.5 is disputed only by the scope reading, never by a flagged call
+
+(5) CORPUS COMPARISON (canonical SCORES imported; SWF and China AST-extracted)
+  Loaded 17 canonical systems from neec_weighting_robustness_analysis_v2.py
+  PASS  Canonical corpus still holds exactly 17 systems
+  PASS  Singapore is not already in the canonical corpus
+  PASS  SWF vector extracted from verify_swf.py (14.0/26, 3 failures)
+  PASS  Prospective corpus holds 20 systems
+
+  -- Exact ties --
+  Canonical systems at exactly 14.0/26: none
+  PASS  No canonical system scores exactly 14.0
+  PASS  Singapore ties the pending SWF Statism row exactly (14.0), and not China
+  vs SWF Statism: differs on 7 criteria: [('C1.2a', 0.5, 1.0), ('C1.3', 0.0, 1.0), ('C2.2', 0.5, 0.0), ('C2.5', 1.0, 0.5), ('C3.2', 0.5, 1.0), ('C4.1', 1.0, 0.5), ('C4.4', 0.5, 0.0)]  (SWF, Singapore)
+  PASS  Singapore and SWF differ on exactly 7 criteria: C1.2a, C1.3, C2.2, C2.5, C3.2, C4.1, C4.4
+  PASS  Shared failures with SWF are exactly C4.2 and C4.5
+  PASS  Same tier, different failure counts (SWF 3, Singapore 4)
+  Domain deltas (Singapore minus SWF): {'D1': 1.5, 'D2': -1.0, 'D3': 0.5, 'D4': -1.0, 'D5': 0.0}
+  PASS  Domain deltas vs SWF: D1 +1.5, D2 -1.0, D3 +0.5, D4 -1.0, D5 0.0
+
+  -- The state-capitalism sibling: China --
+  Singapore higher than China on 8: ['C1.2a', 'C1.3', 'C2.1', 'C2.4', 'C3.4', 'C3.5', 'C4.3', 'C5.3']; lower on none
+  Domain deltas (Singapore minus China): {'D1': 1.0, 'D2': 1.0, 'D3': 1.0, 'D4': 0.5, 'D5': 0.5}
+  PASS  Singapore strictly dominates China
+  PASS  Higher than China on exactly 8 criteria: C1.2a, C1.3, C2.1, C2.4, C3.4, C3.5, C4.3, C5.3
+  PASS  Every domain higher than China: +1.0, +1.0, +1.0, +0.5, +0.5
+  PASS  Singapore's 4 failures are a strict subset of China's 8
+  PASS  The 4 China failures Singapore avoids are exactly its 4 downward-flagged calls
+
+  -- Dominance against all 19 other systems --
+  Status Quo Market Capitalism                               non-dominated pair
+  Nordic Social Democracy                                    non-dominated pair
+  Centrally Planned Socialism                                non-dominated pair
+  Market Socialism                                           non-dominated pair
+  Libertarian Minarchism                                     non-dominated pair
+  MMT + Job Guarantee                                        non-dominated pair
+  Universal Basic Income                                     non-dominated pair
+  Degrowth Economics                                         non-dominated pair
+  Stakeholder Capitalism                                     non-dominated pair
+  Fully Automated Luxury Communism                           non-dominated pair
+  Participatory Economics                                    non-dominated pair
+  CCO-PTF-CIP-SZH                                            DOMINATES Singapore
+  Integral                                                   non-dominated pair
+  Georgism / Land Value Tax                                  non-dominated pair
+  Mutual Credit / LETS                                       non-dominated pair
+  Doughnut Economics                                         non-dominated pair
+  Universal Basic Services                                   non-dominated pair
+  Sovereign Wealth Fund Statism [pending]                    non-dominated pair
+  State Capitalism / China [pending]                         is DOMINATED by Singapore
+  PASS  Singapore is dominated only by CCO-PTF-CIP-SZH
+  PASS  Singapore strictly dominates only China
+
+  -- Ranking in the prospective 20-system corpus --
+   1. CCO-PTF-CIP-SZH                                             24.5/26 (94%)  fails= 0
+   2. Participatory Economics                                     20.5/26 (79%)  fails= 1
+   3. Nordic Social Democracy                                     19.5/26 (75%)  fails= 2
+   4. Integral                                                    19.5/26 (75%)  fails= 3
+   5. Degrowth Economics                                          19.0/26 (73%)  fails= 2
+   6. Market Socialism                                            16.5/26 (63%)  fails= 2
+   7. MMT + Job Guarantee                                         15.5/26 (60%)  fails= 3
+   8. Universal Basic Income                                      14.5/26 (56%)  fails= 7
+   9. Mutual Credit / LETS                                        14.5/26 (56%)  fails= 3
+  10. Sovereign Wealth Fund Statism [pending]                     14.0/26 (54%)  fails= 3
+  11. State Capitalism / Singapore [pending]                      14.0/26 (54%)  fails= 4   <==
+  12. Georgism / Land Value Tax                                   13.5/26 (52%)  fails= 2
+  13. Universal Basic Services                                    13.5/26 (52%)  fails= 3
+  14. Fully Automated Luxury Communism                            13.0/26 (50%)  fails=10
+  15. Doughnut Economics                                          11.5/26 (44%)  fails= 8
+  16. Status Quo Market Capitalism                                10.5/26 (40%)  fails= 9
+  17. Centrally Planned Socialism                                 10.0/26 (38%)  fails=12
+  18. Stakeholder Capitalism                                      10.0/26 (38%)  fails= 9
+  19. State Capitalism / China [pending]                          10.0/26 (38%)  fails= 8
+  20. Libertarian Minarchism                                       8.0/26 (31%)  fails=15
+  Strictly above: 9; tied with: ['Sovereign Wealth Fund Statism [pending]']; strictly below: 9
+  PASS  Tied for 10th-11th of 20: 9 above, tied only with SWF Statism, 9 below
+
+  -- Step 1b-cohort facts cited in the Final Assessment --
+  Georgism                           D1 2.0/6   C1.2a 0.0   C1.3 0.5
+  Mutual Credit                      D1 2.0/6   C1.2a 0.0   C1.3 0.0
+  Doughnut                           D1 1.0/6   C1.2a 0.0   C1.3 0.5
+  Universal Basic Services           D1 1.5/6   C1.2a 0.0   C1.3 0.5
+  Sovereign Wealth Fund Statism      D1 2.5/6   C1.2a 0.5   C1.3 0.0
+  State Capitalism / China           D1 3.0/6   C1.2a 0.5   C1.3 0.5
+  State Capitalism / Singapore       D1 4.0/6   C1.2a 1.0   C1.3 1.0
+  PASS  Singapore's Domain 1 (4.0) is the highest of the seven Step 1b systems
+  PASS  Singapore is the first Step 1b system to score 1.0 on C1.2a, and on C1.3
+  Lowest Domain 4 totals: [(0.5, 'State Capitalism / China [pending]'), (0.5, 'Status Quo Market Capitalism'), (1.0, 'Stakeholder Capitalism'), (1.0, 'State Capitalism / Singapore [pending]'), (1.5, 'Libertarian Minarchism')]
+  PASS  Singapore's Domain 4 (1.0) ties Stakeholder Capitalism for third-lowest, above only China and Status Quo
+  PASS  Domain 4 is Singapore's weakest domain (by percentage)
+
+==========================================================================================
+SUMMARY: 63/63 checks pass.
+ALL CHECKS PASS. Nothing is inserted anywhere (scratch-before-insert discipline);
+this verifies the scratch document's arithmetic, its transcription, its disclosed
+two-directional sensitivity, its population-scope reading, and every comparative
+claim against the real canonical corpus.

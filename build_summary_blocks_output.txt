@@ -1,0 +1,35 @@
+build_summary_blocks.py -- the 23 summary blocks, staged (D3(a); embedded with D14 in one later pass)
+============================================================================================
+59 verbatim phrases asserted in their documents; every block validates against neec_entry.py.
+  code  scope class                  basis     flags  flag bases                         readings  scenarios
+  SQ    configured_national_economy  proposed      0  -                                  -         -
+  NSD   configured_national_economy  proposed      0  -                                  -         -
+  CPS   configured_national_economy  proposed      1  stated 1                           extremes  -
+  MS    comprehensive_system         proposed      0  -                                  -         -
+  LM    comprehensive_system         proposed      0  -                                  -         -
+  MMT   mechanism                    proposed      1  stated 1                           extremes  -
+  UBI   mechanism                    proposed      0  -                                  -         -
+  DG    comprehensive_system         proposed      0  -                                  -         -
+  SC    comprehensive_system         proposed      0  -                                  -         -
+  FALC  comprehensive_system         proposed      0  -                                  -         -
+  PE    comprehensive_system         proposed      0  -                                  -         -
+  CCO   comprehensive_system         proposed      0  -                                  -         -
+  INT   comprehensive_system         proposed      1  stated 1                           extremes  -
+  GEO   mechanism                    stated        1  both-directions 1                  extremes  -
+  MC    mechanism                    stated        2  both-directions 1, direction-stated 1 extremes  -
+  DE    comprehensive_system         proposed      2  stated 2                           extremes  -
+  UBS   mechanism                    proposed      3  stated 2, direction-stated 1       extremes  -
+  SWF   mechanism                    stated        4  stated 3, both-directions 1        extremes  -
+  CN    configured_national_economy  stated        9  register 9                         extremes  -
+  SG    configured_national_economy  stated       12  register 12                        extremes  citizens-and-PRs-only
+  QA    configured_national_economy  stated       12  register 12                        extremes  citizens-only
+  IF    mechanism                    stated       16  register 16                        stated    social-finance-layer
+  OS    mechanism                    stated       20  register 20                        stated    knowledge-commons
+
+Open decisions this staging depends on:
+  D16: 3 flags encoded both-directions as [0.0, 1.0]; 11 entries carry the extremes as their joint readings.
+  D17: 15 scope classes proposed rather than stated.
+  D18 preview, Singapore as staged (C1.5 flagged): 12 flags, 4,096 combinations, keep tier 64.1%; readings reach PA/Part/SI, span 6.0 / 6
+  D18 preview, Singapore D18 variant (C1.5 scope call moved to the scenario): 11 flags, 2,048 combinations, keep tier 64.1%; readings reach PA/Part/SI, span 5.5 / 6
+
+Wrote summary_blocks_s27.json: 23 blocks, md5 3c30499b.

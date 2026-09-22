@@ -1,0 +1,10 @@
+selftest --candidate (canonical corpus, 23 systems; codes from neec_corpus.json):
+  ok   a well-formed candidate validates
+  ok   a key already in the corpus is rejected
+  ok   a display name already in the corpus is rejected
+  ok   a display name that does not begin with the key is rejected
+  ok   a retrofit-step1c record is rejected
+  ok   a summary that is not the vector's arithmetic is rejected
+  ok   a peer outside the corpus is rejected
+  ok   a code already in the corpus is rejected
+selftest --candidate: 8 of 8 cases behave as expected

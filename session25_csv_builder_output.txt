@@ -1,0 +1,10 @@
+Cross-validation PASSED: all 23 systems' D1-D5/Total/failures match neec_weighting_robustness_analysis_v2.py's independently-maintained PUBLISHED dict and SCORES vectors exactly.
+
+Wrote neec_scores.csv: 23 rows, all on the uniform 26-criterion structure, 14 columns.
+Schema change this session: 'corrected_in_v1_1' column renamed 'revision_note' to reflect that it now also carries Step 1c retrofit provenance, not just the v1.1 arithmetic-audit history. All prior row content preserved in spirit; see individual notes fields for the full old-v1.1-audit-history text where applicable (unchanged) vs. new Step-1c-retrofit text (new this session).
+
+Session 16: Doughnut Economics and Universal Basic Services added (rows 16-17), bringing the canonical CSV from 15 to 17 systems. Report and Paper regeneration to fold both into Part I/II and Appendix B/Section 11 remains separately queued, per this project's established precedent of treating CSV insertion and Report/Paper regeneration as distinct passes (Georgism/Mutual Credit/LETS: Session 8 insertion, Sessions 9-10 regeneration).
+
+Session 20: Sovereign Wealth Fund Statism, State Capitalism / China, and State Capitalism / Singapore added (rows 18-20), bringing the canonical CSV from 17 to 20 systems. Report and Paper regeneration for all five systems scored since Session 14 remains queued as 'Step 5 (expanded)'.
+
+Session 25: State Capitalism / Qatar, Islamic Finance / Profit-Sharing Banking, and Ostrom-Style Commons Governance added (rows 21-23), bringing the canonical CSV from 20 to 23 systems and closing Step 1b. Report and Paper regeneration for all eight systems scored since Session 14 remains queued as 'Step 5 (expanded)'.

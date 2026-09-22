@@ -1,0 +1,30 @@
+================================================================================================
+d14_landing_s29.py -- the D14 landing: eleven scoring documents restated on the canonical corpus
+================================================================================================
+inputs: 11 snapshots (*_s26_snapshot.md), summary_blocks_s28.json (md5 7973e170), neec_entry.py (md5 b9bf5acf)
+  GEO  NEEC_Georgism_LVT_scoring_scratch.md                 edits  5 (items  7); D21 0 inline, 0 table rows; blocks 1
+  MC   NEEC_MutualCredit_LETS_scoring_scratch.md            edits  5 (items  7); D21 0 inline, 0 table rows; blocks 1
+  DE   NEEC_DoughnutEconomics_scoring_scratch.md            edits  5 (items  7); D21 0 inline, 0 table rows; blocks 1
+  UBS  NEEC_UniversalBasicServices_scoring_scratch.md       edits 11 (items 13); D21 0 inline, 0 table rows; blocks 1
+  SWF  NEEC_SovereignWealthFundStatism_scoring_scratch.md   edits  6 (items  8); D21 0 inline, 0 table rows; blocks 1
+  CN   NEEC_StateCapitalism_China_scoring_scratch.md        edits  6 (items 11); D21 0 inline, 0 table rows; blocks 1
+  SG   NEEC_StateCapitalism_Singapore_scoring_scratch.md    edits 11 (items 15); D21 0 inline, 0 table rows; blocks 1
+  1C   NEEC_Step1c_Retrofit_C1_2ab_C1_5.md                  edits  8 (items  8); D21 0 inline, 0 table rows; blocks 13
+  QA   NEEC_StateCapitalism_Qatar_scoring_scratch.md        edits  0 (items  0); D21 0 inline, 0 table rows; blocks 1
+  IF   NEEC_IslamicFinance_scoring_scratch.md               edits  1 (items  1); D21 6 inline, 23 table rows; blocks 1
+  OS   NEEC_Ostrom_Commons_scoring_scratch.md               edits  2 (items  2); D21 3 inline, 23 table rows; blocks 1
+
+audit items resolved: 75; D13 restatements: 3; other D18(a) edits: 1; consequential edits: 2
+  wrote NEEC_Georgism_LVT_scoring_scratch.md (md5 1022b6bc)
+  wrote NEEC_MutualCredit_LETS_scoring_scratch.md (md5 477390c5)
+  wrote NEEC_DoughnutEconomics_scoring_scratch.md (md5 1c527415)
+  wrote NEEC_UniversalBasicServices_scoring_scratch.md (md5 895705a2)
+  wrote NEEC_SovereignWealthFundStatism_scoring_scratch.md (md5 70287ebd)
+  wrote NEEC_StateCapitalism_China_scoring_scratch.md (md5 9339e0a4)
+  wrote NEEC_StateCapitalism_Singapore_scoring_scratch.md (md5 d6ad5591)
+  wrote NEEC_Step1c_Retrofit_C1_2ab_C1_5.md (md5 620f8467)
+  wrote NEEC_StateCapitalism_Qatar_scoring_scratch.md (md5 931c2695)
+  wrote NEEC_IslamicFinance_scoring_scratch.md (md5 9643d46d)
+  wrote NEEC_Ostrom_Commons_scoring_scratch.md (md5 f280ec44)
+
+ALL EDITS APPLIED; every restated phrase occurs exactly once in its document.

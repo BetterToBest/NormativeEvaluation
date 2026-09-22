@@ -1,0 +1,1 @@
+ERROR: the canonical script is present; compare_replication.py runs against a kit's corpus (neec_corpus.json with the target withheld), as a replication kit is laid out

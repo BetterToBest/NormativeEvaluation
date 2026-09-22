@@ -1,0 +1,49 @@
+neec_entry.py --candidate -- 1 candidate block(s); corpus: neec_corpus.json (22 systems)
+codes of the corpus: 22, from neec_corpus.json; a candidate's code must differ
+============================================================================================
+PASS [OSR] Ostrom-Style Commons Governance  (candidate: not in the corpus)
+      scope: mechanism (stated); record: native-v2
+      flags: 5 criteria, 5 independent calls (stated 5)
+      enumeration: 32 combinations; Part 32; totals 13.0-15.5, failures 3-5; keep scored tier 100.0%
+      reading scored  scored    13.0/26  5 failures  Partially Adequate       as scored
+      reading reform_optimistic stated    14.0/26  4 failures  Partially Adequate       capture treated as a correctable implementation shortfall; collective-choice credited at designed strength
+      reading extremes_down extremes  13.0/26  5 failures  Partially Adequate       every flagged call resolved downward (identical to the scored reading: no flag here has an alternative below its scored value)
+      reading extremes_up extremes  15.5/26  3 failures  Partially Adequate       every flagged call resolved upward
+      D13: joint readings reach 1 tier(s) (Part); span 2.5 points / 2 failures; tier-robust
+      scenario no_housing_extension: 12.5/26, 6 failures, Structurally Inadequate (1 criteria moved; Domain narrowed to exclude the community-land-trust/housing extension: only natural-resource CPR institutions count)
+      undisputed failures: 3 (C1.2a, C1.5, C2.2)
+      D9 peer matrix, declared peers; '*' marks a criterion where the peer differs:
+        scope classes: entry mechanism; GEO mechanism, MC mechanism, SWF mechanism, IF mechanism
+                entry             GEO              MC             SWF              IF
+        C1.1      0.5            0.5             0.5             0.5             0.5 
+        C1.2a     0.0            0.0             0.0             0.5*            0.5*
+        C1.2b     0.5            0.5             1.0*            0.5             0.0*
+        C1.3      0.5            0.5             0.0*            0.0*            0.5 
+        C1.4      0.0            0.5*            0.5*            0.5*            0.0 
+        C1.5      0.0            0.0             0.0             0.5*            0.5*
+        C2.1      0.5            0.5             0.5             0.5             0.5 
+        C2.2      0.0            0.5*            0.5*            0.5*            0.0 
+        C2.3      0.5            0.5             0.5             0.5             0.5 
+        C2.4      0.5            0.5             0.5             0.5             0.5 
+        C2.5      1.0            1.0             1.0             1.0             1.0 
+        C3.1      0.5            0.5             0.5             0.5             0.5 
+        C3.2      0.5            0.5             0.5             0.5             0.5 
+        C3.3      0.5            0.5             0.5             0.5             0.5 
+        C3.4      1.0            1.0             1.0             1.0             1.0 
+        C3.5      0.5            0.5             0.5             0.5             0.5 
+        C4.1      0.5            0.5             0.5             1.0*            0.5 
+        C4.2      0.5            0.5             0.5             0.0*            0.0*
+        C4.3      0.0            0.5*            0.5*            0.5*            0.5*
+        C4.4      0.5            0.5             0.5             0.5             0.0*
+        C4.5      0.5            0.5             0.5             0.0*            0.5 
+        C5.1      1.0            0.5*            1.0             1.0             1.0 
+        C5.2      0.5            0.5             0.5             0.5             1.0*
+        C5.3      1.0            1.0             1.0             1.0             1.0 
+        C5.4      0.5            0.5             0.5             0.5             0.5 
+        C5.5      1.0            0.5*            1.0             0.5*            1.0 
+        vs Georgism / Land Value Tax: differs on 5, higher on 2, lower on 3, total -0.5; the entry neither dominates
+        vs Mutual Credit / LETS: differs on 5, higher on 1, lower on 4, total -1.5; the entry neither dominates
+        vs Sovereign Wealth Fund Statism: differs on 10, higher on 4, lower on 6, total -1.0; the entry neither dominates
+        vs Islamic Finance / Profit-Sharing Banking: differs on 7, higher on 3, lower on 4, total -0.5; the entry neither dominates
+
+ALL BLOCKS VALID.

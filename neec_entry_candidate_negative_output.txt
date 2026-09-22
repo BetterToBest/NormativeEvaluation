@@ -1,0 +1,9 @@
+neec_entry.py --candidate -- 1 candidate block(s); canonical corpus: 23 systems
+codes of the corpus: 23, from neec_corpus.json; a candidate's code must differ
+============================================================================================
+FAIL [OS] Ostrom-Style Commons Governance (NEEC_Ostrom_Commons_scoring_scratch.md)
+      - key 'Ostrom-Style Commons Governance' is already in the corpus; a candidate's key must not be
+      - display_name 'Ostrom-Style Commons Governance' is already a corpus entry's
+      - code 'OS' is already a corpus entry's
+
+1 block(s) FAILED.

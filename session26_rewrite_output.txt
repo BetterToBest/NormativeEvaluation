@@ -1,0 +1,19 @@
+rewrite_session26.py -- decision D12: comparative claims restated on the 23-system corpus
+inputs pinned: 4 files; canonical corpus: 23 systems
+
+NEEC_StateCapitalism_Qatar_scoring_scratch.md: 6 edits (stale 4, superseded 2)
+  Q1-status Q2-tie14 Q3-csv Q4-step1b Q5-position Q6-next
+
+NEEC_IslamicFinance_scoring_scratch.md: 12 edits (correction 1, error 5, stale 3, superseded 2, table 1)
+  F1-status F2-c14-label F3-c42-label F4-flags F5-after-table F6-tie-order F7-split F8-dominance F9-final-d4 F10-final-failures F11-tie-partners F12-table
+
+NEEC_Ostrom_Commons_scoring_scratch.md: 13 edits (correction 2, error 3, stale 6, superseded 1, table 1)
+  O1-status O2-c32 O3-c55 O4-rule-pointer O5-after-table O6-tie-order O7-dominance O8-domain5 O9-neighbour O10-d8 O11-disclosure O12-robustness O13-table
+
+wrote NEEC_StateCapitalism_Qatar_scoring_scratch.md  md5 08aab1215c92c7c72578d16d136ac24d
+
+wrote NEEC_IslamicFinance_scoring_scratch.md  md5 600ab19f6ba2e696a58c443465ca8021
+
+wrote NEEC_Ostrom_Commons_scoring_scratch.md  md5 763fc173969dec7405c71a0b1e1d2ca1
+
+TOTAL: 31 edits -- correction 3, error 8, stale 13, superseded 5, table 2

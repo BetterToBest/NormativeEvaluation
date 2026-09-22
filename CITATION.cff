@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use NEEC, please cite it using these metadata."
+title: "NEEC: Normative Economic Evaluation Criteria"
+abstract: >-
+  NEEC compares economic systems on one fixed set of normative criteria.
+  Version 2 scores each system on 26 criteria in five domains (Material
+  Security, Human Autonomy, System Resilience, Ethical Integrity and
+  Implementation Viability), with a published scoring protocol, registers
+  of contestable calls, blind replication and a verification harness that
+  reproduces every result byte for byte.
+type: dataset
+authors:
+  - family-names: Johnson
+    given-names: Duke
+    affiliation: "Independent researcher"
+  - name: "Claude (Anthropic)"
+version: "2.0-dev"
+license: CC-BY-4.0
+repository-code: "https://github.com/BetterToBest/NormativeEvaluation"
+url: "https://sites.google.com/view/normativeeconomicevaluation/home"
+keywords:
+  - normative economics
+  - comparative economic systems
+  - evaluation framework
+  - reproducibility
+  - replication

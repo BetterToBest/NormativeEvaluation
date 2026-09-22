@@ -1,0 +1,191 @@
+verify_transcription(): PASS -- all 15 systems' 26-criterion vectors sum to their
+published domain/overall totals exactly. (verify_unchanged_from_legacy() skipped
+this run -- baseline_weighting_script.py still absent from the mount; see handoff.)
+
+====================================================================================================
+RANKINGS UNDER EACH SCHEME, ALL 15 SYSTEMS (by weighted %, descending)
+====================================================================================================
+
+--- Equal (baseline) (max possible = 26.0) ---
+   1. CCO-PTF-CIP-SZH                         24.50  ( 94.2%)  [0 fail, Potentially Adequate]
+   2. Participatory Economics                 20.50  ( 78.8%)  [1 fail, Potentially Adequate]
+   3. Nordic Social Democracy                 19.50  ( 75.0%)  [2 fail, Potentially Adequate]
+   4. Integral                                19.50  ( 75.0%)  [3 fail, Partially Adequate]
+   5. Degrowth Economics                      19.00  ( 73.1%)  [2 fail, Potentially Adequate]
+   6. Market Socialism                        16.50  ( 63.5%)  [2 fail, Potentially Adequate]
+   7. MMT + Job Guarantee                     15.50  ( 59.6%)  [3 fail, Partially Adequate]
+   8. Universal Basic Income                  14.50  ( 55.8%)  [7 fail, Structurally Inadequate]
+   9. Mutual Credit / LETS                    14.50  ( 55.8%)  [3 fail, Partially Adequate]
+  10. Georgism / Land Value Tax               13.50  ( 51.9%)  [2 fail, Potentially Adequate]
+  11. Fully Automated Luxury Communism        13.00  ( 50.0%)  [10 fail, Structurally Inadequate]
+  12. Status Quo Market Capitalism            10.50  ( 40.4%)  [9 fail, Structurally Inadequate]
+  13. Centrally Planned Socialism             10.00  ( 38.5%)  [12 fail, Structurally Inadequate]
+  14. Stakeholder Capitalism                  10.00  ( 38.5%)  [9 fail, Structurally Inadequate]
+  15. Libertarian Minarchism                   8.00  ( 30.8%)  [15 fail, Structurally Inadequate]
+
+--- Material-Security-Weighted (D1 x2) (max possible = 32.0) ---
+   1. CCO-PTF-CIP-SZH                         30.00  ( 93.8%)  [0 fail, Potentially Adequate]
+   2. Participatory Economics                 25.50  ( 79.7%)  [1 fail, Potentially Adequate]
+   3. Nordic Social Democracy                 24.50  ( 76.6%)  [2 fail, Potentially Adequate]
+   4. Degrowth Economics                      23.50  ( 73.4%)  [2 fail, Potentially Adequate]
+   5. Integral                                22.50  ( 70.3%)  [3 fail, Partially Adequate]
+   6. Market Socialism                        20.50  ( 64.1%)  [2 fail, Potentially Adequate]
+   7. MMT + Job Guarantee                     19.00  ( 59.4%)  [3 fail, Partially Adequate]
+   8. Universal Basic Income                  17.00  ( 53.1%)  [7 fail, Structurally Inadequate]
+   9. Mutual Credit / LETS                    16.50  ( 51.6%)  [3 fail, Partially Adequate]
+  10. Fully Automated Luxury Communism        16.00  ( 50.0%)  [10 fail, Structurally Inadequate]
+  11. Georgism / Land Value Tax               15.50  ( 48.4%)  [2 fail, Potentially Adequate]
+  12. Centrally Planned Socialism             13.00  ( 40.6%)  [12 fail, Structurally Inadequate]
+  13. Status Quo Market Capitalism            12.50  ( 39.1%)  [9 fail, Structurally Inadequate]
+  14. Stakeholder Capitalism                  12.00  ( 37.5%)  [9 fail, Structurally Inadequate]
+  15. Libertarian Minarchism                   8.00  ( 25.0%)  [15 fail, Structurally Inadequate]
+
+--- Feasibility-Discounted (D5 x0.5) (max possible = 23.5) ---
+   1. CCO-PTF-CIP-SZH                         22.25  ( 94.7%)  [0 fail, Potentially Adequate]
+   2. Participatory Economics                 19.00  ( 80.9%)  [1 fail, Potentially Adequate]
+   3. Integral                                18.25  ( 77.7%)  [3 fail, Partially Adequate]
+   4. Degrowth Economics                      18.00  ( 76.6%)  [2 fail, Potentially Adequate]
+   5. Nordic Social Democracy                 17.50  ( 74.5%)  [2 fail, Potentially Adequate]
+   6. Market Socialism                        15.00  ( 63.8%)  [2 fail, Potentially Adequate]
+   7. MMT + Job Guarantee                     14.00  ( 59.6%)  [3 fail, Partially Adequate]
+   8. Universal Basic Income                  13.00  ( 55.3%)  [7 fail, Structurally Inadequate]
+   9. Fully Automated Luxury Communism        12.75  ( 54.3%)  [10 fail, Structurally Inadequate]
+  10. Mutual Credit / LETS                    12.50  ( 53.2%)  [3 fail, Partially Adequate]
+  11. Georgism / Land Value Tax               12.00  ( 51.1%)  [2 fail, Potentially Adequate]
+  12. Centrally Planned Socialism              9.50  ( 40.4%)  [12 fail, Structurally Inadequate]
+  13. Stakeholder Capitalism                   8.75  ( 37.2%)  [9 fail, Structurally Inadequate]
+  14. Status Quo Market Capitalism             8.50  ( 36.2%)  [9 fail, Structurally Inadequate]
+  15. Libertarian Minarchism                   6.50  ( 27.7%)  [15 fail, Structurally Inadequate]
+
+--- Crisis-Risk-Weighted (C1.4, C4.2 x3) (max possible = 30.0) ---
+   1. CCO-PTF-CIP-SZH                         28.50  ( 95.0%)  [0 fail, Potentially Adequate]
+   2. Participatory Economics                 24.50  ( 81.7%)  [1 fail, Potentially Adequate]
+   3. Integral                                22.50  ( 75.0%)  [3 fail, Partially Adequate]
+   4. Degrowth Economics                      22.00  ( 73.3%)  [2 fail, Potentially Adequate]
+   5. Nordic Social Democracy                 21.50  ( 71.7%)  [2 fail, Potentially Adequate]
+   6. Market Socialism                        18.50  ( 61.7%)  [2 fail, Potentially Adequate]
+   7. MMT + Job Guarantee                     18.50  ( 61.7%)  [3 fail, Partially Adequate]
+   8. Universal Basic Income                  17.50  ( 58.3%)  [7 fail, Structurally Inadequate]
+   9. Fully Automated Luxury Communism        17.00  ( 56.7%)  [10 fail, Structurally Inadequate]
+  10. Mutual Credit / LETS                    16.50  ( 55.0%)  [3 fail, Partially Adequate]
+  11. Georgism / Land Value Tax               15.50  ( 51.7%)  [2 fail, Potentially Adequate]
+  12. Centrally Planned Socialism             12.00  ( 40.0%)  [12 fail, Structurally Inadequate]
+  13. Status Quo Market Capitalism            10.50  ( 35.0%)  [9 fail, Structurally Inadequate]
+  14. Stakeholder Capitalism                  10.00  ( 33.3%)  [9 fail, Structurally Inadequate]
+  15. Libertarian Minarchism                   8.00  ( 26.7%)  [15 fail, Structurally Inadequate]
+
+====================================================================================================
+RANK POSITION BY SYSTEM, ACROSS ALL FOUR SCHEMES (1 = highest)
+====================================================================================================
+System                                  Equal (baselin  Material-Secur  Feasibility-Di  Crisis-Risk-We
+CCO-PTF-CIP-SZH                                1 (94.2%)         1 (93.8%)         1 (94.7%)         1 (95.0%)
+Participatory Economics                        2 (78.8%)         2 (79.7%)         2 (80.9%)         2 (81.7%)
+Nordic Social Democracy                        3 (75.0%)         3 (76.6%)         5 (74.5%)         5 (71.7%)
+Integral                                       4 (75.0%)         5 (70.3%)         3 (77.7%)         3 (75.0%)
+Degrowth Economics                             5 (73.1%)         4 (73.4%)         4 (76.6%)         4 (73.3%)
+Market Socialism                               6 (63.5%)         6 (64.1%)         6 (63.8%)         6 (61.7%)
+MMT + Job Guarantee                            7 (59.6%)         7 (59.4%)         7 (59.6%)         7 (61.7%)
+Universal Basic Income                         8 (55.8%)         8 (53.1%)         8 (55.3%)         8 (58.3%)
+Mutual Credit / LETS                           9 (55.8%)         9 (51.6%)        10 (53.2%)        10 (55.0%)
+Georgism / Land Value Tax                     10 (51.9%)        11 (48.4%)        11 (51.1%)        11 (51.7%)
+Fully Automated Luxury Communism              11 (50.0%)        10 (50.0%)         9 (54.3%)         9 (56.7%)
+Status Quo Market Capitalism                  12 (40.4%)        13 (39.1%)        14 (36.2%)        13 (35.0%)
+Centrally Planned Socialism                   13 (38.5%)        12 (40.6%)        12 (40.4%)        12 (40.0%)
+Stakeholder Capitalism                        14 (38.5%)        14 (37.5%)        13 (37.2%)        14 (33.3%)
+Libertarian Minarchism                        15 (30.8%)        15 (25.0%)        15 (27.7%)        15 (26.7%)
+
+====================================================================================================
+RANK MOVEMENT: equal-weighted rank vs. each alternative scheme
+====================================================================================================
+
+--- Material-Security-Weighted (D1 x2): largest rank movements ---
+  Status Quo Market Capitalism           equal-rank 12 -> Material-Security-We-rank 13  (delta +1)
+  Centrally Planned Socialism            equal-rank 13 -> Material-Security-We-rank 12  (delta -1)
+  Degrowth Economics                     equal-rank  5 -> Material-Security-We-rank  4  (delta -1)
+  Fully Automated Luxury Communism       equal-rank 11 -> Material-Security-We-rank 10  (delta -1)
+  Integral                               equal-rank  4 -> Material-Security-We-rank  5  (delta +1)
+  Georgism / Land Value Tax              equal-rank 10 -> Material-Security-We-rank 11  (delta +1)
+
+--- Feasibility-Discounted (D5 x0.5): largest rank movements ---
+  Status Quo Market Capitalism           equal-rank 12 -> Feasibility-Discount-rank 14  (delta +2)
+  Nordic Social Democracy                equal-rank  3 -> Feasibility-Discount-rank  5  (delta +2)
+  Fully Automated Luxury Communism       equal-rank 11 -> Feasibility-Discount-rank  9  (delta -2)
+  Centrally Planned Socialism            equal-rank 13 -> Feasibility-Discount-rank 12  (delta -1)
+  Degrowth Economics                     equal-rank  5 -> Feasibility-Discount-rank  4  (delta -1)
+  Stakeholder Capitalism                 equal-rank 14 -> Feasibility-Discount-rank 13  (delta -1)
+
+--- Crisis-Risk-Weighted (C1.4, C4.2 x3): largest rank movements ---
+  Nordic Social Democracy                equal-rank  3 -> Crisis-Risk-Weighted-rank  5  (delta +2)
+  Fully Automated Luxury Communism       equal-rank 11 -> Crisis-Risk-Weighted-rank  9  (delta -2)
+  Status Quo Market Capitalism           equal-rank 12 -> Crisis-Risk-Weighted-rank 13  (delta +1)
+  Centrally Planned Socialism            equal-rank 13 -> Crisis-Risk-Weighted-rank 12  (delta -1)
+  Degrowth Economics                     equal-rank  5 -> Crisis-Risk-Weighted-rank  4  (delta -1)
+  Integral                               equal-rank  4 -> Crisis-Risk-Weighted-rank  3  (delta -1)
+
+====================================================================================================
+ADEQUACY TIER (failure-count based) -- confirm invariant across all 4 schemes, all 15 systems
+====================================================================================================
+  Status Quo Market Capitalism            9 failures -> Structurally Inadequate
+  Nordic Social Democracy                 2 failures -> Potentially Adequate
+  Centrally Planned Socialism            12 failures -> Structurally Inadequate
+  Market Socialism                        2 failures -> Potentially Adequate
+  Libertarian Minarchism                 15 failures -> Structurally Inadequate
+  MMT + Job Guarantee                     3 failures -> Partially Adequate
+  Universal Basic Income                  7 failures -> Structurally Inadequate
+  Degrowth Economics                      2 failures -> Potentially Adequate
+  Stakeholder Capitalism                  9 failures -> Structurally Inadequate
+  Fully Automated Luxury Communism       10 failures -> Structurally Inadequate
+  Participatory Economics                 1 failures -> Potentially Adequate
+  CCO-PTF-CIP-SZH                         0 failures -> Potentially Adequate
+  Integral                                3 failures -> Partially Adequate
+  Georgism / Land Value Tax               2 failures -> Potentially Adequate
+  Mutual Credit / LETS                    3 failures -> Partially Adequate
+
+====================================================================================================
+DOMINANCE-PAIR SPOT CHECK (Theorem 5 guarantees positive under ANY positive weighting
+wherever strict dominance holds; confirmatory, not exploratory)
+====================================================================================================
+
+  CCO-PTF-CIP-SZH  vs  Status Quo Market Capitalism   (strict formal dominance: True)
+    Equal (baseline)                        24.50 >  10.50
+    Material-Security-Weighted (D1 x2)      30.00 >  12.50
+    Feasibility-Discounted (D5 x0.5)        22.25 >   8.50
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  10.50
+
+  CCO-PTF-CIP-SZH  vs  Nordic Social Democracy   (strict formal dominance: False)
+    Equal (baseline)                        24.50 >  19.50
+    Material-Security-Weighted (D1 x2)      30.00 >  24.50
+    Feasibility-Discounted (D5 x0.5)        22.25 >  17.50
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  21.50
+
+  CCO-PTF-CIP-SZH  vs  MMT + Job Guarantee   (strict formal dominance: True)
+    Equal (baseline)                        24.50 >  15.50
+    Material-Security-Weighted (D1 x2)      30.00 >  19.00
+    Feasibility-Discounted (D5 x0.5)        22.25 >  14.00
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  18.50
+
+  CCO-PTF-CIP-SZH  vs  Georgism / Land Value Tax   (strict formal dominance: True)
+    Equal (baseline)                        24.50 >  13.50
+    Material-Security-Weighted (D1 x2)      30.00 >  15.50
+    Feasibility-Discounted (D5 x0.5)        22.25 >  12.00
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  15.50
+
+  Participatory Economics  vs  Stakeholder Capitalism   (strict formal dominance: False)
+    Equal (baseline)                        20.50 >  10.00
+    Material-Security-Weighted (D1 x2)      25.50 >  12.00
+    Feasibility-Discounted (D5 x0.5)        19.00 >   8.75
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    24.50 >  10.00
+
+  Mutual Credit / LETS  vs  Georgism / Land Value Tax   (strict formal dominance: False)
+    Equal (baseline)                        14.50 >  13.50
+    Material-Security-Weighted (D1 x2)      16.50 >  15.50
+    Feasibility-Discounted (D5 x0.5)        12.50 >  12.00
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    16.50 >  15.50
+
+====================================================================================================
+NORDIC vs INTEGRAL under all 4 schemes (Section 12.5's own flagged spot-check, re-confirmed)
+====================================================================================================
+  Equal (baseline)                       Nordic  75.0%   Integral  75.0%   TIE
+  Material-Security-Weighted (D1 x2)     Nordic  76.6%   Integral  70.3%   Nordic ahead
+  Feasibility-Discounted (D5 x0.5)       Nordic  74.5%   Integral  77.7%   Integral ahead
+  Crisis-Risk-Weighted (C1.4, C4.2 x3)   Nordic  71.7%   Integral  75.0%   Integral ahead

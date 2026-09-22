@@ -1,0 +1,29 @@
+============================================================================================
+build_corpus_file.py -- neec_corpus.json (neec-corpus/1.0)
+============================================================================================
+canonical corpus: neec_weighting_robustness_analysis_v2.py, neec_scores.csv (23 systems); summary blocks read from 11 documents, all valid
+  SQ    configured_national_economy   10.5/26  9  Status Quo Market Capitalism
+  NSD   configured_national_economy   19.5/26  2  Nordic Social Democracy
+  CPS   configured_national_economy   10.0/26 12  Centrally Planned Socialism
+  MS    comprehensive_system          16.5/26  2  Market Socialism
+  LM    comprehensive_system           8.0/26 15  Libertarian Minarchism
+  MMT   mechanism                     15.5/26  3  MMT + Job Guarantee
+  UBI   mechanism                     14.5/26  7  Universal Basic Income
+  DG    comprehensive_system          19.0/26  2  Degrowth Economics
+  SC    comprehensive_system          10.0/26  9  Stakeholder Capitalism
+  FALC  comprehensive_system          13.0/26 10  Fully Automated Luxury Communism
+  PE    comprehensive_system          20.5/26  1  Participatory Economics
+  CCO   comprehensive_system          24.5/26  0  CCO-PTF-CIP-SZH
+  INT   comprehensive_system          19.5/26  3  Integral
+  GEO   mechanism                     13.5/26  2  Georgism / Land Value Tax (LVT + Citizen's Dividend)
+  MC    mechanism                     14.5/26  3  Mutual Credit / LETS
+  DE    comprehensive_system          11.5/26  8  Doughnut Economics
+  UBS   mechanism                     13.5/26  3  Universal Basic Services
+  SWF   mechanism                     14.0/26  3  Sovereign Wealth Fund Statism
+  CN    configured_national_economy   10.0/26  8  State Capitalism / China (Party-State-Directed Market Economy)
+  SG    configured_national_economy   14.0/26  4  State Capitalism / Singapore (GLC Developmental Capitalism)
+  QA    configured_national_economy    9.0/26 10  State Capitalism / Qatar (Gulf Rentier-Distributive Statism)
+  IF    mechanism                     13.5/26  5  Islamic Finance / Profit-Sharing Banking
+  OS    mechanism                     14.0/26  4  Ostrom-Style Commons Governance
+scope classes: mechanism 8, configured_national_economy 6, comprehensive_system 9
+wrote neec_corpus.json (md5 ba3c7f70); read back by neec_entry.load_corpus_file: identical to the canonical corpus

@@ -1,0 +1,281 @@
+============================================================================================
+run_all_checks.py -- 74 reproducibility checks
+============================================================================================
+
+[ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
+          stdout == insert_session33_output.txt (md5 49b77db5)
+          neec_weighting_robustness_analysis_v2.py == neec_weighting_robustness_analysis_v2.py (md5 e82ba335)
+          neec_scores_csv_builder_v2.py == neec_scores_csv_builder_v2.py (md5 a03e6a83)
+
+[ 2] PASS  Canonical script, current corpus (Session 33: 23 systems, full report)
+          stdout == session33_v2script_output.txt (md5 15683acb)
+
+[ 3] PASS  CSV builder regenerates neec_scores.csv (Session 33)
+          stdout == session33_csv_builder_output.txt (md5 d6d816ff)
+          neec_scores.csv == neec_scores.csv (md5 081f6915)
+
+[ 4] PASS  verify_insertion_s33.py (one cell changed; CSV, corpus file and corpus consistent; negative tests)
+          stdout == verify_insertion_s33_output.txt (md5 f9fb66f9)
+
+[ 5] PASS  restate_s33.py restates seven scoring documents from their Session 32 snapshots (D18(b), D26)
+          stdout == restate_s33_output.txt (md5 e5e7c868)
+          NEEC_Ostrom_Commons_scoring_scratch.md == NEEC_Ostrom_Commons_scoring_scratch.md (md5 54016bc7)
+          NEEC_StateCapitalism_Qatar_scoring_scratch.md == NEEC_StateCapitalism_Qatar_scoring_scratch.md (md5 a6afb45e)
+          NEEC_IslamicFinance_scoring_scratch.md == NEEC_IslamicFinance_scoring_scratch.md (md5 9db387f9)
+          NEEC_MutualCredit_LETS_scoring_scratch.md == NEEC_MutualCredit_LETS_scoring_scratch.md (md5 295f0ece)
+          NEEC_UniversalBasicServices_scoring_scratch.md == NEEC_UniversalBasicServices_scoring_scratch.md (md5 9a3d5c11)
+          NEEC_SovereignWealthFundStatism_scoring_scratch.md == NEEC_SovereignWealthFundStatism_scoring_scratch.md (md5 09f46c6f)
+          NEEC_StateCapitalism_Singapore_scoring_scratch.md == NEEC_StateCapitalism_Singapore_scoring_scratch.md (md5 921f624c)
+
+[ 6] PASS  verify_comparative_claims.py (Session 33: comparative claims in the eleven documents; current corpus)
+          stdout == verify_claims_s33_output.txt (md5 6c598ad9)
+
+[ 7] PASS  verify_comparative_claims.py (Session 33) rejects the seven Session 32 documents (negative control; exit 1 expected)
+          exit status 1, as expected
+          stdout == verify_claims_s33_negative_output.txt (md5 381e13a2)
+
+[ 8] PASS  build_corpus_file.py writes neec_corpus.json from the Session 33 corpus and documents
+          stdout == build_corpus_file_s33_output.txt (md5 3e43fc3b)
+          neec_corpus.json == neec_corpus.json (md5 ae19a9bc)
+
+[ 9] PASS  neec_entry.py reads the 23 summary blocks from the eleven documents (Session 33) and prints the D13 inventory
+          stdout == neec_entry_documents_s33_output.txt (md5 60a24f8c)
+
+[10] PASS  verify_doughnut.py on the Session 33 corpus (the same captured output: D26 does not touch it)
+          stdout == verify_doughnut_output.txt (md5 65bdaff9)
+
+[11] PASS  Canonical script, current corpus (23 systems, full report) [Session 32 state]
+          stdout == session25_v2script_output.txt (md5 0d41d55b)
+
+[12] PASS  CSV builder regenerates neec_scores.csv (23 systems) [Session 32 state]
+          stdout == session25_csv_builder_output.txt (md5 d6d816ff)
+          neec_scores.csv == neec_scores_s32_snapshot.csv (md5 ca2eb1f4)
+
+[13] PASS  Session 25 generator reproduces both canonical scripts from the Session 20 files [Session 32 state]
+          stdout == session25_generator_output.txt (md5 34ba6fa8)
+          neec_weighting_robustness_analysis_v2.py == neec_weighting_robustness_analysis_v2_s32_snapshot.py (md5 d5041b13)
+          neec_scores_csv_builder_v2.py == neec_scores_csv_builder_v2_s32_snapshot.py (md5 7cd53027)
+
+[14] PASS  verify_insertion_s25.py (Session 25 insertion, current corpus; includes negative tests) [Session 32 state]
+          stdout == session25_verify_insertion_output.txt (md5 77452b31)
+
+[15] PASS  run_a4_full_rerun_23.py (Appendix A.4, current corpus) [Session 32 state]
+          stdout == a4_rerun_23_raw_output.txt (md5 b398710d)
+
+[16] PASS  audit_claim_survival_s25.py (the Session 21-23 claims on the combined corpus)
+          stdout == session25_audit_output.txt (md5 e8f6fe52)
+
+[17] PASS  Session 26 generator restates the three scoring documents from their Session 25 snapshots [Session 32 state]
+          stdout == session26_rewrite_output.txt (md5 ad1f5bbf)
+          NEEC_StateCapitalism_Qatar_scoring_scratch.md == NEEC_StateCapitalism_Qatar_scoring_scratch_s26_snapshot.md (md5 08aab121)
+          NEEC_IslamicFinance_scoring_scratch.md == NEEC_IslamicFinance_scoring_scratch_s26_snapshot.md (md5 600ab19f)
+          NEEC_Ostrom_Commons_scoring_scratch.md == NEEC_Ostrom_Commons_scoring_scratch_s26_snapshot.md (md5 763fc173)
+
+[18] PASS  Session 26 generator narrows the three entry verifiers from their Session 25 snapshots
+          stdout == session26_narrow_output.txt (md5 64cdc590)
+          verify_qatar.py == verify_qatar.py (md5 0403e4cc)
+          verify_islamicfinance.py == verify_islamicfinance.py (md5 0c775683)
+          verify_ostrom.py == verify_ostrom.py (md5 73bc65c9)
+
+[19] PASS  verify_qatar.py (entry checks; current corpus, Session 26 document) [Session 32 state]
+          stdout == verify_qatar_output.txt (md5 2d3123fc)
+
+[20] PASS  verify_islamicfinance.py (entry checks; current corpus, Session 26 document) [Session 32 state]
+          stdout == verify_islamicfinance_output.txt (md5 2a9fa706)
+
+[21] PASS  verify_ostrom.py (entry checks; current corpus, Session 26 document) [Session 32 state]
+          stdout == verify_ostrom_output.txt (md5 82b41628)
+
+[22] PASS  verify_comparative_claims.py as of Session 26 (snapshot; current corpus, Session 26 documents) [Session 32 state]
+          stdout == session26_verify_claims_output.txt (md5 f188a2ed)
+
+[23] PASS  verify_comparative_claims.py as of Session 26 rejects the Session 25 documents (negative control; exit 1 expected) [Session 32 state]
+          exit status 1, as expected
+          stdout == session26_verify_claims_negative_output.txt (md5 1eeb6335)
+
+[24] PASS  build_criteria.py generates criteria.json from Paper v1.4 and checks every anchor example [Session 32 state]
+          stdout == build_criteria_output.txt (md5 47846712)
+          criteria.json == criteria.json (md5 6542331e)
+
+[25] PASS  build_summary_blocks.py stages the 23 summary blocks (D3(a)) [Session 32 state]
+          stdout == build_summary_blocks_output.txt (md5 82b1f73e)
+          summary_blocks_s27.json == summary_blocks_s27.json (md5 3c30499b)
+
+[26] PASS  neec_entry.py validates the 23 staged blocks and prints the D13 inventory [Session 32 state]
+          stdout == neec_entry_corpus_output.txt (md5 77598d60)
+
+[27] PASS  neec_entry.py, one entry with its D9 peer matrix (Ostrom-style commons governance) [Session 32 state]
+          stdout == neec_entry_OS_output.txt (md5 0f0132c1)
+
+[28] PASS  neec_entry.py self-test (Markdown round-trip; an altered vector is rejected) [Session 32 state]
+          stdout == neec_entry_selftest_output.txt (md5 a343a535)
+
+[29] PASS  neec_entry.py rejects the staged blocks against the Session 20 corpus (negative control; exit 1 expected)
+          exit status 1, as expected
+          stdout == neec_entry_negative_s20_output.txt (md5 d9a28d3f)
+
+[30] PASS  stage_blocks_s28.py applies D17 and D18(a) to the staged blocks (nothing else changes) [Session 32 state]
+          stdout == stage_blocks_s28_output.txt (md5 422778c8)
+          summary_blocks_s28.json == summary_blocks_s28.json (md5 7973e170)
+
+[31] PASS  neec_entry.py validates the Session 28 blocks and prints the D13 inventory after D16-D18 [Session 32 state]
+          stdout == neec_entry_corpus_s28_output.txt (md5 3373128b)
+
+[32] PASS  audit_claims_s28.py (the claim register of the eight documents not audited before; 222 claims) [Session 32 state]
+          stdout == audit_claims_s28_output.txt (md5 c92f8497)
+
+[33] PASS  d14_landing_s29.py restates the eleven scoring documents from their Session 26 snapshots (D14; Doughnut Economics as the D14 pass left it) [Session 32 state]
+          stdout == d14_landing_s29_output.txt (md5 b0bc4950)
+          NEEC_Georgism_LVT_scoring_scratch.md == NEEC_Georgism_LVT_scoring_scratch.md (md5 1022b6bc)
+          NEEC_MutualCredit_LETS_scoring_scratch.md == NEEC_MutualCredit_LETS_scoring_scratch_s32_snapshot.md (md5 477390c5)
+          NEEC_DoughnutEconomics_scoring_scratch.md == NEEC_DoughnutEconomics_scoring_scratch_s29_snapshot.md (md5 1c527415)
+          NEEC_UniversalBasicServices_scoring_scratch.md == NEEC_UniversalBasicServices_scoring_scratch_s32_snapshot.md (md5 895705a2)
+          NEEC_SovereignWealthFundStatism_scoring_scratch.md == NEEC_SovereignWealthFundStatism_scoring_scratch_s32_snapshot.md (md5 70287ebd)
+          NEEC_StateCapitalism_China_scoring_scratch.md == NEEC_StateCapitalism_China_scoring_scratch.md (md5 9339e0a4)
+          NEEC_StateCapitalism_Singapore_scoring_scratch.md == NEEC_StateCapitalism_Singapore_scoring_scratch_s32_snapshot.md (md5 d6ad5591)
+          NEEC_Step1c_Retrofit_C1_2ab_C1_5.md == NEEC_Step1c_Retrofit_C1_2ab_C1_5.md (md5 620f8467)
+          NEEC_StateCapitalism_Qatar_scoring_scratch.md == NEEC_StateCapitalism_Qatar_scoring_scratch_s32_snapshot.md (md5 931c2695)
+          NEEC_IslamicFinance_scoring_scratch.md == NEEC_IslamicFinance_scoring_scratch_s32_snapshot.md (md5 9643d46d)
+          NEEC_Ostrom_Commons_scoring_scratch.md == NEEC_Ostrom_Commons_scoring_scratch_s32_snapshot.md (md5 f280ec44)
+
+[34] PASS  verify_comparative_claims.py as of Session 29 (snapshot; the documents as the D14 pass left them) [Session 32 state]
+          stdout == verify_claims_s29_output.txt (md5 795abf05)
+
+[35] PASS  verify_comparative_claims.py as of Session 29 rejects the Session 26 documents (negative control; exit 1 expected) [Session 32 state]
+          exit status 1, as expected
+          stdout == verify_claims_s29_negative_output.txt (md5 60f847d5)
+
+[36] PASS  neec_entry.py reads the 23 summary blocks from the eleven documents and prints the D13 inventory [Session 32 state]
+          stdout == neec_entry_documents_s29_output.txt (md5 1bdbae47)
+
+[37] PASS  verify_doughnut.py (reconstructed in Session 30; the Doughnut Economics arithmetic and transcript) [Session 32 state]
+          stdout == verify_doughnut_output.txt (md5 65bdaff9)
+
+[38] PASS  restate_s30.py restates the Doughnut Economics Verification section from its Session 29 snapshot (D22)
+          stdout == restate_s30_output.txt (md5 fe5686fb)
+          NEEC_DoughnutEconomics_scoring_scratch.md == NEEC_DoughnutEconomics_scoring_scratch.md (md5 9953fe32)
+
+[39] PASS  verify_comparative_claims.py (Session 30: comparative claims in the eleven documents; current corpus) [Session 32 state]
+          stdout == verify_claims_s30_output.txt (md5 a16f9a53)
+
+[40] PASS  verify_comparative_claims.py rejects the Doughnut Economics document as the D14 pass left it (negative control; exit 1 expected) [Session 32 state]
+          exit status 1, as expected
+          stdout == verify_claims_s30_negative_output.txt (md5 ee729d7e)
+
+[41] PASS  build_corpus_file.py writes neec_corpus.json from the canonical corpus and the eleven documents (D23) [Session 32 state]
+          stdout == build_corpus_file_output.txt (md5 ee9ecc42)
+          neec_corpus.json == neec_corpus_s32_snapshot.json (md5 ba3c7f70)
+
+[42] PASS  neec_entry.py candidate-mode self-test (a synthetic candidate; seven altered ones rejected) [Session 32 state]
+          stdout == neec_entry_selftest_candidate_output.txt (md5 69c1ee1b)
+
+[43] PASS  neec_entry.py --candidate rejects a canonical entry (negative control; exit 1 expected) [Session 32 state]
+          exit status 1, as expected
+          stdout == neec_entry_candidate_negative_output.txt (md5 64838309)
+
+[44] PASS  build_replication_kit.py OS builds the first blind replication kit (blind protocol, corpus, brief; leak scan; archive) [Session 32 state]
+          stdout == build_replication_kit_OS_output.txt (md5 e2f748bf)
+          SCORING_PROTOCOL.md == replication_kit_OS_SCORING_PROTOCOL.md (md5 c824a8d2)
+          neec_corpus.json == replication_kit_OS_neec_corpus.json (md5 9e803a00)
+          REPLICATION_BRIEF.md == replication_kit_OS_REPLICATION_BRIEF.md (md5 1441b665)
+
+[45] PASS  pilot baseline: the original Ostrom entry validates as a candidate against the kit's corpus [Session 32 state]
+          stdout == neec_entry_candidate_OS_blind_output.txt (md5 6a088f00)
+
+[46] PASS  compare_replication.py self-test in a kit's layout (synthetic replications; refusals; the statistics)
+          stdout == compare_replication_selftest_output.txt (md5 560f516f)
+
+[47] PASS  compare_replication.py: pilot 1, the replication against the original entry (protocol 11.4), and the replication record's tables and attributions (11.5) [Session 32 state]
+          stdout == compare_replication_OS_pilot1_output.txt (md5 e5022c67)
+
+[48] PASS  the replication's block validates as a candidate against the kit's corpus, with its D9 peer matrix (the replicator's own check, re-run)
+          stdout == neec_entry_candidate_OSR_output.txt (md5 ca4f6212)
+
+[49] PASS  compare_replication.py refuses to run beside the canonical script (negative control; exit 1 expected) [Session 32 state]
+          exit status 1, as expected
+          stdout == (empty) (md5 d41d8cd9)
+          stderr == compare_replication_canonical_refusal_stderr.txt (md5 fb8a38bc)
+
+[50] PASS  d18b_reexpression_s32.py: decision D18(b), the Ostrom register re-expressed, and D26 with it (no file changes) [Session 32 state]
+          stdout == d18b_reexpression_s32_output.txt (md5 2ad14bd4)
+
+[51] PASS  verify_ostrom.py as of Session 25 (Session 23; Session 20 corpus, Session 25 document)
+          stdout == verify_ostrom_output_s25_snapshot.txt (md5 8d7d8eec)
+
+[52] PASS  verify_islamicfinance.py as of Session 25 (Session 22; Session 20 corpus, Session 25 document)
+          stdout == verify_islamicfinance_output_s25_snapshot.txt (md5 66fd9675)
+
+[53] PASS  verify_qatar.py as of Session 25 (Session 21; Session 20 corpus, Session 25 document)
+          stdout == verify_qatar_output_s25_snapshot.txt (md5 dfcc616c)
+
+[54] PASS  Session 20 canonical script (20 systems, full report)
+          stdout == session20_v2script_output.txt (md5 2b1940ad)
+
+[55] PASS  Session 20 CSV builder regenerates the Session 20 CSV
+          stdout == session20_csv_builder_output.txt (md5 b9877bb6)
+          neec_scores.csv == neec_scores_s20_snapshot.csv (md5 0630f882)
+
+[56] PASS  Session 20 generator reproduces the Session 20 canonical files from the Session 16 files
+          neec_weighting_robustness_analysis_v2.py == neec_weighting_robustness_analysis_v2_s20_snapshot.py (md5 487d5a94)
+          neec_scores_csv_builder_v2.py == neec_scores_csv_builder_v2_s20_snapshot.py (md5 5f547d0d)
+
+[57] PASS  verify_insertion_s20.py (Session 20 insertion; Session 20 corpus)
+          stdout == verify_insertion_s20_output.txt (md5 d1c2801e)
+
+[58] PASS  run_a4_full_rerun_20.py (Appendix A.4; Session 20 corpus)
+          stdout == a4_rerun_20_raw_output.txt (md5 f205e33d)
+
+[59] PASS  verify_singapore.py (Session 19; Session 16 corpus)
+          stdout == verify_singapore_output.txt (md5 f2c76e99)
+
+[60] PASS  verify_china.py (Session 18; Session 16 corpus)
+          stdout == verify_china_output.txt (md5 f5203639)
+
+[61] PASS  verify_swf.py (Session 17; Session 16 corpus)
+          stdout == verify_swf_output.txt (md5 a0b85811)
+
+[62] PASS  Session 16 canonical script (17 systems, full report)
+          stdout == session16_v2script_output.txt (md5 6848a041)
+
+[63] PASS  session16_full_analysis.py (Session 16 corpus)
+          stdout == session16_full_analysis_output.txt (md5 d35881d4)
+
+[64] PASS  regen_analysis_paper.py (Session 10; 15-system view, baseline absent as in the original run)
+          stdout == regen_verification_output_v16.txt (md5 57d12593)
+
+[65] PASS  run_a4_full_rerun.py (Session 12 Appendix A.4 run; 15-system view)
+          stdout == full_a4_rerun_raw_output.txt (md5 e2693e88)
+
+[66] PASS  verify_ubs.py (Session 15; 15-system view; output first captured in Session 20)
+          stdout == verify_ubs_output.txt (md5 80fcc0ef)
+
+[67] PASS  verify_new_systems.py (Session 16; output first captured in Session 20)
+          stdout == verify_new_systems_output.txt (md5 f5df8d8b)
+
+[68] PASS  step1c_retrofit.py (Session 8; output first captured in Session 20)
+          stdout == step1c_retrofit_output.txt (md5 6fbb7a75)
+
+[69] PASS  neec_c14_crossvalidation.py (Appendix G Python reference) reproduces its CSV
+          neec_c14_crossvalidation_run2_v4.1_results.csv == neec_c14_crossvalidation_run2_v4_1_results.csv (md5 463ec70d)
+
+[70] PASS  neec_c14_v41_realjs_check.js (Appendix G, v4.1 source) reproduces its CSV
+          neec_c14_v41_realjs_yearbyyear.csv == neec_c14_v41_realjs_yearbyyear.csv (md5 525cf46e)
+
+[71] PASS  neec_c14_v42_realjs_check.js (Appendix G, v4.2 source) reproduces its CSV
+          neec_c14_v42_realjs_yearbyyear.csv == neec_c14_v42_realjs_yearbyyear.csv (md5 525cf46e)
+
+[72] PASS  run_a4_full_rerun_33.py (Appendix A.4, Session 33 corpus)
+          stdout == a4_rerun_33_raw_output.txt (md5 0c44f401)
+
+[73] PASS  run_a4_full_rerun_33.py rejects the Session 32 corpus (negative control; exit 1 expected; its seven re-derived checks fail and nothing is written to stderr)
+          exit status 1, as expected
+          stdout == a4_rerun_33_negative_output.txt (md5 0fe43a7e)
+          stderr == (empty) (md5 d41d8cd9)
+
+[74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
+          README.md == README.md (md5 ee3ff978)
+
+============================================================================================
+SUMMARY: 74 passed, 0 failed, 0 skipped (of 74).
+Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
+Simulation source, which is not in this directory), and the Report and Paper prose.

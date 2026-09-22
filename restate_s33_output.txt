@@ -1,0 +1,29 @@
+================================================================================================
+restate_s33.py -- decisions D18(b) and D26: seven scoring documents restated in place
+================================================================================================
+inputs: the seven Session 32 snapshots; d14_landing_s29.py (md5 6ed2d55c), d18b_reexpression_s32.py (md5 8dc8da77), neec_entry.py (md5 6ddd3b0a), neec_weighting_robustness_analysis_v2.py (md5 e82ba335, the Session 33 corpus)
+  PASS  fact: Ostrom: 14.5/26, 3 failures, Partially Adequate
+  PASS  fact: no entry at 0.0 on C3.2
+  PASS  fact: tie at 14.5: Mutual Credit / LETS and UBI; 3 and 7 failures
+  PASS  fact: vs Mutual Credit / LETS: 4 differ, 2 higher, 2 lower, net zero
+  PASS  fact: vs Status Quo: 15 differ, 11 higher, 4 lower, +4.0
+  PASS  fact: vs Georgism: 3 higher, 1 lower, +1.0
+  PASS  fact: nearest neighbours at 4: Georgism, Mutual Credit / LETS, UBS
+  PASS  fact: fifteen flags, seven upward and eight downward
+  PASS  fact: 32,768 combinations: 9.0% / 65.6% / 25.4%
+  PASS  fact: readings: up 18.0/0, scored 14.5/3, down 10.5/9
+  PASS  fact: scenarios: knowledge commons 15.5/2 (PA); land trusts out 14.0/4; resource frame 16.0/3
+  PASS  fact: only CCO-PTF-CIP-SZH has zero failures as scored
+  PASS  fact: undisputed failures: none (C1.2a, C1.5, C2.2 each flagged)
+
+  28 edits applied, 38 restated phrases each once; 6 phrases in the three rewritten Ostrom sections; 25 superseded phrases gone
+  Ostrom's block: 15 flags, 3 joint readings, 3 scenarios; valid under neec_entry.py; its vector is the Session 33 canonical vector
+  generated: Ostrom's summary table (renderer checked on the Session 32 table), the corpus tables of IF and OS
+
+wrote NEEC_Ostrom_Commons_scoring_scratch.md (md5 54016bc7)
+wrote NEEC_StateCapitalism_Qatar_scoring_scratch.md (md5 a6afb45e)
+wrote NEEC_IslamicFinance_scoring_scratch.md (md5 9db387f9)
+wrote NEEC_MutualCredit_LETS_scoring_scratch.md (md5 295f0ece)
+wrote NEEC_UniversalBasicServices_scoring_scratch.md (md5 9a3d5c11)
+wrote NEEC_SovereignWealthFundStatism_scoring_scratch.md (md5 09f46c6f)
+wrote NEEC_StateCapitalism_Singapore_scoring_scratch.md (md5 921f624c)

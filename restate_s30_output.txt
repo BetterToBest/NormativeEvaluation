@@ -1,0 +1,9 @@
+================================================================================================
+restate_s30.py -- decision D22: the Doughnut Economics Verification section, restated in place
+================================================================================================
+inputs: NEEC_DoughnutEconomics_scoring_scratch_s29_snapshot.md (md5 1c527415); edit function from d14_landing_s29.py (md5 6ed2d55c)
+  DE-05  applied; restated phrase occurs once: by an ad hoc script named `verify_doughnut.py`, for two things before th...
+  D22    applied; restated phrase occurs once: The Session 14 script was not kept. The `verify_doughnut.py` now among t...
+  DE-05  the D14 wording is gone: by an ad hoc script (`verify_doughnut.py`) that is not among the project
+
+wrote NEEC_DoughnutEconomics_scoring_scratch.md (md5 9953fe32)

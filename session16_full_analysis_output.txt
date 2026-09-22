@@ -1,0 +1,150 @@
+Corpus size: 17 systems
+
+====================================================================================================
+1. RANKING TABLE, ALL 17 SYSTEMS (26-criterion structure)
+====================================================================================================
+ 1. CCO-PTF-CIP-SZH                             24.5/26   94%   0 fail  Potentially Adequate
+ 2. Participatory Economics                     20.5/26   79%   1 fail  Potentially Adequate
+ 3. Nordic Social Democracy                     19.5/26   75%   2 fail  Potentially Adequate
+ 4. Integral                                    19.5/26   75%   3 fail  Partially Adequate
+ 5. Degrowth Economics                          19.0/26   73%   2 fail  Potentially Adequate
+ 6. Market Socialism                            16.5/26   63%   2 fail  Potentially Adequate
+ 7. MMT + Job Guarantee                         15.5/26   60%   3 fail  Partially Adequate
+ 8. Mutual Credit / LETS                        14.5/26   56%   3 fail  Partially Adequate
+ 9. Universal Basic Income                      14.5/26   56%   7 fail  Structurally Inadequate
+10. Georgism / Land Value Tax                   13.5/26   52%   2 fail  Potentially Adequate
+11. Universal Basic Services                    13.5/26   52%   3 fail  Partially Adequate
+12. Fully Automated Luxury Communism            13.0/26   50%  10 fail  Structurally Inadequate
+13. Doughnut Economics                          11.5/26   44%   8 fail  Structurally Inadequate
+14. Status Quo Market Capitalism                10.5/26   40%   9 fail  Structurally Inadequate
+15. Stakeholder Capitalism                      10.0/26   38%   9 fail  Structurally Inadequate
+16. Centrally Planned Socialism                 10.0/26   38%  12 fail  Structurally Inadequate
+17. Libertarian Minarchism                       8.0/26   31%  15 fail  Structurally Inadequate
+
+  Potentially Adequate: 6 systems
+  Partially Adequate: 4 systems
+  Structurally Inadequate: 7 systems
+
+====================================================================================================
+2. FULL PAIRWISE STRICT-DOMINANCE / PARETO FRONTIER (all 26 criteria, 17 systems)
+====================================================================================================
+Full frontier (10 of 17 systems): ['Nordic Social Democracy', 'Centrally Planned Socialism', 'Libertarian Minarchism', 'Universal Basic Income', 'Degrowth Economics', 'Fully Automated Luxury Communism', 'Participatory Economics', 'CCO-PTF-CIP-SZH', 'Integral', 'Mutual Credit / LETS']
+
+Adequate-tier subset (10 systems): ['Nordic Social Democracy', 'Market Socialism', 'MMT + Job Guarantee', 'Degrowth Economics', 'Participatory Economics', 'CCO-PTF-CIP-SZH', 'Integral', 'Georgism / Land Value Tax', 'Mutual Credit / LETS', 'Universal Basic Services']
+Frontier restricted to adequate systems (6): ['Nordic Social Democracy', 'Degrowth Economics', 'Participatory Economics', 'CCO-PTF-CIP-SZH', 'Integral', 'Mutual Credit / LETS']
+
+====================================================================================================
+3. WHERE DO THE TWO NEW SYSTEMS SIT RELATIVE TO EVERY OTHER SYSTEM (full pairwise)
+====================================================================================================
+
+--- Doughnut Economics ---
+  Dominates: (none)
+  Dominated by: ['CCO-PTF-CIP-SZH']
+  Non-dominated peers (15): ['Status Quo Market Capitalism', 'Nordic Social Democracy', 'Centrally Planned Socialism', 'Market Socialism', 'Libertarian Minarchism', 'MMT + Job Guarantee', 'Universal Basic Income', 'Degrowth Economics', 'Stakeholder Capitalism', 'Fully Automated Luxury Communism', 'Participatory Economics', 'Integral', 'Georgism / Land Value Tax', 'Mutual Credit / LETS', 'Universal Basic Services']
+
+--- Universal Basic Services ---
+  Dominates: (none)
+  Dominated by: ['CCO-PTF-CIP-SZH']
+  Non-dominated peers (15): ['Status Quo Market Capitalism', 'Nordic Social Democracy', 'Centrally Planned Socialism', 'Market Socialism', 'Libertarian Minarchism', 'MMT + Job Guarantee', 'Universal Basic Income', 'Degrowth Economics', 'Stakeholder Capitalism', 'Fully Automated Luxury Communism', 'Participatory Economics', 'Integral', 'Georgism / Land Value Tax', 'Mutual Credit / LETS', 'Doughnut Economics']
+
+====================================================================================================
+4. CRITERION-LEVEL FAILURE COUNTS (0.0), ALL 26 CRITERIA, 17 SYSTEMS
+====================================================================================================
+  C1.2a    9/17  ['Centrally Planned Socialism', 'Libertarian Minarchism', 'Universal Basic Income', 'Fully Automated Luxury Communism', 'Integral', 'Georgism / Land Value Tax', 'Mutual Credit / LETS', 'Doughnut Economics', 'Universal Basic Services']
+  C1.5     9/17  ['Centrally Planned Socialism', 'Libertarian Minarchism', 'Universal Basic Income', 'Fully Automated Luxury Communism', 'Integral', 'Georgism / Land Value Tax', 'Mutual Credit / LETS', 'Doughnut Economics', 'Universal Basic Services']
+  C1.2b    8/17  ['Status Quo Market Capitalism', 'Libertarian Minarchism', 'MMT + Job Guarantee', 'Universal Basic Income', 'Stakeholder Capitalism', 'Fully Automated Luxury Communism', 'Doughnut Economics', 'Universal Basic Services']
+  C2.2     6/17  ['Status Quo Market Capitalism', 'Centrally Planned Socialism', 'Libertarian Minarchism', 'MMT + Job Guarantee', 'Stakeholder Capitalism', 'Doughnut Economics']
+  C4.4     6/17  ['Status Quo Market Capitalism', 'Centrally Planned Socialism', 'Universal Basic Income', 'Stakeholder Capitalism', 'Fully Automated Luxury Communism', 'Doughnut Economics']
+  C2.5     5/17  ['Nordic Social Democracy', 'Market Socialism', 'Universal Basic Income', 'Degrowth Economics', 'Fully Automated Luxury Communism']
+  C3.5     5/17  ['Nordic Social Democracy', 'Libertarian Minarchism', 'MMT + Job Guarantee', 'Universal Basic Income', 'Stakeholder Capitalism']
+  C1.4     4/17  ['Status Quo Market Capitalism', 'Libertarian Minarchism', 'Stakeholder Capitalism', 'Doughnut Economics']
+  C5.4     4/17  ['Centrally Planned Socialism', 'Degrowth Economics', 'Stakeholder Capitalism', 'Fully Automated Luxury Communism']
+  C2.1     3/17  ['Centrally Planned Socialism', 'Libertarian Minarchism', 'Doughnut Economics']
+  C3.3     3/17  ['Status Quo Market Capitalism', 'Centrally Planned Socialism', 'Libertarian Minarchism']
+  C4.1     3/17  ['Status Quo Market Capitalism', 'Libertarian Minarchism', 'Stakeholder Capitalism']
+  C4.2     3/17  ['Status Quo Market Capitalism', 'Libertarian Minarchism', 'Stakeholder Capitalism']
+  C4.5     3/17  ['Status Quo Market Capitalism', 'Participatory Economics', 'Doughnut Economics']
+  C5.2     3/17  ['Centrally Planned Socialism', 'Fully Automated Luxury Communism', 'Integral']
+  C5.5     3/17  ['Market Socialism', 'Universal Basic Income', 'Stakeholder Capitalism']
+  C1.3     2/17  ['Libertarian Minarchism', 'Mutual Credit / LETS']
+  C2.4     2/17  ['Centrally Planned Socialism', 'Fully Automated Luxury Communism']
+  C3.1     2/17  ['Status Quo Market Capitalism', 'Libertarian Minarchism']
+  C3.4     2/17  ['Centrally Planned Socialism', 'Libertarian Minarchism']
+  C5.3     2/17  ['Centrally Planned Socialism', 'Fully Automated Luxury Communism']
+  C1.1     1/17  ['Libertarian Minarchism']
+  C2.3     1/17  ['Centrally Planned Socialism']
+  C4.3     1/17  ['Libertarian Minarchism']
+  C5.1     1/17  ['Fully Automated Luxury Communism']
+  C3.2     0/17  []
+
+====================================================================================================
+5. DOMAIN EXCELLENCE TABLES (top 5 per domain, all ties shown)
+====================================================================================================
+
+D1 (max 6.0):
+    CCO-PTF-CIP-SZH                        5.5
+    Nordic Social Democracy                5.0
+    Participatory Economics                5.0
+    Degrowth Economics                     4.5
+    Market Socialism                       4.0
+
+D2 (max 5.0):
+    CCO-PTF-CIP-SZH                        5.0
+    Integral                               4.5
+    Participatory Economics                4.0
+    Nordic Social Democracy                3.5
+    Market Socialism                       3.5
+    Degrowth Economics                     3.5
+
+D3 (max 5.0):
+    CCO-PTF-CIP-SZH                        5.0
+    Integral                               5.0
+    Participatory Economics                4.5
+    Degrowth Economics                     4.0
+    Nordic Social Democracy                3.5
+
+D4 (max 5.0):
+    Degrowth Economics                     5.0
+    CCO-PTF-CIP-SZH                        4.5
+    Integral                               4.5
+    Participatory Economics                4.0
+    Nordic Social Democracy                3.5
+    MMT + Job Guarantee                    3.5
+    Fully Automated Luxury Communism       3.5
+
+D5 (max 5.0):
+    CCO-PTF-CIP-SZH                        4.5
+    Status Quo Market Capitalism           4.0
+    Nordic Social Democracy                4.0
+    Mutual Credit / LETS                   4.0
+    Universal Basic Services               3.5
+
+====================================================================================================
+6. SPOT-CHECK: Georgism vs UBS exact tie -- confirm neither dominates (13.5/26 each)
+====================================================================================================
+  Georgism dominates UBS: False
+  UBS dominates Georgism: False
+  Criteria where Georgism > UBS: ['C1.2b']
+  Criteria where UBS > Georgism: ['C5.1']
+
+====================================================================================================
+7. Domain sums for both new systems (cross-check against PUBLISHED)
+====================================================================================================
+--- Doughnut Economics ---
+D1: 1.0 vs published 1.0
+D2: 2.0 vs published 2.0
+D3: 3.0 vs published 3.0
+D4: 2.5 vs published 2.5
+D5: 3.0 vs published 3.0
+Total: 11.5 vs published 11.5
+Failures: 8 -- ['C1.2a', 'C1.2b', 'C1.4', 'C1.5', 'C2.1', 'C2.2', 'C4.4', 'C4.5']
+
+--- Universal Basic Services ---
+D1: 1.5 vs published 1.5
+D2: 3.0 vs published 3.0
+D3: 3.0 vs published 3.0
+D4: 2.5 vs published 2.5
+D5: 3.5 vs published 3.5
+Total: 13.5 vs published 13.5
+Failures: 3 -- ['C1.2a', 'C1.2b', 'C1.5']
+

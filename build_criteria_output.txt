@@ -1,0 +1,122 @@
+build_criteria.py -- NEEC v2 criteria, generated from NEEC_Paper_v1_4.md
+============================================================================================
+Source: NEEC_Paper_v1_4.md (md5 5e2c2c3e); corpus: neec_weighting_robustness_analysis_v2.py (23 systems)
+  Section 6: 25 legacy criterion definitions, 5 domain core questions
+  Section 12.3: 3 v2 definitions (C1.2a, C1.2b, C1.5 narrowed); legacy C1.2 dropped
+  Appendix H.7 / H.7v2: anchors for 26 criteria
+R1 excluded fields: Current Performance (16 criteria), Threshold Justification (3 criteria)
+R2 corpus-comparative clauses removed from H.7 notes:
+  C1.4: "This is NEEC's single most discriminating criterion (Section 11.2)"
+  C2.5: "This is the criterion most often failed by otherwise-strong systems in this corpus (four of the six Potentially/Partially Adequate systems fail it)"
+  C4.2: "NEEC's second most discriminating criterion (Section 11.2)"
+Corpus-scoped statements retained verbatim inside band texts (true as scoped; review in Paper v2.0):
+  C1.2a 0.0: "cannot build assets to pass to children" — making this the cleanest possible C1.2a=0.0 case in the corpus: the evidence never engages the concentratio"
+  C1.2b 1.0: "— is close to the strongest possible C1.2b answer in the corpus, illustrating exactly the "aces (b), fails (a)" case Section 12.1 describes."
+  C3.2 0.0: "This band is rare in the corpus (no system in the 13 scores 0.0 here); reserve it for cases with an active inflationary mechanism and literally no cou"
+
+Failure counts per criterion on the current corpus (context for R2; not written to criteria.json):
+  C1.1  1  C1.2a 10  C1.2b  9  C1.3  3  C1.4  5  C1.5 11
+  C2.1  5  C2.2 11  C2.3  1  C2.4  4  C2.5  5
+  C3.1  2  C3.2  1  C3.3  3  C3.4  2  C3.5  7
+  C4.1  3  C4.2  8  C4.3  3  C4.4 10  C4.5  7
+  C5.1  1  C5.2  3  C5.3  2  C5.4  4  C5.5  4
+
+Anchor examples against the canonical corpus (band = the band the anchor cites them for):
+  crit   band  system                             cited published  status
+  C1.1   1.0   Nordic Social Democracy              1.0*       1.0  ok
+  C1.1   0.5   Status Quo Market Capitalism         0.5*       0.5  ok
+  C1.1   0.0   Libertarian Minarchism               0.0*       0.0  ok
+  C1.2a  1.0   Market Socialism                     1.0        1.0  ok
+  C1.2a  0.5   Degrowth Economics                   0.5        0.5  ok
+  C1.2a  0.0   Universal Basic Income               0.0        0.0  ok
+  C1.2a  0.0   Integral                             0.0        0.0  ok
+  C1.2b  1.0   Integral                             1.0        1.0  ok
+  C1.2b  1.0   CCO-PTF-CIP-SZH                      1.0        1.0  ok
+  C1.2b  0.0   Status Quo Market Capitalism         0.0        0.0  ok
+  C1.3   1.0   Centrally Planned Socialism          1.0*       1.0  ok
+  C1.3   0.5   Universal Basic Income               0.5*       0.5  ok
+  C1.3   0.0   Libertarian Minarchism               0.0*       0.0  ok
+  C1.4   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C1.4   0.5   Nordic Social Democracy              0.5*       0.5  ok
+  C1.4   0.0   Status Quo Market Capitalism         0.0*       0.0  ok
+  C1.5   1.0   Nordic Social Democracy              1.0*       1.0  ok
+  C1.5   0.5   Market Socialism                     0.5*       0.5  ok
+  C1.5   0.0   Libertarian Minarchism               0.0*       0.0  ok
+  C2.1   1.0   Universal Basic Income               1.0*       1.0  ok
+  C2.1   0.5   Status Quo Market Capitalism         0.5*       0.5  ok
+  C2.1   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C2.1   0.0   Libertarian Minarchism               0.0*       0.0  ok
+  C2.2   1.0   Fully Automated Luxury Communism     1.0*       1.0  ok
+  C2.2   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C2.2   0.5   Nordic Social Democracy              0.5*       0.5  ok
+  C2.2   0.0   Status Quo Market Capitalism         0.0*       0.0  ok
+  C2.2   0.0   MMT + Job Guarantee                  0.0*       0.0  ok
+  C2.3   1.0   Degrowth Economics                   1.0*       1.0  ok
+  C2.3   0.5   Status Quo Market Capitalism         0.5*       0.5  ok
+  C2.3   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C2.4   1.0   Participatory Economics              1.0*       1.0  ok
+  C2.4   0.5   Status Quo Market Capitalism         0.5*       0.5  ok
+  C2.4   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C2.4   0.0   Fully Automated Luxury Communism     0.0*       0.0  ok
+  C2.5   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C2.5   0.5   Status Quo Market Capitalism         0.5*       0.5  ok
+  C2.5   0.0   Nordic Social Democracy              0.0*       0.0  ok
+  C2.5   0.0   Degrowth Economics                   0.0*       0.0  ok
+  C3.1   1.0   Universal Basic Income               1.0*       1.0  ok
+  C3.1   0.5   Market Socialism                     0.5*       0.5  ok
+  C3.1   0.0   Status Quo Market Capitalism         0.0*       0.0  ok
+  C3.1   0.0   Libertarian Minarchism               0.0*       0.0  ok
+  C3.2   1.0   Participatory Economics              1.0*       1.0  ok
+  C3.2   0.5   MMT + Job Guarantee                  0.5*       0.5  ok
+  C3.3   1.0   Degrowth Economics                   1.0*       1.0  ok
+  C3.3   0.5   Market Socialism                     0.5*       0.5  ok
+  C3.3   0.0   Status Quo Market Capitalism         0.0*       0.0  ok
+  C3.3   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C3.4   1.0   Market Socialism                     1.0*       1.0  ok
+  C3.4   0.5   Status Quo Market Capitalism         0.5*       0.5  ok
+  C3.4   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C3.4   0.0   Libertarian Minarchism               0.0*       0.0  ok
+  C3.5   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C3.5   0.5   Market Socialism                     0.5*       0.5  ok
+  C3.5   0.0   Libertarian Minarchism               0.0*       0.0  ok
+  C3.5   0.0   Stakeholder Capitalism               0.0*       0.0  ok
+  C4.1   1.0   Degrowth Economics                   1.0*       1.0  ok
+  C4.1   0.5   Nordic Social Democracy              0.5*       0.5  ok
+  C4.1   0.0   Status Quo Market Capitalism         0.0*       0.0  ok
+  C4.2   1.0   Participatory Economics              1.0*       1.0  ok
+  C4.2   0.5   Nordic Social Democracy              0.5*       0.5  ok
+  C4.2   0.0   Stakeholder Capitalism               0.0*       0.0  ok
+  C4.3   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C4.3   0.5   Integral                             0.5*       0.5  ok
+  C4.3   0.0   Status Quo Market Capitalism         0.0*       0.5  KNOWN
+  C4.4   1.0   Participatory Economics              1.0*       1.0  ok
+  C4.4   0.5   Libertarian Minarchism               0.5*       0.5  ok
+  C4.4   0.0   Status Quo Market Capitalism         0.0*       0.0  ok
+  C4.4   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C4.5   1.0   Participatory Economics              1.0*       0.0  KNOWN
+  C4.5   0.5   Nordic Social Democracy              0.5*       0.5  ok
+  C4.5   0.0   Status Quo Market Capitalism         0.0*       0.0  ok
+  C5.1   1.0   Market Socialism                     1.0*       1.0  ok
+  C5.1   0.5   Integral                             0.5*       0.5  ok
+  C5.1   0.0   Fully Automated Luxury Communism     0.0*       0.0  ok
+  C5.2   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C5.2   0.5   Market Socialism                     0.5*       0.5  ok
+  C5.2   0.0   Integral                             0.0*       0.0  ok
+  C5.2   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C5.3   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C5.3   0.5   Nordic Social Democracy              0.5*       0.5  ok
+  C5.3   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C5.3   0.0   Fully Automated Luxury Communism     0.0*       0.0  ok
+  C5.4   1.0   Nordic Social Democracy              1.0*       1.0  ok
+  C5.4   1.0   CCO-PTF-CIP-SZH                      1.0*       1.0  ok
+  C5.4   0.5   Market Socialism                     0.5*       0.5  ok
+  C5.4   0.0   Degrowth Economics                   0.0*       0.0  ok
+  C5.4   0.0   Centrally Planned Socialism          0.0*       0.0  ok
+  C5.5   1.0   Participatory Economics              1.0*       1.0  ok
+  C5.5   0.5   CCO-PTF-CIP-SZH                      0.5*       0.5  ok
+  C5.5   0.0   Market Socialism                     0.0*       0.0  ok
+  C5.5   0.0   Universal Basic Income               0.0*       0.0  ok
+  (* = score stated explicitly beside the name; otherwise the band value)
+
+93 anchor examples: 91 consistent, 2 known open correction(s), 0 unexpected mismatch(es).
+Wrote criteria.json: 26 criteria, md5 6542331e.

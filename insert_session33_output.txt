@@ -1,0 +1,13 @@
+================================================================================================
+insert_session33.py -- decision D26: Ostrom-Style Commons Governance's C3.2, 0.0 -> 0.5
+================================================================================================
+  neec_weighting_robustness_analysis_v2.py: the D26 comment, above SCORES
+  neec_weighting_robustness_analysis_v2.py: Ostrom's C3.2 (SCORES)
+  neec_weighting_robustness_analysis_v2.py: Ostrom's PUBLISHED row (Domain 3 and total)
+  neec_weighting_robustness_analysis_v2.py: the Session 33 tie note and pairs
+  neec_scores_csv_builder_v2.py: the D26 comment, above the imports
+  neec_scores_csv_builder_v2.py: Universal Basic Income's notes name the three-way tie at 14.5/26
+  neec_scores_csv_builder_v2.py: Ostrom-Style Commons Governance's row (Domain 3 3.0, 3 failures, revision note, notes restated)
+
+wrote neec_weighting_robustness_analysis_v2.py (md5 e82ba335)
+wrote neec_scores_csv_builder_v2.py (md5 a03e6a83)

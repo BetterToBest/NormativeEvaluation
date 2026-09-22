@@ -1,0 +1,67 @@
+neec_entry.py -- 23 summary block(s); canonical corpus: 23 systems
+============================================================================================
+PASS [SQ] Status Quo Market Capitalism
+PASS [NSD] Nordic Social Democracy
+PASS [CPS] Centrally Planned Socialism
+PASS [MS] Market Socialism
+PASS [LM] Libertarian Minarchism
+PASS [MMT] MMT + Job Guarantee
+PASS [UBI] Universal Basic Income
+PASS [DG] Degrowth Economics
+PASS [SC] Stakeholder Capitalism
+PASS [FALC] Fully Automated Luxury Communism
+PASS [PE] Participatory Economics
+PASS [CCO] CCO-PTF-CIP-SZH
+PASS [INT] Integral
+PASS [GEO] Georgism / Land Value Tax
+PASS [MC] Mutual Credit / LETS
+PASS [DE] Doughnut Economics
+PASS [UBS] Universal Basic Services
+PASS [SWF] Sovereign Wealth Fund Statism
+PASS [CN] State Capitalism / China
+PASS [SG] State Capitalism / Singapore
+PASS [QA] State Capitalism / Qatar
+PASS [IF] Islamic Finance / Profit-Sharing Banking
+PASS [OS] Ostrom-Style Commons Governance
+      scope: mechanism (stated); record: native-v2
+      flags: 20 criteria, 20 independent calls (register 20)
+      enumeration: 1,048,576 combinations; PA 34,304; Part 489,984; SI 524,288; totals 9.5-19.5, failures 0-11; keep scored tier 46.7%
+      reading A       stated    19.5/26  0 failures  Potentially Adequate     the long-enduring case (all eleven upward flags resolved up)
+      reading B       scored    14.0/26  4 failures  Partially Adequate       as scored
+      reading C       stated     9.5/26 11 failures  Structurally Inadequate  strict population scope (all nine downward flags resolved down)
+      D13: joint readings reach 3 tier(s) (PA, Part, SI); span 10.0 points / 11 failures; not tier-robust
+      scenario knowledge-commons: 15.0/26, 3 failures, Partially Adequate (2 criteria moved; the knowledge and digital commons counted in)
+      undisputed failures: 0
+      D9 peer matrix, three nearest neighbours (no peers declared); '*' marks a criterion where the peer differs:
+                entry             GEO              MC             UBS
+        C1.1      0.5            0.5             0.5             0.5 
+        C1.2a     0.0            0.0             0.0             0.0 
+        C1.2b     0.5            0.5             1.0*            0.0*
+        C1.3      0.5            0.5             0.0*            0.5 
+        C1.4      0.5            0.5             0.5             0.5 
+        C1.5      0.0            0.0             0.0             0.0 
+        C2.1      0.5            0.5             0.5             0.5 
+        C2.2      0.0            0.5*            0.5*            0.5*
+        C2.3      0.5            0.5             0.5             0.5 
+        C2.4      0.5            0.5             0.5             0.5 
+        C2.5      1.0            1.0             1.0             1.0 
+        C3.1      0.5            0.5             0.5             0.5 
+        C3.2      0.0            0.5*            0.5*            0.5*
+        C3.3      0.5            0.5             0.5             0.5 
+        C3.4      1.0            1.0             1.0             1.0 
+        C3.5      0.5            0.5             0.5             0.5 
+        C4.1      1.0            0.5*            0.5*            0.5*
+        C4.2      0.5            0.5             0.5             0.5 
+        C4.3      0.5            0.5             0.5             0.5 
+        C4.4      0.5            0.5             0.5             0.5 
+        C4.5      0.5            0.5             0.5             0.5 
+        C5.1      1.0            0.5*            1.0             1.0 
+        C5.2      0.5            0.5             0.5             0.5 
+        C5.3      1.0            1.0             1.0             1.0 
+        C5.4      0.5            0.5             0.5             0.5 
+        C5.5      1.0            0.5*            1.0             0.5*
+        vs Georgism / Land Value Tax: differs on 5, higher on 3, lower on 2, total +0.5; the entry neither dominates
+        vs Mutual Credit / LETS: differs on 5, higher on 2, lower on 3, total -0.5; the entry neither dominates
+        vs Universal Basic Services: differs on 5, higher on 3, lower on 2, total +0.5; the entry neither dominates
+
+ALL BLOCKS VALID.

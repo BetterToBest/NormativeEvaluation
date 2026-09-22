@@ -1,0 +1,154 @@
+==========================================================================================
+verify_china.py -- NEEC Step 1b, Session 18 (State Capitalism / China)
+==========================================================================================
+
+(1) SELF-CONSISTENCY
+  D1 = 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 = 3.0/6
+  PASS  D1 equals stated 3.0
+  D2 = 0.0 + 0.0 + 0.5 + 0.0 + 0.5 = 1.0/5
+  PASS  D2 equals stated 1.0
+  D3 = 0.5 + 1.0 + 0.5 + 0.5 + 0.0 = 2.5/5
+  PASS  D3 equals stated 2.5
+  D4 = 0.5 + 0.0 + 0.0 + 0.0 + 0.0 = 0.5/5
+  PASS  D4 equals stated 0.5
+  D5 = 1.0 + 0.5 + 0.5 + 0.5 + 0.5 = 3.0/5
+  PASS  D5 equals stated 3.0
+  Total = 3.0 + 1.0 + 2.5 + 0.5 + 3.0 = 10.0/26 (38%)
+  PASS  Total equals stated 10.0
+  PASS  Failure count equals stated 8
+  PASS  Tier equals stated 'Structurally Inadequate'
+  Distribution: 2 at 1.0, 16 at 0.5, 8 at 0.0 -> 2(1.0) + 16(0.5) = 10.0
+  PASS  Distribution (2 / 16 / 8) re-derives the total
+  Failures: ['C2.1', 'C2.2', 'C2.4', 'C3.5', 'C4.2', 'C4.3', 'C4.4', 'C4.5']
+  PASS  Failures = 5 uncontested + 3 flagged
+
+(2) TRANSCRIPTION CHECK AGAINST THE SCRATCH DOCUMENT ITSELF
+  PASS  Document has exactly one scored heading per criterion (26, no duplicates)
+  PASS  Every heading score matches this script's vector
+  PASS  Document states all five domain-sum lines
+  PASS  D1 line: addends in criterion order re-sum to stated 3.0/6
+  PASS  D2 line: addends in criterion order re-sum to stated 1.0/5
+  PASS  D3 line: addends in criterion order re-sum to stated 2.5/5
+  PASS  D4 line: addends in criterion order re-sum to stated 0.5/5
+  PASS  D5 line: addends in criterion order re-sum to stated 3.0/5
+  PASS  Document's Overall Score line states 10.0/26 (38%)
+
+(3) CONTESTABLE-CALL SENSITIVITY
+  crit   primary   alt   total  fails  tier                      reading
+  C1.1       0.5   1.0    10.5      8  Structurally Inadequate   extreme-line / CPS-precedent reading
+  C1.2a      0.5   1.0    10.5      8  Structurally Inadequate   middle-income-adjusted threshold reading
+  C2.3       0.5   0.0     9.5      9  Structurally Inadequate   CPS state-control-of-culture precedent
+  C3.2       1.0   0.5     9.5      8  Structurally Inadequate   symmetric price-stability (deflation) reading
+  C3.4       0.5   1.0    10.5      8  Structurally Inadequate   reform-era-only (1978-2012) reading
+  C3.5       0.0   0.5    10.5      7  Structurally Inadequate   CPS legible-dysfunction / central-correction reading
+  C4.2       0.0   0.5    10.5      7  Structurally Inadequate   emissions-plateau / Nordic-analogy reading
+  C4.3       0.0   0.5    10.5      7  Structurally Inadequate   preferential-policy-weighted reading
+  C5.4       0.5   0.0     9.5      9  Structurally Inadequate   structural-repulsion reading
+  PASS  No single flagged call, resolved alone, changes the tier
+  C4.3 at the CPS precedent's own 1.0: total 11.0, 7 failures, Structurally Inadequate
+  PASS  C4.3 at the CPS precedent's 1.0, alone, does not change the tier
+
+  All upward readings together:   13.0/26, 5 failures, Partially Adequate
+  All downward readings together: 8.5/26, 10 failures, Structurally Inadequate
+  Upward, with C4.3 at 1.0:       13.5/26, 5 failures, Partially Adequate
+  PASS  Joint upward reading = 13.0/26 with 5 failures (Partially Adequate) -- disclosed
+  PASS  Joint downward reading = 8.5/26 with 10 failures
+  Structurally Inadequate holds whenever at least 1 of C3.5 / C4.2 / C4.3 holds at 0.0.
+  PASS  Tier requires at least one of the three flagged failures to hold
+
+(4) CORPUS COMPARISON (canonical SCORES imported; SWF vector AST-extracted)
+  Loaded 17 canonical systems from neec_weighting_robustness_analysis_v2.py
+  PASS  Canonical corpus still holds exactly 17 systems
+  PASS  China is not already in the canonical corpus
+  PASS  SWF vector extracted from verify_swf.py (14.0/26, 3 failures)
+
+  -- Exact ties --
+  Canonical systems at exactly 10.0/26: ['Centrally Planned Socialism', 'Stakeholder Capitalism']
+  PASS  China ties exactly CPS and Stakeholder Capitalism
+  PASS  China does not tie the pending SWF row
+  vs Centrally Planned Socialism: 12 failures ['C1.2a', 'C1.5', 'C2.1', 'C2.2', 'C2.3', 'C2.4', 'C3.3', 'C3.4', 'C4.4', 'C5.2', 'C5.3', 'C5.4']
+     shared with China (4): ['C2.1', 'C2.2', 'C2.4', 'C4.4']; vectors differ on 15 of 26
+  vs Stakeholder Capitalism: 9 failures ['C1.2b', 'C1.4', 'C2.2', 'C3.5', 'C4.1', 'C4.2', 'C4.4', 'C5.4', 'C5.5']
+     shared with China (4): ['C2.2', 'C3.5', 'C4.2', 'C4.4']; vectors differ on 14 of 26
+  PASS  China shares exactly C2.1, C2.2, C2.4, C4.4 with CPS
+  PASS  China shares exactly C2.2, C3.5, C4.2, C4.4 with Stakeholder Capitalism
+  PASS  China and CPS differ on 15 of 26 criteria
+  PASS  The three tied systems have three different failure counts (8, 12, 9), one shared tier
+
+  -- Domain profile: China vs CPS (the system China reformed away from) --
+  D1: China 3.0  CPS 3.0  difference +0.0
+  D2: China 1.0  CPS 0.5  difference +0.5
+  D3: China 2.5  CPS 2.5  difference +0.0
+  D4: China 0.5  CPS 3.0  difference -2.5
+  D5: China 3.0  CPS 1.0  difference +2.0
+  PASS  Identical D1 (3.0) and D3 (2.5) totals, reached through different criteria
+  PASS  Net shifts vs CPS: D2 +0.5, D4 -2.5, D5 +2.0
+
+  -- Dominance against all 18 other systems --
+  Status Quo Market Capitalism                               non-dominated pair
+  Nordic Social Democracy                                    non-dominated pair
+  Centrally Planned Socialism                                non-dominated pair
+  Market Socialism                                           non-dominated pair
+  Libertarian Minarchism                                     non-dominated pair
+  MMT + Job Guarantee                                        non-dominated pair
+  Universal Basic Income                                     non-dominated pair
+  Degrowth Economics                                         non-dominated pair
+  Stakeholder Capitalism                                     non-dominated pair
+  Fully Automated Luxury Communism                           non-dominated pair
+  Participatory Economics                                    non-dominated pair
+  CCO-PTF-CIP-SZH                                            DOMINATES China
+  Integral                                                   non-dominated pair
+  Georgism / Land Value Tax                                  non-dominated pair
+  Mutual Credit / LETS                                       non-dominated pair
+  Doughnut Economics                                         non-dominated pair
+  Universal Basic Services                                   non-dominated pair
+  Sovereign Wealth Fund Statism [pending]                    non-dominated pair
+  PASS  China is dominated only by CCO-PTF-CIP-SZH
+  PASS  China strictly dominates no system
+  PASS  China vs CPS, Status Quo, Stakeholder, Nordic, SWF: all non-dominated pairs
+
+  -- Ranking in the prospective 19-system corpus --
+   1. CCO-PTF-CIP-SZH                                             24.5/26 (94%)  fails= 0
+   2. Participatory Economics                                     20.5/26 (79%)  fails= 1
+   3. Nordic Social Democracy                                     19.5/26 (75%)  fails= 2
+   4. Integral                                                    19.5/26 (75%)  fails= 3
+   5. Degrowth Economics                                          19.0/26 (73%)  fails= 2
+   6. Market Socialism                                            16.5/26 (63%)  fails= 2
+   7. MMT + Job Guarantee                                         15.5/26 (60%)  fails= 3
+   8. Universal Basic Income                                      14.5/26 (56%)  fails= 7
+   9. Mutual Credit / LETS                                        14.5/26 (56%)  fails= 3
+  10. Sovereign Wealth Fund Statism [pending]                     14.0/26 (54%)  fails= 3
+  11. Georgism / Land Value Tax                                   13.5/26 (52%)  fails= 2
+  12. Universal Basic Services                                    13.5/26 (52%)  fails= 3
+  13. Fully Automated Luxury Communism                            13.0/26 (50%)  fails=10
+  14. Doughnut Economics                                          11.5/26 (44%)  fails= 8
+  15. Status Quo Market Capitalism                                10.5/26 (40%)  fails= 9
+  16. Centrally Planned Socialism                                 10.0/26 (38%)  fails=12
+  17. Stakeholder Capitalism                                      10.0/26 (38%)  fails= 9
+  18. State Capitalism / China [pending]                          10.0/26 (38%)  fails= 8   <==
+  19. Libertarian Minarchism                                       8.0/26 (31%)  fails=15
+  Strictly above China: 15; tied (incl. China): 3; strictly below: ['Libertarian Minarchism']
+  PASS  China is tied for 16th-18th of 19 (15 above, 2 tied, 1 below: Libertarian Minarchism)
+
+  -- Step 1b-cohort facts cited in the Final Assessment --
+  Georgism                           D1 2.0/6  D1 failures: ['C1.2a', 'C1.5']
+  Mutual Credit                      D1 2.0/6  D1 failures: ['C1.2a', 'C1.3', 'C1.5']
+  Doughnut                           D1 1.0/6  D1 failures: ['C1.2a', 'C1.2b', 'C1.4', 'C1.5']
+  Universal Basic Services           D1 1.5/6  D1 failures: ['C1.2a', 'C1.2b', 'C1.5']
+  Sovereign Wealth Fund Statism      D1 2.5/6  D1 failures: ['C1.3']
+  State Capitalism / China           D1 3.0/6  D1 failures: none
+  PASS  China has the highest Domain 1 score of the six Step 1b systems
+  PASS  China is the first Step 1b system with zero Domain 1 failures
+  PASS  China ties Doughnut Economics for the most failures among the six Step 1b systems (8 each)
+  Lowest Domain 2: [(0.5, 'Centrally Planned Socialism'), (1.0, 'State Capitalism / China [pending]'), (2.0, 'Doughnut Economics')]
+  Lowest Domain 4: [(0.5, 'State Capitalism / China [pending]'), (0.5, 'Status Quo Market Capitalism'), (1.0, 'Stakeholder Capitalism')]
+  PASS  China's Domain 2 (1.0) is the second-lowest in the corpus, above only CPS (0.5)
+  PASS  China's Domain 4 (0.5) ties Status Quo for the lowest Domain 4 in the corpus
+  PASS  China joins Status Quo and CPS at C3.2 = 1.0 (the two existing-system precedents its rationale cites)
+  (Disclosure) Systems at the joint-upward total of 13.0: ['Fully Automated Luxury Communism']
+
+==========================================================================================
+SUMMARY: 45/45 checks pass.
+ALL CHECKS PASS. Nothing is inserted anywhere (scratch-before-insert discipline);
+this verifies the scratch document's arithmetic, its transcription, its disclosed
+sensitivity, and every comparative claim against the real canonical corpus.

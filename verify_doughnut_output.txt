@@ -1,0 +1,58 @@
+================================================================================================
+verify_doughnut.py -- Doughnut Economics: the entry arithmetic (reconstructed in Session 30)
+================================================================================================
+document: NEEC_DoughnutEconomics_scoring_scratch.md; canonical corpus: neec_weighting_robustness_analysis_v2.py (23 systems), neec_scores.csv
+vector read from the document's criterion headings; flagged as contestable: C1.2a, C1.2b
+
+The transcript, as this script reproduces it:
+
+    D1 (Material Security):        1.0/6
+    D2 (Human Autonomy):           2.0/5
+    D3 (System Resilience):        3.0/5
+    D4 (Ethical Integrity):        2.5/5
+    D5 (Implementation Viability): 3.0/5
+    Total: 11.5/26 (44%)
+    Failures: 8 -- ['C1.2a', 'C1.2b', 'C1.4', 'C1.5', 'C2.1', 'C2.2', 'C4.4', 'C4.5']
+    Tier: Structurally Inadequate
+
+    Cross-check: sum of five domain totals equals total: True
+
+[1] THE VECTOR AS THE DOCUMENT STATES IT (ITS 26 CRITERION HEADINGS) (3 checks)
+  PASS  every criterion heading has the form '#### <ID> <Name>: <score> (<label>)'
+  PASS  26 criterion headings, in the canonical order
+  PASS  each heading's label is the one its score carries (1.0 Pass, 0.5 Partial, 0.0 Structural Failure)
+
+[2] SESSION 14 CHECK (1): DOMAIN TOTALS AND TOTAL ARE THE SUM OF THE CRITERIA (8 checks)
+  PASS  Summary Scores states Material Security as the sum of its 6 criteria: 1.0/6
+  PASS  Summary Scores states Human Autonomy as the sum of its 5 criteria: 2.0/5
+  PASS  Summary Scores states System Resilience as the sum of its 5 criteria: 3.0/5
+  PASS  Summary Scores states Ethical Integrity as the sum of its 5 criteria: 2.5/5
+  PASS  Summary Scores states Implementation Viability as the sum of its 5 criteria: 3.0/5
+  PASS  Summary Scores states the overall score as the sum of the 26 criteria: 11.5/26 (44%)
+  PASS  the explicit sum of the five domain totals is stated and correct
+  PASS  the five domain totals sum to the overall total
+
+[3] SESSION 14 CHECK (2): FAILURE COUNT AND TIER (3 checks)
+  PASS  the score distribution (count and list at each value) is stated and correct
+  PASS  Summary Scores states 8 structural failures and names exactly the criteria scored 0.0
+  PASS  the adequacy classification is the one 8 failures give: Structurally Inadequate
+
+[4] THE TRANSCRIPT RECORDED IN THE VERIFICATION SECTION (2 checks)
+  PASS  the Verification section records one transcript (a fenced block)
+  PASS  this script reproduces the recorded transcript byte for byte
+
+[5] THE CANONICAL CORPUS (THE ENTRY JOINED IT IN SESSION 16) (4 checks)
+  PASS  neec_weighting_robustness_analysis_v2.py: its own transcription self-check passes
+  PASS  the document's vector is the canonical SCORES['Doughnut Economics'], criterion by criterion
+  PASS  the canonical PUBLISHED totals are the document's
+  PASS  neec_scores.csv: the row's domain totals, total, percent, failures and tier are the document's
+
+[6] THE SUMMARY BLOCK IN THE DOCUMENT (4 checks)
+  PASS  the document carries exactly one summary block, for this entry
+  PASS  the block's vector is the vector of the criterion headings
+  PASS  the block's summary is the arithmetic of that vector
+  PASS  the block flags exactly the criteria whose headings are marked contestable
+
+================================================================================================
+SUMMARY: 24 passed, 0 failed (of 24).
+================================================================================================

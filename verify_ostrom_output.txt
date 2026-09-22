@@ -1,0 +1,156 @@
+==============================================================================================
+verify_ostrom.py — NEEC entry checks — Ostrom-Style Commons Governance (Session 23; narrowed Session 26)
+==============================================================================================
+
+PASS  [A1] canonical corpus holds this entry
+PASS  [A2] canonical criteria list has 26 entries
+PASS  [A3] its canonical vector equals this script's vector
+PASS  [A4] every criterion scored
+PASS  [A5] every score in {0.0, 0.5, 1.0}
+PASS  [A6] every flag names a real criterion
+PASS  [A7] every flag's alternative differs from the scored value
+PASS  [A8] every flag alternative in {0.0, 0.5, 1.0}
+PASS  [A9] scenario names real criteria
+PASS  [A10] criterion-name table is complete
+PASS  [A11] document present
+PASS  [A-src] cites Governing the Commons
+PASS  [A-src] cites Cox
+PASS  [A-src] cites Hilborn
+PASS  [A-src] cites Chhatre
+PASS  [A-src] cites Agarwal
+PASS  [A-src] cites Rights and Resources
+PASS  [A-src] cites Tribunal de las Aguas
+PASS  [A-src] cites polycentric
+PASS  [A-src] cites Gibson
+PASS  [A-src] cites Hess
+PASS  [B] domain 'Material Security' sums to its criteria
+PASS  [B] domain 'Material Security' within max
+PASS  [B] domain 'Human Autonomy' sums to its criteria
+PASS  [B] domain 'Human Autonomy' within max
+PASS  [B] domain 'System Resilience' sums to its criteria
+PASS  [B] domain 'System Resilience' within max
+PASS  [B] domain 'Ethical Integrity' sums to its criteria
+PASS  [B] domain 'Ethical Integrity' within max
+PASS  [B] domain 'Implementation Viability' sums to its criteria
+PASS  [B] domain 'Implementation Viability' within max
+PASS  [B] domains sum to the total
+PASS  [B] total is 14.0
+PASS  [B] percentage is 53.8
+PASS  [B] failure count is 4
+PASS  [B] failures are C1.2a, C1.5, C2.2, C3.2
+PASS  [B] tier is Partially Adequate
+PASS  [B] six Passes at 1.0
+PASS  [B] sixteen Partials at 0.5
+PASS  [B] the Passes are C2.5, C3.4, C4.1, C5.1, C5.3, C5.5
+PASS  [B] flagged set has 20 members
+PASS  [B] upward flags = 11
+PASS  [B] downward flags = 9
+PASS  [B] up and down flags partition the flagged set
+PASS  [C] document has all 26 criterion headings
+PASS  [C] C1.1 heading states 0.5
+PASS  [C] C1.1 flag state matches (flagged)
+PASS  [C] C1.2a heading states 0.0
+PASS  [C] C1.2a flag state matches (flagged)
+PASS  [C] C1.2b heading states 0.5
+PASS  [C] C1.2b flag state matches (flagged)
+PASS  [C] C1.3 heading states 0.5
+PASS  [C] C1.3 flag state matches (flagged)
+PASS  [C] C1.4 heading states 0.5
+PASS  [C] C1.4 flag state matches (flagged)
+PASS  [C] C1.5 heading states 0.0
+PASS  [C] C1.5 flag state matches (flagged)
+PASS  [C] C2.1 heading states 0.5
+PASS  [C] C2.1 flag state matches (unflagged)
+PASS  [C] C2.2 heading states 0.0
+PASS  [C] C2.2 flag state matches (flagged)
+PASS  [C] C2.3 heading states 0.5
+PASS  [C] C2.3 flag state matches (unflagged)
+PASS  [C] C2.4 heading states 0.5
+PASS  [C] C2.4 flag state matches (flagged)
+PASS  [C] C2.5 heading states 1.0
+PASS  [C] C2.5 flag state matches (flagged)
+PASS  [C] C3.1 heading states 0.5
+PASS  [C] C3.1 flag state matches (flagged)
+PASS  [C] C3.2 heading states 0.0
+PASS  [C] C3.2 flag state matches (flagged)
+PASS  [C] C3.3 heading states 0.5
+PASS  [C] C3.3 flag state matches (flagged)
+PASS  [C] C3.4 heading states 1.0
+PASS  [C] C3.4 flag state matches (unflagged)
+PASS  [C] C3.5 heading states 0.5
+PASS  [C] C3.5 flag state matches (flagged)
+PASS  [C] C4.1 heading states 1.0
+PASS  [C] C4.1 flag state matches (flagged)
+PASS  [C] C4.2 heading states 0.5
+PASS  [C] C4.2 flag state matches (flagged)
+PASS  [C] C4.3 heading states 0.5
+PASS  [C] C4.3 flag state matches (flagged)
+PASS  [C] C4.4 heading states 0.5
+PASS  [C] C4.4 flag state matches (flagged)
+PASS  [C] C4.5 heading states 0.5
+PASS  [C] C4.5 flag state matches (flagged)
+PASS  [C] C5.1 heading states 1.0
+PASS  [C] C5.1 flag state matches (unflagged)
+PASS  [C] C5.2 heading states 0.5
+PASS  [C] C5.2 flag state matches (flagged)
+PASS  [C] C5.3 heading states 1.0
+PASS  [C] C5.3 flag state matches (unflagged)
+PASS  [C] C5.4 heading states 0.5
+PASS  [C] C5.4 flag state matches (flagged)
+PASS  [C] C5.5 heading states 1.0
+PASS  [C] C5.5 flag state matches (unflagged)
+PASS  [C] C1.1 states its alternative (0.0) inline
+PASS  [C] C1.2a states its alternative (0.5) inline
+PASS  [C] C1.2b states its alternative (1.0) inline
+PASS  [C] C1.3 states its alternative (0.0) inline
+PASS  [C] C1.4 states its alternative (0.0) inline
+PASS  [C] C1.5 states its alternative (0.5) inline
+PASS  [C] C2.2 states its alternative (0.5) inline
+PASS  [C] C2.4 states its alternative (1.0) inline
+PASS  [C] C2.5 states its alternative (0.5) inline
+PASS  [C] C3.1 states its alternative (1.0) inline
+PASS  [C] C3.2 states its alternative (0.5) inline
+PASS  [C] C3.3 states its alternative (1.0) inline
+PASS  [C] C3.5 states its alternative (1.0) inline
+PASS  [C] C4.1 states its alternative (0.5) inline
+PASS  [C] C4.2 states its alternative (1.0) inline
+PASS  [C] C4.3 states its alternative (0.0) inline
+PASS  [C] C4.4 states its alternative (0.0) inline
+PASS  [C] C4.5 states its alternative (0.0) inline
+PASS  [C] C5.2 states its alternative (0.0) inline
+PASS  [C] C5.4 states its alternative (1.0) inline
+PASS  [D] enumeration covers 2^20 combinations
+PASS  [D] enumeration low bound is 9.5
+PASS  [D] enumeration high bound is 19.5
+PASS  [D] scored total lies inside the range
+PASS  [D] all three tiers are reachable
+PASS  [D] tier counts sum to the enumeration
+PASS  [D] Reading A totals 19.5
+PASS  [D] Reading A has 0 failures
+PASS  [D] Reading A is Potentially Adequate
+PASS  [D] Reading C totals 9.5
+PASS  [D] Reading C has 11 failures
+PASS  [D] Reading C is Structurally Inadequate
+PASS  [D] Reading B is the scored vector
+PASS  [D] A and C are the enumeration's extremes
+PASS  [D] A-to-C spread is 10.0 points
+PASS  [D] A-to-C spread is 11 failures
+PASS  [D] no failure is undisputed
+PASS  [E] scenario total is 15.0
+PASS  [E] scenario has 3 failures
+PASS  [E] scenario tier is unchanged
+PASS  [E] scenario changes exactly 2 criteria
+PASS  [G] domain vector 2.0/2.5/2.5/3.0/4.0
+PASS  [G] six Passes
+PASS  [G] sixteen Partials
+PASS  [G] four Failures
+PASS  [G] 26 criteria accounted for
+PASS  [G] 20 flags of 26 criteria
+PASS  [G] 6 unflagged criteria
+PASS  [G] unflagged set is C2.1, C2.3, C3.4, C5.1, C5.3, C5.5
+PASS  [H] summary-table block markers present
+PASS  [H] summary-table is byte-identical to a fresh render
+
+==============================================================================================
+SUMMARY: 148 passed, 0 failed (of 148).
+==============================================================================================

@@ -1,0 +1,161 @@
+neec_entry.py -- 23 summary block(s); canonical corpus: 20 systems
+============================================================================================
+PASS [SQ] Status Quo Market Capitalism
+      scope: configured_national_economy (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    10.5/26  9 failures  Structurally Inadequate  as scored
+      D13: joint readings reach 1 tier(s) (SI); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 9 (C1.2b, C1.4, C2.2, C3.1, C3.3, C4.1, C4.2, C4.4, C4.5)
+PASS [NSD] Nordic Social Democracy
+      scope: configured_national_economy (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    19.5/26  2 failures  Potentially Adequate     as scored
+      D13: joint readings reach 1 tier(s) (PA); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 2 (C2.5, C3.5)
+PASS [CPS] Centrally Planned Socialism
+      scope: configured_national_economy (proposed); record: retrofit-step1c
+      flags: 1 criteria, 1 independent calls (stated 1)
+      enumeration: 2 combinations; SI 2; totals 10.0-10.5, failures 12-12; keep scored tier 100.0%
+      reading scored  scored    10.0/26 12 failures  Structurally Inadequate  as scored
+      reading up      extremes  10.5/26 12 failures  Structurally Inadequate  every flagged call resolved upward
+      reading down    extremes  10.0/26 12 failures  Structurally Inadequate  every flagged call resolved downward
+      D13: joint readings reach 1 tier(s) (SI); span 0.5 points / 0 failures; tier-robust
+      undisputed failures: 12 (C1.2a, C1.5, C2.1, C2.2, C2.3, C2.4, C3.3, C3.4, C4.4, C5.2, C5.3, C5.4)
+PASS [MS] Market Socialism
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    16.5/26  2 failures  Potentially Adequate     as scored
+      D13: joint readings reach 1 tier(s) (PA); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 2 (C2.5, C5.5)
+PASS [LM] Libertarian Minarchism
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored     8.0/26 15 failures  Structurally Inadequate  as scored
+      D13: joint readings reach 1 tier(s) (SI); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 15 (C1.1, C1.2a, C1.2b, C1.3, C1.4, C1.5, C2.1, C2.2, C3.1, C3.3, C3.4, C3.5, C4.1, C4.2, C4.3)
+PASS [MMT] MMT + Job Guarantee
+      scope: mechanism (proposed); record: retrofit-step1c
+      flags: 1 criteria, 1 independent calls (stated 1)
+      enumeration: 2 combinations; PA 1; Part 1; totals 15.5-16.0, failures 2-3; keep scored tier 50.0%
+      reading scored  scored    15.5/26  3 failures  Partially Adequate       as scored
+      reading up      extremes  16.0/26  2 failures  Potentially Adequate     every flagged call resolved upward
+      reading down    extremes  15.5/26  3 failures  Partially Adequate       every flagged call resolved downward
+      D13: joint readings reach 2 tier(s) (PA, Part); span 0.5 points / 1 failures; not tier-robust
+      undisputed failures: 2 (C2.2, C3.5)
+PASS [UBI] Universal Basic Income
+      scope: mechanism (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    14.5/26  7 failures  Structurally Inadequate  as scored
+      D13: joint readings reach 1 tier(s) (SI); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 7 (C1.2a, C1.2b, C1.5, C2.5, C3.5, C4.4, C5.5)
+PASS [DG] Degrowth Economics
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    19.0/26  2 failures  Potentially Adequate     as scored
+      D13: joint readings reach 1 tier(s) (PA); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 2 (C2.5, C5.4)
+PASS [SC] Stakeholder Capitalism
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    10.0/26  9 failures  Structurally Inadequate  as scored
+      D13: joint readings reach 1 tier(s) (SI); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 9 (C1.2b, C1.4, C2.2, C3.5, C4.1, C4.2, C4.4, C5.4, C5.5)
+PASS [FALC] Fully Automated Luxury Communism
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    13.0/26 10 failures  Structurally Inadequate  as scored
+      D13: joint readings reach 1 tier(s) (SI); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 10 (C1.2a, C1.2b, C1.5, C2.4, C2.5, C4.4, C5.1, C5.2, C5.3, C5.4)
+PASS [PE] Participatory Economics
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    20.5/26  1 failures  Potentially Adequate     as scored
+      D13: joint readings reach 1 tier(s) (PA); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 1 (C4.5)
+PASS [CCO] CCO-PTF-CIP-SZH
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 0 criteria, 0 independent calls
+      reading scored  scored    24.5/26  0 failures  Potentially Adequate     as scored
+      D13: joint readings reach 1 tier(s) (PA); span 0.0 points / 0 failures; tier-robust
+      undisputed failures: 0
+PASS [INT] Integral
+      scope: comprehensive_system (proposed); record: retrofit-step1c
+      flags: 1 criteria, 1 independent calls (stated 1)
+      enumeration: 3 combinations; Part 3; totals 19.0-20.0, failures 3-4; keep scored tier 100.0%
+      reading scored  scored    19.5/26  3 failures  Partially Adequate       as scored
+      reading up      extremes  20.0/26  3 failures  Partially Adequate       every flagged call resolved upward
+      reading down    extremes  19.0/26  4 failures  Partially Adequate       every flagged call resolved downward
+      D13: joint readings reach 1 tier(s) (Part); span 1.0 points / 1 failures; tier-robust
+      undisputed failures: 3 (C1.2a, C1.5, C5.2)
+PASS [GEO] Georgism / Land Value Tax
+      scope: mechanism (stated); record: native-v2
+      flags: 1 criteria, 1 independent calls (both-directions 1)
+      enumeration: 3 combinations; PA 2; Part 1; totals 13.0-14.0, failures 2-3; keep scored tier 66.7%
+      reading scored  scored    13.5/26  2 failures  Potentially Adequate     as scored
+      reading up      extremes  14.0/26  2 failures  Potentially Adequate     every flagged call resolved upward
+      reading down    extremes  13.0/26  3 failures  Partially Adequate       every flagged call resolved downward
+      D13: joint readings reach 2 tier(s) (PA, Part); span 1.0 points / 1 failures; not tier-robust
+      undisputed failures: 2 (C1.2a, C1.5)
+PASS [MC] Mutual Credit / LETS
+      scope: mechanism (stated); record: native-v2
+      flags: 2 criteria, 2 independent calls (direction-stated 1, both-directions 1)
+      enumeration: 6 combinations; Part 6; totals 13.5-15.0, failures 3-5; keep scored tier 100.0%
+      reading scored  scored    14.5/26  3 failures  Partially Adequate       as scored
+      reading up      extremes  15.0/26  3 failures  Partially Adequate       every flagged call resolved upward
+      reading down    extremes  13.5/26  5 failures  Partially Adequate       every flagged call resolved downward
+      D13: joint readings reach 1 tier(s) (Part); span 1.5 points / 2 failures; tier-robust
+      undisputed failures: 3 (C1.2a, C1.3, C1.5)
+PASS [DE] Doughnut Economics
+      scope: comprehensive_system (proposed); record: native-v2
+      flags: 2 criteria, 2 independent calls (stated 2)
+      enumeration: 4 combinations; SI 4; totals 11.5-12.5, failures 6-8; keep scored tier 100.0%
+      reading scored  scored    11.5/26  8 failures  Structurally Inadequate  as scored
+      reading up      extremes  12.5/26  6 failures  Structurally Inadequate  every flagged call resolved upward
+      reading down    extremes  11.5/26  8 failures  Structurally Inadequate  every flagged call resolved downward
+      D13: joint readings reach 1 tier(s) (SI); span 1.0 points / 2 failures; tier-robust
+      undisputed failures: 6 (C1.4, C1.5, C2.1, C2.2, C4.4, C4.5)
+PASS [UBS] Universal Basic Services
+      scope: mechanism (proposed); record: native-v2
+      flags: 3 criteria, 3 independent calls (stated 2, direction-stated 1)
+      enumeration: 8 combinations; PA 4; Part 4; totals 13.0-14.5, failures 2-3; keep scored tier 50.0%
+      reading scored  scored    13.5/26  3 failures  Partially Adequate       as scored
+      reading up      extremes  14.5/26  2 failures  Potentially Adequate     every flagged call resolved upward
+      reading down    extremes  13.0/26  3 failures  Partially Adequate       every flagged call resolved downward
+      D13: joint readings reach 2 tier(s) (PA, Part); span 1.5 points / 1 failures; not tier-robust
+      undisputed failures: 2 (C1.2a, C1.5)
+PASS [SWF] Sovereign Wealth Fund Statism
+      scope: mechanism (stated); record: native-v2
+      flags: 4 criteria, 3 independent calls (stated 3, both-directions 1)
+      enumeration: 12 combinations; Part 10; SI 2; totals 12.5-15.0, failures 3-6; keep scored tier 83.3%
+      reading scored  scored    14.0/26  3 failures  Partially Adequate       as scored
+      reading up      extremes  15.0/26  3 failures  Partially Adequate       every flagged call resolved upward
+      reading down    extremes  12.5/26  6 failures  Structurally Inadequate  every flagged call resolved downward
+      D13: joint readings reach 2 tier(s) (Part, SI); span 2.5 points / 3 failures; not tier-robust
+      undisputed failures: 3 (C1.3, C4.2, C4.5)
+PASS [CN] State Capitalism / China
+      scope: configured_national_economy (stated); record: native-v2
+      flags: 9 criteria, 9 independent calls (register 9)
+      enumeration: 512 combinations; Part 16; SI 496; totals 8.5-13.0, failures 5-10; keep scored tier 96.9%
+      reading scored  scored    10.0/26  8 failures  Structurally Inadequate  as scored
+      reading up      extremes  13.0/26  5 failures  Partially Adequate       every flagged call resolved upward
+      reading down    extremes   8.5/26 10 failures  Structurally Inadequate  every flagged call resolved downward
+      D13: joint readings reach 2 tier(s) (Part, SI); span 4.5 points / 5 failures; not tier-robust
+      undisputed failures: 5 (C2.1, C2.2, C2.4, C4.4, C4.5)
+PASS [SG] State Capitalism / Singapore
+      scope: configured_national_economy (stated); record: native-v2
+      flags: 12 criteria, 12 independent calls (register 12)
+      enumeration: 4,096 combinations; PA 64; Part 2,624; SI 1,408; totals 10.5-16.5, failures 2-8; keep scored tier 64.1%
+      reading scored  scored    14.0/26  4 failures  Partially Adequate       as scored
+      reading up      extremes  16.5/26  2 failures  Potentially Adequate     every flagged call resolved upward
+      reading down    extremes  10.5/26  8 failures  Structurally Inadequate  every flagged call resolved downward
+      D13: joint readings reach 3 tier(s) (PA, Part, SI); span 6.0 points / 6 failures; not tier-robust
+      scenario citizens-and-PRs-only: 15.0/26, 3 failures, Partially Adequate (2 criteria moved; citizens and permanent residents only; the scored scope counts every resident)
+      undisputed failures: 2 (C2.2, C4.5)
+FAIL [QA] State Capitalism / Qatar (summary_blocks_s27.json)
+      - key 'State Capitalism / Qatar' is not in the canonical corpus
+FAIL [IF] Islamic Finance / Profit-Sharing Banking (summary_blocks_s27.json)
+      - key 'Islamic Finance / Profit-Sharing Banking' is not in the canonical corpus
+FAIL [OS] Ostrom-Style Commons Governance (summary_blocks_s27.json)
+      - key 'Ostrom-Style Commons Governance' is not in the canonical corpus
+
+3 block(s) FAILED.

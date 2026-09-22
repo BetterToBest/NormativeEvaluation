@@ -1,0 +1,73 @@
+compare_replication.py -- protocol 11.4, the criterion-level comparison of a blind replication
+====================================================================================================
+PASS original    [OS] Ostrom-Style Commons Governance: validates as a candidate against the kit's corpus (22 entries)
+PASS replication [OSR] Ostrom-Style Commons Governance: validates as a candidate against the kit's corpus (22 entries)
+PASS original is the canonical entry: key, code, display name and vector match the canonical corpus file (23 entries)
+PASS the kit's corpus is the canonical corpus with exactly the target withheld
+
+original    [OS] Ostrom-Style Commons Governance  (NEEC_Ostrom_Commons_scoring_scratch.md)
+replication [OSR] Ostrom-Style Commons Governance  (NEEC_OstromCommons_replication_scoring.md)
+  original:    14.0/26, 4 failures, Partially Adequate
+  replication: 13.0/26, 5 failures, Partially Adequate
+
+[1] VECTORS (protocol 11.4: exact matches, and each difference by criterion and direction)
+  exact matches: 22 of 26; differences: 4 (replication higher on 1, lower on 3); total -1.0
+    C1.4   original 0.5  replication 0.0  (-0.5); inside the original's register: yes; inside the replication's: yes
+    C3.2   original 0.0  replication 0.5  (+0.5); inside the original's register: yes; inside the replication's: no
+    C4.1   original 1.0  replication 0.5  (-0.5); inside the original's register: yes; inside the replication's: no
+    C4.3   original 0.5  replication 0.0  (-0.5); inside the original's register: yes; inside the replication's: yes
+  domains:   D1 2.0/1.5  D2 2.5/2.5  D3 2.5/3.0  D4 3.0/2.0  D5 4.0/4.0   (original/replication)
+  failures:  original C1.2a, C1.5, C2.2, C3.2; replication C1.2a, C1.4, C1.5, C2.2, C4.3; failure status agrees on 23 of 26
+  passes:    original C2.5, C3.4, C4.1, C5.1, C5.3, C5.5; replication C2.5, C3.4, C5.1, C5.3, C5.5
+  within one step (0.5): 26 of 26
+  descriptive agreement statistics (26 criteria of one entry; not a sample): Cohen's kappa 0.719; Krippendorff's alpha (interval) 0.803
+
+[2] FLAGS (protocol 11.4: the same criteria flagged, with the same alternatives)
+  original flags 20 criteria (20 calls); replication flags 5 (5 calls)
+  flagged by both: 5 (C1.2b, C1.4, C2.4, C4.2, C4.3); Jaccard 0.250
+    C1.2b  original 0.5 -> [1.0]; replication 0.5 -> [1.0]: same
+    C1.4   original 0.5 -> [0.0]; replication 0.0 -> [0.5]: mirrored
+    C2.4   original 0.5 -> [1.0]; replication 0.5 -> [1.0]: same
+    C4.2   original 0.5 -> [1.0]; replication 0.5 -> [1.0]: same
+    C4.3   original 0.5 -> [0.0]; replication 0.0 -> [0.5]: mirrored
+  original only: 15 (C1.1, C1.2a, C1.3, C1.5, C2.2, C2.5, C3.1, C3.2, C3.3, C3.5, C4.1, C4.4, C4.5, C5.2, C5.4)
+  replication only: 0 (none)
+  differences inside the original's register: 4 of 4 (C1.4, C3.2, C4.1, C4.3)
+  differences inside the replication's register: 2 of 4 (C1.4, C4.3)
+  differences inside neither register: 0 (none)
+  flags that coincide with a difference: original 4 of 20; replication 2 of 5
+  admissible sets (scored value and alternatives): the original's contains the replication's on 26 of 26 criteria; the replication's contains the original's on 11 of 26
+
+[3] SCOPE (protocol 11.4: agreement of the scope declaration)
+  original    class mechanism (basis stated)
+  replication class mechanism (basis stated)
+  class: the same
+  original    scenario knowledge-commons (scope): C1.5 -> 0.5, C2.3 -> 1.0; 15.0/26, 3 failures, Partially Adequate
+  replication scenario no_housing_extension (scope): C1.3 -> 0.0; 12.5/26, 6 failures, Structurally Inadequate
+  criteria moved by scope scenarios: original C1.5, C2.3; replication C1.3; both none
+  declared peers: original none declared; replication Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Islamic Finance / Profit-Sharing Banking
+
+[4] JOINT READINGS AND THE D13 MEASURE (protocol 6.2, 6.4)
+  original    reading A                  stated    19.5/26  0 failures  Potentially Adequate
+  original    reading B                  scored    14.0/26  4 failures  Partially Adequate
+  original    reading C                  stated     9.5/26 11 failures  Structurally Inadequate
+  original    D13: reach 3 tier(s) (PA/Part/SI); span 10.0 points / 11 failures; not tier-robust
+  original    enumeration: 1,048,576 combinations; keep scored tier 46.7% (assumes independent calls)
+  original    undisputed failures: 0 (none)
+  replication reading scored             scored    13.0/26  5 failures  Partially Adequate
+  replication reading reform_optimistic  stated    14.0/26  4 failures  Partially Adequate
+  replication reading extremes_down      extremes  13.0/26  5 failures  Partially Adequate
+  replication reading extremes_up        extremes  15.5/26  3 failures  Partially Adequate
+  replication D13: reach 1 tier(s) (Part); span 2.5 points / 2 failures; tier-robust
+  replication enumeration: 32 combinations; keep scored tier 100.0% (assumes independent calls)
+  replication undisputed failures: 3 (C1.2a, C1.5, C2.2)
+  the replication's vector is a combination of the original's register: yes
+  the original's vector is a combination of the replication's register: no
+
+[5] TIER
+  original Partially Adequate; replication Partially Adequate: the same
+  the original's joint readings reach the replication's tier: yes; the replication's reach the original's: yes
+
+record NEEC_OstromCommons_replication_record.md: 6 generated sections current; attribution table names 4 difference(s)
+
+COMPARISON COMPLETE.

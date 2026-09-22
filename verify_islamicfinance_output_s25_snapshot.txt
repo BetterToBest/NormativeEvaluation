@@ -1,0 +1,143 @@
+==============================================================================
+verify_islamicfinance.py -- NEEC Session 22
+==============================================================================
+
+[1] Sources
+  PASS  canonical script exposes SCORES
+  PASS  canonical corpus holds 20 systems
+  PASS  system not yet inserted
+  PASS  criteria order matches canonical
+  PASS  every canonical vector is complete
+
+[2] Self-consistency
+  PASS  all scores in {0, 0.5, 1}
+  PASS  26 criteria scored
+  PASS  domain totals sum to total (13.5)
+  PASS  total is 13.5
+  PASS  percentage is 51.9
+  PASS  5 structural failures
+  PASS  failure set is C1.2b, C1.4, C2.2, C4.2, C4.4
+  PASS  tier is Partially Adequate
+  PASS  domain vector is 2.0/2.5/3.0/1.5/4.5
+
+[3] Transcription against the document
+  PASS  C1.1 heading states 0.5 (Partial)
+  PASS  C1.2a heading states 0.5 (Partial)
+  PASS  C1.2b heading states 0.0 (Structural Failure)
+  PASS  C1.3 heading states 0.5 (Partial)
+  PASS  C1.4 heading states 0.0 (Structural Failure)
+  PASS  C1.5 heading states 0.5 (Partial)
+  PASS  C2.1 heading states 0.5 (Partial)
+  PASS  C2.2 heading states 0.0 (Structural Failure)
+  PASS  C2.3 heading states 0.5 (Partial)
+  PASS  C2.4 heading states 0.5 (Partial)
+  PASS  C2.5 heading states 1.0 (Pass)
+  PASS  C3.1 heading states 0.5 (Partial)
+  PASS  C3.2 heading states 0.5 (Partial)
+  PASS  C3.3 heading states 0.5 (Partial)
+  PASS  C3.4 heading states 1.0 (Pass)
+  PASS  C3.5 heading states 0.5 (Partial)
+  PASS  C4.1 heading states 0.5 (Partial)
+  PASS  C4.2 heading states 0.0 (Structural Failure)
+  PASS  C4.3 heading states 0.5 (Partial)
+  PASS  C4.4 heading states 0.0 (Structural Failure)
+  PASS  C4.5 heading states 0.5 (Partial)
+  PASS  C5.1 heading states 1.0 (Pass)
+  PASS  C5.2 heading states 1.0 (Pass)
+  PASS  C5.3 heading states 1.0 (Pass)
+  PASS  C5.4 heading states 0.5 (Partial)
+  PASS  C5.5 heading states 1.0 (Pass)
+  PASS  C1.1 heading marks the call as contestable
+  PASS  C1.2a heading marks the call as contestable
+  PASS  C1.2b heading marks the call as contestable
+  PASS  C1.4 heading marks the call as contestable
+  PASS  C1.5 heading marks the call as contestable
+  PASS  C2.4 heading marks the call as contestable
+  PASS  C2.5 heading marks the call as contestable
+  PASS  C3.4 heading marks the call as contestable
+  PASS  C3.5 heading marks the call as contestable
+  PASS  C4.1 heading marks the call as contestable
+  PASS  C4.3 heading marks the call as contestable
+  PASS  C4.4 heading marks the call as contestable
+  PASS  C4.5 heading marks the call as contestable
+  PASS  C5.2 heading marks the call as contestable
+  PASS  C5.4 heading marks the call as contestable
+  PASS  C5.5 heading marks the call as contestable
+  PASS  C1.3 heading is not marked contestable
+  PASS  C2.1 heading is not marked contestable
+  PASS  C2.2 heading is not marked contestable
+  PASS  C2.3 heading is not marked contestable
+  PASS  C3.1 heading is not marked contestable
+  PASS  C3.2 heading is not marked contestable
+  PASS  C3.3 heading is not marked contestable
+  PASS  C4.2 heading is not marked contestable
+  PASS  C5.1 heading is not marked contestable
+  PASS  C5.3 heading is not marked contestable
+
+[4] Sensitivity -- exhaustive enumeration
+  PASS  16 flagged calls
+  PASS  65536 combinations
+  PASS  totals run 8.0 to 16.0
+  PASS  all three tiers are reachable
+  PASS  enumeration counts sum to the combination count
+  PASS  exactly two failures are undisputed (C2.2, C4.2)
+  PASS  reading A totals 15.5 with 2 failures
+  PASS  reading B totals 13.5 with 5 failures
+  PASS  reading C totals 10.5 with 11 failures
+  PASS  C1.1 states its alternative (0.0) inline
+  PASS  C1.2a states its alternative (1.0) inline
+  PASS  C1.2b states its alternative (0.5) inline
+  PASS  C1.4 states its alternative (0.5) inline
+  PASS  C1.5 states its alternative (0.0) inline
+  PASS  C2.4 states its alternative (0.0) inline
+  PASS  C2.5 states its alternative (0.5) inline
+  PASS  C3.4 states its alternative (0.5) inline
+  PASS  C3.5 states its alternative (0.0) inline
+  PASS  C4.1 states its alternative (0.0) inline
+  PASS  C4.3 states its alternative (0.0) inline
+  PASS  C4.4 states its alternative (0.5) inline
+  PASS  C4.5 states its alternative (0.0) inline
+  PASS  C5.2 states its alternative (0.5) inline
+  PASS  C5.4 states its alternative (1.0) inline
+  PASS  C5.5 states its alternative (0.5) inline
+
+[5] Scope scenario
+  PASS  broad-scope reading totals 14.5 with 4 failures
+  PASS  broad-scope reading stays Partially Adequate
+
+[6] Corpus comparison
+  PASS  corpus with the new system holds 21
+  PASS  exact three-way score tie with Georgism and UBS
+  PASS  the three tied systems hold 2, 3 and 5 failures
+  PASS  the tie spans two adequacy tiers
+  PASS  rank is 12 (competition rank)
+  PASS  dominated by no system, CCO-PTF-CIP-SZH included
+  PASS  strictly dominates Stakeholder Capitalism only
+  PASS  higher than Stakeholder Capitalism on 6 criteria, lower on none
+  PASS  CCO-PTF-CIP-SZH is held off by C5.5 alone
+  PASS  differs from Status Quo on 8, higher on 7, by 3.0 points
+  PASS  Domain 4 of 1.5 is fifth-lowest in the corpus
+  PASS  Domain 5 of 4.5 ties the corpus best
+  PASS  exactly two systems hold the best Domain 5
+  PASS  insertion takes dominance pairs from 11 to 12
+
+[7] Numeric claims rebuilt and matched in the prose
+  PASS  prose contains '13.5/26'
+  PASS  prose contains '51.9%'
+  PASS  prose contains '5 structural failures'
+  PASS  prose contains '2.0 / 2.5 / 3.0 / 1.5 / 4.5'
+  PASS  prose contains '16 flagged'
+  PASS  prose contains '65,536 combinations'
+  PASS  prose contains '8.0-16.0'
+  PASS  prose contains '15.5/26'
+  PASS  prose contains '10.5/26'
+  PASS  prose contains '14.5/26'
+  PASS  prose contains '11 to 12'
+  PASS  prose contains '8.0-16.0'
+
+[8] Generated blocks are byte-identical to a fresh render
+  PASS  document round-trips through --fill
+
+==============================================================================
+SUMMARY: 120 passed, 0 failed (of 120).
+==============================================================================

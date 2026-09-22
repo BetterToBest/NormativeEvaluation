@@ -1,0 +1,146 @@
+================================================================================================
+audit_claim_survival_s25.py -- NEEC Session 25: do the three pending entries' claims survive?
+================================================================================================
+
+(1) SOURCES
+  PASS  neec_weighting_robustness_analysis_v2_s20_snapshot.py is the pinned Session 20 canonical file (md5 487d5a94)
+  PASS  QA in verify_qatar.py: 26 criteria in canonical order, all in {0, 0.5, 1}
+  PASS  SCORE in verify_islamicfinance.py: 26 criteria in canonical order, all in {0, 0.5, 1}
+  PASS  OSTROM in verify_ostrom.py: 26 criteria in canonical order, all in {0, 0.5, 1}
+
+(2) CONTROLS
+  PASS  verify_qatar.py on the plain snapshot: exit 0, stdout byte-identical to verify_qatar_output.txt
+  PASS  verify_islamicfinance.py on the plain snapshot: exit 0, stdout byte-identical to verify_islamicfinance_output.txt
+  PASS  verify_ostrom.py on the plain snapshot: exit 0, stdout byte-identical to verify_ostrom_output.txt
+  PASS  View for verify_qatar.py: 22 systems (snapshot + 2), verify_transcription() passes
+  PASS  View for verify_islamicfinance.py: 22 systems (snapshot + 2), verify_transcription() passes
+  PASS  View for verify_ostrom.py: 22 systems (snapshot + 2), verify_transcription() passes
+
+(3) FAILING CHECKS ON EACH 23-SYSTEM VIEW, AGAINST THE REGISTER
+    [corpus size] verify_qatar.py: Canonical corpus holds exactly 20 systems
+                  23-system value: the view holds 22
+    [corpus size] verify_qatar.py: Canonical corpus has 11 ordered dominance pairs (Handoff 20)
+                  23-system value: the view holds 12
+    [superseded ] verify_qatar.py: Rank 20 of 21 in the prospective corpus, with no exact tie
+                  23-system value: 22nd of 23, no exact tie (still above only Libertarian Minarchism)
+    [superseded ] verify_qatar.py: Insertion takes the corpus from 11 to 13 ordered dominance pairs
+                  23-system value: combined insertion: 11 -> 14 (Qatar +2, Islamic finance +1, Ostrom +0)
+    [superseded ] verify_qatar.py: The two pairs not involving CCO are Singapore over China and Singapore over Qatar
+                  23-system value: three: also Islamic Finance / Profit-Sharing Banking over Stakeholder Capitalism
+    [superseded ] verify_qatar.py: The joint upward total (14.0) is SWF Statism's and Singapore's, both Partially Adequate
+                  23-system value: also Ostrom-Style Commons Governance's; all three Partially Adequate
+    [derivative ] verify_qatar.py: Every one of the 42 rebuilt numeric claims appears verbatim in the document
+                  23-system value: its four MISSING claims below are the four superseded rows above
+    [corpus size] verify_islamicfinance.py: canonical corpus holds 20 systems
+                  23-system value: the view holds 22
+    [corpus size] verify_islamicfinance.py: corpus with the new system holds 21
+                  23-system value: 23
+    [superseded ] verify_islamicfinance.py: rank is 12 (competition rank)
+                  23-system value: 13 (three-way tie at 13.5 with Georgism / Land Value Tax and Universal Basic Services)
+    [superseded ] verify_islamicfinance.py: Domain 4 of 1.5 is fifth-lowest in the corpus
+                  23-system value: sixth-lowest, tied with Libertarian Minarchism
+    [superseded ] verify_islamicfinance.py: insertion takes dominance pairs from 11 to 12
+                  23-system value: combined insertion: 11 -> 14
+    [derivative ] verify_islamicfinance.py: document round-trips through --fill
+                  23-system value: the generated corpus table now carries 23 rows
+    [corpus size] verify_ostrom.py: [A1] canonical corpus loads with 20 systems
+                  23-system value: the view holds 22
+    [corpus size] verify_ostrom.py: [F] corpus has 11 strict-dominance pairs before insertion
+                  23-system value: the view holds 14
+    [superseded ] verify_ostrom.py: [F] exactly one corpus system beats Domain 5
+                  23-system value: two: CCO-PTF-CIP-SZH and Islamic Finance / Profit-Sharing Banking (4.5 each)
+    [superseded ] verify_ostrom.py: [F] that system is CCO-PTF-CIP-SZH
+                  23-system value: CCO-PTF-CIP-SZH and Islamic Finance / Profit-Sharing Banking
+    [corpus size] verify_ostrom.py: [F] ranked table has 21 rows
+                  23-system value: 23
+    [derivative ] verify_ostrom.py: [H] corpus-table is byte-identical to a fresh render
+                  23-system value: the generated corpus table now carries 23 rows
+  PASS  Observed failing checks equal the register exactly (19 observed, 19 registered)
+  PASS  Categories: 7 corpus size, 9 superseded, 3 derivative (19 in all)
+  PASS  Qatar's MISSING claims are exactly its four superseded rows (rebuilt with 23-system values)
+
+(4) --facts DIFFS (computed facts that are printed but not asserted)
+
+  Islamic Finance / Profit-Sharing Banking: 28 changed lines
+    +(10, 'Ostrom-Style Commons Governance', 14.0, 53.8, 4, 'Partially Adequate')
+    -(12, 'Georgism / Land Value Tax', 13.5, 51.9, 2, 'Potentially Adequate')
+    -(12, 'Islamic Finance / Profit-Sharing Banking', 13.5, 51.9, 5, 'Partially Adequate')
+    -(12, 'Universal Basic Services', 13.5, 51.9, 3, 'Partially Adequate')
+    -(15, 'Fully Automated Luxury Communism', 13.0, 50.0, 10, 'Structurally Inadequate')
+    -(16, 'Doughnut Economics', 11.5, 44.2, 8, 'Structurally Inadequate')
+    -(17, 'Status Quo Market Capitalism', 10.5, 40.4, 9, 'Structurally Inadequate')
+    -(18, 'Centrally Planned Socialism', 10.0, 38.5, 12, 'Structurally Inadequate')
+    -(18, 'Stakeholder Capitalism', 10.0, 38.5, 9, 'Structurally Inadequate')
+    -(18, 'State Capitalism / China', 10.0, 38.5, 8, 'Structurally Inadequate')
+    -(21, 'Libertarian Minarchism', 8.0, 30.8, 15, 'Structurally Inadequate')
+    +(13, 'Georgism / Land Value Tax', 13.5, 51.9, 2, 'Potentially Adequate')
+    +(13, 'Islamic Finance / Profit-Sharing Banking', 13.5, 51.9, 5, 'Partially Adequate')
+    +(13, 'Universal Basic Services', 13.5, 51.9, 3, 'Partially Adequate')
+    +(16, 'Fully Automated Luxury Communism', 13.0, 50.0, 10, 'Structurally Inadequate')
+    +(17, 'Doughnut Economics', 11.5, 44.2, 8, 'Structurally Inadequate')
+    +(18, 'Status Quo Market Capitalism', 10.5, 40.4, 9, 'Structurally Inadequate')
+    +(19, 'Centrally Planned Socialism', 10.0, 38.5, 12, 'Structurally Inadequate')
+    +(19, 'Stakeholder Capitalism', 10.0, 38.5, 9, 'Structurally Inadequate')
+    +(19, 'State Capitalism / China', 10.0, 38.5, 8, 'Structurally Inadequate')
+    +(22, 'State Capitalism / Qatar', 9.0, 34.6, 10, 'Structurally Inadequate')
+    +(23, 'Libertarian Minarchism', 8.0, 30.8, 15, 'Structurally Inadequate')
+    -strict-dominance ordered pairs: 11 -> 12
+    +strict-dominance ordered pairs: 13 -> 14
+    -Domain 5 leaders: [(4.5, 'Islamic Finance / Profit-Sharing Banking'), (4.5, 'CCO-PTF-CIP-SZH'), (4.0, 'Status Quo Market Capitalism'), (4.0, 'Nordic Social Democracy'), (4.0, 'Mutual Credit / LETS')]
+    +Domain 5 leaders: [(4.5, 'Islamic Finance / Profit-Sharing Banking'), (4.5, 'CCO-PTF-CIP-SZH'), (4.0, 'Status Quo Market Capitalism'), (4.0, 'Ostrom-Style Commons Governance'), (4.0, 'Nordic Social Democracy')]
+    -Domain 4 lowest: [(0.5, 'State Capitalism / China'), (0.5, 'Status Quo Market Capitalism'), (1.0, 'Stakeholder Capitalism'), (1.0, 'State Capitalism / Singapore'), (1.5, 'Islamic Finance / Profit-Sharing Banking'), (1.5, 'Libertarian Minarchism')]
+    +Domain 4 lowest: [(0.5, 'State Capitalism / China'), (0.5, 'State Capitalism / Qatar'), (0.5, 'Status Quo Market Capitalism'), (1.0, 'Stakeholder Capitalism'), (1.0, 'State Capitalism / Singapore'), (1.5, 'Islamic Finance / Profit-Sharing Banking')]
+
+  Ostrom-Style Commons Governance: 32 changed lines
+    -Dominance pairs in corpus: before=11, after insertion=11
+    +Dominance pairs in corpus: before=14, after insertion=14
+    -  Domain Material Security          2.0  beaten by 13, tied with 4
+    -  Domain Human Autonomy             2.5  beaten by 13, tied with 1
+    -  Domain System Resilience          2.5  beaten by 15, tied with 3
+    +  Domain Material Security          2.0  beaten by 14, tied with 5
+    +  Domain Human Autonomy             2.5  beaten by 13, tied with 2
+    +  Domain System Resilience          2.5  beaten by 16, tied with 3
+    -  Domain Implementation Viability   4.0  beaten by 1, tied with 3
+    -      beaten by: ['CCO-PTF-CIP-SZH']
+    +  Domain Implementation Viability   4.0  beaten by 2, tied with 3
+    +      beaten by: ['CCO-PTF-CIP-SZH', 'Islamic Finance / Profit-Sharing Banking']
+    +  13=  Islamic Finance / Profit-Sharing Banking  13.5   51.9%   5  Partially Adequate
+    -   15  Fully Automated Luxury Communism    13.0   50.0%  10  Structurally Inadequate
+    -   16  Doughnut Economics                  11.5   44.2%   8  Structurally Inadequate
+    -   17  Status Quo Market Capitalism        10.5   40.4%   9  Structurally Inadequate
+    -  18=  Centrally Planned Socialism         10.0   38.5%  12  Structurally Inadequate
+    -  18=  Stakeholder Capitalism              10.0   38.5%   9  Structurally Inadequate
+    -  18=  State Capitalism / China            10.0   38.5%   8  Structurally Inadequate
+    -   21  Libertarian Minarchism               8.0   30.8%  15  Structurally Inadequate
+    +   16  Fully Automated Luxury Communism    13.0   50.0%  10  Structurally Inadequate
+    +   17  Doughnut Economics                  11.5   44.2%   8  Structurally Inadequate
+    +   18  Status Quo Market Capitalism        10.5   40.4%   9  Structurally Inadequate
+    +  19=  Centrally Planned Socialism         10.0   38.5%  12  Structurally Inadequate
+    +  19=  Stakeholder Capitalism              10.0   38.5%   9  Structurally Inadequate
+    +  19=  State Capitalism / China            10.0   38.5%   8  Structurally Inadequate
+    +   22  State Capitalism / Qatar             9.0   34.6%  10  Structurally Inadequate
+    +   23  Libertarian Minarchism               8.0   30.8%  15  Structurally Inadequate
+    -  this entry would rank: 2 of 21
+    -D4 3.0; systems with lower D4: 10
+    +  this entry would rank: 3 of 23
+    +D4 3.0; systems with lower D4: 12
+  PASS  Ostrom: exactly the six registered unasserted facts move (and each moves as registered)
+  PASS  Islamic finance: its --facts diff is confined to the ranked table, the dominance-pair line, and the Domain 5 / Domain 4 neighbour lists
+
+(5) INDEPENDENT RECOMPUTATION ON THE COMBINED 23-SYSTEM CORPUS
+  PASS  Qatar: rank 22 of 23 (competition), no exact tie, above only Libertarian Minarchism
+  PASS  Dominance pairs: 11 in the 20-system corpus, 14 in the combined corpus (Qatar +2, IF +1, Ostrom +0)
+  PASS  Non-CCO pairs: Singapore over China, Singapore over Qatar, IF over Stakeholder Capitalism (three)
+  PASS  Totals of 14.0: SWF Statism, Singapore, Ostrom -- all Partially Adequate (3, 4, 4 failures)
+  PASS  IF: rank 13 (competition), in a three-way tie at 13.5 with Georgism and UBS
+  PASS  IF: Domain 4 (1.5) is sixth-lowest, tied only with Libertarian Minarchism
+  PASS  Ostrom: Domain 5 (4.0) is beaten by exactly CCO-PTF-CIP-SZH and IF (4.5 each)
+  PASS  Ostrom moved facts: Domain 1 beaten by 14 (tied 5); Domain 2 tied with 2; Domain 3 beaten by 16; Domain 5 beaten by 2
+  PASS  Ostrom moved facts: viability-minus-material-security split 2.0 ranks 3 of 23 (Libertarian Minarchism 3.0, IF 2.5 ahead)
+  PASS  Ostrom moved facts: 12 of the other 22 systems score below its Domain 4 (3.0)
+
+================================================================================================
+SUMMARY: 25 passed, 0 failed (of 25).
+Nothing is edited. The registered claims stay in the scratch documents as dated 21-system
+records; insert_session25.py's row notes and the Step 5 prose use the 23-system values.
+================================================================================================
