@@ -25,6 +25,24 @@ timestamps and sorted entries, so that it reproduces byte for byte. It prints ev
 It does not run the maintainers' baseline -- the original entry validated as a candidate against the
 kit's corpus -- which run_all_checks.py runs as its own check.
 
+REVISION R8 (Session 36, protocol v2.0-draft.5, 11.2). The first kit (OS) marked, inside the protocol's list
+of mechanism-class examples, the place where its target had been withheld, and so disclosed the target's
+scope class and archetype (replication record, section 1). For every kit built after R8 (a target with
+r8=True): a withheld example is dropped from its list without a marker wherever a marker would disclose the
+withheld fact; such a withhold is declared with kind "drop"; and the builder refuses any withhold that stands in
+protocol 3.1 (the scope classes) or 5.1 (the archetype table) unless it is a drop, and any drop whose
+replacement contains a marker. The note under the blind copy's title and the brief say that lists were
+shortened, not which. Each target carries its own pins, so the OS kit, built before R8 from the Session 30
+protocol, still reproduces byte for byte from those inputs (run_all_checks.py supplies them from the Session 35
+snapshots) while later kits are built from the protocol in force.
+
+  python3 build_replication_kit.py --selftest-r8 [INDIR]
+      tests R8 on INDIR's SCORING_PROTOCOL.md without building a kit: a synthetic target withholds one entry
+      from 3.1 and 5.1 by drops and one passage by a marker; the drops leave no marker and no trace of the
+      entry in either section, and the note names no section, class or archetype; two misdeclared variants are
+      refused; and, if SCORING_PROTOCOL_s35_snapshot.md is in INDIR, the OS kit's own 3.1 marker is shown to be
+      one the rule refuses. Prints no protocol text, so it is stable under edits elsewhere in the protocol.
+
 Usage:   python3 build_replication_kit.py TARGET [INDIR] [OUTDIR]     (defaults: . and out)
          TARGET is a corpus code with a target definition below (the first pilot: OS).
 Inputs (pinned by MD5, in INDIR): the files listed in PINS. Writes OUTDIR/neec_replication_kit_TARGET/
@@ -55,6 +73,8 @@ MARK = "*[Withheld from this blind copy: it reports the scoring of the system un
 
 TARGETS = {
     "OS": dict(
+        r8=False,                 # built in Session 30, before revision R8; kept reproducible as issued
+        pins=PINS,
         name="Ostrom-style commons governance",
         gloss=("the self-governance of common-pool resources by the communities that use them, through rules "
                "those communities make, monitor and enforce, in the tradition of Elinor Ostrom's work "
@@ -195,13 +215,54 @@ def once(text, a, what):
 
 
 def counts(target):
-    """Withheld passages (their replacement says so) and neutralised ones (an example replaced)."""
-    marked = sum(1 for w in target["withhold"] if "withheld" in w[3].lower())
-    return marked, len(target["withhold"]) - marked
+    """Withheld passages (their replacement says so) and neutralised ones (an example replaced); drops apart."""
+    kept = [w for w in target["withhold"] if not is_drop(w)]
+    marked = sum(1 for w in kept if "withheld" in w[3].lower())
+    return marked, len(kept) - marked
+
+
+def is_drop(w):
+    return len(w) > 4 and w[4] == "drop"
+
+
+def dropped(target):
+    return sum(1 for w in target["withhold"] if is_drop(w))
+
+
+GUARDED = ("### 3.1 ", "### 5.1 ")   # R8: the scope classes' lists and the archetype table
+
+
+def guarded_spans(text):
+    spans = []
+    for head in GUARDED:
+        i = text.find("\n" + head)
+        if i < 0:
+            if head == GUARDED[0]:
+                raise ValueError(f"R8: protocol section {head.strip('# ').strip()} not found")
+            continue                  # a protocol without an archetype table (draft.4) guards 3.1 only
+        j = text.find("\n### ", i + 1)
+        spans.append((head.strip("# ").strip(), i, j if j > 0 else len(text)))
+    return spans
+
+
+def r8_check(text, target):
+    """Revision R8: in 3.1 and 5.1 a withhold must be a drop, and no drop may carry a marker."""
+    spans = guarded_spans(text)
+    for w in target["withhold"]:
+        label, start, _end, new = w[:4]
+        if is_drop(w) and "withheld" in new.lower():
+            raise ValueError(f"R8: {label}: a drop must not carry a marker")
+        pos = once(text, start, label).start()
+        inside = [sec for sec, i, j in spans if i <= pos < j]
+        if inside and not is_drop(w):
+            raise ValueError(f"R8: {label}: a withhold in protocol {inside[0]} must drop the example without a "
+                             f"marker, since a marker there discloses the withheld fact")
 
 
 def blind_protocol(text, target, pmd5):
-    for label, start, end, new in target["withhold"]:
+    if target.get("r8"):
+        r8_check(text, target)
+    for label, start, end, new, *_kind in target["withhold"]:
         s = once(text, start, label)
         t = once(text, end, label) if end else s
         if t.end() < s.start():
@@ -215,7 +276,11 @@ def blind_protocol(text, target, pmd5):
             f"> `SCORING_PROTOCOL.md` (md5 {pmd5}). {marked} passages that report or refer to the scoring\n"
             f"> of the system under replication are withheld and marked where they stood"
             + (f", and {neutral} example{'s' if neutral > 1 else ''} naming it {'are' if neutral > 1 else 'is'} "
-               f"replaced by another entry's" if neutral else "") + ";\n> no rule differs from the full protocol.\n")
+               f"replaced by another entry's" if neutral else "")
+            + (f"; {dropped(target)} list{'s' if dropped(target) > 1 else ''} of examples or members "
+               f"{'are' if dropped(target) > 1 else 'is'} shortened without a marker, since a marker there would "
+               f"disclose what the protocol says about the system under replication" if dropped(target) else "")
+            + ";\n> no rule differs from the full protocol.\n")
     return title + note + text[len(title):]
 
 
@@ -227,7 +292,71 @@ def leaks(text, target):
     return hits
 
 
+def selftest_r8(indir):
+    """Revision R8 on the protocol in force, without building a kit (see the docstring)."""
+    print("=" * 96)
+    print("build_replication_kit.py --selftest-r8 -- revision R8 on SCORING_PROTOCOL.md (no kit is built)")
+    print("=" * 96)
+    text = open(os.path.join(indir, "SCORING_PROTOCOL.md"), encoding="utf-8").read()
+    ok = True
+
+    def check(cond, what):
+        nonlocal ok
+        ok = ok and bool(cond)
+        print(f"  {'PASS' if cond else 'FAIL'}  {what}")
+
+    name = "CCO-PTF-CIP-SZH"         # the second pilot's target; the test builds no kit for it
+    spans = {sec: text[i:j] for sec, i, j in guarded_spans(text)}
+    lines = {sec: [ln for ln in body.split("\n") if name in ln] for sec, body in spans.items()}
+    check(all(len(v) == 1 for v in lines.values()),
+          "the synthetic target is named on exactly one line of 3.1 and one line of 5.1")
+    withhold = []
+    for sec, (ln,) in sorted(lines.items()):
+        new = re.sub(r"(, )?" + re.escape(name) + r"(, )?", lambda m: ", " if m.group(1) and m.group(2) else "", ln)
+        withhold.append((f"{sec}: the target among its list", ln, None, new, "drop"))
+    withhold.append(("a marked passage outside 3.1 and 5.1", "## 12. What the machine checks, and what it does not",
+                     None, "## 12. What the machine checks, and what it does not\n\n" + MARK))
+    synthetic = dict(r8=True, withhold=withhold)
+    blind = blind_protocol(text, synthetic, "00000000")
+    bspans = {sec: blind[i:j] for sec, i, j in guarded_spans(blind)}
+    check(all(name not in body for body in bspans.values()), "the dropped entry no longer appears in 3.1 or 5.1")
+    check(all("withheld" not in body.lower() for body in bspans.values()), "no marker stands in 3.1 or 5.1")
+    check(blind.count(MARK) == 1, "the passage outside 3.1 and 5.1 is marked where it stood")
+    note = blind.split("\n\n")[1]
+    check("shortened without a marker" in note, "the note under the title says that lists were shortened")
+    banned = ("3.1", "5.1", "mechanism", "comprehensive", "configured", "archetype", "vision", "design", name)
+    check(not any(b.lower() in note.lower() for b in banned),
+          "the note names no section, scope class, archetype or entry")
+    marked_in_list = [w[:4] for w in withhold[:1]]
+    marked_in_list[0] = marked_in_list[0][:3] + (marked_in_list[0][3] + " " + MARK,)
+    for label, variant in (("a marked withhold in 3.1 or 5.1", dict(r8=True, withhold=marked_in_list)),
+                           ("a drop that carries a marker",
+                            dict(r8=True, withhold=[withhold[0][:3] + (MARK, "drop")]))):
+        try:
+            blind_protocol(text, variant, "00000000")
+            check(False, f"refused under R8: {label}")
+        except ValueError as err:
+            check(str(err).startswith("R8: "), f"refused under R8: {label}")
+    snap = os.path.join(indir, "SCORING_PROTOCOL_s35_snapshot.md")
+    if os.path.isfile(snap):
+        old = open(snap, encoding="utf-8").read()
+        try:
+            r8_check(old, dict(TARGETS["OS"], r8=True))
+            check(False, "the first kit's 3.1 marker (Session 30 protocol) is one R8 refuses")
+        except ValueError as err:
+            check("3.1" in str(err), "the first kit's 3.1 marker (Session 30 protocol) is one R8 refuses")
+        try:
+            blind_protocol(old, TARGETS["OS"], TARGETS["OS"]["pins"]["SCORING_PROTOCOL.md"])
+            check(True, "the OS target itself, built before R8, is unaffected")
+        except ValueError:
+            check(False, "the OS target itself, built before R8, is unaffected")
+    print(f"\nR8 self-test: {'ALL PASS' if ok else 'FAILED'}")
+    return 0 if ok else 1
+
+
 def main(argv):
+    if argv and argv[0] == "--selftest-r8":
+        return selftest_r8(argv[1] if len(argv) > 1 else ".")
     if not argv or argv[0] not in TARGETS:
         print(f"usage: build_replication_kit.py TARGET [INDIR] [OUTDIR]; targets: {', '.join(sorted(TARGETS))}")
         return 2
@@ -239,14 +368,15 @@ def main(argv):
     print(f"build_replication_kit.py -- blind replication kit {code} ({target['name']})")
     print("=" * 96)
     raw = {}
-    for name, want in PINS.items():
+    PINS_T = target["pins"]
+    for name, want in PINS_T.items():
         p = os.path.join(indir, name)
         if not os.path.isfile(p):
             sys.exit(f"ERROR: cannot find {name}")
         raw[name] = open(p, "rb").read()
         if md5(raw[name]) != want:
             sys.exit(f"ERROR: {name} md5 {md5(raw[name])}, expected {want}")
-    print("inputs (pinned): " + ", ".join(f"{n} ({m})" for n, m in PINS.items()))
+    print("inputs (pinned): " + ", ".join(f"{n} ({m})" for n, m in PINS_T.items()))
     spec = importlib.util.spec_from_file_location("build_corpus_file", os.path.join(indir, "build_corpus_file.py"))
     BCF = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(BCF)
@@ -254,7 +384,7 @@ def main(argv):
     kit = {}
     try:
         kit["SCORING_PROTOCOL.md"] = blind_protocol(raw["SCORING_PROTOCOL.md"].decode("utf-8"), target,
-                                                    PINS["SCORING_PROTOCOL.md"]).encode("utf-8")
+                                                    PINS_T["SCORING_PROTOCOL.md"]).encode("utf-8")
     except ValueError as err:
         sys.exit(f"ERROR: {err}")
     corpus = json.loads(raw["neec_corpus.json"])
@@ -264,7 +394,7 @@ def main(argv):
     desc = ("A blind replication kit's corpus: the canonical corpus with one entry, the system under replication, "
             "withheld (SCORING_PROTOCOL.md section 11). Each entry's key, short code, display name, scope class "
             "and criterion scores, in the canonical order. Generated by build_replication_kit.py from "
-            f"neec_corpus.json (md5 {PINS['neec_corpus.json']}); never edited by hand. Scores: 1.0 pass, 0.5 "
+            f"neec_corpus.json (md5 {PINS_T['neec_corpus.json']}); never edited by hand. Scores: 1.0 pass, 0.5 "
             "partial, 0.0 structural failure; totals, failures and tiers follow by protocol section 2.")
     kit["neec_corpus.json"] = BCF.render(desc, corpus["criteria"], kept).encode("utf-8")
     for name in COPIED:
@@ -273,9 +403,11 @@ def main(argv):
     kit["REPLICATION_BRIEF.md"] = BRIEF.format(
         name=target["name"][0].upper() + target["name"][1:], gloss=target["gloss"], nwith=counts(target)[0],
         neutral=(f", and {counts(target)[1]} example code naming it is replaced by another entry's"
-                 if counts(target)[1] else ""),
+                 if counts(target)[1] else "")
+                + (f"; {dropped(target)} list{'s' if dropped(target) > 1 else ''} of examples or members "
+                   f"{'are' if dropped(target) > 1 else 'is'} shortened without a marker" if dropped(target) else ""),
         ncorpus=len(kept), document=b["document"], key=b["key"], code=b["code"],
-        pmd5=PINS["SCORING_PROTOCOL.md"], cmd5=PINS["neec_corpus.json"]).encode("utf-8")
+        pmd5=PINS_T["SCORING_PROTOCOL.md"], cmd5=PINS_T["neec_corpus.json"]).encode("utf-8")
 
     print(f"\nwithheld from the blind copy of SCORING_PROTOCOL.md ({len(target['withhold'])} passages, "
           f"each anchor matched once):")

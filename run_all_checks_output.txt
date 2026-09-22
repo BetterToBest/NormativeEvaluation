@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 75 reproducibility checks
+run_all_checks.py -- 79 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -95,7 +95,7 @@ run_all_checks.py -- 75 reproducibility checks
 
 [24] PASS  build_criteria.py generates criteria.json from Paper v1.4 and checks every anchor example [Session 32 state]
           stdout == build_criteria_output.txt (md5 47846712)
-          criteria.json == criteria.json (md5 6542331e)
+          criteria.json == criteria_s35_snapshot.json (md5 6542331e)
 
 [25] PASS  build_summary_blocks.py stages the 23 summary blocks (D3(a)) [Session 32 state]
           stdout == build_summary_blocks_output.txt (md5 82b1f73e)
@@ -273,13 +273,30 @@ run_all_checks.py -- 75 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 42506e7c)
+          README.md == README.md (md5 62c43e1c)
 
-[75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file)
+[75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
           stderr == (empty) (md5 d41d8cd9)
 
+[76] PASS  build_criteria.py (Session 36) generates criteria.json and corrects it: every anchor threshold is its definition's Pass Threshold (D28(g)); C3.2's bands carry D26 (R3)
+          stdout == build_criteria_s36_output.txt (md5 e2621e30)
+          criteria.json == criteria.json (md5 d4b78634)
+
+[77] PASS  build_replication_kit.py --selftest-r8: revision R8 on protocol draft.5 (no kit built; the first kit's 3.1 marker is one R8 refuses)
+          stdout == build_replication_kit_r8_selftest_output.txt (md5 2ec2c6c3)
+          stderr == (empty) (md5 d41d8cd9)
+
+[78] PASS  verify_protocol_s36.py: the protocol's statements about the corpus, its archetype table, register and Appendix B (draft.5)
+          stdout == verify_protocol_s36_output.txt (md5 1664f812)
+          stderr == (empty) (md5 d41d8cd9)
+
+[79] PASS  verify_protocol_s36.py rejects protocol draft.4 (negative control; exit 1 expected; its stale statements fail and nothing is written to stderr)
+          exit status 1, as expected
+          stdout == verify_protocol_s36_negative_output.txt (md5 5df11a76)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 75 passed, 0 failed, 0 skipped (of 75).
+SUMMARY: 79 passed, 0 failed, 0 skipped (of 79).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

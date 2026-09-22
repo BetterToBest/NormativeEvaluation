@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-build_readme.py -- Session 34
-=============================
+build_readme.py -- Session 34 (provisional-totals paragraph revised in Session 36)
+=================================================================================
 Writes README.md, the repository's landing page, from the canonical data. The
 score table, the tier counts, the corpus size, the example of a higher total in
 a lower tier, and the number of reproducibility checks are computed here from
@@ -125,8 +125,11 @@ alternative weighting schemes is computed by Appendix A.4's script,
 These totals are provisional. A clause-by-clause audit of the scores of 1.0
 ([`NEEC_R4_MultiClause_Audit_s35.md`](NEEC_R4_MultiClause_Audit_s35.md), decision D28) found that most of
 those resting on a multi-clause Pass Threshold do not yet show every clause cleared. They are re-estimated
-before version 2.0. That can lower totals and ranks, but it cannot change a failure count, so no tier can
-change.
+in a rescoring pass before version 2.0, which can lower totals and ranks but, under that decision, cannot
+change a failure count or a tier. The same pass applies two rules adopted with scoring protocol draft.5
+(decisions D29 and D31: how implementation failures count, and what belongs to a scored mechanism), which
+can turn a 0.5 into a structural failure; the two such cases identified so far, both in Ostrom-Style Commons
+Governance, cannot change its tier, and the pass reports any failure count it changes.
 
 ## Disclosure
 

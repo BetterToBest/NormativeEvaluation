@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-build_criteria.py -- NEEC Session 27: criteria.json, generated from the Paper (corrected, Session 36)
-=====================================================================================================
+build_criteria.py -- NEEC Session 27: criteria.json, generated from the Paper
+=============================================================================
 Part of the reproducibility kit (decision D3). Writes criteria.json: the 26
 criteria of the NEEC v2 structure, in canonical order, each with its
 definition and its 1.0 / 0.5 / 0.0 scoring anchors. Nothing is retyped:
@@ -24,28 +24,6 @@ Two editorial rules are applied mechanically, and every application is printed:
       the guidance after the dash is kept. Comparative claims go stale when
       the corpus grows, so under D15 they belong to the corpus-level checker,
       not to a criterion definition. The removed clauses are printed below.
-
-CORRECTIONS (Session 36, protocol v2.0-draft.5). After transcription, three
-corrections are applied to the anchors. Each old text is asserted before it is
-replaced, and every change is printed and recorded in the output's
-source.corrections, so the record of what Paper v1.4 said stays in the pinned
-Session 35 file (criteria_s35_snapshot.json, written by
-build_criteria_s35_snapshot.py) and the record of what changed stays here:
-
-  T. Thresholds (decision D28(g)). Every anchor's threshold line carries its
-     definition's Pass Threshold verbatim, with a closing full stop. Where an
-     H.7 threshold line differed, it is replaced; SUBSTANTIVE names the six
-     that differed in substance and how, and the rest differed in wording only.
-  B. C3.2's bands (decision D26, revision R3). The 0.0 band is reserved for an
-     active inflationary mechanism with no counterbalancing element; the stale
-     count "no system in the 13" goes with it (Correction 7, for this anchor);
-     the 0.5 band gains the absence case that D26 scores 0.5.
-  M. C1.5's threshold line (H.7v2) carried a sentence of band reasoning after
-     the threshold. Under T it moves, unchanged, into the anchor's note, which
-     was empty.
-
-After the corrections the script asserts that all 26 anchor thresholds equal
-their definitions.
 
 ANCHOR CHECK. Every system an anchor cites as an example of its band is
 looked up in the canonical corpus (neec_weighting_robustness_analysis_v2.py,
@@ -128,38 +106,6 @@ KNOWN_CORRECTIONS = {
         "is 0.0 (a structural failure). Read this band's example as Degrowth Economics (1.0); the Appendix H.7 "
         "anchor is to be corrected in Paper v2.0.",
 }
-
-
-# ------------------------------------------------------------------ Session 36 corrections (see docstring)
-THRESHOLD_BASIS = "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-SUBSTANTIVE = {
-    "C2.1": "dropped the revealed-preference elaboration (noted by the R4 audit, outside its four)",
-    "C2.2": "dropped the population clause 'for all residents' and the list of basic needs, and added the "
-            "Measurement line's conditions (found in Session 36)",
-    "C2.5": "dropped 'voluntary association protected' (R4 audit)",
-    "C3.1": "added 'no legislative delay' from the Measurement line and dropped the 1:1 example (R4 audit)",
-    "C5.1": "dropped 'matching claimed benefits' (R4 audit)",
-    "C5.3": "dropped 'through modeling' and 'coordination protocols established' (R4 audit)",
-}
-MOVED_SENTENCE = ("This band's reasoning is unchanged from legacy C1.5's anchors (H.7 above); narrowing the "
-                  "threshold doesn't change which systems clear an access-breadth bar, only removes a second, "
-                  "now-separate test that used to ride alongside it.")
-BAND_BASIS = "decision D26 (revision R3); Correction 7's stale count removed from this anchor"
-C32_00_OLD = ("No credible inflation-control mechanism is specified, or the system's design actively risks "
-              "compounding inflation with no offset. This band is rare in the corpus (no system in the 13 scores "
-              "0.0 here); reserve it for cases with an active inflationary mechanism and literally no "
-              "counterbalancing design element, rather than merely \"unaddressed.\"")
-C32_00_NEW = ("The system's design actively risks compounding inflation, with no counterbalancing design element. "
-              "Reserve this band for an active inflationary mechanism: a system that specifies no "
-              "inflation-control mechanism of its own, or has no monetary function, scores 0.5, not 0.0 "
-              "(decision D26).")
-C32_05_OLD = "or a proposed mechanism is theoretically plausible but unproven at scale."
-C32_05_NEW = ("or a proposed mechanism is theoretically plausible but unproven at scale, or the system specifies no "
-              "inflation-control mechanism of its own and has no active inflationary mechanism (decision D26).")
-
-
-def closing(t):
-    return t if t.endswith(".") else t + "."
 
 
 def unescape(s):
@@ -273,52 +219,6 @@ missing = [c for c in CRITS if c not in defs or c not in anchors]
 if missing or len(defs) != 26:
     sys.exit(f"ERROR: incomplete extraction; missing {missing}, definitions {len(defs)}")
 
-# ------------------------------------------------------------------ Session 36 corrections (T, M, B)
-CORRECTED, CLOG, CASE_ONLY = [], [], []
-for cid in CRITS:
-    a, want = anchors[cid], closing(defs[cid]["fields"]["Pass Threshold"])
-    old = a["threshold"]
-    if cid == "C1.5":                                    # M: the band reasoning moves to the note
-        if not old.endswith(" " + MOVED_SENTENCE) or a["note"]:
-            sys.exit("ERROR: C1.5's threshold line is not the H.7v2 text this correction was written for")
-        old = old[:-len(MOVED_SENTENCE) - 1]
-        a["note"] = MOVED_SENTENCE
-        CORRECTED.append(dict(criterion=cid, field="anchors.note", kind="moved",
-                              basis="decision D28(g): band reasoning formerly appended to the threshold line"))
-    if old != want:                                      # T
-        kind = "substantive" if cid in SUBSTANTIVE else "wording"
-        rec = dict(criterion=cid, field="anchors.threshold", kind=kind, basis=THRESHOLD_BASIS)
-        if cid in SUBSTANTIVE:
-            rec["departure"] = SUBSTANTIVE[cid]
-        CORRECTED.append(rec)
-        if old[:1].lower() + old[1:] == want[:1].lower() + want[1:]:
-            CASE_ONLY.append(cid)
-        CLOG.append(f"T {cid} [{kind}]")
-        CLOG.append(f"    was: {a['threshold']}")
-        CLOG.append(f"    now: {want}")
-        if cid in SUBSTANTIVE:
-            CLOG.append(f"    departure: {SUBSTANTIVE[cid]}")
-    elif cid in SUBSTANTIVE:
-        sys.exit(f"ERROR: {cid} is listed as a substantive departure but its threshold already matches")
-    a["threshold"] = want
-missing_sub = [c for c in SUBSTANTIVE if not any(r["criterion"] == c and r["field"] == "anchors.threshold"
-                                                  for r in CORRECTED)]
-if missing_sub:
-    sys.exit(f"ERROR: substantive departures not found: {missing_sub}")
-b00, b05 = anchors["C3.2"]["bands"]["0.0"], anchors["C3.2"]["bands"]["0.5"]
-if b00 != C32_00_OLD or b05.count(C32_05_OLD) != 1:     # B
-    sys.exit("ERROR: C3.2's bands are not the H.7 text this correction was written for")
-anchors["C3.2"]["bands"]["0.0"] = C32_00_NEW
-anchors["C3.2"]["bands"]["0.5"] = b05.replace(C32_05_OLD, C32_05_NEW)
-CORRECTED += [dict(criterion="C3.2", field="anchors.bands.0.0", kind="band", basis=BAND_BASIS),
-              dict(criterion="C3.2", field="anchors.bands.0.5", kind="band", basis=BAND_BASIS)]
-CLOG += ["M C1.5 note (was empty)", f"    now: {MOVED_SENTENCE}",
-         "B C3.2 0.0", f"    was: {C32_00_OLD}", f"    now: {C32_00_NEW}",
-         "B C3.2 0.5", f"    was: ...{C32_05_OLD}", f"    now: ...{C32_05_NEW}"]
-unequal = [c for c in CRITS if anchors[c]["threshold"] != closing(defs[c]["fields"]["Pass Threshold"])]
-if unequal:
-    sys.exit(f"ERROR: anchor thresholds still differ from their definitions: {unequal}")
-
 # ------------------------------------------------------------------ anchor examples
 ALIAS_RE = sorted(((a, k) for k, al in ALIASES.items() for a in al), key=lambda t: -len(t[0]))
 
@@ -381,20 +281,16 @@ for cid in CRITS:
         id=cid, domain=d["domain"], name=d["name"],
         definition=definition,
         anchors=dict(threshold=a["threshold"], note=a["note"], bands=bands),
-        sources=dict(definition=d["source"],
-                     anchors=a["source"] + (" (0.0 and 0.5 bands corrected: " + BAND_BASIS + ")" if cid == "C3.2"
-                                            else ""),
-                     threshold=d["source"] + ", Pass Threshold, verbatim (decision D28(g))"),
+        sources=dict(definition=d["source"], anchors=a["source"]),
     ))
 
 doc = dict(
     schema="neec-criteria/1.0",
     framework="NEEC Applied, v2 structure: 26 criteria in five domains",
-    generated_by="build_criteria.py (Session 27; corrections of Session 36, protocol v2.0-draft.5); do not edit by hand",
+    generated_by="build_criteria.py (Session 27); do not edit by hand",
     source=dict(document=PAPER, md5=PAPER_MD5,
                 excluded_fields=list(EXCLUDED_FIELDS),
-                removed_comparative_clauses=[dict(criterion=c, clause=t) for c, t in REMOVED],
-                corrections=CORRECTED),
+                removed_comparative_clauses=[dict(criterion=c, clause=t) for c, t in REMOVED]),
     scale=dict(values=[0.0, 0.5, 1.0],
                labels={"1.0": "Pass", "0.5": "Partial / Conditional", "0.0": "Full Failure"},
                rule="Reason continuously, then round once, at the criterion level (Appendix H.3)."),
@@ -416,14 +312,6 @@ print(f"Source: {PAPER} (md5 {PAPER_MD5[:8]}); corpus: {CANON_FILE} ({len(SCORES
 for line in LOG:
     print("  " + line)
 print(f"R1 excluded fields: " + ", ".join(f"{k} ({v} criteria)" for k, v in sorted(excluded_seen.items())))
-nT = sum(1 for r in CORRECTED if r["field"] == "anchors.threshold")
-print(f"Session 36 corrections (protocol v2.0-draft.5): {len(CORRECTED)} fields; {nT} threshold lines replaced "
-      f"({sum(1 for r in CORRECTED if r['kind'] == 'substantive')} substantive, "
-      f"{sum(1 for r in CORRECTED if r['kind'] == 'wording')} in wording only, {len(CASE_ONLY)} of those only in the "
-      f"case of the first letter), 1 note, 2 bands")
-for line in CLOG:
-    print("  " + line)
-print(f"  All 26 anchor thresholds now equal their definitions' Pass Thresholds ({THRESHOLD_BASIS}).")
 print("R2 corpus-comparative clauses removed from H.7 notes:")
 for c, t in REMOVED:
     print(f"  {c}: \"{t}\"")
