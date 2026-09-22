@@ -1,0 +1,1 @@
+selftest: markdown round-trip ok; altered vector rejected: yes

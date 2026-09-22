@@ -1,0 +1,119 @@
+============================================================================================
+verify_qatar.py -- NEEC entry checks: State Capitalism / Qatar (Session 21; narrowed Session 26)
+============================================================================================
+
+(0) SOURCES
+  Imported 23 canonical systems from neec_weighting_robustness_analysis_v2.py
+  PASS  Canonical script's own transcription self-check passes
+  PASS  Canonical corpus holds State Capitalism / Qatar exactly once
+  PASS  Its canonical vector equals this script's vector, criterion by criterion
+  PASS  Local tier() agrees with the canonical tier() for 0-26 failures
+  PASS  Local failure_count agrees with the canonical one on every corpus vector
+  Dominance helper validated on 506 ordered pairs
+  PASS  Vector-level dominance test agrees with the canonical helper on every ordered pair
+  Scratch document: NEEC_StateCapitalism_Qatar_scoring_scratch.md
+
+(1) SELF-CONSISTENCY
+  D1 = 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.0 = 2.5/6
+  PASS  D1 equals stated 2.5
+  D2 = 0.0 + 0.0 + 0.5 + 0.0 + 0.5 = 1.0/5
+  PASS  D2 equals stated 1.0
+  D3 = 0.5 + 0.5 + 0.5 + 0.5 + 0.0 = 2.0/5
+  PASS  D3 equals stated 2.0
+  D4 = 0.5 + 0.0 + 0.0 + 0.0 + 0.0 = 0.5/5
+  PASS  D4 equals stated 0.5
+  D5 = 1.0 + 0.5 + 1.0 + 0.5 + 0.0 = 3.0/5
+  PASS  D5 equals stated 3.0
+  Total = 2.5 + 1.0 + 2.0 + 0.5 + 3.0 = 9.0/26 (35%)
+  PASS  Total equals stated 9.0/26 (35%)
+  PASS  Failure count equals stated 10
+  PASS  Tier equals stated 'Structurally Inadequate'
+  Distribution: 2 at 1.0, 14 at 0.5, 10 at 0.0 -> 2(1.0) + 14(0.5) = 9.0
+  PASS  Distribution (2 / 14 / 10) re-derives the total
+  PASS  The two Passes are exactly C5.1 and C5.3
+  Failures: ['C1.5', 'C2.1', 'C2.2', 'C2.4', 'C3.5', 'C4.2', 'C4.3', 'C4.4', 'C4.5', 'C5.5']
+  PASS  Failures = 6 undisputed + 4 flagged upward
+  PASS  Every flagged alternative differs from its primary score by exactly 0.5
+  PASS  Exactly one flagged call would create a failure (C1.2b)
+  PASS  No flagged call disputes any of the six undisputed failures
+  PASS  Twelve flagged calls in total
+
+(2) TRANSCRIPTION CHECK AGAINST THE SCRATCH DOCUMENT
+  PASS  Document has exactly one scored heading per criterion (26, no duplicates)
+  PASS  Every heading score matches this script's vector
+  PASS  Headings marked 'flagged as contestable' are exactly the twelve flagged calls
+  PASS  Each flagged call states its consequence once and correctly; no other call states one
+  PASS  Exactly the seven scope-moved criteria state their citizens-only score, each correct
+  PASS  Document states all five domain-sum lines
+  PASS  D1 line: addends in criterion order re-sum to 2.5/6 (42%)
+  PASS  D2 line: addends in criterion order re-sum to 1.0/5 (20%)
+  PASS  D3 line: addends in criterion order re-sum to 2.0/5 (40%)
+  PASS  D4 line: addends in criterion order re-sum to 0.5/5 (10%)
+  PASS  D5 line: addends in criterion order re-sum to 3.0/5 (60%)
+  PASS  Summary Scores' five domain-total lines match, names and percentages included
+  PASS  Overall Score line states 9.0/26 (35%)
+  PASS  Explicit-sum line lists the five domain totals in order and re-sums to the total
+  PASS  Distribution line (2 / 14 / 10, Passes named) matches
+  PASS  Failure line lists exactly the vector's ten failures, in criterion order
+  PASS  Adequacy line states the computed tier
+  PASS  GENERATED block 'sensitivity-table' matches a fresh render exactly
+  PASS  GENERATED block 'scope-table' matches a fresh render exactly
+  PASS  Sensitivity table: one row per flagged call, every cell re-computed
+
+(3) CONTESTABLE-CALL SENSITIVITY (confirmed scope: all residents counted)
+  crit    primary   alt  total  fails  tier                     reading
+  C1.1        0.5   1.0    9.5     10  Structurally Inadequate  extreme line / CPS precedent
+  C1.2a       0.5   1.0    9.5     10  Structurally Inadequate  UBS median wealth above the bar
+  C1.2b       0.5   0.0    8.5     11  Structurally Inadequate  citizenship divide, no limit at the top
+  C1.5        0.0   0.5    9.5      9  Structurally Inadequate  citizenship read as a membership gate
+  C2.1        0.0   0.5    9.5      9  Structurally Inadequate  2020 reforms as reduced coercion
+  C3.3        0.5   1.0    9.5     10  Structurally Inadequate  three compound shocks absorbed
+  C3.4        0.5   1.0    9.5     10  Structurally Inadequate  post-2014 and post-blockade adjustment
+  C3.5        0.0   0.5    9.5      9  Structurally Inadequate  ILO cooperation, registry, fiscal data
+  C4.1        0.5   1.0    9.5     10  Structurally Inadequate  SWF Statism precedent
+  C5.3        1.0   0.5    8.5     10  Structurally Inadequate  partial by necessity, no scaling path
+  C5.4        0.5   1.0    9.5     10  Structurally Inadequate  90.6% referendum approval
+  C5.5        0.0   0.5    9.5      9  Structurally Inadequate  SWF Statism precedent, GCC variation
+  PASS  No single flagged call, resolved alone, changes the tier
+
+  All upward readings together:   14.0/26, 6 failures, Structurally Inadequate
+  All downward readings together: 8.0/26, 11 failures, Structurally Inadequate
+  PASS  Joint upward reading = 14.0/26 with 6 failures (still Structurally Inadequate)
+  PASS  Joint downward reading = 8.0/26 with 11 failures
+  Exhaustive enumeration over all 12 flagged calls: 4,096 combinations -> {'Structurally Inadequate': 4096}
+  Lowest 8.0/26 (11 failures); highest 14.0/26 (6 failures); fewest failures in any combination: 6
+  PASS  All 4,096 combinations are Structurally Inadequate
+  PASS  Enumeration extremes equal the joint readings, a 6.0-point range
+  PASS  The tier cannot move: six failures are undisputed, and six is the threshold
+  C5.4 read downward instead (0.0): 8.5/26, 11 failures, Structurally Inadequate
+  PASS  A downward C5.4 reading adds a failure without changing the tier
+
+(4) POPULATION SCOPE (citizens-only scenario)
+  Criteria moved: [('C1.1', 0.5, 1.0), ('C1.2a', 0.5, 1.0), ('C1.3', 0.5, 1.0), ('C1.5', 0.0, 1.0), ('C2.1', 0.0, 0.5), ('C2.2', 0.0, 0.5), ('C4.5', 0.0, 0.5)]
+  PASS  Scenario moves exactly the seven criteria the document lists
+  Citizens-only alone: 13.0/26, 6 failures, Structurally Inadequate
+  PASS  Citizens-only reading = 13.0/26 with 6 failures (Structurally Inadequate, at the boundary)
+  PASS  It raises the total by exactly 4.0 points
+  PASS  The scope itself sets four flagged criteria (C1.1, C1.2a, C1.5, C2.1), leaving eight
+  Enumeration over the eight remaining flagged calls: 256 combinations -> {'Structurally Inadequate': 128, 'Partially Adequate': 128}
+  Lowest 12.0/26 (7 failures); highest 16.0/26 (4 failures)
+  PASS  128 of 256 combinations reach Partially Adequate; none reaches Potentially Adequate
+  PASS  Citizens-only totals run from 12.0 to 16.0
+  PASS  The population scope is the only tier-relevant choice in this evaluation
+
+(5) DOMAIN 4 (the entry's own failures; comparisons are in verify_comparative_claims.py)
+  PASS  Four of Domain 4's five criteria are failures, none of them flagged
+
+(6) STATED NUMBERS (rebuilt here, then matched verbatim in the document)
+  PASS  Citizen-share range brackets the secondary estimates (10.5% and 11.6%)
+  PASS  Long-run inflation average exceeds the 3% threshold
+  PASS  Planned LNG capacity is a near-doubling, not a doubling
+  21 rebuilt phrases checked against the document text
+  PASS  Every one of the 21 rebuilt numeric claims appears verbatim in the document
+
+============================================================================================
+SUMMARY: 60/60 checks pass.
+ALL CHECKS PASS. This verifies the scoring document's arithmetic, its transcription,
+its generated tables, its twelve flagged calls, the confirmed population scope and its
+scenario, and that the canonical corpus holds exactly this vector. Comparative claims
+are checked on the canonical corpus by verify_comparative_claims.py.

@@ -1,0 +1,31 @@
+stage_blocks_s28.py -- decisions D17 and D18(a) applied to the staged summary blocks
+input: summary_blocks_s27.json (md5 3c30499b, 23 blocks); canonical corpus: 23 systems
+
+D17  protocol 3.1 assigns 15 classes; they are exactly the 15 blocks staged as 'proposed'
+  [SQ  ] configured_national_economy  proposed -> assigned
+  [NSD ] configured_national_economy  proposed -> assigned
+  [CPS ] configured_national_economy  proposed -> assigned
+  [MS  ] comprehensive_system         proposed -> assigned
+  [LM  ] comprehensive_system         proposed -> assigned
+  [MMT ] mechanism                    proposed -> assigned
+  [UBI ] mechanism                    proposed -> assigned
+  [DG  ] comprehensive_system         proposed -> assigned
+  [SC  ] comprehensive_system         proposed -> assigned
+  [FALC] comprehensive_system         proposed -> assigned
+  [PE  ] comprehensive_system         proposed -> assigned
+  [CCO ] comprehensive_system         proposed -> assigned
+  [INT ] comprehensive_system         proposed -> assigned
+  [DE  ] comprehensive_system         proposed -> assigned
+  [UBS ] mechanism                    proposed -> assigned
+
+D18(a)  [SG] State Capitalism / Singapore: C1.5 leaves the flag register (reading: citizen-and-PR-only population scope);
+        it stays in the scope scenario 'citizens-and-PRs-only' (C1.5 -> 1.0)
+  flags:        12 -> 11
+  enumeration:  4,096 combinations; PA 64; Part 2624; SI 1408; keep scored tier 64.1%
+            ->  2,048 combinations; PA 32; Part 1312; SI 704; keep scored tier 64.1%
+  reading up     16.5/26 2 failures -> 16.0/26 2 failures (Potentially Adequate)
+  D13:          reach PA/Part/SI; span 6.0 points / 6 failures
+            ->  reach PA/Part/SI; span 5.5 points / 6 failures
+
+Changed blocks: 16 (D17 15, D18(a) 1); unchanged: 7. All 23 blocks validate.
+wrote summary_blocks_s28.json  md5 7973e170118434e6f8b960528aeb4eab

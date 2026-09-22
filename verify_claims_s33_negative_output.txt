@@ -1,0 +1,619 @@
+================================================================================================
+verify_comparative_claims.py -- NEEC Session 33: comparative claims in the eleven scoring documents
+================================================================================================
+canonical corpus: neec_weighting_robustness_analysis_v2.py (23 systems); scoring documents: 11
+claim register: audit_claims_s28.py (md5 11150ac2); restatements: d14_landing_s29.py (md5 6ed2d55c), restate_s30.py (md5 c15bed57), restate_s33.py (md5 3a5b0290); blocks: summary_blocks_s28.json (md5 7973e170)
+
+[A] SOURCES AND IDENTITIES (20 checks)
+  PASS  neec_weighting_robustness_analysis_v2.py: own transcription self-check passes
+  PASS  canonical corpus holds 23 systems, 13 legacy and 10 Step 1b
+  PASS  every canonical vector scores all 26 criteria in {0, 0.5, 1}
+  PASS  vector-level dominance agrees with canonical.dominates on all 506 ordered pairs
+  PASS  State Capitalism / Qatar: the entry verifier's vector equals the canonical vector
+  PASS  Islamic Finance / Profit-Sharing Banking: the entry verifier's vector equals the canonical vector
+  PASS  Ostrom-Style Commons Governance: the entry verifier's vector equals the canonical vector but for C3.2 (decision D26: 0.0 -> 0.5)
+  PASS  State Capitalism / Singapore: the entry verifier's vector equals the canonical vector
+  PASS  State Capitalism / China: the entry verifier's vector equals the canonical vector
+  PASS  State Capitalism / Qatar: flag register names real criteria, each alternative differs by 0.5
+  PASS  Islamic Finance / Profit-Sharing Banking: flag register names real criteria, each alternative differs by 0.5
+  PASS  Ostrom-Style Commons Governance: flag register names real criteria, each alternative differs by 0.5 (the Session 23 register, against the Session 23 vector)
+  PASS  State Capitalism / Singapore: flag register names real criteria, each alternative differs by 0.5
+  PASS  State Capitalism / China: flag register names real criteria, each alternative differs by 0.5
+  PASS  NEEC_StateCapitalism_Qatar_scoring_scratch.md: all 26 criterion sections found
+  PASS  NEEC_StateCapitalism_Qatar_scoring_scratch.md: names verify_comparative_claims.py as its checker
+  PASS  NEEC_IslamicFinance_scoring_scratch.md: all 26 criterion sections found
+  PASS  NEEC_IslamicFinance_scoring_scratch.md: names verify_comparative_claims.py as its checker
+  PASS  NEEC_Ostrom_Commons_scoring_scratch.md: all 26 criterion sections found
+  PASS  NEEC_Ostrom_Commons_scoring_scratch.md: names verify_comparative_claims.py as its checker
+
+[B] CRITERION-LEVEL REFERENCES TO OTHER SYSTEMS (69 checks)
+  PASS  IF C1.1: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Universal Basic Services at 0.5
+  PASS  IF C1.2a: Integral, Georgism / Land Value Tax at 0.0
+  PASS  IF C1.2b: Status Quo Market Capitalism, Universal Basic Services at 0.0
+  PASS  IF C1.4: Status Quo Market Capitalism at 0.0
+  PASS  IF C1.4: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism at 0.5
+  PASS  IF C1.4: Status Quo Market Capitalism at 0.0
+  PASS  IF C2.1: Status Quo Market Capitalism at 0.5
+  PASS  IF C2.3: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Status Quo Market Capitalism at 0.5
+  PASS  IF C2.4: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism at 0.5
+  PASS  IF C2.5: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Universal Basic Services at 1.0
+  PASS  IF C3.1: Market Socialism at 0.5
+  PASS  IF C3.4: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Universal Basic Services at 1.0
+  PASS  IF C3.5: Stakeholder Capitalism at 0.0
+  PASS  IF C4.1: Nordic Social Democracy at 0.5
+  PASS  IF C4.2: Stakeholder Capitalism at 0.0
+  PASS  IF C4.3: Integral at 0.5
+  PASS  IF C4.4: Status Quo Market Capitalism at 0.0
+  PASS  IF C4.4: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Universal Basic Services at 0.5
+  PASS  IF C4.5: Nordic Social Democracy at 0.5
+  PASS  IF C5.5: Market Socialism at 0.0
+  PASS  QA C1.1: Centrally Planned Socialism at 1.0
+  PASS  QA C1.2a: State Capitalism / Singapore at 1.0
+  PASS  QA C1.2b: Nordic Social Democracy, Sovereign Wealth Fund Statism, State Capitalism / China, State Capitalism / Singapore at 0.5
+  PASS  QA C1.4: Sovereign Wealth Fund Statism, State Capitalism / China, State Capitalism / Singapore at 0.5
+  PASS  QA C1.5: State Capitalism / Singapore at 0.5
+  PASS  QA C1.5: Market Socialism at 0.5
+  PASS  QA C2.1: State Capitalism / Singapore at 0.5
+  PASS  QA C2.2: State Capitalism / China, State Capitalism / Singapore at 0.0
+  PASS  QA C2.2: Nordic Social Democracy at 0.5
+  PASS  QA C2.3: State Capitalism / China, State Capitalism / Singapore at 0.5
+  PASS  QA C2.4: State Capitalism / China, Centrally Planned Socialism at 0.0
+  PASS  QA C2.5: Nordic Social Democracy at 0.0
+  PASS  QA C2.5: State Capitalism / China, State Capitalism / Singapore, Status Quo Market Capitalism at 0.5
+  PASS  QA C3.1: Sovereign Wealth Fund Statism, State Capitalism / China, State Capitalism / Singapore at 0.5
+  PASS  QA C3.2: MMT + Job Guarantee at 0.5
+  PASS  QA C3.2: State Capitalism / China, State Capitalism / Singapore at 1.0
+  PASS  QA C3.4: State Capitalism / Singapore, Sovereign Wealth Fund Statism at 1.0
+  PASS  QA C3.5: State Capitalism / China at 0.0
+  PASS  QA C4.1: Nordic Social Democracy at 0.5
+  PASS  QA C4.1: Sovereign Wealth Fund Statism at 1.0
+  PASS  QA C4.2: Sovereign Wealth Fund Statism, State Capitalism / China, State Capitalism / Singapore at 0.0
+  PASS  QA C4.3: Status Quo Market Capitalism at 0.5
+  PASS  QA C4.3: State Capitalism / China at 0.0
+  PASS  QA C4.4: State Capitalism / China, State Capitalism / Singapore at 0.0
+  PASS  QA C4.5: Sovereign Wealth Fund Statism, State Capitalism / China, State Capitalism / Singapore at 0.0
+  PASS  QA C5.1: State Capitalism / China, State Capitalism / Singapore at 1.0
+  PASS  QA C5.2: State Capitalism / China, State Capitalism / Singapore at 0.5
+  PASS  QA C5.3: Sovereign Wealth Fund Statism, State Capitalism / Singapore at 1.0
+  PASS  QA C5.5: Sovereign Wealth Fund Statism at 0.5
+  PASS  OS C1.2a: Georgism / Land Value Tax, Mutual Credit / LETS, Universal Basic Services at 0.0
+  PASS  OS C1.2a: Sovereign Wealth Fund Statism at 0.5
+  PASS  OS C1.2b: Mutual Credit / LETS at 1.0
+  PASS  OS C1.3: Georgism / Land Value Tax, Universal Basic Services at 0.5
+  PASS  OS C1.3: Mutual Credit / LETS, Sovereign Wealth Fund Statism at 0.0
+  PASS  OS C1.4: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Universal Basic Services at 0.5
+  PASS  OS C2.2: Georgism / Land Value Tax, Mutual Credit / LETS, Universal Basic Services at 0.5
+  PASS  OS C2.4: Participatory Economics, Degrowth Economics, Nordic Social Democracy at 1.0
+  PASS  OS C2.5: Georgism / Land Value Tax, Mutual Credit / LETS, Sovereign Wealth Fund Statism, Universal Basic Services, Doughnut Economics at 1.0
+  PASS  OS C4.4: Islamic Finance / Profit-Sharing Banking at 0.0
+  PASS  OS C4.5: Sovereign Wealth Fund Statism, Doughnut Economics, Status Quo Market Capitalism, Participatory Economics at 0.0
+  PASS  OS C5.5: Participatory Economics, Mutual Credit / LETS, Islamic Finance / Profit-Sharing Banking at 1.0
+  PASS  QA C1.1: State Capitalism / China's C1.1 is flagged, alternative 1.0
+  PASS  QA C1.1: State Capitalism / Singapore's C1.1 is flagged, alternative 1.0
+  PASS  QA C1.1: State Capitalism / Qatar's C1.1 is flagged, alternative 1.0
+  PASS  QA C4.2: State Capitalism / Singapore's C4.2 is flagged
+  PASS  QA C4.2: State Capitalism / Qatar's C4.2 is not flagged
+  PASS  QA C4.4: State Capitalism / Singapore's C4.4 is flagged
+  PASS  QA C5.4: State Capitalism / Singapore's C5.4 is flagged, alternative 1.0
+  PASS  QA C5.4: State Capitalism / China's C5.4 is flagged, alternative 0.0
+
+[C] STATE CAPITALISM / QATAR: CORPUS POSITION AND PAIRWISE COMPARISONS (20 checks)
+  PASS  QA: ranks 22nd of 23, above only Libertarian Minarchism, no exact tie
+  PASS  QA: dominated by exactly CCO-PTF-CIP-SZH and Singapore; dominates nothing
+  PASS  QA: 14 ordered strict-dominance pairs, 2 with Qatar dominated
+  PASS  QA: three pairs do not involve CCO-PTF-CIP-SZH: SG>CN, SG>QA, IF>SC
+  FAIL  QA: the joint upward total (14.0) is SWF Statism's and Singapore's, in another tier
+        phrase not found: 'The upward extreme reaches the same 14.0/26 as Sovereign Wealth Fund Statism and Singapore, in a different tier'
+  PASS  QA: the citizens-only total (13.0) is Fully Automated Luxury Communism's alone
+  PASS  QA: Domain 4 (0.5) ties China and Status Quo for the corpus's lowest
+  PASS  QA: lowest total and most failures of the ten Step 1b systems
+  PASS  QA: vs SWF Statism: 5.0 points and 7 failures apart
+  PASS  QA: vs SWF Statism: 12 criteria differ, Qatar higher only on C1.3
+  PASS  QA: vs SWF Statism: shared failures C4.2 and C4.5
+  PASS  QA: vs SWF Statism: domain deltas
+  PASS  QA: vs SWF Statism: the configuration costs most in Domains 2 and 4
+  PASS  QA: Singapore strictly dominates Qatar: higher on 10, lower on none
+  PASS  QA: vs Singapore: domain deltas
+  PASS  QA: Singapore's 4 failures are a subset of Qatar's 10
+  PASS  QA: neither China nor Qatar dominates the other
+  PASS  QA: vs China: 4 criteria differ
+  PASS  QA: China's 8 failures are a subset of Qatar's 10; China is 1.0 higher
+  PASS  QA: the three state-capitalism entries span two tiers
+
+[D] ISLAMIC FINANCE: CORPUS POSITION AND PAIRWISE COMPARISONS (20 checks)
+  PASS  IF: exact three-way tie at 13.5 with Georgism and UBS: 5, 2 and 3 failures, two tiers
+  PASS  IF: the tie: one percentage, three failure counts, two tiers
+  PASS  IF: Domain 5 (4.5) ties CCO-PTF-CIP-SZH for the highest; no other system reaches it
+  PASS  IF: the Domain 5 co-leader is the framework's own top-ranked entry
+  PASS  IF: second-widest Domain 5 minus Domain 4 split (3.0); only Status Quo wider (3.5)
+  PASS  IF: Domain 4 (1.5) is sixth-lowest of 23, tied only with Libertarian Minarchism
+  PASS  IF: the final assessment restates Domain 4 as sixth-lowest of twenty-three
+  PASS  IF: CCO-PTF-CIP-SZH scores 4.5 in Domain 4 as well
+  PASS  IF: Status Quo's gap is wider; the three state-capitalism entries follow at 2.5
+  PASS  IF: one of the 11 entries CCO-PTF-CIP-SZH does not dominate; C5.5 the sole reason
+  PASS  IF: not dominated by anything
+  PASS  IF: strictly dominates Stakeholder Capitalism (6 higher, none lower): the only Step 1b > legacy pair
+  PASS  IF: 14 ordered strict-dominance pairs in all
+  PASS  IF: vs Status Quo: 8 differ, 7 higher (listed), +3.0
+  PASS  IF: the final assessment restates: above Status Quo on seven criteria
+  PASS  IF: vs Georgism (10 differ) and UBS (8 differ): no dominance either way
+  PASS  IF: vs SWF Statism: 9 differ, IF higher on C1.3, C4.5, C5.2, C5.5
+  FAIL  IF: the broad-scope total (14.5, same tier) would tie Mutual Credit / LETS, UBI and Ostrom
+        phrase not found: 'The tier does not move, but the total would tie Mutual Credit / LETS, Universal Basic Income and Ostrom-style commons governance.'
+  PASS  OS: archetype 1 (narrow single-mechanism systems) has five members, as the documents classify them
+  PASS  IF: C2.2 and C4.2 undisputed; C1.4 fails on Readings B and C; the only archetype-1 entry failing all three
+
+[E] OSTROM-STYLE COMMONS GOVERNANCE: CORPUS POSITION AND PAIRWISE COMPARISONS (16 checks)
+  FAIL  OS: D26: C3.2 is 0.5; no criterion is below every other system, and no entry is at 0.0 on C3.2
+        phrase not found: 'No entry in the corpus now scores 0.0 on C3.2.'
+  PASS  OS: C5.5 is the one criterion above CCO-PTF-CIP-SZH; the 1.0 is joint-best with PE, MC and IF
+  FAIL  OS: three-way tie at 14.5 with Mutual Credit / LETS and UBI: 3, 3 and 7 failures, two tiers
+        phrase not found: 'Ostrom-style commons governance, Mutual Credit / LETS and Universal Basic Income all score exactly 14.5/26 (56%), with 3, 3 and 7 structural failures respectively.'
+  FAIL  OS: the three-way tie at 13.5 is Georgism, UBS and Islamic finance, and it too spans two tiers
+        phrase not found: 'Like the three-way tie at 13.5 (Georgism / Land Value Tax, Universal Basic Services and Islamic finance), it spans two adequacy tiers'
+  FAIL  OS: vs Mutual Credit / LETS: 4 differ, 2 higher, 2 lower, net zero
+        phrase not found: 'differs on 4 of 26 criteria, is higher on 2 and lower on 2, and nets exactly zero'
+  FAIL  OS: until D26 it tied SWF Statism and Singapore at 14.0; they are now the only entries there
+        phrase not found: 'Until decision D26 it tied Sovereign Wealth Fund Statism and State Capitalism / Singapore at 14.0.'
+  PASS  OS: 14 ordered strict-dominance pairs, none involving this entry
+  PASS  OS: C5.5 (1.0 against 0.5) is the single criterion above CCO-PTF-CIP-SZH
+  PASS  OS: CCO-PTF-CIP-SZH: 1.0 on 23 criteria, 0.5 on C1.5, C4.5, C5.5; eleven escape, four through C5.5
+  PASS  OS: dominates nothing; the Step 1b dominators are Singapore (China, Qatar) and IF (Stakeholder)
+  PASS  OS: Domain 5 (4.0) beaten only by CCO and IF (4.5), tied with MC, NSD, SQ: joint third
+  PASS  OS: Domain 1 (2.0) beaten by 14 of the other 22
+  PASS  OS: viability-minus-material-security split 2.0: joint third-widest behind LM 3.0 and IF 2.5
+  FAIL  OS: vs Status Quo: 15 differ, 11 higher, 4 lower, +4.0
+        phrase not found: 'it differs on 15 criteria, is higher on 11 and lower on 4, and gains 4.0 points'
+  FAIL  OS: nearest neighbours at 4 criteria: Georgism, Mutual Credit / LETS, UBS
+        phrase not found: 'Georgism / Land Value Tax is one of the three systems closest to this entry, each differing from it on only 4 criteria (the others are Mutual Credit / LETS and Universal Basic Services).'
+  FAIL  OS: vs Georgism: 3 higher, 1 lower, +1.0
+        phrase not found: 'Against Georgism it is higher on 3 and lower on 1, and gains 1.0'
+
+[F] FLAG COUNTS AND TIER ROBUSTNESS (D13, FROM THE BLOCKS IN THE DOCUMENTS) (18 checks)
+  FAIL  the documents' summary blocks cover all 23 entries and are valid (neec_entry.validate)
+        entries without a valid block: ['OS']
+  FAIL  State Capitalism / China: 9 criterion headings flagged as contestable = the flagged criteria in its block
+        the documents' blocks are missing or invalid
+  FAIL  State Capitalism / Singapore: 11 criterion headings flagged as contestable = the flagged criteria in its block
+        the documents' blocks are missing or invalid
+  FAIL  State Capitalism / Qatar: 12 criterion headings flagged as contestable = the flagged criteria in its block
+        the documents' blocks are missing or invalid
+  FAIL  Islamic Finance / Profit-Sharing Banking: 16 criterion headings flagged as contestable = the flagged criteria in its block
+        the documents' blocks are missing or invalid
+  FAIL  Ostrom-Style Commons Governance: 20 criterion headings flagged as contestable = the flagged criteria in its block
+        the documents' blocks are missing or invalid
+  FAIL  OS: fifteen flags (D18(b), D26): the second-largest flagged set, after Islamic finance's sixteen
+        computed fact does not hold; phrase not found: "Fifteen of twenty-six criteria are flagged — the second-largest flagged set in the corpus, after Islamic finance's sixteen."
+  FAIL  IF: sixteen flags: the largest set, ahead of Ostrom's fifteen
+        computed fact does not hold; phrase not found: "This evaluation carries 16 flagged contestable calls, the largest set of any entry in the corpus, ahead of Ostrom-style commons governance's fifteen."
+  FAIL  IF: D13: the second least tier-robust entry; joint readings reach three tiers, span 5.0 points, 9 failures
+        computed fact does not hold (the documents' blocks are missing or invalid)
+  FAIL  IF: D13: less tier-robust than Singapore (3 tiers, 5.5/6, 11 flags), more than Ostrom (3 tiers, 7.5/9, 15 flags, no failure undisputed)
+        computed fact does not hold; phrase not found: 'It is less tier-robust than State Capitalism / Singapore (three tiers, 5.5 points and 6 failures, from eleven flags) and more tier-robust than Ostrom-style commons governance (three tiers, 7.5 points and 9 failures, from fifteen flags, with no structural failure undisputed).'
+  FAIL  IF: the enumeration share orders IF and Ostrom the other way (17.1% of 65,536; 65.6% of 32,768)
+        computed fact does not hold (the documents' blocks are missing or invalid); phrase not found: "17.1% of this entry's 65,536 combinations keep the Partially Adequate tier, against 65.6% of Ostrom's 32,768."
+  FAIL  OS: D13: the least tier-robust entry (3 tiers, 7.5/9), Islamic finance second (5.0/9); none undisputed against IF's two
+        computed fact does not hold; phrase not found: 'By the D13 measure (protocol 6.4), this entry is the least tier-robust in the corpus: its joint readings reach all three tiers, spanning 7.5 points and 9 structural failures, against 5.0 points and 9 failures for Islamic finance, the second least tier-robust, and no failure is undisputed where Islamic finance has two.'
+  FAIL  OS: the enumeration share reverses the order of the two (65.6% of 32,768; 17.1% of 65,536)
+        computed fact does not hold; phrase not found: "the order of the two reverses: 65.6% of this entry's 32,768 combinations keep the Partially Adequate tier, against 17.1% of Islamic finance's 65,536."
+  FAIL  OS: the final assessment restates it on D13: three tiers on the joint readings, no undisputed failure
+        computed fact does not hold
+  FAIL  SG: D13: joint readings reach three tiers, spanning 5.5 points and 6 failures (third least tier-robust)
+        computed fact does not hold
+  FAIL  SG: share: 64.1% of the 2,048 combinations of its eleven flags keep Partially Adequate
+        computed fact does not hold
+  FAIL  SG: by the share alone the order changes both ways: UBS and MMT (50.0%, two tiers each) fall below, Ostrom (65.6% of 32,768, three tiers) rises above
+        computed fact does not hold (the documents' blocks are missing or invalid); phrase not found: 'Universal Basic Services and MMT + Job Guarantee (50.0% each) would rank as less tier-robust than this entry, although their joint readings reach only two tiers, and Ostrom-style commons governance (65.6% of 32,768) as more tier-robust, although its joint readings reach all three.'
+  FAIL  SG: D18(a): eleven flagged calls; the population-scope reading is a scenario (15.0/26, 3 failures)
+        computed fact does not hold
+
+[G] SUPERSEDED WORDING IS GONE (THE SESSION 25 REGISTER, RESOLVED); WHOLE PERCENTS (D21) (13 checks)
+  PASS  QA: Session 25 register, 'rank 20th of 21': old wording absent, restated wording present
+  PASS  QA: Session 25 register, 'dominance pairs 11 -> 13': old wording absent, restated wording present
+  PASS  QA: Session 25 register, 'two pairs not involving CCO-PTF-CIP-SZH': old wording absent, restated wording present
+  FAIL  QA: Session 25 register, 'joint upward 14.0 is SWF Statism's and Singapore's (again, after D26)': old wording absent, restated wording present
+  PASS  IF: Session 25 register, 'rank 12 (competition rank)': old wording absent, restated wording present
+  PASS  IF: Session 25 register, 'Domain 4 fifth-lowest': old wording absent, restated wording present
+  PASS  IF: Session 25 register, 'dominance pairs 11 -> 12': old wording absent, restated wording present
+  PASS  OS: Session 25 register, 'exactly one system beats Domain 5': old wording absent, restated wording present
+  PASS  OS: Session 25 register, 'that system is CCO-PTF-CIP-SZH': old wording absent, restated wording present
+  PASS  QA: none of 7 superseded or stale phrases remains
+  PASS  IF: none of 13 superseded or stale phrases remains
+  PASS  OS: none of 19 superseded or stale phrases remains
+  PASS  D21: no score in the eleven documents is displayed with a one-decimal percent (protocol 2.4)
+
+[H] CORPUS TABLES (4 checks)
+  PASS  IF: corpus table has one pair of markers
+  FAIL  IF: corpus table is byte-identical to a fresh render (23 rows)
+        regenerate with --fill
+  PASS  OS: corpus table has one pair of markers
+  FAIL  OS: corpus table is byte-identical to a fresh render (23 rows)
+        regenerate with --fill
+
+[I] THE SESSION 28 CLAIM REGISTER ON THE EIGHT RESTATED DOCUMENTS (223 checks)
+  PASS  d14_landing_s29.py restates exactly the 75 actionable items of the register, once each (and 4 further restatements, asserted in [F])
+  PASS  GEO-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  GEO-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  GEO-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  GEO-04 holds (status): in place, asserted
+  PASS  GEO-05 holds (crit): in place, asserted
+  PASS  GEO-06 holds (crit): in place, asserted
+  PASS  GEO-07 holds (crit): in place, asserted
+  PASS  GEO-08 holds (crit): in place, asserted
+  PASS  GEO-09 holds (crit): in place, asserted
+  PASS  GEO-10 holds (crit): in place, asserted
+  PASS  GEO-11 holds (crit): in place, asserted
+  PASS  GEO-12 holds (tier): in place, asserted
+  PASS  GEO-13 stale -> restated (tier): audited phrase gone; restated phrase in place; facts asserted
+  PASS  GEO-14 history: retained as written, not asserted
+  PASS  GEO-15 stale -> restated (status): audited phrase gone; restated phrase in place; facts asserted
+  PASS  GEO-16 stale -> restated (tier): audited phrase gone; restated phrase in place; facts asserted
+  PASS  GEO-17 decision -> restated (d16): audited phrase kept, disclosure added; restated phrase in place; facts asserted
+  PASS  MC-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  MC-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  MC-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  MC-04 holds (status): in place, asserted
+  PASS  MC-05 holds (crit): in place, asserted
+  PASS  MC-06 history: retained as written, not asserted
+  PASS  MC-07 holds (crit): in place, asserted
+  PASS  MC-08 holds (crit): in place, asserted
+  PASS  MC-09 holds (crit): in place, asserted
+  PASS  MC-10 holds (crit): in place, asserted
+  PASS  MC-11 error -> restated (error): audited phrase gone; restated phrase in place; facts asserted
+  PASS  MC-12 holds (pair): in place, asserted
+  PASS  MC-13 stale -> restated (status): audited phrase gone; restated phrase in place; facts asserted
+  PASS  MC-14 stale -> restated (pair): audited phrase gone; restated phrase in place; facts asserted
+  FAIL  MC-15 stale -> restated (size): audited phrase gone; restated phrase in place; facts asserted (Session 33 wording and facts)
+        restated phrase occurs 0 times in document
+  PASS  DE-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  DE-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  DE-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  DE-04 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  DE-05 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  DE-06 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  DE-07 stale -> restated (size): audited phrase gone; restated phrase in place; facts asserted
+  PASS  DE-08 holds (status): in place, asserted
+  PASS  DE-09 holds (crit): in place, asserted
+  PASS  DE-10 holds (crit): in place, asserted
+  PASS  DE-11 holds (crit): in place, asserted
+  PASS  DE-12 holds (position): in place, asserted
+  PASS  DE-13 holds (crit): in place, asserted
+  PASS  DE-14 holds (crit): in place, asserted
+  PASS  DE-15 holds (crit): in place, asserted
+  PASS  DE-16 holds (flags): in place, asserted
+  PASS  DE-17 holds (flags): in place, asserted
+  PASS  DE-18 holds (dominance): in place, asserted
+  PASS  DE-19 holds (dominance): in place, asserted
+  PASS  DE-20 holds (pair): in place, asserted
+  PASS  UBS-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  UBS-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  UBS-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  UBS-04 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  UBS-05 holds (status): in place, asserted
+  PASS  UBS-06 stale -> restated (status): audited phrase gone; restated phrase in place; facts asserted
+  PASS  UBS-07 stale -> restated (status): audited phrase gone; restated phrase in place; facts asserted
+  PASS  UBS-08 record -> restated (record): audited phrase gone; restated phrase in place
+  PASS  UBS-09 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  UBS-10 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  UBS-11 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  UBS-12 holds (crit): in place, asserted
+  PASS  UBS-13 holds (crit): in place, asserted
+  PASS  UBS-14 holds (crit): in place, asserted
+  PASS  UBS-15 holds (crit): in place, asserted
+  PASS  UBS-16 holds (crit): in place, asserted
+  PASS  UBS-17 holds (crit): in place, asserted
+  PASS  UBS-18 holds (crit): in place, asserted
+  PASS  UBS-19 stale -> restated (position): audited phrase gone; restated phrase in place; facts asserted
+  PASS  UBS-20 holds (tier): in place, asserted
+  PASS  UBS-21 holds (pair): in place, asserted
+  PASS  UBS-22 holds (pair): in place, asserted
+  PASS  UBS-23 holds (pair): in place, asserted
+  PASS  UBS-24 holds (pair): in place, asserted
+  PASS  UBS-25 holds (tier): in place, asserted
+  FAIL  UBS-26 error -> restated (error): audited phrase gone; restated phrase in place; facts asserted (Session 33 wording and facts)
+        restated phrase occurs 0 times in document
+  PASS  UBS-27 holds (dominance): in place, asserted
+  PASS  UBS-28 holds (dominance): in place, asserted
+  PASS  UBS-29 holds (dominance): in place, asserted
+  PASS  UBS-30 holds (dominance): in place, asserted
+  PASS  UBS-31 error -> restated (error): audited phrase gone; restated phrase in place; facts asserted
+  PASS  SWF-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SWF-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SWF-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SWF-04 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SWF-05 stale -> restated (status): audited phrase gone; restated phrase in place; facts asserted
+  PASS  SWF-06 holds (status): in place, asserted
+  PASS  SWF-07 holds (crit): in place, asserted
+  PASS  SWF-08 holds (flags): in place, asserted
+  PASS  SWF-09 holds (crit): in place, asserted
+  PASS  SWF-10 holds (crit): in place, asserted
+  PASS  SWF-11 holds (crit): in place, asserted
+  PASS  SWF-12 stale -> restated (crit): audited phrase gone; restated phrase in place; facts asserted
+  PASS  SWF-13 holds (crit): in place, asserted
+  PASS  SWF-14 holds (crit): in place, asserted
+  PASS  SWF-15 holds (tier): in place, asserted
+  PASS  SWF-16 history: retained as written, not asserted
+  PASS  SWF-17 history: retained as written, not asserted
+  PASS  SWF-18 holds (pair): in place, asserted
+  PASS  SWF-19 holds (flags): in place, asserted
+  PASS  SWF-20 decision -> restated (d16): audited phrase kept, disclosure added; restated phrase in place; facts asserted
+  FAIL  SWF-21 stale -> restated (position): audited phrase gone; restated phrase in place; facts asserted (Session 33 wording and facts)
+        restated phrase occurs 0 times in document
+  PASS  SWF-22 holds (pair): in place, asserted
+  PASS  SWF-23 holds (tier): in place, asserted
+  PASS  CN-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  CN-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  CN-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  CN-04 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  CN-05 stale -> restated (status): audited phrase gone; restated phrase in place; facts asserted
+  PASS  CN-06 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  CN-07 holds (status): in place, asserted
+  PASS  CN-08 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  CN-10 holds (crit): in place, asserted
+  PASS  CN-11 holds (crit): in place, asserted
+  PASS  CN-12 holds (crit): in place, asserted
+  PASS  CN-13 holds (crit): in place, asserted
+  PASS  CN-14 holds (crit): in place, asserted
+  PASS  CN-15 holds (crit): in place, asserted
+  PASS  CN-16 holds (crit): in place, asserted
+  PASS  CN-17 holds (crit): in place, asserted
+  PASS  CN-18 holds (crit): in place, asserted
+  PASS  CN-19 holds (crit): in place, asserted
+  PASS  CN-20 holds (crit): in place, asserted
+  PASS  CN-21 holds (crit): in place, asserted
+  PASS  CN-22 holds (crit): in place, asserted
+  PASS  CN-23 holds (crit): in place, asserted
+  PASS  CN-24 holds (crit): in place, asserted
+  PASS  CN-25 holds (crit): in place, asserted
+  PASS  CN-26 holds (crit): in place, asserted
+  PASS  CN-27 holds (crit): in place, asserted
+  PASS  CN-28 holds (crit): in place, asserted
+  PASS  CN-29 holds (crit): in place, asserted
+  PASS  CN-30 holds (crit): in place, asserted
+  PASS  CN-31 holds (crit): in place, asserted
+  PASS  CN-32 holds (crit): in place, asserted
+  PASS  CN-33 holds (crit): in place, asserted
+  PASS  CN-40 stale -> restated (flags): audited phrase gone; restated phrase in place; facts asserted
+  PASS  CN-41 history: retained as written, not asserted
+  PASS  CN-42 stale -> restated (position): audited phrase gone; restated phrase in place; facts asserted
+  PASS  CN-43 holds (pair): in place, asserted
+  PASS  CN-44 stale -> restated (dominance): audited phrase gone; restated phrase in place; facts asserted
+  PASS  CN-45 holds (dominance): in place, asserted
+  PASS  CN-46 stale -> restated (position): audited phrase gone; restated phrase in place; facts asserted
+  PASS  SG-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SG-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SG-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SG-04 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  SG-05 stale -> restated (status): audited phrase gone; restated phrase in place; facts asserted
+  PASS  SG-06 holds (status): in place, asserted
+  PASS  SG-10 holds (crit): in place, asserted
+  PASS  SG-11 holds (crit): in place, asserted
+  PASS  SG-12 holds (crit): in place, asserted
+  PASS  SG-13 holds (crit): in place, asserted
+  PASS  SG-14 decision -> restated (d18): audited phrase gone; restated phrase in place
+  PASS  SG-15 decision -> restated (d18): audited phrase gone; restated phrase in place
+  PASS  SG-16 decision -> restated (d18): audited phrase gone
+  PASS  SG-17 decision -> restated (d18): audited phrase gone; restated phrase in place
+  PASS  SG-20 holds (crit): in place, asserted
+  PASS  SG-21 holds (crit): in place, asserted
+  PASS  SG-22 holds (crit): in place, asserted
+  PASS  SG-23 holds (crit): in place, asserted
+  PASS  SG-24 holds (crit): in place, asserted
+  PASS  SG-25 holds (crit): in place, asserted
+  PASS  SG-26 holds (crit): in place, asserted
+  PASS  SG-27 holds (crit): in place, asserted
+  PASS  SG-28 holds (crit): in place, asserted
+  PASS  SG-29 holds (crit): in place, asserted
+  PASS  SG-30 holds (crit): in place, asserted
+  PASS  SG-31 holds (crit): in place, asserted
+  PASS  SG-32 holds (crit): in place, asserted
+  PASS  SG-33 holds (crit): in place, asserted
+  PASS  SG-34 holds (crit): in place, asserted
+  PASS  SG-35 holds (crit): in place, asserted
+  PASS  SG-36 holds (crit): in place, asserted
+  PASS  SG-37 holds (crit): in place, asserted
+  PASS  SG-38 holds (crit): in place, asserted
+  PASS  SG-39 holds (crit): in place, asserted
+  PASS  SG-40 holds (crit): in place, asserted
+  PASS  SG-41 holds (crit): in place, asserted
+  PASS  SG-42 holds (crit): in place, asserted
+  PASS  SG-43 holds (crit): in place, asserted
+  PASS  SG-44 holds (crit): in place, asserted
+  PASS  SG-45 holds (crit): in place, asserted
+  PASS  SG-50 stale -> restated (flags): audited phrase gone; restated phrase in place; facts asserted
+  PASS  SG-51 holds (flags): in place, asserted
+  PASS  SG-52 stale -> restated (position): audited phrase gone; restated phrase in place; facts asserted
+  PASS  SG-53 holds (pair): in place, asserted
+  FAIL  SG-54 stale -> restated (pair): audited phrase gone; restated phrase in place; facts asserted (Session 33 wording and facts)
+        restated phrase occurs 0 times in document
+  PASS  SG-55 holds (dominance): in place, asserted
+  PASS  SG-56 holds (dominance): in place, asserted
+  PASS  SG-57 holds (pair): in place, asserted
+  PASS  SG-58 stale -> restated (dominance): audited phrase gone; restated phrase in place; facts asserted
+  FAIL  SG-59 stale -> restated (position): audited phrase gone; restated phrase in place; facts asserted (Session 33 wording and facts)
+        restated phrase occurs 0 times in document
+  PASS  1C-01 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  1C-02 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  1C-03 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  1C-04 stale -> restated (status): audited phrase gone; restated phrase in place
+  PASS  1C-05 holds (flags): in place, asserted
+  PASS  1C-06 holds (crit): in place, asserted
+  PASS  1C-07 holds (tier): in place, asserted
+  PASS  1C-08 holds (position): in place, asserted
+  PASS  1C-09 history: retained as written, not asserted
+  PASS  1C-10 holds (crit): in place, asserted
+  PASS  1C-11 holds (crit): in place, asserted
+  PASS  1C-12 holds (crit): in place, asserted
+  PASS  1C-13 holds (flags): in place, asserted
+  PASS  1C-14 holds (pair): in place, asserted
+  PASS  1C-15 holds (pair): in place, asserted
+  PASS  1C-16 holds (tier): in place, asserted
+  PASS  1C-17 history: retained as written, not asserted
+  PASS  1C-18 holds (pair): in place, asserted
+  PASS  1C-19 holds (pair): in place, asserted
+  PASS  1C-20 stale -> restated (tier): audited phrase gone; restated phrase in place; facts asserted
+  PASS  1C-21 stale -> restated (tier): audited phrase gone; restated phrase in place
+  PASS  1C-22 holds (pair): in place, asserted on its Session 33 fact list (RESPEC)
+  PASS  1C-23 stale -> restated (size): audited phrase gone; restated phrase in place; facts asserted
+  PASS  1C-24 holds (dominance): in place, asserted
+  PASS  1C-25 holds (dominance): in place, asserted
+  PASS  1C-26 record -> restated (record): audited phrase gone; restated phrase in place
+  PASS  1C-27 history: retained as written, not asserted
+
+[J] SUMMARY BLOCKS IN THE DOCUMENTS (12 checks)
+  PASS  NEEC_Georgism_LVT_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_MutualCredit_LETS_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_DoughnutEconomics_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_UniversalBasicServices_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_SovereignWealthFundStatism_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_StateCapitalism_China_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_StateCapitalism_Singapore_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_Step1c_Retrofit_C1_2ab_C1_5.md: 13 blocks, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_StateCapitalism_Qatar_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  PASS  NEEC_IslamicFinance_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json, valid, the last section
+  FAIL  NEEC_Ostrom_Commons_scoring_scratch.md: 1 block, identical to summary_blocks_s28.json as re-expressed by restate_s33.py (D18(b), D26), valid, the last section
+        OS: differs from summary_blocks_s28.json as re-expressed; OS: not laid out as neec_entry.render_markdown writes it; OS: vector differs from the canonical corpus at C3.2
+  PASS  the eleven documents carry one block for each of the 23 canonical entries
+
+[K] RESTATEMENTS AFTER THE D14 PASS (SESSION 30, D22) (5 checks)
+  PASS  restate_s30.py (md5 c15bed57) restates again only audit items the D14 pass restated (DE-05) and adds the D22 sentence; all its edits are in the Doughnut Economics document
+  PASS  DE-05: the Session 30 phrase occurs once in the Doughnut Economics document
+  PASS  D22: the Session 30 phrase occurs once in the Doughnut Economics document
+  PASS  DE-05: the D14 wording it supersedes is gone (and is the D14 generator's own phrase)
+  PASS  D22 facts: verify_doughnut.py is on file (md5 2946cf0f) and describes itself as reconstructed in Session 30, not as the Session 14 script
+
+[L] SESSION 33 RESTATEMENTS (D18(b), D26) (83 checks)
+  PASS  restate_s33.py (md5 3a5b0290) edits exactly seven documents (IF, MC, OS, QA, SG, SWF, UBS), each from its Session 32 snapshot; the Step 1c retrofit document is not among them
+  PASS  OS OS-D18b-heads: the Session 33 phrase occurs once
+  PASS  OS OS-D18b-heads: the Session 33 phrase occurs once
+  PASS  OS OS-D18b-heads: the Session 33 phrase occurs once
+  PASS  OS OS-D18b-heads: the Session 33 phrase occurs once
+  FAIL  OS OS-D26-head: the Session 33 phrase occurs once
+        occurs 0 times: '#### C3.2 Inflation Control Mechanisms: 0.5 (Partial)'
+  FAIL  OS OS-D18b-C1.3: the Session 33 phrase occurs once
+        occurs 0 times: "That reading counts an adjacent instrument out of the mechanism's boun"
+  FAIL  OS OS-D18b-C3.1: the Session 33 phrase occurs once
+        occurs 0 times: 'That reading applies the threshold to a population other than the one '
+  FAIL  OS OS-D18b-C3.5: the Session 33 phrase occurs once
+        occurs 0 times: 'The apparatus alone does not carry the fourth clause, so the reading t'
+  FAIL  OS OS-D18b-C4.2: the Session 33 phrase occurs once
+        occurs 0 times: "That reading applies the criterion in the mechanism's own frame rather"
+  FAIL  OS OS-D26-C3.2: the Session 33 phrase occurs once
+        occurs 0 times: 'with 0.0 no longer open to it, it scores 0.5, the alternative the Sess'
+  FAIL  OS OS-D26-C3.2: the Session 33 phrase occurs once
+        occurs 0 times: 'No entry in the corpus now scores 0.0 on C3.2.'
+  FAIL  OS OS-D18b-overview: the Session 33 phrase occurs once
+        occurs 0 times: 'Four of those calls stated that question outright, and decision D18(b)'
+  FAIL  OS OS-D26-archetype: the Session 33 phrase occurs once
+        occurs 0 times: 'it has no monetary channel at all (C3.2, where absence now scores 0.5 '
+  FAIL  OS OS-D26-tie: the Session 33 phrase occurs once
+        occurs 0 times: 'Ostrom-style commons governance, Mutual Credit / LETS and Universal Ba'
+  FAIL  OS OS-D26-tie: the Session 33 phrase occurs once
+        occurs 0 times: 'Like the three-way tie at 13.5 (Georgism / Land Value Tax, Universal B'
+  FAIL  OS OS-D26-tie: the Session 33 phrase occurs once
+        occurs 0 times: 'differs on 4 of 26 criteria, is higher on 2 and lower on 2, and nets e'
+  FAIL  OS OS-D26-SQ: the Session 33 phrase occurs once
+        occurs 0 times: 'it differs on 15 criteria, is higher on 11 and lower on 4, and gains 4'
+  FAIL  OS OS-D26-nearest: the Session 33 phrase occurs once
+        occurs 0 times: 'Georgism / Land Value Tax is one of the three systems closest to this '
+  FAIL  OS OS-D26-nearest: the Session 33 phrase occurs once
+        occurs 0 times: 'Against Georgism it is higher on 3 and lower on 1, and gains 1.0'
+  FAIL  OS OS-D26-final: the Session 33 phrase occurs once
+        occurs 0 times: 'Ostrom-style commons governance scores 14.5/26 (56%) with 3 structural'
+  FAIL  OS OS-D26-final: the Session 33 phrase occurs once
+        occurs 0 times: 'records seventeen Partials, and fails C1.2a, C1.5 and C2.2.'
+  FAIL  OS OS-D26-final-shape: the Session 33 phrase occurs once
+        occurs 0 times: "It has no monetary function either, but under C3.2's anchor absence is"
+  FAIL  OS OS-D18b-final-readings: the Session 33 phrase occurs once
+        occurs 0 times: 'a reader who resolves its calls together, upward or downward, will get'
+  FAIL  OS OS-disclosure: the Session 33 phrase occurs once
+        occurs 0 times: 'Replicated blind once (pilot 1, 2026-09-19, Claude Sonnet 5): 22 of 26'
+  FAIL  OS OS-disclosure: the Session 33 phrase occurs once
+        occurs 0 times: 'Revised in Session 33, after that replication: decision D18(b) re-expr'
+  FAIL  OS OS-disclosure: the Session 33 phrase occurs once
+        occurs 0 times: 'Contestable calls: fifteen, listed above with their alternatives; seve'
+  FAIL  OS OS-block-intro: the Session 33 phrase occurs once
+        occurs 0 times: 're-expressed by `restate_s33.py` under decisions D18(b) and D26, not t'
+  FAIL  QA QA-D26: the Session 33 phrase occurs once
+        occurs 0 times: 'The upward extreme reaches the same 14.0/26 as Sovereign Wealth Fund S'
+  FAIL  IF IF-D26-broad: the Session 33 phrase occurs once
+        occurs 0 times: 'The tier does not move, but the total would tie Mutual Credit / LETS, '
+  FAIL  IF IF-D18b-flags: the Session 33 phrase occurs once
+        occurs 0 times: 'This evaluation carries 16 flagged contestable calls, the largest set '
+  FAIL  IF IF-D18b-D13: the Session 33 phrase occurs once
+        occurs 0 times: 'and more tier-robust than Ostrom-style commons governance (three tiers'
+  FAIL  IF IF-D18b-share: the Session 33 phrase occurs once
+        occurs 0 times: "17.1% of this entry's 65,536 combinations keep the Partially Adequate "
+  FAIL  MC MC-15: the Session 33 phrase occurs once
+        occurs 0 times: 'Mutual Credit / LETS is strictly dominated by no entry and dominates n'
+  FAIL  UBS UBS-26: the Session 33 phrase occurs once
+        occurs 0 times: 'would move UBS into Potentially Adequate at 14.0/26 with 2 failures, l'
+  FAIL  SWF SWF-21: the Session 33 phrase occurs once
+        occurs 0 times: 'tied third and fourth, with State Capitalism / Singapore, among the te'
+  FAIL  SG SG-54: the Session 33 phrase occurs once
+        occurs 0 times: 'and Singapore/SWF Statism (same total and tier; 4 and 3 failures).'
+  FAIL  SG SG-59: the Session 33 phrase occurs once
+        occurs 0 times: 'In the 23-system corpus it is tied 11th–12th with Sovereign Wealth Fun'
+  FAIL  SG SG-D26-share: the Session 33 phrase occurs once
+        occurs 0 times: 'Universal Basic Services and MMT + Job Guarantee (50.0% each) would ra'
+  FAIL  OS: the rewritten flag, reading and scenario sections state it once: Fifteen of twenty-six criteria are flagged — the second-...
+        occurs 0 times
+  FAIL  OS: the rewritten flag, reading and scenario sections state it once: Resolving each flag independently gives 32,768 combinati...
+        occurs 0 times
+  FAIL  OS: the rewritten flag, reading and scenario sections state it once: By the D13 measure (protocol 6.4), this entry is the lea...
+        occurs 0 times
+  FAIL  OS: the rewritten flag, reading and scenario sections state it once: the order of the two reverses: 65.6% of this entry's 32,...
+        occurs 0 times
+  FAIL  OS: the rewritten flag, reading and scenario sections state it once: The upward reading produces zero structural failures, a ...
+        occurs 0 times
+  FAIL  OS: the rewritten flag, reading and scenario sections state it once: The result is 15.5/26 with 2 structural failures — Poten...
+        occurs 0 times
+  FAIL  OS: superseded wording gone: Twenty of twenty-six criteria are flagged — the largest flagged set in t
+  FAIL  OS: superseded wording gone: This is the one criterion on which it scores below every other system in
+  FAIL  OS: superseded wording gone: all score exactly 14.0/26 (54%), with 4, 3 and 4 structural failures res
+  FAIL  OS: superseded wording gone: differs on 8 of 26 criteria, is higher on 4 and lower on 4, and nets exa
+  FAIL  OS: superseded wording gone: is higher on 11 and lower on 4, and gains 3.5 points
+  FAIL  OS: superseded wording gone: each differing from it on only 5 criteria
+  FAIL  OS: superseded wording gone: Against Georgism it is higher on 3 and lower on 2, and gains 0.5
+  FAIL  OS: superseded wording gone: spanning 10.0 points and 11 structural failures
+  FAIL  OS: superseded wording gone: 46.7% of this entry's 1,048,576 combinations
+  FAIL  OS: superseded wording gone: Reading A
+  FAIL  OS: superseded wording gone: Reading C
+  FAIL  OS: superseded wording gone: The three coherent joint readings
+  FAIL  OS: superseded wording gone: C3.2 = 0.0, the only such score in the corpus
+  FAIL  OS: superseded wording gone: The scenario is therefore tier-neutral
+  FAIL  OS: superseded wording gone: Not yet independently cross-checked by a second scorer
+  FAIL  QA: superseded wording gone: Sovereign Wealth Fund Statism, Singapore, and Ostrom-style commons gover
+  FAIL  IF: superseded wording gone: the total would tie Mutual Credit / LETS and Universal Basic Income.
+  FAIL  IF: superseded wording gone: after Ostrom-style commons governance's twenty.
+  FAIL  IF: superseded wording gone: three tiers, 10.0 points and 11 failures, from twenty flags
+  FAIL  IF: superseded wording gone: against 46.7% of Ostrom's 1,048,576.
+  FAIL  MC: superseded wording gone: its total, 14.5/26, ties Universal Basic Income's.
+  FAIL  UBS: superseded wording gone: Sovereign Wealth Fund Statism, State Capitalism / Singapore and Ostrom-s
+  FAIL  SWF: superseded wording gone: tied second to fourth, with State Capitalism / Singapore and Ostrom-styl
+  FAIL  SG: superseded wording gone: Singapore/SWF Statism/Ostrom-style commons governance (same total and ti
+  FAIL  SG: superseded wording gone: tied 10th–12th with Sovereign Wealth Fund Statism and Ostrom-style commo
+  PASS  the five register items restated again are exactly those whose D14 phrases Session 33 supersedes
+  FAIL  MC-15: the D14 wording it supersedes is gone (the D14 generator's own phrase)
+        still present: 'Mutual Credit / LETS is strictly dominated by no entry and dominates n'
+  FAIL  UBS-26: the D14 wording it supersedes is gone (the D14 generator's own phrase)
+        still present: 'would move UBS into Potentially Adequate at 14.0/26 with 2 failures, l'
+  FAIL  SWF-21: the D14 wording it supersedes is gone (the D14 generator's own phrase)
+        still present: 'tied second to fourth, with State Capitalism / Singapore and Ostrom-st'
+  FAIL  SG-54: the D14 wording it supersedes is gone (the D14 generator's own phrase)
+        still present: 'Singapore/SWF Statism/Ostrom-style commons governance (same total and '
+  FAIL  SG-59: the D14 wording it supersedes is gone (the D14 generator's own phrase)
+        still present: 'In the 23-system corpus it is tied 10th–12th with Sovereign Wealth Fun'
+  PASS  SG-54: the D14 phrase that still holds (Georgism / UBS / Islamic finance) stays, once
+  FAIL  OS: C1.3, C3.1, C3.5, C4.2 (scope questions, D18(b)) and C3.2 (D26) are unflagged in their headings, and each section says why
+  FAIL  OS: the summary table is byte-identical to a fresh render from the document's own block
+  FAIL  OS: the block is the Session 28 staging re-expressed by d18b_reexpression_s32.reexpress (D18(b)), then C3.2 at 0.5 (D26): 15 flags, readings scored/up/down, three scope scenarios
+  FAIL  OS: the upward reading's zero failures are reached, as scored, only by CCO-PTF-CIP-SZH
+  FAIL  OS: the knowledge-commons scenario now reaches Potentially Adequate (15.5/26, 2 failures)
+  PASS  1C-22 is kept as written, and only it is re-specified (RESPEC); five items are restated again (NOWSPEC)
+
+================================================================================================
+SUMMARY: 391 passed, 112 failed (of 503).
+Criterion-level references checked: 61 score references and 8 flag references.
+Session 28 register: 222 claims -- holds 139 (in place, asserted), history 8 (retained), restated 75 (audited phrase resolved, replacement facts asserted).
+================================================================================================

@@ -1,0 +1,5 @@
+wrote neec_weighting_robustness_analysis_v2.py  md5 d5041b130725577eea06bab807e0d2f8
+wrote neec_scores_csv_builder_v2.py  md5 7cd53027a96f4757b4ba32935b6ef68a
+  State Capitalism / Qatar                   D1-D5 [2.5, 1.0, 2.0, 0.5, 3.0]  total 9.0/26  10 failures  Structurally Inadequate   <- verify_qatar.py + NEEC_StateCapitalism_Qatar_scoring_scratch.md
+  Islamic Finance / Profit-Sharing Banking   D1-D5 [2.0, 2.5, 3.0, 1.5, 4.5]  total 13.5/26  5 failures  Partially Adequate   <- verify_islamicfinance.py + NEEC_IslamicFinance_scoring_scratch.md
+  Ostrom-Style Commons Governance            D1-D5 [2.0, 2.5, 2.5, 3.0, 4.0]  total 14.0/26  4 failures  Partially Adequate   <- verify_ostrom.py + NEEC_Ostrom_Commons_scoring_scratch.md

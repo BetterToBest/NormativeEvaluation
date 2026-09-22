@@ -1,0 +1,458 @@
+Loaded 23 systems from neec_weighting_robustness_analysis_v2.py.
+verify_transcription(): PASS.  verify_unchanged_from_legacy(): PASS (baseline_weighting_script.py present).
+
+====================================================================================================
+1. SCHEMES
+====================================================================================================
+  Equal (baseline)                         max possible = 26.0
+  Material-Security-Weighted (D1 x2)       max possible = 32.0
+  Feasibility-Discounted (D5 x0.5)         max possible = 23.5
+  Crisis-Risk-Weighted (C1.4, C4.2 x3)     max possible = 30.0
+  PASS  Material-Security x2 is single-factor: 6 criteria x2, all others x1
+  PASS  Feasibility-Discounted x0.5 is single-factor: 5 criteria x0.5, all others x1
+  PASS  Crisis-Risk x3 is single-factor: 2 criteria x3, all others x1
+
+====================================================================================================
+2. RANKINGS UNDER EACH SCHEME, ALL 23 SYSTEMS
+   Ordinal positions; equal weighted totals keep canonical order and are marked '='.
+   'comp' is the competition rank (tied systems share the best position), used for movements.
+====================================================================================================
+
+--- Equal (baseline) (max possible = 26.0) ---
+   1  (comp  1) CCO-PTF-CIP-SZH                       24.50  ( 94.2%)  [0 fail, Potentially Adequate]
+   2  (comp  2) Participatory Economics               20.50  ( 78.8%)  [1 fail, Potentially Adequate]
+   3= (comp  3) Nordic Social Democracy               19.50  ( 75.0%)  [2 fail, Potentially Adequate]
+   4= (comp  3) Integral                              19.50  ( 75.0%)  [3 fail, Partially Adequate]
+   5  (comp  5) Degrowth Economics                    19.00  ( 73.1%)  [2 fail, Potentially Adequate]
+   6  (comp  6) Market Socialism                      16.50  ( 63.5%)  [2 fail, Potentially Adequate]
+   7  (comp  7) MMT + Job Guarantee                   15.50  ( 59.6%)  [3 fail, Partially Adequate]
+   8= (comp  8) Universal Basic Income                14.50  ( 55.8%)  [7 fail, Structurally Inadequate]
+   9= (comp  8) Mutual Credit / LETS                  14.50  ( 55.8%)  [3 fail, Partially Adequate]
+  10= (comp 10) Sovereign Wealth Fund Statism         14.00  ( 53.8%)  [3 fail, Partially Adequate]
+  11= (comp 10) State Capitalism / Singapore          14.00  ( 53.8%)  [4 fail, Partially Adequate]
+  12= (comp 10) Ostrom-Style Commons Governance       14.00  ( 53.8%)  [4 fail, Partially Adequate]
+  13= (comp 13) Georgism / Land Value Tax             13.50  ( 51.9%)  [2 fail, Potentially Adequate]
+  14= (comp 13) Universal Basic Services              13.50  ( 51.9%)  [3 fail, Partially Adequate]
+  15= (comp 13) Islamic Finance / Profit-Sharing Banking  13.50  ( 51.9%)  [5 fail, Partially Adequate]
+  16  (comp 16) Fully Automated Luxury Communism      13.00  ( 50.0%)  [10 fail, Structurally Inadequate]
+  17  (comp 17) Doughnut Economics                    11.50  ( 44.2%)  [8 fail, Structurally Inadequate]
+  18  (comp 18) Status Quo Market Capitalism          10.50  ( 40.4%)  [9 fail, Structurally Inadequate]
+  19= (comp 19) Centrally Planned Socialism           10.00  ( 38.5%)  [12 fail, Structurally Inadequate]
+  20= (comp 19) Stakeholder Capitalism                10.00  ( 38.5%)  [9 fail, Structurally Inadequate]
+  21= (comp 19) State Capitalism / China              10.00  ( 38.5%)  [8 fail, Structurally Inadequate]
+  22  (comp 22) State Capitalism / Qatar               9.00  ( 34.6%)  [10 fail, Structurally Inadequate]
+  23  (comp 23) Libertarian Minarchism                 8.00  ( 30.8%)  [15 fail, Structurally Inadequate]
+
+--- Material-Security-Weighted (D1 x2) (max possible = 32.0) ---
+   1  (comp  1) CCO-PTF-CIP-SZH                       30.00  ( 93.8%)  [0 fail, Potentially Adequate]
+   2  (comp  2) Participatory Economics               25.50  ( 79.7%)  [1 fail, Potentially Adequate]
+   3  (comp  3) Nordic Social Democracy               24.50  ( 76.6%)  [2 fail, Potentially Adequate]
+   4  (comp  4) Degrowth Economics                    23.50  ( 73.4%)  [2 fail, Potentially Adequate]
+   5  (comp  5) Integral                              22.50  ( 70.3%)  [3 fail, Partially Adequate]
+   6  (comp  6) Market Socialism                      20.50  ( 64.1%)  [2 fail, Potentially Adequate]
+   7  (comp  7) MMT + Job Guarantee                   19.00  ( 59.4%)  [3 fail, Partially Adequate]
+   8  (comp  8) State Capitalism / Singapore          18.00  ( 56.2%)  [4 fail, Partially Adequate]
+   9  (comp  9) Universal Basic Income                17.00  ( 53.1%)  [7 fail, Structurally Inadequate]
+  10= (comp 10) Mutual Credit / LETS                  16.50  ( 51.6%)  [3 fail, Partially Adequate]
+  11= (comp 10) Sovereign Wealth Fund Statism         16.50  ( 51.6%)  [3 fail, Partially Adequate]
+  12= (comp 12) Fully Automated Luxury Communism      16.00  ( 50.0%)  [10 fail, Structurally Inadequate]
+  13= (comp 12) Ostrom-Style Commons Governance       16.00  ( 50.0%)  [4 fail, Partially Adequate]
+  14= (comp 14) Georgism / Land Value Tax             15.50  ( 48.4%)  [2 fail, Potentially Adequate]
+  15= (comp 14) Islamic Finance / Profit-Sharing Banking  15.50  ( 48.4%)  [5 fail, Partially Adequate]
+  16  (comp 16) Universal Basic Services              15.00  ( 46.9%)  [3 fail, Partially Adequate]
+  17= (comp 17) Centrally Planned Socialism           13.00  ( 40.6%)  [12 fail, Structurally Inadequate]
+  18= (comp 17) State Capitalism / China              13.00  ( 40.6%)  [8 fail, Structurally Inadequate]
+  19= (comp 19) Status Quo Market Capitalism          12.50  ( 39.1%)  [9 fail, Structurally Inadequate]
+  20= (comp 19) Doughnut Economics                    12.50  ( 39.1%)  [8 fail, Structurally Inadequate]
+  21  (comp 21) Stakeholder Capitalism                12.00  ( 37.5%)  [9 fail, Structurally Inadequate]
+  22  (comp 22) State Capitalism / Qatar              11.50  ( 35.9%)  [10 fail, Structurally Inadequate]
+  23  (comp 23) Libertarian Minarchism                 8.00  ( 25.0%)  [15 fail, Structurally Inadequate]
+
+--- Feasibility-Discounted (D5 x0.5) (max possible = 23.5) ---
+   1  (comp  1) CCO-PTF-CIP-SZH                       22.25  ( 94.7%)  [0 fail, Potentially Adequate]
+   2  (comp  2) Participatory Economics               19.00  ( 80.9%)  [1 fail, Potentially Adequate]
+   3  (comp  3) Integral                              18.25  ( 77.7%)  [3 fail, Partially Adequate]
+   4  (comp  4) Degrowth Economics                    18.00  ( 76.6%)  [2 fail, Potentially Adequate]
+   5  (comp  5) Nordic Social Democracy               17.50  ( 74.5%)  [2 fail, Potentially Adequate]
+   6  (comp  6) Market Socialism                      15.00  ( 63.8%)  [2 fail, Potentially Adequate]
+   7  (comp  7) MMT + Job Guarantee                   14.00  ( 59.6%)  [3 fail, Partially Adequate]
+   8  (comp  8) Universal Basic Income                13.00  ( 55.3%)  [7 fail, Structurally Inadequate]
+   9  (comp  9) Fully Automated Luxury Communism      12.75  ( 54.3%)  [10 fail, Structurally Inadequate]
+  10  (comp 10) Mutual Credit / LETS                  12.50  ( 53.2%)  [3 fail, Partially Adequate]
+  11= (comp 11) Sovereign Wealth Fund Statism         12.25  ( 52.1%)  [3 fail, Partially Adequate]
+  12= (comp 11) State Capitalism / Singapore          12.25  ( 52.1%)  [4 fail, Partially Adequate]
+  13= (comp 13) Georgism / Land Value Tax             12.00  ( 51.1%)  [2 fail, Potentially Adequate]
+  14= (comp 13) Ostrom-Style Commons Governance       12.00  ( 51.1%)  [4 fail, Partially Adequate]
+  15  (comp 15) Universal Basic Services              11.75  ( 50.0%)  [3 fail, Partially Adequate]
+  16  (comp 16) Islamic Finance / Profit-Sharing Banking  11.25  ( 47.9%)  [5 fail, Partially Adequate]
+  17  (comp 17) Doughnut Economics                    10.00  ( 42.6%)  [8 fail, Structurally Inadequate]
+  18  (comp 18) Centrally Planned Socialism            9.50  ( 40.4%)  [12 fail, Structurally Inadequate]
+  19  (comp 19) Stakeholder Capitalism                 8.75  ( 37.2%)  [9 fail, Structurally Inadequate]
+  20= (comp 20) Status Quo Market Capitalism           8.50  ( 36.2%)  [9 fail, Structurally Inadequate]
+  21= (comp 20) State Capitalism / China               8.50  ( 36.2%)  [8 fail, Structurally Inadequate]
+  22  (comp 22) State Capitalism / Qatar               7.50  ( 31.9%)  [10 fail, Structurally Inadequate]
+  23  (comp 23) Libertarian Minarchism                 6.50  ( 27.7%)  [15 fail, Structurally Inadequate]
+
+--- Crisis-Risk-Weighted (C1.4, C4.2 x3) (max possible = 30.0) ---
+   1  (comp  1) CCO-PTF-CIP-SZH                       28.50  ( 95.0%)  [0 fail, Potentially Adequate]
+   2  (comp  2) Participatory Economics               24.50  ( 81.7%)  [1 fail, Potentially Adequate]
+   3  (comp  3) Integral                              22.50  ( 75.0%)  [3 fail, Partially Adequate]
+   4  (comp  4) Degrowth Economics                    22.00  ( 73.3%)  [2 fail, Potentially Adequate]
+   5  (comp  5) Nordic Social Democracy               21.50  ( 71.7%)  [2 fail, Potentially Adequate]
+   6= (comp  6) Market Socialism                      18.50  ( 61.7%)  [2 fail, Potentially Adequate]
+   7= (comp  6) MMT + Job Guarantee                   18.50  ( 61.7%)  [3 fail, Partially Adequate]
+   8  (comp  8) Universal Basic Income                17.50  ( 58.3%)  [7 fail, Structurally Inadequate]
+   9  (comp  9) Fully Automated Luxury Communism      17.00  ( 56.7%)  [10 fail, Structurally Inadequate]
+  10  (comp 10) Mutual Credit / LETS                  16.50  ( 55.0%)  [3 fail, Partially Adequate]
+  11  (comp 11) Ostrom-Style Commons Governance       16.00  ( 53.3%)  [4 fail, Partially Adequate]
+  12= (comp 12) Georgism / Land Value Tax             15.50  ( 51.7%)  [2 fail, Potentially Adequate]
+  13= (comp 12) Universal Basic Services              15.50  ( 51.7%)  [3 fail, Partially Adequate]
+  14= (comp 14) Sovereign Wealth Fund Statism         15.00  ( 50.0%)  [3 fail, Partially Adequate]
+  15= (comp 14) State Capitalism / Singapore          15.00  ( 50.0%)  [4 fail, Partially Adequate]
+  16= (comp 16) Doughnut Economics                    13.50  ( 45.0%)  [8 fail, Structurally Inadequate]
+  17= (comp 16) Islamic Finance / Profit-Sharing Banking  13.50  ( 45.0%)  [5 fail, Partially Adequate]
+  18  (comp 18) Centrally Planned Socialism           12.00  ( 40.0%)  [12 fail, Structurally Inadequate]
+  19  (comp 19) State Capitalism / China              11.00  ( 36.7%)  [8 fail, Structurally Inadequate]
+  20  (comp 20) Status Quo Market Capitalism          10.50  ( 35.0%)  [9 fail, Structurally Inadequate]
+  21= (comp 21) Stakeholder Capitalism                10.00  ( 33.3%)  [9 fail, Structurally Inadequate]
+  22= (comp 21) State Capitalism / Qatar              10.00  ( 33.3%)  [10 fail, Structurally Inadequate]
+  23  (comp 23) Libertarian Minarchism                 8.00  ( 26.7%)  [15 fail, Structurally Inadequate]
+
+====================================================================================================
+3. RANK MOVEMENT vs. EQUAL WEIGHTING (competition ranks; + means a worse position)
+====================================================================================================
+
+--- Material-Security x2: every system that moves ---
+  Fully Automated Luxury Communism     16 -> 12  (-4)
+  Universal Basic Services             13 -> 16  (+3)
+  Integral                              3 ->  5  (+2)
+  Mutual Credit / LETS                  8 -> 10  (+2)
+  State Capitalism / Singapore         10 ->  8  (-2)
+  Ostrom-Style Commons Governance      10 -> 12  (+2)
+  Doughnut Economics                   17 -> 19  (+2)
+  Centrally Planned Socialism          19 -> 17  (-2)
+  Stakeholder Capitalism               19 -> 21  (+2)
+  State Capitalism / China             19 -> 17  (-2)
+  Degrowth Economics                    5 ->  4  (-1)
+  Universal Basic Income                8 ->  9  (+1)
+  Georgism / Land Value Tax            13 -> 14  (+1)
+  Islamic Finance / Profit-Sharing Banking 13 -> 14  (+1)
+  Status Quo Market Capitalism         18 -> 19  (+1)
+  Positions 1-2 under this scheme: ['CCO-PTF-CIP-SZH', 'Participatory Economics']
+
+--- Feasibility-Discounted x0.5: every system that moves ---
+  Fully Automated Luxury Communism     16 ->  9  (-7)
+  Ostrom-Style Commons Governance      10 -> 13  (+3)
+  Islamic Finance / Profit-Sharing Banking 13 -> 16  (+3)
+  Nordic Social Democracy               3 ->  5  (+2)
+  Mutual Credit / LETS                  8 -> 10  (+2)
+  Universal Basic Services             13 -> 15  (+2)
+  Status Quo Market Capitalism         18 -> 20  (+2)
+  Degrowth Economics                    5 ->  4  (-1)
+  Sovereign Wealth Fund Statism        10 -> 11  (+1)
+  State Capitalism / Singapore         10 -> 11  (+1)
+  Centrally Planned Socialism          19 -> 18  (-1)
+  State Capitalism / China             19 -> 20  (+1)
+  Positions 1-2 under this scheme: ['CCO-PTF-CIP-SZH', 'Participatory Economics']
+
+--- Crisis-Risk x3: every system that moves ---
+  Fully Automated Luxury Communism     16 ->  9  (-7)
+  Sovereign Wealth Fund Statism        10 -> 14  (+4)
+  State Capitalism / Singapore         10 -> 14  (+4)
+  Islamic Finance / Profit-Sharing Banking 13 -> 16  (+3)
+  Nordic Social Democracy               3 ->  5  (+2)
+  Mutual Credit / LETS                  8 -> 10  (+2)
+  Status Quo Market Capitalism         18 -> 20  (+2)
+  Stakeholder Capitalism               19 -> 21  (+2)
+  Degrowth Economics                    5 ->  4  (-1)
+  MMT + Job Guarantee                   7 ->  6  (-1)
+  Ostrom-Style Commons Governance      10 -> 11  (+1)
+  Georgism / Land Value Tax            13 -> 12  (-1)
+  Universal Basic Services             13 -> 12  (-1)
+  Doughnut Economics                   17 -> 16  (-1)
+  Centrally Planned Socialism          19 -> 18  (-1)
+  State Capitalism / Qatar             22 -> 21  (-1)
+  Positions 1-2 under this scheme: ['CCO-PTF-CIP-SZH', 'Participatory Economics']
+  PASS  CCO-PTF-CIP-SZH and Participatory Economics hold positions 1 and 2 under all four schemes
+  PASS  Libertarian Minarchism is last under all four schemes
+
+====================================================================================================
+4. ADEQUACY TIER (failure-count based; invariant to any weighting by construction)
+====================================================================================================
+  CCO-PTF-CIP-SZH                       0 failures -> Potentially Adequate
+  Participatory Economics               1 failures -> Potentially Adequate
+  Nordic Social Democracy               2 failures -> Potentially Adequate
+  Degrowth Economics                    2 failures -> Potentially Adequate
+  Market Socialism                      2 failures -> Potentially Adequate
+  Georgism / Land Value Tax             2 failures -> Potentially Adequate
+  Integral                              3 failures -> Partially Adequate
+  MMT + Job Guarantee                   3 failures -> Partially Adequate
+  Mutual Credit / LETS                  3 failures -> Partially Adequate
+  Sovereign Wealth Fund Statism         3 failures -> Partially Adequate
+  Universal Basic Services              3 failures -> Partially Adequate
+  State Capitalism / Singapore          4 failures -> Partially Adequate
+  Ostrom-Style Commons Governance       4 failures -> Partially Adequate
+  Islamic Finance / Profit-Sharing Banking  5 failures -> Partially Adequate
+  Universal Basic Income                7 failures -> Structurally Inadequate
+  Doughnut Economics                    8 failures -> Structurally Inadequate
+  State Capitalism / China              8 failures -> Structurally Inadequate
+  Status Quo Market Capitalism          9 failures -> Structurally Inadequate
+  Stakeholder Capitalism                9 failures -> Structurally Inadequate
+  Fully Automated Luxury Communism     10 failures -> Structurally Inadequate
+  State Capitalism / Qatar             10 failures -> Structurally Inadequate
+  Centrally Planned Socialism          12 failures -> Structurally Inadequate
+  Libertarian Minarchism               15 failures -> Structurally Inadequate
+
+====================================================================================================
+5. SINGLE-FACTOR IDENTITY: weighted(a) - weighted(b) = D + (k - 1) * D_K
+====================================================================================================
+  PASS  Identity holds exactly for all 529 ordered pairs under all three alternative schemes
+
+====================================================================================================
+6. EXACT EQUAL-WEIGHTING TIES UNDER EACH ALTERNATIVE SCHEME
+====================================================================================================
+
+  Nordic Social Democracy  vs  Integral   (both 19.5/26; failures 2 vs 3)
+    Material-Security x2          24.50 vs  22.50   D_K = +2.0   Nordic Social Democracy ahead
+    Feasibility-Discounted x0.5   17.50 vs  18.25   D_K = +1.5   Integral ahead
+    Crisis-Risk x3                21.50 vs  22.50   D_K = -0.5   Integral ahead
+
+  Centrally Planned Socialism  vs  Stakeholder Capitalism   (both 10.0/26; failures 12 vs 9)
+    Material-Security x2          13.00 vs  12.00   D_K = +1.0   Centrally Planned Socialism ahead
+    Feasibility-Discounted x0.5    9.50 vs   8.75   D_K = -1.5   Centrally Planned Socialism ahead
+    Crisis-Risk x3                12.00 vs  10.00   D_K = +1.0   Centrally Planned Socialism ahead
+
+  Centrally Planned Socialism  vs  State Capitalism / China   (both 10.0/26; failures 12 vs 8)
+    Material-Security x2          13.00 vs  13.00   D_K = +0.0   TIE SURVIVES
+    Feasibility-Discounted x0.5    9.50 vs   8.50   D_K = -2.0   Centrally Planned Socialism ahead
+    Crisis-Risk x3                12.00 vs  11.00   D_K = +0.5   Centrally Planned Socialism ahead
+
+  Universal Basic Income  vs  Mutual Credit / LETS   (both 14.5/26; failures 7 vs 3)
+    Material-Security x2          17.00 vs  16.50   D_K = +0.5   Universal Basic Income ahead
+    Feasibility-Discounted x0.5   13.00 vs  12.50   D_K = -1.0   Universal Basic Income ahead
+    Crisis-Risk x3                17.50 vs  16.50   D_K = +0.5   Universal Basic Income ahead
+
+  Stakeholder Capitalism  vs  State Capitalism / China   (both 10.0/26; failures 9 vs 8)
+    Material-Security x2          12.00 vs  13.00   D_K = -1.0   State Capitalism / China ahead
+    Feasibility-Discounted x0.5    8.75 vs   8.50   D_K = -0.5   Stakeholder Capitalism ahead
+    Crisis-Risk x3                10.00 vs  11.00   D_K = -0.5   State Capitalism / China ahead
+
+  Georgism / Land Value Tax  vs  Universal Basic Services   (both 13.5/26; failures 2 vs 3)
+    Material-Security x2          15.50 vs  15.00   D_K = +0.5   Georgism / Land Value Tax ahead
+    Feasibility-Discounted x0.5   12.00 vs  11.75   D_K = -0.5   Georgism / Land Value Tax ahead
+    Crisis-Risk x3                15.50 vs  15.50   D_K = +0.0   TIE SURVIVES
+
+  Georgism / Land Value Tax  vs  Islamic Finance / Profit-Sharing Banking   (both 13.5/26; failures 2 vs 5)
+    Material-Security x2          15.50 vs  15.50   D_K = +0.0   TIE SURVIVES
+    Feasibility-Discounted x0.5   12.00 vs  11.25   D_K = -1.5   Georgism / Land Value Tax ahead
+    Crisis-Risk x3                15.50 vs  13.50   D_K = +1.0   Georgism / Land Value Tax ahead
+
+  Universal Basic Services  vs  Islamic Finance / Profit-Sharing Banking   (both 13.5/26; failures 3 vs 5)
+    Material-Security x2          15.00 vs  15.50   D_K = -0.5   Islamic Finance / Profit-Sharing Banking ahead
+    Feasibility-Discounted x0.5   11.75 vs  11.25   D_K = -1.0   Universal Basic Services ahead
+    Crisis-Risk x3                15.50 vs  13.50   D_K = +1.0   Universal Basic Services ahead
+
+  Sovereign Wealth Fund Statism  vs  State Capitalism / Singapore   (both 14.0/26; failures 3 vs 4)
+    Material-Security x2          16.50 vs  18.00   D_K = -1.5   State Capitalism / Singapore ahead
+    Feasibility-Discounted x0.5   12.25 vs  12.25   D_K = +0.0   TIE SURVIVES
+    Crisis-Risk x3                15.00 vs  15.00   D_K = +0.0   TIE SURVIVES
+
+  Sovereign Wealth Fund Statism  vs  Ostrom-Style Commons Governance   (both 14.0/26; failures 3 vs 4)
+    Material-Security x2          16.50 vs  16.00   D_K = +0.5   Sovereign Wealth Fund Statism ahead
+    Feasibility-Discounted x0.5   12.25 vs  12.00   D_K = -0.5   Sovereign Wealth Fund Statism ahead
+    Crisis-Risk x3                15.00 vs  16.00   D_K = -0.5   Ostrom-Style Commons Governance ahead
+
+  State Capitalism / Singapore  vs  Ostrom-Style Commons Governance   (both 14.0/26; failures 4 vs 4)
+    Material-Security x2          18.00 vs  16.00   D_K = +2.0   State Capitalism / Singapore ahead
+    Feasibility-Discounted x0.5   12.25 vs  12.00   D_K = -0.5   State Capitalism / Singapore ahead
+    Crisis-Risk x3                15.00 vs  16.00   D_K = -0.5   Ostrom-Style Commons Governance ahead
+  PASS  A tie survives a scheme exactly when D_K = 0 (all tied pairs, all schemes)
+  PASS  11 tied pairs in the corpus (Session 20: 7)
+  PASS  SWF Statism / Singapore tie: breaks only under Material-Security (Singapore ahead); survives Feasibility-Discounted and Crisis-Risk
+  PASS  UBI / Mutual Credit-LETS tie: breaks under all three alternatives, UBI ahead each time (Session 12's finding, unchanged)
+  PASS  Georgism / UBS tie: Georgism ahead under Material-Security and Feasibility-Discounted; survives Crisis-Risk
+  PASS  China / Centrally Planned Socialism tie survives Material-Security only
+  PASS  The three-way 10.0 tie fully separates under Feasibility-Discounted and Crisis-Risk
+  PASS  Singapore ranks strictly above SWF Statism only under Material-Security
+  PASS  Georgism / Islamic finance tie: survives Material-Security (D_K = 0); Georgism ahead under Feasibility-Discounted and Crisis-Risk
+  PASS  UBS / Islamic finance tie: Islamic finance ahead under Material-Security only; UBS ahead under Feasibility-Discounted and Crisis-Risk
+  PASS  Three-way 13.5 tie: Material-Security leaves Georgism = IF (15.50) above UBS; Feasibility-Discounted separates it fully (Georgism > UBS > IF); Crisis-Risk leaves Georgism = UBS (15.50) above IF
+  PASS  SWF Statism / Ostrom and Singapore / Ostrom ties break under all three alternatives: Ostrom behind under Material-Security and Feasibility-Discounted, ahead under Crisis-Risk
+  PASS  Three-way 14.0 tie: Material-Security Singapore > SWF > Ostrom (18.00, 16.50, 16.00); Feasibility-Discounted SWF = Singapore (12.25) > Ostrom; Crisis-Risk Ostrom (16.00) > SWF = Singapore (15.00)
+
+  Ties that exist only under an alternative scheme:
+    Material-Security x2         Status Quo Market Capitalism = Doughnut Economics  (12.50; equal-weighted 10.5 vs 11.5)
+    Material-Security x2         Fully Automated Luxury Communism = Ostrom-Style Commons Governance  (16.00; equal-weighted 13.0 vs 14.0)
+    Material-Security x2         Mutual Credit / LETS = Sovereign Wealth Fund Statism  (16.50; equal-weighted 14.5 vs 14.0)
+    Feasibility-Discounted x0.5  Status Quo Market Capitalism = State Capitalism / China  (8.50; equal-weighted 10.5 vs 10.0)
+    Feasibility-Discounted x0.5  Georgism / Land Value Tax = Ostrom-Style Commons Governance  (12.00; equal-weighted 13.5 vs 14.0)
+    Crisis-Risk x3               Market Socialism = MMT + Job Guarantee  (18.50; equal-weighted 16.5 vs 15.5)
+    Crisis-Risk x3               Stakeholder Capitalism = State Capitalism / Qatar  (10.00; equal-weighted 10.0 vs 9.0)
+    Crisis-Risk x3               Doughnut Economics = Islamic Finance / Profit-Sharing Banking  (13.50; equal-weighted 11.5 vs 13.5)
+  PASS  Exactly eight scheme-specific ties (Session 20: four): Status Quo/Doughnut, FALC/Ostrom and Mutual Credit/SWF Statism (Material-Security); Status Quo/China and Georgism/Ostrom (Feasibility-Discounted); Market Socialism/MMT+JG, Stakeholder/Qatar and Doughnut/IF (Crisis-Risk)
+
+====================================================================================================
+7. THEOREM 5, EXHAUSTIVE: every strict-dominance pair, every scheme
+====================================================================================================
+  CCO-PTF-CIP-SZH  >  Status Quo Market Capitalism   24.50>10.50  30.00>12.50  22.25> 8.50  28.50>10.50
+  CCO-PTF-CIP-SZH  >  Market Socialism   24.50>16.50  30.00>20.50  22.25>15.00  28.50>18.50
+  CCO-PTF-CIP-SZH  >  MMT + Job Guarantee   24.50>15.50  30.00>19.00  22.25>14.00  28.50>18.50
+  CCO-PTF-CIP-SZH  >  Stakeholder Capitalism   24.50>10.00  30.00>12.00  22.25> 8.75  28.50>10.00
+  CCO-PTF-CIP-SZH  >  Georgism / Land Value Tax   24.50>13.50  30.00>15.50  22.25>12.00  28.50>15.50
+  CCO-PTF-CIP-SZH  >  Doughnut Economics   24.50>11.50  30.00>12.50  22.25>10.00  28.50>13.50
+  CCO-PTF-CIP-SZH  >  Universal Basic Services   24.50>13.50  30.00>15.00  22.25>11.75  28.50>15.50
+  CCO-PTF-CIP-SZH  >  Sovereign Wealth Fund Statism   24.50>14.00  30.00>16.50  22.25>12.25  28.50>15.00
+  CCO-PTF-CIP-SZH  >  State Capitalism / China   24.50>10.00  30.00>13.00  22.25> 8.50  28.50>11.00
+  CCO-PTF-CIP-SZH  >  State Capitalism / Singapore   24.50>14.00  30.00>18.00  22.25>12.25  28.50>15.00
+  CCO-PTF-CIP-SZH  >  State Capitalism / Qatar   24.50> 9.00  30.00>11.50  22.25> 7.50  28.50>10.00
+  State Capitalism / Singapore  >  State Capitalism / China   14.00>10.00  18.00>13.00  12.25> 8.50  15.00>11.00
+  State Capitalism / Singapore  >  State Capitalism / Qatar   14.00> 9.00  18.00>11.50  12.25> 7.50  15.00>10.00
+  Islamic Finance / Profit-Sharing Banking  >  Stakeholder Capitalism   13.50>10.00  15.50>12.00  11.25> 8.75  13.50>10.00
+  PASS  All 14 dominance pairs keep a strictly higher weighted total under all four schemes
+  PASS  14 dominance pairs in the corpus (Session 20: 11)
+
+====================================================================================================
+8. DOMINANCE-PAIR SPOT CHECK (flag recomputed; True = guaranteed by Theorem 5)
+====================================================================================================
+  CCO-PTF-CIP-SZH  vs  Status Quo Market Capitalism   dominance: True  (v1.4 label agrees)
+    Equal: 24.50 > 10.50   Material-Security x2: 30.00 > 12.50   Feasibility-Discounted x0.5: 22.25 > 8.50   Crisis-Risk x3: 28.50 > 10.50
+  CCO-PTF-CIP-SZH  vs  MMT + Job Guarantee   dominance: True  (v1.4 label agrees)
+    Equal: 24.50 > 15.50   Material-Security x2: 30.00 > 19.00   Feasibility-Discounted x0.5: 22.25 > 14.00   Crisis-Risk x3: 28.50 > 18.50
+  CCO-PTF-CIP-SZH  vs  Georgism / Land Value Tax   dominance: True  (v1.4 label agrees)
+    Equal: 24.50 > 13.50   Material-Security x2: 30.00 > 15.50   Feasibility-Discounted x0.5: 22.25 > 12.00   Crisis-Risk x3: 28.50 > 15.50
+  Participatory Economics  vs  Stakeholder Capitalism   dominance: False  <<< Paper v1.4 prints True
+    Equal: 20.50 > 10.00   Material-Security x2: 25.50 > 12.00   Feasibility-Discounted x0.5: 19.00 > 8.75   Crisis-Risk x3: 24.50 > 10.00
+  CCO-PTF-CIP-SZH  vs  Nordic Social Democracy   dominance: False  (v1.4 label agrees)
+    Equal: 24.50 > 19.50   Material-Security x2: 30.00 > 24.50   Feasibility-Discounted x0.5: 22.25 > 17.50   Crisis-Risk x3: 28.50 > 21.50
+  Mutual Credit / LETS  vs  Georgism / Land Value Tax   dominance: False  (v1.4 label agrees)
+    Equal: 14.50 > 13.50   Material-Security x2: 16.50 > 15.50   Feasibility-Discounted x0.5: 12.50 > 12.00   Crisis-Risk x3: 16.50 > 15.50
+  CCO-PTF-CIP-SZH  vs  Doughnut Economics   dominance: True
+    Equal: 24.50 > 11.50   Material-Security x2: 30.00 > 12.50   Feasibility-Discounted x0.5: 22.25 > 10.00   Crisis-Risk x3: 28.50 > 13.50
+  CCO-PTF-CIP-SZH  vs  Universal Basic Services   dominance: True
+    Equal: 24.50 > 13.50   Material-Security x2: 30.00 > 15.00   Feasibility-Discounted x0.5: 22.25 > 11.75   Crisis-Risk x3: 28.50 > 15.50
+  CCO-PTF-CIP-SZH  vs  Sovereign Wealth Fund Statism   dominance: True
+    Equal: 24.50 > 14.00   Material-Security x2: 30.00 > 16.50   Feasibility-Discounted x0.5: 22.25 > 12.25   Crisis-Risk x3: 28.50 > 15.00
+  CCO-PTF-CIP-SZH  vs  State Capitalism / China   dominance: True
+    Equal: 24.50 > 10.00   Material-Security x2: 30.00 > 13.00   Feasibility-Discounted x0.5: 22.25 > 8.50   Crisis-Risk x3: 28.50 > 11.00
+  CCO-PTF-CIP-SZH  vs  State Capitalism / Singapore   dominance: True
+    Equal: 24.50 > 14.00   Material-Security x2: 30.00 > 18.00   Feasibility-Discounted x0.5: 22.25 > 12.25   Crisis-Risk x3: 28.50 > 15.00
+  State Capitalism / Singapore  vs  State Capitalism / China   dominance: True
+    Equal: 14.00 > 10.00   Material-Security x2: 18.00 > 13.00   Feasibility-Discounted x0.5: 12.25 > 8.50   Crisis-Risk x3: 15.00 > 11.00
+  State Capitalism / Singapore  vs  Sovereign Wealth Fund Statism   dominance: False
+    Equal: 14.00 = 14.00   Material-Security x2: 18.00 > 16.50   Feasibility-Discounted x0.5: 12.25 = 12.25   Crisis-Risk x3: 15.00 = 15.00
+  Universal Basic Services  vs  Georgism / Land Value Tax   dominance: False
+    Equal: 13.50 = 13.50   Material-Security x2: 15.00 < 15.50   Feasibility-Discounted x0.5: 11.75 < 12.00   Crisis-Risk x3: 15.50 = 15.50
+  CCO-PTF-CIP-SZH  vs  State Capitalism / Qatar   dominance: True
+    Equal: 24.50 > 9.00   Material-Security x2: 30.00 > 11.50   Feasibility-Discounted x0.5: 22.25 > 7.50   Crisis-Risk x3: 28.50 > 10.00
+  CCO-PTF-CIP-SZH  vs  Islamic Finance / Profit-Sharing Banking   dominance: False
+    Equal: 24.50 > 13.50   Material-Security x2: 30.00 > 15.50   Feasibility-Discounted x0.5: 22.25 > 11.25   Crisis-Risk x3: 28.50 > 13.50
+  CCO-PTF-CIP-SZH  vs  Ostrom-Style Commons Governance   dominance: False
+    Equal: 24.50 > 14.00   Material-Security x2: 30.00 > 16.00   Feasibility-Discounted x0.5: 22.25 > 12.00   Crisis-Risk x3: 28.50 > 16.00
+  State Capitalism / Singapore  vs  State Capitalism / Qatar   dominance: True
+    Equal: 14.00 > 9.00   Material-Security x2: 18.00 > 11.50   Feasibility-Discounted x0.5: 12.25 > 7.50   Crisis-Risk x3: 15.00 > 10.00
+  State Capitalism / China  vs  State Capitalism / Qatar   dominance: False
+    Equal: 10.00 > 9.00   Material-Security x2: 13.00 > 11.50   Feasibility-Discounted x0.5: 8.50 > 7.50   Crisis-Risk x3: 11.00 > 10.00
+  Islamic Finance / Profit-Sharing Banking  vs  Stakeholder Capitalism   dominance: True
+    Equal: 13.50 > 10.00   Material-Security x2: 15.50 > 12.00   Feasibility-Discounted x0.5: 11.25 > 8.75   Crisis-Risk x3: 13.50 > 10.00
+  Islamic Finance / Profit-Sharing Banking  vs  Georgism / Land Value Tax   dominance: False
+    Equal: 13.50 = 13.50   Material-Security x2: 15.50 = 15.50   Feasibility-Discounted x0.5: 11.25 < 12.00   Crisis-Risk x3: 13.50 < 15.50
+  Islamic Finance / Profit-Sharing Banking  vs  Universal Basic Services   dominance: False
+    Equal: 13.50 = 13.50   Material-Security x2: 15.50 > 15.00   Feasibility-Discounted x0.5: 11.25 < 11.75   Crisis-Risk x3: 13.50 < 15.50
+  Ostrom-Style Commons Governance  vs  Sovereign Wealth Fund Statism   dominance: False
+    Equal: 14.00 = 14.00   Material-Security x2: 16.00 < 16.50   Feasibility-Discounted x0.5: 12.00 < 12.25   Crisis-Risk x3: 16.00 > 15.00
+  Ostrom-Style Commons Governance  vs  State Capitalism / Singapore   dominance: False
+    Equal: 14.00 = 14.00   Material-Security x2: 16.00 < 18.00   Feasibility-Discounted x0.5: 12.00 < 12.25   Crisis-Risk x3: 16.00 > 15.00
+  Ostrom-Style Commons Governance  vs  Islamic Finance / Profit-Sharing Banking   dominance: False
+    Equal: 14.00 > 13.50   Material-Security x2: 16.00 > 15.50   Feasibility-Discounted x0.5: 12.00 > 11.25   Crisis-Risk x3: 16.00 > 13.50
+
+  Paper v1.4 table rows whose dominance label disagrees with the computation: [('Participatory Economics', 'Stakeholder Capitalism')]
+  Criteria where Stakeholder Capitalism outscores Participatory Economics: [('C4.5', 0.0, 0.5), ('C5.2', 0.5, 1.0), ('C5.3', 0.5, 1.0)]  (ParEcon, Stakeholder)
+  PASS  Exactly one v1.4 label is wrong: Participatory Economics does NOT dominate Stakeholder Capitalism
+  PASS  The v1.4 row's weighted comparisons are nonetheless right (ParEcon ahead under all four schemes)
+
+====================================================================================================
+9. NORDIC vs INTEGRAL under all four schemes
+====================================================================================================
+  Equal                        Nordic  75.0%   Integral  75.0%   TIE
+  Material-Security x2         Nordic  76.6%   Integral  70.3%   Nordic ahead
+  Feasibility-Discounted x0.5  Nordic  74.5%   Integral  77.7%   Integral ahead
+  Crisis-Risk x3               Nordic  71.7%   Integral  75.0%   Integral ahead
+  PASS  Nordic ahead only under Material-Security; Integral ahead under the other two alternatives
+
+====================================================================================================
+10. MARKDOWN TABLES (generated; pasted into the scratch document verbatim)
+====================================================================================================
+<<<RANK_TABLE
+| System | Equal | Material-Security x2 | Feasibility-Discounted x0.5 | Crisis-Risk x3 | Failures | Tier |
+|---|---|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | 1 (94.2%) | 1 (93.8%) | 1 (94.7%) | 1 (95.0%) | 0 | Potentially Adequate |
+| Participatory Economics | 2 (78.8%) | 2 (79.7%) | 2 (80.9%) | 2 (81.7%) | 1 | Potentially Adequate |
+| Nordic Social Democracy | 3= (75.0%) | 3 (76.6%) | 5 (74.5%) | 5 (71.7%) | 2 | Potentially Adequate |
+| Integral | 4= (75.0%) | 5 (70.3%) | 3 (77.7%) | 3 (75.0%) | 3 | Partially Adequate |
+| Degrowth Economics | 5 (73.1%) | 4 (73.4%) | 4 (76.6%) | 4 (73.3%) | 2 | Potentially Adequate |
+| Market Socialism | 6 (63.5%) | 6 (64.1%) | 6 (63.8%) | 6= (61.7%) | 2 | Potentially Adequate |
+| MMT + Job Guarantee | 7 (59.6%) | 7 (59.4%) | 7 (59.6%) | 7= (61.7%) | 3 | Partially Adequate |
+| Universal Basic Income | 8= (55.8%) | 9 (53.1%) | 8 (55.3%) | 8 (58.3%) | 7 | Structurally Inadequate |
+| Mutual Credit / LETS | 9= (55.8%) | 10= (51.6%) | 10 (53.2%) | 10 (55.0%) | 3 | Partially Adequate |
+| Sovereign Wealth Fund Statism | 10= (53.8%) | 11= (51.6%) | 11= (52.1%) | 14= (50.0%) | 3 | Partially Adequate |
+| State Capitalism / Singapore | 11= (53.8%) | 8 (56.2%) | 12= (52.1%) | 15= (50.0%) | 4 | Partially Adequate |
+| Ostrom-Style Commons Governance | 12= (53.8%) | 13= (50.0%) | 14= (51.1%) | 11 (53.3%) | 4 | Partially Adequate |
+| Georgism / Land Value Tax | 13= (51.9%) | 14= (48.4%) | 13= (51.1%) | 12= (51.7%) | 2 | Potentially Adequate |
+| Universal Basic Services | 14= (51.9%) | 16 (46.9%) | 15 (50.0%) | 13= (51.7%) | 3 | Partially Adequate |
+| Islamic Finance / Profit-Sharing Banking | 15= (51.9%) | 15= (48.4%) | 16 (47.9%) | 17= (45.0%) | 5 | Partially Adequate |
+| Fully Automated Luxury Communism | 16 (50.0%) | 12= (50.0%) | 9 (54.3%) | 9 (56.7%) | 10 | Structurally Inadequate |
+| Doughnut Economics | 17 (44.2%) | 20= (39.1%) | 17 (42.6%) | 16= (45.0%) | 8 | Structurally Inadequate |
+| Status Quo Market Capitalism | 18 (40.4%) | 19= (39.1%) | 20= (36.2%) | 20 (35.0%) | 9 | Structurally Inadequate |
+| Centrally Planned Socialism | 19= (38.5%) | 17= (40.6%) | 18 (40.4%) | 18 (40.0%) | 12 | Structurally Inadequate |
+| Stakeholder Capitalism | 20= (38.5%) | 21 (37.5%) | 19 (37.2%) | 21= (33.3%) | 9 | Structurally Inadequate |
+| State Capitalism / China | 21= (38.5%) | 18= (40.6%) | 21= (36.2%) | 19 (36.7%) | 8 | Structurally Inadequate |
+| State Capitalism / Qatar | 22 (34.6%) | 22 (35.9%) | 22 (31.9%) | 22= (33.3%) | 10 | Structurally Inadequate |
+| Libertarian Minarchism | 23 (30.8%) | 23 (25.0%) | 23 (27.7%) | 23 (26.7%) | 15 | Structurally Inadequate |
+>>>
+<<<TIE_TABLE
+| Tied pair (equal-weighted total) | Material-Security x2 | Feasibility-Discounted x0.5 | Crisis-Risk x3 |
+|---|---|---|---|
+| Nordic Social Democracy vs. Integral (19.5) | Nordic Social Democracy ahead (24.50 vs 22.50); D_K = +2.0 | Integral ahead (18.25 vs 17.50); D_K = +1.5 | Integral ahead (22.50 vs 21.50); D_K = -0.5 |
+| Centrally Planned Socialism vs. Stakeholder Capitalism (10.0) | Centrally Planned Socialism ahead (13.00 vs 12.00); D_K = +1.0 | Centrally Planned Socialism ahead (9.50 vs 8.75); D_K = -1.5 | Centrally Planned Socialism ahead (12.00 vs 10.00); D_K = +1.0 |
+| Centrally Planned Socialism vs. State Capitalism / China (10.0) | tie holds (13.00); D_K = 0 | Centrally Planned Socialism ahead (9.50 vs 8.50); D_K = -2.0 | Centrally Planned Socialism ahead (12.00 vs 11.00); D_K = +0.5 |
+| Universal Basic Income vs. Mutual Credit / LETS (14.5) | Universal Basic Income ahead (17.00 vs 16.50); D_K = +0.5 | Universal Basic Income ahead (13.00 vs 12.50); D_K = -1.0 | Universal Basic Income ahead (17.50 vs 16.50); D_K = +0.5 |
+| Stakeholder Capitalism vs. State Capitalism / China (10.0) | State Capitalism / China ahead (13.00 vs 12.00); D_K = -1.0 | Stakeholder Capitalism ahead (8.75 vs 8.50); D_K = -0.5 | State Capitalism / China ahead (11.00 vs 10.00); D_K = -0.5 |
+| Georgism / Land Value Tax vs. Universal Basic Services (13.5) | Georgism / Land Value Tax ahead (15.50 vs 15.00); D_K = +0.5 | Georgism / Land Value Tax ahead (12.00 vs 11.75); D_K = -0.5 | tie holds (15.50); D_K = 0 |
+| Georgism / Land Value Tax vs. Islamic Finance / Profit-Sharing Banking (13.5) | tie holds (15.50); D_K = 0 | Georgism / Land Value Tax ahead (12.00 vs 11.25); D_K = -1.5 | Georgism / Land Value Tax ahead (15.50 vs 13.50); D_K = +1.0 |
+| Universal Basic Services vs. Islamic Finance / Profit-Sharing Banking (13.5) | Islamic Finance / Profit-Sharing Banking ahead (15.50 vs 15.00); D_K = -0.5 | Universal Basic Services ahead (11.75 vs 11.25); D_K = -1.0 | Universal Basic Services ahead (15.50 vs 13.50); D_K = +1.0 |
+| Sovereign Wealth Fund Statism vs. State Capitalism / Singapore (14.0) | State Capitalism / Singapore ahead (18.00 vs 16.50); D_K = -1.5 | tie holds (12.25); D_K = 0 | tie holds (15.00); D_K = 0 |
+| Sovereign Wealth Fund Statism vs. Ostrom-Style Commons Governance (14.0) | Sovereign Wealth Fund Statism ahead (16.50 vs 16.00); D_K = +0.5 | Sovereign Wealth Fund Statism ahead (12.25 vs 12.00); D_K = -0.5 | Ostrom-Style Commons Governance ahead (16.00 vs 15.00); D_K = -0.5 |
+| State Capitalism / Singapore vs. Ostrom-Style Commons Governance (14.0) | State Capitalism / Singapore ahead (18.00 vs 16.00); D_K = +2.0 | State Capitalism / Singapore ahead (12.25 vs 12.00); D_K = -0.5 | Ostrom-Style Commons Governance ahead (16.00 vs 15.00); D_K = -0.5 |
+>>>
+<<<PAIR_TABLE
+| Pair | Dominance | Equal | Material-Security x2 | Feasibility-Discounted x0.5 | Crisis-Risk x3 |
+|---|---|---|---|---|---|
+| CCO-PTF-CIP-SZH vs. Status Quo Market Capitalism | **True** (guaranteed) | 24.50 > 10.50 | 30.00 > 12.50 | 22.25 > 8.50 | 28.50 > 10.50 |
+| CCO-PTF-CIP-SZH vs. MMT + Job Guarantee | **True** (guaranteed) | 24.50 > 15.50 | 30.00 > 19.00 | 22.25 > 14.00 | 28.50 > 18.50 |
+| CCO-PTF-CIP-SZH vs. Georgism / Land Value Tax | **True** (guaranteed) | 24.50 > 13.50 | 30.00 > 15.50 | 22.25 > 12.00 | 28.50 > 15.50 |
+| Participatory Economics vs. Stakeholder Capitalism | False (non-dominated) | 20.50 > 10.00 | 25.50 > 12.00 | 19.00 > 8.75 | 24.50 > 10.00 |
+| CCO-PTF-CIP-SZH vs. Nordic Social Democracy | False (non-dominated) | 24.50 > 19.50 | 30.00 > 24.50 | 22.25 > 17.50 | 28.50 > 21.50 |
+| Mutual Credit / LETS vs. Georgism / Land Value Tax | False (non-dominated) | 14.50 > 13.50 | 16.50 > 15.50 | 12.50 > 12.00 | 16.50 > 15.50 |
+| CCO-PTF-CIP-SZH vs. Doughnut Economics | **True** (guaranteed) | 24.50 > 11.50 | 30.00 > 12.50 | 22.25 > 10.00 | 28.50 > 13.50 |
+| CCO-PTF-CIP-SZH vs. Universal Basic Services | **True** (guaranteed) | 24.50 > 13.50 | 30.00 > 15.00 | 22.25 > 11.75 | 28.50 > 15.50 |
+| CCO-PTF-CIP-SZH vs. Sovereign Wealth Fund Statism | **True** (guaranteed) | 24.50 > 14.00 | 30.00 > 16.50 | 22.25 > 12.25 | 28.50 > 15.00 |
+| CCO-PTF-CIP-SZH vs. State Capitalism / China | **True** (guaranteed) | 24.50 > 10.00 | 30.00 > 13.00 | 22.25 > 8.50 | 28.50 > 11.00 |
+| CCO-PTF-CIP-SZH vs. State Capitalism / Singapore | **True** (guaranteed) | 24.50 > 14.00 | 30.00 > 18.00 | 22.25 > 12.25 | 28.50 > 15.00 |
+| State Capitalism / Singapore vs. State Capitalism / China | **True** (guaranteed) | 14.00 > 10.00 | 18.00 > 13.00 | 12.25 > 8.50 | 15.00 > 11.00 |
+| State Capitalism / Singapore vs. Sovereign Wealth Fund Statism | False (tie) | 14.00 = 14.00 | 18.00 > 16.50 | 12.25 = 12.25 | 15.00 = 15.00 |
+| Universal Basic Services vs. Georgism / Land Value Tax | False (tie) | 13.50 = 13.50 | 15.00 < 15.50 | 11.75 < 12.00 | 15.50 = 15.50 |
+| CCO-PTF-CIP-SZH vs. State Capitalism / Qatar | **True** (guaranteed) | 24.50 > 9.00 | 30.00 > 11.50 | 22.25 > 7.50 | 28.50 > 10.00 |
+| CCO-PTF-CIP-SZH vs. Islamic Finance / Profit-Sharing Banking | False (non-dominated) | 24.50 > 13.50 | 30.00 > 15.50 | 22.25 > 11.25 | 28.50 > 13.50 |
+| CCO-PTF-CIP-SZH vs. Ostrom-Style Commons Governance | False (non-dominated) | 24.50 > 14.00 | 30.00 > 16.00 | 22.25 > 12.00 | 28.50 > 16.00 |
+| State Capitalism / Singapore vs. State Capitalism / Qatar | **True** (guaranteed) | 14.00 > 9.00 | 18.00 > 11.50 | 12.25 > 7.50 | 15.00 > 10.00 |
+| State Capitalism / China vs. State Capitalism / Qatar | False (non-dominated) | 10.00 > 9.00 | 13.00 > 11.50 | 8.50 > 7.50 | 11.00 > 10.00 |
+| Islamic Finance / Profit-Sharing Banking vs. Stakeholder Capitalism | **True** (guaranteed) | 13.50 > 10.00 | 15.50 > 12.00 | 11.25 > 8.75 | 13.50 > 10.00 |
+| Islamic Finance / Profit-Sharing Banking vs. Georgism / Land Value Tax | False (tie) | 13.50 = 13.50 | 15.50 = 15.50 | 11.25 < 12.00 | 13.50 < 15.50 |
+| Islamic Finance / Profit-Sharing Banking vs. Universal Basic Services | False (tie) | 13.50 = 13.50 | 15.50 > 15.00 | 11.25 < 11.75 | 13.50 < 15.50 |
+| Ostrom-Style Commons Governance vs. Sovereign Wealth Fund Statism | False (tie) | 14.00 = 14.00 | 16.00 < 16.50 | 12.00 < 12.25 | 16.00 > 15.00 |
+| Ostrom-Style Commons Governance vs. State Capitalism / Singapore | False (tie) | 14.00 = 14.00 | 16.00 < 18.00 | 12.00 < 12.25 | 16.00 > 15.00 |
+| Ostrom-Style Commons Governance vs. Islamic Finance / Profit-Sharing Banking | False (non-dominated) | 14.00 > 13.50 | 16.00 > 15.50 | 12.00 > 11.25 | 16.00 > 13.50 |
+>>>
+
+====================================================================================================
+SUMMARY: 25/25 checks pass.

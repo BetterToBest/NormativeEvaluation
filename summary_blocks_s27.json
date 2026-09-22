@@ -1,0 +1,616 @@
+[
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Status Quo Market Capitalism",
+    "code": "SQ",
+    "display_name": "Status Quo Market Capitalism",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "configured_national_economy", "basis": "proposed"},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.5, "C1.2b": 0.0, "C1.3": 0.5, "C1.4": 0.0, "C1.5": 0.5,
+      "C2.1": 0.5, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 0.5,
+      "C3.1": 0.0, "C3.2": 1.0, "C3.3": 0.0, "C3.4": 0.5, "C3.5": 0.5,
+      "C4.1": 0.0, "C4.2": 0.0, "C4.3": 0.5, "C4.4": 0.0, "C4.5": 0.0,
+      "C5.1": 1.0, "C5.2": 1.0, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 2.0, "D2": 2.0, "D3": 2.0, "D4": 0.5, "D5": 4.0, "total": 10.5, "failures": 9, "tier": "Structurally Inadequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 10.5, "failures": 9, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Nordic Social Democracy",
+    "code": "NSD",
+    "display_name": "Nordic Social Democracy",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "configured_national_economy", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 1.0, "C1.2b": 0.5, "C1.3": 1.0, "C1.4": 0.5, "C1.5": 1.0,
+      "C2.1": 1.0, "C2.2": 0.5, "C2.3": 1.0, "C2.4": 1.0, "C2.5": 0.0,
+      "C3.1": 1.0, "C3.2": 1.0, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.0,
+      "C4.1": 0.5, "C4.2": 0.5, "C4.3": 1.0, "C4.4": 1.0, "C4.5": 0.5,
+      "C5.1": 1.0, "C5.2": 1.0, "C5.3": 0.5, "C5.4": 1.0, "C5.5": 0.5
+    },
+    "summary": {"D1": 5.0, "D2": 3.5, "D3": 3.5, "D4": 3.5, "D5": 4.0, "total": 19.5, "failures": 2, "tier": "Potentially Adequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 19.5, "failures": 2, "tier": "Potentially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Centrally Planned Socialism",
+    "code": "CPS",
+    "display_name": "Centrally Planned Socialism",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "configured_national_economy", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 0.0, "C1.2b": 0.5, "C1.3": 1.0, "C1.4": 0.5, "C1.5": 0.0,
+      "C2.1": 0.0, "C2.2": 0.0, "C2.3": 0.0, "C2.4": 0.0, "C2.5": 0.5,
+      "C3.1": 0.5, "C3.2": 1.0, "C3.3": 0.0, "C3.4": 0.0, "C3.5": 1.0,
+      "C4.1": 0.5, "C4.2": 0.5, "C4.3": 1.0, "C4.4": 0.0, "C4.5": 1.0,
+      "C5.1": 0.5, "C5.2": 0.0, "C5.3": 0.0, "C5.4": 0.0, "C5.5": 0.5
+    },
+    "summary": {"D1": 3.0, "D2": 0.5, "D3": 2.5, "D4": 3.0, "D5": 1.0, "total": 10.0, "failures": 12, "tier": "Structurally Inadequate"},
+    "flags": [
+      {"criterion": "C1.2b", "scored": 0.5, "alternatives": [1.0], "basis": "stated", "reading": "the formal wealth Gini, with no private capital markets", "tracks": null, "source": {"file": "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md", "locator": "document", "phrase": "The case for 1.0."}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 10.0, "failures": 12, "tier": "Structurally Inadequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C1.2b": 1.0}, "result": {"total": 10.5, "failures": 12, "tier": "Structurally Inadequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {}, "result": {"total": 10.0, "failures": 12, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Market Socialism",
+    "code": "MS",
+    "display_name": "Market Socialism",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 1.0, "C1.2b": 0.5, "C1.3": 0.5, "C1.4": 0.5, "C1.5": 0.5,
+      "C2.1": 1.0, "C2.2": 0.5, "C2.3": 1.0, "C2.4": 1.0, "C2.5": 0.0,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 0.5, "C4.2": 0.5, "C4.3": 0.5, "C4.4": 1.0, "C4.5": 0.5,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.0
+    },
+    "summary": {"D1": 4.0, "D2": 3.5, "D3": 3.0, "D4": 3.0, "D5": 3.0, "total": 16.5, "failures": 2, "tier": "Potentially Adequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 16.5, "failures": 2, "tier": "Potentially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Libertarian Minarchism",
+    "code": "LM",
+    "display_name": "Libertarian Minarchism",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 0.0, "C1.2a": 0.0, "C1.2b": 0.0, "C1.3": 0.0, "C1.4": 0.0, "C1.5": 0.0,
+      "C2.1": 0.0, "C2.2": 0.0, "C2.3": 1.0, "C2.4": 1.0, "C2.5": 1.0,
+      "C3.1": 0.0, "C3.2": 0.5, "C3.3": 0.0, "C3.4": 0.0, "C3.5": 0.0,
+      "C4.1": 0.0, "C4.2": 0.0, "C4.3": 0.0, "C4.4": 0.5, "C4.5": 1.0,
+      "C5.1": 0.5, "C5.2": 1.0, "C5.3": 0.5, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 0.0, "D2": 3.0, "D3": 0.5, "D4": 1.5, "D5": 3.0, "total": 8.0, "failures": 15, "tier": "Structurally Inadequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 8.0, "failures": 15, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "MMT + Job Guarantee",
+    "code": "MMT",
+    "display_name": "MMT + Job Guarantee",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "mechanism", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 0.5, "C1.2b": 0.0, "C1.3": 1.0, "C1.4": 0.5, "C1.5": 0.5,
+      "C2.1": 0.5, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 1.0, "C2.5": 0.5,
+      "C3.1": 1.0, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.0,
+      "C4.1": 0.5, "C4.2": 1.0, "C4.3": 1.0, "C4.4": 0.5, "C4.5": 0.5,
+      "C5.1": 0.5, "C5.2": 1.0, "C5.3": 0.5, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 3.5, "D2": 2.5, "D3": 3.0, "D4": 3.5, "D5": 3.0, "total": 15.5, "failures": 3, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C1.2b", "scored": 0.0, "alternatives": [0.5], "basis": "stated", "reading": "C4.4's reduction of capital power read as sufficient", "tracks": null, "source": {"file": "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md", "locator": "document", "phrase": "override this call to 0.5"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 15.5, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C1.2b": 0.5}, "result": {"total": 16.0, "failures": 2, "tier": "Potentially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {}, "result": {"total": 15.5, "failures": 3, "tier": "Partially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Universal Basic Income",
+    "code": "UBI",
+    "display_name": "Universal Basic Income",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "mechanism", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 0.0, "C1.2b": 0.0, "C1.3": 0.5, "C1.4": 1.0, "C1.5": 0.0,
+      "C2.1": 1.0, "C2.2": 1.0, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 0.0,
+      "C3.1": 1.0, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.0,
+      "C4.1": 0.5, "C4.2": 0.5, "C4.3": 1.0, "C4.4": 0.0, "C4.5": 1.0,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.0
+    },
+    "summary": {"D1": 2.5, "D2": 3.0, "D3": 3.0, "D4": 3.0, "D5": 3.0, "total": 14.5, "failures": 7, "tier": "Structurally Inadequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 14.5, "failures": 7, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Degrowth Economics",
+    "code": "DG",
+    "display_name": "Degrowth Economics",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 0.5, "C1.2b": 1.0, "C1.3": 1.0, "C1.4": 0.5, "C1.5": 0.5,
+      "C2.1": 1.0, "C2.2": 0.5, "C2.3": 1.0, "C2.4": 1.0, "C2.5": 0.0,
+      "C3.1": 1.0, "C3.2": 0.5, "C3.3": 1.0, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 1.0, "C4.2": 1.0, "C4.3": 1.0, "C4.4": 1.0, "C4.5": 1.0,
+      "C5.1": 0.5, "C5.2": 0.5, "C5.3": 0.5, "C5.4": 0.0, "C5.5": 0.5
+    },
+    "summary": {"D1": 4.5, "D2": 3.5, "D3": 4.0, "D4": 5.0, "D5": 2.0, "total": 19.0, "failures": 2, "tier": "Potentially Adequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 19.0, "failures": 2, "tier": "Potentially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Stakeholder Capitalism",
+    "code": "SC",
+    "display_name": "Stakeholder Capitalism",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.5, "C1.2b": 0.0, "C1.3": 0.5, "C1.4": 0.0, "C1.5": 0.5,
+      "C2.1": 0.5, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 0.5,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.0,
+      "C4.1": 0.0, "C4.2": 0.0, "C4.3": 0.5, "C4.4": 0.0, "C4.5": 0.5,
+      "C5.1": 0.5, "C5.2": 1.0, "C5.3": 1.0, "C5.4": 0.0, "C5.5": 0.0
+    },
+    "summary": {"D1": 2.0, "D2": 2.0, "D3": 2.5, "D4": 1.0, "D5": 2.5, "total": 10.0, "failures": 9, "tier": "Structurally Inadequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 10.0, "failures": 9, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Fully Automated Luxury Communism",
+    "code": "FALC",
+    "display_name": "Fully Automated Luxury Communism",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 0.0, "C1.2b": 0.0, "C1.3": 1.0, "C1.4": 1.0, "C1.5": 0.0,
+      "C2.1": 1.0, "C2.2": 1.0, "C2.3": 1.0, "C2.4": 0.0, "C2.5": 0.0,
+      "C3.1": 0.5, "C3.2": 1.0, "C3.3": 0.5, "C3.4": 0.5, "C3.5": 0.5,
+      "C4.1": 1.0, "C4.2": 1.0, "C4.3": 0.5, "C4.4": 0.0, "C4.5": 1.0,
+      "C5.1": 0.0, "C5.2": 0.0, "C5.3": 0.0, "C5.4": 0.0, "C5.5": 0.5
+    },
+    "summary": {"D1": 3.0, "D2": 3.0, "D3": 3.0, "D4": 3.5, "D5": 0.5, "total": 13.0, "failures": 10, "tier": "Structurally Inadequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 13.0, "failures": 10, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Participatory Economics",
+    "code": "PE",
+    "display_name": "Participatory Economics",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 0.5, "C1.2b": 1.0, "C1.3": 1.0, "C1.4": 1.0, "C1.5": 0.5,
+      "C2.1": 1.0, "C2.2": 0.5, "C2.3": 1.0, "C2.4": 1.0, "C2.5": 0.5,
+      "C3.1": 1.0, "C3.2": 1.0, "C3.3": 1.0, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 1.0, "C4.2": 1.0, "C4.3": 1.0, "C4.4": 1.0, "C4.5": 0.0,
+      "C5.1": 0.5, "C5.2": 0.5, "C5.3": 0.5, "C5.4": 0.5, "C5.5": 1.0
+    },
+    "summary": {"D1": 5.0, "D2": 4.0, "D3": 4.5, "D4": 4.0, "D5": 3.0, "total": 20.5, "failures": 1, "tier": "Potentially Adequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 20.5, "failures": 1, "tier": "Potentially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "CCO-PTF-CIP-SZH",
+    "code": "CCO",
+    "display_name": "CCO-PTF-CIP-SZH",
+    "record": {"documents": ["NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Report Part I), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 1.0, "C1.2a": 1.0, "C1.2b": 1.0, "C1.3": 1.0, "C1.4": 1.0, "C1.5": 0.5,
+      "C2.1": 1.0, "C2.2": 1.0, "C2.3": 1.0, "C2.4": 1.0, "C2.5": 1.0,
+      "C3.1": 1.0, "C3.2": 1.0, "C3.3": 1.0, "C3.4": 1.0, "C3.5": 1.0,
+      "C4.1": 1.0, "C4.2": 1.0, "C4.3": 1.0, "C4.4": 1.0, "C4.5": 0.5,
+      "C5.1": 1.0, "C5.2": 1.0, "C5.3": 1.0, "C5.4": 1.0, "C5.5": 0.5
+    },
+    "summary": {"D1": 5.5, "D2": 5.0, "D3": 5.0, "D4": 4.5, "D5": 4.5, "total": 24.5, "failures": 0, "tier": "Potentially Adequate"},
+    "flags": [],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 24.5, "failures": 0, "tier": "Potentially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Integral",
+    "code": "INT",
+    "display_name": "Integral",
+    "record": {"documents": ["NEEC_Paper_v1_4.md", "NEEC_Report_v1_6.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"], "scored": "NEEC v1 (Paper Appendix E), legacy 25-criterion structure; retrofitted to v2 in Session 8 (Step 1c)", "structure": "retrofit-step1c"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.0, "C1.2b": 1.0, "C1.3": 1.0, "C1.4": 0.5, "C1.5": 0.0,
+      "C2.1": 1.0, "C2.2": 0.5, "C2.3": 1.0, "C2.4": 1.0, "C2.5": 1.0,
+      "C3.1": 1.0, "C3.2": 1.0, "C3.3": 1.0, "C3.4": 1.0, "C3.5": 1.0,
+      "C4.1": 1.0, "C4.2": 1.0, "C4.3": 0.5, "C4.4": 1.0, "C4.5": 1.0,
+      "C5.1": 0.5, "C5.2": 0.0, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 3.0, "D2": 4.5, "D3": 5.0, "D4": 4.5, "D5": 2.5, "total": 19.5, "failures": 3, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C2.2", "scored": 0.5, "alternatives": [0.0, 1.0], "basis": "stated", "reading": "essentials unconditional (1.0) or contribution-dependent (0.0)", "tracks": null, "source": {"file": "NEEC_Paper_v1_4.md", "locator": "document", "phrase": "Contribution-Dependent (would score 0.0)"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 19.5, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C2.2": 1.0}, "result": {"total": 20.0, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C2.2": 0.0}, "result": {"total": 19.0, "failures": 4, "tier": "Partially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Georgism / Land Value Tax",
+    "code": "GEO",
+    "display_name": "Georgism / Land Value Tax (LVT + Citizen's Dividend)",
+    "record": {"documents": ["NEEC_Georgism_LVT_scoring_scratch.md"], "scored": "Session 6, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "mechanism", "basis": "stated", "source": {"file": "NEEC_Ostrom_Commons_scoring_scratch.md", "locator": "document", "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.0, "C1.2b": 0.5, "C1.3": 0.5, "C1.4": 0.5, "C1.5": 0.0,
+      "C2.1": 0.5, "C2.2": 0.5, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 1.0,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 0.5, "C4.2": 0.5, "C4.3": 0.5, "C4.4": 0.5, "C4.5": 0.5,
+      "C5.1": 0.5, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 2.0, "D2": 3.0, "D3": 3.0, "D4": 2.5, "D5": 3.0, "total": 13.5, "failures": 2, "tier": "Potentially Adequate"},
+    "flags": [
+      {"criterion": "C4.3", "scored": 0.5, "alternatives": [0.0, 1.0], "basis": "both-directions", "reading": null, "tracks": null, "source": {"file": "NEEC_Georgism_LVT_scoring_scratch.md", "locator": "C4.3", "phrase": "a different reasoner could defensibly land elsewhere"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 13.5, "failures": 2, "tier": "Potentially Adequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C4.3": 1.0}, "result": {"total": 14.0, "failures": 2, "tier": "Potentially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C4.3": 0.0}, "result": {"total": 13.0, "failures": 3, "tier": "Partially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Mutual Credit / LETS",
+    "code": "MC",
+    "display_name": "Mutual Credit / LETS",
+    "record": {"documents": ["NEEC_MutualCredit_LETS_scoring_scratch.md"], "scored": "Session 7, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "mechanism", "basis": "stated", "source": {"file": "NEEC_Ostrom_Commons_scoring_scratch.md", "locator": "document", "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.0, "C1.2b": 1.0, "C1.3": 0.0, "C1.4": 0.5, "C1.5": 0.0,
+      "C2.1": 0.5, "C2.2": 0.5, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 1.0,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 0.5, "C4.2": 0.5, "C4.3": 0.5, "C4.4": 0.5, "C4.5": 0.5,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 1.0
+    },
+    "summary": {"D1": 2.0, "D2": 3.0, "D3": 3.0, "D4": 2.5, "D5": 4.0, "total": 14.5, "failures": 3, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C4.3", "scored": 0.5, "alternatives": [0.0, 1.0], "basis": "both-directions", "reading": null, "tracks": null, "source": {"file": "NEEC_MutualCredit_LETS_scoring_scratch.md", "locator": "C4.3", "phrase": "a different reasoner could defensibly land elsewhere"}},
+      {"criterion": "C5.2", "scored": 0.5, "alternatives": [0.0], "basis": "direction-stated", "reading": "the staged design effort is untested at scale", "tracks": null, "source": {"file": "NEEC_MutualCredit_LETS_scoring_scratch.md", "locator": "C5.2", "phrase": "flagged as more contestable toward 0.0"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 14.5, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C4.3": 1.0}, "result": {"total": 15.0, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C4.3": 0.0, "C5.2": 0.0}, "result": {"total": 13.5, "failures": 5, "tier": "Partially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Doughnut Economics",
+    "code": "DE",
+    "display_name": "Doughnut Economics",
+    "record": {"documents": ["NEEC_DoughnutEconomics_scoring_scratch.md"], "scored": "Session 14, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "comprehensive_system", "basis": "proposed"},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.0, "C1.2b": 0.0, "C1.3": 0.5, "C1.4": 0.0, "C1.5": 0.0,
+      "C2.1": 0.0, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 1.0,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 1.0, "C4.2": 1.0, "C4.3": 0.5, "C4.4": 0.0, "C4.5": 0.0,
+      "C5.1": 0.5, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 1.0, "D2": 2.0, "D3": 3.0, "D4": 2.5, "D5": 3.0, "total": 11.5, "failures": 8, "tier": "Structurally Inadequate"},
+    "flags": [
+      {"criterion": "C1.2a", "scored": 0.0, "alternatives": [0.5], "basis": "stated", "reading": "endorsing named accumulation vehicles read as commitment", "tracks": null, "source": {"file": "NEEC_DoughnutEconomics_scoring_scratch.md", "locator": "C1.2a", "phrase": "warrant the 0.5 band"}},
+      {"criterion": "C1.2b", "scored": 0.0, "alternatives": [0.5], "basis": "stated", "reading": "the 'harness the commons' language weighted more heavily", "tracks": null, "source": {"file": "NEEC_DoughnutEconomics_scoring_scratch.md", "locator": "C1.2b", "phrase": "could land at 0.5 instead"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 11.5, "failures": 8, "tier": "Structurally Inadequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C1.2a": 0.5, "C1.2b": 0.5}, "result": {"total": 12.5, "failures": 6, "tier": "Structurally Inadequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {}, "result": {"total": 11.5, "failures": 8, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Universal Basic Services",
+    "code": "UBS",
+    "display_name": "Universal Basic Services",
+    "record": {"documents": ["NEEC_UniversalBasicServices_scoring_scratch.md"], "scored": "Session 15, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "mechanism", "basis": "proposed"},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.0, "C1.2b": 0.0, "C1.3": 0.5, "C1.4": 0.5, "C1.5": 0.0,
+      "C2.1": 0.5, "C2.2": 0.5, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 1.0,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 0.5, "C4.2": 0.5, "C4.3": 0.5, "C4.4": 0.5, "C4.5": 0.5,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 1.5, "D2": 3.0, "D3": 3.0, "D4": 2.5, "D5": 3.5, "total": 13.5, "failures": 3, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C1.2b", "scored": 0.0, "alternatives": [0.5], "basis": "stated", "reading": "the housing plank's pressure on land and rental values", "tracks": null, "source": {"file": "NEEC_UniversalBasicServices_scoring_scratch.md", "locator": "C1.2b", "phrase": "could defensibly land at 0.5 instead"}},
+      {"criterion": "C4.3", "scored": 0.5, "alternatives": [1.0], "basis": "direction-stated", "reading": "the universalist equity evidence weighted more heavily", "tracks": null, "source": {"file": "NEEC_UniversalBasicServices_scoring_scratch.md", "locator": "C4.3", "phrase": "In favor of a stronger score:"}},
+      {"criterion": "C5.1", "scored": 1.0, "alternatives": [0.5], "basis": "stated", "reading": "the untested comprehensive integration emphasised", "tracks": null, "source": {"file": "NEEC_UniversalBasicServices_scoring_scratch.md", "locator": "document", "phrase": "could reasonably land at 0.5 instead"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 13.5, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C1.2b": 0.5, "C4.3": 1.0}, "result": {"total": 14.5, "failures": 2, "tier": "Potentially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C5.1": 0.5}, "result": {"total": 13.0, "failures": 3, "tier": "Partially Adequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Sovereign Wealth Fund Statism",
+    "code": "SWF",
+    "display_name": "Sovereign Wealth Fund Statism",
+    "record": {"documents": ["NEEC_SovereignWealthFundStatism_scoring_scratch.md"], "scored": "Session 17, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "mechanism", "basis": "stated", "source": {"file": "NEEC_Ostrom_Commons_scoring_scratch.md", "locator": "document", "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.5, "C1.2b": 0.5, "C1.3": 0.0, "C1.4": 0.5, "C1.5": 0.5,
+      "C2.1": 0.5, "C2.2": 0.5, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 1.0,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 1.0, "C4.2": 0.0, "C4.3": 0.5, "C4.4": 0.5, "C4.5": 0.0,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 2.5, "D2": 3.0, "D3": 3.0, "D4": 2.0, "D5": 3.5, "total": 14.0, "failures": 3, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C1.2a", "scored": 0.5, "alternatives": [0.0], "basis": "stated", "reading": "only individually titled net worth counts", "tracks": null, "source": {"file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md", "locator": "C1.2a", "phrase": "would score this 0.0"}},
+      {"criterion": "C1.5", "scored": 0.5, "alternatives": [0.0], "basis": "stated", "reading": "follows C1.2a", "tracks": "C1.2a", "source": {"file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md", "locator": "C1.5", "phrase": "if C1.2a resolves to 0.0, this criterion follows to 0.0"}},
+      {"criterion": "C4.3", "scored": 0.5, "alternatives": [0.0, 1.0], "basis": "both-directions", "reading": null, "tracks": null, "source": {"file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md", "locator": "C4.3", "phrase": "could reasonably land on a different score"}},
+      {"criterion": "C5.4", "scored": 0.5, "alternatives": [1.0], "basis": "stated", "reading": "the pre-existing anchor text read in isolation", "tracks": null, "source": {"file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md", "locator": "C5.4", "phrase": "would point toward 1.0"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 14.0, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C4.3": 1.0, "C5.4": 1.0}, "result": {"total": 15.0, "failures": 3, "tier": "Partially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C1.2a": 0.0, "C1.5": 0.0, "C4.3": 0.0}, "result": {"total": 12.5, "failures": 6, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "State Capitalism / China",
+    "code": "CN",
+    "display_name": "State Capitalism / China (Party-State-Directed Market Economy)",
+    "record": {"documents": ["NEEC_StateCapitalism_China_scoring_scratch.md"], "scored": "Session 18, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "configured_national_economy", "basis": "stated", "source": {"file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "locator": "document", "phrase": "Qatar is the third instance of the fourth Step 1b archetype, \"configured national political economy\" (confirmed in Session 20), after China and Singapore."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.5, "C1.2b": 0.5, "C1.3": 0.5, "C1.4": 0.5, "C1.5": 0.5,
+      "C2.1": 0.0, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.0, "C2.5": 0.5,
+      "C3.1": 0.5, "C3.2": 1.0, "C3.3": 0.5, "C3.4": 0.5, "C3.5": 0.0,
+      "C4.1": 0.5, "C4.2": 0.0, "C4.3": 0.0, "C4.4": 0.0, "C4.5": 0.0,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 0.5, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 3.0, "D2": 1.0, "D3": 2.5, "D4": 0.5, "D5": 3.0, "total": 10.0, "failures": 8, "tier": "Structurally Inadequate"},
+    "flags": [
+      {"criterion": "C1.1", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "extreme-line / CPS-precedent reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.2a", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "middle-income-adjusted threshold reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C2.3", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": "CPS state-control-of-culture precedent", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.2", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": "symmetric price-stability (deflation) reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.4", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "reform-era-only (1978-2012) reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.5", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "CPS legible-dysfunction / central-correction reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.2", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "emissions-plateau / Nordic-analogy reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.3", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "preferential-policy-weighted reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.4", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": "structural-repulsion reading", "tracks": null, "source": {"file": "verify_china.py", "locator": "FLAGGED"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 10.0, "failures": 8, "tier": "Structurally Inadequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C1.1": 1.0, "C1.2a": 1.0, "C3.4": 1.0, "C3.5": 0.5, "C4.2": 0.5, "C4.3": 0.5}, "result": {"total": 13.0, "failures": 5, "tier": "Partially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C2.3": 0.0, "C3.2": 0.5, "C5.4": 0.0}, "result": {"total": 8.5, "failures": 10, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": []
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "State Capitalism / Singapore",
+    "code": "SG",
+    "display_name": "State Capitalism / Singapore (GLC Developmental Capitalism)",
+    "record": {"documents": ["NEEC_StateCapitalism_Singapore_scoring_scratch.md"], "scored": "Session 19, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "configured_national_economy", "basis": "stated", "population": "This evaluation counts everyone who lives and works inside the system, non-residents included,", "source": {"file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "locator": "document", "phrase": "Qatar is the third instance of the fourth Step 1b archetype, \"configured national political economy\" (confirmed in Session 20), after China and Singapore."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 1.0, "C1.2b": 0.5, "C1.3": 1.0, "C1.4": 0.5, "C1.5": 0.5,
+      "C2.1": 0.5, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 0.5,
+      "C3.1": 0.5, "C3.2": 1.0, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 0.5, "C4.2": 0.0, "C4.3": 0.5, "C4.4": 0.0, "C4.5": 0.0,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.5
+    },
+    "summary": {"D1": 4.0, "D2": 2.0, "D3": 3.5, "D4": 1.0, "D5": 3.5, "total": 14.0, "failures": 4, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C1.1", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "extreme-line / CPS-precedent reading", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.2a", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": "lease-decay / illiquidity / excluded-fifth reading", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.5", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "citizen-and-PR-only population scope", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C2.1", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": "permit regime plus political constraints as comparable coercion", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C2.4", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": "no alternation since 1959 as foreclosing participation", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.2", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": "headline-inflation stress-test reading (6.1% in 2022)", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.4", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": "slow social-protection reform / dominant-party governance", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.5", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": "POFMA and unmeasured poverty as active suppression", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.2", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "carbon-price / Nordic-analogy reading", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.3", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": "literal reading of the H.7 0.0 anchor", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.4", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "broad ownership plus elections as partial diffusion", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.4", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "six decades of contested majorities as cross-spectrum support", "tracks": null, "source": {"file": "verify_singapore.py", "locator": "FLAGGED"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 14.0, "failures": 4, "tier": "Partially Adequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C1.1": 1.0, "C1.5": 1.0, "C4.2": 0.5, "C4.4": 0.5, "C5.4": 1.0}, "result": {"total": 16.5, "failures": 2, "tier": "Potentially Adequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C1.2a": 0.5, "C2.1": 0.0, "C2.4": 0.0, "C3.2": 0.5, "C3.4": 0.5, "C3.5": 0.0, "C4.3": 0.0}, "result": {"total": 10.5, "failures": 8, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": [
+      {"id": "citizens-and-PRs-only", "label": "citizens and permanent residents only; the scored scope counts every resident", "kind": "scope", "changes": {"C1.5": 1.0, "C4.5": 0.5}, "result": {"total": 15.0, "failures": 3, "tier": "Partially Adequate"}}
+    ]
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "State Capitalism / Qatar",
+    "code": "QA",
+    "display_name": "State Capitalism / Qatar (Gulf Rentier-Distributive Statism)",
+    "record": {"documents": ["NEEC_StateCapitalism_Qatar_scoring_scratch.md"], "scored": "Session 21, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "configured_national_economy", "basis": "stated", "population": "Population scope: everyone who lives and works in Qatar, non-citizens included.", "source": {"file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "locator": "document", "phrase": "Qatar is the third instance of the fourth Step 1b archetype, \"configured national political economy\" (confirmed in Session 20), after China and Singapore."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.5, "C1.2b": 0.5, "C1.3": 0.5, "C1.4": 0.5, "C1.5": 0.0,
+      "C2.1": 0.0, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.0, "C2.5": 0.5,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 0.5, "C3.5": 0.0,
+      "C4.1": 0.5, "C4.2": 0.0, "C4.3": 0.0, "C4.4": 0.0, "C4.5": 0.0,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 0.0
+    },
+    "summary": {"D1": 2.5, "D2": 1.0, "D3": 2.0, "D4": 0.5, "D5": 3.0, "total": 9.0, "failures": 10, "tier": "Structurally Inadequate"},
+    "flags": [
+      {"criterion": "C1.1", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "extreme line / CPS precedent", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.2a", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "UBS median wealth above the bar", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.2b", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": "citizenship divide, no limit at the top", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.5", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "citizenship read as a membership gate", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C2.1", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "2020 reforms as reduced coercion", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.3", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "three compound shocks absorbed", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.4", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "post-2014 and post-blockade adjustment", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.5", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "ILO cooperation, registry, fiscal data", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.1", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "SWF Statism precedent", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.3", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": "partial by necessity, no scaling path", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.4", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": "90.6% referendum approval", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.5", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": "SWF Statism precedent, GCC variation", "tracks": null, "source": {"file": "verify_qatar.py", "locator": "FLAGGED"}}
+    ],
+    "joint_readings": [
+      {"id": "scored", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 9.0, "failures": 10, "tier": "Structurally Inadequate"}},
+      {"id": "up", "label": "every flagged call resolved upward", "basis": "extremes", "resolve": {"C1.1": 1.0, "C1.2a": 1.0, "C1.5": 0.5, "C2.1": 0.5, "C3.3": 1.0, "C3.4": 1.0, "C3.5": 0.5, "C4.1": 1.0, "C5.4": 1.0, "C5.5": 0.5}, "result": {"total": 14.0, "failures": 6, "tier": "Structurally Inadequate"}},
+      {"id": "down", "label": "every flagged call resolved downward", "basis": "extremes", "resolve": {"C1.2b": 0.0, "C5.3": 0.5}, "result": {"total": 8.0, "failures": 11, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": [
+      {"id": "citizens-only", "label": "citizens only; the scored scope counts every resident", "kind": "scope", "changes": {"C1.1": 1.0, "C1.2a": 1.0, "C1.3": 1.0, "C1.5": 1.0, "C2.1": 0.5, "C2.2": 0.5, "C4.5": 0.5}, "result": {"total": 13.0, "failures": 6, "tier": "Structurally Inadequate"}}
+    ]
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Islamic Finance / Profit-Sharing Banking",
+    "code": "IF",
+    "display_name": "Islamic Finance / Profit-Sharing Banking",
+    "record": {"documents": ["NEEC_IslamicFinance_scoring_scratch.md"], "scored": "Session 22, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "mechanism", "basis": "stated", "population": "Score the mechanism, not a country.", "source": {"file": "NEEC_Ostrom_Commons_scoring_scratch.md", "locator": "document", "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.5, "C1.2b": 0.0, "C1.3": 0.5, "C1.4": 0.0, "C1.5": 0.5,
+      "C2.1": 0.5, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 1.0,
+      "C3.1": 0.5, "C3.2": 0.5, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 0.5, "C4.2": 0.0, "C4.3": 0.5, "C4.4": 0.0, "C4.5": 0.5,
+      "C5.1": 1.0, "C5.2": 1.0, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 1.0
+    },
+    "summary": {"D1": 2.0, "D2": 2.5, "D3": 3.0, "D4": 1.5, "D5": 4.5, "total": 13.5, "failures": 5, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C1.1", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.2a", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.2b", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.4", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C1.5", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C2.4", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C2.5", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.4", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C3.5", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.1", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.3", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.4", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C4.5", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.2", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.4", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}},
+      {"criterion": "C5.5", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_islamicfinance.py", "locator": "FLAGGED"}}
+    ],
+    "joint_readings": [
+      {"id": "A", "label": "as designed", "basis": "stated", "resolve": {"C1.2a": 1.0, "C1.2b": 0.5, "C1.4": 0.5, "C4.4": 0.5}, "result": {"total": 15.5, "failures": 2, "tier": "Potentially Adequate"}},
+      {"id": "B", "label": "as practised, scored here", "basis": "scored", "resolve": {}, "result": {"total": 13.5, "failures": 5, "tier": "Partially Adequate"}},
+      {"id": "C", "label": "strict form-over-substance", "basis": "stated", "resolve": {"C1.1": 0.0, "C1.5": 0.0, "C2.4": 0.0, "C3.5": 0.0, "C4.1": 0.0, "C4.5": 0.0}, "result": {"total": 10.5, "failures": 11, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": [
+      {"id": "social-finance-layer", "label": "the Islamic social-finance layer (zakat, waqf, takaful) counted in", "kind": "scope", "changes": {"C1.1": 1.0, "C1.2b": 0.5}, "result": {"total": 14.5, "failures": 4, "tier": "Partially Adequate"}}
+    ]
+  },
+  {
+    "schema": "neec-summary-block/1.0",
+    "key": "Ostrom-Style Commons Governance",
+    "code": "OS",
+    "display_name": "Ostrom-Style Commons Governance",
+    "record": {"documents": ["NEEC_Ostrom_Commons_scoring_scratch.md"], "scored": "Session 23, natively on the v2 structure", "structure": "native-v2"},
+    "scope": {"class": "mechanism", "basis": "stated", "population": "The convention applied throughout is generalisation, not best-casing: the mechanism is scored as though every common-pool resource in an economy were governed by an Ostrom-principled institution, and the population-scope thresholds are then applied to the resulting economy-wide", "source": {"file": "NEEC_Ostrom_Commons_scoring_scratch.md", "locator": "document", "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."}},
+    "vector": {
+      "C1.1": 0.5, "C1.2a": 0.0, "C1.2b": 0.5, "C1.3": 0.5, "C1.4": 0.5, "C1.5": 0.0,
+      "C2.1": 0.5, "C2.2": 0.0, "C2.3": 0.5, "C2.4": 0.5, "C2.5": 1.0,
+      "C3.1": 0.5, "C3.2": 0.0, "C3.3": 0.5, "C3.4": 1.0, "C3.5": 0.5,
+      "C4.1": 1.0, "C4.2": 0.5, "C4.3": 0.5, "C4.4": 0.5, "C4.5": 0.5,
+      "C5.1": 1.0, "C5.2": 0.5, "C5.3": 1.0, "C5.4": 0.5, "C5.5": 1.0
+    },
+    "summary": {"D1": 2.0, "D2": 2.5, "D3": 2.5, "D4": 3.0, "D5": 4.0, "total": 14.0, "failures": 4, "tier": "Partially Adequate"},
+    "flags": [
+      {"criterion": "C1.1", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C1.2a", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C1.2b", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C1.3", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C1.4", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C1.5", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C2.2", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C2.4", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C2.5", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C3.1", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C3.2", "scored": 0.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C3.3", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C3.5", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C4.1", "scored": 1.0, "alternatives": [0.5], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C4.2", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C4.3", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C4.4", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C4.5", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C5.2", "scored": 0.5, "alternatives": [0.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}},
+      {"criterion": "C5.4", "scored": 0.5, "alternatives": [1.0], "basis": "register", "reading": null, "tracks": null, "source": {"file": "verify_ostrom.py", "locator": "FLAGS"}}
+    ],
+    "joint_readings": [
+      {"id": "A", "label": "the long-enduring case (all eleven upward flags resolved up)", "basis": "stated", "resolve": {"C1.2a": 0.5, "C1.2b": 1.0, "C1.5": 0.5, "C2.2": 0.5, "C2.4": 1.0, "C3.1": 1.0, "C3.2": 0.5, "C3.3": 1.0, "C3.5": 1.0, "C4.2": 1.0, "C5.4": 1.0}, "result": {"total": 19.5, "failures": 0, "tier": "Potentially Adequate"}},
+      {"id": "B", "label": "as scored", "basis": "scored", "resolve": {}, "result": {"total": 14.0, "failures": 4, "tier": "Partially Adequate"}},
+      {"id": "C", "label": "strict population scope (all nine downward flags resolved down)", "basis": "stated", "resolve": {"C1.1": 0.0, "C1.3": 0.0, "C1.4": 0.0, "C2.5": 0.5, "C4.1": 0.5, "C4.3": 0.0, "C4.4": 0.0, "C4.5": 0.0, "C5.2": 0.0}, "result": {"total": 9.5, "failures": 11, "tier": "Structurally Inadequate"}}
+    ],
+    "scenarios": [
+      {"id": "knowledge-commons", "label": "the knowledge and digital commons counted in", "kind": "scope", "changes": {"C1.5": 0.5, "C2.3": 1.0}, "result": {"total": 15.0, "failures": 3, "tier": "Partially Adequate"}}
+    ]
+  }
+]

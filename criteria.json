@@ -1,0 +1,1485 @@
+{
+  "schema": "neec-criteria/1.0",
+  "framework": "NEEC Applied, v2 structure: 26 criteria in five domains",
+  "generated_by": "build_criteria.py (Session 27); do not edit by hand",
+  "source": {
+    "document": "NEEC_Paper_v1_4.md",
+    "md5": "5e2c2c3e9dc305c95ed7536db95ba1b8",
+    "excluded_fields": [
+      "Threshold Justification",
+      "Current Performance"
+    ],
+    "removed_comparative_clauses": [
+      {
+        "criterion": "C1.4",
+        "clause": "This is NEEC's single most discriminating criterion (Section 11.2)"
+      },
+      {
+        "criterion": "C2.5",
+        "clause": "This is the criterion most often failed by otherwise-strong systems in this corpus (four of the six Potentially/Partially Adequate systems fail it)"
+      },
+      {
+        "criterion": "C4.2",
+        "clause": "NEEC's second most discriminating criterion (Section 11.2)"
+      }
+    ]
+  },
+  "scale": {
+    "values": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "labels": {
+      "1.0": "Pass",
+      "0.5": "Partial / Conditional",
+      "0.0": "Full Failure"
+    },
+    "rule": "Reason continuously, then round once, at the criterion level (Appendix H.3)."
+  },
+  "structure": {
+    "criteria": 26,
+    "total_max": 26.0,
+    "domain_max": {
+      "D1": 6.0,
+      "D2": 5.0,
+      "D3": 5.0,
+      "D4": 5.0,
+      "D5": 5.0
+    }
+  },
+  "tiers": [
+    {
+      "name": "Potentially Adequate",
+      "failures_min": 0,
+      "failures_max": 2
+    },
+    {
+      "name": "Partially Adequate",
+      "failures_min": 3,
+      "failures_max": 5
+    },
+    {
+      "name": "Structurally Inadequate",
+      "failures_min": 6,
+      "failures_max": 26
+    }
+  ],
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Material Security",
+      "core_question": "Can the system provide material necessities reliably and universally?",
+      "criteria": [
+        "C1.1",
+        "C1.2a",
+        "C1.2b",
+        "C1.3",
+        "C1.4",
+        "C1.5"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Human Autonomy",
+      "core_question": "Does the system maximize human freedom and self-determination?",
+      "criteria": [
+        "C2.1",
+        "C2.2",
+        "C2.3",
+        "C2.4",
+        "C2.5"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "System Resilience",
+      "core_question": "Can the system maintain function under stress and adapt to change?",
+      "criteria": [
+        "C3.1",
+        "C3.2",
+        "C3.3",
+        "C3.4",
+        "C3.5"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Ethical Integrity",
+      "core_question": "Does the system satisfy justice requirements across time, groups, and power?",
+      "criteria": [
+        "C4.1",
+        "C4.2",
+        "C4.3",
+        "C4.4",
+        "C4.5"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Implementation Viability",
+      "core_question": "Can the system actually be built and sustained?",
+      "criteria": [
+        "C5.1",
+        "C5.2",
+        "C5.3",
+        "C5.4",
+        "C5.5"
+      ]
+    }
+  ],
+  "criteria": [
+    {
+      "id": "C1.1",
+      "domain": "D1",
+      "name": "Poverty Elimination Capacity",
+      "definition": {
+        "derivation": "From N1 (Human Flourishing) + N2 (Labor Non-Necessity) + N3 (Coercion Minimization)",
+        "requirement": "95%+ poverty elimination within measurable timeframes (10-20 years)",
+        "measurement_protocol": "Poverty Definition: Absolute poverty = inability to afford basic necessities (housing, food, healthcare, utilities) using regional cost-of-living adjusted baskets. Data Sources: Census Bureau Supplemental Poverty Measure, OECD Better Life Index, regional cost-of-living data. Calculation: Poverty elimination rate = (Baseline poverty % - Post-intervention poverty %) / Baseline poverty % × 100%. Temporal Tracking: Measure at baseline, 5-year intervals, distinguishing temporary vs. persistent poverty.",
+        "pass_threshold": "≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing"
+      },
+      "anchors": {
+        "threshold": "≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing.",
+        "note": "(Note: Section 6's \"Requirement\" line states an aspirational 95%; the operative Pass Threshold used for actual scoring throughout this corpus is 90%/85% — use the Pass Threshold, not the Requirement line, when the two differ, and flag any future criterion where this gap exists rather than silently picking one.)",
+        "bands": {
+          "1.0": {
+            "text": "Documented or credibly projected reduction meeting the threshold. *Nordic Social Democracy (1.0): \"Achieves 94-96% poverty elimination through comprehensive welfare state,\" a documented real-world figure clearing the bar.*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Real but partial reduction (roughly 30-89% documented), or a threshold-clearing claim resting on favorable/untested assumptions. *Status Quo Market Capitalism (0.5): \"15-25% reduction... far below the 95% elimination threshold\" — note this is actually below even the 0.5 band's usual floor, but scored 0.5 rather than 0.0 because a real, functioning mechanism (welfare programs) exists, however inadequate; contrast with C1.1's 0.0 anchor below, which requires absence of any state mechanism, not merely an inadequate one.*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No structural mechanism, or explicit ideological refusal of poverty elimination as a legitimate system function. *Libertarian Minarchism (0.0): \"ideologically refuses poverty elimination as a state function... relies entirely on private charity.\"*",
+            "examples": [
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C1.2a",
+      "domain": "D1",
+      "name": "Wealth Building for Resilience",
+      "definition": {
+        "derivation": "From N4 (Universal Wealth Access) + N3 (Coercion Minimization) — unchanged from legacy C1.2's derivation, since this sub-criterion inherits the resilience-buffer half of what legacy C1.2 asked.",
+        "requirement": "Genuine asset building enabling $70,000+ median household wealth accumulation over 20 years (inflation-adjusted), for participants who engage with whatever wealth-building mechanism the system provides.",
+        "distinguishes": "C1.2a from C1.2b. C1.2a asks only whether a genuine buffer-building mechanism exists and reaches a substantial share of participants — not whether the resulting distribution of wealth across the whole population is itself equitable or concentration-resistant (that is C1.2b's question, immediately below). A system can score well on one while failing the other: a system that lets most participants build savings through ordinary market mechanisms, but does nothing to prevent the top decile from pulling away, could plausibly pass C1.2a while failing C1.2b; conversely, Integral's ITC dissolution is close to the strongest possible C1.2b answer in the corpus while scoring 0.0 here, since credits that dissolve on use cannot function as anyone's buffer (Appendix E, Appendix H.7v2 below).",
+        "measurement_protocol": "Wealth Definition: Net worth (total assets - total liabilities), including housing equity, retirement accounts, savings, investment accounts, business ownership, system-specific wealth mechanisms (e.g., PTF acres). Data Collection: Longitudinal tracking of the same households over 20-year periods using Survey of Consumer Finances methodology. Inflation Adjustment: All values converted to baseline-year real dollars using CPI-U. Median Focus: Use median rather than mean to avoid skew from top wealth holders.",
+        "cultural_geographic_adaptation": "High-income countries: $70,000 USD equivalent baseline. Middle-income countries: Adjust to 150-200% of national median annual household expenses. Low-income countries: Adjust to 200-300% of median annual expenses (relatively higher threshold due to greater vulnerability to shocks).",
+        "pass_threshold": "≥$60,000 median wealth accumulation over 20 years for 70%+ of participants (unchanged from legacy C1.2's Pass Threshold — the sub-criterion split doesn't touch this number, only separates out the now-independent question of whether the wealth built this way stays broadly distributed)."
+      },
+      "anchors": {
+        "threshold": "≥$60,000 median wealth accumulation over 20 years for 70%+ of participants (unchanged from legacy C1.2 — Section 12.3).",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "A genuine, documented asset-accumulation mechanism reaching most participants. *Market Socialism's published C1.2=1.0 rested on: \"Cooperative membership provides ownership stake and wealth accumulation... members accumulate substantial wealth through capital accounts and profit distribution\" — evidence that speaks almost entirely to the buffer-building question, making C1.2a≈1.0 the most defensible illustrative decomposition (see also Appendix H.8a).*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some accumulation mechanism exists but is narrow, indirect, or held collectively rather than individually — real, but not clearly clearing the household-buffer bar as stated. *Degrowth Economics' published C1.2=0.5 rested on: \"Commons-based wealth (community land trusts, cooperatives) provides collective security. However, individual wealth accumulation is ideologically discouraged\" — a genuinely different conception of security than a $60,000 household buffer, illustrating the 0.5 band well.*",
+            "examples": [
+              {
+                "system": "Degrowth Economics",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No accumulation mechanism at all. *Integral's published C1.2=0.0 (Appendix E) was justified entirely in resilience-buffer terms — \"no accumulated cushion for medical emergencies, family disruptions, or temporary inability to contribute... cannot build assets to pass to children\" — making this the cleanest possible C1.2a=0.0 case in the corpus: the evidence never engages the concentration question at all. Universal Basic Income's published C1.2=0.0 (\"provides income but no wealth-building mechanisms... maintains wealth-excluded underclass\") is a second clean example.*",
+            "examples": [
+              {
+                "system": "Universal Basic Income",
+                "cited": 0.0
+              },
+              {
+                "system": "Integral",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 12.3",
+        "anchors": "Paper Appendix H.7v2"
+      }
+    },
+    {
+      "id": "C1.2b",
+      "domain": "D1",
+      "name": "Prevention of Exploitative Accumulation",
+      "definition": {
+        "derivation": "From N4 (Universal Wealth Access) + N7 (Governance Legitimacy and Anti-Capture) — a new derivation pairing for this sub-criterion: N4 supplies the \"wealth is power\" logic, N7 supplies the anti-capture framing that concentration specifically threatens.",
+        "requirement": "The system structurally prevents wealth concentration sufficient to enable governance capture or exploitative leverage over others — independent of whether the system also enables broad-based accumulation (C1.2a's question, not this one).",
+        "measurement": "Wealth Gini coefficient, population-wide, tracked over time. Distinct from an accumulation mechanism's mere existence (C1.2a): a system with a real, reaching wealth-building mechanism can still fail C1.2b if that mechanism's gains compound unevenly (e.g., early or high-income participants accumulate disproportionately over successive years). Scorers should weigh whether prevention is *structural* — a hard cap, non-transferability, credit dissolution, progressive mechanisms, cooperative or collective ownership forms that don't permit unlimited individual accumulation — versus *incidental*, a Gini figure that happens to be low today with no mechanism holding it there under stress or over a longer horizon.",
+        "pass_threshold": "Gini <0.35 for wealth distribution (moved from legacy C1.5's Pass Threshold, per the boundary resolution in Section 12.2)."
+      },
+      "anchors": {
+        "threshold": "Gini <0.35 for wealth distribution (moved from legacy C1.5 — Section 12.2).",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "A structural mechanism that prevents concentration outright, not merely a favorable Gini figure. *Integral's ITC design — \"credits...cannot be traded, saved, speculated on, accumulated, or converted into influence... just like an energy cycle, not a currency\" (Appendix E) — is close to the strongest possible C1.2b answer in the corpus, illustrating exactly the \"aces (b), fails (a)\" case Section 12.1 describes. CCO-PTF's own C4.4 write-up separately projects Gini <0.35 through a different mechanism — conversion limits and acre-equity distribution — and would be a second 1.0 candidate.*",
+            "examples": [
+              {
+                "system": "Integral",
+                "cited": 1.0
+              },
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Real, meaningful reduction in concentration relative to unregulated capitalism, without a structural mechanism confirmed to hold it below the threshold. *The corpus's existing \"cooperative systems: Gini 0.40-0.50\" figure (Section 12.3's Current Performance) — real progress attributable to distributed ownership, but not confirmed under 0.35; see Appendix H.8a for a worked estimate along these lines.*",
+            "examples": []
+          },
+          "0.0": {
+            "text": "No structural prevention mechanism; concentration compounds without limit. *Status Quo Market Capitalism's Gini 0.85 figure, alongside C4.4's own finding that \"wealth concentration enables governance capture\" — a direct, well-evidenced 0.0.*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 12.3",
+        "anchors": "Paper Appendix H.7v2"
+      }
+    },
+    {
+      "id": "C1.3",
+      "domain": "D1",
+      "name": "Housing Security",
+      "definition": {
+        "derivation": "From N1 (Human Flourishing) + N3 (Coercion Minimization)",
+        "requirement": "90%+ housing stability rates resistant to market volatility",
+        "rationale": "Housing represents the largest expense (30-50% of income) and primary wealth-building mechanism. Systems failing to address housing commodification cannot claim comprehensive security. Stability means maintaining housing over 5+ years without involuntary displacement.",
+        "measurement": "Housing stability rate = percentage of participants maintaining stable housing over 5-year periods without involuntary displacement from foreclosure, eviction, or inability to afford rent increases.",
+        "pass_threshold": "≥88% housing stability over 5-year periods, maintaining affordability at 80% area median income",
+        "benchmark": "Community Land Trusts achieve 10x lower foreclosure rates than conventional mortgages (0.46% vs 3.26% during 2008-2010 crisis)."
+      },
+      "anchors": {
+        "threshold": "≥88% housing stability over 5-year periods, maintaining affordability at 80% AMI.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Structural decommodification or strong regulatory stabilization with a documented or clearly-designed stability rate at or above threshold. *Centrally Planned Socialism (1.0): \"Universal housing provision through state allocation... homelessness essentially eliminated.\"*",
+            "examples": [
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Partial protection or a real but incomplete mechanism — e.g., some cooperative/social housing alongside a still-dominant market allocation. *Universal Basic Income (0.5): \"Stable income improves housing security... but without housing policy, landlords can capture UBI through rent increases.\"*",
+            "examples": [
+              {
+                "system": "Universal Basic Income",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Pure market allocation with no stabilizing mechanism. *Libertarian Minarchism (0.0): \"Pure market allocation with no stabilization... homelessness treated as individual failing rather than systemic outcome.\"*",
+            "examples": [
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C1.4",
+      "domain": "D1",
+      "name": "Automation Resilience",
+      "definition": {
+        "derivation": "From N2 (Labor Non-Necessity) + N11 (Automation Compatibility)",
+        "requirement": "Maintain material security as human labor becomes increasingly optional. Function across 30%, 50%, 70% job displacement scenarios.",
+        "rationale": "This criterion alone disqualifies most existing frameworks. When machines replace humans at scale, systems dependent on wage labor for both income and aggregate demand collapse into deflationary spirals that no monetary policy can resolve.",
+        "measurement": "Stress test across automation scenarios: 30% job displacement (2030 projection) — maintain poverty <5%, aggregate demand 90-110% baseline. 50% displacement (2040 projection) — maintain poverty <7%, aggregate demand 85-110% baseline. 70% displacement (2050 projection) — maintain poverty <10%, aggregate demand 80-110% baseline.",
+        "pass_threshold": "Poverty <8% and aggregate demand >85% baseline across all three displacement scenarios"
+      },
+      "anchors": {
+        "threshold": "poverty <8% and aggregate demand >85% baseline across all three of NEEC's 30/50/70% displacement scenarios.",
+        "note": "Apply it carefully; see also Appendix G for a documented case where a candidate evidentiary source (a companion simulation) could not actually be used to evaluate a system at this criterion's higher severities.",
+        "bands": {
+          "1.0": {
+            "text": "An explicit mechanism decoupling income/demand from employment, robust in the system's own design logic across displacement severities. *CCO-PTF-CIP-SZH (1.0): \"Stress testing shows the system maintains poverty <5% and aggregate demand 90-110% baseline across 30%, 50%, 70% job displacement scenarios.\"*",
+            "examples": [
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "A buffer or partial mechanism exists but is not designed for or shown to survive the higher-severity scenarios. *Nordic Social Democracy (0.5): \"Generous unemployment benefits... still fundamentally dependent on wage labor for tax revenue and social cohesion. Cannot sustain 50-70% displacement scenarios.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No mechanism; system structurally requires wage labor for both income distribution and demand. *Status Quo Market Capitalism (0.0): \"No mechanism exists to maintain either as automation advances... would trigger a deflationary spiral.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C1.5",
+      "domain": "D1",
+      "name": "Universal Wealth Access",
+      "definition": {
+        "derivation": "From N4 (Universal Wealth Access) + N7 (Anti-Capture) — unchanged from legacy C1.5.",
+        "requirement": "All participants access wealth-building mechanisms, not merely income transfers. Prevent a permanent wealth-excluded underclass — measured by *breadth of access*, not by the resulting distribution's evenness (that is now C1.2b's question, not this one).",
+        "rationale": "Systems limiting wealth-building *access* to a subset of participants — whether by capital ownership, employment status, or cooperative membership — leave the excluded group structurally dependent regardless of how equitable the wealth distribution is among those who do have access. Universal access is a distinct requirement from bounded concentration: a system could hypothetically score well on C1.2b (low overall Gini) while still leaving a meaningful population segment with no accumulation pathway at all — for instance, a strict membership-gated cooperative sector that is internally quite equal but reaches only part of the population, which is exactly Market Socialism's documented profile (Section 6, C1.5 legacy anchor; Appendix H.7v2 below).",
+        "distinguishes": "Equality of access (required — this criterion) from equality of outcomes (not required, and never was) and from bounded concentration (a separate question, now C1.2b — see Section 12.2 for why these were split apart rather than left combined).",
+        "measurement": "Percentage of population with an active wealth accumulation pathway (not just eligibility, but an actual mechanism producing asset growth).",
+        "pass_threshold": "≥80% population with an active wealth-accumulation pathway (Gini clause removed — moved to C1.2b, Section 12.2)."
+      },
+      "anchors": {
+        "threshold": "≥80% population with an active wealth-accumulation pathway (Gini clause removed — Section 12.2). This band's reasoning is unchanged from legacy C1.5's anchors (H.7 above); narrowing the threshold doesn't change which systems clear an access-breadth bar, only removes a second, now-separate test that used to ride alongside it.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Broad-based access not contingent on prior wealth or narrow membership. *Nordic Social Democracy (1.0): \"Approximately 70% have wealth accumulation pathways... meets the threshold for broad-based access\" — the same qualitative-tolerance judgment call already documented in H.7's own C1.5 entry above carries over unchanged, since it was never about the Gini clause.*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Access exists but is gated such that a meaningful population segment is excluded. *Market Socialism (0.5): \"Members have wealth access, but require cooperative membership. Unemployed, between jobs, or unable to work lack access.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Access concentrated among those already positioned to have it. *Libertarian Minarchism (0.0): \"Wealth concentration accelerates without redistributive mechanisms... only those born with capital have genuine wealth-building access.\"*",
+            "examples": [
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 12.3",
+        "anchors": "Paper Appendix H.7v2"
+      }
+    },
+    {
+      "id": "C2.1",
+      "domain": "D2",
+      "name": "Freedom from Coercion",
+      "definition": {
+        "derivation": "From N3 (Coercion Minimization) + N2 (Labor Non-Necessity)",
+        "requirement": "Eliminate survival-based economic compulsion without creating new forms of control (bureaucratic, social pressure, surveillance)",
+        "rationale": "\"Work this job or face homelessness\" represents baseline coercion regardless of formal freedom. But replacing market coercion with bureaucratic control (work requirements, behavior conditions, means testing) or social pressure (community surveillance, conformity enforcement) merely trades cages.",
+        "measurement": "Percentage of participants reporting decision-making free from survival necessity on standardized autonomy assessment (validated through revealed preference analysis—actual behavior under genuine alternatives).",
+        "pass_threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist"
+      },
+      "anchors": {
+        "threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Structural design removes survival-based compulsion without substituting a comparably coercive replacement. *Universal Basic Income (1.0): \"Pilots show 65-75% report increased autonomy... genuine choice because survival is not contingent on accepting any available job.\"*",
+            "examples": [
+              {
+                "system": "Universal Basic Income",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Meaningfully reduces coercion relative to a harsher baseline but does not eliminate it. *Status Quo Market Capitalism (0.5): \"Only 15-25% report genuine autonomy... though better than complete absence of choice.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Eliminates one form of coercion only to substitute another of comparable severity, or maximizes economic coercion by design. *Centrally Planned Socialism (0.0): \"Eliminated market coercion but replaced with state coercion.\"* *Libertarian Minarchism (0.0): \"Eliminates state coercion but maximizes economic coercion... all market exchanges occur under duress for those lacking capital.\"*",
+            "examples": [
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              },
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C2.2",
+      "domain": "D2",
+      "name": "Labor Non-Necessity",
+      "definition": {
+        "derivation": "From N2 (Labor Non-Necessity) + N1 (Human Flourishing)",
+        "requirement": "Survival and dignity not contingent on labor market participation. Unconditional baseline security with voluntary contribution pathways.",
+        "rationale": "As automation makes labor optional, tying survival to employment creates artificial scarcity. Post-scarcity ethics requires decoupling survival from employment while maintaining contribution recognition and advancement opportunities.",
+        "distinguishes": "Labor opportunity (valuable) from labor compulsion (coercive). Systems can and should provide meaningful work opportunities without making survival contingent on employment.",
+        "measurement": "Provision of unconditional basic security covering essential needs (housing, food, healthcare, utilities) without work requirements, behavior conditions, or means testing.",
+        "pass_threshold": "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents"
+      },
+      "anchors": {
+        "threshold": "unconditional provision covering 100% of basic needs, without work requirements, behavior conditions, or means testing.",
+        "note": "This threshold is binary in character (unconditional or not) more than most others — score accordingly; partial credit here specifically means *time-limited or conditional* provision, not \"provision covering less than 100% of needs.\"",
+        "bands": {
+          "1.0": {
+            "text": "Provision is explicitly unconditional. *Fully Automated Luxury Communism (1.0): \"labor becomes an optional hobby rather than survival requirement.\"* *CCO-PTF-CIP-SZH (1.0): \"No work requirements, behavior conditions, or means testing.\"*",
+            "examples": [
+              {
+                "system": "Fully Automated Luxury Communism",
+                "cited": 1.0
+              },
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "A real baseline exists but is time-limited, conditional, or requires some ongoing contribution. *Nordic Social Democracy (0.5): \"Generous... benefits provide baseline security, but still time-limited and conditional.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No baseline security independent of labor market participation, whether by absence or by ideological commitment to full employment. *Status Quo Market Capitalism (0.0): \"Survival entirely contingent on labor market participation or charity.\"* *MMT+Job Guarantee (0.0): \"Ideologically committed to full employment... fundamentally rejects the premise that labor can become optional.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              },
+              {
+                "system": "MMT + Job Guarantee",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C2.3",
+      "domain": "D2",
+      "name": "Creative Development Opportunities",
+      "definition": {
+        "derivation": "From N1 (Human Flourishing) + N13 (Incentive Alignment)",
+        "requirement": "System enables meaningful contribution beyond mere subsistence. Post-scarcity must value cultural contribution, artistic expression, intellectual development—not just material production.",
+        "rationale": "Maslow’s hierarchy demonstrates humans require more than material security—we seek purpose, mastery, self-actualization. Systems optimized solely for efficiency leave the human spirit impoverished regardless of material abundance.",
+        "measurement": "Participation rates in creative/cultural activities (% engaging in arts, music, writing, innovation at least weekly). Time allocation to non-subsistence pursuits (hours per week beyond work/survival). Life satisfaction scores across meaning, growth, and contribution domains.",
+        "pass_threshold": "≥50% regular creative engagement, average 10+ hours weekly on non-subsistence pursuits, meaning/purpose satisfaction scores ≥70/100"
+      },
+      "anchors": {
+        "threshold": "≥50% regular creative engagement, 10+ hours/week on non-subsistence pursuits, satisfaction ≥70/100.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "System structurally frees substantial time/resources for non-subsistence pursuits, at or plausibly above the threshold. *Degrowth Economics (1.0): \"Reduced working hours (20-hour week)... explicitly prioritizes creative and social time over productivity.\"*",
+            "examples": [
+              {
+                "system": "Degrowth Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some engagement, meaningfully constrained by time scarcity or narrow access. *Status Quo Market Capitalism (0.5): \"Only 20-30% engage regularly... time poverty prevents meaningful pursuit.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Structural suppression of creative/cultural activity, typically via state control of cultural production rather than mere time scarcity. *Centrally Planned Socialism (0.0): \"State control of cultural production suppressed creative expression... culture subordinated to political ideology.\"*",
+            "examples": [
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C2.4",
+      "domain": "D2",
+      "name": "Democratic Participation",
+      "definition": {
+        "derivation": "From N7 (Governance Legitimacy) + N1 (Human Flourishing)",
+        "requirement": "Genuine citizen voice in governance, not just voting rights. Economic democracy matters as much as political democracy.",
+        "rationale": "Systems concentrating decision-making—whether in state bureaucracies or corporate boardrooms—cannot claim to maximize human autonomy regardless of material outcomes. Democracy requires actual capacity to shape policy and influence outcomes.",
+        "measurement": "Participation rates in governance decisions (% engaging in democratic processes). Influence metrics (percentage of citizen-initiated proposals adopted). Satisfaction with democratic responsiveness (standardized scales). Economic domain participation (workplace democracy, community asset governance).",
+        "pass_threshold": "≥70% participation in democratic processes, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness"
+      },
+      "anchors": {
+        "threshold": "≥70% participation, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Structural mechanisms for continuous, substantive citizen influence over both political and economic decisions. *Participatory Economics (1.0): \"Comprehensive economic democracy through nested councils. Everyone participates in planning affecting them.\"*",
+            "examples": [
+              {
+                "system": "Participatory Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Formal democratic rights exist but influence is diluted by concentrated economic power. *Status Quo Market Capitalism (0.5): \"Average citizens have 'near-zero independent impact' (Gilens & Page, 2014).\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No meaningful participation mechanism, by design or suppression. *Centrally Planned Socialism (0.0): \"Single-party rule eliminated meaningful democratic participation... political dissent suppressed systematically.\"* *FALC (0.0): \"Governance structures largely unspecified. Who controls the machines?\"*",
+            "examples": [
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              },
+              {
+                "system": "Fully Automated Luxury Communism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C2.5",
+      "domain": "D2",
+      "name": "Exit Rights and Mobility",
+      "definition": {
+        "derivation": "From N9 (Partial Deployability) + N3 (Coercion Minimization)",
+        "requirement": "Participants can opt out without penalty; communities can organize around shared values",
+        "rationale": "Systems forcing universal participation become totalitarian regardless of ostensible benefits. Ability to exit, form alternative communities, and organize based on preference rather than necessity represents crucial freedom distinguishing voluntary cooperation from imposed uniformity.",
+        "measurement": "Ease of exit (time and resources required to leave system). Penalties for non-participation (differential treatment of non-participants). Community formation capacity (ability to organize preference-based associations). Geographic mobility (freedom to relocate without losing essential benefits).",
+        "pass_threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained, voluntary association protected"
+      },
+      "anchors": {
+        "threshold": "exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained.",
+        "note": "Read carefully: the failure mode is almost always *funding or coherence dependent on near-universal participation*, not an intent to trap individuals.",
+        "bands": {
+          "1.0": {
+            "text": "Individuals can opt out without penalty and the system continues functioning at partial participation. *CCO-PTF-CIP-SZH (1.0): \"System viable at 30%+ participation, enabling opt-out without penalty... can exit to the traditional market economy while the system continues functioning.\"*",
+            "examples": [
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Formal exit rights exist but are constrained by real economic costs (job/healthcare/housing lock-in) not imposed by the system's own design. *Status Quo Market Capitalism (0.5): \"High exit barriers from job mobility costs, healthcare tied to employment, housing market barriers.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "The system's own funding or coherence structurally requires near-universal participation, such that a meaningful opt-out rate would collapse it. *Nordic Social Democracy (0.0): \"Systems require near-universal participation for funding sustainability. Cannot function with 30% opt-out; tax base would collapse.\"* *Degrowth Economics (0.0): \"Cannot function if a significant population chooses a high-consumption lifestyle.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 0.0
+              },
+              {
+                "system": "Degrowth Economics",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C3.1",
+      "domain": "D3",
+      "name": "Crisis Response Capacity",
+      "definition": {
+        "derivation": "From N5 (Crisis Robustness) + N10 (Failure Transparency)",
+        "requirement": "Automatic stabilization during economic shocks without requiring legislative intervention. Response time, scaling magnitude, and coverage must be immediate and comprehensive.",
+        "rationale": "Traditional stimulus requires months of political debate while people suffer. Automatic stabilizers scaling with crisis severity—increasing support by 50%+ during downturns without congressional action—represent superior design.",
+        "measurement": "Response time (days from crisis onset to support increase). Scaling magnitude (percentage increase relative to crisis severity). Coverage (percentage of affected population receiving support). No legislative delay (automatic activation based on triggers).",
+        "pass_threshold": "Response within 72 hours, scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase), ≥90% population coverage",
+        "comparison": "Traditional stimulus: 3-6 months legislative delay, limited coverage. Unemployment insurance: 2-4 weeks processing, 40% coverage. Automatic stabilizers: Immediate response, universal coverage."
+      },
+      "anchors": {
+        "threshold": "response within 72 hours, scaling 1:1 with crisis severity, ≥90% population coverage, no legislative delay.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Automatic, trigger-based stabilization requiring no legislative action. *Universal Basic Income (1.0): \"Benefit continues regardless of employment. No application process, no verification, no delay.\"*",
+            "examples": [
+              {
+                "system": "Universal Basic Income",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some crisis-responsive capacity exists but is not automatic, is firm/local-level rather than system-wide, or is unproven at the relevant scale. *Market Socialism (0.5): \"Cooperatives demonstrate better crisis resilience than traditional firms... but no automatic macroeconomic stabilizers. Firm-level resilience doesn't translate to system-level response.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Response requires legislative/political action with characteristic multi-month delay, or is ideologically opposed to stabilization mechanisms. *Status Quo Market Capitalism (0.0): \"Traditional stimulus requires 3-6 months of legislative debate while populations suffer.\"* *Libertarian Minarchism (0.0): \"Ideologically opposed to stabilization mechanisms... markets expected to self-correct while populations suffer.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              },
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C3.2",
+      "domain": "D3",
+      "name": "Inflation Control Mechanisms",
+      "definition": {
+        "derivation": "From N5 (Crisis Robustness) + N13 (Incentive Alignment)",
+        "requirement": "Specific, tested mechanisms preventing monetary inflation. Not vague appeals to taxation or abstract productivity claims.",
+        "rationale": "This addresses the primary objection to basic income proposals. Without concrete inflation control mechanisms (sectoral demand isolation, velocity controls, automatic parameter adjustments), material security promises become meaningless as purchasing power erodes.",
+        "measurement": "Long-term inflation rates in system-controlled sectors (must be ≤3% annually). Price stability during stress tests (inflation contained to ≤5% during external 8% inflation scenarios). Parameter responsiveness (automatic adjustment effectiveness when inflation exceeds targets).",
+        "pass_threshold": "Long-term inflation ≤3%, stress test inflation ≤5% (when external 8%), automatic adjustment preventing runaway inflation",
+        "mechanisms_required": "Sectoral demand isolation (basic income for essentials only). Velocity controls (expiration mechanisms preventing hoarding). Supply response (production capacity scaling with demand). Automatic parameter adjustment (rates adjust based on inflation data)."
+      },
+      "anchors": {
+        "threshold": "long-term inflation ≤3%, stress-test inflation ≤5% (under external 8%), automatic adjustment.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Specific, named mechanism(s) preventing inflation, whether monetary-policy-based or structural (e.g., no money supply to inflate). *Participatory Economics (1.0): \"'Facilitation boards' adjusting indicative prices to balance supply/demand... prevents systemic price instability.\"*",
+            "examples": [
+              {
+                "system": "Participatory Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Relies on conventional monetary policy without novel safeguards, or a proposed mechanism is theoretically plausible but unproven at scale. *MMT+Job Guarantee (0.5): \"Buffer stock employment theoretically anchors wages and prices. However, the mechanism is unproven at scale.\"*",
+            "examples": [
+              {
+                "system": "MMT + Job Guarantee",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No credible inflation-control mechanism is specified, or the system's design actively risks compounding inflation with no offset. This band is rare in the corpus (no system in the 13 scores 0.0 here); reserve it for cases with an active inflationary mechanism and literally no counterbalancing design element, rather than merely \"unaddressed.\"",
+            "examples": []
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C3.3",
+      "domain": "D3",
+      "name": "Multi-Failure Resistance",
+      "definition": {
+        "derivation": "From N5 (Crisis Robustness) + N10 (Failure Transparency)",
+        "requirement": "Function under simultaneous shocks across economic, environmental, and social domains. Single-shock resilience insufficient.",
+        "rationale": "Climate crisis + automation + recession represents realistic threat landscape. Systems optimized for normal conditions but failing under compound stress cannot sustain long-term flourishing.",
+        "measurement": "System maintains core functions across all four compound scenarios: poverty rate increases <5 percentage points; housing stability maintained ≥85%; essential services continue ≥90% capacity; democratic functions operational ≥80% capacity.",
+        "stress_test_scenarios": "Recession + Automation (30% GDP decline, 15% unemployment, 40% business closures). Inflation + Climate Crisis (8% inflation, 30% agricultural disruption, infrastructure damage). Cyber Attack + Economic Crisis (72-hour infrastructure compromise, simultaneous market shock). Pandemic + Supply Chain (health crisis, border closures, 50% disruption).",
+        "pass_threshold": "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%"
+      },
+      "anchors": {
+        "threshold": "maintain core functions across ≥3 of 4 compound stress scenarios with degradation <20%.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Explicit design for compound/simultaneous shocks, typically via decentralization or redundancy. *Degrowth Economics (1.0): \"Low-throughput systems less vulnerable to supply disruptions. Localized production creates resilience. Explicitly designed for crisis as norm rather than exception.\"*",
+            "examples": [
+              {
+                "system": "Degrowth Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some resilience from distributed structure, but interconnection or market competition still transmits shocks. *Market Socialism (0.5): \"No single financial elite to trigger systemic crisis. However, market competition and interconnection still create vulnerability to cascading failures.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Optimized for normal conditions only; historically or structurally demonstrated to fail under compound stress. *Status Quo Market Capitalism (0.0): \"2008 demonstrated vulnerability to financial + economic crisis; COVID showed inability to handle pandemic + supply chain + economic shock simultaneously.\"* *Centrally Planned Socialism (0.0): \"The system ultimately collapsed under compound stresses.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              },
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C3.4",
+      "domain": "D3",
+      "name": "Epistemic Adaptability",
+      "definition": {
+        "derivation": "From N8 (Epistemic Adaptability) + N7 (Anti-Capture)",
+        "requirement": "System evolves based on evidence rather than ideology. Update rules/parameters based on new information without collapse.",
+        "rationale": "Rigid frameworks unable to incorporate evidence or adjust to changing conditions inevitably ossify. The best system must be dynamically stable—maintaining core functions while adapting implementation details as circumstances change.",
+        "distinguishes": "Stability (maintaining core functions) from rigidity (inability to adapt). Anti-fragile systems improve through stress; fragile systems break; robust systems merely survive. Target: anti-fragile adaptation.",
+        "measurement": "Parameter flexibility (range of adjustable variables without system redesign). Evidence integration (speed of policy updates in response to data). Governance mechanisms enabling adaptive change (democratic updating processes). Stability during transitions (no collapse from parameter adjustments).",
+        "pass_threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, democratic governance for changes, zero collapses during parameter adjustments"
+      },
+      "anchors": {
+        "threshold": "≥30% parameter adjustability, policy updates within 6 months of evidence, democratic governance for changes, zero collapses during adjustment.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Demonstrated or clearly-designed capacity for rapid, evidence-based parameter adjustment without destabilization. *Market Socialism (1.0): \"Democratic governance enables rapid adaptation to evidence... Mondragon demonstrates 50+ years of continuous adaptation.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Adaptation is possible but slow or politically resisted. *Status Quo Market Capitalism (0.5): \"The system can adjust through policy changes but often slowly and with political resistance... tendency toward regulatory capture and reversal.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Ideological or structural rigidity prevents evidence-based adaptation. *Centrally Planned Socialism (0.0): \"Ideological rigidity prevented evidence-based adaptation... The Lysenko affair.\"* *Libertarian Minarchism (0.0): \"When market failures occur, ideology blames insufficient market purity rather than structural flaws.\"*",
+            "examples": [
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              },
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C3.5",
+      "domain": "D3",
+      "name": "Failure-Mode Transparency",
+      "definition": {
+        "derivation": "From N10 (Failure Transparency) + N7 (Anti-Capture)",
+        "requirement": "Failure states legible, diagnosable, and correctable rather than hidden or externalized",
+        "rationale": "Hidden failures enable exploitation and prevent adaptive response. The 2008 financial crisis demonstrated catastrophic hidden failures. Transparent failures enable correction before catastrophe.",
+        "measurement": "Error detection speed (time from failure occurrence to identification). Diagnostic capability (% of failures with identified causes). Correction success (% of identified failures successfully addressed). No systematic externalization (environmental, social costs not hidden).",
+        "pass_threshold": "Failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs"
+      },
+      "anchors": {
+        "threshold": "failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Systematic, comprehensive monitoring with no major category of cost or failure hidden. *CCO-PTF-CIP-SZH (1.0): \"CCO flows visible through blockchain transparency... CIP provides dashboard tracking system performance across all metrics.\"*",
+            "examples": [
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some failures are visible (often internally, e.g., to firm members) while others (typically ecological or diffuse social costs) remain externalized. *Market Socialism (0.5): \"Worker ownership makes firm failures visible to members immediately. However, market externalities (environmental costs) are still hidden.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Systematic externalization or active suppression of failure information. *Libertarian Minarchism (0.0): \"Market externalities maximally hidden... no mechanism for making systemic failures legible.\"* *Stakeholder Capitalism (0.0): \"ESG metrics susceptible to greenwashing... systemic failures obscured behind public relations.\"*",
+            "examples": [
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.0
+              },
+              {
+                "system": "Stakeholder Capitalism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C4.1",
+      "domain": "D4",
+      "name": "Intergenerational Justice",
+      "definition": {
+        "derivation": "From N12 (Intergenerational Equity) + N6 (Ecological Compliance)",
+        "requirement": "Preserve resources and opportunities for future generations. 35-45% carbon reduction trajectory; positive intergenerational wealth transfer.",
+        "rationale": "Current systems impose catastrophic costs on the unborn through climate crisis ($500 trillion by 2100), ecological collapse, and debt accumulation ($31 trillion U.S. federal debt). Discounting future welfare represents ethical failure, not economic rationality.",
+        "measurement": "Carbon emission trajectories (must decline 35-45% by 2030 for 1.5°C). Resource depletion rates (extraction ≤ regeneration capacity). Debt-to-GDP ratios (sustainable <60%). Intergenerational wealth transfer (positive vs extractive).",
+        "pass_threshold": "35% carbon reduction by 2030, resource use ≤90% regeneration, debt-to-GDP <80%, positive wealth transfer to next generation"
+      },
+      "anchors": {
+        "threshold": "35% carbon reduction by 2030, resource use ≤90% regeneration, debt-to-GDP <80%, positive intergenerational wealth transfer.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Preservation or positive transfer is structural, not incidental. *Degrowth Economics (1.0): \"Core principle—preservation for future generations. Absolute reduction in resource extraction and emissions.\"*",
+            "examples": [
+              {
+                "system": "Degrowth Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some positive transfer exists but is incomplete or coexists with significant negative transfer. *Nordic Social Democracy (0.5): \"Sovereign wealth funds... represent positive intergenerational transfer, but carbon emissions remain above sustainable levels.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Net negative transfer with no structural counterweight. *Status Quo Market Capitalism (0.0): \"Massive negative intergenerational wealth transfer through climate debt... resource depletion, ecological damage.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C4.2",
+      "domain": "D4",
+      "name": "Ecological Compliance",
+      "definition": {
+        "derivation": "From N6 (Ecological Compliance) + N12 (Intergenerational Equity)",
+        "requirement": "Economic activity within ecological carrying capacity. This is a hard constraint, not an optimization variable.",
+        "rationale": "Planetary boundaries for climate, biodiversity, nitrogen/phosphorus cycles, and land use are being exceeded. Systems requiring perpetual expansion through limits are structurally doomed regardless of temporary success.",
+        "measurement": "Carbon emissions (absolute reductions, not just intensity). Biodiversity impact (neutral or positive). Resource extraction (≤ regeneration rates). Circular economy metrics (waste reduction, material reuse). Planetary boundary compliance across all 9 boundaries.",
+        "pass_threshold": "Absolute carbon reductions 35-45% by 2030, biodiversity neutral or positive, resource extraction ≤ regeneration, ≥7 of 9 planetary boundaries respected"
+      },
+      "anchors": {
+        "threshold": "absolute carbon reductions 35-45% by 2030, biodiversity neutral or positive, resource extraction ≤ regeneration, ≥7 of 9 planetary boundaries respected.",
+        "note": "Hold this one to absolute-reduction standards, not relative/efficiency framing.",
+        "bands": {
+          "1.0": {
+            "text": "Ecological compliance is a hard design constraint, not an optimization target traded against growth. *Participatory Economics (1.0): \"Planning councils can directly constrain production/consumption within ecological limits... eliminated through comprehensive planning.\"*",
+            "examples": [
+              {
+                "system": "Participatory Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Meaningful mitigation exists but growth or consumption imperatives are not fully subordinated to ecological limits. *Nordic Social Democracy (0.5): \"Leading in renewable energy and environmental policy, but still exceed planetary boundaries.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Growth-dependent with no absolute-reduction mechanism, or relative/efficiency metrics substituting for absolute ones. *Stakeholder Capitalism (0.0): \"ESG metrics track relative improvements while absolute emissions continue rising... maintain business-as-usual.\"*",
+            "examples": [
+              {
+                "system": "Stakeholder Capitalism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C4.3",
+      "domain": "D4",
+      "name": "Racial and Gender Equity",
+      "definition": {
+        "derivation": "From N1 (Human Flourishing) + N7 (Anti-Capture)",
+        "requirement": "Actively address historical inequalities rather than perpetuating them through \"neutral\" policies",
+        "rationale": "Colorblind or gender-neutral policies ignoring structural disparities merely replicate existing hierarchies. True equity requires deliberately disproportionate benefit flows to communities facing disproportionate harms—not as charity but as justice.",
+        "measurement": "Disparity reduction rates (closing gaps in wealth, health, security across demographic groups). Disproportionate benefit flows (whether disadvantaged groups receive proportionally greater support). Ultimate convergence toward parity (not enforced equality but elimination of systemic barriers).",
+        "pass_threshold": "Disparity reduction ≥5 percentage points every 5 years, disadvantaged groups receive 150%+ proportional benefits, convergence trajectory toward <20% disparities within 30 years",
+        "evidence_of_need": "Black household median wealth: $24,100 vs $188,200 white (87% gap). Black women 5.56x trafficking vulnerability; Native women 8.75x. Gender wage gap persists: women earn 80-84% of male wages. Systems perpetuating these disparities fail ethical standards."
+      },
+      "anchors": {
+        "threshold": "disparity reduction ≥5pp/5yr, disadvantaged groups receive 150%+ proportional benefits, convergence toward <20% disparity within 30 years.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Explicit, disproportionate (not merely equal) benefit flows to historically disadvantaged groups. *CCO-PTF-CIP-SZH (1.0): \"PTF deliberately targets disadvantaged communities first (example: 150%+ proportional benefits during rollout).\"*",
+            "examples": [
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Formal equality without reparative mechanisms, or genuine effort with unclear/unspecified reach. *Integral (0.5): \"Democratic architecture prevents elite capture... but no explicit reparative mechanisms are discussed... how the system repairs centuries of accumulated disparity\" remains unaddressed.*",
+            "examples": [
+              {
+                "system": "Integral",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Formally neutral policy in a context of large documented disparities, with no active correction. *Status Quo Market Capitalism (0.0): \"'Colorblind' markets replicate structural racism. Without active intervention, discriminatory outcomes persist across generations.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              }
+            ],
+            "corrections": [
+              "Open correction (Handoff 23, Correction 4): Status Quo Market Capitalism's published C4.3 score is 0.5, not 0.0, so this example does not illustrate the 0.0 band. Do not use it as a 0.0 exemplar; the Appendix H.7 anchor is to be corrected in Paper v2.0."
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C4.4",
+      "domain": "D4",
+      "name": "Power Distribution",
+      "definition": {
+        "derivation": "From N7 (Anti-Capture) + N3 (Coercion Minimization)",
+        "requirement": "Diffuse rather than concentrate decision-making authority across economic, political, and social domains",
+        "rationale": "Monopolization of power—whether by state, capital, or any elite—represents systemic failure regardless of material outcomes. Concentration of wealth ultimately represents concentration of power to shape society according to narrow interests.",
+        "measurement": "Power concentration indices (economic decision-making distribution). Democratic control mechanisms (citizen influence over major decisions). Accountability structures (capacity to remove/replace decision-makers). Wealth concentration as proxy for power (Gini coefficient).",
+        "pass_threshold": "Gini <0.35 for wealth, ≥40% citizen proposals adopted, democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional"
+      },
+      "anchors": {
+        "threshold": "Gini <0.35 for wealth, ≥40% citizen proposals adopted, democratic accountability for ≥80% of major decisions, functional removal/replacement mechanisms.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Power (economic and political) is structurally diffused, not merely formally distributed. *Participatory Economics (1.0): \"No concentrated wealth, no capital owners, no managerial hierarchy. Participatory councils embody distributed decision-making.\"*",
+            "examples": [
+              {
+                "system": "Participatory Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some diffusion of one form of power (typically political) while the other (typically economic) remains concentrated, or vice versa. *Libertarian Minarchism (0.5): \"Distributes political power more widely by limiting state scope. However, economic power concentrates massively without checks.\"*",
+            "examples": [
+              {
+                "system": "Libertarian Minarchism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Concentration in a narrow group, whether market-based or bureaucratic. *Status Quo Market Capitalism (0.0): \"Top 1% owns 32.3% of wealth; political influence is highly concentrated.\"* *Centrally Planned Socialism (0.0): \"Attempted to eliminate the capitalist class but created a new elite (nomenklatura).\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              },
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C4.5",
+      "domain": "D4",
+      "name": "Exploitation Elimination",
+      "definition": {
+        "derivation": "From N3 (Coercion Minimization) + N4 (Universal Wealth Access)",
+        "requirement": "Remove extractive relationships, not merely regulate them. Structural transformation, not incremental reform.",
+        "rationale": "Systems maintaining landlord-tenant dynamics ($380,000 extraction over 20 years), employer-employee asymmetries (surplus value extraction), or creditor-debtor subordination (wealth transfer through interest) cannot claim to eliminate exploitation—they merely adjust terms.",
+        "measurement": "Extraction rates (wealth transfer from labor to capital, tenants to landlords, borrowers to lenders). Power asymmetries (capacity to refuse participation without penalty). Residual coercion (decisions made under duress even with formal choice).",
+        "pass_threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships, residual coercion <10% of decisions"
+      },
+      "anchors": {
+        "threshold": "extraction rates <10% GDP, genuine exit rights from exploitative relationships, residual coercion <10% of decisions.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Structural elimination of extractive relationships (landlord-tenant, employer-employee, creditor-debtor), not merely regulation of their terms. *Participatory Economics (1.0): \"Eliminates capital accumulation and growth imperative driving exploitation... removes profit motive for extraction.\"*",
+            "examples": [
+              {
+                "system": "Participatory Economics",
+                "cited": 1.0
+              }
+            ],
+            "corrections": [
+              "Open correction (found Session 27 by this check): the quoted rationale is Degrowth Economics' published C4.5 text (Report v1.6, System 8, scored 1.0), not Participatory Economics', whose published C4.5 score is 0.0 (a structural failure). Read this band's example as Degrowth Economics (1.0); the Appendix H.7 anchor is to be corrected in Paper v2.0."
+            ]
+          },
+          "0.5": {
+            "text": "Reduced but not eliminated extraction, or elimination in one relationship type (e.g., capital-labor) while another persists (e.g., inter-firm competition). *Nordic Social Democracy (0.5): \"Reduced exploitation through labor protections, collective bargaining... but still maintains capital-labor relationships with surplus extraction, albeit more equitably distributed.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Extraction is a structural, load-bearing feature of the system rather than an incidental flaw. *Status Quo Market Capitalism (0.0): \"42% of GDP extracted from labor to capital... exploitation is a structural feature, not aberration.\"*",
+            "examples": [
+              {
+                "system": "Status Quo Market Capitalism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C5.1",
+      "domain": "D5",
+      "name": "Proven Component Foundation",
+      "definition": {
+        "derivation": "From N9 (Partial Deployability) + N8 (Epistemic Adaptability)",
+        "requirement": "Build on empirically validated mechanisms (40+ years operation preferred) rather than untested speculation",
+        "rationale": "Theoretical elegance matters little if implementation repeatedly fails. Best frameworks synthesize proven components from diverse sources rather than proposing entirely novel mechanisms with unknown failure modes.",
+        "measurement": "Component validation (years of successful operation for each mechanism). Scale validation (number of participants in proven implementations). Outcome validation (documented achievement of claimed benefits).",
+        "pass_threshold": "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants, with documented outcomes matching claimed benefits",
+        "examples_of_proven_components": "Alternative currencies: WIR Bank (90 years operation, billions in annual turnover). Community land trusts: 313 U.S. CLTs, 10x lower foreclosure rates. Sovereign wealth funds: Alaska PFD (40+ years), Norway (271% GDP). Cooperative governance: Mondragón (70+ years, 97% survival rate)."
+      },
+      "anchors": {
+        "threshold": "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants, with documented outcomes.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Cite specific components with specific track records. *Market Socialism (1.0): \"Mondragon Corporation: 70+ years, 80,000+ worker-owners, €12 billion revenue... 97% survival rate over 5 years vs 44% for traditional startups.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Individual components are proven but the integrated system is not, or the historical precedent's outcomes are mixed/contested. *Integral (0.5): \"Individual components proven: 70%+ of pieces have 20+ years validation... Integrated system unproven: No actual Integral implementation exists at any scale.\"*",
+            "examples": [
+              {
+                "system": "Integral",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No components with a comparable track record exist; the system is a novel projection. *FALC (0.0): \"No comprehensive FALC system exists anywhere... entirely theoretical projection.\"*",
+            "examples": [
+              {
+                "system": "Fully Automated Luxury Communism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C5.2",
+      "domain": "D5",
+      "name": "Staged Transition Pathways",
+      "definition": {
+        "derivation": "From N9 (Partial Deployability)",
+        "requirement": "Detailed phase-by-phase implementation for BOTH stable contexts (gradual transformation) AND crisis contexts (rapid deployment)",
+        "rationale": "Revolutions typically produce chaos, reaction, and systems worse than what they replaced. Gradual transformation enables learning and coalition-building. However, post-crisis contexts demand rapid deployment capacity when political windows open briefly.",
+        "pass_threshold": "Detailed implementation plan for both staged (≥4 phases) and rapid (≤36 months) deployment, with specific milestones, resource requirements, and risk mitigation",
+        "staged_transition_10_25_years_for_stable_contexts": "Phase 1 (Years 1-3): Municipal pilots in receptive jurisdictions. Phase 2 (Years 3-5): Regional expansion with integration testing. Phase 3 (Years 5-10): Multi-jurisdictional coordination. Phase 4 (Years 10-25): National integration and optimization.",
+        "rapid_deployment_18_36_months_for_post_crisis_contexts": "Month 0-6: Emergency legal framework, digital infrastructure. Month 6-12: Universal distribution begins, initial asset acquisition. Month 12-18: System activation, governance establishment. Month 18-36: Stabilization, parameter optimization.",
+        "historical_precedents": "New Deal (1933-1936): 3 years for comprehensive programs. Marshall Plan (1948-1951): 3 years for economic restructuring. CCO-PTF modeling: Both pathways validated through simulation."
+      },
+      "anchors": {
+        "threshold": "detailed plan for both staged (≥4 phases) and rapid (≤36 months) deployment, with milestones, resources, and risk mitigation.",
+        "note": "Judge this on specificity, not on whether a pathway exists in principle — \"starts small and expands\" is not a pathway under this threshold, however true it may be.",
+        "bands": {
+          "1.0": {
+            "text": "Both a multi-phase gradual plan and a rapid crisis-deployment plan are specified with concrete milestones. *CCO-PTF-CIP-SZH (1.0): \"Detailed pathways specified for both gradual (10-25 years: municipal pilots → regional → national) and rapid (18-36 months: post-crisis emergency deployment).\"*",
+            "examples": [
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "A pathway is sketched but lacks the specificity (legal framework, resource figures, sequencing) the threshold requires. *Market Socialism (0.5): \"Can be implemented incrementally through cooperative development, but scaling to the majority of the economy faces challenges. No clear pathway from niche to dominant form.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "No operational pathway despite acknowledging transition as necessary, or historical transitions required non-gradual means (revolution, occupation). *Integral (0.0): \"Despite acknowledging transition as 'the challenge,' the document provides almost no operational pathway... 'starts small and expands' ... That's it.\"* *Centrally Planned Socialism (0.0): \"Historical transitions required revolution, civil war, or imposition by occupying force.\"*",
+            "examples": [
+              {
+                "system": "Integral",
+                "cited": 0.0
+              },
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C5.3",
+      "domain": "D5",
+      "name": "Partial and Parallel Deployability",
+      "definition": {
+        "derivation": "From N9 (Partial Deployability)",
+        "requirement": "System functions with selective participation (30%+ population), coexists with traditional markets without displacement",
+        "rationale": "Unlike systems requiring universal enrollment, partial deployability enables pilot testing, iterative improvement, and voluntary adoption. This dramatically reduces political barriers and technical risks.",
+        "measurement": "Minimum participation threshold for viability. Mixed-economy performance (coexistence with traditional institutions). Scaling pathways from pilots (10,000) to regional (1M+) to national (100M+). Inter-jurisdictional coordination protocols.",
+        "pass_threshold": "Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established"
+      },
+      "anchors": {
+        "threshold": "viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, validated scaling pathway.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Explicitly designed to function at partial adoption and coexist with existing institutions. *CCO-PTF-CIP-SZH (1.0): \"Viable at 30%+ participation. Can coexist with traditional markets. Scaling pathway validated through modeling: pilots (10,000) → regional (1M+) → national (100M+).\"*",
+            "examples": [
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Components can be adopted piecemeal, but the comprehensive form requires much higher participation to function as designed. *Nordic Social Democracy (0.5): \"Components can be adopted piecemeal... but a comprehensive model requires near-universal participation for funding sustainability.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "The system requires comprehensive, near-total adoption to function at all. *Centrally Planned Socialism (0.0): \"Requires comprehensive control to function. Cannot coexist with market economy without either collapsing... or suppressing markets.\"* *FALC (0.0): \"Cannot function partially—requires comprehensive automation for post-scarcity.\"*",
+            "examples": [
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              },
+              {
+                "system": "Fully Automated Luxury Communism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C5.4",
+      "domain": "D5",
+      "name": "Political Coalition Potential",
+      "definition": {
+        "derivation": "From N9 (Partial Deployability) + N7 (Anti-Capture)",
+        "requirement": "Build broad support across ideological divides through offering value to diverse constituencies",
+        "rationale": "Solutions appealing only to the left or right face permanent political warfare and likely reversal after the next election party flip. Best frameworks offer value to diverse constituencies: fiscal conservatives (cost savings), libertarians (reduced coercion), progressives (equity focus), communitarians (enhanced cohesion).",
+        "measurement": "Coalition breadth (support percentage across ideological spectrum). Policy stability (resistance to repeal attempts). Long-term political sustainability (survival across multiple administrations).",
+        "pass_threshold": "≥60% support across political spectrum, ≥65% opposition to repeal, survival probability ≥80% across administration changes",
+        "cross_ideological_appeal_examples": "Alaska PFD: 80%+ approval across political spectrum for 40+ years. Community wealth building: Attracts both cooperative socialists and property rights conservatives. Cooperative movements: Bridge socialist and market advocate divisions."
+      },
+      "anchors": {
+        "threshold": "≥60% support across the political spectrum, ≥65% opposition to repeal, ≥80% survival probability across administration changes.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Demonstrated or clearly-arguable appeal across ideologically opposed constituencies, each for their own reasons. *Nordic Social Democracy (1.0): \"High public satisfaction (70-85%) sustains support across the political spectrum.\"* *CCO-PTF-CIP-SZH (1.0): \"Cross-ideological appeal: progressives... libertarians... fiscal conservatives... communitarians.\"*",
+            "examples": [
+              {
+                "system": "Nordic Social Democracy",
+                "cited": 1.0
+              },
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Appeals strongly to part of the spectrum while facing real resistance from another part. *Market Socialism (0.5): \"Appeals to socialists, progressive liberals, community organizers. However, limited appeal to business interests and fiscal conservatives.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Structural or rhetorical features actively repel broad coalition-building, or historical record forecloses it. *Degrowth Economics (0.0): \"'Degrowth' terminology is politically toxic in growth-oriented cultures.\"* *Centrally Planned Socialism (0.0): \"Catastrophic historical record eliminates political viability.\"*",
+            "examples": [
+              {
+                "system": "Degrowth Economics",
+                "cited": 0.0
+              },
+              {
+                "system": "Centrally Planned Socialism",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    },
+    {
+      "id": "C5.5",
+      "domain": "D5",
+      "name": "Cultural Adaptability",
+      "definition": {
+        "derivation": "From N14 (Global Scalability)",
+        "requirement": "Function across diverse cultural, economic, and geographic contexts with local parameter adjustment",
+        "rationale": "Universal human needs (security, autonomy, belonging) coexist with enormous diversity in values and preferences. Best frameworks accommodate this tension—providing universal security while enabling local variation in implementation details.",
+        "pass_threshold": "Viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, parameter flexibility ≥40% adjustment range, successful operation validated across diverse implementations",
+        "parameter_adjustment_examples_high_income_nations": "Octave caps: 7+ (high productive capacity). Basic amounts: 5-8% GDP/capita. Conversion multipliers: 1-9x (sophisticated differentiation).",
+        "middle_income_nations": "Octave caps: 5 (moderate capacity). Basic amounts: 10-15% GDP/capita. Conversion multipliers: 1-7x.",
+        "low_income_nations": "Octave caps: 3 (limited capacity initially). Basic amounts: 15-20% GDP/capita. Conversion multipliers: 1-5x.",
+        "cultural_variation_accommodated": "Aesthetic criteria: Different communities set different phi-rate standards. Governance structures: Consensus, majority, elder councils—all compatible. Social organization: Multigenerational, nuclear, communal—all supported."
+      },
+      "anchors": {
+        "threshold": "viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, ≥40% parameter-flexibility range, validated across diverse implementations.",
+        "note": "",
+        "bands": {
+          "1.0": {
+            "text": "Explicit parameter adjustment mechanisms for diverse economic/cultural contexts, with reasoning for how they'd apply. *Participatory Economics (1.0): \"Different communities could have different consumption patterns, work structures. Councils respect cultural variation while coordinating economically.\"*",
+            "examples": [
+              {
+                "system": "Participatory Economics",
+                "cited": 1.0
+              }
+            ]
+          },
+          "0.5": {
+            "text": "Some real adaptability, but concentrated in a narrow cultural/economic range, or claimed but underspecified. *CCO-PTF-CIP-SZH (0.5): \"Parameter flexibility enables cultural adaptation... viable across high/middle/low-income contexts with adjustments. However, comprehensive implementation validation is limited to modeling.\"*",
+            "examples": [
+              {
+                "system": "CCO-PTF-CIP-SZH",
+                "cited": 0.5
+              }
+            ]
+          },
+          "0.0": {
+            "text": "Successful only in a narrow cultural context with no credible generalization argument, or requires a specific cultural precondition (e.g., a particular work ethic) the system cannot itself produce. *Market Socialism (0.0): \"Most successful in specific cultural contexts (Basque Country, Northern Italy, Scandinavian regions). Scaling to cultures with different traditions... is uncertain.\"* *Universal Basic Income (0.0): \"Work-centric cultures resist 'paying people to do nothing'... U.S. Protestant work ethic creates resistance.\"*",
+            "examples": [
+              {
+                "system": "Market Socialism",
+                "cited": 0.0
+              },
+              {
+                "system": "Universal Basic Income",
+                "cited": 0.0
+              }
+            ]
+          }
+        }
+      },
+      "sources": {
+        "definition": "Paper Section 6",
+        "anchors": "Paper Appendix H.7"
+      }
+    }
+  ]
+}

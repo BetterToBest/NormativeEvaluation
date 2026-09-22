@@ -1,0 +1,110 @@
+d18b_reexpression_s32.py -- decision D18(b): Ostrom-style commons governance's register, re-expressed
+========================================================================================================
+PASS the canonical block validates (NEEC_Ostrom_Commons_scoring_scratch.md): 14.0/26, 4 failures, Partially Adequate, 20 flags
+PASS every flag is classified exactly once (20 of 20)
+PASS every deciding phrase is located exactly once in the document
+
+[1] THE TWENTY FLAGS, CLASSIFIED BY THEIR OWN STATED ALTERNATIVE READINGS
+  C1.1   0.5 -> [0.0]  doubt                  replication: the original's value, unflagged
+         "a resource-tenure regime is not a poverty mechanism at all"
+  C1.2a  0.0 -> [0.5]  doubt                  replication: the original's value, unflagged
+         "a collectively held corpus managed on members' behalf is wealth-building in substance"
+  C1.2b  0.5 -> [1.0]  doubt                  replication: flagged, same alternative
+         "on the design reading, which is the basis on which Mutual Credit / LETS scored 1.0 here"
+  C1.3   0.5 -> [0.0]  scope: boundary (ii)   replication: the original's value, unflagged; a scope scenario moves it to 0.0
+         "community land trusts are an application of the governance form to land rather than part of the ..."
+  C1.4   0.5 -> [0.0]  doubt                  replication: flagged in mirror
+         "a bounded subsistence base for a minority of the population cannot hold poverty below 8% economy..."
+         note: reads the threshold against the declared, economy-wide population
+  C1.5   0.0 -> [0.5]  doubt                  replication: the original's value, unflagged
+         "principle 8's nested enterprises could in principle tile a whole population"
+         note: the same population; a claim about the design's capacity
+  C2.2   0.0 -> [0.5]  doubt                  replication: the original's value, unflagged
+         "a subsistence commons is unconditional *relative to the labour market*"
+  C2.4   0.5 -> [1.0]  doubt                  replication: flagged, same alternative
+         "the closest call in Domain 2"
+  C2.5   1.0 -> [0.5]  doubt                  replication: the original's value, unflagged
+         "a subsistence-dependent member forfeits the livelihood base on exit"
+  C3.1   0.5 -> [1.0]  scope: population (i)  replication: the original's value, unflagged
+         "the coverage clause should be read against the population the institution governs rather than th..."
+  C3.2   0.0 -> [0.5]  doubt                  replication: took the alternative, unflagged
+         "a real household-level hedge even though it is not a price-level instrument"
+  C3.3   0.5 -> [1.0]  doubt                  replication: the original's value, unflagged
+         "Alternative if resolved the other way: 1.0** — on the weight of the survival record."
+  C3.5   0.5 -> [1.0]  scope: frame (i)       replication: the original's value, unflagged
+         "reading externalisation against the governed resource rather than against the wider economy"
+         note: joined to a doubt (the apparatus's strength) that does not reach 1.0 alone: the section says the fourth clause is where it breaks
+  C4.1   1.0 -> [0.5]  doubt                  replication: took the alternative, unflagged
+         "the criterion also carries a debt-to-GDP clause and an absolute-carbon clause"
+  C4.2   0.5 -> [1.0]  scope: frame (i)       replication: flagged, same alternative
+         "is what ecological compliance means for a resource-governance mechanism"
+         note: the evidence alone does not reach the economy-wide threshold
+  C4.3   0.5 -> [0.0]  doubt                  replication: flagged in mirror
+         "quotas are an external correction rather than part of the mechanism"
+         note: BORDERLINE: a boundary clause (ii) joined to a doubt; kept, because the blind replication reached the alternative, 0.0, on the doubt alone
+  C4.4   0.5 -> [0.0]  doubt                  replication: the original's value, unflagged
+         "cannot be said to distribute power"
+  C4.5   0.5 -> [0.0]  doubt                  replication: the original's value, unflagged
+         "relocates extraction rather than eliminating it"
+  C5.2   0.5 -> [0.0]  doubt                  replication: the original's value, unflagged
+         "national forestry statutes are implementations of policy rather than of the scored mechanism"
+         note: BORDERLINE: a boundary clause (ii) joined to a doubt ('the governing fact'); kept, because the text does not settle whether the doubt alone reaches 0.0
+  C5.4   0.5 -> [1.0]  doubt                  replication: the original's value, unflagged
+         "on the weight of the survival record and the breadth of the ideological appeal"
+  scope questions: 4 (C1.3, C3.1, C3.5, C4.2); doubts: 16; borderline, kept as flags: C4.3, C5.2
+
+PASS no score changes: the re-expressed block carries the canonical vector
+PASS the re-expressed block validates as a canonical entry
+
+[2] THE REGISTER, AS SCORED AND RE-EXPRESSED
+  as scored      20 flags (20 calls); undisputed failures 0
+                 reading A       19.5/26  0 failures  Potentially Adequate
+                 reading B       14.0/26  4 failures  Partially Adequate
+                 reading C        9.5/26 11 failures  Structurally Inadequate
+                 D13: reach 3 tier(s) (PA/Part/SI); span 10.0 points / 11 failures; not tier-robust
+                 enumeration: 1,048,576 combinations; 46.7% keep the scored tier (assumes independent calls)
+  re-expressed   16 flags (16 calls); undisputed failures 0
+                 reading scored  14.0/26  4 failures  Partially Adequate
+                 reading up      18.0/26  0 failures  Potentially Adequate
+                 reading down    10.0/26 10 failures  Structurally Inadequate
+                 D13: reach 3 tier(s) (PA/Part/SI); span 8.0 points / 10 failures; not tier-robust
+                 enumeration: 65,536 combinations; 56.8% keep the scored tier (assumes independent calls)
+
+[3] THE SCENARIOS (reported, never scored; protocol 6.5)
+  knowledge-commons  C1.5 -> 0.5, C2.3 -> 1.0; 15.0/26, 3 failures, Partially Adequate
+  land-trusts-out    C1.3 -> 0.0; 13.5/26, 5 failures, Partially Adequate
+  resource-frame     C3.1 -> 1.0, C3.5 -> 1.0, C4.2 -> 1.0; 15.5/26, 4 failures, Partially Adequate
+  (replication)      no_housing_extension: C1.3 -> 0.0; 12.5/26, 6 failures, Structurally Inadequate
+
+[4] THE CORPUS POSITION (23 blocks from the eleven documents)
+  23 blocks, 23 distinct entries
+  as scored   : D13 rank 1 of 23 from the least tier-robust; next: Islamic Finance / Profit-Sharing Banking (reach 3 tier(s) (PA/Part/SI); span 5.0 points / 9 failures; not tier-robust)
+                flags: 20, more than the largest other register (16: Islamic Finance / Profit-Sharing Banking)
+  re-expressed: D13 rank 1 of 23 from the least tier-robust; next: Islamic Finance / Profit-Sharing Banking (reach 3 tier(s) (PA/Part/SI); span 5.0 points / 9 failures; not tier-robust)
+                flags: 16, as many as the largest other register (16: Islamic Finance / Profit-Sharing Banking)
+
+[5] SENSITIVITY TO THE TWO BORDERLINE CLASSIFICATIONS
+  as proposed (both kept)  16 flags; reach 3 tier(s) (PA/Part/SI); span 8.0 points / 10 failures; not tier-robust; D13 rank 1
+  C5.2 moved out           15 flags; reach 3 tier(s) (PA/Part/SI); span 7.5 points / 9 failures; not tier-robust; D13 rank 1
+  C4.3 moved out           15 flags; reach 3 tier(s) (PA/Part/SI); span 7.5 points / 9 failures; not tier-robust; D13 rank 1
+  both moved out           14 flags; reach 3 tier(s) (PA/Part/SI); span 7.0 points / 8 failures; not tier-robust; D13 rank 2
+
+[6] THE REPLICATION'S OWN REGISTER UNDER THE SAME TEST
+  C4.2's alternative in the replication ("if the mechanism's own domain -- rather than the whole economy -- is taken as the relevant frame") is a frame question (i); its other four flags are doubts.
+  PASS the replication's C4.2 phrase is located exactly once in NEEC_OstromCommons_replication_scoring.md
+  as delivered : 5 flags; reach 1 tier(s) (Part); span 2.5 points / 2 failures; tier-robust
+  re-expressed : 4 flags; reach 1 tier(s) (Part); span 2.0 points / 2 failures; tier-robust
+
+[7] WITH DECISION D26 AS RECOMMENDED (C3.2's 0.0 band reserved for an active inflationary mechanism)
+  entries scored 0.0 on C3.2: 1 (Ostrom-Style Commons Governance)
+  PASS the block with D18(b) and D26 applied validates, but for the one intended difference from the canonical corpus (C3.2)
+  scored: 14.5/26, 3 failures, Partially Adequate; 15 flags
+  reading up      18.0/26  0 failures  Potentially Adequate
+  reading down    10.5/26  9 failures  Structurally Inadequate
+  D13: reach 3 tier(s) (PA/Part/SI); span 7.5 points / 9 failures; not tier-robust; enumeration: 32,768 combinations; 65.6% keep the scored tier (assumes independent calls)
+  D13 rank 1 of 23 from the least tier-robust
+  scenario knowledge-commons  15.5/26, 2 failures, Potentially Adequate
+  scenario land-trusts-out    14.0/26, 4 failures, Partially Adequate
+  scenario resource-frame     16.0/26, 3 failures, Partially Adequate
+
+D18(b) PROPOSAL COMPUTED.

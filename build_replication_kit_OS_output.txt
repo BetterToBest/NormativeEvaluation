@@ -1,0 +1,41 @@
+================================================================================================
+build_replication_kit.py -- blind replication kit OS (Ostrom-style commons governance)
+================================================================================================
+inputs (pinned): SCORING_PROTOCOL.md (13e382bc), criteria.json (6542331e), criteria_schema.json (4aa5c6c6), summary_block_schema.json (8c0b62e9), neec_entry.py (6ddd3b0a), neec_corpus.json (ba3c7f70), build_corpus_file.py (adad7d3b)
+
+withheld from the blind copy of SCORING_PROTOCOL.md (9 passages, each anchor matched once):
+  1. header: the question deferred to the pilot (D18(b))
+  2. 3.1: the target among the declared examples of the mechanism class
+  3. 3.3: the target among the evaluations whose scope the owner confirmed
+  4. 3.4: decision D18(b), the target's flag register
+  5. 3.5: the worked example (the target's joint readings and scenario)
+  6. 6.4: the example comparing two entries' tier robustness
+  7. 9.2: the example code (the target's) replaced by another entry's
+  8. 11.6: the pilot this kit serves
+  9. 13, D21 note: the documents brought to whole percents
+corpus: 22 of 23 entries (the target withheld)
+leak scan: 6 files (every file but the brief), 5 terms and the code 'OS' in quotes, backticks or brackets: 0 hits
+
+kit self-test, run inside the kit (no canonical script present):
+  selftest: markdown round-trip ok; altered vector rejected: yes
+  selftest --candidate (corpus: neec_corpus.json, 22 systems; codes from neec_corpus.json):
+    ok   a well-formed candidate validates
+    ok   a key already in the corpus is rejected
+    ok   a display name already in the corpus is rejected
+    ok   a display name that does not begin with the key is rejected
+    ok   a retrofit-step1c record is rejected
+    ok   a summary that is not the vector's arithmetic is rejected
+    ok   a peer outside the corpus is rejected
+    ok   a code already in the corpus is rejected
+  selftest --candidate: 8 of 8 cases behave as expected
+
+files:
+  neec_replication_kit_OS/REPLICATION_BRIEF.md         md5 1441b665     3722 bytes
+  neec_replication_kit_OS/SCORING_PROTOCOL.md          md5 c824a8d2    39467 bytes
+  neec_replication_kit_OS/criteria.json                md5 6542331e    89573 bytes
+  neec_replication_kit_OS/criteria_schema.json         md5 4aa5c6c6     4248 bytes
+  neec_replication_kit_OS/neec_corpus.json             md5 9e803a00    11601 bytes
+  neec_replication_kit_OS/neec_entry.py                md5 6ddd3b0a    34832 bytes
+  neec_replication_kit_OS/summary_block_schema.json    md5 8c0b62e9     7435 bytes
+
+wrote neec_replication_kit_OS.zip (md5 81a254e8, 192020 bytes; 7 files, stored, fixed timestamps)

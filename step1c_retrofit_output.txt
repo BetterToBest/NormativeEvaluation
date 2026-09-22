@@ -1,0 +1,39 @@
+================================================================================================================================
+System                                OldD1/5  NewD1/6  OldTot/25  NewTot/26  OldPct  NewPct OldFail NewFail  OldTier -> NewTier
+================================================================================================================================
+Status Quo Market Capitalism              2.0      2.0       10.5       10.5     42%     40%       8       9  Structurally Inadequate -> Structurally Inadequate
+Nordic Social Democracy                   4.0      5.0       18.5       19.5     74%     75%       2       2  Potentially Adequate -> Potentially Adequate
+Centrally Planned Socialism               3.0      3.0       10.0       10.0     40%     38%      11      12  Structurally Inadequate -> Structurally Inadequate
+Market Socialism                          3.5      4.0       16.0       16.5     64%     63%       2       2  Potentially Adequate -> Potentially Adequate
+Libertarian Minarchism                    0.0      0.0        8.0        8.0     32%     31%      14      15  Structurally Inadequate -> Structurally Inadequate
+MMT + Job Guarantee                       4.0      3.5       16.0       15.5     64%     60%       2       3  Potentially Adequate -> Partially Adequate  <<< TIER CHANGE
+Universal Basic Income                    2.5      2.5       14.5       14.5     58%     56%       6       7  Structurally Inadequate -> Structurally Inadequate
+Degrowth Economics                        3.5      4.5       18.0       19.0     72%     73%       2       2  Potentially Adequate -> Potentially Adequate
+Stakeholder Capitalism                    2.0      2.0       10.0       10.0     40%     38%       8       9  Structurally Inadequate -> Structurally Inadequate
+Fully Automated Luxury Communism          4.0      3.0       14.0       13.0     56%     50%       7      10  Structurally Inadequate -> Structurally Inadequate
+Participatory Economics                   4.0      5.0       19.5       20.5     78%     79%       1       1  Potentially Adequate -> Potentially Adequate
+CCO-PTF-CIP-SZH                           4.5      5.5       23.5       24.5     94%     94%       0       0  Potentially Adequate -> Potentially Adequate
+Integral                                  2.0      3.0       18.5       19.5     74%     75%       3       3  Partially Adequate -> Partially Adequate
+
+================================================================================================================================
+TIER CHANGES:
+  MMT + Job Guarantee: Potentially Adequate (2 failures) -> Partially Adequate (3 failures)
+
+================================================================================================================================
+FULL RANKING UNDER NEW 26-CRITERION STRUCTURE (all 13 retrofitted systems,
+descending by new percentage) -- for reference; Georgism (52%) and Mutual
+Credit/LETS (56%) are already on this structure and can be merged in by eye:
+================================================================================================================================
+  CCO-PTF-CIP-SZH                        24.5/26 ( 94%)   0 failures  Potentially Adequate
+  Participatory Economics                20.5/26 ( 79%)   1 failures  Potentially Adequate
+  Nordic Social Democracy                19.5/26 ( 75%)   2 failures  Potentially Adequate
+  Integral                               19.5/26 ( 75%)   3 failures  Partially Adequate
+  Degrowth Economics                     19.0/26 ( 73%)   2 failures  Potentially Adequate
+  Market Socialism                       16.5/26 ( 63%)   2 failures  Potentially Adequate
+  MMT + Job Guarantee                    15.5/26 ( 60%)   3 failures  Partially Adequate
+  Universal Basic Income                 14.5/26 ( 56%)   7 failures  Structurally Inadequate
+  Fully Automated Luxury Communism       13.0/26 ( 50%)  10 failures  Structurally Inadequate
+  Status Quo Market Capitalism           10.5/26 ( 40%)   9 failures  Structurally Inadequate
+  Centrally Planned Socialism            10.0/26 ( 38%)  12 failures  Structurally Inadequate
+  Stakeholder Capitalism                 10.0/26 ( 38%)   9 failures  Structurally Inadequate
+  Libertarian Minarchism                  8.0/26 ( 31%)  15 failures  Structurally Inadequate

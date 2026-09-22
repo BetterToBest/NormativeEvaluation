@@ -1,0 +1,143 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bettertobest.github.io/NormativeEvaluation/schemas/summary_block_schema.json",
+  "title": "NEEC summary block (neec-summary-block/1.0)",
+  "description": "The machine-readable summary every NEEC scoring document carries (decision D3(a)). It is embedded in the document between the markers <!-- NEEC-SUMMARY-BLOCK --> and <!-- /NEEC-SUMMARY-BLOCK -->, as one fenced json code block. Structural rules are enforced here; arithmetic, corpus agreement and cross-field rules are enforced by neec_entry.py (SCORING_PROTOCOL.md, section 9).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "key", "code", "display_name", "record", "scope", "vector", "summary", "flags", "joint_readings", "scenarios"],
+  "$defs": {
+    "score": {"enum": [0.0, 0.5, 1.0]},
+    "criterion": {"type": "string", "pattern": "^C(1\\.(1|2a|2b|3|4|5)|[2-5]\\.[1-5])$"},
+    "tier": {"enum": ["Potentially Adequate", "Partially Adequate", "Structurally Inadequate"]},
+    "changes": {
+      "type": "object",
+      "propertyNames": {"$ref": "#/$defs/criterion"},
+      "additionalProperties": {"$ref": "#/$defs/score"}
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "failures", "tier"],
+      "properties": {
+        "total": {"type": "number", "minimum": 0, "maximum": 26, "multipleOf": 0.5},
+        "failures": {"type": "integer", "minimum": 0, "maximum": 26},
+        "tier": {"$ref": "#/$defs/tier"}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file"],
+      "properties": {
+        "file": {"type": "string"},
+        "locator": {"type": "string", "description": "A section, a variable name, or 'document'."},
+        "phrase": {"type": "string", "description": "Verbatim text (whitespace and emphasis markers normalised) that must occur at the locator."}
+      }
+    }
+  },
+  "properties": {
+    "schema": {"const": "neec-summary-block/1.0"},
+    "key": {"type": "string", "description": "The entry's key in the canonical SCORES dict."},
+    "code": {"type": "string", "pattern": "^[A-Z]{2,5}$", "description": "Short code, unique in the corpus."},
+    "display_name": {"type": "string", "description": "The entry's name in neec_scores.csv."},
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["documents", "scored", "structure"],
+      "properties": {
+        "documents": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "scored": {"type": "string"},
+        "structure": {"enum": ["native-v2", "retrofit-step1c"]}
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class", "basis"],
+      "properties": {
+        "class": {"enum": ["mechanism", "configured_national_economy", "comprehensive_system"]},
+        "basis": {"enum": ["stated", "assigned", "proposed"], "description": "stated: the entry's documents declare it; assigned: assigned by the project owner under D8 (decision D17, Session 28), the entry's documents predating the rule; proposed: assigned under D8, awaiting confirmation (no current entry)."},
+        "population": {"type": "string", "description": "How population-scope thresholds are applied (D8), as the documents state it."},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    },
+    "vector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["C1.1", "C1.2a", "C1.2b", "C1.3", "C1.4", "C1.5", "C2.1", "C2.2", "C2.3", "C2.4", "C2.5", "C3.1", "C3.2", "C3.3", "C3.4", "C3.5", "C4.1", "C4.2", "C4.3", "C4.4", "C4.5", "C5.1", "C5.2", "C5.3", "C5.4", "C5.5"],
+      "propertyNames": {"$ref": "#/$defs/criterion"},
+      "additionalProperties": {"$ref": "#/$defs/score"}
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["D1", "D2", "D3", "D4", "D5", "total", "failures", "tier"],
+      "properties": {
+        "D1": {"type": "number", "minimum": 0, "maximum": 6, "multipleOf": 0.5},
+        "D2": {"type": "number", "minimum": 0, "maximum": 5, "multipleOf": 0.5},
+        "D3": {"type": "number", "minimum": 0, "maximum": 5, "multipleOf": 0.5},
+        "D4": {"type": "number", "minimum": 0, "maximum": 5, "multipleOf": 0.5},
+        "D5": {"type": "number", "minimum": 0, "maximum": 5, "multipleOf": 0.5},
+        "total": {"type": "number", "minimum": 0, "maximum": 26, "multipleOf": 0.5},
+        "failures": {"type": "integer", "minimum": 0, "maximum": 26},
+        "tier": {"$ref": "#/$defs/tier"}
+      }
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["criterion", "scored", "alternatives", "basis"],
+        "properties": {
+          "criterion": {"$ref": "#/$defs/criterion"},
+          "scored": {"$ref": "#/$defs/score"},
+          "alternatives": {"type": "array", "minItems": 1, "maxItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/score"}},
+          "basis": {"enum": ["register", "stated", "direction-stated", "both-directions"],
+                    "description": "register: from a verifier's flag register; stated: the document names the alternative score(s); direction-stated: the document names a direction only; both-directions: the document argues both ways without naming a score (encoded as both adjacent values, D16)."},
+          "reading": {"type": ["string", "null"], "description": "Short label for the alternative reading, where the documents give one."},
+          "tracks": {"type": ["string", "null"], "description": "Criterion of another flag in this block. A tracking flag is not an independent call: it takes its alternative exactly when the tracked flag takes its own."},
+          "source": {"$ref": "#/$defs/source"}
+        }
+      }
+    },
+    "joint_readings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "basis", "resolve", "result"],
+        "properties": {
+          "id": {"type": "string"},
+          "label": {"type": "string"},
+          "basis": {"enum": ["scored", "stated", "extremes"],
+                    "description": "scored: the entry as scored (resolve is empty); stated: a coherent joint reading stated in the documents (D6); extremes: every flag resolved upward, or every flag resolved downward (the default when none is stated, D16)."},
+          "resolve": {"$ref": "#/$defs/changes"},
+          "result": {"$ref": "#/$defs/result"}
+        }
+      }
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "kind", "changes", "result"],
+        "properties": {
+          "id": {"type": "string"},
+          "label": {"type": "string"},
+          "kind": {"enum": ["scope", "other"]},
+          "changes": {"$ref": "#/$defs/changes"},
+          "result": {"$ref": "#/$defs/result"}
+        }
+      }
+    },
+    "peers": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Canonical keys of the entries this entry was calibrated against before its scores were fixed (D9). Optional; absent for entries scored before the protocol."
+    }
+  }
+}

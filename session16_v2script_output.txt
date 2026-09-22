@@ -1,0 +1,228 @@
+System                                 D1/6    D2    D3    D4    D5  Total/26  Check
+Status Quo Market Capitalism            2.0   2.0   2.0   0.5   4.0      10.5  OK
+Nordic Social Democracy                 5.0   3.5   3.5   3.5   4.0      19.5  OK
+Centrally Planned Socialism             3.0   0.5   2.5   3.0   1.0      10.0  OK
+Market Socialism                        4.0   3.5   3.0   3.0   3.0      16.5  OK
+Libertarian Minarchism                  0.0   3.0   0.5   1.5   3.0       8.0  OK
+MMT + Job Guarantee                     3.5   2.5   3.0   3.5   3.0      15.5  OK
+Universal Basic Income                  2.5   3.0   3.0   3.0   3.0      14.5  OK
+Degrowth Economics                      4.5   3.5   4.0   5.0   2.0      19.0  OK
+Stakeholder Capitalism                  2.0   2.0   2.5   1.0   2.5      10.0  OK
+Fully Automated Luxury Communism        3.0   3.0   3.0   3.5   0.5      13.0  OK
+Participatory Economics                 5.0   4.0   4.5   4.0   3.0      20.5  OK
+CCO-PTF-CIP-SZH                         5.5   5.0   5.0   4.5   4.5      24.5  OK
+Integral                                3.0   4.5   5.0   4.5   2.5      19.5  OK
+Georgism / Land Value Tax               2.0   3.0   3.0   2.5   3.0      13.5  OK
+Mutual Credit / LETS                    2.0   3.0   3.0   2.5   4.0      14.5  OK
+Doughnut Economics                      1.0   2.0   3.0   2.5   3.0      11.5  OK
+Universal Basic Services                1.5   3.0   3.0   2.5   3.5      13.5  OK
+
+All 17 systems' criterion-level transcriptions verified against published domain/overall totals.
+
+verify_unchanged_from_legacy: PASS -- all 21 non-wealth criteria byte-identical across all 13 retrofitted systems
+
+====================================================================================================
+BEFORE/AFTER: legacy 25-criterion total vs. retrofitted 26-criterion total
+(13 systems that existed under the old structure; Georgism/Mutual Credit
+were never on the old structure, so have no 'before' row)
+====================================================================================================
+System                                 Old /25   Old %   New /26   New %  Old Fail  New Fail  Tier change?
+Status Quo Market Capitalism              10.5     42%      10.5     40%                   9
+Nordic Social Democracy                   18.5     74%      19.5     75%                   2
+Centrally Planned Socialism               10.0     40%      10.0     38%                  12
+Market Socialism                          16.0     64%      16.5     63%                   2
+Libertarian Minarchism                     8.0     32%       8.0     31%                  15
+MMT + Job Guarantee                       16.0     64%      15.5     60%                   3
+Universal Basic Income                    14.5     58%      14.5     56%                   7
+Degrowth Economics                        18.0     72%      19.0     73%                   2
+Stakeholder Capitalism                    10.0     40%      10.0     38%                   9
+Fully Automated Luxury Communism          14.0     56%      13.0     50%                  10
+Participatory Economics                   19.5     78%      20.5     79%                   1
+CCO-PTF-CIP-SZH                           23.5     94%      24.5     94%                   0
+Integral                                  18.5     74%      19.5     75%                   3
+
+====================================================================================================
+RANKINGS UNDER EACH SCHEME, ALL 17 SYSTEMS (by weighted %, descending)
+====================================================================================================
+
+--- Equal (baseline) (max possible = 26.0) ---
+   1. CCO-PTF-CIP-SZH                       24.50  ( 94.2%)
+   2. Participatory Economics               20.50  ( 78.8%)
+   3. Nordic Social Democracy               19.50  ( 75.0%)
+   4. Integral                              19.50  ( 75.0%)
+   5. Degrowth Economics                    19.00  ( 73.1%)
+   6. Market Socialism                      16.50  ( 63.5%)
+   7. MMT + Job Guarantee                   15.50  ( 59.6%)
+   8. Universal Basic Income                14.50  ( 55.8%)
+   9. Mutual Credit / LETS                  14.50  ( 55.8%)
+  10. Georgism / Land Value Tax             13.50  ( 51.9%)
+  11. Universal Basic Services              13.50  ( 51.9%)
+  12. Fully Automated Luxury Communism      13.00  ( 50.0%)
+  13. Doughnut Economics                    11.50  ( 44.2%)
+  14. Status Quo Market Capitalism          10.50  ( 40.4%)
+  15. Centrally Planned Socialism           10.00  ( 38.5%)
+  16. Stakeholder Capitalism                10.00  ( 38.5%)
+  17. Libertarian Minarchism                 8.00  ( 30.8%)
+
+--- Material-Security-Weighted (D1 x2) (max possible = 32.0) ---
+   1. CCO-PTF-CIP-SZH                       30.00  ( 93.8%)
+   2. Participatory Economics               25.50  ( 79.7%)
+   3. Nordic Social Democracy               24.50  ( 76.6%)
+   4. Degrowth Economics                    23.50  ( 73.4%)
+   5. Integral                              22.50  ( 70.3%)
+   6. Market Socialism                      20.50  ( 64.1%)
+   7. MMT + Job Guarantee                   19.00  ( 59.4%)
+   8. Universal Basic Income                17.00  ( 53.1%)
+   9. Mutual Credit / LETS                  16.50  ( 51.6%)
+  10. Fully Automated Luxury Communism      16.00  ( 50.0%)
+  11. Georgism / Land Value Tax             15.50  ( 48.4%)
+  12. Universal Basic Services              15.00  ( 46.9%)
+  13. Centrally Planned Socialism           13.00  ( 40.6%)
+  14. Status Quo Market Capitalism          12.50  ( 39.1%)
+  15. Doughnut Economics                    12.50  ( 39.1%)
+  16. Stakeholder Capitalism                12.00  ( 37.5%)
+  17. Libertarian Minarchism                 8.00  ( 25.0%)
+
+--- Feasibility-Discounted (D5 x0.5) (max possible = 23.5) ---
+   1. CCO-PTF-CIP-SZH                       22.25  ( 94.7%)
+   2. Participatory Economics               19.00  ( 80.9%)
+   3. Integral                              18.25  ( 77.7%)
+   4. Degrowth Economics                    18.00  ( 76.6%)
+   5. Nordic Social Democracy               17.50  ( 74.5%)
+   6. Market Socialism                      15.00  ( 63.8%)
+   7. MMT + Job Guarantee                   14.00  ( 59.6%)
+   8. Universal Basic Income                13.00  ( 55.3%)
+   9. Fully Automated Luxury Communism      12.75  ( 54.3%)
+  10. Mutual Credit / LETS                  12.50  ( 53.2%)
+  11. Georgism / Land Value Tax             12.00  ( 51.1%)
+  12. Universal Basic Services              11.75  ( 50.0%)
+  13. Doughnut Economics                    10.00  ( 42.6%)
+  14. Centrally Planned Socialism            9.50  ( 40.4%)
+  15. Stakeholder Capitalism                 8.75  ( 37.2%)
+  16. Status Quo Market Capitalism           8.50  ( 36.2%)
+  17. Libertarian Minarchism                 6.50  ( 27.7%)
+
+--- Crisis-Risk-Weighted (C1.4, C4.2 x3) (max possible = 30.0) ---
+   1. CCO-PTF-CIP-SZH                       28.50  ( 95.0%)
+   2. Participatory Economics               24.50  ( 81.7%)
+   3. Integral                              22.50  ( 75.0%)
+   4. Degrowth Economics                    22.00  ( 73.3%)
+   5. Nordic Social Democracy               21.50  ( 71.7%)
+   6. Market Socialism                      18.50  ( 61.7%)
+   7. MMT + Job Guarantee                   18.50  ( 61.7%)
+   8. Universal Basic Income                17.50  ( 58.3%)
+   9. Fully Automated Luxury Communism      17.00  ( 56.7%)
+  10. Mutual Credit / LETS                  16.50  ( 55.0%)
+  11. Georgism / Land Value Tax             15.50  ( 51.7%)
+  12. Universal Basic Services              15.50  ( 51.7%)
+  13. Doughnut Economics                    13.50  ( 45.0%)
+  14. Centrally Planned Socialism           12.00  ( 40.0%)
+  15. Status Quo Market Capitalism          10.50  ( 35.0%)
+  16. Stakeholder Capitalism                10.00  ( 33.3%)
+  17. Libertarian Minarchism                 8.00  ( 26.7%)
+
+====================================================================================================
+ADEQUACY TIER (failure-count based) -- invariant to ALL weighting by construction
+====================================================================================================
+  Status Quo Market Capitalism          9 failures -> Structurally Inadequate
+  Nordic Social Democracy               2 failures -> Potentially Adequate
+  Centrally Planned Socialism          12 failures -> Structurally Inadequate
+  Market Socialism                      2 failures -> Potentially Adequate
+  Libertarian Minarchism               15 failures -> Structurally Inadequate
+  MMT + Job Guarantee                   3 failures -> Partially Adequate
+  Universal Basic Income                7 failures -> Structurally Inadequate
+  Degrowth Economics                    2 failures -> Potentially Adequate
+  Stakeholder Capitalism                9 failures -> Structurally Inadequate
+  Fully Automated Luxury Communism     10 failures -> Structurally Inadequate
+  Participatory Economics               1 failures -> Potentially Adequate
+  CCO-PTF-CIP-SZH                       0 failures -> Potentially Adequate
+  Integral                              3 failures -> Partially Adequate
+  Georgism / Land Value Tax             2 failures -> Potentially Adequate
+  Mutual Credit / LETS                  3 failures -> Partially Adequate
+  Doughnut Economics                    8 failures -> Structurally Inadequate
+  Universal Basic Services              3 failures -> Partially Adequate
+
+====================================================================================================
+FULL PAIRWISE STRICT-DOMINANCE MATRIX (26-criterion basis)
+Note: some pairs that were 'Strong Dominance' language in Section 11.3
+were already NOT strict formal dominance under the legacy 25-criterion
+structure either (typically via C4.5, which Step 1c never touches) --
+this is a pre-existing corpus property, independently confirmed this
+session, not something the retrofit introduces.
+====================================================================================================
+  CCO-PTF-CIP-SZH  vs  Status Quo Market Capitalism     CCO-PTF strictly dominates
+  CCO-PTF-CIP-SZH  vs  Nordic Social Democracy          non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Centrally Planned Socialism      non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Market Socialism                 CCO-PTF strictly dominates
+  CCO-PTF-CIP-SZH  vs  Libertarian Minarchism           non-dominated pair
+  CCO-PTF-CIP-SZH  vs  MMT + Job Guarantee              CCO-PTF strictly dominates
+  CCO-PTF-CIP-SZH  vs  Universal Basic Income           non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Degrowth Economics               non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Stakeholder Capitalism           CCO-PTF strictly dominates
+  CCO-PTF-CIP-SZH  vs  Fully Automated Luxury Communism non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Participatory Economics          non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Integral                         non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Georgism / Land Value Tax        CCO-PTF strictly dominates
+  CCO-PTF-CIP-SZH  vs  Mutual Credit / LETS             non-dominated pair
+  CCO-PTF-CIP-SZH  vs  Doughnut Economics               CCO-PTF strictly dominates
+  CCO-PTF-CIP-SZH  vs  Universal Basic Services         CCO-PTF strictly dominates
+
+====================================================================================================
+DOMINANCE-PAIR SPOT CHECK (guaranteed positive under any positive weighting
+by Appendix A.2 Theorem 5 wherever strict dominance holds at all --
+confirmatory for genuine dominance pairs only)
+====================================================================================================
+
+  CCO-PTF-CIP-SZH  vs  Status Quo Market Capitalism   (strict formal dominance: True)
+    Equal (baseline)                        24.50 >  10.50
+    Material-Security-Weighted (D1 x2)      30.00 >  12.50
+    Feasibility-Discounted (D5 x0.5)        22.25 >   8.50
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  10.50
+
+  CCO-PTF-CIP-SZH  vs  Nordic Social Democracy   (strict formal dominance: False)
+    Equal (baseline)                        24.50 >  19.50
+    Material-Security-Weighted (D1 x2)      30.00 >  24.50
+    Feasibility-Discounted (D5 x0.5)        22.25 >  17.50
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  21.50
+
+  Participatory Economics  vs  Stakeholder Capitalism   (strict formal dominance: False)
+    Equal (baseline)                        20.50 >  10.00
+    Material-Security-Weighted (D1 x2)      25.50 >  12.00
+    Feasibility-Discounted (D5 x0.5)        19.00 >   8.75
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    24.50 >  10.00
+
+  Mutual Credit / LETS  vs  Georgism / Land Value Tax   (strict formal dominance: False)
+    Equal (baseline)                        14.50 >  13.50
+    Material-Security-Weighted (D1 x2)      16.50 >  15.50
+    Feasibility-Discounted (D5 x0.5)        12.50 >  12.00
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    16.50 >  15.50
+
+  Universal Basic Services  vs  Georgism / Land Value Tax   (strict formal dominance: False)
+    Equal (baseline)                        13.50 <=  13.50
+    Material-Security-Weighted (D1 x2)      15.00 <=  15.50
+    Feasibility-Discounted (D5 x0.5)        11.75 <=  12.00
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    15.50 <=  15.50
+
+  Universal Basic Services  vs  Doughnut Economics   (strict formal dominance: False)
+    Equal (baseline)                        13.50 >  11.50
+    Material-Security-Weighted (D1 x2)      15.00 >  12.50
+    Feasibility-Discounted (D5 x0.5)        11.75 >  10.00
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    15.50 >  13.50
+
+  Universal Basic Services  vs  Mutual Credit / LETS   (strict formal dominance: False)
+    Equal (baseline)                        13.50 <=  14.50
+    Material-Security-Weighted (D1 x2)      15.00 <=  16.50
+    Feasibility-Discounted (D5 x0.5)        11.75 <=  12.50
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    15.50 <=  16.50
+
+  CCO-PTF-CIP-SZH  vs  Doughnut Economics   (strict formal dominance: True)
+    Equal (baseline)                        24.50 >  11.50
+    Material-Security-Weighted (D1 x2)      30.00 >  12.50
+    Feasibility-Discounted (D5 x0.5)        22.25 >  10.00
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  13.50
+
+  CCO-PTF-CIP-SZH  vs  Universal Basic Services   (strict formal dominance: True)
+    Equal (baseline)                        24.50 >  13.50
+    Material-Security-Weighted (D1 x2)      30.00 >  15.00
+    Feasibility-Discounted (D5 x0.5)        22.25 >  11.75
+    Crisis-Risk-Weighted (C1.4, C4.2 x3)    28.50 >  15.50

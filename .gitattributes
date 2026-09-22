@@ -1,0 +1,3 @@
+# Store and check out every file byte for byte. The harness compares outputs byte for byte and the
+# handoffs pin MD5 fingerprints, so no line-ending conversion may apply (neec_scores.csv uses CRLF).
+* -text

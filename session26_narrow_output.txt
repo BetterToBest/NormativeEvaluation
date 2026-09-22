@@ -1,0 +1,16 @@
+narrow_verifiers_s26.py -- the three Step 1b entry verifiers, narrowed (decision D12)
+inputs pinned: 3 files
+
+verify_qatar_s25_snapshot.py -> verify_qatar.py: 9 edits
+  Q-doc Q-title Q-identity Q-pairs-print Q-pairs-check Q-group5 Q-worst2 Q-claims Q-summary
+  wrote verify_qatar.py  md5 0403e4ccdc8cb817d13e712eade81def
+
+verify_islamicfinance_s25_snapshot.py -> verify_islamicfinance.py: 13 edits
+  F-doc F-corpus-helpers F-fill F-section F-facts F-main F-fill-mode F-title F-identity F-group6 F-numbers F-pairs-claim F-generated
+  wrote verify_islamicfinance.py  md5 0c775683dae77f135a3dd5364b02b357
+
+verify_ostrom_s25_snapshot.py -> verify_ostrom.py: 11 edits
+  O-doc O-corpus-helpers O-corpus-markers O-corpus-table-and-facts O-identity-A1 O-identity-A3 O-groupF O-groupH O-run O-title O-main
+  wrote verify_ostrom.py  md5 73bc65c9ef5b971e8588a44212fee516
+
+TOTAL: 33 edits
