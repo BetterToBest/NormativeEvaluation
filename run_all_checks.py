@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 12 (Session 37). Runs every verification and analysis script on file
+Version 13 (Session 38). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -100,7 +100,12 @@ Session 35 audit, which compares the uncorrected anchors with the definitions) r
 first kit still rebuilds byte for byte with the revised builder: 79 checks. Version 12 (Session 37) adds
 rescoring_s37.py, part (a) of the rescoring pass (decisions D28, D29, D31): the 33 stated-shortfall 1.0s
 re-estimated clause by clause, their consequences computed without changing any corpus file, and the
-record NEEC_Rescoring_s37.md checked against its generated tables: 80 checks.
+record NEEC_Rescoring_s37.md checked against its generated tables: 80 checks. Version 13 (Session 38) adds
+rescoring_s38.py, the first group of part (b): the 29 part (b) units on the five criteria whose readings part (a)
+fixed (C3.4, C5.3, C2.4, C1.3, C2.3), their consequences computed cumulatively with part (a), the pinned
+Compassionism Simulation runs of cco_simulation_checks_s38.js checked by engine digest (the simulation's source is
+not in this directory, so the JavaScript itself is not rerun here), and the record NEEC_Rescoring_s38.md checked
+against its generated tables: 81 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -703,7 +708,27 @@ S37_CHECKS = [
          stdout="rescoring_s37_output.txt", stderr=EMPTY),
 ]
 
-CHECKS = S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS + S36_CHECKS + S37_CHECKS
+# Session 38: the rescoring pass, part (b), first group (appended after the version 12 checks).
+S38_CHECKS = [
+    dict(name="rescoring_s38.py: rescoring pass part (b), first group, the 29 units of C3.4, C5.3, C2.4, C1.3 and "
+              "C2.3 re-estimated clause by clause (D28, D31); consequences with part (a), no corpus file changed",
+         cmd=["python", "rescoring_s38.py"],
+         files={k: k for k in ("rescoring_s38.py", "rescoring_s37.py", "r4_audit_s35.py", "criteria.json",
+                               "neec_corpus.json", "NEEC_Rescoring_s38.md", "cco_simulation_checks_s38_output.txt",
+                               "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
+                               "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_MutualCredit_LETS_scoring_scratch.md",
+                               "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                               "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="rescoring_s38_output.txt", stderr=EMPTY),
+]
+
+CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS + S36_CHECKS + S37_CHECKS
+          + S38_CHECKS)
 
 
 def md5(data):

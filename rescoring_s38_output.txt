@@ -1,0 +1,110 @@
+NEEC rescoring pass, part (b), first group: C3.4, C5.3, C2.4, C1.3, C2.3 (NEEC_Rescoring_s38.md)
+inputs: criteria.json, neec_corpus.json, r4_audit_s35.py, rescoring_s37.py, 11 scoring documents, cco_simulation_checks_s38_output.txt, NEEC_Rescoring_s38.md
+
+[1] THE POPULATION
+  PASS D28's population 134; part (a) 33; part (b) 101
+  PASS this group holds exactly the part (b) units of C3.4, C5.3, C2.4, C1.3, C2.3: 29, every one a corpus 1.0
+  per criterion: C3.4 10, C5.3 6, C2.4 6, C1.3 1, C2.3 6
+  PASS C5.1's second clause remains to be tested on 11 1.0s outside D28's population
+
+[2] THE RECORDS
+  PASS every unit has one status per clause, in Appendix B's order; every cleared, short, out-of-reach and moot clause carries its source or reason
+  clause statuses: cleared 53, short 6, not shown 39, out of reach 3, moot 1
+
+[3] THE RULE (D28)
+  PASS every verdict follows D28: 1.0 only if every clause is cleared or moot, otherwise 0.5
+  PASS no unit is scored 0.0 in this pass (D28(f))
+  PASS 2 of 29 stand (MS C3.4, UBS C5.3); 27 become 0.5 (13.5 points)
+  PASS every flag names alternatives other than the scored value
+  PASS every clause the audit coded A is cleared and every N moot: no own-source exception in this group
+
+[4] REACH (D28(c)) AND EXTENSIONS (D31)
+  PASS out of reach: MMT C2.4 clause 1, MMT C2.4 clause 2, MMT C2.4 clause 3; no reach coding revised in this group
+
+[5] FLAG REGISTERS (against the summary blocks, cumulatively with part (a))
+  PASS flags added 2 (CCO C3.4, UBS C5.3); none removed
+  CCO: 0 flags -> 1 after parts (a) and (b) so far
+  CPS: 1 flags -> 2 after parts (a) and (b) so far
+  IF: 16 flags -> 15 after parts (a) and (b) so far
+  LM: 0 flags -> 1 after parts (a) and (b) so far
+  OS: 15 flags -> 16 after parts (a) and (b) so far
+  QA: 12 flags -> 11 after parts (a) and (b) so far
+  SG: 11 flags -> 10 after parts (a) and (b) so far
+  SQ: 0 flags -> 1 after parts (a) and (b) so far
+  SWF: 4 flags -> 5 after parts (a) and (b) so far
+  UBS: 3 flags -> 4 after parts (a) and (b) so far
+
+[6] CONSEQUENCES (computed here; no corpus file changes)
+  PASS no failure count changes, so no tier changes (D28(f))
+  PASS 72 D28 units remain for part (b), plus C5.1's second clause on 11 1.0s
+  Left for part (b): 72 D28 units (C1.1 9, C1.4 2, C2.1 5, C2.5 10, C3.1 5, C3.2 4, C3.5 2, C4.1 8, C4.2 6, C4.3 6, C4.4 4, C4.5 3, C5.2 4, C5.4 2, C5.5 2) and C5.1's second clause on 11 1.0s (NSD, MS, UBI, CCO, MC, UBS, SWF, CN, SG, QA, OS).
+  PASS part (a)'s result reproduced: 15 dominance pairs, frontier 11
+  After this group the corpus has 14 dominance pairs against 15 after part (a) (new: IF>SC; lost: CCO>MS, CCO>SWF), and its frontier holds 13 entries against 11 (NSD, MS, MMT, UBI, DG, FALC, PE, CCO, INT, MC, SWF, IF, OS). First place: CCO, 24.0 after part (a), 22.5 now.
+
+[7] THE SIMULATION RUNS (cco_simulation_checks_s38_output.txt)
+  PASS runs made on the pinned engine: harness.js md5 035d1be82ab497e76a234615a04c0ce9 (compassionism-simulation cd0ceec, v4.15)
+  PASS the engine reproduces the simulation's documented seed-42 reference run
+  PASS two run tables read (participation; Basic Unit adjustment)
+
+[8] THE RECORD'S TABLES (generated here; NEEC_Rescoring_s38.md must contain them verbatim)
+  PASS NEEC_Rescoring_s38.md contains all 35 generated tables
+
+| Entry | Criterion | Clauses | Verdict | Flag |
+|---|---|---|---|---|
+| NSD | C1.3 | C S | 1.0 → 0.5 |  |
+| NSD | C3.4 | C C C S | 1.0 → 0.5 |  |
+| MS | C2.3 | U C U | 1.0 → 0.5 |  |
+| MS | C2.4 | C U U | 1.0 → 0.5 |  |
+| MS | C3.4 | C C C C | 1.0 → 1.0 |  |
+| MS | C5.3 | C C U U | 1.0 → 0.5 |  |
+| MMT | C2.4 | R R R | 1.0 → 0.5 |  |
+| MMT | C3.4 | C U U U | 1.0 → 0.5 |  |
+| UBI | C3.4 | C S C U | 1.0 → 0.5 |  |
+| DG | C2.3 | U C U | 1.0 → 0.5 |  |
+| DG | C2.4 | C U U | 1.0 → 0.5 |  |
+| DG | C3.4 | C C C U | 1.0 → 0.5 |  |
+| SC | C3.4 | C U S U | 1.0 → 0.5 |  |
+| SC | C5.3 | C C U U | 1.0 → 0.5 |  |
+| FALC | C2.3 | C C U | 1.0 → 0.5 |  |
+| PE | C2.3 | U C U | 1.0 → 0.5 |  |
+| PE | C2.4 | C U U | 1.0 → 0.5 |  |
+| PE | C3.4 | C C C U | 1.0 → 0.5 |  |
+| CCO | C2.3 | U C U | 1.0 → 0.5 |  |
+| CCO | C2.4 | C U U | 1.0 → 0.5 |  |
+| CCO | C3.4 | C C C U | 1.0 → 0.5 | alternative 1.0 |
+| INT | C2.3 | C C U | 1.0 → 0.5 |  |
+| INT | C2.4 | C U U | 1.0 → 0.5 |  |
+| MC | C3.4 | C U U C | 1.0 → 0.5 |  |
+| MC | C5.3 | C C S M | 1.0 → 0.5 |  |
+| DE | C5.3 | C C C U | 1.0 → 0.5 |  |
+| UBS | C3.4 | C S U U | 1.0 → 0.5 |  |
+| UBS | C5.3 | C C C C | 1.0 → 1.0 | alternative 0.5 |
+| SG | C5.3 | C C U C | 1.0 → 0.5 |  |
+
+| Entry | Published (rank) | After part (a) (rank) | After this group (rank) | Change here | Failures | Tier | D28 units left | C5.1 clause 2 | Floor if all fall |
+|---|---:|---:|---:|---:|---:|---|---:|---:|---:|
+| CCO | 24.5 (1) | 24.0 (1) | 22.5 (1) | -1.5 | 0 | Potentially Adequate | 8 | 1 | 18.0 |
+| PE | 20.5 (2) | 20.5 (2) | 19.0 (2) | -1.5 | 1 | Potentially Adequate | 10 | 0 | 14.0 |
+| NSD | 19.5 (3) | 17.0 (5) | 16.0 (5) | -1.0 | 2 | Potentially Adequate | 5 | 1 | 13.0 |
+| INT | 19.5 (3) | 19.0 (3) | 18.0 (3) | -1.0 | 3 | Partially Adequate | 9 | 0 | 13.5 |
+| DG | 19.0 (5) | 19.0 (3) | 17.5 (4) | -1.5 | 2 | Potentially Adequate | 8 | 0 | 13.5 |
+| MS | 16.5 (6) | 15.5 (6) | 14.0 (6) | -1.5 | 2 | Potentially Adequate | 1 | 1 | 13.0 |
+| MMT | 15.5 (7) | 14.0 (8) | 13.0 (10) | -1.0 | 3 | Partially Adequate | 3 | 0 | 11.5 |
+| UBI | 14.5 (8) | 13.0 (12) | 12.5 (13) | -0.5 | 7 | Structurally Inadequate | 3 | 1 | 10.5 |
+| MC | 14.5 (8) | 14.5 (7) | 13.5 (9) | -1.0 | 3 | Partially Adequate | 2 | 1 | 12.0 |
+| OS | 14.5 (8) | 14.0 (8) | 14.0 (6) | 0.0 | 3 | Partially Adequate | 2 | 1 | 12.5 |
+| SWF | 14.0 (11) | 14.0 (8) | 14.0 (6) | 0.0 | 3 | Partially Adequate | 2 | 1 | 12.5 |
+| SG | 14.0 (11) | 13.0 (12) | 12.5 (13) | -0.5 | 4 | Partially Adequate | 0 | 1 | 12.0 |
+| GEO | 13.5 (13) | 13.0 (12) | 13.0 (10) | 0.0 | 2 | Potentially Adequate | 1 | 0 | 12.5 |
+| UBS | 13.5 (13) | 13.5 (11) | 13.0 (10) | -0.5 | 3 | Partially Adequate | 1 | 1 | 12.0 |
+| IF | 13.5 (13) | 12.5 (15) | 12.5 (13) | 0.0 | 5 | Partially Adequate | 2 | 0 | 11.5 |
+| FALC | 13.0 (16) | 12.5 (15) | 12.0 (16) | -0.5 | 10 | Structurally Inadequate | 6 | 0 | 9.0 |
+| DE | 11.5 (17) | 11.0 (17) | 10.5 (17) | -0.5 | 8 | Structurally Inadequate | 3 | 0 | 9.0 |
+| SQ | 10.5 (18) | 10.0 (18) | 10.0 (18) | 0.0 | 9 | Structurally Inadequate | 1 | 0 | 9.5 |
+| CPS | 10.0 (19) | 8.5 (21) | 8.5 (21) | 0.0 | 12 | Structurally Inadequate | 2 | 0 | 7.5 |
+| SC | 10.0 (19) | 10.0 (18) | 9.0 (20) | -1.0 | 9 | Structurally Inadequate | 1 | 0 | 8.5 |
+| CN | 10.0 (19) | 10.0 (18) | 10.0 (18) | 0.0 | 8 | Structurally Inadequate | 0 | 1 | 9.5 |
+| QA | 9.0 (22) | 8.5 (21) | 8.5 (21) | 0.0 | 10 | Structurally Inadequate | 0 | 1 | 8.0 |
+| LM | 8.0 (23) | 6.5 (23) | 6.5 (23) | 0.0 | 15 | Structurally Inadequate | 2 | 0 | 5.5 |
+
+RESCORING PART (B), FIRST GROUP, COMPUTED.
