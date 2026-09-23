@@ -1,0 +1,25 @@
+Compassionism Simulation engine: harness.js, md5 035d1be82ab497e76a234615a04c0ce9 (compassionism-simulation cd0ceec, v4.15)
+seed-42 Full Integration 20yr: median BLEI 1965 d, wealth poverty 16.6%, Gini 0.534, System Stability 88.5% (documented: 1965 d, 16.6%, 0.534, 88.5%)
+CCO_MIN_PARTICIPATION = 0.55 (read by index.html only to issue a warning)
+
+Run 1. Participation, N=100 seeds (1-100), 500 agents, 20 years, shock off; means
+
+| Configuration | Wealth poverty | BLEI poverty | System Stability |
+|---|---:|---:|---:|
+| Baseline (no systems) | 71.4% | 70.5% | 98.5% |
+| Full Integration, participation 30% | 26.9% | 24.2% | 88.3% |
+| Full Integration, participation 45% | 23.2% | 20.6% | 88.4% |
+| Full Integration, participation 55% | 20.9% | 18.1% | 88.6% |
+| Full Integration, participation 78% (reference) | 15.3% | 12.6% | 88.7% |
+
+Participation 30%: wealth poverty below Baseline in 100 of 100 seeds; lowest System Stability 86.7%.
+Participation 45%: wealth poverty below Baseline in 100 of 100 seeds; lowest System Stability 86.4%.
+
+Run 2. Basic Unit stepped from year 10 and held, reference preset, N=100 seeds
+
+| Step | Final wealth poverty, adjusted | Final wealth poverty, unadjusted | Largest one-year excess rise |
+|---|---:|---:|---:|
+| x0.7 | 16.0% | 15.3% | 1.4 points |
+| x0.8 | 15.8% | 15.3% | 1.4 points |
+| x1.2 | 14.9% | 15.3% | 1.6 points |
+| x1.3 | 14.7% | 15.3% | 1.6 points |
