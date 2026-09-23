@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 11 (Session 36). Runs every verification and analysis script on file
+Version 12 (Session 37). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -97,7 +97,10 @@ with a negative control in which it must reject draft.4. Protocol draft.4, crite
 as they stood in Session 35 are pinned as *_s35_snapshot.* files: every check written before Session 36 that
 reads one of them (the Session 27 criteria build, the Session 28 staging, the first replication kit, and the
 Session 35 audit, which compares the uncorrected anchors with the definitions) reads the snapshot, so the
-first kit still rebuilds byte for byte with the revised builder: 79 checks.
+first kit still rebuilds byte for byte with the revised builder: 79 checks. Version 12 (Session 37) adds
+rescoring_s37.py, part (a) of the rescoring pass (decisions D28, D29, D31): the 33 stated-shortfall 1.0s
+re-estimated clause by clause, their consequences computed without changing any corpus file, and the
+record NEEC_Rescoring_s37.md checked against its generated tables: 80 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -682,7 +685,25 @@ S36_CHECKS = [
          stdout="verify_protocol_s36_negative_output.txt", stderr=EMPTY, expect_exit=1),
 ]
 
-CHECKS = S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS + S36_CHECKS
+# Session 37: the rescoring pass, part (a) (appended after the version 11 checks).
+S37_CHECKS = [
+    dict(name="rescoring_s37.py: rescoring pass part (a), the 33 stated-shortfall 1.0s re-estimated clause by clause "
+              "(D28, D31); consequences computed, no corpus file changed",
+         cmd=["python", "rescoring_s37.py"],
+         files={k: k for k in ("rescoring_s37.py", "r4_audit_s35.py", "criteria.json", "neec_corpus.json",
+                               "NEEC_Rescoring_s37.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
+                               "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_MutualCredit_LETS_scoring_scratch.md",
+                               "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                               "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="rescoring_s37_output.txt", stderr=EMPTY),
+]
+
+CHECKS = S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS + S36_CHECKS + S37_CHECKS
 
 
 def md5(data):
