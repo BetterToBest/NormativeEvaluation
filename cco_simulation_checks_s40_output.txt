@@ -1,0 +1,43 @@
+NEEC cco_simulation_checks_s40: CCO-PTF-CIP-SZH C1.1 on the design's own engine
+inputs: harness.js, index.html
+
+[1] THE ENGINE
+  PASS harness.js md5 035d1be82ab497e76a234615a04c0ce9 (compassionism-simulation cd0ceec, v4.15)
+  PASS index.html md5 1c8273b13b2c22763a44c051ca7bd882 (same commit)
+  PASS updateRecession and buildRecessionPath appended verbatim from index.html (266 and 371 characters)
+  PASS seed-42 Full Integration 20yr reproduces the documented regression: median BLEI 1965 d, wealth poverty 16.6%, Gini 0.534, System Stability 88.5%
+
+[2] THE RUNNER
+  PASS with recessions off the runner reproduces runScenario() on all 100 seeds, both presets, both measures
+  PASS the Stress Test preset above is the one index.html ships
+
+[3] POVERTY REDUCTION, N=100 seeds (1-100), 500 agents, 20 years; seed means
+
+| Scenario | Measure | Year 0 | Paired Baseline, yr 20 | Scenario, yr 20 | Reduction vs paired Baseline | Reduction vs year 0 | Seeds clearing the clause vs Baseline |
+|---|---|---:|---:|---:|---:|---:|---:|
+| A. Reference (Full Integration), no stress | Wealth poverty | 37.7% | 71.4% | 15.3% | 78.5% | 59.3% | 0 of 100 at 90% |
+| A. Reference (Full Integration), no stress | BLEI poverty | 2.7% | 70.5% | 12.6% | 82.1% | none (rises from year 0) | 0 of 100 at 90% |
+| A. Reference (Full Integration), no stress | BLEI Crisis (sensitivity) | 0.0% | 45.3% | 5.7% | 87.4% | none (rises from year 0) | 13 of 100 at 90% |
+| B1. Reference, recessions on | Wealth poverty | 37.7% | 72.8% | 16.1% | 77.8% | 57.1% | 0 of 100 at 85% |
+| B1. Reference, recessions on | BLEI poverty | 2.7% | 71.9% | 13.2% | 81.6% | none (rises from year 0) | 4 of 100 at 85% |
+| B1. Reference, recessions on | BLEI Crisis (sensitivity) | 0.0% | 45.4% | 5.8% | 87.3% | none (rises from year 0) | 83 of 100 at 85% |
+| B2. Reference, AI automation on | Wealth poverty | 37.7% | 80.8% | 24.7% | 69.4% | 34.4% | 0 of 100 at 85% |
+| B2. Reference, AI automation on | BLEI poverty | 2.7% | 80.1% | 22.2% | 72.3% | none (rises from year 0) | 0 of 100 at 85% |
+| B2. Reference, AI automation on | BLEI Crisis (sensitivity) | 0.0% | 70.5% | 9.3% | 86.9% | none (rises from year 0) | 84 of 100 at 85% |
+| B3. Reference, recessions + automation + 2% inflation | Wealth poverty | 37.7% | 81.8% | 35.7% | 56.4% | 5.3% | 0 of 100 at 85% |
+| B3. Reference, recessions + automation + 2% inflation | BLEI poverty | 2.7% | 81.1% | 32.4% | 60.0% | none (rises from year 0) | 0 of 100 at 85% |
+| B3. Reference, recessions + automation + 2% inflation | BLEI Crisis (sensitivity) | 0.0% | 70.9% | 11.1% | 84.4% | none (rises from year 0) | 30 of 100 at 85% |
+| C. The engine's Stress Test preset | Wealth poverty | 37.7% | 81.8% | 56.5% | 31.0% | none (rises from year 0) | 0 of 100 at 85% |
+| C. The engine's Stress Test preset | BLEI poverty | 6.7% | 81.1% | 54.6% | 32.6% | none (rises from year 0) | 0 of 100 at 85% |
+| C. The engine's Stress Test preset | BLEI Crisis (sensitivity) | 0.0% | 70.9% | 35.8% | 49.5% | none (rises from year 0) | 0 of 100 at 85% |
+
+[4] TEMPORAL TRACKING (C1.1 measurement protocol: 5-year intervals), reference preset, seed means
+
+| Measure | Year 0 | Year 5 | Year 10 | Year 15 | Year 20 | Paired Baseline, yr 5 / 10 / 15 / 20 |
+|---|---:|---:|---:|---:|---:|---|
+| Wealth poverty | 37.7% | 26.6% | 23.9% | 19.9% | 15.3% | 53.9% / 62.3% / 67.4% / 71.4% |
+| BLEI poverty | 2.7% | 19.6% | 19.9% | 16.7% | 12.6% | 48.9% / 59.8% / 65.9% / 70.5% |
+| BLEI Crisis (sensitivity) | 0.0% | 7.1% | 7.4% | 6.7% | 5.7% | 44.9% / 50.2% / 48.5% / 45.3% |
+  PASS Session 38's run 1 reproduced: Baseline 71.4% / 70.5%, reference 15.3% / 12.6% (wealth / BLEI poverty)
+
+CCO SIMULATION CHECKS S40: ALL CHECKS PASSED.
