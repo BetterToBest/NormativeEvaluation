@@ -1,0 +1,106 @@
+NEEC rescoring pass, part (a): the stated-shortfall 1.0s (NEEC_Rescoring_s37.md)
+inputs: criteria.json, neec_corpus.json, r4_audit_s35.py, 11 scoring documents, NEEC_Rescoring_s37.md
+
+[1] THE POPULATION
+  PASS the audit's register: 167 units; 134 not shown clause by clause; 33 with a stated shortfall
+  PASS part (a) holds exactly the stated-shortfall units, one record each, every one a corpus 1.0
+  PASS every stated-shortfall unit is also in D28's population
+
+[2] THE RECORDS
+  PASS every unit has one status per clause, in Appendix B's order; every cleared, short and out-of-reach clause carries its source or reason
+  clause statuses: cleared 38, short 27, not shown 42, out of reach 2, moot 0
+
+[3] THE RULE (D28)
+  PASS every verdict follows D28: 1.0 only if every clause is cleared or moot, otherwise 0.5
+  PASS no unit is scored 0.0 in this part (D28(f))
+  PASS self-test: an out-of-reach clause holds a unit at 0.5; cleared and moot clauses let it stand
+  PASS 2 of 33 stand (CCO C5.2, SWF C3.4); 31 become 0.5 (15.5 points)
+  PASS every flag names alternatives other than the scored value
+
+[4] REACH (D28(c)) AND EXTENSIONS (D31)
+  PASS out of reach now: MMT C1.3 clause 2, UBI C4.5 clause 1; revised by D31's source: MMT C4.2 clause 1, MMT C4.2 clause 2, MMT C4.2 clause 3, MMT C4.2 clause 4
+
+[5] FLAG REGISTERS (against the summary blocks in the scoring documents)
+  PASS summary blocks read from 11 documents, one per entry
+  PASS flags added 5 (CPS C4.5, LM C4.5, OS C3.4, SQ C5.1, SWF C3.4); removed 3 (IF C3.4, QA C5.3, SG C3.4): their alternative is now the score
+  CPS: 1 flags -> 2 (enumeration and joint readings recomputed when the pass is applied)
+  IF: 16 flags -> 15 (enumeration and joint readings recomputed when the pass is applied)
+  LM: 0 flags -> 1 (enumeration and joint readings recomputed when the pass is applied)
+  OS: 15 flags -> 16 (enumeration and joint readings recomputed when the pass is applied)
+  QA: 12 flags -> 11 (enumeration and joint readings recomputed when the pass is applied)
+  SG: 11 flags -> 10 (enumeration and joint readings recomputed when the pass is applied)
+  SQ: 0 flags -> 1 (enumeration and joint readings recomputed when the pass is applied)
+  SWF: 4 flags -> 5 (enumeration and joint readings recomputed when the pass is applied)
+
+[6] CONSEQUENCES (computed here; no corpus file changes)
+  PASS no failure count changes, so no tier changes (D28(f))
+  PASS 101 D28 units remain for part (b) (textual bound 50.5 points), plus C5.1's second clause on its standing 1.0s
+  PASS baseline reproduced: 14 dominance pairs, frontier 12
+  After part (a) the corpus has 15 dominance pairs against 14 (new: CCO>CPS, CCO>LM, CN>QA; lost: CCO>MMT, IF>SC), and its frontier holds 11 entries against 12 (NSD, MMT, UBI, DG, FALC, PE, CCO, INT, MC, IF, OS). First place: CCO, 24.5 to 24.0.
+
+[7] THE RECORD'S TABLES (generated here; NEEC_Rescoring_s37.md must contain them verbatim)
+  PASS NEEC_Rescoring_s37.md contains all 36 generated tables
+
+| Entry | Criterion | Clauses | Verdict | Flag |
+|---|---|---|---|---|
+| SQ | C5.1 | C U | 1.0 → 0.5 | alternative 1.0 |
+| NSD | C2.1 | U U | 1.0 → 0.5 |  |
+| NSD | C2.3 | U C U | 1.0 → 0.5 |  |
+| NSD | C2.4 | C S U | 1.0 → 0.5 |  |
+| NSD | C3.1 | C S U | 1.0 → 0.5 |  |
+| NSD | C4.4 | S S U C | 1.0 → 0.5 |  |
+| CPS | C3.2 | S U S | 1.0 → 0.5 |  |
+| CPS | C3.5 | C U S U | 1.0 → 0.5 |  |
+| CPS | C4.5 | S U U | 1.0 → 0.5 | alternative 0.0 |
+| MS | C2.1 | S U | 1.0 → 0.5 |  |
+| MS | C4.4 | S U C U | 1.0 → 0.5 |  |
+| LM | C2.3 | S U U | 1.0 → 0.5 |  |
+| LM | C2.4 | S U U | 1.0 → 0.5 |  |
+| LM | C4.5 | U U S | 1.0 → 0.5 | alternative 0.0 |
+| MMT | C1.3 | U R | 1.0 → 0.5 |  |
+| MMT | C4.2 | U U U U | 1.0 → 0.5 |  |
+| MMT | C5.2 | S U U U U | 1.0 → 0.5 |  |
+| UBI | C2.1 | U U | 1.0 → 0.5 |  |
+| UBI | C4.5 | R C S | 1.0 → 0.5 |  |
+| UBI | C5.3 | C C U U | 1.0 → 0.5 |  |
+| FALC | C3.2 | C U S | 1.0 → 0.5 |  |
+| CCO | C3.1 | C S U | 1.0 → 0.5 |  |
+| CCO | C5.2 | C C C C C | 1.0 → 1.0 |  |
+| INT | C5.3 | C C U U | 1.0 → 0.5 |  |
+| GEO | C3.4 | C S C C | 1.0 → 0.5 |  |
+| DE | C3.4 | C S S U | 1.0 → 0.5 |  |
+| SWF | C3.4 | C C C C | 1.0 → 1.0 | alternative 0.5 |
+| SG | C1.3 | C S | 1.0 → 0.5 |  |
+| SG | C3.4 | C S S C | 1.0 → 0.5 |  |
+| QA | C5.3 | C C S U | 1.0 → 0.5 |  |
+| IF | C3.4 | C S S C | 1.0 → 0.5 |  |
+| IF | C5.1 | C S | 1.0 → 0.5 |  |
+| OS | C3.4 | C C C U | 1.0 → 0.5 | alternative 1.0 |
+
+| Entry | Total now (rank) | After part (a) (rank) | Change | Failures | Tier | Left for part (b) | Bound after part (b) |
+|---|---:|---:|---:|---:|---|---:|---:|
+| CCO | 24.5 (1) | 24.0 (1) | -0.5 | 0 | Potentially Adequate | 11 | 18.5 |
+| PE | 20.5 (2) | 20.5 (2) | 0.0 | 1 | Potentially Adequate | 13 | 14.0 |
+| NSD | 19.5 (3) | 17.0 (5) | -2.5 | 2 | Potentially Adequate | 7 | 13.5 |
+| INT | 19.5 (3) | 19.0 (3) | -0.5 | 3 | Partially Adequate | 11 | 13.5 |
+| DG | 19.0 (5) | 19.0 (3) | 0.0 | 2 | Potentially Adequate | 11 | 13.5 |
+| MS | 16.5 (6) | 15.5 (6) | -1.0 | 2 | Potentially Adequate | 5 | 13.0 |
+| MMT | 15.5 (7) | 14.0 (8) | -1.5 | 3 | Partially Adequate | 5 | 11.5 |
+| UBI | 14.5 (8) | 13.0 (12) | -1.5 | 7 | Structurally Inadequate | 4 | 11.0 |
+| MC | 14.5 (8) | 14.5 (7) | 0.0 | 3 | Partially Adequate | 4 | 12.5 |
+| OS | 14.5 (8) | 14.0 (8) | -0.5 | 3 | Partially Adequate | 2 | 13.0 |
+| SWF | 14.0 (11) | 14.0 (8) | 0.0 | 3 | Partially Adequate | 2 | 13.0 |
+| SG | 14.0 (11) | 13.0 (12) | -1.0 | 4 | Partially Adequate | 1 | 12.5 |
+| GEO | 13.5 (13) | 13.0 (12) | -0.5 | 2 | Potentially Adequate | 1 | 12.5 |
+| UBS | 13.5 (13) | 13.5 (11) | 0.0 | 3 | Partially Adequate | 3 | 12.0 |
+| IF | 13.5 (13) | 12.5 (15) | -1.0 | 5 | Partially Adequate | 2 | 11.5 |
+| FALC | 13.0 (16) | 12.5 (15) | -0.5 | 10 | Structurally Inadequate | 7 | 9.0 |
+| DE | 11.5 (17) | 11.0 (17) | -0.5 | 8 | Structurally Inadequate | 4 | 9.0 |
+| SQ | 10.5 (18) | 10.0 (18) | -0.5 | 9 | Structurally Inadequate | 1 | 9.5 |
+| CPS | 10.0 (19) | 8.5 (21) | -1.5 | 12 | Structurally Inadequate | 2 | 7.5 |
+| SC | 10.0 (19) | 10.0 (18) | 0.0 | 9 | Structurally Inadequate | 3 | 8.5 |
+| CN | 10.0 (19) | 10.0 (18) | 0.0 | 8 | Structurally Inadequate | 0 | 10.0 |
+| QA | 9.0 (22) | 8.5 (21) | -0.5 | 10 | Structurally Inadequate | 0 | 8.5 |
+| LM | 8.0 (23) | 6.5 (23) | -1.5 | 15 | Structurally Inadequate | 2 | 5.5 |
+
+RESCORING PART (A) COMPUTED.
