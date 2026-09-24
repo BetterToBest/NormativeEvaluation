@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 85 reproducibility checks
+run_all_checks.py -- 86 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 85 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 7e752368)
+          README.md == README.md (md5 3dc8c75c)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -320,7 +320,11 @@ run_all_checks.py -- 85 reproducibility checks
           stdout == rescoring_s42_output.txt (md5 462c4498)
           stderr == (empty) (md5 d41d8cd9)
 
+[86] PASS  rescoring_s43.py: rescoring pass part (b), sixth group, the 10 units of C3.5 and C4.1 re-estimated clause by clause (D28); consequences with parts (a) to (b5), no corpus file changed
+          stdout == rescoring_s43_output.txt (md5 0650bbf6)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 85 passed, 0 failed, 0 skipped (of 85).
+SUMMARY: 86 passed, 0 failed, 0 skipped (of 86).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

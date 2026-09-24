@@ -1,0 +1,97 @@
+NEEC rescoring pass, part (b), sixth group: C3.5, C4.1 (NEEC_Rescoring_s43.md)
+inputs: criteria.json, neec_corpus.json, r4_audit_s35.py, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, NEEC_Rescoring_s43.md
+
+[1] THE POPULATION
+  PASS D28's population 134; part (b) 101
+  PASS this group holds exactly the part (b) units of C3.5 and C4.1 (10: C3.5 2, C4.1 8), every one a corpus 1.0 and none re-estimated before
+  PASS with part (a)'s, they are all of the two criteria's published 1.0s (C3.5 3, of which part (a) took CPS; C4.1 8)
+  C3.5: CCO, INT
+  C4.1: DG, FALC, PE, CCO, INT, DE, SWF, OS
+
+[2] THE RECORDS
+  PASS every unit has one status per clause, in Appendix B's order; every cleared, short, out-of-reach and moot clause, and every clause estimated as not shown, carries its source
+  clause statuses: cleared 18, short 1, not shown 17, out of reach 4, moot 0
+
+[3] THE RULE (D28)
+  PASS every verdict follows D28: 1.0 only if every clause is cleared or moot, otherwise 0.5
+  PASS no unit is scored 0.0 in this pass (D28(f))
+  PASS 0 of 10 stand; 10 become 0.5 (5.0 points)
+  PASS every flag names alternatives other than the scored value
+  PASS no departure from the audit's A codes: every clause the audit coded A is carried as cleared
+  PASS the audit coded 18 clauses of this group silent; 14 are estimated here, and 4 are left not estimated, each in a unit whose verdict another clause already fixes
+  FALC C4.1 clause 3: not estimated in this pass (verdict fixed by another clause)
+  INT C4.1 clause 3: not estimated in this pass (verdict fixed by another clause)
+  PE C4.1 clause 3: not estimated in this pass (verdict fixed by another clause)
+  SWF C4.1 clause 3: not estimated in this pass (verdict fixed by another clause)
+  silent clauses estimated here: short 1, not shown 13
+
+[4] REACH (D28(c)) AND EXTENSIONS (D31)
+  PASS the audit's 4 out-of-reach codes in this group are confirmed and no other clause is out of reach (no D31 source places the economy's emissions, its extraction rate or public debt inside the fund or the commons institution)
+  OS C4.1 clause 1: economy-wide carbon reduction is not governed by resource-commons institutions (the document's own flag)
+  OS C4.1 clause 3: public debt is not governed by commons institutions (the document's own flag)
+  SWF C4.1 clause 1: economy-wide carbon emissions are not governed by the fund
+  SWF C4.1 clause 2: the rate of resource extraction is not governed by the fund, which invests its proceeds
+
+[5] FLAG REGISTERS (against the summary blocks, cumulatively with parts (a) to (b5))
+  PASS flags added 1 (DG); removed 1 (OS, now scored at its own alternative); no other unit of this group carried a flag
+  Flags added in this group: 1; removed: 1. Across the pass so far, 15 entries' flag registers change (CCO, CN, CPS, DG, IF, LM, MC, NSD, OS, QA, SG, SQ, SWF, UBI, UBS).
+  PASS a flag outside this group rests on a unit it moves: QA C4.1 (alternative 1.0, reading 'SWF Statism precedent') cites SWF C4.1, 1.0 to 0.5
+
+[6] CONSEQUENCES (computed here; no corpus file changes)
+  PASS no failure count changes, so no tier changes (D28(f))
+  PASS 27 D28 units remain for part (b)
+  Left for part (b): 27 D28 units (C4.2 6, C4.3 6, C4.4 4, C4.5 3, C5.2 4, C5.4 2, C5.5 2).
+  PASS 1.0s each of this group's criteria keeps: C3.5 0 (published 3); C4.1 0 (published 8)
+  PASS every criterion had a 1.0 in the published corpus; the pass so far leaves 7 with none: C2.3 (part (b1)), C2.4 (part (b1)), C3.1 (part (b2)), C1.1 (part (b3)), C2.1 (part (b4)), C3.5 (part (b6)), C4.1 (part (b6))
+  After this group, the entries scoring 1.0 on this group's criteria are: C3.5, 0; C4.1, 0, against 3 published and 8 published. Every criterion had a 1.0 in the published corpus; after the pass so far no entry scores 1.0 on 7 of them: C1.1 (emptied in part (b3)), C2.1 (emptied in part (b4)), C2.3 (emptied in part (b1)), C2.4 (emptied in part (b1)), C3.1 (emptied in part (b2)), C3.5 (emptied in part (b6)), C4.1 (emptied in part (b6)).
+  PASS part (b5)'s result reproduced: 18 dominance pairs, frontier 13
+  After this group the corpus has 18 dominance pairs against 18 after part (b5) (new: none; lost: none), and its frontier holds 13 entries against 13 (NSD, MS, LM, UBI, DG, FALC, PE, CCO, INT, MC, SWF, IF, OS). First place: CCO, 20.5 after part (b5), 19.5 now. Across parts (a) and (b1) to (b6), 118 units have been re-estimated: 7 stand and 111 become 0.5 (55.5 points).
+
+[7] ANCHOR EXAMPLES THE PASS SO FAR MOVES (build_criteria.py checks examples against published scores)
+  PASS 10 anchor examples cite a unit the pass moves
+  PASS bands left with no corpus unit at their value: C1.1's 1.0, C2.1's 1.0, C2.3's 1.0, C2.4's 1.0, C3.1's 1.0, C3.5's 1.0, C4.1's 1.0
+  Anchor examples citing a unit the pass moves: C1.1's 1.0 example, NSD (part (b3), to 0.5); C2.1's 1.0 example, UBI (part (a), to 0.5); C2.3's 1.0 example, DG (part (b1), to 0.5); C2.4's 1.0 example, PE (part (b1), to 0.5); C2.5's 1.0 example, CCO (part (b5), to 0.5); C3.1's 1.0 example, UBI (part (b2), to 0.5); C3.2's 1.0 example, PE (part (b4), to 0.5); C3.5's 1.0 example, CCO (part (b6), to 0.5); C4.1's 1.0 example, DG (part (b6), to 0.5); C5.1's 1.0 example, MS (part (b2), to 0.5). When the pass is applied, each band needs an example the corpus then scores at that value; C1.1's 1.0, C2.1's 1.0, C2.3's 1.0, C2.4's 1.0, C3.1's 1.0, C3.5's 1.0, C4.1's 1.0 bands have none left (part (b4), reading 3.5; reading 3.8 here); C2.5's 1.0 band keeps one (LM, flagged; part (b5), reading 3.7).
+
+[8] THE RECORD'S TABLES (generated here; NEEC_Rescoring_s43.md must contain them verbatim)
+  PASS NEEC_Rescoring_s43.md contains all 17 generated tables
+
+| Entry | Criterion | Clauses | Verdict | Flag |
+|---|---|---|---|---|
+| DG | C4.1 | C C S C | 1.0 → 0.5 | alternative 1.0 |
+| FALC | C4.1 | U C U C | 1.0 → 0.5 |  |
+| PE | C4.1 | U C U U | 1.0 → 0.5 |  |
+| CCO | C3.5 | C C U U | 1.0 → 0.5 |  |
+| CCO | C4.1 | C U U C | 1.0 → 0.5 |  |
+| INT | C3.5 | C U U C | 1.0 → 0.5 |  |
+| INT | C4.1 | U C U C | 1.0 → 0.5 |  |
+| DE | C4.1 | U C U U | 1.0 → 0.5 |  |
+| SWF | C4.1 | R R U C | 1.0 → 0.5 |  |
+| OS | C4.1 | R C R C | 1.0 → 0.5 |  |
+
+| Entry | Published (rank) | After (b5) (rank) | After this group (rank) | Change here | Failures | Tier | D28 units left | Floor if all fall |
+|---|---:|---:|---:|---:|---:|---|---:|---:|
+| CCO | 24.5 (1) | 20.5 (1) | 19.5 (1) | -1.0 | 0 | Potentially Adequate | 3 | 18.0 |
+| PE | 20.5 (2) | 16.5 (2) | 16.0 (2) | -0.5 | 1 | Potentially Adequate | 4 | 14.0 |
+| NSD | 19.5 (3) | 14.5 (5) | 14.5 (5) | 0.0 | 2 | Potentially Adequate | 3 | 13.0 |
+| INT | 19.5 (3) | 16.0 (3) | 15.0 (4) | -1.0 | 3 | Partially Adequate | 3 | 13.5 |
+| DG | 19.0 (5) | 16.0 (3) | 15.5 (3) | -0.5 | 2 | Potentially Adequate | 4 | 13.5 |
+| MS | 16.5 (6) | 13.0 (7) | 13.0 (6) | 0.0 | 2 | Potentially Adequate | 0 | 13.0 |
+| MMT | 15.5 (7) | 12.0 (11) | 12.0 (11) | 0.0 | 3 | Partially Adequate | 1 | 11.5 |
+| UBI | 14.5 (8) | 11.5 (15) | 11.5 (15) | 0.0 | 7 | Structurally Inadequate | 1 | 11.0 |
+| MC | 14.5 (8) | 12.5 (9) | 12.5 (8) | 0.0 | 3 | Partially Adequate | 1 | 12.0 |
+| OS | 14.5 (8) | 13.5 (6) | 13.0 (6) | -0.5 | 3 | Partially Adequate | 0 | 13.0 |
+| SWF | 14.0 (11) | 13.0 (7) | 12.5 (8) | -0.5 | 3 | Partially Adequate | 0 | 12.5 |
+| SG | 14.0 (11) | 12.0 (11) | 12.0 (11) | 0.0 | 4 | Partially Adequate | 0 | 12.0 |
+| GEO | 13.5 (13) | 12.5 (9) | 12.5 (8) | 0.0 | 2 | Potentially Adequate | 0 | 12.5 |
+| UBS | 13.5 (13) | 12.0 (11) | 12.0 (11) | 0.0 | 3 | Partially Adequate | 0 | 12.0 |
+| IF | 13.5 (13) | 12.0 (11) | 12.0 (11) | 0.0 | 5 | Partially Adequate | 1 | 11.5 |
+| FALC | 13.0 (16) | 10.5 (16) | 10.0 (16) | -0.5 | 10 | Structurally Inadequate | 2 | 9.0 |
+| DE | 11.5 (17) | 10.0 (17) | 9.5 (17) | -0.5 | 8 | Structurally Inadequate | 1 | 9.0 |
+| SQ | 10.5 (18) | 9.5 (18) | 9.5 (17) | 0.0 | 9 | Structurally Inadequate | 0 | 9.5 |
+| CPS | 10.0 (19) | 8.0 (21) | 8.0 (21) | 0.0 | 12 | Structurally Inadequate | 1 | 7.5 |
+| SC | 10.0 (19) | 9.0 (20) | 9.0 (20) | 0.0 | 9 | Structurally Inadequate | 1 | 8.5 |
+| CN | 10.0 (19) | 9.5 (18) | 9.5 (17) | 0.0 | 8 | Structurally Inadequate | 0 | 9.5 |
+| QA | 9.0 (22) | 8.0 (21) | 8.0 (21) | 0.0 | 10 | Structurally Inadequate | 0 | 8.0 |
+| LM | 8.0 (23) | 6.5 (23) | 6.5 (23) | 0.0 | 15 | Structurally Inadequate | 1 | 6.0 |
+
+RESCORING PART (B), SIXTH GROUP, COMPUTED.
