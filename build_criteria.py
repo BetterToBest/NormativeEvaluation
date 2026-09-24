@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
 """
-build_criteria.py -- NEEC Session 45: criteria.json v2.0 (28 criteria), generated
+build_criteria.py -- NEEC Session 46: criteria.json v2.0 (29 criteria), generated
 =================================================================================
-Version 2 of the criteria generator (version 1, Session 27 with the Session 36
+Version 2.1 of the criteria generator (version 1, Session 27 with the Session 36
 corrections, is pinned as build_criteria_s44_snapshot.py; its output is pinned
-as criteria_s44_snapshot.json). Nothing is retyped:
+as criteria_s44_snapshot.json; version 2, Session 45, is at tag s45). Version
+2.1 (Session 46, decision 46.1) registers Package C's quantities, reads each
+new criterion's source from its block's `adopted` field, and generates draft.7,
+whose 1.2 describes criteria.json correctly. Nothing is retyped:
 
   * the base is criteria_s44_snapshot.json, the 26 criteria as they stood at
     tag s44 (md5 checked);
   * every change is read from Appendix V of NEEC_Criteria_v2_s45.md, the
     record of the v2.0 criteria (Package A of the Session 44 review, adopted
-    under the delegation; Package B, adopted by the owner: C2.6 and C3.6);
+    under the delegation; Package B, adopted by the owner: C2.6 and C3.6;
+    Package C, adopted by the owner in part: C2.6's clauses 2 and 3, and C4.6);
   * the clause split of a threshold that v2.0 leaves unchanged is read from
     Appendix B of the pinned protocol, SCORING_PROTOCOL_s44_snapshot.md.
 
 It writes criteria.json (schema neec-criteria/2.0) and SCORING_PROTOCOL.md,
 which is the pinned Session 44 protocol with generated edits: the version
-line, the header's criteria count, a changes paragraph, section 2.3's gap
+line, the header's criteria count, a changes paragraph, section 1.2's row for
+criteria.json, section 2.3's gap
 example and clause count, a note in 2.4 on v2.0's arithmetic, and Appendix B
 (the clauses of each Pass Threshold, from criteria.json). Each old text is
 asserted before it is replaced, so the protocol is regenerated from
@@ -33,8 +38,9 @@ ASSERTIONS. The run exits 1, writing nothing, unless all of these hold:
                  order, leaving connectives (commas, semicolons, "and", "with")
                  and the declared scope only;
   A6 anchors     every anchor's threshold line is its Pass Threshold (D28(g));
-  A7 structure   28 criteria; domain maxima 6, 6, 6, 5, 5; every criterion has a
-                 class and the record names no unknown criterion.
+  A7 structure   the structure Appendix V's structure line states (29 criteria;
+                 domain maxima 6, 6, 6, 6, 5); every criterion has a class and
+                 the record names no unknown criterion.
 
 Usage:  python3 build_criteria.py             build, assert, write, print the log
         python3 build_criteria.py --selftest  plant one violation of each rule on
@@ -65,7 +71,9 @@ QUANTITIES = {  # registered quantity -> pattern; each must be in exactly one Pa
     "wealth Gini": r"\bGini\b", "citizen proposals adopted": r"proposals", "carbon": r"carbon|CO2",
     "resource use against regeneration": r"regenerat|biocapacity", "autonomy share": r"autonomy|coercion",
     "association": r"association|[Cc]ivil-liberties", "housing stability": r"housing stability",
-    "public debt": r"\b[Dd]ebt\b", "productivity": r"per hour|productivity", "inflation": r"inflation"}
+    "public debt": r"\b[Dd]ebt\b", "productivity": r"per hour|productivity", "inflation": r"inflation",
+    "medical consent and compulsion": r"consent|compulsory", "pollution mortality": r"pollution",
+    "liability for harm": r"liable|liability", "regulatory independence": r"improper influence"}
 US_ONLY = ("area median income", "Supplemental Poverty Measure", "CPI-U", "Census Bureau")
 REFS = re.compile(r"\bC\d\.\d[ab]?\b|\bN\d+\b|\b[DKRGS]\d+\b|\bCO2\b|COVID-19|rtfpna|\bv\d\.\d\b"
                   r"|(?:[Ss]ection|protocol|Appendix|Paper [Ss]ection) [A-Z]?\.?\d+(?:\.\d+)*(?:\([a-g]\))?"
@@ -185,7 +193,7 @@ for cid in ORDER:
     c["anchors"]["threshold"] = pt + "."
     if cid not in old:
         c["anchors"]["bands"] = {bd: dict(text=b["band_" + bd], examples=[]) for bd in ("1.0", "0.5", "0.0")}
-        src = "NEEC_Criteria_v2_s45.md, Appendix V (Package B, decision 45.1)"
+        src = f"{RECORD}, Appendix V ({b['adopted']})"
         c["sources"] = dict(definition=src, anchors=src, threshold=src)
     else:
         if pt_changed:
@@ -203,7 +211,7 @@ domains = [dict(dm, criteria=[c["id"] for c in criteria if c["domain"] == dm["id
 doc = dict(
     schema="neec-criteria/2.0",
     framework=f"NEEC Applied, v2.0 criteria: {len(criteria)} criteria in five domains",
-    generated_by="build_criteria.py version 2 (Session 45); do not edit by hand",
+    generated_by="build_criteria.py version 2.1 (Session 46); do not edit by hand",
     source=dict(base=SNAP, base_md5=SNAP_MD5, record=RECORD, record_md5=md5(rec_bytes),
                 clause_splits=PROTO_BASE + ", Appendix B (thresholds v2.0 leaves unchanged)",
                 v1=base["source"]),
@@ -342,7 +350,10 @@ def note24():
     else:
         ties = (f"On {n}, no total falls exactly on a half percent; should a structure produce one, it is rounded "
                 "half up (decision 45.6), which Python's `round()` does not do.")
-    text = ("**On the v2.0 criteria** (decision 45.1; in force for the corpus once the rescoring pass is applied): "
+    decs = sorted({d for x in new_ids for d in re.findall(r"decision (\d+\.\d+)", blocks[x]["adopted"])},
+                  key=lambda d: tuple(map(int, d.split("."))))
+    text = (f"**On the v2.0 criteria** (decision{'s' if len(decs) > 1 else ''} {and_list(decs)}; in force for the "
+            "corpus once the rescoring pass is applied): "
             f"{'; '.join(parts)}; Total maximum {n}; Percent is Total / {n} × 100; the tier bands are unchanged "
             "(2.5). " + ties)
     return textwrap.fill(text, 78, initial_indent="- ", subsequent_indent="  ", break_on_hyphens=False) + "\n"
@@ -352,15 +363,24 @@ single = [c["id"] for c in criteria if len(c["definition"]["clauses"]) == 1]
 multi = [c for c in criteria if len(c["definition"]["clauses"]) > 1]
 EDITS = [
     ("**Version 2.0-draft.5 — Session 36, 2026-09-22. Status: draft.",
-     "**Version 2.0-draft.6 — Session 45, 2026-09-23. Status: draft."),
+     "**Version 2.0-draft.7 — Session 46, 2026-09-24. Status: draft."),
     ("structure\n(26 criteria in five domains), how uncertainty",
      f"structure\n(v2.0: {len(criteria)} criteria in five domains), how uncertainty"),
     ("**Changes from draft.4**",
      "**Changes from draft.5** (pinned as `SCORING_PROTOCOL_s44_snapshot.md`; this draft\nis generated from it by "
-     "`build_criteria.py`, never edited by hand): this header;\n2.3, whose gap example and clause count describe the "
-     "v2.0 criteria\n(`NEEC_Criteria_v2_s45.md`); 2.4, a note on v2.0's arithmetic; Appendix B,\nregenerated from "
-     "`criteria.json`. Until the rescoring pass is applied, the\npublished scores, and every statement here about them, "
-     "stay on the 26 criteria\nof Paper v1.4.\n\n**Changes from draft.4**"),
+     "`build_criteria.py`, never edited by hand): this header;\n1.2, whose description of `criteria.json` is corrected; "
+     "2.3, whose gap example\nand clause count describe the v2.0 criteria (`NEEC_Criteria_v2_s45.md`); 2.4,\na note on "
+     "v2.0's arithmetic; Appendix B, regenerated from `criteria.json`.\nDraft.6 (Session 45, tag `s45`) made these "
+     "edits, except 1.2's, on the 28\ncriteria of decision 45.1; draft.7 makes them on the "
+     f"{len(criteria)} of decision 46.1\n(Package C). Until the rescoring pass is applied, the published scores, and\n"
+     "every statement here about them, stay on the 26 criteria of Paper v1.4.\n\n**Changes from draft.4**"),
+    ("| `criteria.json` | the 26 criteria: definitions (Paper Section 6; C1.2a, C1.2b and C1.5 from Section 12.3) and "
+     "the 1.0 / 0.5 / 0.0 anchors (Appendix H.7 and H.7v2), generated from Paper v1.4 by `build_criteria.py`, which "
+     "applies the corrections of 4.6 and records each in the file;",
+     f"| `criteria.json` | the v2.0 criteria ({len(criteria)}): definitions, the clauses of each Pass Threshold, "
+     "revision class and the 1.0 / 0.5 / 0.0 anchors, generated by `build_criteria.py` from the Session 44 criteria "
+     "(`criteria_s44_snapshot.json`: the 26 criteria of Paper v1.4 with the corrections of 4.6, on which the "
+     "published scores stand until the rescoring pass is applied) and Appendix V of `NEEC_Criteria_v2_s45.md`;"),
     ("not against its Requirement line where the two differ (C1.1\nstates an aspirational 95% requirement and an "
      "operative 90% / 85% threshold).\nIf you find another such gap, flag it rather than silently choosing.",
      "not against its Requirement line where the two differ. The v2.0\ncriteria carry no such gap, and "
@@ -387,11 +407,12 @@ for c in multi:
         cell += f"; every clause: {d['clause_scope']}"
     rows.append(f"| {c['id']} | {cell} |")
 appb = ("## Appendix B. The clauses of each Pass Threshold (decision D28)\n\n"
-        "Generated by `build_criteria.py` from `criteria.json` (the v2.0 criteria, Session 45);\n"
-        "do not edit by hand. Each clause is a verbatim substring of the definition's Pass\n"
-        "Threshold, in order; what the clauses leave over is connective text, or a scope\n"
-        "that applies to every clause and is shown after the clauses. A 1.0 shows each\n"
-        f"clause cleared on its own estimate (2.3). {words(len(single)).capitalize()} criteria have one clause: "
+        "Generated by `build_criteria.py` from `criteria.json` (the v2.0 criteria, Session 45,\n"
+        "with Package C, decision 46.1, Session 46); do not edit by hand. Each clause is a\n"
+        "verbatim substring of the definition's Pass Threshold, in order; what the clauses\n"
+        "leave over is connective text, or a scope that applies to every clause and is\n"
+        "shown after the clauses. A 1.0 shows each clause cleared on its own estimate\n"
+        f"(2.3). {words(len(single)).capitalize()} criteria have one clause: "
         f"{', '.join(single)}.\nThe Session 44 split, on Paper v1.4's thresholds, is pinned in\n"
         "`SCORING_PROTOCOL_s44_snapshot.md`.\n\n"
         "| Criterion | Clauses, in order |\n|---|---|\n" + "\n".join(rows) + "\n")
@@ -401,7 +422,7 @@ new_proto = new_proto[:i] + appb + ("" if j < 0 else new_proto[j:])
 
 # ------------------------------------------------------------------ report
 text = json.dumps(doc, indent=2, ensure_ascii=False) + "\n"
-print("build_criteria.py (version 2) -- NEEC v2.0 criteria")
+print("build_criteria.py (version 2.1) -- NEEC v2.0 criteria")
 print("=" * 92)
 print(f"Base: {SNAP} (md5 {SNAP_MD5[:8]}, {len(base['criteria'])} criteria); record: {RECORD} (md5 "
       f"{md5(rec_bytes)[:8]}, {len(blocks)} blocks); clause splits: {PROTO_BASE} (md5 {PROTO_BASE_MD5[:8]})")

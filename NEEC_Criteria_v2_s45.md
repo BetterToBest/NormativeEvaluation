@@ -1,7 +1,8 @@
 # NEEC Criteria v2.0, Session 45
 
-**Status: the v2.0 criteria, adopted. Nothing in the corpus is rescored here.** Session 45, 2026-09-23. Scorer
-and engineer: Claude (Opus 5.5). Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
+**Status: the v2.0 criteria, adopted. Nothing in the corpus is rescored here.** Session 45, 2026-09-23; amended in
+place in Session 46, 2026-09-24, by decisions 46.1 to 46.4 (Package C), and tag `s45` keeps the Session 45 text.
+Scorer and engineer: Claude. Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
 (the 26 criteria as they stood at `s44`), `neec_corpus.json`. Appendix V below is the one source of the v2.0 text:
 `build_criteria.py` reads it, applies it to the snapshot, asserts the rules in section 6, and writes `criteria.json`
 and protocol draft.6 (Appendix B regenerated, six asserted edits). Evidence tables: `criteria_v2_s45.py`, output `criteria_v2_s45_output.txt`.
@@ -9,7 +10,7 @@ and protocol draft.6 (Appendix B regenerated, six asserted edits). Evidence tabl
 ## 1. Decisions
 
 - **45.1 (the owner's decision).** Package B is adopted in full: C2.6 Civil Liberties and Rule of Law (G2) and C3.6
-  Productive and Innovative Capacity (G1). The framework has 28 criteria; Domains 2 and 3 have maxima of 6. The tier
+  Productive and Innovative Capacity (G1). The framework has 28 criteria (29 after decision 46.1); Domains 2 and 3 have maxima of 6. The tier
   bands stay integer failure counts (0–2, 3–5, 6+), as the review proposed, and the choice is disclosed; Paper v2.0's
   Appendix A.4 reports the proportional alternative.
 - **45.2 (under the delegation; flagged; the owner may reverse).** Package A is fixed in the wording of Appendix V,
@@ -25,7 +26,10 @@ and protocol draft.6 (Appendix B regenerated, six asserted edits). Evidence tabl
   17.5 and 24.5 give 12.5%, 37.5%, 62.5% and 87.5% (on 26 none can, which is why D21 needed no tie rule). They are
   rounded half up. The corpus generators use Python's `round()`, which rounds halves to even (12.5 to 12, 37.5 to
   38), so the generator that applies the pass (stage 3) must round with an explicit half-up rule. No published figure
-  changes now; the protocol's 2.4 carries the rule.
+  changes now; the protocol's 2.4 carries the rule. On the 29 criteria of decision 46.1 no total falls on a half
+  percent (that needs 200 × Total / 29 to be an odd whole number; with Total in half-points it is whole only at
+  Totals of 0, 14.5 and 29, giving 0, 100 and 200); the rule stands for any structure that produces one, and the
+  stage 3 generators still round half up.
 - **The owner's confirmation.** The owner confirmed decisions 45.2, 45.3 (every choice marked ▲ included), 45.4 and
   45.6 as recorded here.
 - **45.7 (the owner's direction).** The owner leaves the repository loop. A Claude Code cloud session ends with a
@@ -33,8 +37,49 @@ and protocol draft.6 (Appendix B regenerated, six asserted edits). Evidence tabl
   merges it into main, runs every check on the merged tree, and only if all pass pushes main, tags the merge commit
   s<n> and publishes a release. Main therefore takes commits without human review, and the harness is the gate.
   Standing session instructions are in `CLAUDE.md`. This amends Handoff 44, sections 4 and 7.
-- **Package C (awaiting the owner).** Bodily integrity, harm internalization and health, raised by the owner in
-  Session 45: section 9.
+- **46.1 (the owner's decision, Session 46).** Package C (section 9): C-1 and C-2 are adopted; C-3 is not, and is
+  recorded for v2.1. C2.6 gains two clauses: informed consent to medical treatment protected in law, and any
+  compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent
+  judicial review; its derivation is unchanged. C4.6 Harm Internalization (N13 Incentive Alignment + N6 Ecological
+  Compliance) joins Domain 4 with three clauses: mortality attributed to pollution non-increasing over 20 years;
+  those who cause harm to health or the environment liable for it, enforceably by those harmed; regulation of food,
+  water, air, chemicals and medicines applied and enforced without improper influence. The framework has 29
+  criteria, domain maxima 6, 6, 6, 6, 5. The wording, measures and bars are in Appendix V.
+- **46.2 (under the delegation; flagged; the owner may reverse).** Where the adopted text left a choice, Appendix V
+  fixes it as follows.
+  (a) C4.6 clause 1 is the sum of the three age-standardized SDG 3.9 mortality rates (air pollution, unsafe water
+  and sanitation, unintentional poisoning), end of the 20-year window against its start. The SDG indicators are
+  rates; a count would rise with population alone. Where the SDG series do not span the window, the Global Burden
+  of Disease study's rates for the same risks are used, and a disagreement between the two is flagged.
+  (b) C4.6 clause 2 is met by liability in tort, product-liability or environmental-liability law, or by a
+  compensation scheme funded by a levy on those who cause the harm, since either makes the harm their cost; an
+  immunity that leaves a class of harm uncompensated, or compensated from public funds alone, does not meet it.
+  "Enforceably" means that those harmed have standing before an independent court, collectively where the harm is
+  dispersed, and the scoring document names at least one such claim decided and paid in the scoring window.
+  (c) C4.6 clause 3 reads "applied and enforced", the title of the measure it names.
+  (d) Compulsion in C2.6 includes a penalty for refusal (a fine, detention, or loss of employment, schooling or an
+  essential benefit). The European Court of Human Rights treats a vaccination duty enforced by a fine and by
+  exclusion from preschool as an interference that must be justified (*Vavřička and Others v. the Czech Republic*,
+  Grand Chamber, 2021).
+  (e) **▲** "Time-limited" applies, as adopted, to every compulsion, a standing statutory requirement included: the
+  measure lapses at a stated time unless renewed by a decision itself open to review. This is stricter than the
+  instruments section 9 cited: they require a time limit of emergency measures (derogations must be "of an
+  exceptional and temporary nature", Human Rights Committee General Comment 29), and accept a standing requirement
+  prescribed by law and necessary (Oviedo Convention, Article 26; *Vavřička*). Consequence: an entry whose law
+  imposes a standing vaccination requirement, enforced by a penalty and with no lapse date, does not show clause 3
+  and scores at most 0.5 on C2.6 (protocol 2.3). The alternative, a time limit on orders and emergency powers only,
+  with standing requirements tested by law and judicial review alone, changes one sentence of C2.6's measurement
+  field and is recorded for the owner.
+- **46.3 (corrections).** (a) Section 9 said C-1's compulsion clause "is the limitation test" of the Siracusa
+  Principles and the Oviedo Convention; with its time limit it is stricter than that test (46.2(e)), and section 9
+  now says so. (b) Protocol 1.2 described `criteria.json` as the 26 criteria generated from Paper v1.4, which it has
+  not been since Session 45; draft.7's 1.2, generated by `build_criteria.py`, describes the v2.0 file.
+- **46.4 (recorded; not a choice).** C4.6 clause 3 names the World Justice Project Rule of Law Index, sub-factor
+  6.2, for configured national economies, but the score that meets it is not yet fixed. Session 46's cloud
+  environment could not reach the Project's data: its network policy denied that host, and also WHO's, IHME's,
+  Freedom House's and the World Bank's. The bar is fixed from the Index's published data before any configured
+  national economy is scored on C4.6. Designs, mechanisms and comprehensive systems are scored on their stated
+  provisions and do not wait for it.
 
 ## 2. Method
 
@@ -61,7 +106,7 @@ Each criterion has a class, which sets what the pass must re-check (section 7):
 | D | clauses deleted only; a unit can keep or raise its score | C2.5, C4.4, C4.5 |
 | I | indicator named for an unchanged clause and bar | C1.1, C1.4, C2.1, C2.3, C2.4, C3.1, C3.5 |
 | M | bar, measure or clause restated | C1.2a, C1.3, C3.4, C4.1, C4.2, C4.3, C5.2 |
-| N | new criterion | C2.6, C3.6 |
+| N | new criterion | C2.6, C3.6, C4.6 |
 | U | unchanged | C3.2, C5.3, C5.4, C5.5 |
 
 ## 3. Gaps the review missed
@@ -112,6 +157,7 @@ Consequential choices are marked ▲; each is a candidate for the owner's review
   changes from N12 + N6 to N12 + N5: nothing ecological remains in it, and fiscal space is N5's content.
   Consequence: N6's implicit weight falls from 3.8% to 1.8%, the lowest with N11 (`criteria_v2_s45.py`, section 2);
   N6 then rests on C4.2 and on the A.4 constraint scheme (S2), which is the reading that treats it as a constraint.
+  Decision 46.1's C4.6 (N13 + N6) returns it to 3.4% of 29.
 - **C4.2 ▲** consumption-based accounts (G3). Carbon: the rate of a 35% cut over 2019–2030, the low end of the
   IPCC AR6 1.5 °C range the Paper cites (43% GHG from 2019 levels), is 3.8% a year, and binds at any date.
   Biodiversity: IUCN Red List Index non-declining. Regeneration: ecological footprint of consumption per person no
@@ -131,6 +177,7 @@ Consequential choices are marked ▲; each is a candidate for the owner's review
   non-declining over 20 years; basic-needs output at the system's own working time. TFP is a separate clause because
   output per hour can rise on capital accumulation alone while methods stagnate. Defined on productivity, not output
   growth, so designs that choose shorter hours or lower consumption can pass.
+- **C2.6 clauses 2–3 and C4.6** (Package C): their measures and bars are decision 46.2's, listed there.
 
 ## 5. Aspirational clauses (45.4)
 
@@ -142,14 +189,15 @@ evidence exists. C3.1 clause 1 is not aspirational: the rules or a dated record 
 
 ## 6. What the generator asserts
 
-`build_criteria.py` (version 2) starts from `criteria_s44_snapshot.json` (md5 checked), applies Appendix V, and exits
+`build_criteria.py` (version 2.1) starts from `criteria_s44_snapshot.json` (md5 checked), applies Appendix V, and exits
 1 unless: every Requirement figure appears in its Pass Threshold, and every measurement figure does or is declared
 descriptive in the criterion's block; each registered quantity (wealth Gini, citizen proposals, carbon,
-regeneration, autonomy share, association, housing stability, debt, productivity, inflation) appears in exactly one
-Pass Threshold; no Pass Threshold carries a year other than a declared price year; no field names a US-only measure
+regeneration, autonomy share, association, housing stability, debt, productivity, inflation, and, from decision
+46.1, medical consent and compulsion, pollution mortality, liability for harm and regulatory independence) appears
+in exactly one Pass Threshold; no Pass Threshold carries a year other than a declared price year; no field names a US-only measure
 (area median income, the Supplemental Poverty Measure, CPI-U, the Census Bureau); every clause is a verbatim
 substring of its threshold, once, in order, leaving only connectives and a declared scope; every anchor threshold equals its Pass Threshold (D28(g)); the structure is
-the one Appendix V's structure line states (28 criteria; domain maxima 6, 6, 6, 5, 5). `build_criteria.py --selftest` plants one violation of each rule and
+the one Appendix V's structure line states (29 criteria; domain maxima 6, 6, 6, 6, 5). `build_criteria.py --selftest` plants one violation of each rule and
 confirms each is rejected (negative control).
 
 ## 7. Consequences for the rescoring pass
@@ -161,8 +209,11 @@ the association clause rises. Class I (161 units): a unit is re-checked where th
 different clause verdict from the one recorded, which means the 42 units of the six configured national economies,
 where the indicator is a published series, and any other unit whose clause record cites a different measure.
 Class M (161 units): every unit is re-checked clause by clause against Appendix V, in the D28 clause-record form.
-Class N: 46 new units (23 entries × 2). Class U (92 units): nothing beyond the pass already planned. Unlike D28,
-the v2.0 criteria can change failure counts and tiers: every entry gains two criteria, and seven are restated.
+Class N: 69 new units (23 entries × 3, C4.6's 23 added by decision 46.1). C2.6's two new clauses add no re-check:
+none of its units has been scored, and each is scored on all three clauses. Class U (92 units): nothing beyond the
+pass already planned. Unlike D28, the v2.0 criteria can change failure counts and tiers: every entry gains three
+criteria, and seven are restated. Under equal weighting the implicit norm weights on 29 criteria range from 1.7% to
+15.5% (`criteria_v2_s45.py`, section 2).
 
 ## 8. Not done here
 
@@ -170,8 +221,12 @@ The S1 norm-weight table is computed (`criteria_v2_s45.py` section 2) but belong
 scheme (S2) and the per-system count of units resting on unshown clauses (R5) are stage 3. Band texts of restated
 criteria still carry Paper v1.4 examples; `criteria.json` marks them, and anchors describe while thresholds govern
 (2.3(g)). The corpus, CSV and totals change only when the pass is applied by generator, which also carries decision 45.6.
+C4.6's bar on the World Justice Project's sub-factor 6.2 is not fixed (46.4).
 
-## 9. Package C, proposed (awaiting the owner)
+## 9. Package C (decision 46.1: C-1 and C-2 adopted; C-3 recorded for v2.1)
+
+Proposed in Session 45; the owner adopted C-1 and C-2 in Session 46 (decision 46.1). The proposal stands below as
+written, with one correction marked (46.3(a)); the adopted wording is Appendix V's.
 
 The owner asked whether NEEC covers bodily autonomy and medical freedom, and the perverse incentive of an owner who
 profits from both a harm and its treatment (food or agriculture that damages health, and the healthcare that treats
@@ -189,7 +244,9 @@ cost to whoever causes it, which removes the incentive whatever the ownership.
 - **C-1 (recommended).** C2.6 gains a clause: informed consent to medical treatment is protected in law, and any
   compulsion (treatment, vaccination, quarantine) rests on law, is time-limited and is open to independent judicial
   review. This is the limitation test of the Siracusa Principles and of the Oviedo Convention (Articles 5 and 26),
-  which neither forbids public-health measures nor exempts them from review. It covers consent and refusal;
+  which neither forbids public-health measures nor exempts them from review. *[Corrected, 46.3(a): with its time
+  limit on every compulsion the clause is stricter than that test, which asks a time limit of emergency measures
+  only; 46.2(e) records the consequence and the alternative.]* It covers consent and refusal;
   entitlement to particular procedures or unapproved treatments (abortion, assisted dying, right-to-try) is
   contested and is not decided by the criterion. Derivation unchanged.
 - **C-2 (recommended).** A new C4.6 Harm Internalization (N13 Incentive Alignment + N6 Ecological Compliance), with
@@ -207,12 +264,20 @@ C-1 and C-2 give 29 criteria (Domain 4 maximum 6); with C-3, 30. Each new criter
 the owner's decision fixes the wording and bars, with sources, in Appendix V; `build_criteria.py` reads the
 structure line, so no code changes.
 
+**Outcome (Session 46).** Appendix V now carries C2.6's clauses 2 and 3 and the C4.6 block, with the readings of
+46.2; C4.6's bar on the World Justice Project's sub-factor 6.2 awaits its data (46.4). The structure needed no code
+change, as expected, but three things did: `build_criteria.py` (version 2.1) and `criteria_v2_s45.py` register the
+four new quantities; the generator took each new criterion's source from a hard-coded "Package B, decision 45.1",
+which would have been wrong for C4.6, and now reads it from the block's `adopted` field; and the protocol it
+generates is draft.7, since draft.6 already names the 28-criterion text of tag `s45`.
+
 ## Appendix V. The v2.0 text (read by `build_criteria.py`)
 
 Fields are the keys of `criteria.json`'s `definition`; `clauses` are separated by ` | `; `scope` is text in the
-threshold that applies to every clause; `allow` lists descriptive figures a measurement field may carry.
+threshold that applies to every clause; `allow` lists descriptive figures a measurement field may carry; `adopted`
+names the decision that adopted a new criterion, for its `sources`.
 
-- **structure**: 28 criteria; domain maxima 6, 6, 6, 5, 5
+- **structure**: 29 criteria; domain maxima 6, 6, 6, 6, 5
 
 ### C1.1
 - **class**: I
@@ -301,20 +366,21 @@ threshold that applies to every clause; `allow` lists descriptive figures a meas
 
 ### C2.6 · Civil Liberties and Rule of Law
 - **class**: N
-- **codes**: G2
+- **codes**: G2, C-1
+- **adopted**: Package B, decision 45.1; clauses 2 and 3, Package C, decision 46.1
 - **domain**: D2
 - **derivation**: From N3 (Coercion Minimization) + N7 (Governance Legitimacy and Anti-Capture)
-- **requirement**: Economic security is not bought with liberty: expression, belief, association, due process, equal treatment under law and personal autonomy, privacy included, are protected in practice, and those who administer the system answer to independent courts.
-- **rationale**: Domain 2 measures freedom from economic coercion, participation and exit, but not the civil liberties and legal protections those freedoms depend on. The omission matters most where allocation runs through the state or through shared data systems: a system can provide for everyone and still punish dissent, surveil its participants or deny them an independent hearing against its administrators. It is also the dimension on which the corpus's configured national economies differ most from the rest.
-- **distinguishes**: C2.6 from C2.4 and C4.4: participation and the distribution and accountability of power are measured there; C2.6 measures rights held against that power, whoever holds it. The Freedom House civil-liberties checklist is used because it covers exactly this set (expression and belief, associational and organizational rights, rule of law, personal autonomy and individual rights) and leaves out the electoral questions that C2.4 and C4.4 measure.
-- **measurement_protocol**: Configured national economy: the Freedom House civil-liberties score, 0–60, in Freedom in the World for the stated date, cross-checked against V-Dem's Civil Liberties Index; where the two sources disagree about whether the threshold is met, the call is flagged (protocol 6.1), not resolved silently. Design, mechanism or comprehensive system: the fifteen civil-liberties questions of the Freedom House checklist are answered from the system's own sources, 0–4 each, crediting only what the system states and provides for (protocol 4.1): its guarantees, the body that decides disputes between participants and the system's administrators and that body's independence from them, and, where allocation depends on personal data, stated limits on collection, access, use and retention. A mechanism operating inside a wider economy is scored on what it adds to or takes from the liberties of that economy (protocol 3.2).
-- **pass_threshold**: Civil-liberties score ≥53 of 60 on the Freedom House checklist
-- **clauses**: Civil-liberties score ≥53 of 60 on the Freedom House checklist
-- **indicators**: Freedom House, Freedom in the World, civil-liberties score (0–60); cross-check, V-Dem Civil Liberties Index.
-- **allow**: 0, 4
-- **band_1.0**: Score of 53 or more of 60 (the top band of Freedom House's former 1–7 civil-liberties rating), or a design whose stated guarantees and independent adjudication answer the checklist at that level, with component evidence where it relies on institutions not yet built.
-- **band_0.5**: Score of 17 to 52, or a design whose guarantees are partial, unstated for some questions, or left to administrators' discretion without an independent hearing, where the gap has a credible pathway to close under the system's own logic.
-- **band_0.0**: Score of 16 or less (the two lowest bands of the former rating), or a design that subordinates expression, association or due process to its allocation or administration with no independent adjudication.
+- **requirement**: Economic security is not bought with liberty: expression, belief, association, due process, equal treatment under law and personal autonomy, privacy and consent to medical treatment included, are protected in practice; compulsion in the name of health rests on law, is time-limited and is open to independent review; and those who administer the system answer to independent courts.
+- **rationale**: Domain 2 measures freedom from economic coercion, participation and exit, but not the civil liberties and legal protections those freedoms depend on. The omission matters most where allocation runs through the state or through shared data systems: a system can provide for everyone and still punish dissent, surveil its participants or deny them an independent hearing against its administrators. It is also the dimension on which the corpus's configured national economies differ most from the rest. Bodily integrity belongs to personal autonomy, but none of the fifteen civil-liberties questions of the Freedom House checklist asks about consent to medical treatment or about the limits of compulsion in public health, and a system that allocates care, or conditions benefits on health measures, is where that liberty is most exposed; clauses 2 and 3 measure it.
+- **distinguishes**: C2.6 from C2.4 and C4.4: participation and the distribution and accountability of power are measured there; C2.6 measures rights held against that power, whoever holds it. The Freedom House civil-liberties checklist is used because it covers exactly this set (expression and belief, associational and organizational rights, rule of law, personal autonomy and individual rights) and leaves out the electoral questions that C2.4 and C4.4 measure. Clauses 2 and 3 cover consent, refusal and the legal form of compulsion; they do not decide entitlement to particular procedures or to treatments not approved (abortion, assisted dying, a right to try), which are contested and on which the criterion takes no side. Restrictions on movement also enter the Freedom House score, through its freedom-of-movement question; clause 3 tests whether compulsion is prescribed by law, limited in time and reviewable, not how much of it there is.
+- **measurement_protocol**: Clause 1. Configured national economy: the Freedom House civil-liberties score, 0–60, in Freedom in the World for the stated date, cross-checked against V-Dem's Civil Liberties Index; where the two sources disagree about whether the threshold is met, the call is flagged (protocol 6.1), not resolved silently. Design, mechanism or comprehensive system: the fifteen civil-liberties questions of the Freedom House checklist are answered from the system's own sources, 0–4 each, crediting only what the system states and provides for (protocol 4.1): its guarantees, the body that decides disputes between participants and the system's administrators and that body's independence from them, and, where allocation depends on personal data, stated limits on collection, access, use and retention. A mechanism operating inside a wider economy is scored on what it adds to or takes from the liberties of that economy (protocol 3.2). Clauses 2 and 3 are shown from the law in force at the stated date, which the scoring document names. Clause 2: a statute, code or constitutional provision requires the free and informed consent of the person concerned before any medical intervention, or of a lawful representative where the person cannot consent, and protects the right to refuse consent or to withdraw it at any time, as Article 5 of the Council of Europe's Convention on Human Rights and Biomedicine (the Oviedo Convention) states it; the only exceptions are an emergency in which consent cannot be obtained and compulsion that meets clause 3. Clause 3: compulsion is any measure that applies treatment, vaccination, quarantine or isolation to a person without their consent, or that penalizes refusal by a fine, by detention or by loss of employment, schooling or an essential benefit. Every such measure is prescribed by law; is time-limited, lapsing at a stated time unless renewed by a decision itself open to review, so that a standing requirement with no such limit does not meet the clause; and is open to challenge by the person concerned before an independent court or tribunal with power to end it. Where the scoring window contains a public-health emergency, the measures actually taken are read as well: V-Dem's Pandemic Violations of Democratic Standards Index, which codes emergency measures without a time limit, and the Oxford COVID-19 Government Response Tracker for what was imposed. For a design, both clauses are answered from its own sources, crediting only what it states and provides for (protocol 4.1); a mechanism is scored on what it adds to or takes from the protections of the economy it operates in (protocol 3.2).
+- **pass_threshold**: Civil-liberties score ≥53 of 60 on the Freedom House checklist; informed consent to medical treatment protected in law; any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review
+- **clauses**: Civil-liberties score ≥53 of 60 on the Freedom House checklist | informed consent to medical treatment protected in law | any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review
+- **indicators**: clause 1, Freedom House, Freedom in the World, civil-liberties score (0–60); cross-check, V-Dem Civil Liberties Index; clauses 2 and 3, the law in force, with the Oviedo Convention's Article 5 as the consent standard and, for a public-health emergency, V-Dem's Pandemic Violations of Democratic Standards Index and the Oxford COVID-19 Government Response Tracker.
+- **allow**: 0, 4, 5
+- **band_1.0**: Score of 53 or more of 60 (the top band of Freedom House's former 1–7 civil-liberties rating), consent to medical treatment protected in law, and every medical or public-health compulsion prescribed by law, time-limited and open to an independent court; or a design whose stated guarantees and independent adjudication answer the checklist at that level and state the same protections, with component evidence where it relies on institutions not yet built.
+- **band_0.5**: Score of 17 to 52; or a score of 53 or more with consent or the limits of compulsion not shown; or a design whose guarantees are partial, unstated for some questions, or left to administrators' discretion without an independent hearing, where the gap has a credible pathway to close under the system's own logic.
+- **band_0.0**: Score of 16 or less (the two lowest bands of the former rating), or a design that subordinates expression, association, due process or consent to medical treatment to its allocation or administration with no independent adjudication.
 
 ### C3.1
 - **class**: I
@@ -344,6 +410,7 @@ threshold that applies to every clause; `allow` lists descriptive figures a meas
 ### C3.6 · Productive and Innovative Capacity
 - **class**: N
 - **codes**: G1
+- **adopted**: Package B, decision 45.1
 - **domain**: D3
 - **derivation**: From N13 (Incentive Alignment) + N1 (Human Flourishing)
 - **requirement**: The system sustains and improves the output its other criteria distribute: productivity does not decline, improvement comes from better methods and not only from more capital, and basic needs are provisioned at the working time the system itself assumes.
@@ -400,6 +467,24 @@ threshold that applies to every clause; `allow` lists descriptive figures a meas
 - **measurement**: Extraction rates (wealth transfer from labor to capital, tenants to landlords, borrowers to lenders). Power asymmetries (capacity to refuse participation without penalty). The share of decisions made under duress is measured once, in C2.1.
 - **pass_threshold**: Extraction rates <10% GDP, genuine exit rights from exploitative relationships
 - **clauses**: Extraction rates <10% GDP | genuine exit rights from exploitative relationships
+
+### C4.6 · Harm Internalization
+- **class**: N
+- **codes**: C-2
+- **adopted**: Package C, decision 46.1
+- **domain**: D4
+- **derivation**: From N13 (Incentive Alignment) + N6 (Ecological Compliance)
+- **requirement**: Harm to health and to the environment is a cost to whoever causes it, not a source of revenue: the toll of pollution on health does not rise, those who cause harm answer for it to those harmed, and the regulators who should detect it are free of the influence of those they regulate.
+- **rationale**: No other criterion measures the health burden of pollution, or whether harm is a cost to the one who causes it: healthcare appears only in C2.2's basket of basic needs, and fuel-related pollution only in C3.5's externalization clause. The documented pattern the criterion answers is concealment of known harm to protect product revenue, and capture of the regulators who should detect it, as in the histories of tobacco, leaded fuel, PFAS chemicals and industry-funded nutrition research. Where one owner profits from both a harm and its treatment, the incentive to tolerate the harm is structural. The criterion does not assume that harm is caused deliberately: it tests whether harm is a net cost to whoever causes it, which removes the incentive whatever the ownership.
+- **distinguishes**: C4.6 from C3.5 and C4.2: C3.5's fourth clause measures the unpriced environmental cost of fuel use as a share of GDP, a price gap, and C4.2 the pressure of consumption on the biosphere; C4.6 measures harm to human health from polluted air and water and from poisoning, whatever its source, and the liability and regulation that make harm a cost to whoever causes it. A system can price fuel fully and still see pollution deaths rise from household fuel or unsafe water, or leave fuel unpriced while those deaths fall. The third clause measures whether regulators are free of the influence of those they regulate; C2.6 measures rights held against the state and the independence of its courts, and C4.4 the accountability of major decisions to those they affect. Health outcomes in general, coverage and financial protection, are not measured; a Health Security criterion is recorded for v2.1.
+- **measurement_protocol**: Clause 1: the sum of the age-standardized mortality rates per 100,000 population attributed to household and ambient air pollution (SDG 3.9.1), to unsafe water, unsafe sanitation and lack of hygiene (SDG 3.9.2) and to unintentional poisoning (SDG 3.9.3), in the World Health Organization's Global Health Observatory, at the start and at the end of the 20 years to the stated date; the clause is met if the rate at the end is no higher than at the start. Where the SDG series do not span the window, the Global Burden of Disease study's (IHME) age-standardized death rates attributable to air pollution and to unsafe water, sanitation and handwashing, and from unintentional poisonings, are used, cross-checked against the SDG series where both exist; where the two disagree about whether the clause is met, the call is flagged (protocol 6.1). Clause 2 is shown from the law in force and its record, which the scoring document names: those who cause harm to health or to the environment are liable to compensate those harmed and to remedy the damage, under tort, product-liability or environmental-liability law or through a compensation scheme funded by a levy on those who cause the harm, and no immunity leaves a class of harm uncompensated or compensated from public funds alone; those harmed can bring the claim before an independent court, collectively where the harm is dispersed (a class or representative action, or the standing of associations, as Article 9 of the Aarhus Convention provides in environmental matters); and the scoring document names at least one such claim decided against those who caused the harm, and paid, within the scoring window. Clause 3: for a configured national economy, the World Justice Project Rule of Law Index, sub-factor 6.2 (government regulations are applied and enforced without improper influence), for the stated date; the score that meets the clause is fixed from the Index's published data before any configured national economy is scored on C4.6. For a design, clause 1 is the projected rate in the economy it is proposed for; clause 2 is its stated provisions; clause 3 is its stated provisions for the bodies that regulate food, water, air, chemicals and medicines, their independence of those they regulate in funding, appointment and the movement of staff, and the disclosure of who funded the evidence they rely on. Only what the design states and provides for is credited (protocol 4.1); a mechanism is scored on what it adds to or takes from the economy it operates in (protocol 3.2).
+- **pass_threshold**: Mortality attributed to pollution non-increasing over 20 years; those who cause harm to health or the environment liable for it, enforceably by those harmed; regulation of food, water, air, chemicals and medicines applied and enforced without improper influence
+- **clauses**: Mortality attributed to pollution non-increasing over 20 years | those who cause harm to health or the environment liable for it, enforceably by those harmed | regulation of food, water, air, chemicals and medicines applied and enforced without improper influence
+- **indicators**: clause 1, WHO Global Health Observatory (SDG 3.9.1, 3.9.2 and 3.9.3); IHME Global Burden of Disease, risk-attributable death rates; clause 2, the law in force and the record of claims; clause 3, World Justice Project Rule of Law Index, sub-factor 6.2 (the bar is fixed from its data before a configured national economy is scored).
+- **allow**: 100,000, 6.2, 9
+- **band_1.0**: All three clauses shown: the pollution mortality rate no higher at the end of the 20 years than at their start; those who cause harm liable for it in the law in force, enforceably by those harmed, with a record of claims paid; and regulation applied without improper influence (for a configured national economy, on the World Justice Project's sub-factor 6.2); or a design whose stated provisions do the same, with component evidence where it relies on institutions not yet built.
+- **band_0.5**: One or more clauses not shown, or shown only by projection resting on untested assumptions, where the system has a functioning mechanism that makes some harm a cost to whoever causes it (liability, a compensation scheme funded by those who cause the harm, pricing, or independent regulation).
+- **band_0.0**: No structural mechanism makes harm a cost to whoever causes it (those who cause harm are shielded from liability with no compensation they fund, and its regulation is controlled by those it regulates), or pollution mortality rising over 20 years with no credible pathway to reverse it under the system's own logic.
 
 ### C5.1
 - **class**: W

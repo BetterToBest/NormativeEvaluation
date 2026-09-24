@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 20 (Session 45). Runs every verification and analysis script on file
+Version 21 (Session 46). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -146,6 +146,13 @@ build_criteria.py, SCORING_PROTOCOL.md and criteria_schema.json as they stood at
 *_s44_snapshot.* files: every check written in Sessions 36 to 44 that reads one of them reads the snapshot and is
 marked [Session 44 state]; the first replication kit's check reads the schema snapshot, which is byte-identical to
 the schema it was built with. build_readme.py now also reads criteria.json. 90 checks.
+Version 21 (Session 46) carries decision 46.1, Package C, adopted by the owner in part: C2.6 gains two clauses
+(consent to medical treatment; compulsion prescribed by law, time-limited and open to judicial review) and C4.6
+Harm Internalization is added, 29 criteria. The record is amended in place and tag s45 keeps its prior state, so
+the three Session 45 checks now run build_criteria.py version 2.1, which regenerates the protocol as draft.7, and
+criteria_v2_s45.py on the amended record; the two build captures are recaptured as build_criteria_s46_output.txt
+and build_criteria_s46_selftest_output.txt (the Session 45 captures are at tag s45), and
+criteria_v2_s45_output.txt is recaptured under its own name. No check is added or removed: 90 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -895,15 +902,15 @@ S44_CHECKS = [
 V2_INPUTS = ("build_criteria.py", "criteria_s44_snapshot.json", "SCORING_PROTOCOL_s44_snapshot.md",
              "NEEC_Criteria_v2_s45.md")
 S45_CHECKS = [
-    dict(name="build_criteria.py (version 2) builds criteria.json v2.0, 28 criteria, from the pinned Session 44 "
-              "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.6",
+    dict(name="build_criteria.py (version 2.1) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
+              "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.7",
          cmd=["python", "build_criteria.py"], files={k: k for k in V2_INPUTS},
-         stdout="build_criteria_s45_output.txt", stderr=EMPTY,
+         stdout="build_criteria_s46_output.txt", stderr=EMPTY,
          outputs={"criteria.json": "criteria.json", "SCORING_PROTOCOL.md": "SCORING_PROTOCOL.md"}),
     dict(name="build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 "
               "document passes (negative control)",
          cmd=["python", "build_criteria.py", "--selftest"], files={k: k for k in V2_INPUTS},
-         stdout="build_criteria_s45_selftest_output.txt", stderr=EMPTY),
+         stdout="build_criteria_s46_selftest_output.txt", stderr=EMPTY),
     dict(name="criteria_v2_s45.py: the v2.0 record's evidence tables (figure scan, norm weights, units by revision "
               "class, registered quantities)",
          cmd=["python", "criteria_v2_s45.py"],

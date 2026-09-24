@@ -138,7 +138,7 @@ change a failure count or a tier. The same pass applies two rules adopted with s
 can turn a 0.5 into a structural failure; the two such cases identified so far, both in Ostrom-Style Commons
 Governance, cannot change its tier, and the pass reports any failure count it changes. The pass now also
 applies the v2.0 criteria ([`NEEC_Criteria_v2_s45.md`](NEEC_Criteria_v2_s45.md)): {NC} criteria, adding
-{' and '.join(NEWC)}, with {N_RESTATED} thresholds restated. Unlike D28, these can change failure counts
+{', '.join(NEWC[:-1]) + ' and ' + NEWC[-1] if len(NEWC) > 1 else NEWC[0]}, with {N_RESTATED} thresholds restated. Unlike D28, these can change failure counts
 and tiers.
 
 ## Disclosure
