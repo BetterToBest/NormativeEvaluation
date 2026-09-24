@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 17 (Session 42). Runs every verification and analysis script on file
+Version 18 (Session 43). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -126,6 +126,12 @@ rescoring_s42.py, the fifth group of part (b): C2.5's ten part (b) units, with t
 codes listed and asserted, the audit's five out-of-reach codes confirmed, the four clauses left not estimated each
 asserted to sit in a unit another clause decides, their consequences computed cumulatively with parts (a) to (b4),
 and the record NEEC_Rescoring_s42.md checked against its generated tables: 85 checks.
+Version 18 (Session 43) adds
+rescoring_s43.py, the sixth group of part (b): the ten part (b) units of C3.5 and C4.1, with no departure from
+the audit's A codes, the audit's four out-of-reach codes confirmed, the four clauses left not estimated each
+asserted to sit in a unit another clause decides, a flag outside the group that rests on a unit it moves
+asserted, their consequences computed cumulatively with parts (a) to (b5), and the record
+NEEC_Rescoring_s43.md checked against its generated tables: 86 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -827,8 +833,28 @@ S42_CHECKS = [
          stdout="rescoring_s42_output.txt", stderr=EMPTY),
 ]
 
+# Session 43: the rescoring pass, part (b), sixth group (appended after the version 17 checks).
+S43_CHECKS = [
+    dict(name="rescoring_s43.py: rescoring pass part (b), sixth group, the 10 units of C3.5 and C4.1 re-estimated "
+              "clause by clause (D28); consequences with parts (a) to (b5), no corpus file changed",
+         cmd=["python", "rescoring_s43.py"],
+         files={k: k for k in ("rescoring_s43.py", "rescoring_s42.py", "rescoring_s41.py", "rescoring_s40.py",
+                               "rescoring_s39.py", "rescoring_s38.py", "rescoring_s37.py", "r4_audit_s35.py",
+                               "criteria.json", "neec_corpus.json", "NEEC_Rescoring_s43.md",
+                               "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
+                               "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_MutualCredit_LETS_scoring_scratch.md",
+                               "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                               "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="rescoring_s43_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS + S36_CHECKS + S37_CHECKS
-          + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS + S42_CHECKS)
+          + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS + S42_CHECKS + S43_CHECKS)
 
 
 def md5(data):
