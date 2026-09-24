@@ -273,7 +273,7 @@ run_all_checks.py -- 90 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 eeae50f1)
+          README.md == README.md (md5 2ecb7632)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -328,18 +328,18 @@ run_all_checks.py -- 90 reproducibility checks
           stdout == criteria_review_s44_output.txt (md5 09427bb9)
           stderr == (empty) (md5 d41d8cd9)
 
-[88] PASS  build_criteria.py (version 2) builds criteria.json v2.0, 28 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.6
-          stdout == build_criteria_s45_output.txt (md5 5ccdd143)
+[88] PASS  build_criteria.py (version 2.1) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.7
+          stdout == build_criteria_s46_output.txt (md5 b2a44ed7)
           stderr == (empty) (md5 d41d8cd9)
-          criteria.json == criteria.json (md5 f719926c)
-          SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 183f9cd9)
+          criteria.json == criteria.json (md5 281723b6)
+          SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 b4a1d506)
 
 [89] PASS  build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 document passes (negative control)
-          stdout == build_criteria_s45_selftest_output.txt (md5 8b339b54)
+          stdout == build_criteria_s46_selftest_output.txt (md5 8b339b54)
           stderr == (empty) (md5 d41d8cd9)
 
 [90] PASS  criteria_v2_s45.py: the v2.0 record's evidence tables (figure scan, norm weights, units by revision class, registered quantities)
-          stdout == criteria_v2_s45_output.txt (md5 9a8f57b9)
+          stdout == criteria_v2_s45_output.txt (md5 5b76e996)
           stderr == (empty) (md5 d41d8cd9)
 
 ============================================================================================

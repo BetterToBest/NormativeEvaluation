@@ -1,6 +1,6 @@
-build_criteria.py (version 2) -- NEEC v2.0 criteria
+build_criteria.py (version 2.1) -- NEEC v2.0 criteria
 ============================================================================================
-Base: criteria_s44_snapshot.json (md5 d4b78634, 26 criteria); record: NEEC_Criteria_v2_s45.md (md5 29e9b976, 25 blocks); clause splits: SCORING_PROTOCOL_s44_snapshot.md (md5 bbee2c45)
+Base: criteria_s44_snapshot.json (md5 d4b78634, 26 criteria); record: NEEC_Criteria_v2_s45.md (md5 e8a11f37, 26 blocks); clause splits: SCORING_PROTOCOL_s44_snapshot.md (md5 bbee2c45)
 
 crit   class codes                  threshold  clauses  fields changed
 C1.1   I     K6, R2                 -                2  requirement, measurement_protocol, indicators
@@ -14,7 +14,7 @@ C2.2   W     R4                     -                1  disclosure
 C2.3   I     R3                     -                3  measurement, indicators
 C2.4   I     K2, R3                 -                3  measurement, indicators
 C2.5   D     K7                     restated         3  requirement, measurement, pass_threshold
-C2.6   N     G2                     restated         1  derivation, requirement, rationale, distinguishes, measurement_protocol, pass_threshold, indicators
+C2.6   N     G2, C-1                restated         3  derivation, requirement, rationale, distinguishes, measurement_protocol, pass_threshold, indicators
 C3.1   I     R3                     -                3  measurement, indicators
 C3.2   U     none                   -                3  -
 C3.3   W     K6                     -                1  measurement
@@ -26,15 +26,16 @@ C4.2   M     K3, K4, R1, G3, S2     restated         4  requirement, measurement
 C4.3   M     R4, R6, G3             restated         2  name (Racial and Gender Equity -> Group Equity), requirement, measurement, pass_threshold, indicators
 C4.4   D     K1, K2                 restated         2  measurement, pass_threshold
 C4.5   D     K5                     restated         2  measurement, pass_threshold
+C4.6   N     C-2                    restated         3  derivation, requirement, rationale, distinguishes, measurement_protocol, pass_threshold, indicators
 C5.1   W     K6                     -                2  requirement
 C5.2   M     R4                     restated         5  requirement, pass_threshold
 C5.3   U     none                   -                4  -
 C5.4   U     none                   -                3  -
 C5.5   U     none                   -                4  -
 
-Classes: W 5 (wording, commentary or disclosure only); D 3 (clauses deleted only); I 7 (indicator named for an unchanged clause and bar); M 7 (bar, measure or clause restated); N 2 (new criterion); U 4 (unchanged)
-Thresholds restated or new: 15; one-clause criteria: 6 (C1.2a, C1.2b, C1.5, C2.2, C2.6, C3.3); multi-clause: 22
-Structure: 28 criteria, maximum 28; domain maxima D1 6, D2 6, D3 6, D4 5, D5 5
+Classes: W 5 (wording, commentary or disclosure only); D 3 (clauses deleted only); I 7 (indicator named for an unchanged clause and bar); M 7 (bar, measure or clause restated); N 3 (new criterion); U 4 (unchanged)
+Thresholds restated or new: 16; one-clause criteria: 5 (C1.2a, C1.2b, C1.5, C2.2, C3.3); multi-clause: 24
+Structure: 29 criteria, maximum 29; domain maxima D1 6, D2 6, D3 6, D4 6, D5 5
 Registered quantities, each in one Pass Threshold:
   wealth Gini                          C1.2b
   citizen proposals adopted            C2.4
@@ -46,6 +47,10 @@ Registered quantities, each in one Pass Threshold:
   public debt                          C4.1
   productivity                         C3.6
   inflation                            C3.2
+  medical consent and compulsion       C2.6
+  pollution mortality                  C4.6
+  liability for harm                   C4.6
+  regulatory independence              C4.6
 
 Assertions A1-A7:
   A1: pass
@@ -56,5 +61,5 @@ Assertions A1-A7:
   A6: pass
   A7: pass
 
-Wrote criteria.json: 28 criteria, md5 f719926c.
-Wrote SCORING_PROTOCOL.md: 6 asserted edits and Appendix B regenerated from SCORING_PROTOCOL_s44_snapshot.md, md5 183f9cd9.
+Wrote criteria.json: 29 criteria, md5 281723b6.
+Wrote SCORING_PROTOCOL.md: 7 asserted edits and Appendix B regenerated from SCORING_PROTOCOL_s44_snapshot.md, md5 b4a1d506.

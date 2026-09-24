@@ -20,7 +20,7 @@ Potentially Adequate; 3 to 5, Partially Adequate; 6 or more, Structurally Inadeq
 therefore sit in a lower tier: Universal Basic Income (14.5/26, 7 failures) outscores
 Georgism / Land Value Tax (13.5/26, 2 failures) and sits two tiers lower.
 
-[`SCORING_PROTOCOL.md`](SCORING_PROTOCOL.md) (version 2.0-draft.6) states how each
+[`SCORING_PROTOCOL.md`](SCORING_PROTOCOL.md) (version 2.0-draft.7) states how each
 criterion is scored and what a scoring document must contain. Close calls are recorded rather than
 smoothed over: each scoring document registers the scores a reasonable scorer could set differently, in
 which direction, and what they would do to the total and the tier.
@@ -70,8 +70,8 @@ change a failure count or a tier. The same pass applies two rules adopted with s
 (decisions D29 and D31: how implementation failures count, and what belongs to a scored mechanism), which
 can turn a 0.5 into a structural failure; the two such cases identified so far, both in Ostrom-Style Commons
 Governance, cannot change its tier, and the pass reports any failure count it changes. The pass now also
-applies the v2.0 criteria ([`NEEC_Criteria_v2_s45.md`](NEEC_Criteria_v2_s45.md)): 28 criteria, adding
-Civil Liberties and Rule of Law and Productive and Innovative Capacity, with seven thresholds restated. Unlike D28, these can change failure counts
+applies the v2.0 criteria ([`NEEC_Criteria_v2_s45.md`](NEEC_Criteria_v2_s45.md)): 29 criteria, adding
+Civil Liberties and Rule of Law, Productive and Innovative Capacity and Harm Internalization, with seven thresholds restated. Unlike D28, these can change failure counts
 and tiers.
 
 ## Disclosure
@@ -105,7 +105,7 @@ directory because each check copies its inputs by name.
 ## What is here
 
 - **Data.** `neec_scores.csv` (totals, domain scores, failures, tiers); `neec_corpus.json` (score vectors);
-  `criteria.json` (the v2.0 criteria, 28, with their clauses and anchors; the scores above use the 26 of
+  `criteria.json` (the v2.0 criteria, 29, with their clauses and anchors; the scores above use the 26 of
   Paper v1.4 until the rescoring pass is applied), with `criteria_schema.json` and
   `summary_block_schema.json`.
 - **Canonical scripts.** `neec_weighting_robustness_analysis_v2.py` (the score vectors, weighting schemes
