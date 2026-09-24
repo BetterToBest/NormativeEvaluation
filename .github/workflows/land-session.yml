@@ -1,0 +1,78 @@
+name: land-session
+# Lands a finished NEEC working session without the owner (decision 45.7, NEEC_Criteria_v2_s45.md).
+# A session's last commit has a message beginning "NEEC Session <n>: " and adds NEEC_Project_Handoff_<n>.md.
+# When such a commit is pushed to any branch other than main, this job merges the branch into main with a merge
+# commit, runs every reproducibility check on the merged tree and compares the run with the captured output, and
+# only if both pass pushes main, tags the merge commit s<n> and publishes a release s<n>. Any other push does
+# nothing. Pushes made with GITHUB_TOKEN start no other workflow (GitHub's rule), so the harness on main is
+# started explicitly, and a Pages build is requested where Pages is enabled.
+on:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch whose head is a session commit"
+        required: true
+permissions:
+  contents: write
+  actions: write
+  pages: write
+concurrency:
+  group: land-session
+  cancel-in-progress: false
+jobs:
+  land:
+    runs-on: ubuntu-24.04
+    env:
+      BRANCH: ${{ github.event.inputs.branch || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Is the branch head a session commit?
+        id: meta
+        run: |
+          git fetch -q origin "$BRANCH"
+          msg=$(git log -1 --format=%s "origin/$BRANCH")
+          n=$(printf '%s' "$msg" | sed -nE 's/^NEEC Session ([0-9]+): .*/\1/p')
+          if [ -z "$n" ]; then
+            echo "Not a session commit: $msg"; echo "land=no" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if git rev-parse -q --verify "refs/tags/s$n" > /dev/null; then
+            echo "Tag s$n already exists; nothing to land."; echo "land=no" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          git cat-file -e "origin/$BRANCH:NEEC_Project_Handoff_$n.md" || { echo "NEEC_Project_Handoff_$n.md is missing"; exit 1; }
+          echo "n=$n" >> "$GITHUB_OUTPUT"
+          echo "land=yes" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        if: steps.meta.outputs.land == 'yes'
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        if: steps.meta.outputs.land == 'yes'
+        with:
+          node-version: "22"
+      - name: Merge the branch into main
+        if: steps.meta.outputs.land == 'yes'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git merge --no-ff "origin/$BRANCH" -m "Merge branch '$BRANCH' (NEEC Session ${{ steps.meta.outputs.n }})"
+      - name: Run every check on the merged tree
+        if: steps.meta.outputs.land == 'yes'
+        run: |
+          python3 run_all_checks.py > "$RUNNER_TEMP/run.txt"
+          cmp "$RUNNER_TEMP/run.txt" run_all_checks_output.txt
+      - name: Push main, tag, publish, start the harness on main
+        if: steps.meta.outputs.land == 'yes'
+        run: |
+          n=${{ steps.meta.outputs.n }}
+          git push origin HEAD:main
+          git tag "s$n"
+          git push origin "s$n"
+          gh release create "s$n" --verify-tag --title "s$n" --notes "NEEC Session $n. Record: NEEC_Project_Handoff_$n.md."
+          gh workflow run harness.yml --ref main
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null 2>&1 || echo "Pages is not enabled; no build requested."
