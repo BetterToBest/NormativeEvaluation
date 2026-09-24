@@ -1,0 +1,11 @@
+build_criteria.py --selftest: each rule must reject a planted violation
+  clean v2.0 document: 0 failure(s)
+  A1 rejects a Requirement figure the threshold lacks (C1.2a at $70,000)
+  A2 rejects the wealth Gini back in C4.4's threshold
+  A3 rejects a dated clause (C4.2 'by 2030')
+  A4 rejects a US-only measure (C1.3 'area median income')
+  A5 rejects a clause that is not a substring of its threshold (C4.4)
+  A6 rejects an anchor threshold that differs from its definition (C2.6)
+  A7 rejects a missing criterion (C3.6 dropped)
+  7 of 7 planted violations rejected; clean document passes: True
+SELFTEST PASS
