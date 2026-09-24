@@ -1,0 +1,97 @@
+NEEC rescoring pass, part (b), fifth group: C2.5 (NEEC_Rescoring_s42.md)
+inputs: criteria.json, neec_corpus.json, r4_audit_s35.py, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, NEEC_Rescoring_s42.md
+
+[1] THE POPULATION
+  PASS D28's population 134; part (b) 101
+  PASS this group holds exactly the part (b) units of C2.5 (10), every one a corpus 1.0 and none re-estimated before
+  PASS they are all of C2.5's published 1.0s (10)
+  C2.5: LM, CCO, INT, GEO, MC, DE, UBS, SWF, IF, OS
+
+[2] THE RECORDS
+  PASS every unit has one status per clause, in Appendix B's order; every cleared, short, out-of-reach and moot clause, and every clause estimated as not shown, carries its source
+  clause statuses: cleared 25, short 2, not shown 8, out of reach 5, moot 0
+
+[3] THE RULE (D28)
+  PASS every verdict follows D28: 1.0 only if every clause is cleared or moot, otherwise 0.5
+  PASS no unit is scored 0.0 in this pass (D28(f))
+  PASS 1 of 10 stand (LM); 9 become 0.5 (4.5 points)
+  PASS every flag names alternatives other than the scored value
+  PASS every departure from the audit's A codes is listed with its reason, and every listed one occurs (1)
+  CCO C2.5 clause 1: short; the design's own sources set the share of Acre Equity a resident can realise on leaving Public Trust Housing below face value for five years (reading 3.5)
+  PASS the audit coded 14 clauses of this group silent; 10 are estimated here, and 4 are left not estimated, each in a unit whose verdict another clause already fixes
+  GEO C2.5 clause 2: not estimated in this pass (verdict fixed by another clause)
+  IF C2.5 clause 2: not estimated in this pass (verdict fixed by another clause)
+  OS C2.5 clause 2: not estimated in this pass (verdict fixed by another clause)
+  UBS C2.5 clause 2: not estimated in this pass (verdict fixed by another clause)
+  silent clauses estimated here: cleared 5, short 1, not shown 4
+
+[4] REACH (D28(c)) AND EXTENSIONS (D31)
+  PASS the audit's 5 out-of-reach codes in this group are confirmed and no other clause is out of reach (no D31 source places voluntary association, or for IF geographic mobility, inside the mechanism)
+  GEO C2.5 clause 4: freedom of association is not governed by a land tax
+  IF C2.5 clause 3: geographic mobility is not governed by a financing mechanism
+  IF C2.5 clause 4: freedom of association is not governed by a financing mechanism
+  SWF C2.5 clause 4: freedom of association is not governed by a sovereign fund
+  UBS C2.5 clause 4: freedom of association is not governed by public services
+
+[5] FLAG REGISTERS (against the summary blocks, cumulatively with parts (a) to (b4))
+  PASS flags added 1 (LM); removed 2 (IF, OS, each now scored at its own alternative); no other unit of this group carried a flag
+  Flags added in this group: 1; removed: 2. Across the pass so far, 14 entries' flag registers change (CCO, CN, CPS, IF, LM, MC, NSD, OS, QA, SG, SQ, SWF, UBI, UBS).
+
+[6] CONSEQUENCES (computed here; no corpus file changes)
+  PASS no failure count changes, so no tier changes (D28(f))
+  PASS 37 D28 units remain for part (b)
+  Left for part (b): 37 D28 units (C3.5 2, C4.1 8, C4.2 6, C4.3 6, C4.4 4, C4.5 3, C5.2 4, C5.4 2, C5.5 2).
+  PASS 1.0s C2.5 keeps: C2.5 1 (LM; published 10)
+  PASS every criterion had a 1.0 in the published corpus; the pass so far leaves 5 with none: C2.3 (part (b1)), C2.4 (part (b1)), C3.1 (part (b2)), C1.1 (part (b3)), C2.1 (part (b4))
+  After this group, the entries scoring 1.0 on C2.5 are: 1 (LM), against 10 published. Every criterion had a 1.0 in the published corpus; after the pass so far no entry scores 1.0 on 5 of them: C1.1 (emptied in part (b3)), C2.1 (emptied in part (b4)), C2.3 (emptied in part (b1)), C2.4 (emptied in part (b1)), C3.1 (emptied in part (b2)).
+  PASS part (b4)'s result reproduced: 18 dominance pairs, frontier 12
+  After this group the corpus has 18 dominance pairs against 18 after part (b4) (new: PE>DE; lost: CCO>LM), and its frontier holds 13 entries against 12 (NSD, MS, LM, UBI, DG, FALC, PE, CCO, INT, MC, SWF, IF, OS). First place: CCO, 21.0 after part (b4), 20.5 now. Across parts (a) and (b1) to (b5), 108 units have been re-estimated: 7 stand and 101 become 0.5 (50.5 points).
+
+[7] ANCHOR EXAMPLES THE PASS SO FAR MOVES (build_criteria.py checks examples against published scores)
+  PASS 8 anchor examples cite a unit the pass moves
+  PASS bands left with no corpus unit at their value: C1.1's 1.0, C2.1's 1.0, C2.3's 1.0, C2.4's 1.0, C3.1's 1.0
+  Anchor examples citing a unit the pass moves: C1.1's 1.0 example, NSD (part (b3), to 0.5); C2.1's 1.0 example, UBI (part (a), to 0.5); C2.3's 1.0 example, DG (part (b1), to 0.5); C2.4's 1.0 example, PE (part (b1), to 0.5); C2.5's 1.0 example, CCO (part (b5), to 0.5); C3.1's 1.0 example, UBI (part (b2), to 0.5); C3.2's 1.0 example, PE (part (b4), to 0.5); C5.1's 1.0 example, MS (part (b2), to 0.5). When the pass is applied, each band needs an example the corpus then scores at that value; C1.1's 1.0, C2.1's 1.0, C2.3's 1.0, C2.4's 1.0, C3.1's 1.0 bands have none left (part (b4), reading 3.5); C2.5's 1.0 band keeps one (LM, flagged; reading 3.7).
+
+[8] THE RECORD'S TABLES (generated here; NEEC_Rescoring_s42.md must contain them verbatim)
+  PASS NEEC_Rescoring_s42.md contains all 17 generated tables
+
+| Entry | Criterion | Clauses | Verdict | Flag |
+|---|---|---|---|---|
+| LM | C2.5 | C C C C | 1.0 → 1.0 | alternative 0.5 |
+| CCO | C2.5 | S C C C | 1.0 → 0.5 |  |
+| INT | C2.5 | C U C C | 1.0 → 0.5 |  |
+| GEO | C2.5 | C U C R | 1.0 → 0.5 |  |
+| MC | C2.5 | C C U C | 1.0 → 0.5 |  |
+| DE | C2.5 | C C C U | 1.0 → 0.5 |  |
+| UBS | C2.5 | C U C R | 1.0 → 0.5 |  |
+| SWF | C2.5 | C C C R | 1.0 → 0.5 |  |
+| IF | C2.5 | C U R R | 1.0 → 0.5 |  |
+| OS | C2.5 | C U S U | 1.0 → 0.5 |  |
+
+| Entry | Published (rank) | After (b4) (rank) | After this group (rank) | Change here | Failures | Tier | D28 units left | Floor if all fall |
+|---|---:|---:|---:|---:|---:|---|---:|---:|
+| CCO | 24.5 (1) | 21.0 (1) | 20.5 (1) | -0.5 | 0 | Potentially Adequate | 5 | 18.0 |
+| PE | 20.5 (2) | 16.5 (2) | 16.5 (2) | 0.0 | 1 | Potentially Adequate | 5 | 14.0 |
+| NSD | 19.5 (3) | 14.5 (5) | 14.5 (5) | 0.0 | 2 | Potentially Adequate | 3 | 13.0 |
+| INT | 19.5 (3) | 16.5 (2) | 16.0 (3) | -0.5 | 3 | Partially Adequate | 5 | 13.5 |
+| DG | 19.0 (5) | 16.0 (4) | 16.0 (3) | 0.0 | 2 | Potentially Adequate | 5 | 13.5 |
+| MS | 16.5 (6) | 13.0 (8) | 13.0 (7) | 0.0 | 2 | Potentially Adequate | 0 | 13.0 |
+| MMT | 15.5 (7) | 12.0 (13) | 12.0 (11) | 0.0 | 3 | Partially Adequate | 1 | 11.5 |
+| UBI | 14.5 (8) | 11.5 (15) | 11.5 (15) | 0.0 | 7 | Structurally Inadequate | 1 | 11.0 |
+| MC | 14.5 (8) | 13.0 (8) | 12.5 (9) | -0.5 | 3 | Partially Adequate | 1 | 12.0 |
+| OS | 14.5 (8) | 14.0 (6) | 13.5 (6) | -0.5 | 3 | Partially Adequate | 1 | 13.0 |
+| SWF | 14.0 (11) | 13.5 (7) | 13.0 (7) | -0.5 | 3 | Partially Adequate | 1 | 12.5 |
+| SG | 14.0 (11) | 12.0 (13) | 12.0 (11) | 0.0 | 4 | Partially Adequate | 0 | 12.0 |
+| GEO | 13.5 (13) | 13.0 (8) | 12.5 (9) | -0.5 | 2 | Potentially Adequate | 0 | 12.5 |
+| UBS | 13.5 (13) | 12.5 (11) | 12.0 (11) | -0.5 | 3 | Partially Adequate | 0 | 12.0 |
+| IF | 13.5 (13) | 12.5 (11) | 12.0 (11) | -0.5 | 5 | Partially Adequate | 1 | 11.5 |
+| FALC | 13.0 (16) | 10.5 (16) | 10.5 (16) | 0.0 | 10 | Structurally Inadequate | 3 | 9.0 |
+| DE | 11.5 (17) | 10.5 (16) | 10.0 (17) | -0.5 | 8 | Structurally Inadequate | 2 | 9.0 |
+| SQ | 10.5 (18) | 9.5 (18) | 9.5 (18) | 0.0 | 9 | Structurally Inadequate | 0 | 9.5 |
+| CPS | 10.0 (19) | 8.0 (21) | 8.0 (21) | 0.0 | 12 | Structurally Inadequate | 1 | 7.5 |
+| SC | 10.0 (19) | 9.0 (20) | 9.0 (20) | 0.0 | 9 | Structurally Inadequate | 1 | 8.5 |
+| CN | 10.0 (19) | 9.5 (18) | 9.5 (18) | 0.0 | 8 | Structurally Inadequate | 0 | 9.5 |
+| QA | 9.0 (22) | 8.0 (21) | 8.0 (21) | 0.0 | 10 | Structurally Inadequate | 0 | 8.0 |
+| LM | 8.0 (23) | 6.5 (23) | 6.5 (23) | 0.0 | 15 | Structurally Inadequate | 1 | 6.0 |
+
+RESCORING PART (B), FIFTH GROUP, COMPUTED.
