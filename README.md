@@ -20,7 +20,7 @@ Potentially Adequate; 3 to 5, Partially Adequate; 6 or more, Structurally Inadeq
 therefore sit in a lower tier: Universal Basic Income (14.5/26, 7 failures) outscores
 Georgism / Land Value Tax (13.5/26, 2 failures) and sits two tiers lower.
 
-[`SCORING_PROTOCOL.md`](SCORING_PROTOCOL.md) (version 2.0-draft.8) states how each
+[`SCORING_PROTOCOL.md`](SCORING_PROTOCOL.md) (version 2.0-draft.9) states how each
 criterion is scored and what a scoring document must contain. Close calls are recorded rather than
 smoothed over: each scoring document registers the scores a reasonable scorer could set differently, in
 which direction, and what they would do to the total and the tier.
@@ -71,7 +71,7 @@ change a failure count or a tier. The same pass applies two rules adopted with s
 can turn a 0.5 into a structural failure; the two such cases identified so far, both in Ostrom-Style Commons
 Governance, cannot change its tier, and the pass reports any failure count it changes. The pass now also
 applies the v2.0 criteria ([`NEEC_Criteria_v2_s45.md`](NEEC_Criteria_v2_s45.md)): 29 criteria, adding
-Civil Liberties and Rule of Law, Productive and Innovative Capacity and Harm Internalization, with seven thresholds restated. Unlike D28, these can change failure counts
+Civil Liberties and Rule of Law, Productive and Innovative Capacity and Harm Internalization, with eight thresholds restated. Unlike D28, these can change failure counts
 and tiers.
 
 ## Disclosure
@@ -93,7 +93,7 @@ Requirements: Python 3.12 (standard library only) and, for three checks, Node.js
 python3 run_all_checks.py
 ```
 
-This runs 91 checks. Each copies exactly the files one script needs into a fresh temporary
+This runs 92 checks. Each copies exactly the files one script needs into a fresh temporary
 directory, runs the script there, and compares its output byte for byte with the captured copy in this
 repository; negative controls confirm that the verifiers reject superseded states. The captured output of
 the whole run is [`run_all_checks_output.txt`](run_all_checks_output.txt), and GitHub Actions repeats the

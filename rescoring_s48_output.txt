@@ -1,0 +1,130 @@
+NEEC rescoring pass: C4.4 re-read on decision 48.3, and the score ledger (NEEC_Rescoring_s48.md)
+inputs: criteria.json, criteria_s47_snapshot.json, criteria_s44_snapshot.json, neec_corpus.json, neec_scores.csv, NEEC_Report_v1_6.md, r4_audit_s35.py, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, rescoring_s47.py, NEEC_Rescoring_s48.md
+
+[1] C4.4 ON DECISION 48.3
+  PASS C4.4 is class M (class D at tag s47), its Pass Threshold and clauses unchanged, its measurement field extended by the definition
+  PASS the definition names the decisions, the accountability test, the minority board rule, the public-sector test and the design rule
+  C4.4 (1) Democratic accountability for ≥80% of major decisions
+  C4.4 (2) removal/replacement mechanisms functional
+
+[2] THE GROUP AND ITS RECORDS
+  PASS the group is exactly part (b7)'s 6 C4.4 units, each re-read here: DG, PE, CCO, INT, NSD, MS
+  PASS every unit has one status per v2.0 clause, each with its estimate and its source
+  PASS clause 2's status is part (b7)'s in every unit (decision 48.3 changes clause 1's measure only)
+
+[3] THE RULE (D28) AND THE AUDIT'S CODES, RE-READ ON THE DEFINED MEASURE
+  PASS every verdict follows D28, and none is 0.0 (D28(f))
+  PASS 3 stand (INT, MS, PE); against part (b7) one unit moves: CCO C4.4 1.0 -> 0.5
+  PASS the audit coded clause 1 A in 4 units: 3 carried on the defined measure with the design's own sources (INT, MS, PE), 1 estimated (CCO)
+  PASS part (b7)'s two flags (CCO, NSD) are dropped, and none is added
+
+[4] NORDIC SOCIAL DEMOCRACY, CLAUSE 1: THE MOST GENEROUS COUNT (decision 48.3(d))
+| Country | Regimes of the World | General government | State-owned enterprises | Self-employed | Social economy | Most generous count | Short of 80% by |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Denmark | 3 (liberal democracy) | 27.4% | 2.9% | 8.0% | 5.9% | 44.2% | 35.8 |
+| Finland | 3 (liberal democracy) | 24.9% | 3.5% | 12.5% | 7.7% | 48.6% | 31.4 |
+| Norway | 3 (liberal democracy) | 30.1% | 9.6% | 4.4% | not covered | 44.1% | 35.9 |
+| Sweden | 3 (liberal democracy) | 28.2% | 2.9% | 9.5% | 4.2% | 44.8% | 35.2 |
+  PASS the public sector counts in all four; the most generous count is below 80% in each (largest 48.6%, Finland), and Norway's social economy would need 35.9% of employment, 3.6 times the highest EU-28 share: clause 1 short
+
+[5] FLAG REGISTERS (against the summary blocks, cumulatively with parts (a) to (b7))
+  PASS the pass's added flags fall by two (CCO C4.4, NSD C4.4)
+  Flags added by the pass so far: 18 (against 20 after part (b7)); removed: 7. Across the pass so far, 15 entries' flag registers change (CCO, CN, CPS, DG, IF, LM, MC, NSD, OS, QA, SG, SQ, SWF, UBI, UBS).
+
+[6] CONSEQUENCES (on the published 26-criterion structure; no corpus file changes)
+  PASS no failure count changes, so no tier changes (D28(f))
+  PASS part (b7)'s result reproduced: 21 dominance pairs, frontier 13
+  PASS first place: CCO, 19.0 after part (b7), 18.5 now
+  PASS C4.4 keeps 3 1.0s (MS, PE, INT) of 6 published; its anchor example, Participatory Economics, stands; the criteria with no 1.0 stay 8
+  PASS 128 units re-estimated across the pass, each counted once
+  After this record the corpus has 21 dominance pairs against 21 after part (b7) (new: none; lost: none), and its frontier holds 13 entries against 13 (NSD, MS, LM, UBI, DG, FALC, PE, CCO, INT, MC, SWF, IF, OS). First place: CCO, 19.0 after part (b7), 18.5 now. Across the pass so far 128 units have been re-estimated, each counted once: 10 stand and 118 are at 0.5 (59.0 points). C4.4 keeps 3 1.0s (MS, PE, INT) against 6 published; its anchor example, Participatory Economics, stands.
+
+[7] THE SCORE LEDGER (published total, each part's change, the total now; 26 criteria)
+  PASS the published totals and failure counts in neec_corpus.json equal neec_scores.csv's for all 23 entries, on 26 criteria
+  PASS NEEC_Report_v1_6.md states CCO-PTF-CIP-SZH's published total, 24.5/26, and its version 1 total, 23.5/25
+  PASS each entry's changes, part by part, sum to the difference between its published total and its total now
+  PASS CCO-PTF-CIP-SZH: 13 of its published 1.0s re-estimated, 12 at 0.5; 24.5 - 6.0 = 18.5
+  PASS CCO-PTF-CIP-SZH was published with more 1.0s than any other entry (23; next PE, 16)
+  CCO-PTF-CIP-SZH was published at 24.5/26 with 23 criteria at 1.0, more than any other entry (the next, Participatory Economics, had 16). The pass has re-estimated 13 of them; 12 are at 0.5, so it stands at 18.5/26 (24.5 - 12 x 0.5). Its three v2.0 criteria (C2.6, C3.6, C4.6) are not scored yet, so no total on 29 criteria exists: when they are, its 29-criterion total will be its 26-criterion total after the pass plus 0 to 3.
+
+[8] THE RECORD'S TABLES (generated here; NEEC_Rescoring_s48.md must contain them verbatim)
+  PASS NEEC_Rescoring_s48.md contains all 14 generated tables
+
+| Entry | Criterion | Clauses | Verdict |
+|---|---|---|---|
+| DG | C4.4 | U U | part (b7) 0.5 → 0.5 |
+| PE | C4.4 | C C | part (b7) 1.0 → 1.0 |
+| CCO | C4.4 | U C | part (b7) 1.0 (flagged) → 0.5 |
+| INT | C4.4 | C C | part (b7) 1.0 → 1.0 |
+| NSD | C4.4 | S C | part (b7) 0.5 (flagged) → 0.5 |
+| MS | C4.4 | C C | part (b7) 1.0 → 1.0 |
+
+| Entry | Published (rank) | After (b7) (rank) | After 48.3 (rank) | Change here | Failures | Tier |
+|---|---:|---:|---:|---:|---:|---|
+| CCO | 24.5 (1) | 19.0 (1) | 18.5 (1) | -0.5 | 0 | Potentially Adequate |
+| PE | 20.5 (2) | 15.5 (2) | 15.5 (2) | 0.0 | 1 | Potentially Adequate |
+| NSD | 19.5 (3) | 14.5 (3) | 14.5 (3) | 0.0 | 2 | Potentially Adequate |
+| INT | 19.5 (3) | 14.5 (3) | 14.5 (3) | 0.0 | 3 | Partially Adequate |
+| DG | 19.0 (5) | 14.5 (3) | 14.5 (3) | 0.0 | 2 | Potentially Adequate |
+| MS | 16.5 (6) | 13.5 (6) | 13.5 (6) | 0.0 | 2 | Potentially Adequate |
+| MMT | 15.5 (7) | 12.0 (11) | 12.0 (11) | 0.0 | 3 | Partially Adequate |
+| UBI | 14.5 (8) | 11.5 (15) | 11.5 (15) | 0.0 | 7 | Structurally Inadequate |
+| MC | 14.5 (8) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate |
+| OS | 14.5 (8) | 13.0 (7) | 13.0 (7) | 0.0 | 3 | Partially Adequate |
+| SWF | 14.0 (11) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate |
+| SG | 14.0 (11) | 12.0 (11) | 12.0 (11) | 0.0 | 4 | Partially Adequate |
+| GEO | 13.5 (13) | 12.5 (8) | 12.5 (8) | 0.0 | 2 | Potentially Adequate |
+| UBS | 13.5 (13) | 12.0 (11) | 12.0 (11) | 0.0 | 3 | Partially Adequate |
+| IF | 13.5 (13) | 12.0 (11) | 12.0 (11) | 0.0 | 5 | Partially Adequate |
+| FALC | 13.0 (16) | 9.5 (16) | 9.5 (16) | 0.0 | 10 | Structurally Inadequate |
+| DE | 11.5 (17) | 9.0 (19) | 9.0 (19) | 0.0 | 8 | Structurally Inadequate |
+| SQ | 10.5 (18) | 9.5 (16) | 9.5 (16) | 0.0 | 9 | Structurally Inadequate |
+| CPS | 10.0 (19) | 8.0 (21) | 8.0 (21) | 0.0 | 12 | Structurally Inadequate |
+| SC | 10.0 (19) | 9.0 (19) | 9.0 (19) | 0.0 | 9 | Structurally Inadequate |
+| CN | 10.0 (19) | 9.5 (16) | 9.5 (16) | 0.0 | 8 | Structurally Inadequate |
+| QA | 9.0 (22) | 8.0 (21) | 8.0 (21) | 0.0 | 10 | Structurally Inadequate |
+| LM | 8.0 (23) | 6.5 (23) | 6.5 (23) | 0.0 | 15 | Structurally Inadequate |
+
+| Entry | Published | (a) | (b1) | (b2) | (b3) | (b4) | (b5) | (b6) | (b7) | 48.3 | Now | Re-estimated | At 0.5 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| CCO | 24.5 | -0.5 | -1.5 | -0.5 | -0.5 | -0.5 | -0.5 | -1.0 | -0.5 | -0.5 | 18.5 | 13 | 12 |
+| PE | 20.5 |  | -1.5 | -0.5 | -0.5 | -1.5 |  | -0.5 | -0.5 |  | 15.5 | 11 | 10 |
+| NSD | 19.5 | -2.5 | -1.0 | -0.5 | -0.5 | -0.5 |  |  |  |  | 14.5 | 10 | 10 |
+| INT | 19.5 | -0.5 | -1.0 | -0.5 |  | -1.0 | -0.5 | -1.0 | -0.5 |  | 14.5 | 11 | 10 |
+| DG | 19.0 |  | -1.5 | -0.5 | -0.5 | -0.5 |  | -0.5 | -1.0 |  | 14.5 | 9 | 9 |
+| MS | 16.5 | -1.0 | -1.5 | -0.5 | -0.5 |  |  |  | 0.5 |  | 13.5 | 8 | 6 |
+| MMT | 15.5 | -1.5 | -1.0 | -0.5 | -0.5 |  |  |  |  |  | 12.0 | 7 | 7 |
+| UBI | 14.5 | -1.5 | -0.5 | -0.5 | -0.5 |  |  |  |  |  | 11.5 | 7 | 6 |
+| MC | 14.5 |  | -1.0 | -0.5 |  |  | -0.5 |  |  |  | 12.5 | 4 | 4 |
+| OS | 14.5 | -0.5 |  |  |  |  | -0.5 | -0.5 |  |  | 13.0 | 4 | 3 |
+| SWF | 14.0 |  |  | -0.5 |  |  | -0.5 | -0.5 |  |  | 12.5 | 4 | 3 |
+| SG | 14.0 | -1.0 | -0.5 | -0.5 |  |  |  |  |  |  | 12.0 | 4 | 4 |
+| GEO | 13.5 | -0.5 |  |  |  |  | -0.5 |  |  |  | 12.5 | 2 | 2 |
+| UBS | 13.5 |  | -0.5 | -0.5 |  |  | -0.5 |  |  |  | 12.0 | 4 | 3 |
+| IF | 13.5 | -1.0 |  |  |  |  | -0.5 |  |  |  | 12.0 | 3 | 3 |
+| FALC | 13.0 | -0.5 | -0.5 |  | -0.5 | -1.0 |  | -0.5 | -0.5 |  | 9.5 | 7 | 7 |
+| DE | 11.5 | -0.5 | -0.5 |  |  |  | -0.5 | -0.5 | -0.5 |  | 9.0 | 5 | 5 |
+| SQ | 10.5 | -0.5 |  |  |  | -0.5 |  |  |  |  | 9.5 | 2 | 2 |
+| CPS | 10.0 | -1.5 |  |  | -0.5 |  |  |  |  |  | 8.0 | 4 | 4 |
+| SC | 10.0 |  | -1.0 |  |  |  |  |  |  |  | 9.0 | 2 | 2 |
+| CN | 10.0 |  |  | -0.5 |  |  |  |  |  |  | 9.5 | 1 | 1 |
+| QA | 9.0 | -0.5 |  | -0.5 |  |  |  |  |  |  | 8.0 | 2 | 2 |
+| LM | 8.0 | -1.5 |  |  |  |  |  |  |  |  | 6.5 | 4 | 3 |
+
+| Criterion | Published | Now | Part (session) | Clauses not shown or short |
+|---|---:|---:|---|---|
+| C1.1 | 1.0 | 0.5 | (b3) (s40) | 1 (≥90% poverty reduction within 20 years under base scenario) short; 2 (≥85% under stress testing) short |
+| C2.1 | 1.0 | 0.5 | (b4) (s41) | 2 (validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist) not shown |
+| C2.3 | 1.0 | 0.5 | (b1) (s38) | 1 (≥50% regular creative engagement) not shown; 3 (meaning/purpose satisfaction scores ≥70/100) not shown |
+| C2.4 | 1.0 | 0.5 | (b1) (s38) | 2 (≥35% citizen proposals adopted) not shown; 3 (≥65% satisfaction with responsiveness) not shown |
+| C2.5 | 1.0 | 0.5 | (b5) (s42) | 1 (Exit feasible within 3 months without material penalty) short |
+| C3.1 | 1.0 | 0.5 | (a) (s37) | 2 (scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase)) short; 3 (≥90% population coverage) not shown |
+| C3.4 | 1.0 | 0.5 | (b1) (s38) | 4 (zero collapses during parameter adjustments) not shown |
+| C3.5 | 1.0 | 0.5 | (b6) (s43) | 3 (correction success ≥70%) not shown; 4 (externalization <10% of total costs) not shown |
+| C4.1 | 1.0 | 0.5 | (b6) (s43) | 2 (resource use ≤90% regeneration) not shown; 3 (debt-to-GDP <80%) not shown |
+| C4.2 | 1.0 | 0.5 | (b7) (s47) | 1 (Consumption-based carbon emissions falling ≥3.8% a year) not shown; 2 (biodiversity neutral or positive) not shown; 3 (resource extraction ≤ regeneration) not shown; 4 (no more than two of the four nationally downscaled planetary boundaries transgressed) not shown |
+| C4.4 | 1.0 | 0.5 | 48.3 (s48) | 1 (Democratic accountability for ≥80% of major decisions) not shown |
+| C5.1 | 1.0 | 0.5 | (b2) (s39) | 1 (≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants) not shown |
+| C5.2 | 1.0 | 1.0 | (a) (s37) | none: stands |
+
+C4.4 ON DECISION 48.3 AND THE SCORE LEDGER, COMPUTED.

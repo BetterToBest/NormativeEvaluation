@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 22 (Session 47). Runs every verification and analysis script on file
+Version 23 (Session 48). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -164,6 +164,16 @@ criteria re-read, each v2.0 clause mapped to the Session 44 clause the audit cod
 verbatim clauses and listed on restated ones, their consequences computed cumulatively with parts (a) to (b6), and
 the record NEEC_Rescoring_s47.md checked against its generated tables. It reads the v2.0 criteria.json and the
 pinned criteria_s44_snapshot.json side by side, so it is not pinned: 91 checks.
+Version 23 (Session 48) carries decisions 48.1 to 48.3, amended in place in the record, tag s47 keeping its prior
+state: 48.3 defines C4.4 clause 1's measure and moves C4.4 from class D to class M. The build check runs
+build_criteria.py version 2.3, which regenerates the protocol as draft.9, and its capture is renamed
+build_criteria_s48_output.txt; criteria_v2_s45.py counts the classes anew and asserts China's and Qatar's WJP series
+(48.1). rescoring_s47.py asserts C4.4's Session 47 class, so check 91 now reads criteria.json as it stood at tag
+s47, pinned byte-identical as criteria_s47_snapshot.json and copied in under the canonical name. It adds
+rescoring_s48.py: C4.4's six units in the pass re-read on 48.3's measure (part (b7)'s records superseded),
+Nordic Social Democracy's clause 1 bound computed from its published inputs, the consequences with parts (a) to
+(b7), and the score ledger (every entry's published total, each part's change, its total now; the published totals
+checked against neec_scores.csv), with NEEC_Rescoring_s48.md checked against its generated tables: 92 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -913,10 +923,10 @@ S44_CHECKS = [
 V2_INPUTS = ("build_criteria.py", "criteria_s44_snapshot.json", "SCORING_PROTOCOL_s44_snapshot.md",
              "NEEC_Criteria_v2_s45.md")
 S45_CHECKS = [
-    dict(name="build_criteria.py (version 2.2) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
-              "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.8",
+    dict(name="build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
+              "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9",
          cmd=["python", "build_criteria.py"], files={k: k for k in V2_INPUTS},
-         stdout="build_criteria_s47_output.txt", stderr=EMPTY,
+         stdout="build_criteria_s48_output.txt", stderr=EMPTY,
          outputs={"criteria.json": "criteria.json", "SCORING_PROTOCOL.md": "SCORING_PROTOCOL.md"}),
     dict(name="build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 "
               "document passes (negative control)",
@@ -931,15 +941,16 @@ S45_CHECKS = [
 ]
 
 # Session 47: part (b)'s seventh group, on the v2.0 clauses (appended after the version 21 checks). It reads the
-# v2.0 criteria.json for the clauses and criteria_s44_snapshot.json for the published structure, so it is not pinned.
+# v2.0 criteria.json for the clauses and criteria_s44_snapshot.json for the published structure. Since Session 48
+# (decision 48.3 moved C4.4 to class M) it reads criteria.json as it stood at tag s47, criteria_s47_snapshot.json.
 S47_CHECKS = [
     dict(name="rescoring_s47.py: rescoring pass part (b), seventh group, the 10 units of C4.2 and C4.4 on the v2.0 "
               "clauses, with part (a)'s 3 units of those criteria re-read (D28); consequences with parts (a) to (b6), "
-              "no corpus file changed",
+              "no corpus file changed [Session 47 criteria]",
          cmd=["python", "rescoring_s47.py"],
          files={k: k for k in ("rescoring_s47.py", "rescoring_s43.py", "rescoring_s42.py", "rescoring_s41.py",
                                "rescoring_s40.py", "rescoring_s39.py", "rescoring_s38.py", "rescoring_s37.py",
-                               "r4_audit_s35.py", "criteria.json", "criteria_s44_snapshot.json", "neec_corpus.json",
+                               "r4_audit_s35.py", "criteria_s44_snapshot.json", "neec_corpus.json",
                                "NEEC_Rescoring_s47.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
                                "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_MutualCredit_LETS_scoring_scratch.md",
                                "NEEC_DoughnutEconomics_scoring_scratch.md",
@@ -951,11 +962,35 @@ S47_CHECKS = [
                                "NEEC_Ostrom_Commons_scoring_scratch.md")},
          stdout="rescoring_s47_output.txt", stderr=EMPTY),
 ]
+S47_CHECKS[0]["files"]["criteria.json"] = "criteria_s47_snapshot.json"
+
+# Session 48: C4.4 re-read on decision 48.3, and the score ledger (appended after the version 22 checks). It reads the
+# v2.0 criteria.json (with 48.3) and criteria_s47_snapshot.json side by side, so it is not pinned.
+S48_CHECKS = [
+    dict(name="rescoring_s48.py: C4.4's six units in the pass re-read on decision 48.3's measure (D28), Nordic Social "
+              "Democracy's clause 1 bound, consequences with parts (a) to (b7), and the score ledger; no corpus file "
+              "changed",
+         cmd=["python", "rescoring_s48.py"],
+         files={k: k for k in ("rescoring_s48.py", "rescoring_s47.py", "rescoring_s43.py", "rescoring_s42.py",
+                               "rescoring_s41.py", "rescoring_s40.py", "rescoring_s39.py", "rescoring_s38.py",
+                               "rescoring_s37.py", "r4_audit_s35.py", "criteria.json", "criteria_s47_snapshot.json",
+                               "criteria_s44_snapshot.json", "neec_corpus.json", "neec_scores.csv",
+                               "NEEC_Report_v1_6.md", "NEEC_Rescoring_s48.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
+                               "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_MutualCredit_LETS_scoring_scratch.md",
+                               "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                               "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="rescoring_s48_output.txt", stderr=EMPTY),
+]
 
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS + S47_CHECKS)
+          + S45_CHECKS + S47_CHECKS + S48_CHECKS)
 
 
 def md5(data):

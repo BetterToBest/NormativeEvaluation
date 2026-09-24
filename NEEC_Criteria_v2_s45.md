@@ -3,11 +3,12 @@
 **Status: the v2.0 criteria, adopted. Nothing in the corpus is rescored here.** Session 45, 2026-09-23; amended in
 place in Session 46, 2026-09-24, by decisions 46.1 to 46.4 (Package C), and tag `s45` keeps the Session 45 text;
 amended in place again in Session 47, 2026-09-24, by decisions 47.1 and 47.2 (C4.6's clause 3 bar), and tag `s46`
-keeps the Session 46 text.
+keeps the Session 46 text; and in Session 48, 2026-09-24, by decisions 48.1 to 48.3 (the owner's three open
+questions), and tag `s47` keeps the Session 47 text.
 Scorer and engineer: Claude. Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
 (the 26 criteria as they stood at `s44`), `neec_corpus.json`. Appendix V below is the one source of the v2.0 text:
 `build_criteria.py` reads it, applies it to the snapshot, asserts the rules in section 6, and writes `criteria.json`
-and protocol draft.8 (Appendix B regenerated, seven asserted edits; 47.2). Evidence tables: `criteria_v2_s45.py`, output `criteria_v2_s45_output.txt`.
+and protocol draft.9 (Appendix B regenerated, seven asserted edits; 47.2, 48.3). Evidence tables: `criteria_v2_s45.py`, output `criteria_v2_s45_output.txt`.
 
 ## 1. Decisions
 
@@ -71,7 +72,7 @@ and protocol draft.8 (Appendix B regenerated, seven asserted edits; 47.2). Evide
   imposes a standing vaccination requirement, enforced by a penalty and with no lapse date, does not show clause 3
   and scores at most 0.5 on C2.6 (protocol 2.3). The alternative, a time limit on orders and emergency powers only,
   with standing requirements tested by law and judicial review alone, changes one sentence of C2.6's measurement
-  field and is recorded for the owner.
+  field and is recorded for the owner. *Closed by the owner's decision 48.2: standing requirements are included.*
 - **46.3 (corrections).** (a) Section 9 said C-1's compulsion clause "is the limitation test" of the Siracusa
   Principles and the Oviedo Convention; with its time limit it is stricter than that test (46.2(e)), and section 9
   now says so. (b) Protocol 1.2 described `criteria.json` as the 26 criteria generated from Paper v1.4, which it has
@@ -114,10 +115,98 @@ and protocol draft.8 (Appendix B regenerated, seven asserted edits; 47.2). Evide
   median (0.61), would pass Qatar and China as well. The Index covers neither the Soviet Union nor Cuba nor North
   Korea, so Centrally Planned Socialism's clause 3 cannot be read from it. How a historical configuration is read
   on a series that does not reach it is a question for all of that entry's class I units, and it is decided once,
-  when they are re-checked in stage 2.
+  when they are re-checked in stage 2. *Confirmed under the owner's delegation by 48.1; the ▲ is closed.*
 - **47.2 (correction).** The status line above said that `build_criteria.py` writes protocol draft.6 with six
   asserted edits. Since Session 46 it has written draft.7 with seven (1.2's was added by 46.3(b)); from 47.1 it
   writes draft.8, whose Appendix B carries C4.6's bar. The line now says so.
+- **48.1 (under the delegation, which the owner extended to this question in Session 48).** C4.6 clause 3's bar
+  stays at 0.77, the upper quartile, and 47.1's ▲ is closed. The owner's message calls it "the Gini bar" and quotes
+  47.1's alternative (the median, 0.61, which passes Qatar and China), so it is read as this bar; no Gini bar is
+  open (C1.2b's wealth Gini bar, <0.35, was settled in Session 45). The reasons, beyond 47.1's:
+  (a) *The clause asks for an absence, not a norm.* "Applied and enforced without improper influence" describes
+  regulation that bribery and influence do not decide. The median is by construction the typical jurisdiction:
+  half the Index's 143 score lower, and a bar there reads "no more influence than usual", which the clause does not
+  say. The upper quartile is the group whose regulators the Index's questions find least often bribed or
+  influenced.
+  (b) *Consistency with the framework's other published bars.* Where v2.0 reads a clause from a rating, it takes
+  the rating's top group, not its middle: C2.6's Freedom House bar is the top band of the former 1–7 rating
+  (45.3). The bar taken from the WJP's distribution is the nearest it comes to that.
+  (c) *The verdicts are what the choice decides, and they are robust.* On the 2025 edition every bar from 0.67 to
+  0.87 gives the same verdicts on the eight reference economies (47.1), so the choice is only whether Qatar (0.66)
+  and China (0.61) meet it. China has scored between 0.45 and 0.61 in every edition since 2012–2013, always at
+  least 0.16 below the bar; Qatar is scored in the 2025 edition only (`criteria_v2_s45.py`, section 5, asserts both), so
+  China's verdict does not turn on the edition read.
+  (d) *What is given up.* The median would credit two economies that the Index places in its middle half, not in
+  the top quarter whose 36 jurisdictions meet the bar. The cost of the upper quartile is
+  that a design must state provisions for regulatory independence as strong as the best-governed quarter of the
+  world's; that is the clause's own demand.
+  *Consequence:* none beyond 47.1's; no unit has been scored on C4.6, and Qatar's and China's clause 3 are not met
+  when their C4.6 units are scored in stage 2.
+- **48.2 (the owner's decision, Session 48).** On 46.2(e), the owner decides that "time-limited" includes
+  standing vaccination requirements, as adopted: every compulsion, a standing statutory requirement among them,
+  must lapse at a stated time unless renewed by a decision itself open to review. The ▲ on 46.2(e) is closed and
+  the alternative (a time limit on orders and emergency powers only) is not adopted. Appendix V's text already says
+  this, so no field changes. *Consequence,* as 46.2(e) states it: an entry whose law at its stated date imposes a
+  standing vaccination requirement enforced by a penalty (a fine, detention, or loss of employment, schooling or an
+  essential benefit, 46.2(d)) with no lapse date does not show C2.6 clause 3 and scores at most 0.5 on C2.6. Which
+  entries it binds is established when C2.6's 23 new units are scored in stage 2, each scoring document naming the
+  law in force.
+- **48.3 (under the delegation, which the owner extended to this question in Session 48; flagged; the owner may
+  reverse).** C4.4 clause 1, "Democratic accountability for ≥80% of major decisions", keeps its wording and bar,
+  and its measurement field now says what it measures and how it is read. C4.4 moves from class D to class M.
+  (a) *Why now, and why a definition.* Session 47 left Nordic Social Democracy's C4.4 at 0.5, flagged, because
+  the clause names no measure and does not define "major decisions" (`NEEC_Rescoring_s47.md`, reading 3.6), and
+  its record proposed a fix in v2.1. The owner asked Claude to decide how to handle it. Three courses were open:
+  wait for v2.1; declare the clause aspirational (45.4); or define it now. Waiting leaves the clause to be read
+  unit by unit while every C4.4 unit is scored on v2.0 in this pass, and a v2.1 definition would then rescore all
+  of them. Aspirational status fits a quantity no source can supply (section 5); once defined, this one can be read
+  from published employment series. It is defined now, before any published score rests on it, as 47.1 fixed
+  C4.6's bar.
+  (b) *What clause 1 measures.* C4.4's Measurement line lists power concentration indices (economic
+  decision-making distribution), democratic control mechanisms (accountability of major decisions to those they
+  affect) and accountability structures (capacity to remove or replace decision-makers). The third is clause 2's.
+  Clause 1 measures the first two: how far the decisions that direct the economy's work answer to those they
+  affect. The major decisions are the investment, production and employment decisions of the organizations in
+  which people work, public bodies included. A decision is democratically accountable when those it affects take
+  it or elect a majority of those who take it: the organization's workers or members, or for a public body the
+  citizens, through an authority chosen in free elections. A board a majority of whose members owners of capital
+  elect answers to them, whatever minority the workers elect. The published corpus already reads it so: Stakeholder
+  Capitalism's C4.4 is 0.0 because "Worker directors remain a minority on boards" (Report v1.6), while Nordic
+  Social Democracy's published 1.0 cited worker board representation, which in the Nordic countries is a minority.
+  (c) *The share.* No source counts decisions. Employment is the published measure of where an economy's work is
+  organised, and the decisions that bind people most directly in their working lives are those of the
+  organizations that employ them. The share is the share of employment in organizations whose decisions are
+  accountable in (b)'s sense: public administration and public corporations where the authority they answer to is
+  chosen in free elections; cooperatives, mutuals and other member-governed organizations whose workers or members
+  elect a majority of the governing body; and the self-employed, who take their own decisions. It must reach 80%.
+  Legislation and the public budget enter through the public sector's line, conditioned on the elections that make
+  it accountable; the removal of legislators and executives is clause 2's. The Requirement's social domain is not
+  read separately: the bands and the Measurement line do not measure it, and C2.1, C2.5 and C2.6 measure
+  autonomy, exit and liberties.
+  (d) *How it is read.* For a configured national economy: V-Dem's Regimes of the World decides whether the public
+  sector counts (an electoral or liberal democracy at the stated date); the OECD's Government at a Glance gives
+  general government employment, its survey of state-owned enterprises their employment, labour force surveys
+  self-employment, and national statistics or the CIRIEC studies for the European Economic and Social Committee
+  employment in cooperatives, mutuals, associations and foundations. Where the share cannot reach 80% on the most
+  generous count, the clause is short. For a comprehensive system, a design or a mechanism, its own sources say
+  (protocol 3.1, 3.2): the organizations in which it places the economy's work and to whom their decision-makers
+  answer. A system that coexists with conventional enterprises governed by their owners shows the clause only if
+  its sources state or project that its accountable organizations employ at least 80% of workers.
+  (e) *Alternative recorded, for the owner:* Session 47's reading 3.6(b), under which decisions taken within law
+  made by an elected legislature are accountable. It would clear clause 1 for every democracy on its constitution
+  alone, leave C4.4 measuring removal only, and contradict the corpus's published reading of minority board
+  representation in Stakeholder Capitalism. Under it Nordic Social Democracy's C4.4 rises to 1.0, and
+  CCO-PTF-CIP-SZH's stays 1.0.
+  (f) *Class.* The clause's measure is restated, so C4.4 is class M: every C4.4 unit is re-checked clause by
+  clause and can fall as well as rise, and its seven published 0.5s leave class D's rises (section 7).
+  *Consequences, computed in `NEEC_Rescoring_s48.md` on the published structure:* Nordic Social Democracy is short
+  on clause 1 (on the most generous count the accountable share is at most 44.2% in Denmark, 48.6% in Finland and
+  44.8% in Sweden, and in Norway 44.1% before its social economy, which would have to employ 35.9% of workers) and
+  stays 0.5, the flag removed; CCO-PTF-CIP-SZH, the owner's design, is not shown on clause 1 (its public trust
+  network "coexists with private markets rather than replacing them", and no source states the share of employment
+  its accountable organizations would hold) and falls from 1.0 to 0.5; Participatory Economics, Integral and
+  Market Socialism stand; Degrowth stays 0.5. Net −0.5; no failure count or tier changes; CCO-PTF-CIP-SZH keeps
+  first place.
 
 ## 2. Method
 
@@ -216,7 +305,10 @@ Consequential choices are marked ▲; each is a candidate for the owner's review
   output per hour can rise on capital accumulation alone while methods stagnate. Defined on productivity, not output
   growth, so designs that choose shorter hours or lower consumption can pass.
 - **C2.6 clauses 2–3 and C4.6** (Package C): their measures and bars are decision 46.2's, listed there; C4.6's
-  clause 3 bar, 0.77 on the World Justice Project's sub-factor 6.2, is decision 47.1's ▲.
+  clause 3 bar, 0.77 on the World Justice Project's sub-factor 6.2, is decision 47.1's, confirmed by 48.1.
+- **C4.4** clause 1's measure (48.3): the share of employment in organizations whose investment, production and
+  employment decisions answer to those they affect, at least 80%; configured national economies from V-Dem's
+  Regimes of the World and published employment series, designs from their own sources.
 
 ## 5. Aspirational clauses (45.4)
 
@@ -224,11 +316,12 @@ C2.1 clause 2 (revealed preference), C2.3 clause 1 (weekly creative engagement),
 within a week, diagnosis ≥80%). No agency publishes these quantities; a 1.0 on the criterion requires the scoring
 document to name evidence that shows the clause (a study, an audit, a design's own record), and silence is not
 clearance (2.3(b)). Paper v2.0 states that these criteria can in practice separate only 0.0 from 0.5 until such
-evidence exists. C3.1 clause 1 is not aspirational: the rules or a dated record show it.
+evidence exists. C3.1 clause 1 is not aspirational: the rules or a dated record show it. Nor, since 48.3, is C4.4
+clause 1: its share is read from published employment series (48.3(a)).
 
 ## 6. What the generator asserts
 
-`build_criteria.py` (version 2.2) starts from `criteria_s44_snapshot.json` (md5 checked), applies Appendix V, and exits
+`build_criteria.py` (version 2.3) starts from `criteria_s44_snapshot.json` (md5 checked), applies Appendix V, and exits
 1 unless: every Requirement figure appears in its Pass Threshold, and every measurement figure does or is declared
 descriptive in the criterion's block; each registered quantity (wealth Gini, citizen proposals, carbon,
 regeneration, autonomy share, association, housing stability, debt, productivity, inflation, and, from decision
@@ -242,16 +335,17 @@ confirms each is rejected (negative control).
 ## 7. Consequences for the rescoring pass
 
 Counts are from `criteria_v2_s45.py`, section 3 (23 entries; scores in force, before the pass is applied).
-Class W (115 units): nothing to re-check. Class D (69 units, 25 at 0.5): units can only keep or rise; C4.4 and C4.5
-were not yet re-estimated and are scored on v2.0 clauses in stage 2; for C2.5, a 0.5 whose only unshown clause was
-the association clause rises. Class I (161 units): a unit is re-checked where the named indicator could give a
+Class W (115 units): nothing to re-check. Class D (46 units, 18 at 0.5; 69 and 25 before 48.3 moved C4.4 to class
+M): units can only keep or rise; C4.5 was not yet re-estimated and is scored on v2.0 clauses in stage 2; for C2.5, a
+0.5 whose only unshown clause was the association clause rises. Class I (161 units): a unit is re-checked where the named indicator could give a
 different clause verdict from the one recorded, which means the 42 units of the six configured national economies,
 where the indicator is a published series, and any other unit whose clause record cites a different measure.
-Class M (161 units): every unit is re-checked clause by clause against Appendix V, in the D28 clause-record form.
+Class M (184 units, C4.4's 23 among them since 48.3): every unit is re-checked clause by clause against Appendix
+V, in the D28 clause-record form.
 Class N: 69 new units (23 entries × 3, C4.6's 23 added by decision 46.1). C2.6's two new clauses add no re-check:
 none of its units has been scored, and each is scored on all three clauses. Class U (92 units): nothing beyond the
 pass already planned. Unlike D28, the v2.0 criteria can change failure counts and tiers: every entry gains three
-criteria, and seven are restated. Under equal weighting the implicit norm weights on 29 criteria range from 1.7% to
+criteria, and eight are restated (C4.4 since 48.3). Under equal weighting the implicit norm weights on 29 criteria range from 1.7% to
 15.5% (`criteria_v2_s45.py`, section 2).
 
 ## 8. Not done here
@@ -260,7 +354,8 @@ The S1 norm-weight table is computed (`criteria_v2_s45.py` section 2) but belong
 scheme (S2) and the per-system count of units resting on unshown clauses (R5) are stage 3. Band texts of restated
 criteria still carry Paper v1.4 examples; `criteria.json` marks them, and anchors describe while thresholds govern
 (2.3(g)). The corpus, CSV and totals change only when the pass is applied by generator, which also carries decision 45.6.
-C4.6's bar on the World Justice Project's sub-factor 6.2, not fixed in Session 46 (46.4), is fixed by 47.1.
+C4.6's bar on the World Justice Project's sub-factor 6.2, not fixed in Session 46 (46.4), is fixed by 47.1 and
+confirmed by 48.1. C4.4 clause 1, left undefined in Session 45, is defined by 48.3.
 
 ## 9. Package C (decision 46.1: C-1 and C-2 adopted; C-3 recorded for v2.1)
 
@@ -494,9 +589,10 @@ names the decision that adopted a new criterion, for its `sources`.
 - **indicators**: national household income and wealth surveys, by declared group.
 
 ### C4.4
-- **class**: D
+- **class**: M
 - **codes**: K1, K2
-- **measurement**: Power concentration indices (economic decision-making distribution). Democratic control mechanisms (accountability of major decisions to those they affect). Accountability structures (capacity to remove/replace decision-makers). Wealth concentration and the adoption of citizen proposals are measured once, in C1.2b and C2.4.
+- **measurement**: Power concentration indices (economic decision-making distribution). Democratic control mechanisms (accountability of major decisions to those they affect). Accountability structures (capacity to remove/replace decision-makers). Wealth concentration and the adoption of citizen proposals are measured once, in C1.2b and C2.4. Clause 1 measures the first two: the major decisions are the investment, production and employment decisions of the organizations in which people work, public bodies included, and a decision is democratically accountable when those it affects take it or elect a majority of those who take it (the organization's workers or members, or, for a public body, the citizens through an authority chosen in free elections). A board a majority of whose members owners of capital elect answers to them, whatever minority the workers elect. The share is the share of employment in organizations whose decisions are accountable in this sense: public administration and public corporations where the authority they answer to is chosen in free elections; cooperatives, mutuals and other member-governed organizations whose workers or members elect a majority of the governing body; and the self-employed, who take their own decisions. Configured national economy: V-Dem's Regimes of the World decides whether the public sector counts (an electoral or liberal democracy at the stated date); general government employment (OECD, Government at a Glance), employment in state-owned enterprises (OECD), self-employment (labour force surveys) and employment in cooperatives, mutuals, associations and foundations (national statistics; the CIRIEC studies for the European Economic and Social Committee) give the share, and where it cannot reach 80% on the most generous count the clause is short. Design, mechanism or comprehensive system: its own sources, for the organizations in which it places the economy's work and to whom their decision-makers answer; a system that coexists with conventional enterprises governed by their owners shows the clause only if its sources state or project that its accountable organizations employ at least 80% of workers. Clause 2 measures the capacity to remove those who take decisions, legislators and executives included.
+- **indicators**: clause 1, V-Dem Regimes of the World; OECD Government at a Glance (employment in general government); OECD, The Size and Sectoral Distribution of State-Owned Enterprises; labour force surveys (self-employment); national statistics and the CIRIEC/EESC studies of the social economy (employment in cooperatives, mutuals, associations and foundations); for a design, its own sources.
 - **pass_threshold**: Democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional
 - **clauses**: Democratic accountability for ≥80% of major decisions | removal/replacement mechanisms functional
 
