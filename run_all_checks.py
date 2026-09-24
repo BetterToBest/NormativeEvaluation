@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 21 (Session 46). Runs every verification and analysis script on file
+Version 22 (Session 47). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -153,6 +153,17 @@ the three Session 45 checks now run build_criteria.py version 2.1, which regener
 criteria_v2_s45.py on the amended record; the two build captures are recaptured as build_criteria_s46_output.txt
 and build_criteria_s46_selftest_output.txt (the Session 45 captures are at tag s45), and
 criteria_v2_s45_output.txt is recaptured under its own name. No check is added or removed: 90 checks.
+Version 22 (Session 47) carries decision 47.1, C4.6's clause 3 bar (World Justice Project sub-factor 6.2, 0.77,
+the upper quartile of its 2025 edition), amended in place in the record, tag s46 keeping its prior state: the
+build check runs build_criteria.py version 2.2, which regenerates the protocol as draft.8, and its capture is
+renamed build_criteria_s47_output.txt (the self-test's capture is unchanged); criteria_v2_s45.py gains section 5,
+which reads wjp_rol_sf62_2012_2025.csv (sub-factor 6.2 for every edition, extracted from the Project's 2025 data
+file) and asserts the bar and every figure the record states. It adds rescoring_s47.py, part (b)'s seventh group
+and the first on the v2.0 clauses: the ten part (b) units of C4.2 and C4.4, with part (a)'s three units of those
+criteria re-read, each v2.0 clause mapped to the Session 44 clause the audit coded, the audit's A codes carried on
+verbatim clauses and listed on restated ones, their consequences computed cumulatively with parts (a) to (b6), and
+the record NEEC_Rescoring_s47.md checked against its generated tables. It reads the v2.0 criteria.json and the
+pinned criteria_s44_snapshot.json side by side, so it is not pinned: 91 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -902,27 +913,49 @@ S44_CHECKS = [
 V2_INPUTS = ("build_criteria.py", "criteria_s44_snapshot.json", "SCORING_PROTOCOL_s44_snapshot.md",
              "NEEC_Criteria_v2_s45.md")
 S45_CHECKS = [
-    dict(name="build_criteria.py (version 2.1) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
-              "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.7",
+    dict(name="build_criteria.py (version 2.2) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
+              "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.8",
          cmd=["python", "build_criteria.py"], files={k: k for k in V2_INPUTS},
-         stdout="build_criteria_s46_output.txt", stderr=EMPTY,
+         stdout="build_criteria_s47_output.txt", stderr=EMPTY,
          outputs={"criteria.json": "criteria.json", "SCORING_PROTOCOL.md": "SCORING_PROTOCOL.md"}),
     dict(name="build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 "
               "document passes (negative control)",
          cmd=["python", "build_criteria.py", "--selftest"], files={k: k for k in V2_INPUTS},
          stdout="build_criteria_s46_selftest_output.txt", stderr=EMPTY),
     dict(name="criteria_v2_s45.py: the v2.0 record's evidence tables (figure scan, norm weights, units by revision "
-              "class, registered quantities)",
+              "class, registered quantities, C4.6's clause 3 bar from the World Justice Project's data)",
          cmd=["python", "criteria_v2_s45.py"],
          files={k: k for k in ("criteria_v2_s45.py", "criteria_s44_snapshot.json", "criteria.json",
-                               "NEEC_Criteria_v2_s45.md", "neec_corpus.json")},
+                               "NEEC_Criteria_v2_s45.md", "neec_corpus.json", "wjp_rol_sf62_2012_2025.csv")},
          stdout="criteria_v2_s45_output.txt", stderr=EMPTY),
+]
+
+# Session 47: part (b)'s seventh group, on the v2.0 clauses (appended after the version 21 checks). It reads the
+# v2.0 criteria.json for the clauses and criteria_s44_snapshot.json for the published structure, so it is not pinned.
+S47_CHECKS = [
+    dict(name="rescoring_s47.py: rescoring pass part (b), seventh group, the 10 units of C4.2 and C4.4 on the v2.0 "
+              "clauses, with part (a)'s 3 units of those criteria re-read (D28); consequences with parts (a) to (b6), "
+              "no corpus file changed",
+         cmd=["python", "rescoring_s47.py"],
+         files={k: k for k in ("rescoring_s47.py", "rescoring_s43.py", "rescoring_s42.py", "rescoring_s41.py",
+                               "rescoring_s40.py", "rescoring_s39.py", "rescoring_s38.py", "rescoring_s37.py",
+                               "r4_audit_s35.py", "criteria.json", "criteria_s44_snapshot.json", "neec_corpus.json",
+                               "NEEC_Rescoring_s47.md", "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
+                               "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_MutualCredit_LETS_scoring_scratch.md",
+                               "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                               "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="rescoring_s47_output.txt", stderr=EMPTY),
 ]
 
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS)
+          + S45_CHECKS + S47_CHECKS)
 
 
 def md5(data):

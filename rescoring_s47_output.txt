@@ -1,0 +1,103 @@
+NEEC rescoring pass, part (b), seventh group: C4.2, C4.4 on the v2.0 clauses (NEEC_Rescoring_s47.md)
+inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, r4_audit_s35.py, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, NEEC_Rescoring_s47.md
+
+[1] THE POPULATION AND THE v2.0 CLAUSES
+  PASS D28's population 134; part (b) 101
+  PASS this group holds exactly the part (b) units of C4.2 and C4.4 (10: C4.2 6, C4.4 4), every one a corpus 1.0 and none re-estimated before
+  PASS with part (a)'s, they are all of the two criteria's published 1.0s (C4.2 7, of which part (a) took MMT; C4.4 6, of which part (a) took MS, NSD); part (a)'s 3, each at 0.5 there, are re-read here on the v2.0 clauses
+  C4.2: DG, FALC, PE, CCO, INT, DE; re-read from part (a): MMT
+  C4.4: DG, PE, CCO, INT; re-read from part (a): NSD, MS
+  PASS v2.0's clauses: C4.2 (class M) keeps clauses 2 and 3 verbatim and restates 1 and 4; C4.4 (class D) keeps the Session 44 clauses 3 and 4 verbatim as its clauses 1 and 2 (the first now capitalised)
+  C4.2 (1) Consumption-based carbon emissions falling ≥3.8% a year  [restated; Session 44 clause 1: Absolute carbon reductions 35-45% by 2030]
+  C4.2 (2) biodiversity neutral or positive  [verbatim; Session 44 clause 2: biodiversity neutral or positive]
+  C4.2 (3) resource extraction ≤ regeneration  [verbatim; Session 44 clause 3: resource extraction ≤ regeneration]
+  C4.2 (4) no more than two of the four nationally downscaled planetary boundaries transgressed  [restated; Session 44 clause 4: ≥7 of 9 planetary boundaries respected]
+  C4.4 (1) Democratic accountability for ≥80% of major decisions  [verbatim; Session 44 clause 3: democratic accountability for ≥80% of major decisions]
+  C4.4 (2) removal/replacement mechanisms functional  [verbatim; Session 44 clause 4: removal/replacement mechanisms functional]
+
+[2] THE RECORDS
+  PASS every unit has one status per v2.0 clause, in the Pass Threshold's order; every cleared, short, out-of-reach and moot clause, and every clause estimated as not shown, carries its source
+  clause statuses: cleared 17, short 0, not shown 23, out of reach 0, moot 0
+
+[3] THE RULE (D28) AND THE AUDIT'S CODES
+  PASS every verdict follows D28: 1.0 only if every clause is cleared or moot, otherwise 0.5
+  PASS no unit is scored 0.0 in this pass (D28(f))
+  PASS of the part (b) units 3 stand and 7 become 0.5 (3.5 points); of part (a)'s re-read units none falls further and 1 rises to 1.0 (MS C4.4)
+  PASS every flag names alternatives other than the scored value
+  PASS no departure from the audit's A codes: every verbatim clause the audit coded A is carried as cleared
+  PASS the audit coded A 7 clauses v2.0 restates: 6 carried after re-reading (reading 3.2), 1 estimated (CCO C4.2 clause 1)
+  PASS the audit coded 20 v2.0 clauses of this group's part (b) units silent; 19 are estimated here, and 1 left not estimated, in a unit whose verdict another clause fixes
+  DG C4.2 clause 3: not estimated in this pass (verdict fixed by another clause)
+  silent clauses estimated here: cleared 3, not shown 16
+  PASS every C4.2 unit was silent on biodiversity and every one is not shown on it, so clause 2 alone fixes each C4.2 verdict (reading 3.3)
+  PASS every C4.4 unit was silent on the removal clause, and each is estimated on it (reading 3.5)
+
+[4] REACH (D28(c)) AND EXTENSIONS (D31)
+  PASS no clause of this group is out of reach: the audit's only reach codes here, MMT + Job Guarantee's four on C4.2, were superseded in part (a) (within reach under D31), and the v2.0 restatement changes neither
+
+[5] FLAG REGISTERS (against the summary blocks, cumulatively with parts (a) to (b6))
+  PASS flags added 2 (CCO C4.4, NSD C4.4); removed 0; no unit of this group carried a flag
+  Flags added in this group: 2; removed: 0. Across the pass so far, 15 entries' flag registers change (CCO, CN, CPS, DG, IF, LM, MC, NSD, OS, QA, SG, SQ, SWF, UBI, UBS).
+
+[6] CONSEQUENCES (computed here on the published 26-criterion structure; no corpus file changes)
+  PASS no failure count changes, so no tier changes (D28(f))
+  PASS 17 D28 units remain for part (b)
+  Left for part (b): 17 D28 units (C4.3 6, C4.5 3, C5.2 4, C5.4 2, C5.5 2).
+  PASS 1.0s each of this group's criteria keeps: C4.2 0 (published 7); C4.4 4 (published 6)
+  PASS every criterion had a 1.0 in the published corpus; the pass so far leaves 8 with none: C2.3 (part (b1)), C2.4 (part (b1)), C3.1 (part (b2)), C1.1 (part (b3)), C2.1 (part (b4)), C3.5 (part (b6)), C4.1 (part (b6)), C4.2 (part (b7))
+  After this group, the entries scoring 1.0 on this group's criteria are: C4.2, 0; C4.4, 4 (MS, PE, CCO, INT), against 7 published and 6 published. Every criterion had a 1.0 in the published corpus; after the pass so far no entry scores 1.0 on 8 of them: C1.1 (emptied in part (b3)), C2.1 (emptied in part (b4)), C2.3 (emptied in part (b1)), C2.4 (emptied in part (b1)), C3.1 (emptied in part (b2)), C3.5 (emptied in part (b6)), C4.1 (emptied in part (b6)), C4.2 (emptied in part (b7)).
+  PASS part (b6)'s result reproduced: 18 dominance pairs, frontier 13
+  After this group the corpus has 21 dominance pairs against 18 after part (b6) (new: GEO>DE, UBS>DE, OS>DE; lost: none), and its frontier holds 13 entries against 13 (NSD, MS, LM, UBI, DG, FALC, PE, CCO, INT, MC, SWF, IF, OS). First place: CCO, 19.5 after part (b6), 19.0 now. Across parts (a) and (b1) to (b7), 128 units have been re-estimated, part (a)'s three re-read here counted once: 11 stand and 117 become 0.5 (58.5 points).
+
+[7] ANCHOR EXAMPLES THE PASS SO FAR MOVES (the published anchors, criteria_s44_snapshot.json)
+  PASS 11 anchor examples cite a unit the pass moves
+  PASS bands left with no corpus unit at their value: C1.1's 1.0, C2.1's 1.0, C2.3's 1.0, C2.4's 1.0, C3.1's 1.0, C3.5's 1.0, C4.1's 1.0, C4.2's 1.0
+  PASS C4.4's 1.0 example, Participatory Economics, stands
+  Anchor examples citing a unit the pass moves: C1.1's 1.0 example, NSD (part (b3), to 0.5); C2.1's 1.0 example, UBI (part (a), to 0.5); C2.3's 1.0 example, DG (part (b1), to 0.5); C2.4's 1.0 example, PE (part (b1), to 0.5); C2.5's 1.0 example, CCO (part (b5), to 0.5); C3.1's 1.0 example, UBI (part (b2), to 0.5); C3.2's 1.0 example, PE (part (b4), to 0.5); C3.5's 1.0 example, CCO (part (b6), to 0.5); C4.1's 1.0 example, DG (part (b6), to 0.5); C4.2's 1.0 example, PE (part (b7), to 0.5); C5.1's 1.0 example, MS (part (b2), to 0.5). When the pass is applied, each band needs an example the corpus then scores at that value; C1.1's 1.0, C2.1's 1.0, C2.3's 1.0, C2.4's 1.0, C3.1's 1.0, C3.5's 1.0, C4.1's 1.0, C4.2's 1.0 bands have none left (part (b4), reading 3.5; reading 3.8 here); C2.5's 1.0 band keeps one (LM, flagged; part (b5), reading 3.7), and C4.4's 1.0 example, Participatory Economics, stands.
+
+[8] THE RECORD'S TABLES (generated here; NEEC_Rescoring_s47.md must contain them verbatim)
+  PASS NEEC_Rescoring_s47.md contains all 20 generated tables
+
+| Entry | Criterion | Clauses | Verdict | Flag |
+|---|---|---|---|---|
+| DG | C4.2 | C U U C | 1.0 → 0.5 |  |
+| DG | C4.4 | U U | 1.0 → 0.5 |  |
+| FALC | C4.2 | U U C C | 1.0 → 0.5 |  |
+| PE | C4.2 | U U C C | 1.0 → 0.5 |  |
+| PE | C4.4 | C C | 1.0 → 1.0 |  |
+| CCO | C4.2 | U U U U | 1.0 → 0.5 |  |
+| CCO | C4.4 | C C | 1.0 → 1.0 | alternative 0.5 |
+| INT | C4.2 | U U U C | 1.0 → 0.5 |  |
+| INT | C4.4 | C C | 1.0 → 1.0 |  |
+| DE | C4.2 | U U U C | 1.0 → 0.5 |  |
+| NSD | C4.4 | U C | 0.5 (part (a)) → 0.5 | alternative 1.0 |
+| MS | C4.4 | C C | 0.5 (part (a)) → 1.0 |  |
+| MMT | C4.2 | U U U U | 0.5 (part (a)) → 0.5 |  |
+
+| Entry | Published (rank) | After (b6) (rank) | After this group (rank) | Change here | Failures | Tier | D28 units left | Floor if all fall |
+|---|---:|---:|---:|---:|---:|---|---:|---:|
+| CCO | 24.5 (1) | 19.5 (1) | 19.0 (1) | -0.5 | 0 | Potentially Adequate | 1 | 18.5 |
+| PE | 20.5 (2) | 16.0 (2) | 15.5 (2) | -0.5 | 1 | Potentially Adequate | 2 | 14.5 |
+| NSD | 19.5 (3) | 14.5 (5) | 14.5 (3) | 0.0 | 2 | Potentially Adequate | 3 | 13.0 |
+| INT | 19.5 (3) | 15.0 (4) | 14.5 (3) | -0.5 | 3 | Partially Adequate | 1 | 14.0 |
+| DG | 19.0 (5) | 15.5 (3) | 14.5 (3) | -1.0 | 2 | Potentially Adequate | 2 | 13.5 |
+| MS | 16.5 (6) | 13.0 (6) | 13.5 (6) | 0.5 | 2 | Potentially Adequate | 0 | 13.5 |
+| MMT | 15.5 (7) | 12.0 (11) | 12.0 (11) | 0.0 | 3 | Partially Adequate | 1 | 11.5 |
+| UBI | 14.5 (8) | 11.5 (15) | 11.5 (15) | 0.0 | 7 | Structurally Inadequate | 1 | 11.0 |
+| MC | 14.5 (8) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate | 1 | 12.0 |
+| OS | 14.5 (8) | 13.0 (6) | 13.0 (7) | 0.0 | 3 | Partially Adequate | 0 | 13.0 |
+| SWF | 14.0 (11) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate | 0 | 12.5 |
+| SG | 14.0 (11) | 12.0 (11) | 12.0 (11) | 0.0 | 4 | Partially Adequate | 0 | 12.0 |
+| GEO | 13.5 (13) | 12.5 (8) | 12.5 (8) | 0.0 | 2 | Potentially Adequate | 0 | 12.5 |
+| UBS | 13.5 (13) | 12.0 (11) | 12.0 (11) | 0.0 | 3 | Partially Adequate | 0 | 12.0 |
+| IF | 13.5 (13) | 12.0 (11) | 12.0 (11) | 0.0 | 5 | Partially Adequate | 1 | 11.5 |
+| FALC | 13.0 (16) | 10.0 (16) | 9.5 (16) | -0.5 | 10 | Structurally Inadequate | 1 | 9.0 |
+| DE | 11.5 (17) | 9.5 (17) | 9.0 (19) | -0.5 | 8 | Structurally Inadequate | 0 | 9.0 |
+| SQ | 10.5 (18) | 9.5 (17) | 9.5 (16) | 0.0 | 9 | Structurally Inadequate | 0 | 9.5 |
+| CPS | 10.0 (19) | 8.0 (21) | 8.0 (21) | 0.0 | 12 | Structurally Inadequate | 1 | 7.5 |
+| SC | 10.0 (19) | 9.0 (20) | 9.0 (19) | 0.0 | 9 | Structurally Inadequate | 1 | 8.5 |
+| CN | 10.0 (19) | 9.5 (17) | 9.5 (16) | 0.0 | 8 | Structurally Inadequate | 0 | 9.5 |
+| QA | 9.0 (22) | 8.0 (21) | 8.0 (21) | 0.0 | 10 | Structurally Inadequate | 0 | 8.0 |
+| LM | 8.0 (23) | 6.5 (23) | 6.5 (23) | 0.0 | 15 | Structurally Inadequate | 1 | 6.0 |
+
+RESCORING PART (B), SEVENTH GROUP, COMPUTED.

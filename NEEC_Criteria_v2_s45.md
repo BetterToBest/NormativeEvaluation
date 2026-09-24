@@ -1,11 +1,13 @@
 # NEEC Criteria v2.0, Session 45
 
 **Status: the v2.0 criteria, adopted. Nothing in the corpus is rescored here.** Session 45, 2026-09-23; amended in
-place in Session 46, 2026-09-24, by decisions 46.1 to 46.4 (Package C), and tag `s45` keeps the Session 45 text.
+place in Session 46, 2026-09-24, by decisions 46.1 to 46.4 (Package C), and tag `s45` keeps the Session 45 text;
+amended in place again in Session 47, 2026-09-24, by decisions 47.1 and 47.2 (C4.6's clause 3 bar), and tag `s46`
+keeps the Session 46 text.
 Scorer and engineer: Claude. Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
 (the 26 criteria as they stood at `s44`), `neec_corpus.json`. Appendix V below is the one source of the v2.0 text:
 `build_criteria.py` reads it, applies it to the snapshot, asserts the rules in section 6, and writes `criteria.json`
-and protocol draft.6 (Appendix B regenerated, six asserted edits). Evidence tables: `criteria_v2_s45.py`, output `criteria_v2_s45_output.txt`.
+and protocol draft.8 (Appendix B regenerated, seven asserted edits; 47.2). Evidence tables: `criteria_v2_s45.py`, output `criteria_v2_s45_output.txt`.
 
 ## 1. Decisions
 
@@ -79,7 +81,43 @@ and protocol draft.6 (Appendix B regenerated, six asserted edits). Evidence tabl
   environment could not reach the Project's data: its network policy denied that host, and also WHO's, IHME's,
   Freedom House's and the World Bank's. The bar is fixed from the Index's published data before any configured
   national economy is scored on C4.6. Designs, mechanisms and comprehensive systems are scored on their stated
-  provisions and do not wait for it.
+  provisions and do not wait for it. *Resolved in Session 47 by 47.1.*
+- **47.1 (under the delegation; flagged ▲; the owner may reverse).** C4.6 clause 3's bar, for a configured national
+  economy, is a World Justice Project sub-factor 6.2 score of 0.77 or more, read at the two decimals the Index
+  publishes; the Pass Threshold carries it, and the measurement field states it with its reason. Session 47's
+  environment reached the Project's data: the 2025 edition's historical data file
+  (`2025_wjp_rule_of_law_index_HISTORICAL_DATA_FILE.xlsx`, md5 `56724a01`), from which
+  `wjp_rol_sf62_2012_2025.csv` extracts sub-factor 6.2 for every edition, 1,484 scores; `criteria_v2_s45.py`,
+  section 5, computes every figure below from it and asserts them.
+  (a) *From the distribution.* The Index codes each answer from 0 to 1, but it normalizes country scores by the
+  Min-Max method against a 2015 base year (its 2025 Methodology), so a point on its scale does not say how often
+  regulation is influenced. It publishes no bands, unlike the Freedom House rating whose top band sets C2.6's bar.
+  (b) *The upper quartile.* The clause asks that regulation be applied without improper influence, which describes
+  the jurisdictions whose regulators the Index's questions find least often bribed or influenced, not the typical
+  one. The upper quartile is the conventional cut for that group and the nearest the Index comes to C2.6's top
+  band. It is 0.7665 on the inclusive (linear) definition and 0.7712 on the exclusive, 0.77 on both; 36 of the 143
+  jurisdictions meet it.
+  (c) *Fixed as a figure.* A quartile re-derived for each edition would make the clause relative, met by a quarter
+  of the world whatever the world does; fixed, it is absolute. It is also stable: the upper quartile lies between
+  0.75 and 0.78 in every edition from 2014 to 2025 (0.73 in 2012–2013, on 97 jurisdictions).
+  (d) *What the sub-factor measures.* Its expert questions ask what most likely follows when an environmental
+  authority notifies a plant polluting a river, or a public-health authority a food producer tied to a salmonella
+  outbreak (compliance, bribery or influence of the authority, or nothing), and how often bribes are paid for
+  permits, licences, and public-health and welfare services; its household questions ask about bribes for permits
+  and documents (Table of Variables 2025, 6.2.1 and 6.2.2). It measures capture by bribery and influence, the
+  clause's subject; the formal independence of regulators (funding, appointment, the movement of staff) is what a
+  design is scored on, from its stated provisions.
+  *Consequence, indicative only.* No C4.6 unit is scored before stage 2, on each entry's stated date and
+  configuration. On the 2025 edition: United States 0.87; Denmark 0.97, Finland 0.97, Norway 0.99, Sweden 0.92
+  (the Index does not cover Iceland); Singapore 0.94; Qatar 0.66; China 0.61. The first six meet the bar; Qatar and
+  China do not. Every bar from 0.67 to 0.87 gives the same verdicts. The alternative recorded for the owner, the
+  median (0.61), would pass Qatar and China as well. The Index covers neither the Soviet Union nor Cuba nor North
+  Korea, so Centrally Planned Socialism's clause 3 cannot be read from it. How a historical configuration is read
+  on a series that does not reach it is a question for all of that entry's class I units, and it is decided once,
+  when they are re-checked in stage 2.
+- **47.2 (correction).** The status line above said that `build_criteria.py` writes protocol draft.6 with six
+  asserted edits. Since Session 46 it has written draft.7 with seven (1.2's was added by 46.3(b)); from 47.1 it
+  writes draft.8, whose Appendix B carries C4.6's bar. The line now says so.
 
 ## 2. Method
 
@@ -177,7 +215,8 @@ Consequential choices are marked ▲; each is a candidate for the owner's review
   non-declining over 20 years; basic-needs output at the system's own working time. TFP is a separate clause because
   output per hour can rise on capital accumulation alone while methods stagnate. Defined on productivity, not output
   growth, so designs that choose shorter hours or lower consumption can pass.
-- **C2.6 clauses 2–3 and C4.6** (Package C): their measures and bars are decision 46.2's, listed there.
+- **C2.6 clauses 2–3 and C4.6** (Package C): their measures and bars are decision 46.2's, listed there; C4.6's
+  clause 3 bar, 0.77 on the World Justice Project's sub-factor 6.2, is decision 47.1's ▲.
 
 ## 5. Aspirational clauses (45.4)
 
@@ -189,7 +228,7 @@ evidence exists. C3.1 clause 1 is not aspirational: the rules or a dated record 
 
 ## 6. What the generator asserts
 
-`build_criteria.py` (version 2.1) starts from `criteria_s44_snapshot.json` (md5 checked), applies Appendix V, and exits
+`build_criteria.py` (version 2.2) starts from `criteria_s44_snapshot.json` (md5 checked), applies Appendix V, and exits
 1 unless: every Requirement figure appears in its Pass Threshold, and every measurement figure does or is declared
 descriptive in the criterion's block; each registered quantity (wealth Gini, citizen proposals, carbon,
 regeneration, autonomy share, association, housing stability, debt, productivity, inflation, and, from decision
@@ -221,7 +260,7 @@ The S1 norm-weight table is computed (`criteria_v2_s45.py` section 2) but belong
 scheme (S2) and the per-system count of units resting on unshown clauses (R5) are stage 3. Band texts of restated
 criteria still carry Paper v1.4 examples; `criteria.json` marks them, and anchors describe while thresholds govern
 (2.3(g)). The corpus, CSV and totals change only when the pass is applied by generator, which also carries decision 45.6.
-C4.6's bar on the World Justice Project's sub-factor 6.2 is not fixed (46.4).
+C4.6's bar on the World Justice Project's sub-factor 6.2, not fixed in Session 46 (46.4), is fixed by 47.1.
 
 ## 9. Package C (decision 46.1: C-1 and C-2 adopted; C-3 recorded for v2.1)
 
@@ -265,7 +304,7 @@ the owner's decision fixes the wording and bars, with sources, in Appendix V; `b
 structure line, so no code changes.
 
 **Outcome (Session 46).** Appendix V now carries C2.6's clauses 2 and 3 and the C4.6 block, with the readings of
-46.2; C4.6's bar on the World Justice Project's sub-factor 6.2 awaits its data (46.4). The structure needed no code
+46.2; C4.6's bar on the World Justice Project's sub-factor 6.2 awaited its data (46.4) and is fixed by 47.1. The structure needed no code
 change, as expected, but three things did: `build_criteria.py` (version 2.1) and `criteria_v2_s45.py` register the
 four new quantities; the generator took each new criterion's source from a hard-coded "Package B, decision 45.1",
 which would have been wrong for C4.6, and now reads it from the block's `adopted` field; and the protocol it
@@ -477,12 +516,12 @@ names the decision that adopted a new criterion, for its `sources`.
 - **requirement**: Harm to health and to the environment is a cost to whoever causes it, not a source of revenue: the toll of pollution on health does not rise, those who cause harm answer for it to those harmed, and the regulators who should detect it are free of the influence of those they regulate.
 - **rationale**: No other criterion measures the health burden of pollution, or whether harm is a cost to the one who causes it: healthcare appears only in C2.2's basket of basic needs, and fuel-related pollution only in C3.5's externalization clause. The documented pattern the criterion answers is concealment of known harm to protect product revenue, and capture of the regulators who should detect it, as in the histories of tobacco, leaded fuel, PFAS chemicals and industry-funded nutrition research. Where one owner profits from both a harm and its treatment, the incentive to tolerate the harm is structural. The criterion does not assume that harm is caused deliberately: it tests whether harm is a net cost to whoever causes it, which removes the incentive whatever the ownership.
 - **distinguishes**: C4.6 from C3.5 and C4.2: C3.5's fourth clause measures the unpriced environmental cost of fuel use as a share of GDP, a price gap, and C4.2 the pressure of consumption on the biosphere; C4.6 measures harm to human health from polluted air and water and from poisoning, whatever its source, and the liability and regulation that make harm a cost to whoever causes it. A system can price fuel fully and still see pollution deaths rise from household fuel or unsafe water, or leave fuel unpriced while those deaths fall. The third clause measures whether regulators are free of the influence of those they regulate; C2.6 measures rights held against the state and the independence of its courts, and C4.4 the accountability of major decisions to those they affect. Health outcomes in general, coverage and financial protection, are not measured; a Health Security criterion is recorded for v2.1.
-- **measurement_protocol**: Clause 1: the sum of the age-standardized mortality rates per 100,000 population attributed to household and ambient air pollution (SDG 3.9.1), to unsafe water, unsafe sanitation and lack of hygiene (SDG 3.9.2) and to unintentional poisoning (SDG 3.9.3), in the World Health Organization's Global Health Observatory, at the start and at the end of the 20 years to the stated date; the clause is met if the rate at the end is no higher than at the start. Where the SDG series do not span the window, the Global Burden of Disease study's (IHME) age-standardized death rates attributable to air pollution and to unsafe water, sanitation and handwashing, and from unintentional poisonings, are used, cross-checked against the SDG series where both exist; where the two disagree about whether the clause is met, the call is flagged (protocol 6.1). Clause 2 is shown from the law in force and its record, which the scoring document names: those who cause harm to health or to the environment are liable to compensate those harmed and to remedy the damage, under tort, product-liability or environmental-liability law or through a compensation scheme funded by a levy on those who cause the harm, and no immunity leaves a class of harm uncompensated or compensated from public funds alone; those harmed can bring the claim before an independent court, collectively where the harm is dispersed (a class or representative action, or the standing of associations, as Article 9 of the Aarhus Convention provides in environmental matters); and the scoring document names at least one such claim decided against those who caused the harm, and paid, within the scoring window. Clause 3: for a configured national economy, the World Justice Project Rule of Law Index, sub-factor 6.2 (government regulations are applied and enforced without improper influence), for the stated date; the score that meets the clause is fixed from the Index's published data before any configured national economy is scored on C4.6. For a design, clause 1 is the projected rate in the economy it is proposed for; clause 2 is its stated provisions; clause 3 is its stated provisions for the bodies that regulate food, water, air, chemicals and medicines, their independence of those they regulate in funding, appointment and the movement of staff, and the disclosure of who funded the evidence they rely on. Only what the design states and provides for is credited (protocol 4.1); a mechanism is scored on what it adds to or takes from the economy it operates in (protocol 3.2).
-- **pass_threshold**: Mortality attributed to pollution non-increasing over 20 years; those who cause harm to health or the environment liable for it, enforceably by those harmed; regulation of food, water, air, chemicals and medicines applied and enforced without improper influence
-- **clauses**: Mortality attributed to pollution non-increasing over 20 years | those who cause harm to health or the environment liable for it, enforceably by those harmed | regulation of food, water, air, chemicals and medicines applied and enforced without improper influence
-- **indicators**: clause 1, WHO Global Health Observatory (SDG 3.9.1, 3.9.2 and 3.9.3); IHME Global Burden of Disease, risk-attributable death rates; clause 2, the law in force and the record of claims; clause 3, World Justice Project Rule of Law Index, sub-factor 6.2 (the bar is fixed from its data before a configured national economy is scored).
-- **allow**: 100,000, 6.2, 9
-- **band_1.0**: All three clauses shown: the pollution mortality rate no higher at the end of the 20 years than at their start; those who cause harm liable for it in the law in force, enforceably by those harmed, with a record of claims paid; and regulation applied without improper influence (for a configured national economy, on the World Justice Project's sub-factor 6.2); or a design whose stated provisions do the same, with component evidence where it relies on institutions not yet built.
+- **measurement_protocol**: Clause 1: the sum of the age-standardized mortality rates per 100,000 population attributed to household and ambient air pollution (SDG 3.9.1), to unsafe water, unsafe sanitation and lack of hygiene (SDG 3.9.2) and to unintentional poisoning (SDG 3.9.3), in the World Health Organization's Global Health Observatory, at the start and at the end of the 20 years to the stated date; the clause is met if the rate at the end is no higher than at the start. Where the SDG series do not span the window, the Global Burden of Disease study's (IHME) age-standardized death rates attributable to air pollution and to unsafe water, sanitation and handwashing, and from unintentional poisonings, are used, cross-checked against the SDG series where both exist; where the two disagree about whether the clause is met, the call is flagged (protocol 6.1). Clause 2 is shown from the law in force and its record, which the scoring document names: those who cause harm to health or to the environment are liable to compensate those harmed and to remedy the damage, under tort, product-liability or environmental-liability law or through a compensation scheme funded by a levy on those who cause the harm, and no immunity leaves a class of harm uncompensated or compensated from public funds alone; those harmed can bring the claim before an independent court, collectively where the harm is dispersed (a class or representative action, or the standing of associations, as Article 9 of the Aarhus Convention provides in environmental matters); and the scoring document names at least one such claim decided against those who caused the harm, and paid, within the scoring window. Clause 3: for a configured national economy, the World Justice Project Rule of Law Index, sub-factor 6.2 (government regulations are applied and enforced without improper influence), in the edition for the stated date, read at the two decimals the Index publishes. Its questions ask whether an environmental authority's notice to a plant polluting a river, or a public-health authority's to a food producer tied to an outbreak, ends in compliance or in the authority being bribed or influenced to ignore it, and how often bribes are paid for permits, licences and public-health and welfare services. The bar, 0.77, is the upper quartile of the 143 jurisdictions' scores in the Index's 2025 edition, fixed as a figure so that later editions do not move it: the Index publishes no bands, and it normalizes its scores against a 2015 base year, so a point on its scale has no meaning of its own. For a design, clause 1 is the projected rate in the economy it is proposed for; clause 2 is its stated provisions; clause 3 is its stated provisions for the bodies that regulate food, water, air, chemicals and medicines, their independence of those they regulate in funding, appointment and the movement of staff, and the disclosure of who funded the evidence they rely on. Only what the design states and provides for is credited (protocol 4.1); a mechanism is scored on what it adds to or takes from the economy it operates in (protocol 3.2).
+- **pass_threshold**: Mortality attributed to pollution non-increasing over 20 years; those who cause harm to health or the environment liable for it, enforceably by those harmed; regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more)
+- **clauses**: Mortality attributed to pollution non-increasing over 20 years | those who cause harm to health or the environment liable for it, enforceably by those harmed | regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more)
+- **indicators**: clause 1, WHO Global Health Observatory (SDG 3.9.1, 3.9.2 and 3.9.3); IHME Global Burden of Disease, risk-attributable death rates; clause 2, the law in force and the record of claims; clause 3, World Justice Project Rule of Law Index, sub-factor 6.2 (bar 0.77, the upper quartile of its 2025 edition).
+- **allow**: 100,000, 6.2, 9, 143, 2025, 2015
+- **band_1.0**: All three clauses shown: the pollution mortality rate no higher at the end of the 20 years than at their start; those who cause harm liable for it in the law in force, enforceably by those harmed, with a record of claims paid; and regulation applied without improper influence (for a configured national economy, a score of 0.77 or more on the World Justice Project's sub-factor 6.2); or a design whose stated provisions do the same, with component evidence where it relies on institutions not yet built.
 - **band_0.5**: One or more clauses not shown, or shown only by projection resting on untested assumptions, where the system has a functioning mechanism that makes some harm a cost to whoever causes it (liability, a compensation scheme funded by those who cause the harm, pricing, or independent regulation).
 - **band_0.0**: No structural mechanism makes harm a cost to whoever causes it (those who cause harm are shielded from liability with no compensation they fund, and its regulation is controlled by those it regulates), or pollution mortality rising over 20 years with no credible pathway to reverse it under the system's own logic.
 

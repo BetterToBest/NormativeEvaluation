@@ -1,4 +1,4 @@
-Inputs: criteria_s44_snapshot.json, criteria.json, NEEC_Criteria_v2_s45.md, neec_corpus.json
+Inputs: criteria_s44_snapshot.json, criteria.json, NEEC_Criteria_v2_s45.md, neec_corpus.json, wjp_rol_sf62_2012_2025.csv
 Criteria: 26 at s44, 29 in v2.0; corpus entries: 23 (vectors in force, on the s44 criteria, before the rescoring pass is applied)
 
 1. Figures in a Requirement or measurement field that the Pass Threshold lacks
@@ -36,7 +36,7 @@ Criteria: 26 at s44, 29 in v2.0; corpus entries: 23 (vectors in force, on the s4
      C2.6  measurement_protocol           0, 0, 4, 5
      C3.1  measurement                    2020
      C4.2  measurement                    35%, 2019, 2030, 1.5, 2023, 2018, 2022
-     C4.6  measurement_protocol           100,000, 9, 6.2
+     C4.6  measurement_protocol           100,000, 9, 143, 2025, 2015
      C5.3  measurement                    10,000, 1, 100
 
 2. Implicit norm weights under equal criterion weighting (each criterion's weight split equally among
@@ -92,3 +92,34 @@ Criteria: 26 at s44, 29 in v2.0; corpus entries: 23 (vectors in force, on the s4
    (C1.5's s44 threshold names the Gini only in a parenthesis recording its removal; v2.0 moves that
    commentary out of the threshold, class W.)
    Carried by more than one s44 threshold: 5 (wealth Gini, citizen proposals adopted, carbon, resource use against regeneration, autonomy share); in v2.0: none
+
+5. C4.6 clause 3 bar (decision 47.1): World Justice Project Rule of Law Index, sub-factor 6.2
+   Source: wjp_rol_sf62_2012_2025.csv (md5 a636d6a2), extracted from the 2025 edition's historical data file
+   (2025_wjp_rule_of_law_index_HISTORICAL_DATA_FILE.xlsx, md5 56724a01), sheet 'Historical Data'; 1484 scores
+   edition     jurisdictions  median  Q3 incl.  Q3 excl.
+   2012-2013              97   0.540    0.7300    0.7350
+   2014                   99   0.545    0.7686    0.7693
+   2015                  102   0.596    0.7791    0.7853
+   2016                  113   0.616    0.7794    0.7797
+   2017-2018             113   0.609    0.7812    0.7817
+   2019                  126   0.608    0.7525    0.7553
+   2020                  128   0.609    0.7506    0.7512
+   2021                  139   0.601    0.7680    0.7697
+   2022                  140   0.595    0.7589    0.7654
+   2023                  142   0.605    0.7643    0.7681
+   2024                  142   0.600    0.7658    0.7721
+   2025                  143   0.606    0.7665    0.7712
+   2025: upper quartile 0.7665 (inclusive) and 0.7712 (exclusive), 0.77 on both; median 0.6063; 36 of 143 jurisdictions score 0.77 or more at two decimals
+   Upper quartile, editions 2014 to 2025: 0.75 to 0.78
+   Reference economies of the configured national economies, 2025 edition (indicative: no C4.6 unit is scored
+   before stage 2, on each entry's stated date and configuration):
+     SQ  United States   0.8670  0.87  meets 0.77
+     NSD Denmark         0.9650  0.97  meets 0.77
+     NSD Finland         0.9701  0.97  meets 0.77
+     NSD Norway          0.9871  0.99  meets 0.77
+     NSD Sweden          0.9226  0.92  meets 0.77
+     SG  Singapore       0.9416  0.94  meets 0.77
+     QA  Qatar           0.6640  0.66  does not meet 0.77
+     CN  China           0.6078  0.61  does not meet 0.77
+     CPS not in the Index: the Soviet Union, Cuba and North Korea (nor is Iceland, of the Nordic economies)
+   Bars giving these eight the same verdicts: 0.67 to 0.87; at the median (0.61) all eight meet it
