@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 18 (Session 43). Runs every verification and analysis script on file
+Version 19 (Session 44). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -132,6 +132,10 @@ the audit's A codes, the audit's four out-of-reach codes confirmed, the four cla
 asserted to sit in a unit another clause decides, a flag outside the group that rests on a unit it moves
 asserted, their consequences computed cumulatively with parts (a) to (b5), and the record
 NEEC_Rescoring_s43.md checked against its generated tables: 86 checks.
+Version 19 (Session 44) adds
+criteria_review_s44.py, the evidence tables of the criteria review (NEEC_Criteria_Review_s44.md): the implicit
+norm weights under equal criterion weighting, the quantities scored in more than one Pass Threshold located verbatim,
+their corpus agreement, and the Requirement figures that differ from a Pass Threshold; no file changed: 87 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -853,8 +857,17 @@ S43_CHECKS = [
          stdout="rescoring_s43_output.txt", stderr=EMPTY),
 ]
 
+# Session 44: the criteria review's evidence tables (appended after the version 18 checks).
+S44_CHECKS = [
+    dict(name="criteria_review_s44.py: the criteria review's evidence tables (norm weights, quantities scored in more "
+              "than one Pass Threshold, their corpus agreement, Requirement figures differing from a Pass Threshold)",
+         cmd=["python", "criteria_review_s44.py"],
+         files={k: k for k in ("criteria_review_s44.py", "criteria.json", "neec_corpus.json")},
+         stdout="criteria_review_s44_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS + S36_CHECKS + S37_CHECKS
-          + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS + S42_CHECKS + S43_CHECKS)
+          + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS + S42_CHECKS + S43_CHECKS + S44_CHECKS)
 
 
 def md5(data):
