@@ -1,211 +1,204 @@
 {
-  "schema": "neec-criteria/2.0",
-  "framework": "NEEC Applied, v2.0 criteria: 28 criteria in five domains",
-  "generated_by": "build_criteria.py version 2 (Session 45); do not edit by hand",
+  "schema": "neec-criteria/1.0",
+  "framework": "NEEC Applied, v2 structure: 26 criteria in five domains",
+  "generated_by": "build_criteria.py (Session 27; corrections of Session 36, protocol v2.0-draft.5); do not edit by hand",
   "source": {
-    "base": "criteria_s44_snapshot.json",
-    "base_md5": "d4b78634cd233adb8c00b1a5e0a00821",
-    "record": "NEEC_Criteria_v2_s45.md",
-    "record_md5": "29e9b976e8580f3d922d764de54a3913",
-    "clause_splits": "SCORING_PROTOCOL_s44_snapshot.md, Appendix B (thresholds v2.0 leaves unchanged)",
-    "v1": {
-      "document": "NEEC_Paper_v1_4.md",
-      "md5": "5e2c2c3e9dc305c95ed7536db95ba1b8",
-      "excluded_fields": [
-        "Threshold Justification",
-        "Current Performance"
-      ],
-      "removed_comparative_clauses": [
-        {
-          "criterion": "C1.4",
-          "clause": "This is NEEC's single most discriminating criterion (Section 11.2)"
-        },
-        {
-          "criterion": "C2.5",
-          "clause": "This is the criterion most often failed by otherwise-strong systems in this corpus (four of the six Potentially/Partially Adequate systems fail it)"
-        },
-        {
-          "criterion": "C4.2",
-          "clause": "NEEC's second most discriminating criterion (Section 11.2)"
-        }
-      ],
-      "corrections": [
-        {
-          "criterion": "C1.2a",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C1.2b",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C1.3",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C1.4",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C1.5",
-          "field": "anchors.note",
-          "kind": "moved",
-          "basis": "decision D28(g): band reasoning formerly appended to the threshold line"
-        },
-        {
-          "criterion": "C1.5",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C2.1",
-          "field": "anchors.threshold",
-          "kind": "substantive",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-          "departure": "dropped the revealed-preference elaboration (noted by the R4 audit, outside its four)"
-        },
-        {
-          "criterion": "C2.2",
-          "field": "anchors.threshold",
-          "kind": "substantive",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-          "departure": "dropped the population clause 'for all residents' and the list of basic needs, and added the Measurement line's conditions (found in Session 36)"
-        },
-        {
-          "criterion": "C2.3",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C2.4",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C2.5",
-          "field": "anchors.threshold",
-          "kind": "substantive",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-          "departure": "dropped 'voluntary association protected' (R4 audit)"
-        },
-        {
-          "criterion": "C3.1",
-          "field": "anchors.threshold",
-          "kind": "substantive",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-          "departure": "added 'no legislative delay' from the Measurement line and dropped the 1:1 example (R4 audit)"
-        },
-        {
-          "criterion": "C3.2",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C3.3",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C3.4",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C3.5",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C4.1",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C4.2",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C4.3",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C4.4",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C4.5",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C5.1",
-          "field": "anchors.threshold",
-          "kind": "substantive",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-          "departure": "dropped 'matching claimed benefits' (R4 audit)"
-        },
-        {
-          "criterion": "C5.2",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C5.3",
-          "field": "anchors.threshold",
-          "kind": "substantive",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
-          "departure": "dropped 'through modeling' and 'coordination protocols established' (R4 audit)"
-        },
-        {
-          "criterion": "C5.4",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C5.5",
-          "field": "anchors.threshold",
-          "kind": "wording",
-          "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
-        },
-        {
-          "criterion": "C3.2",
-          "field": "anchors.bands.0.0",
-          "kind": "band",
-          "basis": "decision D26 (revision R3); Correction 7's stale count removed from this anchor"
-        },
-        {
-          "criterion": "C3.2",
-          "field": "anchors.bands.0.5",
-          "kind": "band",
-          "basis": "decision D26 (revision R3); Correction 7's stale count removed from this anchor"
-        }
-      ]
-    }
+    "document": "NEEC_Paper_v1_4.md",
+    "md5": "5e2c2c3e9dc305c95ed7536db95ba1b8",
+    "excluded_fields": [
+      "Threshold Justification",
+      "Current Performance"
+    ],
+    "removed_comparative_clauses": [
+      {
+        "criterion": "C1.4",
+        "clause": "This is NEEC's single most discriminating criterion (Section 11.2)"
+      },
+      {
+        "criterion": "C2.5",
+        "clause": "This is the criterion most often failed by otherwise-strong systems in this corpus (four of the six Potentially/Partially Adequate systems fail it)"
+      },
+      {
+        "criterion": "C4.2",
+        "clause": "NEEC's second most discriminating criterion (Section 11.2)"
+      }
+    ],
+    "corrections": [
+      {
+        "criterion": "C1.2a",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C1.2b",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C1.3",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C1.4",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C1.5",
+        "field": "anchors.note",
+        "kind": "moved",
+        "basis": "decision D28(g): band reasoning formerly appended to the threshold line"
+      },
+      {
+        "criterion": "C1.5",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C2.1",
+        "field": "anchors.threshold",
+        "kind": "substantive",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
+        "departure": "dropped the revealed-preference elaboration (noted by the R4 audit, outside its four)"
+      },
+      {
+        "criterion": "C2.2",
+        "field": "anchors.threshold",
+        "kind": "substantive",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
+        "departure": "dropped the population clause 'for all residents' and the list of basic needs, and added the Measurement line's conditions (found in Session 36)"
+      },
+      {
+        "criterion": "C2.3",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C2.4",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C2.5",
+        "field": "anchors.threshold",
+        "kind": "substantive",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
+        "departure": "dropped 'voluntary association protected' (R4 audit)"
+      },
+      {
+        "criterion": "C3.1",
+        "field": "anchors.threshold",
+        "kind": "substantive",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
+        "departure": "added 'no legislative delay' from the Measurement line and dropped the 1:1 example (R4 audit)"
+      },
+      {
+        "criterion": "C3.2",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C3.3",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C3.4",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C3.5",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C4.1",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C4.2",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C4.3",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C4.4",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C4.5",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C5.1",
+        "field": "anchors.threshold",
+        "kind": "substantive",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
+        "departure": "dropped 'matching claimed benefits' (R4 audit)"
+      },
+      {
+        "criterion": "C5.2",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C5.3",
+        "field": "anchors.threshold",
+        "kind": "substantive",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim",
+        "departure": "dropped 'through modeling' and 'coordination protocols established' (R4 audit)"
+      },
+      {
+        "criterion": "C5.4",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C5.5",
+        "field": "anchors.threshold",
+        "kind": "wording",
+        "basis": "decision D28(g): the anchor's threshold line is the definition's Pass Threshold, verbatim"
+      },
+      {
+        "criterion": "C3.2",
+        "field": "anchors.bands.0.0",
+        "kind": "band",
+        "basis": "decision D26 (revision R3); Correction 7's stale count removed from this anchor"
+      },
+      {
+        "criterion": "C3.2",
+        "field": "anchors.bands.0.5",
+        "kind": "band",
+        "basis": "decision D26 (revision R3); Correction 7's stale count removed from this anchor"
+      }
+    ]
   },
   "scale": {
     "values": [
@@ -221,16 +214,15 @@
     "rule": "Reason continuously, then round once, at the criterion level (Appendix H.3)."
   },
   "structure": {
-    "criteria": 28,
-    "total_max": 28.0,
+    "criteria": 26,
+    "total_max": 26.0,
     "domain_max": {
       "D1": 6.0,
-      "D2": 6.0,
-      "D3": 6.0,
+      "D2": 5.0,
+      "D3": 5.0,
       "D4": 5.0,
       "D5": 5.0
-    },
-    "tiers_note": "Tier bands stay integer failure counts (0-2, 3-5, 6+) on 28 criteria (decision 45.1); Paper v2.0 Appendix A.4 reports the proportional alternative."
+    }
   },
   "tiers": [
     {
@@ -246,7 +238,7 @@
     {
       "name": "Structurally Inadequate",
       "failures_min": 6,
-      "failures_max": 28
+      "failures_max": 26
     }
   ],
   "domains": [
@@ -272,8 +264,7 @@
         "C2.2",
         "C2.3",
         "C2.4",
-        "C2.5",
-        "C2.6"
+        "C2.5"
       ]
     },
     {
@@ -285,8 +276,7 @@
         "C3.2",
         "C3.3",
         "C3.4",
-        "C3.5",
-        "C3.6"
+        "C3.5"
       ]
     },
     {
@@ -314,14 +304,6 @@
       ]
     }
   ],
-  "classes": {
-    "W": "wording, commentary or disclosure only",
-    "D": "clauses deleted only",
-    "I": "indicator named for an unchanged clause and bar",
-    "M": "bar, measure or clause restated",
-    "N": "new criterion",
-    "U": "unchanged"
-  },
   "criteria": [
     {
       "id": "C1.1",
@@ -329,14 +311,9 @@
       "name": "Poverty Elimination Capacity",
       "definition": {
         "derivation": "From N1 (Human Flourishing) + N2 (Labor Non-Necessity) + N3 (Coercion Minimization)",
-        "requirement": "Near-universal elimination of poverty within a measurable timeframe: ≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing.",
-        "measurement_protocol": "Poverty definition: a person is poor whose household income or consumption per person is below the World Bank Societal Poverty Line (SPL) for their economy, the line the Bank derives from the cost of basic needs as it rises with median income (a floor at the international poverty line plus half the median), in 2021 PPP international dollars; the line's parameters are revised with each PPP round, and the round used is stated. Data sources: the World Bank Poverty and Inequality Platform; for a design, the rate projected at the same line in the economy the design is proposed for. Calculation: poverty reduction = (baseline rate − rate at year 20) / baseline rate × 100%, the baseline being the rate at the stated base year (the adoption year for a design; for a configured national economy, the start of the 20-year window ending at its stated date). Temporal tracking: at baseline and at 5-year intervals, distinguishing temporary from persistent poverty.",
-        "pass_threshold": "≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing",
-        "indicators": "World Bank Poverty and Inequality Platform, poverty headcount at the Societal Poverty Line (2021 PPP).",
-        "clauses": [
-          "≥90% poverty reduction within 20 years under base scenario",
-          "≥85% under stress testing"
-        ]
+        "requirement": "95%+ poverty elimination within measurable timeframes (10-20 years)",
+        "measurement_protocol": "Poverty Definition: Absolute poverty = inability to afford basic necessities (housing, food, healthcare, utilities) using regional cost-of-living adjusted baskets. Data Sources: Census Bureau Supplemental Poverty Measure, OECD Better Life Index, regional cost-of-living data. Calculation: Poverty elimination rate = (Baseline poverty % - Post-intervention poverty %) / Baseline poverty % × 100%. Temporal Tracking: Measure at baseline, 5-year intervals, distinguishing temporary vs. persistent poverty.",
+        "pass_threshold": "≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing"
       },
       "anchors": {
         "threshold": "≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing.",
@@ -372,16 +349,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "I",
-        "codes": [
-          "K6",
-          "R2"
-        ]
       }
     },
     {
@@ -390,18 +360,15 @@
       "name": "Wealth Building for Resilience",
       "definition": {
         "derivation": "From N4 (Universal Wealth Access) + N3 (Coercion Minimization) — unchanged from legacy C1.2's derivation, since this sub-criterion inherits the resilience-buffer half of what legacy C1.2 asked.",
-        "requirement": "Genuine asset building enabling ≥$60,000 median net-wealth accumulation over 20 years for 70%+ of participants, in constant 2019 US dollars at purchasing-power parity, for participants who engage with whatever wealth-building mechanism the system provides.",
+        "requirement": "Genuine asset building enabling $70,000+ median household wealth accumulation over 20 years (inflation-adjusted), for participants who engage with whatever wealth-building mechanism the system provides.",
         "distinguishes": "C1.2a from C1.2b. C1.2a asks only whether a genuine buffer-building mechanism exists and reaches a substantial share of participants — not whether the resulting distribution of wealth across the whole population is itself equitable or concentration-resistant (that is C1.2b's question, immediately below). A system can score well on one while failing the other: a system that lets most participants build savings through ordinary market mechanisms, but does nothing to prevent the top decile from pulling away, could plausibly pass C1.2a while failing C1.2b; conversely, Integral's ITC dissolution is close to the strongest possible C1.2b answer in the corpus while scoring 0.0 here, since credits that dissolve on use cannot function as anyone's buffer (Appendix E, Appendix H.7v2 below).",
-        "measurement_protocol": "Wealth definition: net worth (total assets − total liabilities), including housing equity, retirement accounts, savings, investment accounts, business ownership and system-specific wealth mechanisms (e.g., PTF acres). Data: longitudinal tracking of the same households over 20-year periods in a household wealth survey (the Luxembourg Wealth Study, the Eurosystem Household Finance and Consumption Survey, or a national equivalent); for a design, the projected accumulation. Price basis: local-currency values are deflated to 2019 prices by the national consumer price index and converted at the World Bank's 2019 PPP conversion factor for private consumption; the figure is the one the Paper calibrated on 2019 US data. Median focus: the median, not the mean, to avoid skew from top wealth holders.",
-        "pass_threshold": "≥$60,000 median net-wealth accumulation over 20 years for 70%+ of participants, in constant 2019 US dollars at purchasing-power parity",
-        "indicators": "Luxembourg Wealth Study; Eurosystem HFCS; national wealth surveys; World Bank WDI PPP conversion factor, private consumption (2019).",
-        "clauses": [
-          "≥$60,000 median net-wealth accumulation over 20 years for 70%+ of participants, in constant 2019 US dollars at purchasing-power parity"
-        ]
+        "measurement_protocol": "Wealth Definition: Net worth (total assets - total liabilities), including housing equity, retirement accounts, savings, investment accounts, business ownership, system-specific wealth mechanisms (e.g., PTF acres). Data Collection: Longitudinal tracking of the same households over 20-year periods using Survey of Consumer Finances methodology. Inflation Adjustment: All values converted to baseline-year real dollars using CPI-U. Median Focus: Use median rather than mean to avoid skew from top wealth holders.",
+        "cultural_geographic_adaptation": "High-income countries: $70,000 USD equivalent baseline. Middle-income countries: Adjust to 150-200% of national median annual household expenses. Low-income countries: Adjust to 200-300% of median annual expenses (relatively higher threshold due to greater vulnerability to shocks).",
+        "pass_threshold": "≥$60,000 median wealth accumulation over 20 years for 70%+ of participants (unchanged from legacy C1.2's Pass Threshold — the sub-criterion split doesn't touch this number, only separates out the now-independent question of whether the wealth built this way stays broadly distributed)."
       },
       "anchors": {
-        "threshold": "≥$60,000 median net-wealth accumulation over 20 years for 70%+ of participants, in constant 2019 US dollars at purchasing-power parity.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was restated (K6, R2; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "≥$60,000 median wealth accumulation over 20 years for 70%+ of participants (unchanged from legacy C1.2's Pass Threshold — the sub-criterion split doesn't touch this number, only separates out the now-independent question of whether the wealth built this way stays broadly distributed).",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "A genuine, documented asset-accumulation mechanism reaching most participants. *Market Socialism's published C1.2=1.0 rested on: \"Cooperative membership provides ownership stake and wealth accumulation... members accumulate substantial wealth through capital accounts and profit distribution\" — evidence that speaks almost entirely to the buffer-building question, making C1.2a≈1.0 the most defensible illustrative decomposition (see also Appendix H.8a).*",
@@ -437,16 +404,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 12.3; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 12.3",
         "anchors": "Paper Appendix H.7v2",
-        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "M",
-        "codes": [
-          "K6",
-          "R2"
-        ]
+        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -457,15 +417,11 @@
         "derivation": "From N4 (Universal Wealth Access) + N7 (Governance Legitimacy and Anti-Capture) — a new derivation pairing for this sub-criterion: N4 supplies the \"wealth is power\" logic, N7 supplies the anti-capture framing that concentration specifically threatens.",
         "requirement": "The system structurally prevents wealth concentration sufficient to enable governance capture or exploitative leverage over others — independent of whether the system also enables broad-based accumulation (C1.2a's question, not this one).",
         "measurement": "Wealth Gini coefficient, population-wide, tracked over time. Distinct from an accumulation mechanism's mere existence (C1.2a): a system with a real, reaching wealth-building mechanism can still fail C1.2b if that mechanism's gains compound unevenly (e.g., early or high-income participants accumulate disproportionately over successive years). Scorers should weigh whether prevention is *structural* — a hard cap, non-transferability, credit dissolution, progressive mechanisms, cooperative or collective ownership forms that don't permit unlimited individual accumulation — versus *incidental*, a Gini figure that happens to be low today with no mechanism holding it there under stress or over a longer horizon.",
-        "pass_threshold": "Gini <0.35 for wealth distribution",
-        "threshold_note": "Moved from legacy C1.5's Pass Threshold, per the boundary resolution in Paper Section 12.2 (commentary moved out of the threshold in v2.0).",
-        "clauses": [
-          "Gini <0.35 for wealth distribution"
-        ]
+        "pass_threshold": "Gini <0.35 for wealth distribution (moved from legacy C1.5's Pass Threshold, per the boundary resolution in Section 12.2)."
       },
       "anchors": {
-        "threshold": "Gini <0.35 for wealth distribution.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was reworded without a change of bar (W; NEEC_Criteria_v2_s45.md); the band texts stand.",
+        "threshold": "Gini <0.35 for wealth distribution (moved from legacy C1.5's Pass Threshold, per the boundary resolution in Section 12.2).",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "A structural mechanism that prevents concentration outright, not merely a favorable Gini figure. *Integral's ITC design — \"credits...cannot be traded, saved, speculated on, accumulated, or converted into influence... just like an energy cycle, not a currency\" (Appendix E) — is close to the strongest possible C1.2b answer in the corpus, illustrating exactly the \"aces (b), fails (a)\" case Section 12.1 describes. CCO-PTF's own C4.4 write-up separately projects Gini <0.35 through a different mechanism — conversion limits and acre-equity distribution — and would be a second 1.0 candidate.*",
@@ -496,15 +452,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 12.3; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 12.3",
         "anchors": "Paper Appendix H.7v2",
-        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "W",
-        "codes": [
-          "W"
-        ]
+        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -513,20 +463,15 @@
       "name": "Housing Security",
       "definition": {
         "derivation": "From N1 (Human Flourishing) + N3 (Coercion Minimization)",
-        "requirement": "≥88% housing stability resistant to market volatility, with housing affordable to households at 80% of the regional median disposable income.",
+        "requirement": "90%+ housing stability rates resistant to market volatility",
         "rationale": "Housing represents the largest expense (30-50% of income) and primary wealth-building mechanism. Systems failing to address housing commodification cannot claim comprehensive security. Stability means maintaining housing over 5+ years without involuntary displacement.",
-        "measurement": "Housing stability rate = percentage of participants maintaining stable housing over 5-year periods without involuntary displacement from foreclosure, eviction, or inability to afford rent increases. Affordability: housing costs (rent or mortgage payments plus utilities) no more than 30% of disposable income for a household at 80% of the regional median household disposable income, from the OECD Affordable Housing Database, EU-SILC or national household surveys; for a design, projected on the same measure.",
-        "pass_threshold": "≥88% housing stability over 5-year periods, housing costs ≤30% of disposable income at 80% of regional median household disposable income",
-        "benchmark": "Community Land Trusts achieve 10x lower foreclosure rates than conventional mortgages (0.46% vs 3.26% during 2008-2010 crisis).",
-        "indicators": "household panel surveys for displacement; OECD Affordable Housing Database; EU-SILC; national household surveys.",
-        "clauses": [
-          "≥88% housing stability over 5-year periods",
-          "housing costs ≤30% of disposable income at 80% of regional median household disposable income"
-        ]
+        "measurement": "Housing stability rate = percentage of participants maintaining stable housing over 5-year periods without involuntary displacement from foreclosure, eviction, or inability to afford rent increases.",
+        "pass_threshold": "≥88% housing stability over 5-year periods, maintaining affordability at 80% area median income",
+        "benchmark": "Community Land Trusts achieve 10x lower foreclosure rates than conventional mortgages (0.46% vs 3.26% during 2008-2010 crisis)."
       },
       "anchors": {
-        "threshold": "≥88% housing stability over 5-year periods, housing costs ≤30% of disposable income at 80% of regional median household disposable income.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was restated (K6, R2; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "≥88% housing stability over 5-year periods, maintaining affordability at 80% area median income.",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "Structural decommodification or strong regulatory stabilization with a documented or clearly-designed stability rate at or above threshold. *Centrally Planned Socialism (1.0): \"Universal housing provision through state allocation... homelessness essentially eliminated.\"*",
@@ -558,16 +503,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "M",
-        "codes": [
-          "K6",
-          "R2"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -576,20 +514,14 @@
       "name": "Automation Resilience",
       "definition": {
         "derivation": "From N2 (Labor Non-Necessity) + N11 (Automation Compatibility)",
-        "requirement": "Maintain material security as human labor becomes increasingly optional: poverty <8% and aggregate demand >85% of baseline in each of three scenarios in which 30%, 50% and 70% of baseline paid working hours are displaced by automation.",
+        "requirement": "Maintain material security as human labor becomes increasingly optional. Function across 30%, 50%, 70% job displacement scenarios.",
         "rationale": "This criterion alone disqualifies most existing frameworks. When machines replace humans at scale, systems dependent on wage labor for both income and aggregate demand collapse into deflationary spirals that no monetary policy can resolve.",
-        "measurement": "Stress test across the three automation scenarios, a displacement of 30%, 50% or 70% of baseline paid working hours, with no assumption about when each occurs. In each, poverty is measured at the Societal Poverty Line, as in C1.1, and aggregate demand as real final consumption expenditure relative to the pre-displacement baseline. The Pass Threshold's figures apply in every scenario.",
-        "pass_threshold": "Poverty <8% and aggregate demand >85% baseline in each of the 30%, 50% and 70% displacement scenarios",
-        "indicators": "Societal Poverty Line (as C1.1); national accounts final consumption expenditure; for a design, its own model of the three scenarios.",
-        "clauses": [
-          "Poverty <8%",
-          "aggregate demand >85% baseline"
-        ],
-        "clause_scope": "in each of the 30%, 50% and 70% displacement scenarios"
+        "measurement": "Stress test across automation scenarios: 30% job displacement (2030 projection) — maintain poverty <5%, aggregate demand 90-110% baseline. 50% displacement (2040 projection) — maintain poverty <7%, aggregate demand 85-110% baseline. 70% displacement (2050 projection) — maintain poverty <10%, aggregate demand 80-110% baseline.",
+        "pass_threshold": "Poverty <8% and aggregate demand >85% baseline across all three displacement scenarios"
       },
       "anchors": {
-        "threshold": "Poverty <8% and aggregate demand >85% baseline in each of the 30%, 50% and 70% displacement scenarios.",
-        "note": "Apply it carefully; see also Appendix G for a documented case where a candidate evidentiary source (a companion simulation) could not actually be used to evaluate a system at this criterion's higher severities. v2.0 (Session 45): this criterion's Pass Threshold was reworded without a change of bar (K6, R1; NEEC_Criteria_v2_s45.md); the band texts stand.",
+        "threshold": "Poverty <8% and aggregate demand >85% baseline across all three displacement scenarios.",
+        "note": "Apply it carefully; see also Appendix G for a documented case where a candidate evidentiary source (a companion simulation) could not actually be used to evaluate a system at this criterion's higher severities.",
         "bands": {
           "1.0": {
             "text": "An explicit mechanism decoupling income/demand from employment, robust in the system's own design logic across displacement severities. *CCO-PTF-CIP-SZH (1.0): \"Stress testing shows the system maintains poverty <5% and aggregate demand 90-110% baseline across 30%, 50%, 70% job displacement scenarios.\"*",
@@ -621,16 +553,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "I",
-        "codes": [
-          "K6",
-          "R1"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -643,15 +568,11 @@
         "rationale": "Systems limiting wealth-building *access* to a subset of participants — whether by capital ownership, employment status, or cooperative membership — leave the excluded group structurally dependent regardless of how equitable the wealth distribution is among those who do have access. Universal access is a distinct requirement from bounded concentration: a system could hypothetically score well on C1.2b (low overall Gini) while still leaving a meaningful population segment with no accumulation pathway at all — for instance, a strict membership-gated cooperative sector that is internally quite equal but reaches only part of the population, which is exactly Market Socialism's documented profile (Section 6, C1.5 legacy anchor; Appendix H.7v2 below).",
         "distinguishes": "Equality of access (required — this criterion) from equality of outcomes (not required, and never was) and from bounded concentration (a separate question, now C1.2b — see Section 12.2 for why these were split apart rather than left combined).",
         "measurement": "Percentage of population with an active wealth accumulation pathway (not just eligibility, but an actual mechanism producing asset growth).",
-        "pass_threshold": "≥80% population with an active wealth-accumulation pathway",
-        "threshold_note": "Gini clause removed, moved to C1.2b, Paper Section 12.2 (commentary moved out of the threshold in v2.0).",
-        "clauses": [
-          "≥80% population with an active wealth-accumulation pathway"
-        ]
+        "pass_threshold": "≥80% population with an active wealth-accumulation pathway (Gini clause removed — moved to C1.2b, Section 12.2)."
       },
       "anchors": {
-        "threshold": "≥80% population with an active wealth-accumulation pathway.",
-        "note": "This band's reasoning is unchanged from legacy C1.5's anchors (H.7 above); narrowing the threshold doesn't change which systems clear an access-breadth bar, only removes a second, now-separate test that used to ride alongside it. v2.0 (Session 45): this criterion's Pass Threshold was reworded without a change of bar (W; NEEC_Criteria_v2_s45.md); the band texts stand.",
+        "threshold": "≥80% population with an active wealth-accumulation pathway (Gini clause removed — moved to C1.2b, Section 12.2).",
+        "note": "This band's reasoning is unchanged from legacy C1.5's anchors (H.7 above); narrowing the threshold doesn't change which systems clear an access-breadth bar, only removes a second, now-separate test that used to ride alongside it.",
         "bands": {
           "1.0": {
             "text": "Broad-based access not contingent on prior wealth or narrow membership. *Nordic Social Democracy (1.0): \"Approximately 70% have wealth accumulation pathways... meets the threshold for broad-based access\" — the same qualitative-tolerance judgment call already documented in H.7's own C1.5 entry above carries over unchanged, since it was never about the Gini clause.*",
@@ -683,15 +604,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 12.3; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 12.3",
         "anchors": "Paper Appendix H.7v2",
-        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "W",
-        "codes": [
-          "W"
-        ]
+        "threshold": "Paper Section 12.3, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -702,13 +617,8 @@
         "derivation": "From N3 (Coercion Minimization) + N2 (Labor Non-Necessity)",
         "requirement": "Eliminate survival-based economic compulsion without creating new forms of control (bureaucratic, social pressure, surveillance)",
         "rationale": "\"Work this job or face homelessness\" represents baseline coercion regardless of formal freedom. But replacing market coercion with bureaucratic control (work requirements, behavior conditions, means testing) or social pressure (community surveillance, conformity enforcement) merely trades cages.",
-        "measurement": "Clause 1: the share of adults satisfied with their freedom to choose what they do with their life (Gallup World Poll; published as \"freedom to make life choices\" in the World Happiness Report data), read as the share reporting genuine autonomy in major life decisions. Clause 2 is aspirational: no agency publishes revealed-preference evidence of this kind, and a 1.0 requires the scoring document to name a study or record that shows it (for example, behavior observed when an unconditional alternative exists). This is the one home of the share of decisions free of coercion; C4.5 no longer measures it. For a design, both clauses are estimated on the same measures.",
-        "pass_threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist",
-        "indicators": "clause 1, Gallup World Poll (World Happiness Report data); clause 2, aspirational.",
-        "clauses": [
-          "≥70% report genuine autonomy in major life decisions",
-          "validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist"
-        ]
+        "measurement": "Percentage of participants reporting decision-making free from survival necessity on standardized autonomy assessment (validated through revealed preference analysis—actual behavior under genuine alternatives).",
+        "pass_threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist"
       },
       "anchors": {
         "threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist.",
@@ -748,16 +658,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "I",
-        "codes": [
-          "K5",
-          "R3"
-        ]
       }
     },
     {
@@ -770,11 +673,7 @@
         "rationale": "As automation makes labor optional, tying survival to employment creates artificial scarcity. Post-scarcity ethics requires decoupling survival from employment while maintaining contribution recognition and advancement opportunities.",
         "distinguishes": "Labor opportunity (valuable) from labor compulsion (coercive). Systems can and should provide meaningful work opportunities without making survival contingent on employment.",
         "measurement": "Provision of unconditional basic security covering essential needs (housing, food, healthcare, utilities) without work requirements, behavior conditions, or means testing.",
-        "pass_threshold": "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents",
-        "disclosure": "\"Unconditional\" is the content of N2 itself, not an instrument clause, and stays; this is the one criterion that favors unconditional-provision designs by definition, and Paper v2.0 says so.",
-        "clauses": [
-          "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents"
-        ]
+        "pass_threshold": "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents"
       },
       "anchors": {
         "threshold": "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents.",
@@ -818,15 +717,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "W",
-        "codes": [
-          "R4"
-        ]
       }
     },
     {
@@ -837,14 +730,8 @@
         "derivation": "From N1 (Human Flourishing) + N13 (Incentive Alignment)",
         "requirement": "System enables meaningful contribution beyond mere subsistence. Post-scarcity must value cultural contribution, artistic expression, intellectual development—not just material production.",
         "rationale": "Maslow’s hierarchy demonstrates humans require more than material security—we seek purpose, mastery, self-actualization. Systems optimized solely for efficiency leave the human spirit impoverished regardless of material abundance.",
-        "measurement": "Clause 1 (regular creative engagement): the share of adults engaging at least weekly in arts, music, writing, crafts, study or invention; no statistical agency publishes this share on a comparable basis, so the clause is aspirational unless the scoring document names a survey that records weekly frequency. Clause 2 (non-subsistence pursuits): average weekly hours of leisure, time outside paid work, unpaid work and personal care, in national time-use surveys (OECD Time Use Database, HETUS, American Time Use Survey). Clause 3 (meaning/purpose): the mean answer on a 0–10 scale to \"Overall, to what extent do you feel that the things you do in your life are worthwhile?\" (EU-SILC well-being module; UK ONS personal well-being), multiplied by 10. For a design, each is projected on the same measure.",
-        "pass_threshold": "≥50% regular creative engagement, average 10+ hours weekly on non-subsistence pursuits, meaning/purpose satisfaction scores ≥70/100",
-        "indicators": "clause 1, aspirational; clause 2, OECD Time Use Database, HETUS, ATUS; clause 3, EU-SILC and ONS \"worthwhile\" item.",
-        "clauses": [
-          "≥50% regular creative engagement",
-          "average 10+ hours weekly on non-subsistence pursuits",
-          "meaning/purpose satisfaction scores ≥70/100"
-        ]
+        "measurement": "Participation rates in creative/cultural activities (% engaging in arts, music, writing, innovation at least weekly). Time allocation to non-subsistence pursuits (hours per week beyond work/survival). Life satisfaction scores across meaning, growth, and contribution domains.",
+        "pass_threshold": "≥50% regular creative engagement, average 10+ hours weekly on non-subsistence pursuits, meaning/purpose satisfaction scores ≥70/100"
       },
       "anchors": {
         "threshold": "≥50% regular creative engagement, average 10+ hours weekly on non-subsistence pursuits, meaning/purpose satisfaction scores ≥70/100.",
@@ -880,15 +767,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "I",
-        "codes": [
-          "R3"
-        ]
       }
     },
     {
@@ -899,14 +780,8 @@
         "derivation": "From N7 (Governance Legitimacy) + N1 (Human Flourishing)",
         "requirement": "Genuine citizen voice in governance, not just voting rights. Economic democracy matters as much as political democracy.",
         "rationale": "Systems concentrating decision-making—whether in state bureaucracies or corporate boardrooms—cannot claim to maximize human autonomy regardless of material outcomes. Democracy requires actual capacity to shape policy and influence outcomes.",
-        "measurement": "Clause 1 (participation): turnout as a share of the voting-age population in national elections (International IDEA Voter Turnout Database), or, where the system takes its binding decisions otherwise, participation in those processes; binding economic-domain decisions (workplace democracy, community asset governance) count. Clause 2 (influence): the share of citizen-initiated proposals (popular initiatives, petitions with a right to a decision, participatory-budgeting proposals) reaching a binding decision that are adopted, from the official record of the process; where no such process exists the clause is not met. This is the one home of the proposal-adoption quantity; C4.4 no longer measures it. Clause 3 (responsiveness): the share answering that the political system allows people like them to have a say in what the government does (OECD Survey on Drivers of Trust in Public Institutions, or the equivalent European Social Survey item). For a design, each is projected on the same measure.",
-        "pass_threshold": "≥70% participation in democratic processes, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness",
-        "indicators": "International IDEA Voter Turnout Database; official records of initiative and participatory processes; OECD Trust Survey external-efficacy item.",
-        "clauses": [
-          "≥70% participation in democratic processes",
-          "≥35% citizen proposals adopted",
-          "≥65% satisfaction with responsiveness"
-        ]
+        "measurement": "Participation rates in governance decisions (% engaging in democratic processes). Influence metrics (percentage of citizen-initiated proposals adopted). Satisfaction with democratic responsiveness (standardized scales). Economic domain participation (workplace democracy, community asset governance).",
+        "pass_threshold": "≥70% participation in democratic processes, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness"
       },
       "anchors": {
         "threshold": "≥70% participation in democratic processes, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness.",
@@ -946,16 +821,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "I",
-        "codes": [
-          "K2",
-          "R3"
-        ]
       }
     },
     {
@@ -964,19 +832,14 @@
       "name": "Exit Rights and Mobility",
       "definition": {
         "derivation": "From N9 (Partial Deployability) + N3 (Coercion Minimization)",
-        "requirement": "Participants can opt out without penalty and relocate without losing essential benefits; freedom of association is measured in C2.6.",
+        "requirement": "Participants can opt out without penalty; communities can organize around shared values",
         "rationale": "Systems forcing universal participation become totalitarian regardless of ostensible benefits. Ability to exit, form alternative communities, and organize based on preference rather than necessity represents crucial freedom distinguishing voluntary cooperation from imposed uniformity.",
-        "measurement": "Ease of exit (time and resources required to leave the system). Penalties for non-participation (differential treatment of non-participants). Capacity to leave for alternative arrangements, including forming or joining alternative communities. Geographic mobility (freedom to relocate without losing essential benefits).",
-        "pass_threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained",
-        "clauses": [
-          "Exit feasible within 3 months without material penalty",
-          "no differential treatment",
-          "geographic mobility maintained"
-        ]
+        "measurement": "Ease of exit (time and resources required to leave system). Penalties for non-participation (differential treatment of non-participants). Community formation capacity (ability to organize preference-based associations). Geographic mobility (freedom to relocate without losing essential benefits).",
+        "pass_threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained, voluntary association protected"
       },
       "anchors": {
-        "threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained.",
-        "note": "Read carefully: the failure mode is almost always *funding or coherence dependent on near-universal participation*, not an intent to trap individuals. v2.0 (Session 45): this criterion's Pass Threshold was restated (K7; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained, voluntary association protected.",
+        "note": "Read carefully: the failure mode is almost always *funding or coherence dependent on near-universal participation*, not an intent to trap individuals.",
         "bands": {
           "1.0": {
             "text": "Individuals can opt out without penalty and the system continues functioning at partial participation. *CCO-PTF-CIP-SZH (1.0): \"System viable at 30%+ participation, enabling opt-out without penalty... can exit to the traditional market economy while the system continues functioning.\"*",
@@ -1012,61 +875,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "D",
-        "codes": [
-          "K7"
-        ]
-      }
-    },
-    {
-      "id": "C2.6",
-      "domain": "D2",
-      "name": "Civil Liberties and Rule of Law",
-      "definition": {
-        "derivation": "From N3 (Coercion Minimization) + N7 (Governance Legitimacy and Anti-Capture)",
-        "requirement": "Economic security is not bought with liberty: expression, belief, association, due process, equal treatment under law and personal autonomy, privacy included, are protected in practice, and those who administer the system answer to independent courts.",
-        "rationale": "Domain 2 measures freedom from economic coercion, participation and exit, but not the civil liberties and legal protections those freedoms depend on. The omission matters most where allocation runs through the state or through shared data systems: a system can provide for everyone and still punish dissent, surveil its participants or deny them an independent hearing against its administrators. It is also the dimension on which the corpus's configured national economies differ most from the rest.",
-        "distinguishes": "C2.6 from C2.4 and C4.4: participation and the distribution and accountability of power are measured there; C2.6 measures rights held against that power, whoever holds it. The Freedom House civil-liberties checklist is used because it covers exactly this set (expression and belief, associational and organizational rights, rule of law, personal autonomy and individual rights) and leaves out the electoral questions that C2.4 and C4.4 measure.",
-        "measurement_protocol": "Configured national economy: the Freedom House civil-liberties score, 0–60, in Freedom in the World for the stated date, cross-checked against V-Dem's Civil Liberties Index; where the two sources disagree about whether the threshold is met, the call is flagged (protocol 6.1), not resolved silently. Design, mechanism or comprehensive system: the fifteen civil-liberties questions of the Freedom House checklist are answered from the system's own sources, 0–4 each, crediting only what the system states and provides for (protocol 4.1): its guarantees, the body that decides disputes between participants and the system's administrators and that body's independence from them, and, where allocation depends on personal data, stated limits on collection, access, use and retention. A mechanism operating inside a wider economy is scored on what it adds to or takes from the liberties of that economy (protocol 3.2).",
-        "pass_threshold": "Civil-liberties score ≥53 of 60 on the Freedom House checklist",
-        "indicators": "Freedom House, Freedom in the World, civil-liberties score (0–60); cross-check, V-Dem Civil Liberties Index.",
-        "clauses": [
-          "Civil-liberties score ≥53 of 60 on the Freedom House checklist"
-        ]
-      },
-      "anchors": {
-        "threshold": "Civil-liberties score ≥53 of 60 on the Freedom House checklist.",
-        "note": "",
-        "bands": {
-          "1.0": {
-            "text": "Score of 53 or more of 60 (the top band of Freedom House's former 1–7 civil-liberties rating), or a design whose stated guarantees and independent adjudication answer the checklist at that level, with component evidence where it relies on institutions not yet built.",
-            "examples": []
-          },
-          "0.5": {
-            "text": "Score of 17 to 52, or a design whose guarantees are partial, unstated for some questions, or left to administrators' discretion without an independent hearing, where the gap has a credible pathway to close under the system's own logic.",
-            "examples": []
-          },
-          "0.0": {
-            "text": "Score of 16 or less (the two lowest bands of the former rating), or a design that subordinates expression, association or due process to its allocation or administration with no independent adjudication.",
-            "examples": []
-          }
-        }
-      },
-      "sources": {
-        "definition": "NEEC_Criteria_v2_s45.md, Appendix V (Package B, decision 45.1)",
-        "anchors": "NEEC_Criteria_v2_s45.md, Appendix V (Package B, decision 45.1)",
-        "threshold": "NEEC_Criteria_v2_s45.md, Appendix V (Package B, decision 45.1)"
-      },
-      "revision": {
-        "cls": "N",
-        "codes": [
-          "G2"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -1077,15 +888,9 @@
         "derivation": "From N5 (Crisis Robustness) + N10 (Failure Transparency)",
         "requirement": "Automatic stabilization during economic shocks without requiring legislative intervention. Response time, scaling magnitude, and coverage must be immediate and comprehensive.",
         "rationale": "Traditional stimulus requires months of political debate while people suffer. Automatic stabilizers scaling with crisis severity—increasing support by 50%+ during downturns without congressional action—represent superior design.",
-        "measurement": "Clause 1 (response time): days from a shock's trigger, the first official data showing it, to the first increased payment, established from the system's rules (automatic triggers, payment frequency) and, for a configured national economy, from the dated record of its response to its most recent major shock (for 2020, the IMF's database of country fiscal measures in response to the COVID-19 pandemic); no legislative delay (automatic activation based on triggers). Clause 2 (scaling): the percentage change in social benefits received by households (national accounts, SNA item D.62) against the percentage fall in real GDP in that shock; a 30% GDP decline requires at least a 30% benefit increase; for a design, from its rules. Clause 3 (coverage): the share of the population covered by at least one social protection cash benefit (ILO World Social Protection Database, SDG indicator 1.3.1).",
+        "measurement": "Response time (days from crisis onset to support increase). Scaling magnitude (percentage increase relative to crisis severity). Coverage (percentage of affected population receiving support). No legislative delay (automatic activation based on triggers).",
         "pass_threshold": "Response within 72 hours, scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase), ≥90% population coverage",
-        "comparison": "Traditional stimulus: 3-6 months legislative delay, limited coverage. Unemployment insurance: 2-4 weeks processing, 40% coverage. Automatic stabilizers: Immediate response, universal coverage.",
-        "indicators": "system rules or IMF database of COVID-19 fiscal measures; national accounts D.62 and real GDP; ILO World Social Protection Database (SDG 1.3.1).",
-        "clauses": [
-          "Response within 72 hours",
-          "scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase)",
-          "≥90% population coverage"
-        ]
+        "comparison": "Traditional stimulus: 3-6 months legislative delay, limited coverage. Unemployment insurance: 2-4 weeks processing, 40% coverage. Automatic stabilizers: Immediate response, universal coverage."
       },
       "anchors": {
         "threshold": "Response within 72 hours, scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase), ≥90% population coverage.",
@@ -1125,15 +930,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "I",
-        "codes": [
-          "R3"
-        ]
       }
     },
     {
@@ -1146,12 +945,7 @@
         "rationale": "This addresses the primary objection to basic income proposals. Without concrete inflation control mechanisms (sectoral demand isolation, velocity controls, automatic parameter adjustments), material security promises become meaningless as purchasing power erodes.",
         "measurement": "Long-term inflation rates in system-controlled sectors (must be ≤3% annually). Price stability during stress tests (inflation contained to ≤5% during external 8% inflation scenarios). Parameter responsiveness (automatic adjustment effectiveness when inflation exceeds targets).",
         "pass_threshold": "Long-term inflation ≤3%, stress test inflation ≤5% (when external 8%), automatic adjustment preventing runaway inflation",
-        "mechanisms_required": "Sectoral demand isolation (basic income for essentials only). Velocity controls (expiration mechanisms preventing hoarding). Supply response (production capacity scaling with demand). Automatic parameter adjustment (rates adjust based on inflation data).",
-        "clauses": [
-          "Long-term inflation ≤3%",
-          "stress test inflation ≤5% (when external 8%)",
-          "automatic adjustment preventing runaway inflation"
-        ]
+        "mechanisms_required": "Sectoral demand isolation (basic income for essentials only). Velocity controls (expiration mechanisms preventing hoarding). Supply response (production capacity scaling with demand). Automatic parameter adjustment (rates adjust based on inflation data)."
       },
       "anchors": {
         "threshold": "Long-term inflation ≤3%, stress test inflation ≤5% (when external 8%), automatic adjustment preventing runaway inflation.",
@@ -1185,10 +979,6 @@
         "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7 (0.0 and 0.5 bands corrected: decision D26 (revision R3); Correction 7's stale count removed from this anchor)",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "U",
-        "codes": []
       }
     },
     {
@@ -1199,12 +989,9 @@
         "derivation": "From N5 (Crisis Robustness) + N10 (Failure Transparency)",
         "requirement": "Function under simultaneous shocks across economic, environmental, and social domains. Single-shock resilience insufficient.",
         "rationale": "Climate crisis + automation + recession represents realistic threat landscape. Systems optimized for normal conditions but failing under compound stress cannot sustain long-term flourishing.",
-        "measurement": "Core functions: poverty (the share of the population above the C1.1 poverty line), housing stability (the C1.3 rate), essential-service capacity and democratic-function capacity. Degradation is each function's fall from its pre-shock level, as a share of that level; the Pass Threshold's figures apply to every function in each scenario counted.",
+        "measurement": "System maintains core functions across all four compound scenarios: poverty rate increases <5 percentage points; housing stability maintained ≥85%; essential services continue ≥90% capacity; democratic functions operational ≥80% capacity.",
         "stress_test_scenarios": "Recession + Automation (30% GDP decline, 15% unemployment, 40% business closures). Inflation + Climate Crisis (8% inflation, 30% agricultural disruption, infrastructure damage). Cyber Attack + Economic Crisis (72-hour infrastructure compromise, simultaneous market shock). Pandemic + Supply Chain (health crisis, border closures, 50% disruption).",
-        "pass_threshold": "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%",
-        "clauses": [
-          "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%"
-        ]
+        "pass_threshold": "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%"
       },
       "anchors": {
         "threshold": "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%.",
@@ -1244,15 +1031,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "W",
-        "codes": [
-          "K6"
-        ]
       }
     },
     {
@@ -1264,18 +1045,12 @@
         "requirement": "System evolves based on evidence rather than ideology. Update rules/parameters based on new information without collapse.",
         "rationale": "Rigid frameworks unable to incorporate evidence or adjust to changing conditions inevitably ossify. The best system must be dynamically stable—maintaining core functions while adapting implementation details as circumstances change.",
         "distinguishes": "Stability (maintaining core functions) from rigidity (inability to adapt). Anti-fragile systems improve through stress; fragile systems break; robust systems merely survive. Target: anti-fragile adaptation.",
-        "measurement": "Parameter flexibility (range of adjustable variables without system redesign). Evidence integration (speed of policy updates in response to data). Contestability: those affected by a parameter change can challenge it and have it reversed through a process that does not depend on the officials who made it, whatever governance form the system uses; the criterion does not require a particular form. Stability during transitions (no collapse from parameter adjustments).",
-        "pass_threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, changes open to challenge and reversal by those affected, zero collapses during parameter adjustments",
-        "clauses": [
-          "≥30% parameter adjustability range",
-          "policy updates within 6 months of evidence",
-          "changes open to challenge and reversal by those affected",
-          "zero collapses during parameter adjustments"
-        ]
+        "measurement": "Parameter flexibility (range of adjustable variables without system redesign). Evidence integration (speed of policy updates in response to data). Governance mechanisms enabling adaptive change (democratic updating processes). Stability during transitions (no collapse from parameter adjustments).",
+        "pass_threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, democratic governance for changes, zero collapses during parameter adjustments"
       },
       "anchors": {
-        "threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, changes open to challenge and reversal by those affected, zero collapses during parameter adjustments.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was restated (R4; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, democratic governance for changes, zero collapses during parameter adjustments.",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "Demonstrated or clearly-designed capacity for rapid, evidence-based parameter adjustment without destabilization. *Market Socialism (1.0): \"Democratic governance enables rapid adaptation to evidence... Mondragon demonstrates 50+ years of continuous adaptation.\"*",
@@ -1311,15 +1086,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "M",
-        "codes": [
-          "R4"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -1330,15 +1099,8 @@
         "derivation": "From N10 (Failure Transparency) + N7 (Anti-Capture)",
         "requirement": "Failure states legible, diagnosable, and correctable rather than hidden or externalized",
         "rationale": "Hidden failures enable exploitation and prevent adaptive response. The 2008 financial crisis demonstrated catastrophic hidden failures. Transparent failures enable correction before catastrophe.",
-        "measurement": "Clause 1 (detection) is aspirational: the time from a failure's occurrence to its official identification can be shown from the dated record of the entry's most consequential failure in the scoring window (an official inquiry, audit or evaluation) or, for a design, from its monitoring rule, and the scoring document must name that record. Clause 2 (diagnosis) is aspirational: no agency publishes the share of failures whose cause is established; it can be shown only from a design's documented diagnostic record or an independent evaluation that reports it. Clause 3 (correction): the share of the supreme audit institution's recommendations implemented, as the US Government Accountability Office and other INTOSAI members publish, or for a design its correction record. Clause 4 (externalization): unpriced environmental costs of fuel use as a share of GDP, the implicit subsidies in the IMF's Fossil Fuel Subsidies Data, a lower bound on externalized cost, with GDP standing for total costs; for a design, projected.",
-        "pass_threshold": "Failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs",
-        "indicators": "clauses 1–2, aspirational; clause 3, supreme audit institutions' recommendation-implementation rates; clause 4, IMF Fossil Fuel Subsidies Data (implicit subsidies, % of GDP).",
-        "clauses": [
-          "Failure detection within 1 week",
-          "diagnosis success ≥80%",
-          "correction success ≥70%",
-          "externalization <10% of total costs"
-        ]
+        "measurement": "Error detection speed (time from failure occurrence to identification). Diagnostic capability (% of failures with identified causes). Correction success (% of identified failures successfully addressed). No systematic externalization (environmental, social costs not hidden).",
+        "pass_threshold": "Failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs"
       },
       "anchors": {
         "threshold": "Failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs.",
@@ -1378,63 +1140,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "I",
-        "codes": [
-          "R3"
-        ]
-      }
-    },
-    {
-      "id": "C3.6",
-      "domain": "D3",
-      "name": "Productive and Innovative Capacity",
-      "definition": {
-        "derivation": "From N13 (Incentive Alignment) + N1 (Human Flourishing)",
-        "requirement": "The system sustains and improves the output its other criteria distribute: productivity does not decline, improvement comes from better methods and not only from more capital, and basic needs are provisioned at the working time the system itself assumes.",
-        "rationale": "Every distributive criterion can be passed on projections that hold output fixed. Whether a system can produce, and improve, what it proposes to distribute, including how it allocates resources when information is dispersed, is the question comparative economics most often puts to alternative systems. The criterion is defined on productivity and provisioning, not on growth of total output, so it builds in no preference against designs that choose shorter hours or lower consumption: a system may produce less in total and pass, provided output per hour does not decline and basic needs are met at its own hours.",
-        "distinguishes": "Labor productivity from total factor productivity: output per hour can rise on capital accumulation alone while methods stagnate, as in the extensive growth of Soviet-type economies, so the second clause tests improvement in methods and allocation. C3.6 from C1.4: C3.6 asks whether output can be produced and improved; C1.4 asks whether security survives when labor is no longer needed to produce it.",
-        "measurement_protocol": "Clause 1: real GDP per hour worked at constant prices (OECD Productivity Database, Penn World Table, Conference Board Total Economy Database), compound annual change over the 20 years to the stated date. Clause 2: total factor productivity at constant national prices (Penn World Table, rtfpna), compound annual change over the same window. Clause 3: the goods and services in the C1.1 poverty basket produced for the whole population at the average working time the system assumes (for a configured economy, its actual hours; for a design, its stated hours), shown by the economy's record or, for a design, by its own accounting of output per hour at those hours with component evidence. For a design, clauses 1 and 2 are scored on its mechanisms for allocating investment and rewarding improvement, calibrated by the record of the components it cites (protocol 4.1); a design that suppresses price or other allocation signals without a stated replacement for them cannot show either.",
-        "pass_threshold": "Real output per hour worked non-declining over 20 years, total factor productivity non-declining over 20 years, basic-needs output sustained at the system's own working time",
-        "indicators": "OECD Productivity Database; Penn World Table 11.0 (rtfpna); Conference Board Total Economy Database.",
-        "clauses": [
-          "Real output per hour worked non-declining over 20 years",
-          "total factor productivity non-declining over 20 years",
-          "basic-needs output sustained at the system's own working time"
-        ]
-      },
-      "anchors": {
-        "threshold": "Real output per hour worked non-declining over 20 years, total factor productivity non-declining over 20 years, basic-needs output sustained at the system's own working time.",
-        "note": "",
-        "bands": {
-          "1.0": {
-            "text": "All three clauses shown: productivity and TFP non-declining over 20 years on published data, or, for a design, mechanisms for allocating investment and rewarding improvement whose components have that record, and a provisioning account at its stated hours.",
-            "examples": []
-          },
-          "0.5": {
-            "text": "One or more clauses not shown, or shown only by projection resting on untested assumptions, where the system has a functioning allocation mechanism of its own (markets, planning with feedback, or another stated mechanism).",
-            "examples": []
-          },
-          "0.0": {
-            "text": "Productivity or TFP declining over 20 years with no credible pathway under the system's own logic, or a design whose own assumptions imply that basic needs cannot be provisioned at its stated hours, or that suppresses allocation signals with no replacement.",
-            "examples": []
-          }
-        }
-      },
-      "sources": {
-        "definition": "NEEC_Criteria_v2_s45.md, Appendix V (Package B, decision 45.1)",
-        "anchors": "NEEC_Criteria_v2_s45.md, Appendix V (Package B, decision 45.1)",
-        "threshold": "NEEC_Criteria_v2_s45.md, Appendix V (Package B, decision 45.1)"
-      },
-      "revision": {
-        "cls": "N",
-        "codes": [
-          "G1"
-        ]
       }
     },
     {
@@ -1442,20 +1150,15 @@
       "domain": "D4",
       "name": "Intergenerational Justice",
       "definition": {
-        "derivation": "From N12 (Intergenerational Equity) + N5 (Crisis Robustness)",
-        "requirement": "Preserve resources and opportunities for future generations through fiscal and wealth sustainability: debt-to-GDP below 80% and a positive wealth transfer to the next generation; the ecological transfer is measured in C4.2.",
+        "derivation": "From N12 (Intergenerational Equity) + N6 (Ecological Compliance)",
+        "requirement": "Preserve resources and opportunities for future generations. 35-45% carbon reduction trajectory; positive intergenerational wealth transfer.",
         "rationale": "Current systems impose catastrophic costs on the unborn through climate crisis ($500 trillion by 2100), ecological collapse, and debt accumulation ($31 trillion U.S. federal debt). Discounting future welfare represents ethical failure, not economic rationality.",
-        "measurement": "Debt-to-GDP: general government gross debt as a share of GDP (IMF World Economic Outlook database). Intergenerational wealth transfer: net national saving (gross national saving less consumption of fixed capital) as a share of gross national income, positive over the scoring window (national accounts; World Bank World Development Indicators). A design is scored on its projected debt path and net saving. Carbon and resource-regeneration trajectories are measured once, in C4.2.",
-        "pass_threshold": "Debt-to-GDP <80%, positive wealth transfer to next generation",
-        "indicators": "IMF World Economic Outlook, general government gross debt; national accounts net national saving (World Bank WDI).",
-        "clauses": [
-          "Debt-to-GDP <80%",
-          "positive wealth transfer to next generation"
-        ]
+        "measurement": "Carbon emission trajectories (must decline 35-45% by 2030 for 1.5°C). Resource depletion rates (extraction ≤ regeneration capacity). Debt-to-GDP ratios (sustainable <60%). Intergenerational wealth transfer (positive vs extractive).",
+        "pass_threshold": "35% carbon reduction by 2030, resource use ≤90% regeneration, debt-to-GDP <80%, positive wealth transfer to next generation"
       },
       "anchors": {
-        "threshold": "Debt-to-GDP <80%, positive wealth transfer to next generation.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was restated (K3, K4, K6, R1; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "35% carbon reduction by 2030, resource use ≤90% regeneration, debt-to-GDP <80%, positive wealth transfer to next generation.",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "Preservation or positive transfer is structural, not incidental. *Degrowth Economics (1.0): \"Core principle—preservation for future generations. Absolute reduction in resource extraction and emissions.\"*",
@@ -1487,18 +1190,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "M",
-        "codes": [
-          "K3",
-          "K4",
-          "K6",
-          "R1"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -1507,21 +1201,14 @@
       "name": "Ecological Compliance",
       "definition": {
         "derivation": "From N6 (Ecological Compliance) + N12 (Intergenerational Equity)",
-        "requirement": "Economic activity within ecological carrying capacity, measured on consumption so that emissions and extraction moved abroad are not counted as reductions. Scored as one criterion among the rest; the constraint reading, in which a failure here caps the tier at Partially Adequate, is reported as a named Appendix A.4 scheme.",
+        "requirement": "Economic activity within ecological carrying capacity. This is a hard constraint, not an optimization variable.",
         "rationale": "Planetary boundaries for climate, biodiversity, nitrogen/phosphorus cycles, and land use are being exceeded. Systems requiring perpetual expansion through limits are structurally doomed regardless of temporary success.",
-        "measurement": "Clause 1 (carbon): consumption-based CO2 emissions (Global Carbon Budget national consumption-based accounts), compound annual rate of change over the scoring window; the bar is the rate of a 35% cut over 2019–2030, the low end of the 1.5 °C pathways of the IPCC Sixth Assessment Report (2023) that the Paper cites, and it binds at any date. Clause 2 (biodiversity): the IUCN Red List Index for the economy (SDG indicator 15.5.1), non-declining over the scoring window; for a design, the projected pressure on species and habitat. Clause 3 (resource extraction against regeneration): the ecological footprint of consumption per person no greater than world biocapacity per person (National Ecological Footprint and Biocapacity Accounts, Footprint Data Foundation and York University). Clause 4 (other boundaries): phosphorus, nitrogen, freshwater and land-system change, downscaled to national per-person boundaries and compared with consumption-based footprints (O'Neill et al. 2018; Fanning et al. 2022; goodlife.leeds.ac.uk). Circular-economy metrics (waste reduction, material reuse) are supporting evidence. For a design, each clause is projected on the same measure.",
-        "pass_threshold": "Consumption-based carbon emissions falling ≥3.8% a year, biodiversity neutral or positive, resource extraction ≤ regeneration, no more than two of the four nationally downscaled planetary boundaries transgressed",
-        "indicators": "Global Carbon Budget consumption-based emissions; IUCN Red List Index (SDG 15.5.1); National Ecological Footprint and Biocapacity Accounts; O'Neill et al. (2018) and Fanning et al. (2022) national boundary accounts.",
-        "clauses": [
-          "Consumption-based carbon emissions falling ≥3.8% a year",
-          "biodiversity neutral or positive",
-          "resource extraction ≤ regeneration",
-          "no more than two of the four nationally downscaled planetary boundaries transgressed"
-        ]
+        "measurement": "Carbon emissions (absolute reductions, not just intensity). Biodiversity impact (neutral or positive). Resource extraction (≤ regeneration rates). Circular economy metrics (waste reduction, material reuse). Planetary boundary compliance across all 9 boundaries.",
+        "pass_threshold": "Absolute carbon reductions 35-45% by 2030, biodiversity neutral or positive, resource extraction ≤ regeneration, ≥7 of 9 planetary boundaries respected"
       },
       "anchors": {
-        "threshold": "Consumption-based carbon emissions falling ≥3.8% a year, biodiversity neutral or positive, resource extraction ≤ regeneration, no more than two of the four nationally downscaled planetary boundaries transgressed.",
-        "note": "Hold this one to absolute-reduction standards, not relative/efficiency framing. v2.0 (Session 45): this criterion's Pass Threshold was restated (K3, K4, R1, G3, S2; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "Absolute carbon reductions 35-45% by 2030, biodiversity neutral or positive, resource extraction ≤ regeneration, ≥7 of 9 planetary boundaries respected.",
+        "note": "Hold this one to absolute-reduction standards, not relative/efficiency framing.",
         "bands": {
           "1.0": {
             "text": "Ecological compliance is a hard design constraint, not an optimization target traded against growth. *Participatory Economics (1.0): \"Planning councils can directly constrain production/consumption within ecological limits... eliminated through comprehensive planning.\"*",
@@ -1553,42 +1240,26 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "M",
-        "codes": [
-          "K3",
-          "K4",
-          "R1",
-          "G3",
-          "S2"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
       "id": "C4.3",
       "domain": "D4",
-      "name": "Group Equity",
+      "name": "Racial and Gender Equity",
       "definition": {
         "derivation": "From N1 (Human Flourishing) + N7 (Anti-Capture)",
-        "requirement": "Close historical disparities between groups rather than perpetuate them through \"neutral\" policies, on the axes salient in the entry's society (race, ethnicity, gender, caste, religion or citizenship), non-citizen residents included.",
+        "requirement": "Actively address historical inequalities rather than perpetuating them through \"neutral\" policies",
         "rationale": "Colorblind or gender-neutral policies ignoring structural disparities merely replicate existing hierarchies. True equity requires deliberately disproportionate benefit flows to communities facing disproportionate harms—not as charity but as justice.",
-        "measurement": "Disparity: the gap between the median household income, and wealth where published, of the least and most advantaged groups on each declared axis, as a percentage of the most advantaged group's median, from national household surveys. Axes are declared in the entry's scope declaration (protocol 3.3); non-citizen residents are included in the population measured and counted as a group where citizenship is a salient axis. Reduction is the fall in each gap in percentage points per 5 years; convergence is whether the trend reaches the threshold's level within 30 years. Disproportionate benefit flows are evidence for the trajectory, not a separate test.",
-        "pass_threshold": "Disparity reduction ≥5 percentage points every 5 years, convergence trajectory toward <20% disparities within 30 years, on each declared axis, non-citizen residents included",
-        "evidence_of_need": "Black household median wealth: $24,100 vs $188,200 white (87% gap). Black women 5.56x trafficking vulnerability; Native women 8.75x. Gender wage gap persists: women earn 80-84% of male wages. Systems perpetuating these disparities fail ethical standards.",
-        "indicators": "national household income and wealth surveys, by declared group.",
-        "clauses": [
-          "Disparity reduction ≥5 percentage points every 5 years",
-          "convergence trajectory toward <20% disparities within 30 years"
-        ],
-        "clause_scope": "on each declared axis, non-citizen residents included"
+        "measurement": "Disparity reduction rates (closing gaps in wealth, health, security across demographic groups). Disproportionate benefit flows (whether disadvantaged groups receive proportionally greater support). Ultimate convergence toward parity (not enforced equality but elimination of systemic barriers).",
+        "pass_threshold": "Disparity reduction ≥5 percentage points every 5 years, disadvantaged groups receive 150%+ proportional benefits, convergence trajectory toward <20% disparities within 30 years",
+        "evidence_of_need": "Black household median wealth: $24,100 vs $188,200 white (87% gap). Black women 5.56x trafficking vulnerability; Native women 8.75x. Gender wage gap persists: women earn 80-84% of male wages. Systems perpetuating these disparities fail ethical standards."
       },
       "anchors": {
-        "threshold": "Disparity reduction ≥5 percentage points every 5 years, convergence trajectory toward <20% disparities within 30 years, on each declared axis, non-citizen residents included.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was restated (R4, R6, G3; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "Disparity reduction ≥5 percentage points every 5 years, disadvantaged groups receive 150%+ proportional benefits, convergence trajectory toward <20% disparities within 30 years.",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "Explicit, disproportionate (not merely equal) benefit flows to historically disadvantaged groups. *CCO-PTF-CIP-SZH (1.0): \"PTF deliberately targets disadvantaged communities first (example: 150%+ proportional benefits during rollout).\"*",
@@ -1623,17 +1294,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "M",
-        "codes": [
-          "R4",
-          "R6",
-          "G3"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -1644,16 +1307,12 @@
         "derivation": "From N7 (Anti-Capture) + N3 (Coercion Minimization)",
         "requirement": "Diffuse rather than concentrate decision-making authority across economic, political, and social domains",
         "rationale": "Monopolization of power—whether by state, capital, or any elite—represents systemic failure regardless of material outcomes. Concentration of wealth ultimately represents concentration of power to shape society according to narrow interests.",
-        "measurement": "Power concentration indices (economic decision-making distribution). Democratic control mechanisms (accountability of major decisions to those they affect). Accountability structures (capacity to remove/replace decision-makers). Wealth concentration and the adoption of citizen proposals are measured once, in C1.2b and C2.4.",
-        "pass_threshold": "Democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional",
-        "clauses": [
-          "Democratic accountability for ≥80% of major decisions",
-          "removal/replacement mechanisms functional"
-        ]
+        "measurement": "Power concentration indices (economic decision-making distribution). Democratic control mechanisms (citizen influence over major decisions). Accountability structures (capacity to remove/replace decision-makers). Wealth concentration as proxy for power (Gini coefficient).",
+        "pass_threshold": "Gini <0.35 for wealth, ≥40% citizen proposals adopted, democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional"
       },
       "anchors": {
-        "threshold": "Democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was restated (K1, K2; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "Gini <0.35 for wealth, ≥40% citizen proposals adopted, democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional.",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "Power (economic and political) is structurally diffused, not merely formally distributed. *Participatory Economics (1.0): \"No concentrated wealth, no capital owners, no managerial hierarchy. Participatory councils embody distributed decision-making.\"*",
@@ -1689,16 +1348,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "D",
-        "codes": [
-          "K1",
-          "K2"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -1709,16 +1361,12 @@
         "derivation": "From N3 (Coercion Minimization) + N4 (Universal Wealth Access)",
         "requirement": "Remove extractive relationships, not merely regulate them. Structural transformation, not incremental reform.",
         "rationale": "Systems maintaining landlord-tenant dynamics ($380,000 extraction over 20 years), employer-employee asymmetries (surplus value extraction), or creditor-debtor subordination (wealth transfer through interest) cannot claim to eliminate exploitation—they merely adjust terms.",
-        "measurement": "Extraction rates (wealth transfer from labor to capital, tenants to landlords, borrowers to lenders). Power asymmetries (capacity to refuse participation without penalty). The share of decisions made under duress is measured once, in C2.1.",
-        "pass_threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships",
-        "clauses": [
-          "Extraction rates <10% GDP",
-          "genuine exit rights from exploitative relationships"
-        ]
+        "measurement": "Extraction rates (wealth transfer from labor to capital, tenants to landlords, borrowers to lenders). Power asymmetries (capacity to refuse participation without penalty). Residual coercion (decisions made under duress even with formal choice).",
+        "pass_threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships, residual coercion <10% of decisions"
       },
       "anchors": {
-        "threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships.",
-        "note": "v2.0 (Session 45): this criterion's Pass Threshold was restated (K5; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships, residual coercion <10% of decisions.",
+        "note": "",
         "bands": {
           "1.0": {
             "text": "Structural elimination of extractive relationships (landlord-tenant, employer-employee, creditor-debtor), not merely regulation of their terms. *Participatory Economics (1.0): \"Eliminates capital accumulation and growth imperative driving exploitation... removes profit motive for extraction.\"*",
@@ -1753,15 +1401,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "D",
-        "codes": [
-          "K5"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -1770,15 +1412,11 @@
       "name": "Proven Component Foundation",
       "definition": {
         "derivation": "From N9 (Partial Deployability) + N8 (Epistemic Adaptability)",
-        "requirement": "Build on empirically validated mechanisms, ≥20 years in operation, rather than untested speculation.",
+        "requirement": "Build on empirically validated mechanisms (40+ years operation preferred) rather than untested speculation",
         "rationale": "Theoretical elegance matters little if implementation repeatedly fails. Best frameworks synthesize proven components from diverse sources rather than proposing entirely novel mechanisms with unknown failure modes.",
         "measurement": "Component validation (years of successful operation for each mechanism). Scale validation (number of participants in proven implementations). Outcome validation (documented achievement of claimed benefits).",
         "pass_threshold": "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants, with documented outcomes matching claimed benefits",
-        "examples_of_proven_components": "Alternative currencies: WIR Bank (90 years operation, billions in annual turnover). Community land trusts: 313 U.S. CLTs, 10x lower foreclosure rates. Sovereign wealth funds: Alaska PFD (40+ years), Norway (271% GDP). Cooperative governance: Mondragón (70+ years, 97% survival rate).",
-        "clauses": [
-          "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants",
-          "with documented outcomes matching claimed benefits"
-        ]
+        "examples_of_proven_components": "Alternative currencies: WIR Bank (90 years operation, billions in annual turnover). Community land trusts: 313 U.S. CLTs, 10x lower foreclosure rates. Sovereign wealth funds: Alaska PFD (40+ years), Norway (271% GDP). Cooperative governance: Mondragón (70+ years, 97% survival rate)."
       },
       "anchors": {
         "threshold": "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants, with documented outcomes matching claimed benefits.",
@@ -1814,15 +1452,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "W",
-        "codes": [
-          "K6"
-        ]
       }
     },
     {
@@ -1831,24 +1463,16 @@
       "name": "Staged Transition Pathways",
       "definition": {
         "derivation": "From N9 (Partial Deployability)",
-        "requirement": "Deployable both gradually in stable contexts and rapidly in crisis contexts, each shown feasible rather than only planned.",
+        "requirement": "Detailed phase-by-phase implementation for BOTH stable contexts (gradual transformation) AND crisis contexts (rapid deployment)",
         "rationale": "Revolutions typically produce chaos, reaction, and systems worse than what they replaced. Gradual transformation enables learning and coalition-building. However, post-crisis contexts demand rapid deployment capacity when political windows open briefly.",
-        "pass_threshold": "Staged (≥4 phases) and rapid (≤36 months) deployment, with specific milestones, resource requirements and risk mitigation, each shown feasible by precedent or component evidence",
+        "pass_threshold": "Detailed implementation plan for both staged (≥4 phases) and rapid (≤36 months) deployment, with specific milestones, resource requirements, and risk mitigation",
         "staged_transition_10_25_years_for_stable_contexts": "Phase 1 (Years 1-3): Municipal pilots in receptive jurisdictions. Phase 2 (Years 3-5): Regional expansion with integration testing. Phase 3 (Years 5-10): Multi-jurisdictional coordination. Phase 4 (Years 10-25): National integration and optimization.",
         "rapid_deployment_18_36_months_for_post_crisis_contexts": "Month 0-6: Emergency legal framework, digital infrastructure. Month 6-12: Universal distribution begins, initial asset acquisition. Month 12-18: System activation, governance establishment. Month 18-36: Stabilization, parameter optimization.",
-        "historical_precedents": "New Deal (1933-1936): 3 years for comprehensive programs. Marshall Plan (1948-1951): 3 years for economic restructuring. CCO-PTF modeling: Both pathways validated through simulation.",
-        "clauses": [
-          "Staged (≥4 phases)",
-          "rapid (≤36 months) deployment",
-          "specific milestones",
-          "resource requirements",
-          "risk mitigation"
-        ],
-        "clause_scope": "each shown feasible by precedent or component evidence"
+        "historical_precedents": "New Deal (1933-1936): 3 years for comprehensive programs. Marshall Plan (1948-1951): 3 years for economic restructuring. CCO-PTF modeling: Both pathways validated through simulation."
       },
       "anchors": {
-        "threshold": "Staged (≥4 phases) and rapid (≤36 months) deployment, with specific milestones, resource requirements and risk mitigation, each shown feasible by precedent or component evidence.",
-        "note": "Judge this on specificity, not on whether a pathway exists in principle — \"starts small and expands\" is not a pathway under this threshold, however true it may be. v2.0 (Session 45): this criterion's Pass Threshold was restated (R4; NEEC_Criteria_v2_s45.md). The band texts and examples were written against Paper v1.4's threshold: they describe, and the threshold above governs (protocol 2.3(g)). Examples are re-estimated in the rescoring pass.",
+        "threshold": "Detailed implementation plan for both staged (≥4 phases) and rapid (≤36 months) deployment, with specific milestones, resource requirements, and risk mitigation.",
+        "note": "Judge this on specificity, not on whether a pathway exists in principle — \"starts small and expands\" is not a pathway under this threshold, however true it may be.",
         "bands": {
           "1.0": {
             "text": "Both a multi-phase gradual plan and a rapid crisis-deployment plan are specified with concrete milestones. *CCO-PTF-CIP-SZH (1.0): \"Detailed pathways specified for both gradual (10-25 years: municipal pilots → regional → national) and rapid (18-36 months: post-crisis emergency deployment).\"*",
@@ -1884,15 +1508,9 @@
         }
       },
       "sources": {
-        "definition": "Paper Section 6; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)",
+        "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
-        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g)); restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V)"
-      },
-      "revision": {
-        "cls": "M",
-        "codes": [
-          "R4"
-        ]
+        "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
       }
     },
     {
@@ -1904,13 +1522,7 @@
         "requirement": "System functions with selective participation (30%+ population), coexists with traditional markets without displacement",
         "rationale": "Unlike systems requiring universal enrollment, partial deployability enables pilot testing, iterative improvement, and voluntary adoption. This dramatically reduces political barriers and technical risks.",
         "measurement": "Minimum participation threshold for viability. Mixed-economy performance (coexistence with traditional institutions). Scaling pathways from pilots (10,000) to regional (1M+) to national (100M+). Inter-jurisdictional coordination protocols.",
-        "pass_threshold": "Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established",
-        "clauses": [
-          "Viable at ≥30% participation",
-          "coexistence with traditional markets maintaining ≥90% economic activity",
-          "scaling pathway validated through modeling",
-          "coordination protocols established"
-        ]
+        "pass_threshold": "Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established"
       },
       "anchors": {
         "threshold": "Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established.",
@@ -1953,10 +1565,6 @@
         "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "U",
-        "codes": []
       }
     },
     {
@@ -1969,12 +1577,7 @@
         "rationale": "Solutions appealing only to the left or right face permanent political warfare and likely reversal after the next election party flip. Best frameworks offer value to diverse constituencies: fiscal conservatives (cost savings), libertarians (reduced coercion), progressives (equity focus), communitarians (enhanced cohesion).",
         "measurement": "Coalition breadth (support percentage across ideological spectrum). Policy stability (resistance to repeal attempts). Long-term political sustainability (survival across multiple administrations).",
         "pass_threshold": "≥60% support across political spectrum, ≥65% opposition to repeal, survival probability ≥80% across administration changes",
-        "cross_ideological_appeal_examples": "Alaska PFD: 80%+ approval across political spectrum for 40+ years. Community wealth building: Attracts both cooperative socialists and property rights conservatives. Cooperative movements: Bridge socialist and market advocate divisions.",
-        "clauses": [
-          "≥60% support across political spectrum",
-          "≥65% opposition to repeal",
-          "survival probability ≥80% across administration changes"
-        ]
+        "cross_ideological_appeal_examples": "Alaska PFD: 80%+ approval across political spectrum for 40+ years. Community wealth building: Attracts both cooperative socialists and property rights conservatives. Cooperative movements: Bridge socialist and market advocate divisions."
       },
       "anchors": {
         "threshold": "≥60% support across political spectrum, ≥65% opposition to repeal, survival probability ≥80% across administration changes.",
@@ -2021,10 +1624,6 @@
         "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "U",
-        "codes": []
       }
     },
     {
@@ -2039,13 +1638,7 @@
         "parameter_adjustment_examples_high_income_nations": "Octave caps: 7+ (high productive capacity). Basic amounts: 5-8% GDP/capita. Conversion multipliers: 1-9x (sophisticated differentiation).",
         "middle_income_nations": "Octave caps: 5 (moderate capacity). Basic amounts: 10-15% GDP/capita. Conversion multipliers: 1-7x.",
         "low_income_nations": "Octave caps: 3 (limited capacity initially). Basic amounts: 15-20% GDP/capita. Conversion multipliers: 1-5x.",
-        "cultural_variation_accommodated": "Aesthetic criteria: Different communities set different phi-rate standards. Governance structures: Consensus, majority, elder councils—all compatible. Social organization: Multigenerational, nuclear, communal—all supported.",
-        "clauses": [
-          "Viable across ≥3 economic contexts (high/middle/low income)",
-          "≥5 cultural contexts",
-          "parameter flexibility ≥40% adjustment range",
-          "successful operation validated across diverse implementations"
-        ]
+        "cultural_variation_accommodated": "Aesthetic criteria: Different communities set different phi-rate standards. Governance structures: Consensus, majority, elder councils—all compatible. Social organization: Multigenerational, nuclear, communal—all supported."
       },
       "anchors": {
         "threshold": "Viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, parameter flexibility ≥40% adjustment range, successful operation validated across diverse implementations.",
@@ -2088,10 +1681,6 @@
         "definition": "Paper Section 6",
         "anchors": "Paper Appendix H.7",
         "threshold": "Paper Section 6, Pass Threshold, verbatim (decision D28(g))"
-      },
-      "revision": {
-        "cls": "U",
-        "codes": []
       }
     }
   ]

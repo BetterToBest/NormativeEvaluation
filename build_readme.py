@@ -16,6 +16,7 @@ Run: python3 build_readme.py   (writes README.md beside itself; prints the file 
 import csv
 import importlib.util
 import os
+import json
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -47,6 +48,12 @@ PROTOCOL_VERSION = re.search(r"\*\*Version (\S+) ", HEAD).group(1)
 PROTOCOL_STATUS = (", owner review pending" if "review of the whole text is pending" in HEAD.replace("\n", " ")
                    else "")
 
+with open(os.path.join(HERE, "criteria.json"), encoding="utf-8") as f:
+    CRIT = json.load(f)
+NC = CRIT["structure"]["criteria"]
+NEWC = [c["name"] for c in CRIT["criteria"] if c.get("revision", {}).get("cls") == "N"]
+N_RESTATED = "zero one two three four five six seven eight nine ten".split()[
+    sum(c.get("revision", {}).get("cls") == "M" for c in CRIT["criteria"])]
 N = len(ROWS)
 COUNTS = {t: sum(r["adequacy_tier"] == t for r in ROWS) for t in TIERS}
 ranked = sorted(ROWS, key=lambda r: -r["total"])  # stable: ties keep the CSV's order
@@ -129,7 +136,10 @@ in a rescoring pass before version 2.0, which can lower totals and ranks but, un
 change a failure count or a tier. The same pass applies two rules adopted with scoring protocol draft.5
 (decisions D29 and D31: how implementation failures count, and what belongs to a scored mechanism), which
 can turn a 0.5 into a structural failure; the two such cases identified so far, both in Ostrom-Style Commons
-Governance, cannot change its tier, and the pass reports any failure count it changes.
+Governance, cannot change its tier, and the pass reports any failure count it changes. The pass now also
+applies the v2.0 criteria ([`NEEC_Criteria_v2_s45.md`](NEEC_Criteria_v2_s45.md)): {NC} criteria, adding
+{' and '.join(NEWC)}, with {N_RESTATED} thresholds restated. Unlike D28, these can change failure counts
+and tiers.
 
 ## Disclosure
 
@@ -154,14 +164,16 @@ This runs {N_CHECKS} checks. Each copies exactly the files one script needs into
 directory, runs the script there, and compares its output byte for byte with the captured copy in this
 repository; negative controls confirm that the verifiers reject superseded states. The captured output of
 the whole run is [`run_all_checks_output.txt`](run_all_checks_output.txt), and GitHub Actions repeats the
-run on every push. Not covered: the prose of the Paper and the Report, and the fidelity of the Appendix G
+run on every push. A finished working session reaches `main` only through
+[`land-session.yml`](.github/workflows/land-session.yml), after every check passes on the merged tree. Not covered: the prose of the Paper and the Report, and the fidelity of the Appendix G
 JavaScript checks to the Compassionism Simulation's source. The repository keeps every file in one flat
 directory because each check copies its inputs by name.
 
 ## What is here
 
 - **Data.** `neec_scores.csv` (totals, domain scores, failures, tiers); `neec_corpus.json` (score vectors);
-  `criteria.json` (the 26 criteria and their anchors), with `criteria_schema.json` and
+  `criteria.json` (the v2.0 criteria, {NC}, with their clauses and anchors; the scores above use the 26 of
+  Paper v1.4 until the rescoring pass is applied), with `criteria_schema.json` and
   `summary_block_schema.json`.
 - **Canonical scripts.** `neec_weighting_robustness_analysis_v2.py` (the score vectors, weighting schemes
   and dominance checks) and `neec_scores_csv_builder_v2.py` (which builds the CSV).

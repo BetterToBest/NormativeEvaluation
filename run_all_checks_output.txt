@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 87 reproducibility checks
+run_all_checks.py -- 90 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,62 +273,76 @@ run_all_checks.py -- 87 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 7f42565e)
+          README.md == README.md (md5 eeae50f1)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
           stderr == (empty) (md5 d41d8cd9)
 
-[76] PASS  build_criteria.py (Session 36) generates criteria.json and corrects it: every anchor threshold is its definition's Pass Threshold (D28(g)); C3.2's bands carry D26 (R3)
+[76] PASS  build_criteria.py (Session 36) generates criteria.json and corrects it: every anchor threshold is its definition's Pass Threshold (D28(g)); C3.2's bands carry D26 (R3) [Session 44 state]
           stdout == build_criteria_s36_output.txt (md5 e2621e30)
-          criteria.json == criteria.json (md5 d4b78634)
+          criteria.json == criteria_s44_snapshot.json (md5 d4b78634)
 
-[77] PASS  build_replication_kit.py --selftest-r8: revision R8 on protocol draft.5 (no kit built; the first kit's 3.1 marker is one R8 refuses)
+[77] PASS  build_replication_kit.py --selftest-r8: revision R8 on protocol draft.5 (no kit built; the first kit's 3.1 marker is one R8 refuses) [Session 44 state]
           stdout == build_replication_kit_r8_selftest_output.txt (md5 2ec2c6c3)
           stderr == (empty) (md5 d41d8cd9)
 
-[78] PASS  verify_protocol_s36.py: the protocol's statements about the corpus, its archetype table, register and Appendix B (draft.5)
+[78] PASS  verify_protocol_s36.py: the protocol's statements about the corpus, its archetype table, register and Appendix B (draft.5) [Session 44 state]
           stdout == verify_protocol_s36_output.txt (md5 1664f812)
           stderr == (empty) (md5 d41d8cd9)
 
-[79] PASS  verify_protocol_s36.py rejects protocol draft.4 (negative control; exit 1 expected; its stale statements fail and nothing is written to stderr)
+[79] PASS  verify_protocol_s36.py rejects protocol draft.4 (negative control; exit 1 expected; its stale statements fail and nothing is written to stderr) [Session 44 state]
           exit status 1, as expected
           stdout == verify_protocol_s36_negative_output.txt (md5 5df11a76)
           stderr == (empty) (md5 d41d8cd9)
 
-[80] PASS  rescoring_s37.py: rescoring pass part (a), the 33 stated-shortfall 1.0s re-estimated clause by clause (D28, D31); consequences computed, no corpus file changed
+[80] PASS  rescoring_s37.py: rescoring pass part (a), the 33 stated-shortfall 1.0s re-estimated clause by clause (D28, D31); consequences computed, no corpus file changed [Session 44 state]
           stdout == rescoring_s37_output.txt (md5 634c4587)
           stderr == (empty) (md5 d41d8cd9)
 
-[81] PASS  rescoring_s38.py: rescoring pass part (b), first group, the 29 units of C3.4, C5.3, C2.4, C1.3 and C2.3 re-estimated clause by clause (D28, D31); consequences with part (a), no corpus file changed
+[81] PASS  rescoring_s38.py: rescoring pass part (b), first group, the 29 units of C3.4, C5.3, C2.4, C1.3 and C2.3 re-estimated clause by clause (D28, D31); consequences with part (a), no corpus file changed [Session 44 state]
           stdout == rescoring_s38_output.txt (md5 b586586d)
           stderr == (empty) (md5 d41d8cd9)
 
-[82] PASS  rescoring_s39.py: rescoring pass part (b), second group, C5.1 clause 2 on 11 units and C3.1's 5 units re-estimated clause by clause (D28); consequences with parts (a) and (b1), no corpus file changed
+[82] PASS  rescoring_s39.py: rescoring pass part (b), second group, C5.1 clause 2 on 11 units and C3.1's 5 units re-estimated clause by clause (D28); consequences with parts (a) and (b1), no corpus file changed [Session 44 state]
           stdout == rescoring_s39_output.txt (md5 7ed2cdf1)
           stderr == (empty) (md5 d41d8cd9)
 
-[83] PASS  rescoring_s40.py: rescoring pass part (b), third group, C1.1's 9 units re-estimated clause by clause (D28), CCO's against the design's pinned simulation; consequences with parts (a), (b1) and (b2), no corpus file changed
+[83] PASS  rescoring_s40.py: rescoring pass part (b), third group, C1.1's 9 units re-estimated clause by clause (D28), CCO's against the design's pinned simulation; consequences with parts (a), (b1) and (b2), no corpus file changed [Session 44 state]
           stdout == rescoring_s40_output.txt (md5 62fccbf3)
           stderr == (empty) (md5 d41d8cd9)
 
-[84] PASS  rescoring_s41.py: rescoring pass part (b), fourth group, the 11 units of C1.4, C2.1 and C3.2 re-estimated clause by clause (D28); consequences with parts (a) to (b3), no corpus file changed
+[84] PASS  rescoring_s41.py: rescoring pass part (b), fourth group, the 11 units of C1.4, C2.1 and C3.2 re-estimated clause by clause (D28); consequences with parts (a) to (b3), no corpus file changed [Session 44 state]
           stdout == rescoring_s41_output.txt (md5 f722e0a2)
           stderr == (empty) (md5 d41d8cd9)
 
-[85] PASS  rescoring_s42.py: rescoring pass part (b), fifth group, C2.5's 10 units re-estimated clause by clause (D28); consequences with parts (a) to (b4), no corpus file changed
+[85] PASS  rescoring_s42.py: rescoring pass part (b), fifth group, C2.5's 10 units re-estimated clause by clause (D28); consequences with parts (a) to (b4), no corpus file changed [Session 44 state]
           stdout == rescoring_s42_output.txt (md5 462c4498)
           stderr == (empty) (md5 d41d8cd9)
 
-[86] PASS  rescoring_s43.py: rescoring pass part (b), sixth group, the 10 units of C3.5 and C4.1 re-estimated clause by clause (D28); consequences with parts (a) to (b5), no corpus file changed
+[86] PASS  rescoring_s43.py: rescoring pass part (b), sixth group, the 10 units of C3.5 and C4.1 re-estimated clause by clause (D28); consequences with parts (a) to (b5), no corpus file changed [Session 44 state]
           stdout == rescoring_s43_output.txt (md5 0650bbf6)
           stderr == (empty) (md5 d41d8cd9)
 
-[87] PASS  criteria_review_s44.py: the criteria review's evidence tables (norm weights, quantities scored in more than one Pass Threshold, their corpus agreement, Requirement figures differing from a Pass Threshold)
+[87] PASS  criteria_review_s44.py: the criteria review's evidence tables (norm weights, quantities scored in more than one Pass Threshold, their corpus agreement, Requirement figures differing from a Pass Threshold) [Session 44 state]
           stdout == criteria_review_s44_output.txt (md5 09427bb9)
           stderr == (empty) (md5 d41d8cd9)
 
+[88] PASS  build_criteria.py (version 2) builds criteria.json v2.0, 28 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.6
+          stdout == build_criteria_s45_output.txt (md5 5ccdd143)
+          stderr == (empty) (md5 d41d8cd9)
+          criteria.json == criteria.json (md5 f719926c)
+          SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 183f9cd9)
+
+[89] PASS  build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 document passes (negative control)
+          stdout == build_criteria_s45_selftest_output.txt (md5 8b339b54)
+          stderr == (empty) (md5 d41d8cd9)
+
+[90] PASS  criteria_v2_s45.py: the v2.0 record's evidence tables (figure scan, norm weights, units by revision class, registered quantities)
+          stdout == criteria_v2_s45_output.txt (md5 9a8f57b9)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 87 passed, 0 failed, 0 skipped (of 87).
+SUMMARY: 90 passed, 0 failed, 0 skipped (of 90).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

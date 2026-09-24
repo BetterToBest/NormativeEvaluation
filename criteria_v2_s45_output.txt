@@ -1,0 +1,89 @@
+Inputs: criteria_s44_snapshot.json, criteria.json, NEEC_Criteria_v2_s45.md, neec_corpus.json
+Criteria: 26 at s44, 28 in v2.0; corpus entries: 23 (vectors in force, on the s44 criteria, before the rescoring pass is applied)
+
+1. Figures in a Requirement or measurement field that the Pass Threshold lacks
+   (a) The s44 criteria
+     C1.1  requirement                    K6 known (review): the aspirational 95% requirement
+                                          figures: 95%, 10
+     C1.1  measurement_protocol           descriptive: the reduction formula and 5-year tracking
+                                          figures: 100%, 5
+     C1.2a requirement                    K6 known (review): $70,000+ against >=$60,000
+                                          figures: $70,000
+     C1.2a cultural_geographic_adaptation K6 known (review): the field is removed in v2.0
+                                          figures: $70,000, 150, 200%, 200, 300%
+     C1.3  requirement                    K6 new (Session 45): 90%+ against >=88%
+                                          figures: 90%
+     C1.4  requirement                    descriptive: the displacement shares, the threshold's scope in v2.0
+                                          figures: 30%, 50%, 70%
+     C1.4  measurement                    K6 known (review): dated scenarios, poverty <5-10%, demand 80-110%
+                                          figures: 30%, 2030, 5%, 90, 110%, 50%, 2040, 7%, 85, 110%, 70%, 2050, 10%, 80, 110%
+     C3.3  measurement                    K6 new (Session 45): per-function figures against degradation <20%
+                                          figures: 5, 85%, 90%, 80%
+     C4.1  requirement                    K3: the carbon range, measured once, in C4.2, in v2.0
+                                          figures: 35, 45%
+     C4.1  measurement                    K3 (carbon figures) and K6 new (Session 45): debt <60% against <80%
+                                          figures: 35, 45%, 1.5, 60%
+     C5.1  requirement                    K6 new (Session 45): 40+ years preferred against >=20
+                                          figures: 40
+     C5.3  measurement                    descriptive: simulation scale; the criterion is unchanged
+                                          figures: 10,000, 1, 100
+     Gaps the review listed (K6): C1.1, C1.2a, C1.4. Gaps it missed: C1.3, C3.3, C4.1, C5.1.
+   (b) The v2.0 criteria: no Requirement carries a figure its Pass Threshold lacks; the remaining
+       measurement figures are each declared descriptive in the criterion's Appendix V block
+     C1.1  measurement_protocol           2021, 100%, 5
+     C2.1  measurement                    1.0
+     C2.3  measurement                    0
+     C2.6  measurement_protocol           0, 0, 4
+     C3.1  measurement                    2020
+     C4.2  measurement                    35%, 2019, 2030, 1.5, 2023, 2018, 2022
+     C5.3  measurement                    10,000, 1, 100
+
+2. Implicit norm weights under equal criterion weighting (each criterion's weight split equally among
+   its derivation norms), s44 (26 criteria) against v2.0 (28)
+   Norm                             s44 crit   share v2.0 crit   share   change
+   N7  Governance Legitimacy               8   15.4%         9   16.1%    +0.7pp
+   N3  Coercion Minimization               7   12.8%         8   13.7%    +0.9pp
+   N9  Partial Deployability               5   13.5%         5   12.5%    -1.0pp
+   N1  Human Flourishing                   6   10.9%         7   11.9%    +1.0pp
+   N4  Universal Wealth Access             4    7.7%         4    7.1%    -0.5pp
+   N5  Crisis Robustness                   3    5.8%         4    7.1%    +1.4pp
+   N2  Labor Non-Necessity                 4    7.1%         4    6.5%    -0.5pp
+   N10 Failure Transparency                3    5.8%         3    5.4%    -0.4pp
+   N13 Incentive Alignment                 2    3.8%         3    5.4%    +1.5pp
+   N8  Epistemic Adaptability              2    3.8%         2    3.6%    -0.3pp
+   N12 Intergenerational Equity            2    3.8%         2    3.6%    -0.3pp
+   N14 Global Scalability                  1    3.8%         1    3.6%    -0.3pp
+   N6  Ecological Compliance               2    3.8%         1    1.8%    -2.1pp
+   N11 Automation Compatibility            1    1.9%         1    1.8%    -0.1pp
+   Range: s44 1.9% to 15.4% (ratio 8.0); v2.0 1.8% to 16.1% (ratio 9.0)
+   Norms with no criterion: s44 none; v2.0 none
+
+3. Units the rescoring pass treats (an entry's score on a criterion), by v2.0 revision class and the
+   score in force (Paper v1.4 criteria, with the pass's recorded re-estimates not yet applied)
+   Corpus: 23 entries (9 comprehensive system, 6 configured national economy, 8 mechanism)
+   class   criteria  units   1.0   0.5   0.0   meaning
+   W              5    115    26    54    35   wording, commentary or disclosure only: C1.2b, C1.5, C2.2, C3.3, C5.1
+   D              3     69    22    25    22   clauses deleted only: C2.5, C4.4, C4.5
+   I              7    161    47    89    25   indicator named for an unchanged clause and bar: C1.1, C1.4, C2.1, C2.3, C2.4, C3.1, C3.5
+   M              7    161    59    70    32   bar, measure or clause restated: C1.2a, C1.3, C3.4, C4.1, C4.2, C4.3, C5.2
+   N              2     46  new   new   new    new criterion: C2.6, C3.6
+   U              4     92    30    52    10   unchanged: C3.2, C5.3, C5.4, C5.5
+   Class I units on configured national economies, where a named indicator is a published series: 42 (7 criteria x 6 entries)
+   Class D units at 0.5, which can rise when a deleted clause was the only one not shown: 25
+   New units (class N): 46
+
+4. Registered quantities (build_criteria.py rule A2) and the Pass Thresholds that carry each
+   quantity                            s44                 v2.0
+   wealth Gini                         C1.2b, C1.5, C4.4   C1.2b
+   citizen proposals adopted           C2.4, C4.4          C2.4
+   carbon                              C4.1, C4.2          C4.2
+   resource use against regeneration   C4.1, C4.2          C4.2
+   autonomy share                      C2.1, C4.5          C2.1
+   association                         C2.5                C2.6
+   housing stability                   C1.3                C1.3
+   public debt                         C4.1                C4.1
+   productivity                        (none)              C3.6
+   inflation                           C3.2                C3.2
+   (C1.5's s44 threshold names the Gini only in a parenthesis recording its removal; v2.0 moves that
+   commentary out of the threshold, class W.)
+   Carried by more than one s44 threshold: 5 (wealth Gini, citizen proposals adopted, carbon, resource use against regeneration, autonomy share); in v2.0: none
