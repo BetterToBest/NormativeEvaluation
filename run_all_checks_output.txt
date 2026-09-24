@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 91 reproducibility checks
+run_all_checks.py -- 92 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 91 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 21bf3ea3)
+          README.md == README.md (md5 b4c9e227)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -328,25 +328,29 @@ run_all_checks.py -- 91 reproducibility checks
           stdout == criteria_review_s44_output.txt (md5 09427bb9)
           stderr == (empty) (md5 d41d8cd9)
 
-[88] PASS  build_criteria.py (version 2.2) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.8
-          stdout == build_criteria_s47_output.txt (md5 52dd303c)
+[88] PASS  build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9
+          stdout == build_criteria_s48_output.txt (md5 5baf75ee)
           stderr == (empty) (md5 d41d8cd9)
-          criteria.json == criteria.json (md5 fa5da0cd)
-          SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 f0a17a96)
+          criteria.json == criteria.json (md5 af69e2e8)
+          SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 dde8e834)
 
 [89] PASS  build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 document passes (negative control)
           stdout == build_criteria_s46_selftest_output.txt (md5 8b339b54)
           stderr == (empty) (md5 d41d8cd9)
 
 [90] PASS  criteria_v2_s45.py: the v2.0 record's evidence tables (figure scan, norm weights, units by revision class, registered quantities, C4.6's clause 3 bar from the World Justice Project's data)
-          stdout == criteria_v2_s45_output.txt (md5 d16c414c)
+          stdout == criteria_v2_s45_output.txt (md5 3fb1e0ff)
           stderr == (empty) (md5 d41d8cd9)
 
-[91] PASS  rescoring_s47.py: rescoring pass part (b), seventh group, the 10 units of C4.2 and C4.4 on the v2.0 clauses, with part (a)'s 3 units of those criteria re-read (D28); consequences with parts (a) to (b6), no corpus file changed
+[91] PASS  rescoring_s47.py: rescoring pass part (b), seventh group, the 10 units of C4.2 and C4.4 on the v2.0 clauses, with part (a)'s 3 units of those criteria re-read (D28); consequences with parts (a) to (b6), no corpus file changed [Session 47 criteria]
           stdout == rescoring_s47_output.txt (md5 3f7bc63e)
           stderr == (empty) (md5 d41d8cd9)
 
+[92] PASS  rescoring_s48.py: C4.4's six units in the pass re-read on decision 48.3's measure (D28), Nordic Social Democracy's clause 1 bound, consequences with parts (a) to (b7), and the score ledger; no corpus file changed
+          stdout == rescoring_s48_output.txt (md5 5de0cba5)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 91 passed, 0 failed, 0 skipped (of 91).
+SUMMARY: 92 passed, 0 failed, 0 skipped (of 92).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

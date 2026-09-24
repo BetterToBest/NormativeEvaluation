@@ -1,6 +1,6 @@
-build_criteria.py (version 2.2) -- NEEC v2.0 criteria
+build_criteria.py (version 2.3) -- NEEC v2.0 criteria
 ============================================================================================
-Base: criteria_s44_snapshot.json (md5 d4b78634, 26 criteria); record: NEEC_Criteria_v2_s45.md (md5 640db5a6, 26 blocks); clause splits: SCORING_PROTOCOL_s44_snapshot.md (md5 bbee2c45)
+Base: criteria_s44_snapshot.json (md5 d4b78634, 26 criteria); record: NEEC_Criteria_v2_s45.md (md5 c318eabd, 26 blocks); clause splits: SCORING_PROTOCOL_s44_snapshot.md (md5 bbee2c45)
 
 crit   class codes                  threshold  clauses  fields changed
 C1.1   I     K6, R2                 -                2  requirement, measurement_protocol, indicators
@@ -24,7 +24,7 @@ C3.6   N     G1                     restated         3  derivation, requirement,
 C4.1   M     K3, K4, K6, R1         restated         2  derivation, requirement, measurement, pass_threshold, indicators
 C4.2   M     K3, K4, R1, G3, S2     restated         4  requirement, measurement, pass_threshold, indicators
 C4.3   M     R4, R6, G3             restated         2  name (Racial and Gender Equity -> Group Equity), requirement, measurement, pass_threshold, indicators
-C4.4   D     K1, K2                 restated         2  measurement, pass_threshold
+C4.4   M     K1, K2                 restated         2  measurement, pass_threshold, indicators
 C4.5   D     K5                     restated         2  measurement, pass_threshold
 C4.6   N     C-2                    restated         3  derivation, requirement, rationale, distinguishes, measurement_protocol, pass_threshold, indicators
 C5.1   W     K6                     -                2  requirement
@@ -33,7 +33,7 @@ C5.3   U     none                   -                4  -
 C5.4   U     none                   -                3  -
 C5.5   U     none                   -                4  -
 
-Classes: W 5 (wording, commentary or disclosure only); D 3 (clauses deleted only); I 7 (indicator named for an unchanged clause and bar); M 7 (bar, measure or clause restated); N 3 (new criterion); U 4 (unchanged)
+Classes: W 5 (wording, commentary or disclosure only); D 2 (clauses deleted only); I 7 (indicator named for an unchanged clause and bar); M 8 (bar, measure or clause restated); N 3 (new criterion); U 4 (unchanged)
 Thresholds restated or new: 16; one-clause criteria: 5 (C1.2a, C1.2b, C1.5, C2.2, C3.3); multi-clause: 24
 Structure: 29 criteria, maximum 29; domain maxima D1 6, D2 6, D3 6, D4 6, D5 5
 Registered quantities, each in one Pass Threshold:
@@ -61,5 +61,5 @@ Assertions A1-A7:
   A6: pass
   A7: pass
 
-Wrote criteria.json: 29 criteria, md5 fa5da0cd.
-Wrote SCORING_PROTOCOL.md: 7 asserted edits and Appendix B regenerated from SCORING_PROTOCOL_s44_snapshot.md, md5 f0a17a96.
+Wrote criteria.json: 29 criteria, md5 af69e2e8.
+Wrote SCORING_PROTOCOL.md: 7 asserted edits and Appendix B regenerated from SCORING_PROTOCOL_s44_snapshot.md, md5 dde8e834.

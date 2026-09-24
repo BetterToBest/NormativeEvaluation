@@ -64,13 +64,13 @@ Criteria: 26 at s44, 29 in v2.0; corpus entries: 23 (vectors in force, on the s4
    Corpus: 23 entries (9 comprehensive system, 6 configured national economy, 8 mechanism)
    class   criteria  units   1.0   0.5   0.0   meaning
    W              5    115    26    54    35   wording, commentary or disclosure only: C1.2b, C1.5, C2.2, C3.3, C5.1
-   D              3     69    22    25    22   clauses deleted only: C2.5, C4.4, C4.5
+   D              2     46    16    18    12   clauses deleted only: C2.5, C4.5
    I              7    161    47    89    25   indicator named for an unchanged clause and bar: C1.1, C1.4, C2.1, C2.3, C2.4, C3.1, C3.5
-   M              7    161    59    70    32   bar, measure or clause restated: C1.2a, C1.3, C3.4, C4.1, C4.2, C4.3, C5.2
+   M              8    184    65    77    42   bar, measure or clause restated: C1.2a, C1.3, C3.4, C4.1, C4.2, C4.3, C4.4, C5.2
    N              3     69  new   new   new    new criterion: C2.6, C3.6, C4.6
    U              4     92    30    52    10   unchanged: C3.2, C5.3, C5.4, C5.5
    Class I units on configured national economies, where a named indicator is a published series: 42 (7 criteria x 6 entries)
-   Class D units at 0.5, which can rise when a deleted clause was the only one not shown: 25
+   Class D units at 0.5, which can rise when a deleted clause was the only one not shown: 18
    New units (class N): 69
 
 4. Registered quantities (build_criteria.py rule A2) and the Pass Thresholds that carry each
@@ -123,3 +123,4 @@ Criteria: 26 at s44, 29 in v2.0; corpus entries: 23 (vectors in force, on the s4
      CN  China           0.6078  0.61  does not meet 0.77
      CPS not in the Index: the Soviet Union, Cuba and North Korea (nor is Iceland, of the Nordic economies)
    Bars giving these eight the same verdicts: 0.67 to 0.87; at the median (0.61) all eight meet it
+   Decision 48.1: China is scored in all 12 editions, 0.45 to 0.61, at least 0.16 below the bar in each; Qatar is scored in the 2025 edition only
