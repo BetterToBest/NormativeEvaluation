@@ -1,0 +1,48 @@
+Inputs: criteria.json, neec_corpus.json
+Criteria: 26; corpus entries: 23 (vectors in force, before the rescoring pass is applied)
+
+1. Implicit norm weights under equal criterion weighting (criterion units; total 26)
+   Norm                             criteria   units   share
+   N7  Governance Legitimacy               8    4.00   15.4%
+   N9  Partial Deployability               5    3.50   13.5%
+   N3  Coercion Minimization               7    3.33   12.8%
+   N1  Human Flourishing                   6    2.83   10.9%
+   N4  Universal Wealth Access             4    2.00    7.7%
+   N2  Labor Non-Necessity                 4    1.83    7.1%
+   N5  Crisis Robustness                   3    1.50    5.8%
+   N10 Failure Transparency                3    1.50    5.8%
+   N6  Ecological Compliance               2    1.00    3.8%
+   N8  Epistemic Adaptability              2    1.00    3.8%
+   N12 Intergenerational Equity            2    1.00    3.8%
+   N13 Incentive Alignment                 2    1.00    3.8%
+   N14 Global Scalability                  1    1.00    3.8%
+   N11 Automation Compatibility            1    0.50    1.9%
+   Norms with no criterion: none
+
+2. Quantities scored in more than one Pass Threshold
+   Wealth Gini:
+     C1.2b located: "Gini <0.35 for wealth distribution"
+     C4.4  located: "Gini <0.35 for wealth"
+   Citizen proposals adopted:
+     C2.4  located: "≥35% citizen proposals adopted"
+     C4.4  located: "≥40% citizen proposals adopted"
+   Carbon reduction by 2030:
+     C4.1  located: "35% carbon reduction by 2030"
+     C4.2  located: "Absolute carbon reductions 35-45% by 2030"
+   Resource use against regeneration:
+     C4.1  located: "resource use ≤90% regeneration"
+     C4.2  located: "resource extraction ≤ regeneration"
+   Share of decisions free of coercion:
+     C2.1  located: "≥70% report genuine autonomy in major life decisions"
+     C4.5  located: "residual coercion <10% of decisions"
+
+3. Exact score agreement across the 23 entries (all 325 pairs: mean 44.8%)
+   C1.2b / C4.4: 56.5%
+   C2.1 / C4.5: 60.9%
+   C2.4 / C4.4: 65.2%
+   C4.1 / C4.2: 69.6%
+
+4. Requirement or measurement figures that differ from the Pass Threshold
+   C1.1  requirement: "95%+ poverty elimination" (located) vs Pass Threshold: "≥90% poverty reduction" (located)
+   C1.2a requirement: "$70,000+ median household wealth" (located) vs Pass Threshold: "≥$60,000 median wealth" (located)
+   C1.4  measurement: "maintain poverty <5%, aggregate demand 90-110% baseline" (located) vs Pass Threshold: "Poverty <8% and aggregate demand >85% baseline" (located)
