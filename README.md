@@ -90,7 +90,7 @@ Requirements: Python 3.12 (standard library only) and, for three checks, Node.js
 python3 run_all_checks.py
 ```
 
-This runs 84 checks. Each copies exactly the files one script needs into a fresh temporary
+This runs 85 checks. Each copies exactly the files one script needs into a fresh temporary
 directory, runs the script there, and compares its output byte for byte with the captured copy in this
 repository; negative controls confirm that the verifiers reject superseded states. The captured output of
 the whole run is [`run_all_checks_output.txt`](run_all_checks_output.txt), and GitHub Actions repeats the
