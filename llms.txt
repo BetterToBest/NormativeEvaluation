@@ -4,6 +4,7 @@
 
 ## Start here
 
+- [Site](https://bettertobest.github.io/NormativeEvaluation/): the version 2.0 site (findings, systems, criteria, thresholds, method, replication, contributing); it shows no scores until version 2.0's are final, and has its own [llms.txt](https://bettertobest.github.io/NormativeEvaluation/llms.txt)
 - [README](https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/README.md): status, current scores, disclosure, how to reproduce every result
 - [Scores (CSV)](https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/neec_scores.csv): one row per system: domain scores, total out of 26, structural failures, adequacy tier
 - [Data dictionary](https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/neec_scores_data_dictionary.md): the CSV's fields

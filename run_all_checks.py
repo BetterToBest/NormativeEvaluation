@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 24 (Session 49). Runs every verification and analysis script on file
+Version 25 (Session 50). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -186,7 +186,17 @@ rescoring_s49.py, part (b)'s eighth group: the nine part (b) units of C4.3 and C
 CCO-PTF-CIP-SZH's C4.3 re-checked as class M on the same readings, part (a)'s three C4.5 units re-read, Nordic Social
 Democracy's C4.3 computed from the Eurostat figures the script holds, the consequences cumulatively with parts (a)
 to (b7) and decision 48.3, and the score ledger, with NEEC_Rescoring_s49.md checked against its generated tables:
-95 checks.
+95 checks. Version 25 (Session 50) adds the automated interpretation check (decisions 50.1 to 50.5, from the Jev
+pilot package prepared in a chat session, NEEC_Jev_Pilot_Package_s50.md): jev_pilot_check.py, which reads the pilot's
+recorded requests and responses (no network call), checks each state against its source and compares the answers with
+the pass's clause statuses, its summary line shown. Decisions 50.1 to 50.7 are recorded in NEEC_Criteria_v2_s45.md,
+so the build check's capture is renamed build_criteria_s50_output.txt and recaptured; nothing else in criteria.json
+or the protocol changes. It adds rescoring_s50.py, part (b)'s ninth and last group: the eight part (b) units of C5.2,
+C5.4 and C5.5 on the v2.0 clauses, part (a)'s two C5.2 units re-read, Status Quo's C5.2 re-checked as class M, Nordic
+Social Democracy's C5.4 clause 2 from the ISSP 2016 figures it holds, the consequences cumulatively with parts (a) to
+(b8) and decision 48.3, and the score ledger, with NEEC_Rescoring_s50.md checked against its generated tables; and
+jev_s50_check.py, the interpretation check run on that group, which rebuilds every recorded request from its sources
+and compares the recorded answers with the pass's statuses, its summary line shown: 98 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -939,7 +949,7 @@ S45_CHECKS = [
     dict(name="build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
               "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9",
          cmd=["python", "build_criteria.py"], files={k: k for k in V2_INPUTS},
-         stdout="build_criteria_s49_output.txt", stderr=EMPTY,
+         stdout="build_criteria_s50_output.txt", stderr=EMPTY,
          outputs={"criteria.json": "criteria.json", "SCORING_PROTOCOL.md": "SCORING_PROTOCOL.md"}),
     dict(name="build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 "
               "document passes (negative control)",
@@ -1053,10 +1063,43 @@ S49_CHECKS.append(
                                "NEEC_Ostrom_Commons_scoring_scratch.md")},
          stdout="rescoring_s49_output.txt", stderr=EMPTY))
 
+# Session 50: the Jev pilot of 2026-09-25, an automated interpretation check (decisions 50.1 to 50.5, from the
+# package prepared in a chat session, NEEC_Jev_Pilot_Package_s50.md). jev_pilot_check.py reads the recorded requests
+# and responses only (no network call) and the pass records of Sessions 37 to 48, so it takes their files.
+S50_CHECKS = [
+    dict(name="jev_pilot_check.py: the Jev pilot (jev-1.13.0), an automated interpretation check, not a replication: "
+              "every recorded response present and pinned, every state equal to its source or a declared edit, and "
+              "the comparison with the pass's clause statuses (decision 50.1)",
+         cmd=["python", "jev_pilot_check.py"],
+         files={**S48_CHECKS[0]["files"],
+                **{k: k for k in ("jev_pilot_check.py", "jev_pilot_2026-09-25.json")}},
+         stdout="jev_pilot_check_output.txt", stderr=EMPTY, show_summary=True),
+]
+
+# Session 50: part (b)'s ninth and last group, C5.2, C5.4 and C5.5 on the v2.0 clauses, cumulative with parts (a) to
+# (b8) and decision 48.3, and the interpretation check run on it (decision 50.2). Both read the v2.0 criteria.json.
+S50_FILES = {**S49_CHECKS[2]["files"], **{k: k for k in ("rescoring_s50.py", "NEEC_Rescoring_s50.md")}}
+S50_CHECKS.append(
+    dict(name="rescoring_s50.py: rescoring pass part (b), ninth and last group, the 8 units of C5.2, C5.4 and C5.5 on "
+              "the v2.0 clauses, part (a)'s 2 units of C5.2 re-read, and Status Quo's C5.2 re-checked as class M "
+              "(D28); Nordic Social Democracy's C5.4 from the ISSP 2016 figures; consequences with parts (a) to (b8) "
+              "and 48.3, and the score ledger; no corpus file changed",
+         cmd=["python", "rescoring_s50.py"], files=S50_FILES,
+         stdout="rescoring_s50_output.txt", stderr=EMPTY))
+S50_CHECKS.append(
+    dict(name="jev_s50_check.py: the interpretation check on part (b)'s ninth group (jev-1.13.0, flag-only): every "
+              "request rebuilt from its sources equals the recorded one, every located-evidence excerpt is in the "
+              "unit's estimates, and each answer is compared with the pass's clause status (decisions 50.2 to 50.4)",
+         cmd=["python", "jev_s50_check.py"],
+         files={**S50_FILES, **{k: k for k in ("jev_s50_check.py", "jev_s50_2026-09-25.json", "jev_pilot_check.py",
+                                               "NEEC_IslamicFinance_scoring_scratch.md",
+                                               "NEEC_MutualCredit_LETS_scoring_scratch.md")}},
+         stdout="jev_s50_check_output.txt", stderr=EMPTY, show_summary=True))
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS)
+          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS)
 
 
 def md5(data):
@@ -1089,6 +1132,8 @@ def run_check(chk):
             notes.append(f"exit status {proc.returncode}, as expected")
         if chk.get("show_stdout"):
             notes.append(proc.stdout.decode("utf-8", "replace").strip())
+        if chk.get("show_summary"):
+            notes += [ln for ln in proc.stdout.decode("utf-8", "replace").splitlines() if ln.startswith("SUMMARY")]
         for stream, got in (("stdout", proc.stdout), ("stderr", proc.stderr)):
             name = chk.get(stream)
             if not name:
