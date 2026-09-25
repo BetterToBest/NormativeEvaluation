@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 95 reproducibility checks
+run_all_checks.py -- 98 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 95 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 00d85dbf)
+          README.md == README.md (md5 e52b2d9c)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -329,9 +329,9 @@ run_all_checks.py -- 95 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [88] PASS  build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9
-          stdout == build_criteria_s49_output.txt (md5 fc451715)
+          stdout == build_criteria_s50_output.txt (md5 f721b3e5)
           stderr == (empty) (md5 d41d8cd9)
-          criteria.json == criteria.json (md5 fd134dbd)
+          criteria.json == criteria.json (md5 5484c31a)
           SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 dde8e834)
 
 [89] PASS  build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 document passes (negative control)
@@ -365,7 +365,21 @@ run_all_checks.py -- 95 reproducibility checks
           stdout == rescoring_s49_output.txt (md5 5bd45e56)
           stderr == (empty) (md5 d41d8cd9)
 
+[96] PASS  jev_pilot_check.py: the Jev pilot (jev-1.13.0), an automated interpretation check, not a replication: every recorded response present and pinned, every state equal to its source or a declared edit, and the comparison with the pass's clause statuses (decision 50.1)
+          SUMMARY: pilot 1 12 of 16; part (a) 6 of 6; part (b) 1 of 1; part (c) 5 of 8; 0 checks failed
+          stdout == jev_pilot_check_output.txt (md5 0a333c8c)
+          stderr == (empty) (md5 d41d8cd9)
+
+[97] PASS  rescoring_s50.py: rescoring pass part (b), ninth and last group, the 8 units of C5.2, C5.4 and C5.5 on the v2.0 clauses, part (a)'s 2 units of C5.2 re-read, and Status Quo's C5.2 re-checked as class M (D28); Nordic Social Democracy's C5.4 from the ISSP 2016 figures; consequences with parts (a) to (b8) and 48.3, and the score ledger; no corpus file changed
+          stdout == rescoring_s50_output.txt (md5 84b3e263)
+          stderr == (empty) (md5 d41d8cd9)
+
+[98] PASS  jev_s50_check.py: the interpretation check on part (b)'s ninth group (jev-1.13.0, flag-only): every request rebuilt from its sources equals the recorded one, every located-evidence excerpt is in the unit's estimates, and each answer is compared with the pass's clause status (decisions 50.2 to 50.4)
+          SUMMARY: 20 of 23 clause verdicts agree; 3 flagged for review; 0 checks failed
+          stdout == jev_s50_check_output.txt (md5 4886a15f)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 95 passed, 0 failed, 0 skipped (of 95).
+SUMMARY: 98 passed, 0 failed, 0 skipped (of 98).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

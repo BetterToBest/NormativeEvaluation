@@ -1,0 +1,1528 @@
+{
+ "schema": "neec-jev-check/1",
+ "date": "2026-09-25",
+ "label": "automated interpretation check",
+ "model": "jev-1.13.0 (TypeSafe AI), via the Composio Jev toolkit",
+ "repository": "BetterToBest/NormativeEvaluation, Session 50 branch, before its landing (rescoring_s50.py as recorded)",
+ "note": "Part (b)'s ninth group (NEEC_Rescoring_s50.md, reading 3.8). Requests were sent as jev_s50_check.py --requests builds them, in two runs of the same eleven requests; each response is transcribed from the connector's output, token usage included.",
+ "records": [
+  {
+   "run": 1,
+   "index": 0,
+   "unit": "NSD",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "NSD (an economic system in the NEEC corpus)",
+     "entry_text": "The historical transition from mixed capitalism to a comprehensive welfare state occurred gradually over 40+ years (1930s-1970s), demonstrating a viable pathway. Incremental implementation proven. Comprehensive welfare state model combining market capitalism with extensive social programs, strong labor unions, and progressive taxation. Best-performing existing system but still insufficient for 21st-century challenges, particularly automation and ecological sustainability.",
+     "located_evidence": [
+      "crisis policy and the Saltsjöbaden Agreement (1932-1938), the universal pension and child allowance (1946-1948), compulsory health insurance and the earnings-related pension (1955-1960), and parental insurance and the Co-determination Act (1974-1976)",
+      "its universal social insurance has a precedent of rapid deployment elsewhere (Britain's, legislated in 1946 and in force by July 1948)",
+      "Sweden's took from the December Compromise of 1906 to the Saltsjöbaden Agreement of 1938"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "shown",
+      "confidence": 0.97,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0,
+       "short": 0.02,
+       "shown": 0.98
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "partial",
+      "confidence": 0.65,
+      "probabilities": {
+       "not_stated": 0.05,
+       "partial": 0.74,
+       "planned_only": 0.02,
+       "shown": 0.19
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1182,
+     "output_tokens": 101
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 1,
+   "unit": "LM",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "LM (an economic system in the NEEC corpus)",
+     "entry_text": "Could be implemented gradually through deregulation, welfare elimination, tax reduction. Pathway clear though politically and socially devastating."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "planned_only",
+      "confidence": 0.74,
+      "probabilities": {
+       "not_stated": 0.07,
+       "planned_only": 0.81,
+       "short": 0.12,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_stated",
+      "confidence": 0.94,
+      "probabilities": {
+       "not_stated": 0.96,
+       "partial": 0,
+       "planned_only": 0.04,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 951,
+     "output_tokens": 106
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 2,
+   "unit": "SC",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "SC (an economic system in the NEEC corpus)",
+     "entry_text": "Easily implemented incrementally through corporate governance reforms, tax incentives, regulatory requirements. Minimal disruption to existing systems. Legislative pathways clear. Corporate governance reform requiring businesses to serve all stakeholders (workers, communities, environment, suppliers) rather than solely maximizing shareholder value. ESG metrics (Environmental, Social, Governance) guide investment. Voluntary corporate responsibility within the market framework.",
+     "located_evidence": [
+      "the Coal and Steel Codetermination Act (1951), the Works Constitution Act (1952), its revision (1972) and the Codetermination Act (1976)",
+      "Germany's took a quarter-century, from 1951 to 1976"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "short",
+      "confidence": 0.55,
+      "probabilities": {
+       "not_stated": 0.04,
+       "planned_only": 0.03,
+       "short": 0.66,
+       "shown": 0.27
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_stated",
+      "confidence": 0.88,
+      "probabilities": {
+       "not_stated": 0.91,
+       "partial": 0.02,
+       "planned_only": 0.07,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1082,
+     "output_tokens": 103
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 3,
+   "unit": "MMT",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "MMT (an economic system in the NEEC corpus)",
+     "entry_text": "Clear implementation pathway: pilot programs → regional expansion → national implementation. Could begin with infrastructure investment and scale job guarantee as capacity develops.",
+     "located_evidence": [
+      "India's rural employment guarantee, extended to all districts in three phases between 2006 and 2008",
+      "Argentina's Plan Jefes y Jefas de Hogar, a public employment programme begun in April 2002 in the crisis, whose payrolls ballooned quickly, against a government estimate of 500,000, to nearly 2 million participants, 13% of the labour force, at a cost peaking at 1% of GDP"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "short",
+      "confidence": 0.99,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0,
+       "short": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.37,
+      "probabilities": {
+       "not_stated": 0.03,
+       "partial": 0.38,
+       "planned_only": 0.06,
+       "shown": 0.53
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1074,
+     "output_tokens": 101
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 4,
+   "unit": "IF",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "IF (an economic system in the NEEC corpus)",
+     "entry_text": "Both pathways exist and both are documented with dates. The gradual pathway: Malaysia's forty-year build, from the first Islamic bank in 1983 through the Islamic Financial Services Act 2013 to a mandated MYOR-i benchmark transition from the second half of 2027 and the cessation of KLIBOR by 1 January 2029 — and Pakistan's, where the Federal Shariat Court's April 2022 judgment was written into the constitution by the 26th Amendment with a **1 January 2028** deadline, a Ministry of Finance roadmap, and explicit grandfathering of existing conventional contracts to maturity. Sudan's conversion proceeded in documented phases from 1983. The rapid pathway: Iran legislated conversion in 1983 and operated the converted system from March 1984, inside the threshold's 36 months. BNM has also exported the staged model, supporting 17 jurisdictions in 2025 and running a capacity-building programme for Central Asian states and Azerbaijan on building dual systems. Milestones are real enough to be missed: Malaysia's 50%-parity-by-2025 target came in at 48%. That is evidence the pathway is measurable, not evidence it is absent.",
+     "located_evidence": [
+      "the Islamic Banking Act and the first Islamic bank (1983), the interest-free banking scheme for conventional banks (1993), the Shariah Advisory Council (1997) and the Islamic Financial Services Act (2013)",
+      "reports of Pakistan's 2026 roadmap say that banks' Islamic windows already hold the technology and that staff training is under way, but give no estimate of cost, capital or staff"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     },
+     "clause4": {
+      "type": "choice",
+      "instructions": "The clause under test is \"resource requirements\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives the resources the deployment requires (funds, capital, staff or institutions) and cites a deployment that took place with resources of that kind and size.",
+       "stated_only": "The state gives resource requirements but cites no deployment showing them sufficient.",
+       "not_stated": "The state gives no resource requirements for the deployment."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "shown",
+      "confidence": 0.74,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0.02,
+       "short": 0.17,
+       "shown": 0.81
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.8,
+      "probabilities": {
+       "not_stated": 0,
+       "partial": 0.12,
+       "planned_only": 0.03,
+       "shown": 0.85
+      },
+      "type": "choice"
+     },
+     "clause4": {
+      "choice": "not_stated",
+      "confidence": 0.53,
+      "probabilities": {
+       "not_stated": 0.69,
+       "shown": 0.04,
+       "stated_only": 0.27
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1547,
+     "output_tokens": 144
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 5,
+   "unit": "CCO",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "CCO (an economic system in the NEEC corpus)",
+     "entry_text": "Detailed pathways specified for both gradual (10-25 years: municipal pilots → regional → national) and rapid (18-36 months: post-crisis emergency deployment). Historical precedents validate timelines (New Deal: 3 years; Marshall Plan: 3 years)."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "short",
+      "confidence": 0.41,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0.43,
+       "short": 0.56,
+       "shown": 0.01
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "planned_only",
+      "confidence": 0.86,
+      "probabilities": {
+       "not_stated": 0,
+       "partial": 0.02,
+       "planned_only": 0.9,
+       "shown": 0.08
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 986,
+     "output_tokens": 104
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 6,
+   "unit": "NSD",
+   "criterion": "C5.4",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "NSD (an economic system in the NEEC corpus)",
+     "entry_text": "Achieved through broad labor movement coalition building. High public satisfaction (70-85%) sustains support across the political spectrum. Model appeals to social democrats, pragmatic progressives, and centrists.",
+     "located_evidence": [
+      "the configuration's universal social insurance and public services have been kept through every change of government since they were built, including centre-right governments in all four countries: Sweden 1976-1982, 1991-1994, 2006-2014 and from 2022; Denmark 1982-1993, 2001-2011 and 2015-2019; Norway 1981-1986, 1989-1990, 1997-2000, 2001-2005 and 2013-2021; Finland 1991-1995, 2015-2019 and from 2023"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥60% support across political spectrum\", for the system the state describes. Support for a component of the system, or for a different programme, is not support for the system itself. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "asserted_met": "The state says that at least 60% of people, across the political spectrum, support or are satisfied with the system itself.",
+       "component_only": "The state gives such support only for a component of the system or for a different programme.",
+       "not_asserted": "The state gives no level of support for the system across the spectrum, or a level below 60%."
+      }
+     },
+     "clause3": {
+      "type": "choice",
+      "instructions": "The clause under test is \"survival probability ≥80% across administration changes\", for the system the state describes. A design with no record shows it by a projection; a component's record is not the system's. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives a record, or a projection, that the system itself has survived, or would survive, at least 80% of changes of government or administration.",
+       "component_only": "The state gives such a record or projection only for a component of the system or a different programme.",
+       "not_shown": "The state gives no record or projection of the system's survival across changes of administration."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.82,
+      "probabilities": {
+       "asserted_met": 0.88,
+       "component_only": 0.09,
+       "not_asserted": 0.03
+      },
+      "type": "choice"
+     },
+     "clause3": {
+      "choice": "component_only",
+      "confidence": 0.36,
+      "probabilities": {
+       "component_only": 0.57,
+       "not_shown": 0.08,
+       "shown": 0.35
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 932,
+     "output_tokens": 91
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 7,
+   "unit": "NSD",
+   "criterion": "C5.4",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "NSD (an economic system in the NEEC corpus)",
+     "survey_items": [
+      "Q6: Listed below are various areas of government spending. Please show whether you would like to see more or less government spending in each area. Remember that if you say 'much more', it might require a tax increase to pay for it. Q6b: Health. Q6f: Old age pensions. (Spend much more; spend more; spend the same as now; spend less; spend much less.)",
+      "Q7: On the whole, do you think it should or should not be the government's responsibility to... Q7c: ...provide health care for the sick. Q7d: ...provide a decent standard of living for the old. (Definitely should be; probably should be; probably should not be; definitely should not be.)"
+     ],
+     "results": [
+      "in the ISSP's 2016 Role of Government module, 95.0 to 99.3% of those answering in each of the four countries wanted government spending on health, and on old age pensions, kept at its level or raised, and 95.5 to 99.7% held that health care for the sick and a decent standard of living for the old should be the government's responsibility"
+     ]
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥65% opposition to repeal\" of the Nordic welfare-state system. The state reports survey items and their results. The comparison of the figures with 65% is made separately: judge only whether the survey items measure opposition to repealing the system or its core provision. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "measures_opposition": "The items ask whether people want the system's core provision (such as health care and pensions) kept at least at its present level, or held a government responsibility, so the share answering so is a share opposed to repealing it.",
+       "other_measure": "The items measure something other than opposition to repeal or cuts (for example satisfaction, trust or general attitudes), so the shares are not shares opposed to the system's repeal."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "measures_opposition",
+      "confidence": 0.99,
+      "probabilities": {
+       "measures_opposition": 0.99,
+       "other_measure": 0.01
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 764,
+     "output_tokens": 46
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 8,
+   "unit": "CCO",
+   "criterion": "C5.4",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "CCO (an economic system in the NEEC corpus)",
+     "entry_text": "Cross-ideological appeal: progressives (poverty elimination, equity), libertarians (reduced coercion, exit rights), fiscal conservatives (cost effectiveness vs. bureaucracy), communitarians (neighborhood autonomy). Alaska PFD demonstrates 80%+ approval across the spectrum."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥60% support across political spectrum\", for the system the state describes. Support for a component of the system, or for a different programme, is not support for the system itself. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "asserted_met": "The state says that at least 60% of people, across the political spectrum, support or are satisfied with the system itself.",
+       "component_only": "The state gives such support only for a component of the system or for a different programme.",
+       "not_asserted": "The state gives no level of support for the system across the spectrum, or a level below 60%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥65% opposition to repeal\", for the system the state describes. A design with no record shows it by a projection, from a model or from calibrated components; evidence for one component or an assumption of support is not a projection for the system. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives a record or a projection that at least 65% of people oppose, or would oppose, repealing the system itself.",
+       "component_only": "The state gives such evidence only for a component of the system or a different programme, or states only an assumption of support.",
+       "not_shown": "The state gives no record or projection of opposition to the system's repeal."
+      }
+     },
+     "clause3": {
+      "type": "choice",
+      "instructions": "The clause under test is \"survival probability ≥80% across administration changes\", for the system the state describes. A design with no record shows it by a projection; a component's record is not the system's. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives a record, or a projection, that the system itself has survived, or would survive, at least 80% of changes of government or administration.",
+       "component_only": "The state gives such a record or projection only for a component of the system or a different programme.",
+       "not_shown": "The state gives no record or projection of the system's survival across changes of administration."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "component_only",
+      "confidence": 0.72,
+      "probabilities": {
+       "asserted_met": 0.15,
+       "component_only": 0.8200000000000001,
+       "not_asserted": 0.03
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.54,
+      "probabilities": {
+       "component_only": 0.12,
+       "not_shown": 0.7,
+       "shown": 0.18
+      },
+      "type": "choice"
+     },
+     "clause3": {
+      "choice": "not_shown",
+      "confidence": 0.97,
+      "probabilities": {
+       "component_only": 0.01,
+       "not_shown": 0.99,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 960,
+     "output_tokens": 132
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 9,
+   "unit": "PE",
+   "criterion": "C5.5",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "PE (an economic system in the NEEC corpus)",
+     "entry_text": "Flexible system accommodating diverse values through democratic process. Different communities could have different consumption patterns, work structures. Councils respect cultural variation while coordinating economically."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Viable across ≥3 economic contexts (high/middle/low income)\". Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state shows or argues that the system is viable in high-, middle- and low-income economies, covering each.",
+       "not_shown": "The state does not address viability across income levels, or covers fewer than three."
+      }
+     },
+     "clause4": {
+      "type": "choice",
+      "instructions": "The clause under test is \"successful operation validated across diverse implementations\". A design with no implementation cannot show it by modelling or by its capacities. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites successful operation of the system itself in several implementations in diverse contexts.",
+       "component_only": "The state cites implementations only of parts of the system, or of a narrower or different arrangement.",
+       "not_shown": "The state cites no implementation of the system; it describes design features, capacities or possibilities."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "clause4": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "component_only": 0,
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 613,
+     "output_tokens": 79
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 1,
+   "index": 10,
+   "unit": "MC",
+   "criterion": "C5.5",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "MC (an economic system in the NEEC corpus)",
+     "entry_text": "**Rationale:** The geographic, cultural, and — importantly — economic- development breadth of real implementation reviewed for this evaluation is unusually wide: high-income contexts (Switzerland/WIR, Italy/Sardex, the UK/Canada/Australia/USA's classic LETS and time-banking movement), middle-income context (Argentina's Trueque), and low-income context (Kenya's Grassroots Economics/Bangla-Pesa/Sarafu-Credit, operating in a country where roughly 46% of the population lives in poverty). This low-income-context evidence is a genuine point of distinction from Georgism's own C5.5 finding, whose evidence base — while broad — remained concentrated in middle- and high-income jurisdictions. Taken together, this plausibly clears NEEC's own threshold language (viable across at least three economic contexts, at least five cultural contexts) more clearly than most systems scored in this corpus.",
+     "located_evidence": [
+      "each network sets its members' credit limits on their demonstrated capacity to contribute and adjusts its own rules, and its implementations differ in kind, most with no interest or fee on balances and some with demurrage"
+     ]
+    },
+    "questions": {
+     "clause3": {
+      "type": "choice",
+      "instructions": "The clause under test is \"parameter flexibility ≥40% adjustment range\". Parameters that each local network sets for itself, with no common value fixed by the design, count as flexible without limit. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state shows that the system's key parameters (such as credit limits, fees or rates) are adjusted by a range of at least 40%, or are set by each network with no common value.",
+       "not_shown": "The state names no adjustable parameters, or gives a fixed range narrower than 40%."
+      }
+     },
+     "clause4": {
+      "type": "choice",
+      "instructions": "The clause under test is \"successful operation validated across diverse implementations\". A design with no implementation cannot show it by modelling or by its capacities. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites successful operation of the system itself in several implementations in diverse contexts.",
+       "component_only": "The state cites implementations only of parts of the system, or of a narrower or different arrangement.",
+       "not_shown": "The state cites no implementation of the system; it describes design features, capacities or possibilities."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause3": {
+      "choice": "shown",
+      "confidence": 0.96,
+      "probabilities": {
+       "not_shown": 0.02,
+       "shown": 0.98
+      },
+      "type": "choice"
+     },
+     "clause4": {
+      "choice": "shown",
+      "confidence": 0.59,
+      "probabilities": {
+       "component_only": 0.04,
+       "not_shown": 0.23,
+       "shown": 0.73
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 870,
+     "output_tokens": 75
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 0,
+   "unit": "NSD",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "NSD (an economic system in the NEEC corpus)",
+     "entry_text": "The historical transition from mixed capitalism to a comprehensive welfare state occurred gradually over 40+ years (1930s-1970s), demonstrating a viable pathway. Incremental implementation proven. Comprehensive welfare state model combining market capitalism with extensive social programs, strong labor unions, and progressive taxation. Best-performing existing system but still insufficient for 21st-century challenges, particularly automation and ecological sustainability.",
+     "located_evidence": [
+      "crisis policy and the Saltsjöbaden Agreement (1932-1938), the universal pension and child allowance (1946-1948), compulsory health insurance and the earnings-related pension (1955-1960), and parental insurance and the Co-determination Act (1974-1976)",
+      "its universal social insurance has a precedent of rapid deployment elsewhere (Britain's, legislated in 1946 and in force by July 1948)",
+      "Sweden's took from the December Compromise of 1906 to the Saltsjöbaden Agreement of 1938"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "shown",
+      "confidence": 0.96,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0,
+       "short": 0.02,
+       "shown": 0.98
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "partial",
+      "confidence": 0.7,
+      "probabilities": {
+       "not_stated": 0.06,
+       "partial": 0.77,
+       "planned_only": 0.02,
+       "shown": 0.15
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1182,
+     "output_tokens": 101
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 1,
+   "unit": "LM",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "LM (an economic system in the NEEC corpus)",
+     "entry_text": "Could be implemented gradually through deregulation, welfare elimination, tax reduction. Pathway clear though politically and socially devastating."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "planned_only",
+      "confidence": 0.75,
+      "probabilities": {
+       "not_stated": 0.08,
+       "planned_only": 0.8099999999999999,
+       "short": 0.11,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_stated",
+      "confidence": 0.95,
+      "probabilities": {
+       "not_stated": 0.96,
+       "partial": 0,
+       "planned_only": 0.04,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 951,
+     "output_tokens": 106
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 2,
+   "unit": "SC",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "SC (an economic system in the NEEC corpus)",
+     "entry_text": "Easily implemented incrementally through corporate governance reforms, tax incentives, regulatory requirements. Minimal disruption to existing systems. Legislative pathways clear. Corporate governance reform requiring businesses to serve all stakeholders (workers, communities, environment, suppliers) rather than solely maximizing shareholder value. ESG metrics (Environmental, Social, Governance) guide investment. Voluntary corporate responsibility within the market framework.",
+     "located_evidence": [
+      "the Coal and Steel Codetermination Act (1951), the Works Constitution Act (1952), its revision (1972) and the Codetermination Act (1976)",
+      "Germany's took a quarter-century, from 1951 to 1976"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "short",
+      "confidence": 0.53,
+      "probabilities": {
+       "not_stated": 0.05,
+       "planned_only": 0.03,
+       "short": 0.64,
+       "shown": 0.28
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_stated",
+      "confidence": 0.85,
+      "probabilities": {
+       "not_stated": 0.89,
+       "partial": 0.02,
+       "planned_only": 0.09,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1082,
+     "output_tokens": 103
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 3,
+   "unit": "MMT",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "MMT (an economic system in the NEEC corpus)",
+     "entry_text": "Clear implementation pathway: pilot programs → regional expansion → national implementation. Could begin with infrastructure investment and scale job guarantee as capacity develops.",
+     "located_evidence": [
+      "India's rural employment guarantee, extended to all districts in three phases between 2006 and 2008",
+      "Argentina's Plan Jefes y Jefas de Hogar, a public employment programme begun in April 2002 in the crisis, whose payrolls ballooned quickly, against a government estimate of 500,000, to nearly 2 million participants, 13% of the labour force, at a cost peaking at 1% of GDP"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "short",
+      "confidence": 0.99,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0,
+       "short": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.37,
+      "probabilities": {
+       "not_stated": 0.03,
+       "partial": 0.37,
+       "planned_only": 0.07,
+       "shown": 0.53
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1074,
+     "output_tokens": 101
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 4,
+   "unit": "IF",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "IF (an economic system in the NEEC corpus)",
+     "entry_text": "Both pathways exist and both are documented with dates. The gradual pathway: Malaysia's forty-year build, from the first Islamic bank in 1983 through the Islamic Financial Services Act 2013 to a mandated MYOR-i benchmark transition from the second half of 2027 and the cessation of KLIBOR by 1 January 2029 — and Pakistan's, where the Federal Shariat Court's April 2022 judgment was written into the constitution by the 26th Amendment with a **1 January 2028** deadline, a Ministry of Finance roadmap, and explicit grandfathering of existing conventional contracts to maturity. Sudan's conversion proceeded in documented phases from 1983. The rapid pathway: Iran legislated conversion in 1983 and operated the converted system from March 1984, inside the threshold's 36 months. BNM has also exported the staged model, supporting 17 jurisdictions in 2025 and running a capacity-building programme for Central Asian states and Azerbaijan on building dual systems. Milestones are real enough to be missed: Malaysia's 50%-parity-by-2025 target came in at 48%. That is evidence the pathway is measurable, not evidence it is absent.",
+     "located_evidence": [
+      "the Islamic Banking Act and the first Islamic bank (1983), the interest-free banking scheme for conventional banks (1993), the Shariah Advisory Council (1997) and the Islamic Financial Services Act (2013)",
+      "reports of Pakistan's 2026 roadmap say that banks' Islamic windows already hold the technology and that staff training is under way, but give no estimate of cost, capital or staff"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     },
+     "clause4": {
+      "type": "choice",
+      "instructions": "The clause under test is \"resource requirements\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives the resources the deployment requires (funds, capital, staff or institutions) and cites a deployment that took place with resources of that kind and size.",
+       "stated_only": "The state gives resource requirements but cites no deployment showing them sufficient.",
+       "not_stated": "The state gives no resource requirements for the deployment."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "shown",
+      "confidence": 0.76,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0.02,
+       "short": 0.16,
+       "shown": 0.82
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.82,
+      "probabilities": {
+       "not_stated": 0,
+       "partial": 0.11,
+       "planned_only": 0.02,
+       "shown": 0.87
+      },
+      "type": "choice"
+     },
+     "clause4": {
+      "choice": "not_stated",
+      "confidence": 0.48,
+      "probabilities": {
+       "not_stated": 0.66,
+       "shown": 0.04,
+       "stated_only": 0.3
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 1547,
+     "output_tokens": 144
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 5,
+   "unit": "CCO",
+   "criterion": "C5.2",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "CCO (an economic system in the NEEC corpus)",
+     "entry_text": "Detailed pathways specified for both gradual (10-25 years: municipal pilots → regional → national) and rapid (18-36 months: post-crisis emergency deployment). Historical precedents validate timelines (New Deal: 3 years; Marshall Plan: 3 years)."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Staged (≥4 phases)\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, carried out in at least four successive stages.",
+       "short": "The state cites a staged deployment that took place, or specifies a staged pathway, but with fewer than four stages.",
+       "planned_only": "The state specifies or claims a staged pathway, but cites no deployment of the same kind that took place in stages.",
+       "not_stated": "The state gives no staged pathway and no staged deployment."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"rapid (≤36 months) deployment\". The criterion requires this element to be \"shown feasible by precedent or component evidence\", not only planned. A precedent is a deployment that actually took place, of this system or of institutions of the same kind. Component evidence is such a deployment of a component the entry itself names. A plan, a stated sequence or timeline, a claim that it could be done, a simulation, or a programme of a different kind cited only for its speed does not count. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites a deployment that actually took place, of the system or of a component of the same kind that the entry names, completed within 36 months, and, if the entry names several defining components, such a deployment for each of them.",
+       "partial": "The state cites deployments within 36 months for some of the components the entry names as defining, but for at least one of them only a slower deployment or none.",
+       "planned_only": "The state specifies or claims a rapid pathway of 36 months or less, but cites no deployment of the same kind completed within that time; any precedent it cites is a programme of a different kind, cited for its speed.",
+       "not_stated": "The state gives no rapid pathway and no deployment within 36 months."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "short",
+      "confidence": 0.45,
+      "probabilities": {
+       "not_stated": 0,
+       "planned_only": 0.4,
+       "short": 0.59,
+       "shown": 0.01
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "planned_only",
+      "confidence": 0.86,
+      "probabilities": {
+       "not_stated": 0,
+       "partial": 0.02,
+       "planned_only": 0.9,
+       "shown": 0.08
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 986,
+     "output_tokens": 104
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 6,
+   "unit": "NSD",
+   "criterion": "C5.4",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "NSD (an economic system in the NEEC corpus)",
+     "entry_text": "Achieved through broad labor movement coalition building. High public satisfaction (70-85%) sustains support across the political spectrum. Model appeals to social democrats, pragmatic progressives, and centrists.",
+     "located_evidence": [
+      "the configuration's universal social insurance and public services have been kept through every change of government since they were built, including centre-right governments in all four countries: Sweden 1976-1982, 1991-1994, 2006-2014 and from 2022; Denmark 1982-1993, 2001-2011 and 2015-2019; Norway 1981-1986, 1989-1990, 1997-2000, 2001-2005 and 2013-2021; Finland 1991-1995, 2015-2019 and from 2023"
+     ]
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥60% support across political spectrum\", for the system the state describes. Support for a component of the system, or for a different programme, is not support for the system itself. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "asserted_met": "The state says that at least 60% of people, across the political spectrum, support or are satisfied with the system itself.",
+       "component_only": "The state gives such support only for a component of the system or for a different programme.",
+       "not_asserted": "The state gives no level of support for the system across the spectrum, or a level below 60%."
+      }
+     },
+     "clause3": {
+      "type": "choice",
+      "instructions": "The clause under test is \"survival probability ≥80% across administration changes\", for the system the state describes. A design with no record shows it by a projection; a component's record is not the system's. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives a record, or a projection, that the system itself has survived, or would survive, at least 80% of changes of government or administration.",
+       "component_only": "The state gives such a record or projection only for a component of the system or a different programme.",
+       "not_shown": "The state gives no record or projection of the system's survival across changes of administration."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.78,
+      "probabilities": {
+       "asserted_met": 0.86,
+       "component_only": 0.1,
+       "not_asserted": 0.04
+      },
+      "type": "choice"
+     },
+     "clause3": {
+      "choice": "component_only",
+      "confidence": 0.26,
+      "probabilities": {
+       "component_only": 0.51,
+       "not_shown": 0.08,
+       "shown": 0.41
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 932,
+     "output_tokens": 91
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 7,
+   "unit": "NSD",
+   "criterion": "C5.4",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "NSD (an economic system in the NEEC corpus)",
+     "survey_items": [
+      "Q6: Listed below are various areas of government spending. Please show whether you would like to see more or less government spending in each area. Remember that if you say 'much more', it might require a tax increase to pay for it. Q6b: Health. Q6f: Old age pensions. (Spend much more; spend more; spend the same as now; spend less; spend much less.)",
+      "Q7: On the whole, do you think it should or should not be the government's responsibility to... Q7c: ...provide health care for the sick. Q7d: ...provide a decent standard of living for the old. (Definitely should be; probably should be; probably should not be; definitely should not be.)"
+     ],
+     "results": [
+      "in the ISSP's 2016 Role of Government module, 95.0 to 99.3% of those answering in each of the four countries wanted government spending on health, and on old age pensions, kept at its level or raised, and 95.5 to 99.7% held that health care for the sick and a decent standard of living for the old should be the government's responsibility"
+     ]
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥65% opposition to repeal\" of the Nordic welfare-state system. The state reports survey items and their results. The comparison of the figures with 65% is made separately: judge only whether the survey items measure opposition to repealing the system or its core provision. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "measures_opposition": "The items ask whether people want the system's core provision (such as health care and pensions) kept at least at its present level, or held a government responsibility, so the share answering so is a share opposed to repealing it.",
+       "other_measure": "The items measure something other than opposition to repeal or cuts (for example satisfaction, trust or general attitudes), so the shares are not shares opposed to the system's repeal."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "measures_opposition",
+      "confidence": 0.98,
+      "probabilities": {
+       "measures_opposition": 0.99,
+       "other_measure": 0.01
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 764,
+     "output_tokens": 46
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 8,
+   "unit": "CCO",
+   "criterion": "C5.4",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "CCO (an economic system in the NEEC corpus)",
+     "entry_text": "Cross-ideological appeal: progressives (poverty elimination, equity), libertarians (reduced coercion, exit rights), fiscal conservatives (cost effectiveness vs. bureaucracy), communitarians (neighborhood autonomy). Alaska PFD demonstrates 80%+ approval across the spectrum."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥60% support across political spectrum\", for the system the state describes. Support for a component of the system, or for a different programme, is not support for the system itself. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "asserted_met": "The state says that at least 60% of people, across the political spectrum, support or are satisfied with the system itself.",
+       "component_only": "The state gives such support only for a component of the system or for a different programme.",
+       "not_asserted": "The state gives no level of support for the system across the spectrum, or a level below 60%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is \"≥65% opposition to repeal\", for the system the state describes. A design with no record shows it by a projection, from a model or from calibrated components; evidence for one component or an assumption of support is not a projection for the system. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives a record or a projection that at least 65% of people oppose, or would oppose, repealing the system itself.",
+       "component_only": "The state gives such evidence only for a component of the system or a different programme, or states only an assumption of support.",
+       "not_shown": "The state gives no record or projection of opposition to the system's repeal."
+      }
+     },
+     "clause3": {
+      "type": "choice",
+      "instructions": "The clause under test is \"survival probability ≥80% across administration changes\", for the system the state describes. A design with no record shows it by a projection; a component's record is not the system's. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state gives a record, or a projection, that the system itself has survived, or would survive, at least 80% of changes of government or administration.",
+       "component_only": "The state gives such a record or projection only for a component of the system or a different programme.",
+       "not_shown": "The state gives no record or projection of the system's survival across changes of administration."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "component_only",
+      "confidence": 0.8,
+      "probabilities": {
+       "asserted_met": 0.11,
+       "component_only": 0.87,
+       "not_asserted": 0.02
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.5,
+      "probabilities": {
+       "component_only": 0.14,
+       "not_shown": 0.67,
+       "shown": 0.19
+      },
+      "type": "choice"
+     },
+     "clause3": {
+      "choice": "not_shown",
+      "confidence": 0.94,
+      "probabilities": {
+       "component_only": 0.03,
+       "not_shown": 0.97,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 960,
+     "output_tokens": 132
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 9,
+   "unit": "PE",
+   "criterion": "C5.5",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "PE (an economic system in the NEEC corpus)",
+     "entry_text": "Flexible system accommodating diverse values through democratic process. Different communities could have different consumption patterns, work structures. Councils respect cultural variation while coordinating economically."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is \"Viable across ≥3 economic contexts (high/middle/low income)\". Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state shows or argues that the system is viable in high-, middle- and low-income economies, covering each.",
+       "not_shown": "The state does not address viability across income levels, or covers fewer than three."
+      }
+     },
+     "clause4": {
+      "type": "choice",
+      "instructions": "The clause under test is \"successful operation validated across diverse implementations\". A design with no implementation cannot show it by modelling or by its capacities. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites successful operation of the system itself in several implementations in diverse contexts.",
+       "component_only": "The state cites implementations only of parts of the system, or of a narrower or different arrangement.",
+       "not_shown": "The state cites no implementation of the system; it describes design features, capacities or possibilities."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "clause4": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "component_only": 0,
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 613,
+     "output_tokens": 79
+    }
+   },
+   "error": null
+  },
+  {
+   "run": 2,
+   "index": 10,
+   "unit": "MC",
+   "criterion": "C5.5",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "system": "MC (an economic system in the NEEC corpus)",
+     "entry_text": "**Rationale:** The geographic, cultural, and — importantly — economic- development breadth of real implementation reviewed for this evaluation is unusually wide: high-income contexts (Switzerland/WIR, Italy/Sardex, the UK/Canada/Australia/USA's classic LETS and time-banking movement), middle-income context (Argentina's Trueque), and low-income context (Kenya's Grassroots Economics/Bangla-Pesa/Sarafu-Credit, operating in a country where roughly 46% of the population lives in poverty). This low-income-context evidence is a genuine point of distinction from Georgism's own C5.5 finding, whose evidence base — while broad — remained concentrated in middle- and high-income jurisdictions. Taken together, this plausibly clears NEEC's own threshold language (viable across at least three economic contexts, at least five cultural contexts) more clearly than most systems scored in this corpus.",
+     "located_evidence": [
+      "each network sets its members' credit limits on their demonstrated capacity to contribute and adjusts its own rules, and its implementations differ in kind, most with no interest or fee on balances and some with demurrage"
+     ]
+    },
+    "questions": {
+     "clause3": {
+      "type": "choice",
+      "instructions": "The clause under test is \"parameter flexibility ≥40% adjustment range\". Parameters that each local network sets for itself, with no common value fixed by the design, count as flexible without limit. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state shows that the system's key parameters (such as credit limits, fees or rates) are adjusted by a range of at least 40%, or are set by each network with no common value.",
+       "not_shown": "The state names no adjustable parameters, or gives a fixed range narrower than 40%."
+      }
+     },
+     "clause4": {
+      "type": "choice",
+      "instructions": "The clause under test is \"successful operation validated across diverse implementations\". A design with no implementation cannot show it by modelling or by its capacities. Judge only what the state itself says (the entry's text and any located evidence it lists). Do not use outside knowledge about the system or its history.",
+      "criteria": {
+       "shown": "The state cites successful operation of the system itself in several implementations in diverse contexts.",
+       "component_only": "The state cites implementations only of parts of the system, or of a narrower or different arrangement.",
+       "not_shown": "The state cites no implementation of the system; it describes design features, capacities or possibilities."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause3": {
+      "choice": "shown",
+      "confidence": 0.97,
+      "probabilities": {
+       "not_shown": 0.02,
+       "shown": 0.98
+      },
+      "type": "choice"
+     },
+     "clause4": {
+      "choice": "shown",
+      "confidence": 0.48,
+      "probabilities": {
+       "component_only": 0.06,
+       "not_shown": 0.28,
+       "shown": 0.66
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0",
+    "usage": {
+     "input_tokens": 870,
+     "output_tokens": 75
+    }
+   },
+   "error": null
+  }
+ ]
+}

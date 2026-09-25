@@ -4,8 +4,10 @@
 place in Session 46, 2026-09-24, by decisions 46.1 to 46.4 (Package C), and tag `s45` keeps the Session 45 text;
 amended in place again in Session 47, 2026-09-24, by decisions 47.1 and 47.2 (C4.6's clause 3 bar), and tag `s46`
 keeps the Session 46 text; in Session 48, 2026-09-24, by decisions 48.1 to 48.3 (the owner's three open
-questions), and tag `s47` keeps the Session 47 text; and in Session 49, 2026-09-25, by decisions 49.1 to 49.13
-(the public site; no criterion changes), and tag `s48` keeps the Session 48 text.
+questions), and tag `s47` keeps the Session 47 text; in Session 49, 2026-09-25, by decisions 49.1 to 49.13
+(the public site; no criterion changes), and tag `s48` keeps the Session 48 text; and in Session 50, 2026-09-25, by
+decisions 50.1 to 50.7 (the automated interpretation check and the site's address; no criterion changes), and tag
+`s49` keeps the Session 49 text.
 Scorer and engineer: Claude. Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
 (the 26 criteria as they stood at `s44`), `neec_corpus.json`. Appendix V below is the one source of the v2.0 text:
 `build_criteria.py` reads it, applies it to the snapshot, asserts the rules in section 6, and writes `criteria.json`
@@ -261,6 +263,39 @@ and protocol draft.9 (Appendix B regenerated, seven asserted edits; 47.2, 48.3).
   package advises: `NEEC_CONTRIBUTING.md` (lines 5, 51 and 102) and `CITATION.cff`'s abstract say 26 criteria,
   which is true of the published corpus and is restated when version 2.0 is released; `CITATION.cff`'s `url`
   still names the version 1 site, and can name the new site once a session has seen it live.
+- **50.1 to 50.5 (the automated interpretation check, Session 50).** The Jev pilot package that a claude.ai chat
+  session prepared at the owner's request from tag `s48` (`NEEC_Jev_Pilot_Package_s50.md`, whose section 5 sets out
+  J1 to J5) is applied: `jev_pilot_check.py`, the recorded requests and responses and its captured output are harness
+  check 96. Jev (TypeSafe AI's System One model) returns, for a text and a question with fixed options, an option,
+  a probability for each option and a confidence; it does not generate text, browse or reason across steps.
+  Attribution as the package marks it: **50.1** (J1; the owner's, 2026-09-25): Jev is adopted as an **automated
+  interpretation check**, under that label. **50.2** (J2; flagged): its role is flag-only: a disagreement, or a
+  confidence below a threshold set per clause when a full run is designed, routes a unit to review within the
+  recorded rescoring pass; it never changes a score, and its output is never described as a replication. **50.3**
+  (J3): each run pins a model version and records it with every response; the harness checks recorded responses only,
+  with no network call. **50.4** (J4; flagged): one clause per question; any comparison of a figure with a bar is made
+  in code, never by Jev; the instruction restates the pass's recorded reading of the clause; states hold source or
+  published text, never a verdict or the scorer's reasoning, and any edit to a state is declared. As the pilot's
+  part (a) did, a state may hold the evidence a pass record cites for a clause, quoted from the record. **50.5** (J5;
+  recommendation, *awaiting the owner*): blind replication under protocol section 11 stays with a generative model
+  that can open sources, and the next kit, built after stage 3, goes to a model outside the Claude family (the first
+  pilot's replicator was Claude Sonnet 5), so that replication and the interpretation check are independent of Claude
+  in different ways. *Applied in Session 50:* the pilot's check reproduces its captured output byte for byte
+  (pilot 1, 12 of 16; part (a), 6 of 6; part (b), 1 of 1; part (c), 5 of 8); and the check was run on part (b)'s
+  ninth group (`jev_s50_check.py`, check 98; `NEEC_Rescoring_s50.md`, reading 3.8): 20 of 23 answers agree with the
+  pass, the three that do not were reviewed, one flag was added (Nordic Social Democracy's C5.4, toward 0.5), and no
+  score changed because of it. Jev runs are made through the owner's Composio connection, from a claude.ai chat or
+  from a cloud session to which the owner has attached it, and are delivered as recorded files.
+- **50.6 (flags from the pilot, its section 6; not corrections).** Degrowth's, Fully Automated Luxury Communism's and
+  Participatory Economics' C2.1 clause 1 are carried as cleared "as audited" (`NEEC_Rescoring_s37.md`, section 2), and
+  their texts do not state the clause on a literal reading (pilot, finding 5; 0.89 to 0.98). No score changes: all
+  three units are 0.5 on clause 2. They are flagged for the clause-level estimate Report v2.0's Part I must make, and
+  matter if a later session clears clause 2 for any of them.
+- **50.7 (the site's address; Handoff 49, section 7, step 2).** The v2.0 site is live at
+  https://bettertobest.github.io/NormativeEvaluation/: on 2026-09-25 it answered HTTP 200, and its home page was
+  byte-identical to `docs/index.html` (md5 `0d572c3d`). `CITATION.cff`'s `url` now names it, and `llms.txt` lists it
+  under "Start here"; `llms.txt` keeps the version 1 site as version 1's. `CITATION.cff`'s abstract still says 26
+  criteria, true of the published corpus, as 49.13 records.
 
 ## 2. Method
 

@@ -1,0 +1,2474 @@
+{
+ "schema": "neec-jev-pilot/1",
+ "date": "2026-09-25",
+ "label": "automated interpretation check",
+ "model": "jev-1.13.0 (TypeSafe AI), via the Composio Jev toolkit",
+ "repository": "BetterToBest/NormativeEvaluation at tag s48 (5aed860)",
+ "note": "Pilot 1 run 1 was transcribed from the connector's response; every other record is as the workbench saved it. Token usage is omitted.",
+ "records": [
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "CCO unconditional provision eliminates survival-based employment coercion. Modeling shows 75%+ report genuine autonomy. PTF housing removes landlord coercion."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.8,
+      "probabilities": {
+       "asserted_met": 0.87,
+       "asserted_short": 0.02,
+       "not_asserted": 0.11
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.99,
+      "probabilities": {
+       "not_shown": 0.99,
+       "shown": 0.01
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "DG",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Universal basic services (healthcare, education, housing, transport) eliminate survival coercion. Reduced working hours and commons access provide genuine autonomy in how to spend time."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.99,
+      "probabilities": {
+       "asserted_met": 0.01,
+       "asserted_short": 0,
+       "not_asserted": 0.99
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "FALC",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Post-scarcity eliminates economic coercion entirely. No survival pressure to accept any terms. Material abundance creates genuine freedom from necessity."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.95,
+      "probabilities": {
+       "asserted_met": 0.03,
+       "asserted_short": 0,
+       "not_asserted": 0.97
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "INT",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic governance, cooperative production, transparent reciprocity, and a stated cultural shift toward sufficiency over accumulation combine into a structural elimination of economic coercion: the document explicitly critiques \"work or starve\" dynamics and states that \"the village values sufficiency, not accumulation.\" 70%+ genuine autonomy in major life decisions is plausible given the removal of hierarchical, employment-based, and market-based coercion alike."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.75,
+      "probabilities": {
+       "asserted_met": 0.16,
+       "asserted_short": 0,
+       "not_asserted": 0.84
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "MS",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic workplace governance eliminates employer-employee coercion. Workers collectively determine conditions. However, market pressures remain—\"compete or close\" replaces \"work or starve.\""
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_short",
+      "confidence": 0.5,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.67,
+       "not_asserted": 0.33
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "NSD",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "A strong welfare safety net reduces \"work or starve\" coercion significantly. Unemployment benefits sufficient for dignified living reduce survival-based employment pressure."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.95,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.03,
+       "not_asserted": 0.97
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "PE",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic planning eliminates both market and state coercion. Individuals participate in consumption councils determining their own consumption bundles. Genuine voice in economic decisions."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.99,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0,
+       "not_asserted": 1
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 1,
+   "unit": "UBI",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Core achievement—eliminates survival-based employment coercion. Pilots show 65-75% report increased autonomy. Genuine choice in employment because survival is not contingent on accepting any available job."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.27,
+      "probabilities": {
+       "asserted_met": 0.15,
+       "asserted_short": 0.34,
+       "not_asserted": 0.51
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.97,
+      "probabilities": {
+       "not_shown": 0.98,
+       "shown": 0.02
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "CCO unconditional provision eliminates survival-based employment coercion. Modeling shows 75%+ report genuine autonomy. PTF housing removes landlord coercion."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.83,
+      "probabilities": {
+       "asserted_met": 0.89,
+       "asserted_short": 0.02,
+       "not_asserted": 0.09
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.99,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "DG",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Universal basic services (healthcare, education, housing, transport) eliminate survival coercion. Reduced working hours and commons access provide genuine autonomy in how to spend time."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.98,
+      "probabilities": {
+       "asserted_met": 0.01,
+       "asserted_short": 0,
+       "not_asserted": 0.99
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "FALC",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Post-scarcity eliminates economic coercion entirely. No survival pressure to accept any terms. Material abundance creates genuine freedom from necessity."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.93,
+      "probabilities": {
+       "asserted_met": 0.04,
+       "asserted_short": 0,
+       "not_asserted": 0.96
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "INT",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic governance, cooperative production, transparent reciprocity, and a stated cultural shift toward sufficiency over accumulation combine into a structural elimination of economic coercion: the document explicitly critiques \"work or starve\" dynamics and states that \"the village values sufficiency, not accumulation.\" 70%+ genuine autonomy in major life decisions is plausible given the removal of hierarchical, employment-based, and market-based coercion alike."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.74,
+      "probabilities": {
+       "asserted_met": 0.17,
+       "asserted_short": 0,
+       "not_asserted": 0.83
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "MS",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic workplace governance eliminates employer-employee coercion. Workers collectively determine conditions. However, market pressures remain—\"compete or close\" replaces \"work or starve.\""
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_short",
+      "confidence": 0.45,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.64,
+       "not_asserted": 0.36
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "NSD",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "A strong welfare safety net reduces \"work or starve\" coercion significantly. Unemployment benefits sufficient for dignified living reduce survival-based employment pressure."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.95,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.03,
+       "not_asserted": 0.97
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "PE",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic planning eliminates both market and state coercion. Individuals participate in consumption councils determining their own consumption bundles. Genuine voice in economic decisions."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.99,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0,
+       "not_asserted": 1
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 2,
+   "unit": "UBI",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Core achievement—eliminates survival-based employment coercion. Pilots show 65-75% report increased autonomy. Genuine choice in employment because survival is not contingent on accepting any available job."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.35,
+      "probabilities": {
+       "asserted_met": 0.13,
+       "asserted_short": 0.3,
+       "not_asserted": 0.57
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.95,
+      "probabilities": {
+       "not_shown": 0.98,
+       "shown": 0.02
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "CCO unconditional provision eliminates survival-based employment coercion. Modeling shows 75%+ report genuine autonomy. PTF housing removes landlord coercion."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.84,
+      "probabilities": {
+       "asserted_met": 0.89,
+       "asserted_short": 0.02,
+       "not_asserted": 0.09
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.99,
+      "probabilities": {
+       "not_shown": 0.99,
+       "shown": 0.01
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "DG",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Universal basic services (healthcare, education, housing, transport) eliminate survival coercion. Reduced working hours and commons access provide genuine autonomy in how to spend time."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.98,
+      "probabilities": {
+       "asserted_met": 0.01,
+       "asserted_short": 0,
+       "not_asserted": 0.99
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "FALC",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Post-scarcity eliminates economic coercion entirely. No survival pressure to accept any terms. Material abundance creates genuine freedom from necessity."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.95,
+      "probabilities": {
+       "asserted_met": 0.03,
+       "asserted_short": 0,
+       "not_asserted": 0.97
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "INT",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic governance, cooperative production, transparent reciprocity, and a stated cultural shift toward sufficiency over accumulation combine into a structural elimination of economic coercion: the document explicitly critiques \"work or starve\" dynamics and states that \"the village values sufficiency, not accumulation.\" 70%+ genuine autonomy in major life decisions is plausible given the removal of hierarchical, employment-based, and market-based coercion alike."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.77,
+      "probabilities": {
+       "asserted_met": 0.15,
+       "asserted_short": 0,
+       "not_asserted": 0.85
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "MS",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic workplace governance eliminates employer-employee coercion. Workers collectively determine conditions. However, market pressures remain—\"compete or close\" replaces \"work or starve.\""
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_short",
+      "confidence": 0.45,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.64,
+       "not_asserted": 0.36
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "NSD",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "A strong welfare safety net reduces \"work or starve\" coercion significantly. Unemployment benefits sufficient for dignified living reduce survival-based employment pressure."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.94,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.04,
+       "not_asserted": 0.96
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "PE",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic planning eliminates both market and state coercion. Individuals participate in consumption councils determining their own consumption bundles. Genuine voice in economic decisions."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.99,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0,
+       "not_asserted": 1
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p1",
+   "run": 3,
+   "unit": "UBI",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Core achievement—eliminates survival-based employment coercion. Pilots show 65-75% report increased autonomy. Genuine choice in employment because survival is not contingent on accepting any available job."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". Revealed preference here means observed behaviour of real people living under the system (for example more selective job changes, moving home by preference, staying in education without income pressure, starting businesses) that confirms what they report. Judge only what the text in the state itself says. Do not use outside knowledge.",
+      "criteria": {
+       "shown": "The text cites observed behaviour of real people living under the system that confirms their reported autonomy.",
+       "not_shown": "The text cites no observed behaviour of real people under the system; it describes mechanisms, design features, models, surveys of self-reports, or claims only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.33,
+      "probabilities": {
+       "asserted_met": 0.13,
+       "asserted_short": 0.32,
+       "not_asserted": 0.55
+      },
+      "type": "choice"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 0.96,
+      "probabilities": {
+       "not_shown": 0.98,
+       "shown": 0.02
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 1,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Public Trust Housing leadership has term limits, mandatory rotation and recall elections, and the merit juries are selected at random and rotated."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 0,
+       "shown": 1
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 1,
+   "unit": "INT",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Decisions taken in CDS can be reaffirmed, amended, revoked or reopened by its review module, and no managerial authority is delegated."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.92,
+      "probabilities": {
+       "not_shown": 0.04,
+       "shown": 0.96
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 1,
+   "unit": "MS",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Administrators serve two to five years and the general assembly may dismiss them and elect their replacements in the same session."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.99,
+      "probabilities": {
+       "not_shown": 0,
+       "shown": 1
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 1,
+   "unit": "NSD",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Sweden's prime minister lost a parliamentary confidence vote on 21 June 2021."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.71,
+      "probabilities": {
+       "not_shown": 0.14,
+       "shown": 0.86
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 1,
+   "unit": "PE",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Workers' and consumers' councils elect recallable and rotated representatives to their federations."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 0,
+       "shown": 1
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 1,
+   "unit": "DG",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Decentralization, wealth caps, cooperative ownership, democratic governance. Systematically distributes rather than concentrates power. Anti-hierarchy core to philosophy."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2b",
+   "run": 1,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "OpenResearch's randomised study gave $1,000 a month for three years to 1,000 low-income adults (control group $50 a month). Recipients' unemployment spells were about a month longer, with fewer job applications; recipients who were looking for work were 5.5 points more likely to require interesting or meaningful work; recipients made more moves of home and neighbourhood."
+    },
+    "questions": {
+     "behaviour": {
+      "type": "noul",
+      "instructions": "Does the text report observed behaviour of the people who received the transfers, such as their job search, job choices, or moves of home?"
+     },
+     "self_report_compared": {
+      "type": "noul",
+      "instructions": "Does the text report the share of recipients who say they have genuine autonomy, and compare that self-reported share with their observed behaviour?"
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". It is met only when observed behaviour of real people is compared with, and confirms, what they report about their own autonomy. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text compares observed behaviour with self-reported autonomy and the behaviour confirms the reports.",
+       "not_shown": "The text does not compare observed behaviour with self-reported autonomy."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "behaviour": {
+      "noul": 0.98,
+      "type": "noul"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "self_report_compared": {
+      "noul": 0.05,
+      "type": "noul"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "CCO unconditional provision eliminates survival-based employment coercion. Modeling shows 75%+ report genuine autonomy. PTF housing removes landlord coercion."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.91,
+      "probabilities": {
+       "asserted_met": 0.9299999999999999,
+       "asserted_short": 0.01,
+       "not_asserted": 0.06
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "DG",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Universal basic services (healthcare, education, housing, transport) eliminate survival coercion. Reduced working hours and commons access provide genuine autonomy in how to spend time."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.95,
+      "probabilities": {
+       "asserted_met": 0.04,
+       "asserted_short": 0,
+       "not_asserted": 0.96
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "FALC",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Post-scarcity eliminates economic coercion entirely. No survival pressure to accept any terms. Material abundance creates genuine freedom from necessity."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.84,
+      "probabilities": {
+       "asserted_met": 0.11,
+       "asserted_short": 0,
+       "not_asserted": 0.89
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "INT",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic governance, cooperative production, transparent reciprocity, and a stated cultural shift toward sufficiency over accumulation combine into a structural elimination of economic coercion: the document explicitly critiques \"work or starve\" dynamics and states that \"the village values sufficiency, not accumulation.\" 70%+ genuine autonomy in major life decisions is plausible given the removal of hierarchical, employment-based, and market-based coercion alike."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.6,
+      "probabilities": {
+       "asserted_met": 0.74,
+       "asserted_short": 0,
+       "not_asserted": 0.26
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "MS",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic workplace governance eliminates employer-employee coercion. Workers collectively determine conditions. However, market pressures remain—\"compete or close\" replaces \"work or starve.\""
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_short",
+      "confidence": 0.48,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.66,
+       "not_asserted": 0.34
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "NSD",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "A strong welfare safety net reduces \"work or starve\" coercion significantly. Unemployment benefits sufficient for dignified living reduce survival-based employment pressure."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.95,
+      "probabilities": {
+       "asserted_met": 0.01,
+       "asserted_short": 0.02,
+       "not_asserted": 0.97
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "PE",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic planning eliminates both market and state coercion. Individuals participate in consumption councils determining their own consumption bundles. Genuine voice in economic decisions."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.96,
+      "probabilities": {
+       "asserted_met": 0.03,
+       "asserted_short": 0,
+       "not_asserted": 0.97
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 1,
+   "unit": "UBI",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Core achievement—eliminates survival-based employment coercion. Pilots show 65-75% report increased autonomy. Genuine choice in employment because survival is not contingent on accepting any available job."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.15,
+      "probabilities": {
+       "asserted_met": 0.28,
+       "asserted_short": 0.29,
+       "not_asserted": 0.43
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 2,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Public Trust Housing leadership has term limits, mandatory rotation and recall elections, and the merit juries are selected at random and rotated."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 0,
+       "shown": 1
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 2,
+   "unit": "INT",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Decisions taken in CDS can be reaffirmed, amended, revoked or reopened by its review module, and no managerial authority is delegated."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.91,
+      "probabilities": {
+       "not_shown": 0.05,
+       "shown": 0.95
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 2,
+   "unit": "MS",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Administrators serve two to five years and the general assembly may dismiss them and elect their replacements in the same session."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.99,
+      "probabilities": {
+       "not_shown": 0,
+       "shown": 1
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 2,
+   "unit": "NSD",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Sweden's prime minister lost a parliamentary confidence vote on 21 June 2021."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 0.7,
+      "probabilities": {
+       "not_shown": 0.15,
+       "shown": 0.85
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 2,
+   "unit": "PE",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Workers' and consumers' councils elect recallable and rotated representatives to their federations."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 0,
+       "shown": 1
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2a",
+   "run": 2,
+   "unit": "DG",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "Decentralization, wealth caps, cooperative ownership, democratic governance. Systematically distributes rather than concentrates power. Anti-hierarchy core to philosophy."
+    },
+    "questions": {
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"removal/replacement mechanisms functional\". It is met when the text describes a mechanism by which the people subject to an authority can remove or replace the people who hold that authority: recall, elections at fixed terms, term limits, rotation, or selection by lot for limited terms; or, where no authority is delegated to office-holders, a way for the people bound by decisions to revoke or reopen those decisions. A stated commitment to democracy, accountability, decentralisation or distributed power is a goal, not a mechanism, and does not meet the clause. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text describes such a mechanism.",
+       "not_shown": "The text describes no such mechanism; it states goals, values, structures or outcomes only."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2b",
+   "run": 2,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "evidence": "OpenResearch's randomised study gave $1,000 a month for three years to 1,000 low-income adults (control group $50 a month). Recipients' unemployment spells were about a month longer, with fewer job applications; recipients who were looking for work were 5.5 points more likely to require interesting or meaningful work; recipients made more moves of home and neighbourhood."
+    },
+    "questions": {
+     "behaviour": {
+      "type": "noul",
+      "instructions": "Does the text report observed behaviour of the people who received the transfers, such as their job search, job choices, or moves of home?"
+     },
+     "self_report_compared": {
+      "type": "noul",
+      "instructions": "Does the text report the share of recipients who say they have genuine autonomy, and compare that self-reported share with their observed behaviour?"
+     },
+     "clause2": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist\". It is met only when observed behaviour of real people is compared with, and confirms, what they report about their own autonomy. Judge only what the text in the state says.",
+      "criteria": {
+       "shown": "The text compares observed behaviour with self-reported autonomy and the behaviour confirms the reports.",
+       "not_shown": "The text does not compare observed behaviour with self-reported autonomy."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "behaviour": {
+      "noul": 0.98,
+      "type": "noul"
+     },
+     "clause2": {
+      "choice": "not_shown",
+      "confidence": 1,
+      "probabilities": {
+       "not_shown": 1,
+       "shown": 0
+      },
+      "type": "choice"
+     },
+     "self_report_compared": {
+      "noul": 0.04,
+      "type": "noul"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "CCO",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "CCO unconditional provision eliminates survival-based employment coercion. Modeling shows 75%+ report genuine autonomy. PTF housing removes landlord coercion."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.91,
+      "probabilities": {
+       "asserted_met": 0.94,
+       "asserted_short": 0.01,
+       "not_asserted": 0.05
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "DG",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Universal basic services (healthcare, education, housing, transport) eliminate survival coercion. Reduced working hours and commons access provide genuine autonomy in how to spend time."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.93,
+      "probabilities": {
+       "asserted_met": 0.04,
+       "asserted_short": 0,
+       "not_asserted": 0.96
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "FALC",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Post-scarcity eliminates economic coercion entirely. No survival pressure to accept any terms. Material abundance creates genuine freedom from necessity."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.84,
+      "probabilities": {
+       "asserted_met": 0.1,
+       "asserted_short": 0,
+       "not_asserted": 0.9
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "INT",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic governance, cooperative production, transparent reciprocity, and a stated cultural shift toward sufficiency over accumulation combine into a structural elimination of economic coercion: the document explicitly critiques \"work or starve\" dynamics and states that \"the village values sufficiency, not accumulation.\" 70%+ genuine autonomy in major life decisions is plausible given the removal of hierarchical, employment-based, and market-based coercion alike."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_met",
+      "confidence": 0.64,
+      "probabilities": {
+       "asserted_met": 0.76,
+       "asserted_short": 0,
+       "not_asserted": 0.24
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "MS",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic workplace governance eliminates employer-employee coercion. Workers collectively determine conditions. However, market pressures remain—\"compete or close\" replaces \"work or starve.\""
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "asserted_short",
+      "confidence": 0.49,
+      "probabilities": {
+       "asserted_met": 0,
+       "asserted_short": 0.66,
+       "not_asserted": 0.34
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "NSD",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "A strong welfare safety net reduces \"work or starve\" coercion significantly. Unemployment benefits sufficient for dignified living reduce survival-based employment pressure."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.95,
+      "probabilities": {
+       "asserted_met": 0.01,
+       "asserted_short": 0.02,
+       "not_asserted": 0.97
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "PE",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Democratic planning eliminates both market and state coercion. Individuals participate in consumption councils determining their own consumption bundles. Genuine voice in economic decisions."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.97,
+      "probabilities": {
+       "asserted_met": 0.02,
+       "asserted_short": 0,
+       "not_asserted": 0.98
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  },
+  {
+   "part": "p2c",
+   "run": 2,
+   "unit": "UBI",
+   "request": {
+    "model": "jev-1.13.0",
+    "state": {
+     "rationale": "Core achievement—eliminates survival-based employment coercion. Pilots show 65-75% report increased autonomy. Genuine choice in employment because survival is not contingent on accepting any available job."
+    },
+    "questions": {
+     "clause1": {
+      "type": "choice",
+      "instructions": "The clause under test is: \"≥70% report genuine autonomy in major life decisions\". Judge only what the text in the state itself says. Do not use outside knowledge about the economic system it describes.",
+      "criteria": {
+       "asserted_met": "The text states, projects, or judges plausible that at least 70% of people report, or would report, genuine autonomy in major life decisions.",
+       "asserted_short": "The text states a share below 70%, or states that people's major life decisions remain compelled by survival or market pressure.",
+       "not_asserted": "The text states no share of people reporting genuine autonomy in major life decisions, and does not say the share is below 70%."
+      }
+     }
+    }
+   },
+   "response": {
+    "answers": {
+     "clause1": {
+      "choice": "not_asserted",
+      "confidence": 0.1,
+      "probabilities": {
+       "asserted_met": 0.29,
+       "asserted_short": 0.31,
+       "not_asserted": 0.4
+      },
+      "type": "choice"
+     }
+    },
+    "model": "jev-1.13.0"
+   },
+   "error": null
+  }
+ ]
+}

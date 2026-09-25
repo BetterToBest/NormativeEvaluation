@@ -1,0 +1,36 @@
+Jev interpretation check, part (b)'s ninth group (jev_s50_2026-09-25.json; jev-1.13.0 (TypeSafe AI), via the Composio Jev toolkit; runs [1, 2])
+
+PASS every located-evidence excerpt in a state is verbatim in the unit's clause estimates (rescoring_s50.py)
+PASS every recorded request equals the request rebuilt here from its sources (11 states, 2 runs, 22 records)
+PASS every record is answered, by jev-1.13.0, for every question asked
+
+  unit  crit  clause   pass      Jev (modal)          P(choice)   confidence  agree
+  NSD   C5.2  clause1  cleared   shown                0.98        0.96-0.97   yes
+  NSD   C5.2  clause2  not shown partial              0.74-0.77   0.65-0.70   yes
+  LM    C5.2  clause1  not shown planned_only         0.81        0.74-0.75   yes
+  LM    C5.2  clause2  not shown not_stated           0.96        0.94-0.95   yes
+  SC    C5.2  clause1  cleared   short                0.64-0.66   0.53-0.55   NO
+  SC    C5.2  clause2  not shown not_stated           0.89-0.91   0.85-0.88   yes
+  MMT   C5.2  clause1  short     short                1.00        0.99        yes
+  MMT   C5.2  clause2  cleared   shown                0.53        0.37        yes
+  IF    C5.2  clause1  cleared   shown                0.81-0.82   0.74-0.76   yes
+  IF    C5.2  clause2  cleared   shown                0.85-0.87   0.80-0.82   yes
+  IF    C5.2  clause4  not shown not_stated           0.66-0.69   0.48-0.53   yes
+  CCO   C5.2  clause1  not shown short                0.56-0.59   0.41-0.45   yes
+  CCO   C5.2  clause2  not shown planned_only         0.90        0.86        yes
+  NSD   C5.4  clause1  cleared   asserted_met         0.86-0.88   0.78-0.82   yes
+  NSD   C5.4  clause3  cleared   component_only       0.51-0.57   0.26-0.36   NO
+  NSD   C5.4  clause2  cleared   measures_opposition  0.99        0.98-0.99   yes
+  CCO   C5.4  clause1  cleared   component_only       0.82-0.87   0.72-0.80   NO
+  CCO   C5.4  clause2  not shown not_shown            0.67-0.70   0.50-0.54   yes
+  CCO   C5.4  clause3  not shown not_shown            0.97-0.99   0.94-0.97   yes
+  PE    C5.5  clause1  not shown not_shown            1.00        1.00        yes
+  PE    C5.5  clause4  not shown not_shown            1.00        1.00        yes
+  MC    C5.5  clause3  cleared   shown                0.98        0.96-0.97   yes
+  MC    C5.5  clause4  cleared   shown                0.66-0.73   0.48-0.59   yes
+
+  (* the runs differ; the modal answer is shown)
+  every question returned the same option in every run: yes
+  disagreements (flag-only; decision 50.2): SC C5.2 clause1, NSD C5.4 clause3, CCO C5.4 clause1
+
+SUMMARY: 20 of 23 clause verdicts agree; 3 flagged for review; 0 checks failed
