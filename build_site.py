@@ -396,9 +396,11 @@ class Site:
         depth = rel.count("/")
         root = self.base if absolute else "../" * depth
         M, cfg = self.M, self.M["cfg"]
-        nav = "".join(
-            f'<li><a href="{root}{n["href"]}"{" aria-current=\"page\"" if n["id"] == pid else ""}>{esc(n["label"])}</a></li>'
-            for n in cfg["nav"])
+        nav_items = []
+        for n in cfg["nav"]:
+            aria = ' aria-current="page"' if n["id"] == pid else ""
+            nav_items.append(f'<li><a href="{root}{n["href"]}"{aria}>{esc(n["label"])}</a></li>')
+        nav = "".join(nav_items)
         banner = ""
         if M["preview"]:
             banner = ('<p class="banner" role="note">Preview build. It shows the corpus\'s published scores '
@@ -868,12 +870,21 @@ def page_thresholds(S):
     W = M["wjp"]
     e = W["entry"]
     clause = M["cmap"]["C4.6"]["definition"]["clauses"][e["clause"][1] - 1]
-    refs_rows = "".join(
-        f'<tr data-code="{r["code"]}"{" class=\"meets\"" if r["value"] >= W["bar"] else ""}><th scope="row">{esc(r["name"])}</th><td>{esc(M["smap"][r["system"]]["short"])}</td>'
-        f'<td class="num">{r["value"]:.2f}</td><td class="verdict">{"meets" if r["value"] >= W["bar"] else "does not meet"}</td></tr>'
-        for r in W["refs"])
+    refs_rows_list = []
+    for r in W["refs"]:
+        meets_class = ' class="meets"' if r["value"] >= W["bar"] else ""
+        meets_text = "meets" if r["value"] >= W["bar"] else "does not meet"
+        refs_rows_list.append(
+            f'<tr data-code="{r["code"]}"{meets_class}><th scope="row">{esc(r["name"])}</th><td>{esc(M["smap"][r["system"]]["short"])}</td>'
+            f'<td class="num">{r["value"]:.2f}</td><td class="verdict">{meets_text}</td></tr>'
+        )
+    refs_rows = "".join(refs_rows_list)
     notes = " ".join(esc(v) for v in e["not_covered"].values())
-    ed_opts = "".join(f'<option value="{ed}"{" selected" if ed == "2025" else ""}>{ed}</option>' for ed in W["editions"])
+    ed_opts_list = []
+    for ed in W["editions"]:
+        selected = ' selected' if ed == "2025" else ""
+        ed_opts_list.append(f'<option value="{ed}"{selected}>{ed}</option>')
+    ed_opts = "".join(ed_opts_list)
     wjp_html = f"""
 <section class="explorer" id="{e['id']}-explorer" data-wjp>
 <h3>C4.6, clause 3: regulation without improper influence</h3>
