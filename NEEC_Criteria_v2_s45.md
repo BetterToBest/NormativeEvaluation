@@ -254,6 +254,13 @@ and protocol draft.9 (Appendix B regenerated, seven asserted edits; 47.2, 48.3).
 - **49.12 (optional polish).** Harness check 94, a negative control: with the copied `docs/index.html` replaced by
   `docs/404.html`, `build_site.py --check` must exit 1 and name the one file that differs, so check 93 cannot pass
   vacuously.
+- **49.13 (correction; found by the site package, section 5).** The repository's hand-maintained `llms.txt` said
+  that NEEC has 26 criteria, that `criteria.json` holds "the 26 criteria", and that the protocol is version
+  2.0-draft.5. It now says that the published scores are on 26 criteria and version 2.0 has 29, whose three new
+  criteria are not yet scored; that `criteria.json` holds the 29 of version 2.0; and draft.9. Not changed, as the
+  package advises: `NEEC_CONTRIBUTING.md` (lines 5, 51 and 102) and `CITATION.cff`'s abstract say 26 criteria,
+  which is true of the published corpus and is restated when version 2.0 is released; `CITATION.cff`'s `url`
+  still names the version 1 site, and can name the new site once a session has seen it live.
 
 ## 2. Method
 

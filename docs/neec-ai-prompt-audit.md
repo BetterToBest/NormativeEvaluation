@@ -179,7 +179,7 @@ C5.5 Cultural Adaptability
   "neec_check": "1",
   "mode": "audit",
   "system": "[name the system; for a national economy, also the date to score it at]",
-  "criteria_file_md5": "77ffc319",
+  "criteria_file_md5": "8876e547",
   "scope_class": "",
   "scored_at_date": "",
   "model": "",

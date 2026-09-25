@@ -1,6 +1,6 @@
 build_criteria.py (version 2.3) -- NEEC v2.0 criteria
 ============================================================================================
-Base: criteria_s44_snapshot.json (md5 d4b78634, 26 criteria); record: NEEC_Criteria_v2_s45.md (md5 e639d4bd, 26 blocks); clause splits: SCORING_PROTOCOL_s44_snapshot.md (md5 bbee2c45)
+Base: criteria_s44_snapshot.json (md5 d4b78634, 26 criteria); record: NEEC_Criteria_v2_s45.md (md5 08cb0401, 26 blocks); clause splits: SCORING_PROTOCOL_s44_snapshot.md (md5 bbee2c45)
 
 crit   class codes                  threshold  clauses  fields changed
 C1.1   I     K6, R2                 -                2  requirement, measurement_protocol, indicators
@@ -61,5 +61,5 @@ Assertions A1-A7:
   A6: pass
   A7: pass
 
-Wrote criteria.json: 29 criteria, md5 77ffc319.
+Wrote criteria.json: 29 criteria, md5 8876e547.
 Wrote SCORING_PROTOCOL.md: 7 asserted edits and Appendix B regenerated from SCORING_PROTOCOL_s44_snapshot.md, md5 dde8e834.
