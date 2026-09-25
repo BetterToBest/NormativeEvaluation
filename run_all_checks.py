@@ -179,9 +179,14 @@ session, NEEC_Site_Package_s49.md): build_site.py --check, which rebuilds docs/ 
 criteria.json, the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and
 site/, compares the result with docs/ file by file, and prints one line, which the harness also shows. Its inputs
 keep their subdirectories, so a check's files may now name paths in subdirectories. A negative control, in which
-the copied docs/index.html is replaced by docs/404.html, must fail with exit 1: 94 checks. Decisions 49.1 to 49.12
-are recorded in NEEC_Criteria_v2_s45.md, whose md5 criteria.json carries, so the build check's capture is renamed
-build_criteria_s49_output.txt and recaptured; nothing else in criteria.json or the protocol changes.
+the copied docs/index.html is replaced by docs/404.html, must fail with exit 1. Decisions 49.1 to 49.13 are
+recorded in NEEC_Criteria_v2_s45.md, whose md5 criteria.json carries, so the build check's capture is renamed
+build_criteria_s49_output.txt and recaptured; nothing else in criteria.json or the protocol changes. It adds
+rescoring_s49.py, part (b)'s eighth group: the nine part (b) units of C4.3 and C4.5 on the v2.0 clauses,
+CCO-PTF-CIP-SZH's C4.3 re-checked as class M on the same readings, part (a)'s three C4.5 units re-read, Nordic Social
+Democracy's C4.3 computed from the Eurostat figures the script holds, the consequences cumulatively with parts (a)
+to (b7) and decision 48.3, and the score ledger, with NEEC_Rescoring_s49.md checked against its generated tables:
+95 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1024,6 +1029,29 @@ S49_CHECKS.append(dict(S49_CHECKS[0], files={**S49_CHECKS[0]["files"], "docs/ind
                        name="build_site.py --check rejects a docs/ whose home page is replaced by another page "
                             "(negative control; exit 1 expected)",
                        stdout="build_site_check_negative_output.txt", expect_exit=1))
+
+# Session 49: part (b)'s eighth group, C4.3 and C4.5 on the v2.0 clauses, cumulative with parts (a) to (b7) and
+# decision 48.3 (appended after the site checks). It reads the v2.0 criteria.json, so it is not pinned.
+S49_CHECKS.append(
+    dict(name="rescoring_s49.py: rescoring pass part (b), eighth group, the 9 units of C4.3 and C4.5 on the v2.0 "
+              "clauses, CCO-PTF-CIP-SZH's C4.3 re-checked as class M, and part (a)'s 3 units of C4.5 re-read (D28); "
+              "Nordic Social Democracy's C4.3 from Eurostat; consequences with parts (a) to (b7) and 48.3, and the "
+              "score ledger; no corpus file changed",
+         cmd=["python", "rescoring_s49.py"],
+         files={k: k for k in ("rescoring_s49.py", "rescoring_s48.py", "rescoring_s47.py", "rescoring_s43.py",
+                               "rescoring_s42.py", "rescoring_s41.py", "rescoring_s40.py", "rescoring_s39.py",
+                               "rescoring_s38.py", "rescoring_s37.py", "r4_audit_s35.py", "criteria.json",
+                               "criteria_s47_snapshot.json", "criteria_s44_snapshot.json", "neec_corpus.json",
+                               "neec_scores.csv", "NEEC_Report_v1_6.md", "NEEC_Rescoring_s49.md",
+                               "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md", "NEEC_Georgism_LVT_scoring_scratch.md",
+                               "NEEC_MutualCredit_LETS_scoring_scratch.md", "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                               "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="rescoring_s49_output.txt", stderr=EMPTY))
 
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
