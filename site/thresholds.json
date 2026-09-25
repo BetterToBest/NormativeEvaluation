@@ -1,0 +1,264 @@
+{
+  "schema": "neec-site-thresholds/1",
+  "about": "The judgment calls the record marks as consequential, each with the alternative it records. Every entry cites the decisions it paraphrases; build_site.py checks that each decision and criterion exists, and prints each clause verbatim from criteria.json. Add an entry when a session records a new consequential bar or reading. An entry with 'interactive' set draws its explorer from data held in the repository.",
+  "entries": [
+    {
+      "id": "c46-regulators",
+      "title": "How free of influence must regulators be?",
+      "criteria": [
+        "C4.6"
+      ],
+      "clause": [
+        "C4.6",
+        3
+      ],
+      "adopted": "A World Justice Project sub-factor 6.2 score of 0.77 or more: the upper quartile of the 143 jurisdictions in the Index's 2025 edition, fixed as a figure so that later editions do not move it.",
+      "alternatives": [
+        "The median of the same edition, 0.61."
+      ],
+      "why": "The clause asks for regulation applied without improper influence, which describes an absence, not a norm; the median is by construction the typical jurisdiction. Where version 2.0 reads a clause from a rating it takes the rating's top group, as C2.6 does with Freedom House. A bar re-derived each edition would be met by a quarter of the world whatever the world does; fixed once, it stays absolute.",
+      "effect": "On the 2025 edition the choice changes the verdict for two reference economies only, Qatar (0.66) and China (0.61). This is one clause of three, and a score of 1.0 on C4.6 needs all three; no C4.6 score has been set yet.",
+      "decisions": [
+        "47.1",
+        "48.1"
+      ],
+      "status": "Set under the owner's delegation, then confirmed (48.1).",
+      "data": "wjp_rol_sf62_2012_2025.csv, every edition from 2012-2013 to 2025",
+      "interactive": "wjp",
+      "reference": {
+        "SQ": [
+          "USA"
+        ],
+        "NSD": [
+          "DNK",
+          "FIN",
+          "NOR",
+          "SWE"
+        ],
+        "SG": [
+          "SGP"
+        ],
+        "QA": [
+          "QAT"
+        ],
+        "CN": [
+          "CHN"
+        ]
+      },
+      "not_covered": {
+        "CPS": "The Index covers neither the Soviet Union, Cuba nor North Korea, so this clause cannot be read from it for Centrally Planned Socialism.",
+        "NSD": "Iceland, one of the five Nordic economies, is not in the Index."
+      },
+      "reference_source": "criteria_v2_s45.py, section 5 (REF)"
+    },
+    {
+      "id": "c12b-wealth-gini",
+      "title": "How equal must wealth be?",
+      "criteria": [
+        "C1.2b"
+      ],
+      "clause": [
+        "C1.2b",
+        1
+      ],
+      "adopted": "A wealth Gini coefficient below 0.35.",
+      "alternatives": [],
+      "why": "Carried from version 1; version 2.0 changed only the text around it (revision class W). The published retrofit notes record wealth Ginis of 0.65 to 0.75 for Nordic Social Democracy and 0.85 for Status Quo Market Capitalism (neec_scores.csv).",
+      "effect": "Not computed. The wealth-distribution series are not in the repository yet, so this bar cannot be moved here.",
+      "decisions": [
+        "45.2"
+      ],
+      "status": "Settled in Session 45 (48.1 notes that no Gini bar is open).",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c44-accountability",
+      "title": "Whose decisions count as accountable?",
+      "criteria": [
+        "C4.4"
+      ],
+      "clause": [
+        "C4.4",
+        1
+      ],
+      "adopted": "The share of employment in organizations whose investment, production and employment decisions answer to those they affect, at least 80%.",
+      "alternatives": [
+        "Decisions made within law by an elected legislature count as accountable."
+      ],
+      "why": "Under the alternative, C4.4 would measure only whether power can be removed, and it would contradict the published reading of Stakeholder Capitalism.",
+      "effect": "Recorded in the rescoring pass, not yet published: the alternative would raise Nordic Social Democracy's C4.4 to 1.0 and restore CCO-PTF-CIP-SZH's to 1.0. Because the adopted reading lowers the owner's own design, the owner has been asked to confirm it.",
+      "decisions": [
+        "48.3"
+      ],
+      "status": "Set under the owner's delegation; flagged for the owner's confirmation.",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c11-poverty-line",
+      "title": "Which poverty line?",
+      "criteria": [
+        "C1.1",
+        "C1.4"
+      ],
+      "clause": null,
+      "adopted": "The World Bank Societal Poverty Line, which rises with median income (a floor at the international line, plus half the median), in 2021 purchasing-power-parity dollars.",
+      "alternatives": [
+        "The Bank's fixed $8.30 line."
+      ],
+      "why": "The Societal line tracks the cost of basic needs as incomes rise; a fixed line understates basic needs in high-income economies.",
+      "effect": "Measured poverty in rich economies becomes close to relative, so reductions of 90% are rare.",
+      "decisions": [
+        "45.3"
+      ],
+      "status": "Confirmed by the owner (45.3).",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c12a-price-basis",
+      "title": "Wealth building: an absolute bar or a relative one?",
+      "criteria": [
+        "C1.2a"
+      ],
+      "clause": [
+        "C1.2a",
+        1
+      ],
+      "adopted": "$60,000 of median net wealth accumulated over 20 years, in constant 2019 US dollars at purchasing-power parity.",
+      "alternatives": [
+        "A bar relative to each economy's own costs of living, like the ranges of median expenses that version 2.0 removed."
+      ],
+      "why": "2019 is the year the Paper calibrated the figure on, and purchasing-power parity is the international method its own justification names. The removed ranges could not be reproduced, and their $70,000 figure contradicted the threshold.",
+      "effect": "Raises the bar for middle-income contexts relative to the removed ranges; China is the only middle-income context in the corpus.",
+      "decisions": [
+        "45.3"
+      ],
+      "status": "Confirmed by the owner (45.3); the relative alternative is recorded for the owner.",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c26-civil-liberties",
+      "title": "How strong must civil liberties be?",
+      "criteria": [
+        "C2.6"
+      ],
+      "clause": [
+        "C2.6",
+        1
+      ],
+      "adopted": "A Freedom House civil-liberties score of 53 or more out of 60, the top band of its former 1 to 7 rating.",
+      "alternatives": [],
+      "why": "Its fifteen questions cover expression and belief, association, rule of law and personal autonomy, and leave out the electoral questions that C2.4 and C4.4 measure. V-Dem's Civil Liberties Index is the cross-check; where the two disagree about the threshold, the call is flagged.",
+      "effect": "Not computed. The Freedom House series are not in the repository yet.",
+      "decisions": [
+        "45.3"
+      ],
+      "status": "Confirmed by the owner (45.3).",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c36-productivity",
+      "title": "Growth, or productivity?",
+      "criteria": [
+        "C3.6"
+      ],
+      "clause": null,
+      "adopted": "Real output per hour worked and total factor productivity (Penn World Table 11.0), each non-declining over 20 years.",
+      "alternatives": [
+        "Output growth, which the record sets aside."
+      ],
+      "why": "Defined on productivity rather than output, so that a design which chooses shorter hours or lower consumption can pass. Total factor productivity is a separate clause because output per hour can rise on capital accumulation alone while methods stagnate.",
+      "effect": "Not computed. No C3.6 score has been set yet.",
+      "decisions": [
+        "45.3"
+      ],
+      "status": "Confirmed by the owner (45.3).",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c42-carbon",
+      "title": "How fast must emissions fall?",
+      "criteria": [
+        "C4.2"
+      ],
+      "clause": [
+        "C4.2",
+        1
+      ],
+      "adopted": "Consumption-based carbon emissions falling by at least 3.8% a year: the rate of a 35% cut over 2019 to 2030, the low end of the IPCC's 1.5 °C range (AR6).",
+      "alternatives": [],
+      "why": "Consumption-based accounts charge an economy with the emissions of what it consumes, wherever they are produced. The rate taken from the low end of the range applies at any date.",
+      "effect": "Not computed. The emissions series are not in the repository yet.",
+      "decisions": [
+        "45.3"
+      ],
+      "status": "Confirmed by the owner (45.3).",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c35-unpaid-costs",
+      "title": "What counts as a cost pushed onto others?",
+      "criteria": [
+        "C3.5"
+      ],
+      "clause": [
+        "C3.5",
+        4
+      ],
+      "adopted": "The IMF's implicit fossil-fuel subsidies, the unpriced environmental cost of fuel use as a share of GDP, taken as the published lower bound of externalized costs, with GDP standing for total costs.",
+      "alternatives": [],
+      "why": "No agency publishes externalized costs in full; this series is the published lower bound.",
+      "effect": "Not computed. The series is not in the repository yet.",
+      "decisions": [
+        "45.3"
+      ],
+      "status": "Confirmed by the owner (45.3).",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "c41-debt",
+      "title": "Is public debt an ecological question?",
+      "criteria": [
+        "C4.1"
+      ],
+      "clause": null,
+      "adopted": "Intergenerational justice measured as fiscal and wealth sustainability: general government gross debt (IMF) and positive net national saving.",
+      "alternatives": [
+        "The version 1 derivation, from N12 and N6 (Ecological Compliance)."
+      ],
+      "why": "After v2.0 moved its ecological content elsewhere, nothing ecological remained in C4.1; fiscal space is the content of N5, so its derivation changes from N12 and N6 to N12 and N5.",
+      "effect": "The implicit weight of ecological compliance (N6) fell from 3.8% to 1.8% on 28 criteria; Harm Internalization (C4.6) returns it to 3.4% of 29.",
+      "decisions": [
+        "45.3"
+      ],
+      "status": "Confirmed by the owner (45.3).",
+      "data": null,
+      "interactive": null
+    },
+    {
+      "id": "tier-bands",
+      "title": "Should the tier bands grow with the number of criteria?",
+      "criteria": [],
+      "clause": null,
+      "adopted": "Integer counts of structural failures: 0 to 2, 3 to 5, and 6 or more, on 29 criteria as on 26.",
+      "alternatives": [
+        "Proportional bands, scaled to the number of criteria."
+      ],
+      "why": "The owner kept the integer bands and asked that the choice be disclosed; Paper v2.0's Appendix A.4 reports the proportional alternative.",
+      "effect": "Not computed yet. The proportional tiers are part of the stage that applies the rescoring pass.",
+      "decisions": [
+        "45.1"
+      ],
+      "status": "The owner's decision (45.1).",
+      "data": null,
+      "interactive": null
+    }
+  ]
+}

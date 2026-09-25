@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 92 reproducibility checks
+run_all_checks.py -- 94 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 92 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 b4c9e227)
+          README.md == README.md (md5 3c307aad)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -350,7 +350,18 @@ run_all_checks.py -- 92 reproducibility checks
           stdout == rescoring_s48_output.txt (md5 5de0cba5)
           stderr == (empty) (md5 d41d8cd9)
 
+[93] PASS  build_site.py --check: the public site docs/ equals what build_site.py generates from criteria.json, the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and site/ (decision 49.7)
+          site matches its sources: 77 files, scores not yet published
+          stdout == build_site_check_output.txt (md5 6abfe096)
+          stderr == (empty) (md5 d41d8cd9)
+
+[94] PASS  build_site.py --check rejects a docs/ whose home page is replaced by another page (negative control; exit 1 expected)
+          exit status 1, as expected
+          site differs from its sources: 1 of 77 files (index.html); run python3 build_site.py
+          stdout == build_site_check_negative_output.txt (md5 119a10e0)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 92 passed, 0 failed, 0 skipped (of 92).
+SUMMARY: 94 passed, 0 failed, 0 skipped (of 94).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method | NEEC</title>
+<meta name="description" content="How NEEC scores a system: 29 criteria, three marks, clause-by-clause thresholds and tiers set by structural failures.">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="build_site.py 1.0">
+<link rel="canonical" href="https://bettertobest.github.io/NormativeEvaluation/method.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Method">
+<meta property="og:description" content="How NEEC scores a system: 29 criteria, three marks, clause-by-clause thresholds and tiers set by structural failures.">
+<meta property="og:url" content="https://bettertobest.github.io/NormativeEvaluation/method.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/neec.css">
+<link rel="alternate" type="text/plain" href="llms.txt" title="A plain-text guide for AI systems">
+<link rel="alternate" type="application/json" href="data/neec.json" title="The site's data">
+
+</head>
+<body class="p-method">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<a class="wordmark" href="index.html" aria-label="NEEC home"><svg class="wm-marks" viewBox="0 0 46 14" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="5.5" class="wm1"/><circle cx="23" cy="7" r="5" class="wm-ring"/><path d="M23 2 a5 5 0 0 1 0 10z" class="wm1"/><circle cx="39" cy="7" r="5" class="wm-ring wm0"/></svg><span>NEEC</span></a>
+<nav aria-label="Main"><ul><li><a href="findings.html">Findings</a></li><li><a href="systems/index.html">Systems</a></li><li><a href="criteria/index.html">Criteria</a></li><li><a href="thresholds.html">Thresholds</a></li><li><a href="method.html" aria-current="page">Method</a></li><li><a href="replicate.html">Replicate</a></li><li><a href="contribute.html">Contribute</a></li></ul></nav>
+</header>
+
+<main id="main">
+<h1>Method</h1>
+<p class="lede">NEEC asks every system the same question in the same words: does the evidence show that it meets each of 29 stated conditions? This page gives the rules in plain terms. The <a href="https://github.com/BetterToBest/NormativeEvaluation/blob/main/SCORING_PROTOCOL.md">scoring protocol</a> states them in full.</p>
+<h2>What "normative" means here</h2>
+<p>The criteria describe what an economy ought to achieve. Each is derived from stated normative principles, which its page names as its roots. They are claims about what matters, not descriptions of what is typical, so you can reject a criterion or a threshold and still check whether a score follows from it. The <a href="thresholds.html">Thresholds</a> page lists the judgment calls and their alternatives.</p>
+<h2>Five domains</h2>
+<p>Each domain asks one question and holds five or six criteria, each worth one point: material security, human autonomy, system resilience, ethical integrity and implementation viability. Their questions and criteria are on the <a href="criteria/index.html">Criteria</a> page.</p>
+<h2>Three marks</h2>
+<dl class="marks-def">
+<div><dt><span class="mk s10" aria-hidden="true"></span>1.0, pass</dt><dd>The system robustly and structurally meets the criterion's Pass Threshold, every clause shown by named evidence, under normal conditions and, where the criterion specifies it, under stress. A pass says the threshold is cleared, not that the system is perfect.</dd></div>
+<div><dt><span class="mk s05" aria-hidden="true"></span>0.5, partial</dt><dd>A genuine mechanism that does not clear the threshold robustly: it falls short of the figure, holds only under favourable or untested conditions, covers only part of the population, or rests on sources that are genuinely ambiguous.</dd></div>
+<div><dt><span class="mk s00" aria-hidden="true"></span>0.0, structural failure</dt><dd>No structural mechanism addresses the criterion; or the system treats its concern as illegitimate; or the best evidence shows performance far below the threshold, with no credible pathway to close the gap under the system's own logic.</dd></div>
+</dl>
+<p>A scorer reasons about the evidence first, then rounds once, at the level of the criterion.</p>
+<h2>Clause by clause</h2>
+<p>Most thresholds have several clauses. A 1.0 needs every clause shown met on its own evidence, and a clause the evidence does not address counts as not shown. The rule followed an audit which found that many earlier scores of 1.0 did not show every clause; version 2.0 re-estimates them (decision D28).</p>
+<h2>Tiers count failures, not points</h2>
+<p>A system's tier depends only on its number of structural failures: 0 to 2, Potentially Adequate; 3 to 5, Partially Adequate; 6 or more, Structurally Inadequate. A 0.5 is never a failure. So a system with a higher total can sit in a lower tier than one with fewer points and fewer failures, and weighting the domains differently can reorder the totals but never the tiers.</p>
+<h2>Three kinds of system</h2>
+<p>Every entry declares its kind before it is scored, because the kind decides how a threshold written for a whole population is read.</p>
+<ul>
+<li><strong>A mechanism</strong> is an institution, instrument or policy family operating inside a wider economy, such as a land value tax or mutual credit.</li>
+<li><strong>A configured national economy</strong> is an existing or historical national economy, scored as configured at a stated date, such as Singapore's state capitalism.</li>
+<li><strong>A comprehensive system</strong> is a design for a whole economy, scored as its own sources specify it.</li>
+</ul>
+<h2>Evidence</h2>
+<p>A system in operation is scored from documented outcomes; a historical one from its record, collapse included; a design from its stated mechanisms, with confidence calibrated by the record of the real components it relies on. Sources are spread across the founding literature, peer-reviewed work, implementation records and critics from more than one direction. Where a reasonable scorer could land elsewhere, the scoring document flags the call and names the alternative.</p>
+<h2>Weights</h2>
+<p>The totals weight every criterion equally. Appendix A.4 of the <a href="https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Paper_v1_4.md">Paper</a> tests three alternative weightings; the <a href="thresholds.html#weights">Thresholds</a> page lets you try them, or set your own.</p>
+<h2>How the framework grows</h2>
+<p>NEEC is a living framework. New systems can be scored, and new criteria added as evidence accumulates and new threats to economic security appear. Changes follow the same discipline as scores. A criterion joins only through a recorded decision and a new version of the criteria: version 2.0 added three, on civil liberties and the rule of law, productive and innovative capacity, and harm internalization. A new system is scored in its own document under the protocol, then inserted by a separate maintainers' pass. Every methodological decision is recorded with its reason, in <a href="https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Criteria_v2_s45.md">the criteria record</a> and the protocol's decision register; every change is checked by the harness before it is merged; and every working session is published as a <a href="https://github.com/BetterToBest/NormativeEvaluation/releases">release</a>.</p>
+<h2 id="disclosure">Disclosure</h2>
+<p>NEEC is written by Duke Johnson and Claude (Anthropic). Duke Johnson designed <a href="https://bettertobest.github.io/research-hub/" target="_blank" rel="noopener">CCO-PTF-CIP-SZH<span class="vh"> (opens the Research Hub in a new tab)</span></a>, one of the scored systems: four of the five components of his Compassionism framework, scored as one system. Claude does the scoring and the engineering. The Paper addresses this self-referential concern in its section 10.5. The published protocol, the evidence for every score, the registers of close calls and blind replication by scorers outside the project exist so that any score can be checked and contested. The first blind replication is <a href="https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_OstromCommons_replication_record.md">on the record</a>; the next is planned for CCO-PTF-CIP-SZH itself, with a replicator outside the Claude model family.</p>
+<h2>Limits</h2>
+<p>A score is a judgment against a stated threshold, made from the evidence available when the system was scored; it is not a measurement, and evidence dates. A few clauses ask for quantities no agency publishes; for those, a 1.0 needs evidence the scorer names, so in practice they separate only 0.0 from 0.5 until such evidence exists. A comparison across different kinds of system is only as fair as the scope rules that make it, and the protocol states those rules so that they can be contested.</p>
+
+</main>
+<footer class="colophon">
+<p>NEEC is part of the <a href="https://bettertobest.github.io/research-hub/">Better To Best Research Hub</a>. Written by Duke Johnson and Claude (Anthropic).
+Text and data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<p><a href="https://github.com/BetterToBest/NormativeEvaluation">Repository</a> <a href="replicate.html">Replicate</a> <a href="contribute.html">Report an error</a> <a href="llms.txt">For AI systems</a></p>
+<p class="build">Built by <code>build_site.py</code> 1.0 from <code>criteria.json</code> (29 criteria, md5 af69e2e8) and <code>neec_corpus.json</code> (md5 ae19a9bc).</p>
+</footer>
+
+<script src="assets/neec.js" defer></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 23 (Session 48). Runs every verification and analysis script on file
+Version 24 (Session 49). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -174,6 +174,12 @@ rescoring_s48.py: C4.4's six units in the pass re-read on 48.3's measure (part (
 Nordic Social Democracy's clause 1 bound computed from its published inputs, the consequences with parts (a) to
 (b7), and the score ledger (every entry's published total, each part's change, its total now; the published totals
 checked against neec_scores.csv), with NEEC_Rescoring_s48.md checked against its generated tables: 92 checks.
+Version 24 (Session 49) adds the public site (decisions 49.1 to 49.10, from the site package prepared in a chat
+session, NEEC_Site_Package_s49.md): build_site.py --check, which rebuilds docs/ in its own temporary directory from
+criteria.json, the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and
+site/, compares the result with docs/ file by file, and prints one line, which the harness also shows. Its inputs
+keep their subdirectories, so a check's files may now name paths in subdirectories. A negative control, in which
+the copied docs/index.html is replaced by docs/404.html, must fail with exit 1: 94 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -987,10 +993,40 @@ S48_CHECKS = [
          stdout="rescoring_s48_output.txt", stderr=EMPTY),
 ]
 
+
+def tree(*roots):
+    """Every file under the given directories here, each mapped to itself (the copy keeps the subdirectories)."""
+    out = {}
+    for root in roots:
+        for r, _, fs in os.walk(os.path.join(HERE, root)):
+            for f in fs:
+                rel = os.path.relpath(os.path.join(r, f), HERE).replace(os.sep, "/")
+                out[rel] = rel
+    return dict(sorted(out.items()))
+
+
+# Session 49: the public site (appended after the version 23 checks). build_site.py --check rebuilds docs/ in its own
+# temporary directory from its inputs and site/, and compares the result with docs/, which is copied in whole.
+S49_CHECKS = [
+    dict(name="build_site.py --check: the public site docs/ equals what build_site.py generates from criteria.json, "
+              "the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and "
+              "site/ (decision 49.7)",
+         cmd=["python", "build_site.py", "--check"],
+         files={**{k: k for k in ("build_site.py", "criteria.json", "neec_corpus.json", "neec_scores.csv",
+                                  "summary_blocks_s28.json", "NEEC_Criteria_v2_s45.md", "NEEC_Paper_v1_4.md",
+                                  "wjp_rol_sf62_2012_2025.csv", "neec_weighting_robustness_analysis_v2.py")},
+                **tree("site", "docs", os.path.join(".github", "ISSUE_TEMPLATE"))},
+         stdout="build_site_check_output.txt", stderr=EMPTY, show_stdout=True),
+]
+S49_CHECKS.append(dict(S49_CHECKS[0], files={**S49_CHECKS[0]["files"], "docs/index.html": "docs/404.html"},
+                       name="build_site.py --check rejects a docs/ whose home page is replaced by another page "
+                            "(negative control; exit 1 expected)",
+                       stdout="build_site_check_negative_output.txt", expect_exit=1))
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS + S47_CHECKS + S48_CHECKS)
+          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS)
 
 
 def md5(data):
@@ -1011,6 +1047,7 @@ def run_check(chk):
                 continue
             if not os.path.isfile(os.path.join(HERE, src)):
                 return "FAIL", [f"missing input file: {src}"]
+            os.makedirs(os.path.dirname(target), exist_ok=True)
             shutil.copy(os.path.join(HERE, src), target)
         proc = subprocess.run([exe] + chk["cmd"][1:], cwd=tmp, capture_output=True)
         expect = chk.get("expect_exit", 0)
@@ -1020,6 +1057,8 @@ def run_check(chk):
             notes.append(f"exit status {proc.returncode}, expected {expect}: {tail[0][:120]}")
         elif expect:
             notes.append(f"exit status {proc.returncode}, as expected")
+        if chk.get("show_stdout"):
+            notes.append(proc.stdout.decode("utf-8", "replace").strip())
         for stream, got in (("stdout", proc.stdout), ("stderr", proc.stderr)):
             name = chk.get(stream)
             if not name:

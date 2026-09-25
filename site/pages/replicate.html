@@ -1,0 +1,28 @@
+<h1>Replicate</h1>
+<p class="lede">Every NEEC result can be reproduced by anyone, in three ways: re-run the arithmetic, check one score against its evidence, or have an AI system score a system for itself.</p>
+<h2>Re-run every computation</h2>
+<p>The repository holds the script behind every published figure, and a harness that runs them all and compares the output, byte for byte, with the captured run. It needs Python 3.12 (standard library only) and, for three checks, Node.js.</p>
+<pre class="cmd"><code>git clone {{repo}}.git
+cd NormativeEvaluation
+python3 run_all_checks.py &gt; out.txt
+cmp out.txt run_all_checks_output.txt</code></pre>
+<p>If <code>cmp</code> prints nothing, your run matches. Every working session is merged only after the same check passes on the merged repository.</p>
+<h2>Check one score</h2>
+<ol class="steps">
+<li>Open the criterion's page, or <a href="{{raw}}criteria.json"><code>criteria.json</code></a>, and read its Pass Threshold clause by clause, with the anchors for 1.0, 0.5 and 0.0.</li>
+<li>Open the system's page and its scoring documents, which give the evidence and the reasoning for each score.</li>
+<li>Decide, clause by clause, whether the named evidence shows the clause met. A 1.0 needs every clause shown; silence is not clearance.</li>
+<li>If you reach a different score, note by how much and why, and report it.</li>
+</ol>
+{{prompt}}
+<h2 id="divergence">When your result differs</h2>
+<p>A difference is the most useful thing a check can find. Before reporting one, sort it into one of four kinds, because each is handled differently:</p>
+<dl class="kinds">
+<div><dt>Evidence</dt><dd>A figure is wrong or out of date, or a source does not say what is claimed. This is a correction, made whether or not anyone disputes the judgment.</dd></div>
+<div><dt>Interpretation</dt><dd>The same evidence, read against the same clause, gives you a different score. Quote the passage you disagree with.</dd></div>
+<div><dt>Scope</dt><dd>You scored a different configuration or date, or counted in a mechanism the entry leaves out (protocol section 3).</dd></div>
+<div><dt>Protocol</dt><dd>The protocol is silent or ambiguous at this point. These become revisions of the protocol.</dd></div>
+</dl>
+<p>Then <a href="{{issue_ai}}">report the check</a>, whether it agrees or not: paste the AI's whole answer with its JSON block, and name the model, the interface and the date. Confirmations are logged as carefully as disagreements, because independent confirmation is evidence too. The maintainers reproduce each report and record what they decide; a published score changes only through the recorded rescoring pass, applied by a script, never by hand. <a href="{{contributing}}">How reports are handled</a>.</p>
+<h2>Formal blind replication</h2>
+<p>A blind replication gives the scorer the protocol, the criteria and the corpus without the target system's scoring, and compares the result criterion by criterion. The first, of Ostrom-style commons governance, is <a href="{{replication_record}}">on the record</a>. The <a href="{{neec_contributing}}">contributing guide</a> explains how to run one, and section 11 of the <a href="{{protocol}}">scoring protocol</a> sets the rules.</p>

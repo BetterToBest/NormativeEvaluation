@@ -1,0 +1,977 @@
+{
+ "criteria": [
+  {
+   "clauses": [
+    "≥90% poverty reduction within 20 years under base scenario",
+    "≥85% under stress testing"
+   ],
+   "domain": "D1",
+   "id": "C1.1",
+   "name": "Poverty Elimination Capacity",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c1-1.html",
+   "pass_threshold": "≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing",
+   "revision": "I"
+  },
+  {
+   "clauses": [
+    "≥$60,000 median net-wealth accumulation over 20 years for 70%+ of participants, in constant 2019 US dollars at purchasing-power parity"
+   ],
+   "domain": "D1",
+   "id": "C1.2a",
+   "name": "Wealth Building for Resilience",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c1-2a.html",
+   "pass_threshold": "≥$60,000 median net-wealth accumulation over 20 years for 70%+ of participants, in constant 2019 US dollars at purchasing-power parity",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Gini <0.35 for wealth distribution"
+   ],
+   "domain": "D1",
+   "id": "C1.2b",
+   "name": "Prevention of Exploitative Accumulation",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c1-2b.html",
+   "pass_threshold": "Gini <0.35 for wealth distribution",
+   "revision": "W"
+  },
+  {
+   "clauses": [
+    "≥88% housing stability over 5-year periods",
+    "housing costs ≤30% of disposable income at 80% of regional median household disposable income"
+   ],
+   "domain": "D1",
+   "id": "C1.3",
+   "name": "Housing Security",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c1-3.html",
+   "pass_threshold": "≥88% housing stability over 5-year periods, housing costs ≤30% of disposable income at 80% of regional median household disposable income",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Poverty <8%",
+    "aggregate demand >85% baseline"
+   ],
+   "domain": "D1",
+   "id": "C1.4",
+   "name": "Automation Resilience",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c1-4.html",
+   "pass_threshold": "Poverty <8% and aggregate demand >85% baseline in each of the 30%, 50% and 70% displacement scenarios",
+   "revision": "I"
+  },
+  {
+   "clauses": [
+    "≥80% population with an active wealth-accumulation pathway"
+   ],
+   "domain": "D1",
+   "id": "C1.5",
+   "name": "Universal Wealth Access",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c1-5.html",
+   "pass_threshold": "≥80% population with an active wealth-accumulation pathway",
+   "revision": "W"
+  },
+  {
+   "clauses": [
+    "≥70% report genuine autonomy in major life decisions",
+    "validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist"
+   ],
+   "domain": "D2",
+   "id": "C2.1",
+   "name": "Freedom from Coercion",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c2-1.html",
+   "pass_threshold": "≥70% report genuine autonomy in major life decisions, validated through revealed preference showing acceptance of initially refused employment/living situations when alternatives exist",
+   "revision": "I"
+  },
+  {
+   "clauses": [
+    "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents"
+   ],
+   "domain": "D2",
+   "id": "C2.2",
+   "name": "Labor Non-Necessity",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c2-2.html",
+   "pass_threshold": "Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents",
+   "revision": "W"
+  },
+  {
+   "clauses": [
+    "≥50% regular creative engagement",
+    "average 10+ hours weekly on non-subsistence pursuits",
+    "meaning/purpose satisfaction scores ≥70/100"
+   ],
+   "domain": "D2",
+   "id": "C2.3",
+   "name": "Creative Development Opportunities",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c2-3.html",
+   "pass_threshold": "≥50% regular creative engagement, average 10+ hours weekly on non-subsistence pursuits, meaning/purpose satisfaction scores ≥70/100",
+   "revision": "I"
+  },
+  {
+   "clauses": [
+    "≥70% participation in democratic processes",
+    "≥35% citizen proposals adopted",
+    "≥65% satisfaction with responsiveness"
+   ],
+   "domain": "D2",
+   "id": "C2.4",
+   "name": "Democratic Participation",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c2-4.html",
+   "pass_threshold": "≥70% participation in democratic processes, ≥35% citizen proposals adopted, ≥65% satisfaction with responsiveness",
+   "revision": "I"
+  },
+  {
+   "clauses": [
+    "Exit feasible within 3 months without material penalty",
+    "no differential treatment",
+    "geographic mobility maintained"
+   ],
+   "domain": "D2",
+   "id": "C2.5",
+   "name": "Exit Rights and Mobility",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c2-5.html",
+   "pass_threshold": "Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained",
+   "revision": "D"
+  },
+  {
+   "clauses": [
+    "Civil-liberties score ≥53 of 60 on the Freedom House checklist",
+    "informed consent to medical treatment protected in law",
+    "any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review"
+   ],
+   "domain": "D2",
+   "id": "C2.6",
+   "name": "Civil Liberties and Rule of Law",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c2-6.html",
+   "pass_threshold": "Civil-liberties score ≥53 of 60 on the Freedom House checklist; informed consent to medical treatment protected in law; any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review",
+   "revision": "N"
+  },
+  {
+   "clauses": [
+    "Response within 72 hours",
+    "scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase)",
+    "≥90% population coverage"
+   ],
+   "domain": "D3",
+   "id": "C3.1",
+   "name": "Crisis Response Capacity",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c3-1.html",
+   "pass_threshold": "Response within 72 hours, scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase), ≥90% population coverage",
+   "revision": "I"
+  },
+  {
+   "clauses": [
+    "Long-term inflation ≤3%",
+    "stress test inflation ≤5% (when external 8%)",
+    "automatic adjustment preventing runaway inflation"
+   ],
+   "domain": "D3",
+   "id": "C3.2",
+   "name": "Inflation Control Mechanisms",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c3-2.html",
+   "pass_threshold": "Long-term inflation ≤3%, stress test inflation ≤5% (when external 8%), automatic adjustment preventing runaway inflation",
+   "revision": "U"
+  },
+  {
+   "clauses": [
+    "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%"
+   ],
+   "domain": "D3",
+   "id": "C3.3",
+   "name": "Multi-Failure Resistance",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c3-3.html",
+   "pass_threshold": "Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%",
+   "revision": "W"
+  },
+  {
+   "clauses": [
+    "≥30% parameter adjustability range",
+    "policy updates within 6 months of evidence",
+    "changes open to challenge and reversal by those affected",
+    "zero collapses during parameter adjustments"
+   ],
+   "domain": "D3",
+   "id": "C3.4",
+   "name": "Epistemic Adaptability",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c3-4.html",
+   "pass_threshold": "≥30% parameter adjustability range, policy updates within 6 months of evidence, changes open to challenge and reversal by those affected, zero collapses during parameter adjustments",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Failure detection within 1 week",
+    "diagnosis success ≥80%",
+    "correction success ≥70%",
+    "externalization <10% of total costs"
+   ],
+   "domain": "D3",
+   "id": "C3.5",
+   "name": "Failure-Mode Transparency",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c3-5.html",
+   "pass_threshold": "Failure detection within 1 week, diagnosis success ≥80%, correction success ≥70%, externalization <10% of total costs",
+   "revision": "I"
+  },
+  {
+   "clauses": [
+    "Real output per hour worked non-declining over 20 years",
+    "total factor productivity non-declining over 20 years",
+    "basic-needs output sustained at the system's own working time"
+   ],
+   "domain": "D3",
+   "id": "C3.6",
+   "name": "Productive and Innovative Capacity",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c3-6.html",
+   "pass_threshold": "Real output per hour worked non-declining over 20 years, total factor productivity non-declining over 20 years, basic-needs output sustained at the system's own working time",
+   "revision": "N"
+  },
+  {
+   "clauses": [
+    "Debt-to-GDP <80%",
+    "positive wealth transfer to next generation"
+   ],
+   "domain": "D4",
+   "id": "C4.1",
+   "name": "Intergenerational Justice",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c4-1.html",
+   "pass_threshold": "Debt-to-GDP <80%, positive wealth transfer to next generation",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Consumption-based carbon emissions falling ≥3.8% a year",
+    "biodiversity neutral or positive",
+    "resource extraction ≤ regeneration",
+    "no more than two of the four nationally downscaled planetary boundaries transgressed"
+   ],
+   "domain": "D4",
+   "id": "C4.2",
+   "name": "Ecological Compliance",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c4-2.html",
+   "pass_threshold": "Consumption-based carbon emissions falling ≥3.8% a year, biodiversity neutral or positive, resource extraction ≤ regeneration, no more than two of the four nationally downscaled planetary boundaries transgressed",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Disparity reduction ≥5 percentage points every 5 years",
+    "convergence trajectory toward <20% disparities within 30 years"
+   ],
+   "domain": "D4",
+   "id": "C4.3",
+   "name": "Group Equity",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c4-3.html",
+   "pass_threshold": "Disparity reduction ≥5 percentage points every 5 years, convergence trajectory toward <20% disparities within 30 years, on each declared axis, non-citizen residents included",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Democratic accountability for ≥80% of major decisions",
+    "removal/replacement mechanisms functional"
+   ],
+   "domain": "D4",
+   "id": "C4.4",
+   "name": "Power Distribution",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c4-4.html",
+   "pass_threshold": "Democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Extraction rates <10% GDP",
+    "genuine exit rights from exploitative relationships"
+   ],
+   "domain": "D4",
+   "id": "C4.5",
+   "name": "Exploitation Elimination",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c4-5.html",
+   "pass_threshold": "Extraction rates <10% GDP, genuine exit rights from exploitative relationships",
+   "revision": "D"
+  },
+  {
+   "clauses": [
+    "Mortality attributed to pollution non-increasing over 20 years",
+    "those who cause harm to health or the environment liable for it, enforceably by those harmed",
+    "regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more)"
+   ],
+   "domain": "D4",
+   "id": "C4.6",
+   "name": "Harm Internalization",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c4-6.html",
+   "pass_threshold": "Mortality attributed to pollution non-increasing over 20 years; those who cause harm to health or the environment liable for it, enforceably by those harmed; regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more)",
+   "revision": "N"
+  },
+  {
+   "clauses": [
+    "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants",
+    "with documented outcomes matching claimed benefits"
+   ],
+   "domain": "D5",
+   "id": "C5.1",
+   "name": "Proven Component Foundation",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c5-1.html",
+   "pass_threshold": "≥70% of system components proven through ≥20 years operation at scale ≥10,000 participants, with documented outcomes matching claimed benefits",
+   "revision": "W"
+  },
+  {
+   "clauses": [
+    "Staged (≥4 phases)",
+    "rapid (≤36 months) deployment",
+    "specific milestones",
+    "resource requirements",
+    "risk mitigation"
+   ],
+   "domain": "D5",
+   "id": "C5.2",
+   "name": "Staged Transition Pathways",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c5-2.html",
+   "pass_threshold": "Staged (≥4 phases) and rapid (≤36 months) deployment, with specific milestones, resource requirements and risk mitigation, each shown feasible by precedent or component evidence",
+   "revision": "M"
+  },
+  {
+   "clauses": [
+    "Viable at ≥30% participation",
+    "coexistence with traditional markets maintaining ≥90% economic activity",
+    "scaling pathway validated through modeling",
+    "coordination protocols established"
+   ],
+   "domain": "D5",
+   "id": "C5.3",
+   "name": "Partial and Parallel Deployability",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c5-3.html",
+   "pass_threshold": "Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established",
+   "revision": "U"
+  },
+  {
+   "clauses": [
+    "≥60% support across political spectrum",
+    "≥65% opposition to repeal",
+    "survival probability ≥80% across administration changes"
+   ],
+   "domain": "D5",
+   "id": "C5.4",
+   "name": "Political Coalition Potential",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c5-4.html",
+   "pass_threshold": "≥60% support across political spectrum, ≥65% opposition to repeal, survival probability ≥80% across administration changes",
+   "revision": "U"
+  },
+  {
+   "clauses": [
+    "Viable across ≥3 economic contexts (high/middle/low income)",
+    "≥5 cultural contexts",
+    "parameter flexibility ≥40% adjustment range",
+    "successful operation validated across diverse implementations"
+   ],
+   "domain": "D5",
+   "id": "C5.5",
+   "name": "Cultural Adaptability",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/criteria/c5-5.html",
+   "pass_threshold": "Viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, parameter flexibility ≥40% adjustment range, successful operation validated across diverse implementations",
+   "revision": "U"
+  }
+ ],
+ "domains": [
+  {
+   "criteria": [
+    "C1.1",
+    "C1.2a",
+    "C1.2b",
+    "C1.3",
+    "C1.4",
+    "C1.5"
+   ],
+   "id": "D1",
+   "name": "Material Security",
+   "question": "Can the system provide material necessities reliably and universally?"
+  },
+  {
+   "criteria": [
+    "C2.1",
+    "C2.2",
+    "C2.3",
+    "C2.4",
+    "C2.5",
+    "C2.6"
+   ],
+   "id": "D2",
+   "name": "Human Autonomy",
+   "question": "Does the system maximize human freedom and self-determination?"
+  },
+  {
+   "criteria": [
+    "C3.1",
+    "C3.2",
+    "C3.3",
+    "C3.4",
+    "C3.5",
+    "C3.6"
+   ],
+   "id": "D3",
+   "name": "System Resilience",
+   "question": "Can the system maintain function under stress and adapt to change?"
+  },
+  {
+   "criteria": [
+    "C4.1",
+    "C4.2",
+    "C4.3",
+    "C4.4",
+    "C4.5",
+    "C4.6"
+   ],
+   "id": "D4",
+   "name": "Ethical Integrity",
+   "question": "Does the system satisfy justice requirements across time, groups, and power?"
+  },
+  {
+   "criteria": [
+    "C5.1",
+    "C5.2",
+    "C5.3",
+    "C5.4",
+    "C5.5"
+   ],
+   "id": "D5",
+   "name": "Implementation Viability",
+   "question": "Can the system actually be built and sustained?"
+  }
+ ],
+ "framework": "NEEC Applied, v2.0 criteria: 29 criteria in five domains",
+ "generated_by": "build_site.py 1.0; do not edit by hand",
+ "judgment_calls": [
+  {
+   "adopted": "A World Justice Project sub-factor 6.2 score of 0.77 or more: the upper quartile of the 143 jurisdictions in the Index's 2025 edition, fixed as a figure so that later editions do not move it.",
+   "alternatives": [
+    "The median of the same edition, 0.61."
+   ],
+   "clause": [
+    "C4.6",
+    3
+   ],
+   "criteria": [
+    "C4.6"
+   ],
+   "data": "wjp_rol_sf62_2012_2025.csv, every edition from 2012-2013 to 2025",
+   "decisions": [
+    "47.1",
+    "48.1"
+   ],
+   "effect": "On the 2025 edition the choice changes the verdict for two reference economies only, Qatar (0.66) and China (0.61). This is one clause of three, and a score of 1.0 on C4.6 needs all three; no C4.6 score has been set yet.",
+   "id": "c46-regulators",
+   "interactive": "wjp",
+   "not_covered": {
+    "CPS": "The Index covers neither the Soviet Union, Cuba nor North Korea, so this clause cannot be read from it for Centrally Planned Socialism.",
+    "NSD": "Iceland, one of the five Nordic economies, is not in the Index."
+   },
+   "reference": {
+    "CN": [
+     "CHN"
+    ],
+    "NSD": [
+     "DNK",
+     "FIN",
+     "NOR",
+     "SWE"
+    ],
+    "QA": [
+     "QAT"
+    ],
+    "SG": [
+     "SGP"
+    ],
+    "SQ": [
+     "USA"
+    ]
+   },
+   "reference_source": "criteria_v2_s45.py, section 5 (REF)",
+   "status": "Set under the owner's delegation, then confirmed (48.1).",
+   "title": "How free of influence must regulators be?",
+   "why": "The clause asks for regulation applied without improper influence, which describes an absence, not a norm; the median is by construction the typical jurisdiction. Where version 2.0 reads a clause from a rating it takes the rating's top group, as C2.6 does with Freedom House. A bar re-derived each edition would be met by a quarter of the world whatever the world does; fixed once, it stays absolute."
+  },
+  {
+   "adopted": "A wealth Gini coefficient below 0.35.",
+   "alternatives": [],
+   "clause": [
+    "C1.2b",
+    1
+   ],
+   "criteria": [
+    "C1.2b"
+   ],
+   "data": null,
+   "decisions": [
+    "45.2"
+   ],
+   "effect": "Not computed. The wealth-distribution series are not in the repository yet, so this bar cannot be moved here.",
+   "id": "c12b-wealth-gini",
+   "interactive": null,
+   "status": "Settled in Session 45 (48.1 notes that no Gini bar is open).",
+   "title": "How equal must wealth be?",
+   "why": "Carried from version 1; version 2.0 changed only the text around it (revision class W). The published retrofit notes record wealth Ginis of 0.65 to 0.75 for Nordic Social Democracy and 0.85 for Status Quo Market Capitalism (neec_scores.csv)."
+  },
+  {
+   "adopted": "The share of employment in organizations whose investment, production and employment decisions answer to those they affect, at least 80%.",
+   "alternatives": [
+    "Decisions made within law by an elected legislature count as accountable."
+   ],
+   "clause": [
+    "C4.4",
+    1
+   ],
+   "criteria": [
+    "C4.4"
+   ],
+   "data": null,
+   "decisions": [
+    "48.3"
+   ],
+   "effect": "Recorded in the rescoring pass, not yet published: the alternative would raise Nordic Social Democracy's C4.4 to 1.0 and restore CCO-PTF-CIP-SZH's to 1.0. Because the adopted reading lowers the owner's own design, the owner has been asked to confirm it.",
+   "id": "c44-accountability",
+   "interactive": null,
+   "status": "Set under the owner's delegation; flagged for the owner's confirmation.",
+   "title": "Whose decisions count as accountable?",
+   "why": "Under the alternative, C4.4 would measure only whether power can be removed, and it would contradict the published reading of Stakeholder Capitalism."
+  },
+  {
+   "adopted": "The World Bank Societal Poverty Line, which rises with median income (a floor at the international line, plus half the median), in 2021 purchasing-power-parity dollars.",
+   "alternatives": [
+    "The Bank's fixed $8.30 line."
+   ],
+   "clause": null,
+   "criteria": [
+    "C1.1",
+    "C1.4"
+   ],
+   "data": null,
+   "decisions": [
+    "45.3"
+   ],
+   "effect": "Measured poverty in rich economies becomes close to relative, so reductions of 90% are rare.",
+   "id": "c11-poverty-line",
+   "interactive": null,
+   "status": "Confirmed by the owner (45.3).",
+   "title": "Which poverty line?",
+   "why": "The Societal line tracks the cost of basic needs as incomes rise; a fixed line understates basic needs in high-income economies."
+  },
+  {
+   "adopted": "$60,000 of median net wealth accumulated over 20 years, in constant 2019 US dollars at purchasing-power parity.",
+   "alternatives": [
+    "A bar relative to each economy's own costs of living, like the ranges of median expenses that version 2.0 removed."
+   ],
+   "clause": [
+    "C1.2a",
+    1
+   ],
+   "criteria": [
+    "C1.2a"
+   ],
+   "data": null,
+   "decisions": [
+    "45.3"
+   ],
+   "effect": "Raises the bar for middle-income contexts relative to the removed ranges; China is the only middle-income context in the corpus.",
+   "id": "c12a-price-basis",
+   "interactive": null,
+   "status": "Confirmed by the owner (45.3); the relative alternative is recorded for the owner.",
+   "title": "Wealth building: an absolute bar or a relative one?",
+   "why": "2019 is the year the Paper calibrated the figure on, and purchasing-power parity is the international method its own justification names. The removed ranges could not be reproduced, and their $70,000 figure contradicted the threshold."
+  },
+  {
+   "adopted": "A Freedom House civil-liberties score of 53 or more out of 60, the top band of its former 1 to 7 rating.",
+   "alternatives": [],
+   "clause": [
+    "C2.6",
+    1
+   ],
+   "criteria": [
+    "C2.6"
+   ],
+   "data": null,
+   "decisions": [
+    "45.3"
+   ],
+   "effect": "Not computed. The Freedom House series are not in the repository yet.",
+   "id": "c26-civil-liberties",
+   "interactive": null,
+   "status": "Confirmed by the owner (45.3).",
+   "title": "How strong must civil liberties be?",
+   "why": "Its fifteen questions cover expression and belief, association, rule of law and personal autonomy, and leave out the electoral questions that C2.4 and C4.4 measure. V-Dem's Civil Liberties Index is the cross-check; where the two disagree about the threshold, the call is flagged."
+  },
+  {
+   "adopted": "Real output per hour worked and total factor productivity (Penn World Table 11.0), each non-declining over 20 years.",
+   "alternatives": [
+    "Output growth, which the record sets aside."
+   ],
+   "clause": null,
+   "criteria": [
+    "C3.6"
+   ],
+   "data": null,
+   "decisions": [
+    "45.3"
+   ],
+   "effect": "Not computed. No C3.6 score has been set yet.",
+   "id": "c36-productivity",
+   "interactive": null,
+   "status": "Confirmed by the owner (45.3).",
+   "title": "Growth, or productivity?",
+   "why": "Defined on productivity rather than output, so that a design which chooses shorter hours or lower consumption can pass. Total factor productivity is a separate clause because output per hour can rise on capital accumulation alone while methods stagnate."
+  },
+  {
+   "adopted": "Consumption-based carbon emissions falling by at least 3.8% a year: the rate of a 35% cut over 2019 to 2030, the low end of the IPCC's 1.5 °C range (AR6).",
+   "alternatives": [],
+   "clause": [
+    "C4.2",
+    1
+   ],
+   "criteria": [
+    "C4.2"
+   ],
+   "data": null,
+   "decisions": [
+    "45.3"
+   ],
+   "effect": "Not computed. The emissions series are not in the repository yet.",
+   "id": "c42-carbon",
+   "interactive": null,
+   "status": "Confirmed by the owner (45.3).",
+   "title": "How fast must emissions fall?",
+   "why": "Consumption-based accounts charge an economy with the emissions of what it consumes, wherever they are produced. The rate taken from the low end of the range applies at any date."
+  },
+  {
+   "adopted": "The IMF's implicit fossil-fuel subsidies, the unpriced environmental cost of fuel use as a share of GDP, taken as the published lower bound of externalized costs, with GDP standing for total costs.",
+   "alternatives": [],
+   "clause": [
+    "C3.5",
+    4
+   ],
+   "criteria": [
+    "C3.5"
+   ],
+   "data": null,
+   "decisions": [
+    "45.3"
+   ],
+   "effect": "Not computed. The series is not in the repository yet.",
+   "id": "c35-unpaid-costs",
+   "interactive": null,
+   "status": "Confirmed by the owner (45.3).",
+   "title": "What counts as a cost pushed onto others?",
+   "why": "No agency publishes externalized costs in full; this series is the published lower bound."
+  },
+  {
+   "adopted": "Intergenerational justice measured as fiscal and wealth sustainability: general government gross debt (IMF) and positive net national saving.",
+   "alternatives": [
+    "The version 1 derivation, from N12 and N6 (Ecological Compliance)."
+   ],
+   "clause": null,
+   "criteria": [
+    "C4.1"
+   ],
+   "data": null,
+   "decisions": [
+    "45.3"
+   ],
+   "effect": "The implicit weight of ecological compliance (N6) fell from 3.8% to 1.8% on 28 criteria; Harm Internalization (C4.6) returns it to 3.4% of 29.",
+   "id": "c41-debt",
+   "interactive": null,
+   "status": "Confirmed by the owner (45.3).",
+   "title": "Is public debt an ecological question?",
+   "why": "After v2.0 moved its ecological content elsewhere, nothing ecological remained in C4.1; fiscal space is the content of N5, so its derivation changes from N12 and N6 to N12 and N5."
+  },
+  {
+   "adopted": "Integer counts of structural failures: 0 to 2, 3 to 5, and 6 or more, on 29 criteria as on 26.",
+   "alternatives": [
+    "Proportional bands, scaled to the number of criteria."
+   ],
+   "clause": null,
+   "criteria": [],
+   "data": null,
+   "decisions": [
+    "45.1"
+   ],
+   "effect": "Not computed yet. The proportional tiers are part of the stage that applies the rescoring pass.",
+   "id": "tier-bands",
+   "interactive": null,
+   "status": "The owner's decision (45.1).",
+   "title": "Should the tier bands grow with the number of criteria?",
+   "why": "The owner kept the integer bands and asked that the choice be disclosed; Paper v2.0's Appendix A.4 reports the proportional alternative."
+  }
+ ],
+ "release": "2.0",
+ "schema": "neec-site-data/1",
+ "scores_published": false,
+ "sources": {
+  "criteria.json": "af69e2e8",
+  "neec_corpus.json": "ae19a9bc"
+ },
+ "systems": [
+  {
+   "code": "CPS",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Centrally Planned Socialism",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/cps.html",
+   "scope_class": "configured_national_economy"
+  },
+  {
+   "code": "NSD",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Nordic Social Democracy",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/nsd.html",
+   "scope_class": "configured_national_economy"
+  },
+  {
+   "code": "CN",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_StateCapitalism_China_scoring_scratch.md"
+   ],
+   "name": "State Capitalism / China (Party-State-Directed Market Economy)",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/cn.html",
+   "scope_class": "configured_national_economy"
+  },
+  {
+   "code": "QA",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_StateCapitalism_Qatar_scoring_scratch.md"
+   ],
+   "name": "State Capitalism / Qatar (Gulf Rentier-Distributive Statism)",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/qa.html",
+   "scope_class": "configured_national_economy"
+  },
+  {
+   "code": "SG",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_StateCapitalism_Singapore_scoring_scratch.md"
+   ],
+   "name": "State Capitalism / Singapore (GLC Developmental Capitalism)",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/sg.html",
+   "scope_class": "configured_national_economy"
+  },
+  {
+   "code": "SQ",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Status Quo Market Capitalism",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/sq.html",
+   "scope_class": "configured_national_economy"
+  },
+  {
+   "code": "CCO",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "CCO-PTF-CIP-SZH",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/cco.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "DG",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Degrowth Economics",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/dg.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "DE",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_DoughnutEconomics_scoring_scratch.md"
+   ],
+   "name": "Doughnut Economics",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/de.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "FALC",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Fully Automated Luxury Communism",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/falc.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "INT",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Paper_v1_4.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Integral",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/int.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "LM",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Libertarian Minarchism",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/lm.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "MS",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Market Socialism",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/ms.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "PE",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Participatory Economics",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/pe.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "SC",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Stakeholder Capitalism",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/sc.html",
+   "scope_class": "comprehensive_system"
+  },
+  {
+   "code": "GEO",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Georgism_LVT_scoring_scratch.md"
+   ],
+   "name": "Georgism / Land Value Tax (LVT + Citizen's Dividend)",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/geo.html",
+   "scope_class": "mechanism"
+  },
+  {
+   "code": "IF",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_IslamicFinance_scoring_scratch.md"
+   ],
+   "name": "Islamic Finance / Profit-Sharing Banking",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/if.html",
+   "scope_class": "mechanism"
+  },
+  {
+   "code": "MMT",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "MMT + Job Guarantee",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/mmt.html",
+   "scope_class": "mechanism"
+  },
+  {
+   "code": "MC",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_MutualCredit_LETS_scoring_scratch.md"
+   ],
+   "name": "Mutual Credit / LETS",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/mc.html",
+   "scope_class": "mechanism"
+  },
+  {
+   "code": "OS",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Ostrom_Commons_scoring_scratch.md"
+   ],
+   "name": "Ostrom-Style Commons Governance",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/os.html",
+   "scope_class": "mechanism"
+  },
+  {
+   "code": "SWF",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_SovereignWealthFundStatism_scoring_scratch.md"
+   ],
+   "name": "Sovereign Wealth Fund Statism",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/swf.html",
+   "scope_class": "mechanism"
+  },
+  {
+   "code": "UBI",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Report_v1_6.md",
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "name": "Universal Basic Income",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/ubi.html",
+   "scope_class": "mechanism"
+  },
+  {
+   "code": "UBS",
+   "documents": [
+    "https://raw.githubusercontent.com/BetterToBest/NormativeEvaluation/main/NEEC_UniversalBasicServices_scoring_scratch.md"
+   ],
+   "name": "Universal Basic Services",
+   "page": "https://bettertobest.github.io/NormativeEvaluation/systems/ubs.html",
+   "scope_class": "mechanism"
+  }
+ ],
+ "tiers": [
+  {
+   "failures_max": 2,
+   "failures_min": 0,
+   "name": "Potentially Adequate"
+  },
+  {
+   "failures_max": 5,
+   "failures_min": 3,
+   "name": "Partially Adequate"
+  },
+  {
+   "failures_max": 29,
+   "failures_min": 6,
+   "name": "Structurally Inadequate"
+  }
+ ],
+ "weight_schemes": [
+  {
+   "criteria": {},
+   "domains": {},
+   "label": "Equal weights",
+   "name": "Equal (baseline)"
+  },
+  {
+   "criteria": {},
+   "domains": {
+    "D1": 2.0
+   },
+   "label": "Material security counts double",
+   "name": "Material-Security-Weighted (D1 x2)"
+  },
+  {
+   "criteria": {},
+   "domains": {
+    "D5": 0.5
+   },
+   "label": "Implementation viability counts half",
+   "name": "Feasibility-Discounted (D5 x0.5)"
+  },
+  {
+   "criteria": {
+    "C1.4": 3.0,
+    "C4.2": 3.0
+   },
+   "domains": {},
+   "label": "Automation and ecology count triple",
+   "name": "Crisis-Risk-Weighted (C1.4, C4.2 x3)"
+  }
+ ]
+}
