@@ -3,8 +3,9 @@
 **Status: the v2.0 criteria, adopted. Nothing in the corpus is rescored here.** Session 45, 2026-09-23; amended in
 place in Session 46, 2026-09-24, by decisions 46.1 to 46.4 (Package C), and tag `s45` keeps the Session 45 text;
 amended in place again in Session 47, 2026-09-24, by decisions 47.1 and 47.2 (C4.6's clause 3 bar), and tag `s46`
-keeps the Session 46 text; and in Session 48, 2026-09-24, by decisions 48.1 to 48.3 (the owner's three open
-questions), and tag `s47` keeps the Session 47 text.
+keeps the Session 46 text; in Session 48, 2026-09-24, by decisions 48.1 to 48.3 (the owner's three open
+questions), and tag `s47` keeps the Session 47 text; and in Session 49, 2026-09-25, by decisions 49.1 to 49.12
+(the public site; no criterion changes), and tag `s48` keeps the Session 48 text.
 Scorer and engineer: Claude. Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
 (the 26 criteria as they stood at `s44`), `neec_corpus.json`. Appendix V below is the one source of the v2.0 text:
 `build_criteria.py` reads it, applies it to the snapshot, asserts the rules in section 6, and writes `criteria.json`
@@ -207,6 +208,52 @@ and protocol draft.9 (Appendix B regenerated, seven asserted edits; 47.2, 48.3).
   its accountable organizations would hold) and falls from 1.0 to 0.5; Participatory Economics, Integral and
   Market Socialism stand; Degrowth stays 0.5. Net −0.5; no failure count or tier changes; CCO-PTF-CIP-SZH keeps
   first place.
+- **49.1 to 49.10 (the public site, Session 49).** The site package that a claude.ai chat session prepared at the
+  owner's request from tag `s48` (`NEEC_Site_Package_s49.md`, section 2, where each is set out in full as S1 to
+  S10) is applied: `build_site.py` generates the v2.0 site into `docs/` from the canonical files and the hand-edited
+  sources in `site/`, under the brief of 45.5 (`NEEC_Site_Design_Brief_s45.md`, whose amendment section records
+  S1 to S9). None changes a score, criterion, protocol text or corpus file. Attribution as the package marks it:
+  **49.1** (S1; the owner's direction, the gate's mechanics under the delegation): the site shows no scores until
+  version 2.0's are final (`site/config.json` `scores.publish` false); setting the gate fails the build unless the
+  corpus is on exactly the criteria of `criteria.json` and every total, failure count, tier and percent equals
+  `neec_scores.csv`. Beyond the owner's direction, the published totals are being re-estimated: CCO-PTF-CIP-SZH is
+  24.5/26 as published and 18.5/26 after the pass so far (Handoff 48, section 2a), and a new site should not put
+  forward figures the pass is known to lower. **49.2** (S2; flagged, the owner may reverse): the navigation is
+  Findings, Systems, Criteria, Thresholds, Method, Replicate, Contribute. **49.3** (S3; the owner's direction, the
+  catalog's contents flagged): the Thresholds page, "Set your own bar", with explorers for C4.6 clause 3's bar on
+  the WJP extract, the A.4 weighting schemes and the registered close calls, and a catalog of 11 judgment calls,
+  each paraphrasing the record, citing its decisions (the build asserts each exists here) and printing its clause
+  verbatim from `criteria.json`; *the owner should read the 11 paraphrases once.* **49.4** (S4; the owner's
+  direction, the route under the delegation): "Push back" buttons open GitHub issue forms prefilled with the system,
+  criterion or topic; GitHub Discussions is the forum, its links hidden until the owner enables it and
+  `site.discussions` is set. **49.5** (S5; the owner's direction, the design flagged): the Replicate page builds an
+  AI prompt in two modes (audit the published scores; score blind, per protocol section 11), an informal check that
+  does not replace the replication kit. **49.6** (S6; polish): every page is complete without script, with
+  `docs/data/neec.json`, `docs/llms.txt`, `sitemap.xml` and schema.org Dataset markup for machine readers.
+  **49.7** (S7; under the delegation): harness check 93 runs `build_site.py --check`, which keeps `docs/` equal to
+  its sources; the build also asserts the A.4 schemes, the WJP extract's md5, C4.6's bar against the 2025 upper
+  quartile (47.1), every local link and issue form, and the absence of placeholders. **49.8** (S8; flagged):
+  `.github/CONTRIBUTING.md` is the front door for six routes and six issue forms replace the two Markdown
+  templates, keeping the labels `score-challenge` and `system-proposal` and adding `evidence`, `push-back`,
+  `ai-replication` and `criterion-proposal`. **49.9** (S9; the owner's direction, the adaptation flagged): the five
+  views of the v1 Visual Suite are generated from the data, with four corrections to v1 made in the adaptation
+  (the radar plots shares of each domain's maximum, 6, 6, 6, 6 and 5, not a common 5; a two-axis Pareto frontier is
+  distinguished from the all-criteria non-dominated set, which on the published corpus are CCO-PTF-CIP-SZH alone
+  on total against material security and 12 systems on all 26 criteria; v1's stale insight cards are replaced by
+  computed findings, among them 8 systems Partially Adequate, 6 of 23 Potentially Adequate, Nordic Social
+  Democracy at 19.5/26 (75%), and C1.5 and C2.2 the most often failed, by 11 of 23 each; and v1's closing panel,
+  "The Choice Before Humanity", is not carried over, because the site states findings with their limits and the
+  author's own design ranks first; *the owner may reverse the last*). **49.10** (S10; the owner's direction): in
+  the disclosure, on the Method page and in its short form on the home page, "CCO-PTF-CIP-SZH" links to the
+  Research Hub in a new tab. Session 49 recomputed from `neec_corpus.json` and `neec_scores.csv` every figure named
+  in 49.9, and confirmed 49.10's two links in `docs/`.
+- **49.11 (correction).** The package's `build_site.py` used two f-string forms that only Python 3.12 accepts (a
+  backslash inside a replacement field), so under the Python 3.11 of the cloud sessions it failed to compile and
+  check 93 could not pass there. The two attribute strings are now bound to names before the f-strings; nothing
+  else changes, and `--check` reports `docs/` unchanged under Python 3.10, 3.11, 3.12 and 3.13.
+- **49.12 (optional polish).** Harness check 94, a negative control: with the copied `docs/index.html` replaced by
+  `docs/404.html`, `build_site.py --check` must exit 1 and name the one file that differs, so check 93 cannot pass
+  vacuously.
 
 ## 2. Method
 

@@ -179,7 +179,9 @@ session, NEEC_Site_Package_s49.md): build_site.py --check, which rebuilds docs/ 
 criteria.json, the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and
 site/, compares the result with docs/ file by file, and prints one line, which the harness also shows. Its inputs
 keep their subdirectories, so a check's files may now name paths in subdirectories. A negative control, in which
-the copied docs/index.html is replaced by docs/404.html, must fail with exit 1: 94 checks.
+the copied docs/index.html is replaced by docs/404.html, must fail with exit 1: 94 checks. Decisions 49.1 to 49.12
+are recorded in NEEC_Criteria_v2_s45.md, whose md5 criteria.json carries, so the build check's capture is renamed
+build_criteria_s49_output.txt and recaptured; nothing else in criteria.json or the protocol changes.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -932,7 +934,7 @@ S45_CHECKS = [
     dict(name="build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
               "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9",
          cmd=["python", "build_criteria.py"], files={k: k for k in V2_INPUTS},
-         stdout="build_criteria_s48_output.txt", stderr=EMPTY,
+         stdout="build_criteria_s49_output.txt", stderr=EMPTY,
          outputs={"criteria.json": "criteria.json", "SCORING_PROTOCOL.md": "SCORING_PROTOCOL.md"}),
     dict(name="build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 "
               "document passes (negative control)",

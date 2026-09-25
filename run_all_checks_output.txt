@@ -329,9 +329,9 @@ run_all_checks.py -- 94 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [88] PASS  build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9
-          stdout == build_criteria_s48_output.txt (md5 5baf75ee)
+          stdout == build_criteria_s49_output.txt (md5 cfc20c0f)
           stderr == (empty) (md5 d41d8cd9)
-          criteria.json == criteria.json (md5 af69e2e8)
+          criteria.json == criteria.json (md5 77ffc319)
           SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 dde8e834)
 
 [89] PASS  build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 document passes (negative control)
