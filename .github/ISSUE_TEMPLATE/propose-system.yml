@@ -1,0 +1,47 @@
+name: Propose a system
+description: Suggest an economic system NEEC should score.
+title: "System proposal: "
+labels: ["system-proposal"]
+body:
+  - type: input
+    id: system
+    attributes:
+      label: System
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Kind of system
+      description: Protocol section 3. The kind decides how population-wide thresholds are read.
+      options:
+        - "Mechanism: operates inside a wider economy"
+        - "Configured national economy: an existing or historical economy at a stated date"
+        - "Comprehensive system: a design for a whole economy"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: mechanism
+    attributes:
+      label: Defining mechanism
+      description: What makes it a distinct system rather than a variant of one already scored?
+    validations:
+      required: true
+  - type: textarea
+    id: literature
+    attributes:
+      label: Founding literature and implementations
+      description: Sources from more than one direction, including critics.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters for the comparison
+  - type: checkboxes
+    id: offer
+    attributes:
+      label: Scoring it yourself
+      options:
+        - label: I would like to score it under the protocol (NEEC_CONTRIBUTING.md, section 3).

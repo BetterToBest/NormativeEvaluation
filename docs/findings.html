@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Findings | NEEC</title>
+<meta name="description" content="What NEEC&#x27;s scores show: totals and structural failures, domain profiles, trade-offs and the frontier, and the computed findings.">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="build_site.py 1.0">
+<link rel="canonical" href="https://bettertobest.github.io/NormativeEvaluation/findings.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Findings">
+<meta property="og:description" content="What NEEC&#x27;s scores show: totals and structural failures, domain profiles, trade-offs and the frontier, and the computed findings.">
+<meta property="og:url" content="https://bettertobest.github.io/NormativeEvaluation/findings.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/neec.css">
+<link rel="alternate" type="text/plain" href="llms.txt" title="A plain-text guide for AI systems">
+<link rel="alternate" type="application/json" href="data/neec.json" title="The site's data">
+
+</head>
+<body class="p-findings">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<a class="wordmark" href="index.html" aria-label="NEEC home"><svg class="wm-marks" viewBox="0 0 46 14" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="5.5" class="wm1"/><circle cx="23" cy="7" r="5" class="wm-ring"/><path d="M23 2 a5 5 0 0 1 0 10z" class="wm1"/><circle cx="39" cy="7" r="5" class="wm-ring wm0"/></svg><span>NEEC</span></a>
+<nav aria-label="Main"><ul><li><a href="findings.html" aria-current="page">Findings</a></li><li><a href="systems/index.html">Systems</a></li><li><a href="criteria/index.html">Criteria</a></li><li><a href="thresholds.html">Thresholds</a></li><li><a href="method.html">Method</a></li><li><a href="replicate.html">Replicate</a></li><li><a href="contribute.html">Contribute</a></li></ul></nav>
+</header>
+
+<main id="main">
+<h1>Findings</h1>
+<p class="lede">What the scores show, drawn from the published data each time the site is built. Every finding is one reading of the evidence under stated thresholds; the <a href="thresholds.html">Thresholds</a> page shows how it moves when a bar or a weight changes.</p>
+<p class="pending-note">Version 2.0 scores are being finalized. The charts below are built in and fill in when the scores are published; the framework's structure, which needs no scores, is drawn on the <a href="criteria/index.html#structure">Criteria</a> page now.</p>
+<h2 id="insights">Key findings</h2>
+<p class="pending-note">The findings are stated here, each computed from the published scores.</p>
+<h2 id="totals">Totals and structural failures</h2>
+<p class="pending-note">Every system's total and its structural failures are charted here, ordered by total or by tier.</p>
+<h2 id="profiles">Domain profiles</h2>
+<p class="pending-note">Each system's profile across the five domains is drawn here, as a share of each domain's points; up to three can be overlaid.</p>
+<h2 id="frontier">Trade-offs and the frontier</h2>
+<p class="pending-note">Any two dimensions can be plotted against each other here, with the systems that no other system beats on both.</p><h3 id="dominance">Understanding the frontier and dominance</h3><p>One system <em>dominates</em> another when it scores at least as high on every criterion and higher on at least one. The dominated system then has a rival that is no worse anywhere and better somewhere, under the criteria as written.</p><p>The <em>Pareto frontier</em> is the set of systems that no other system dominates. On the chart it is drawn for the two dimensions you choose: frontier systems are ringed in green, labelled, and joined by the dashed line. It depends on the axes, so a system can sit on the frontier for one pair of dimensions and off it for another. The statement that matters most is the one across every criterion at once.</p><p>Dominance is the strongest comparison the scores support, because it needs no weights: under the criteria as written, preferring a dominated system to one that dominates it gives up points somewhere and gains none anywhere. It says nothing about what the criteria leave out, and nothing about margins: one system can dominate another by a single half point on a single criterion. A system off the frontier is not thereby a poor one, and a system on it can still carry structural failures; its tier says how many. The <a href="systems/index.html#compare">comparison tool</a> sets any two or three systems side by side, criterion by criterion.</p>
+
+</main>
+<footer class="colophon">
+<p>NEEC is part of the <a href="https://bettertobest.github.io/research-hub/">Better To Best Research Hub</a>. Written by Duke Johnson and Claude (Anthropic).
+Text and data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<p><a href="https://github.com/BetterToBest/NormativeEvaluation">Repository</a> <a href="replicate.html">Replicate</a> <a href="contribute.html">Report an error</a> <a href="llms.txt">For AI systems</a></p>
+<p class="build">Built by <code>build_site.py</code> 1.0 from <code>criteria.json</code> (29 criteria, md5 af69e2e8) and <code>neec_corpus.json</code> (md5 ae19a9bc).</p>
+</footer>
+
+<script src="assets/neec.js" defer></script>
+</body>
+</html>

@@ -70,3 +70,40 @@ Pages once (Settings, Pages, deploy from branch `main`, folder `/docs`). A foote
 
 Checked against common generated-design defaults: the ground is cool, not cream; no near-black with an acid
 accent; structure comes from spacing, not hairline rules or identical cards.
+
+## Amendment, Session 49 (the owner's directions of 2026-09-24; package decisions S1 to S9)
+
+The owner asked for the site to be started before the scores are final, as a living resource that is easy to
+extend, with the scores added once they are finalized. What changes from the brief above, and why:
+
+- **Scores wait for version 2.0 (S1).** `site/config.json` holds a gate, `scores.publish`, now false. Until it is
+  set, the field shows its real structure (every system and criterion) with quiet dots, grouped by kind of system,
+  and each score-bearing view says the scores are being finalized. Setting the gate requires the corpus to be on
+  exactly the criteria of `criteria.json` and every total, failure count, tier and percent to equal
+  `neec_scores.csv`. A preview build (`build_site.py --preview DIR`, never written to `docs/`) shows the corpus's
+  published scores for review.
+- **Navigation (S2).** Findings, Systems, Criteria, Thresholds, Method, Replicate, Contribute; the wordmark leads
+  home, where the computed findings also sit under the field. Thresholds and Contribute are the owner's additions.
+- **The visual suite (S9).** The v1 Visual Suite's five views, generated from the data: the framework's structure
+  (premises and core criteria from the Paper, links from each criterion's derivation) on the Criteria page; totals
+  with structural failures, domain profiles (radar, as shares of each domain's points) and a two-axis frontier on
+  the Findings page; a domain profile on each system page; and the key findings, computed. Gated like every score.
+- **Thresholds, "Set your own bar" (S3).** A bar explorer where the data are in the repository (C4.6 clause 3 on
+  the World Justice Project extract, every edition), a weighting explorer (Appendix A.4's schemes, imported from
+  the A.4 script and asserted, plus the reader's own domain weights), a close-calls explorer (the registered joint
+  readings), and a catalog of the consequential judgment calls with their recorded alternatives
+  (`site/thresholds.json`, each entry's decisions and clauses checked against the record and `criteria.json`).
+- **Pushing back (S4).** Every system, criterion and catalog entry has buttons that open GitHub issue forms with
+  the system, criterion or topic already filled in; Discussions links appear when `site.discussions` is set.
+- **The AI prompt (S5).** The Replicate page builds a prompt in two modes (audit, blind) for any system and
+  criterion, embeds the chosen Pass Thresholds and clauses so that an AI without browsing can proceed, asks for a
+  machine-readable block, and routes results to the AI-check form. The same prompt is written as two static files.
+- **Machine readers (S6).** Every page is complete without script; `docs/data/neec.json`, `docs/llms.txt`,
+  `sitemap.xml` and schema.org Dataset markup serve search engines and AI systems.
+- **Build (S7).** `build_site.py` generates all of `docs/` from the canonical files and the hand-edited sources in
+  `site/`; `--check` rebuilds and compares, and is harness check 93. The brief's harness assertion (site data equals
+  the corpus) is part of the gate in S1.
+- **Contributing (S8).** `.github/CONTRIBUTING.md` becomes the front door for every route; the two Markdown issue
+  templates are replaced by six issue forms.
+
+The tokens, type, field, motion, voice and accessibility rules above are unchanged.

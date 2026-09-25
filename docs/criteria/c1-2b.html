@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>C1.2b Prevention of Exploitative Accumulation | NEEC</title>
+<meta name="description" content="NEEC criterion C1.2b, Prevention of Exploitative Accumulation: its Pass Threshold, clauses, measurement and anchors.">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="build_site.py 1.0">
+<link rel="canonical" href="https://bettertobest.github.io/NormativeEvaluation/criteria/c1-2b.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="C1.2b Prevention of Exploitative Accumulation">
+<meta property="og:description" content="NEEC criterion C1.2b, Prevention of Exploitative Accumulation: its Pass Threshold, clauses, measurement and anchors.">
+<meta property="og:url" content="https://bettertobest.github.io/NormativeEvaluation/criteria/c1-2b.html">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/neec.css">
+<link rel="alternate" type="text/plain" href="../llms.txt" title="A plain-text guide for AI systems">
+<link rel="alternate" type="application/json" href="../data/neec.json" title="The site's data">
+
+</head>
+<body class="p-criteria">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<a class="wordmark" href="../index.html" aria-label="NEEC home"><svg class="wm-marks" viewBox="0 0 46 14" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="5.5" class="wm1"/><circle cx="23" cy="7" r="5" class="wm-ring"/><path d="M23 2 a5 5 0 0 1 0 10z" class="wm1"/><circle cx="39" cy="7" r="5" class="wm-ring wm0"/></svg><span>NEEC</span></a>
+<nav aria-label="Main"><ul><li><a href="../findings.html">Findings</a></li><li><a href="../systems/index.html">Systems</a></li><li><a href="../criteria/index.html" aria-current="page">Criteria</a></li><li><a href="../thresholds.html">Thresholds</a></li><li><a href="../method.html">Method</a></li><li><a href="../replicate.html">Replicate</a></li><li><a href="../contribute.html">Contribute</a></li></ul></nav>
+</header>
+
+<main id="main">
+<h1><code class="cid">C1.2b</code> Prevention of Exploitative Accumulation</h1>
+<p class="lede"><a href="index.html#d1">Material Security</a>. Can the system provide material necessities reliably and universally?</p>
+<p class="meta">Change in version 2.0: wording, commentary or disclosure only (codes W).</p>
+<section class="threshold"><h2>Pass threshold</h2><p class="pt">Gini &lt;0.35 for wealth distribution</p>
+</section>
+<h2>What it asks</h2><p>The system structurally prevents wealth concentration sufficient to enable governance capture or exploitative leverage over others — independent of whether the system also enables broad-based accumulation (C1.2a&#x27;s question, not this one).</p>
+<h2>How it is measured</h2><p>Wealth Gini coefficient, population-wide, tracked over time. Distinct from an accumulation mechanism&#x27;s mere existence (C1.2a): a system with a real, reaching wealth-building mechanism can still fail C1.2b if that mechanism&#x27;s gains compound unevenly (e.g., early or high-income participants accumulate disproportionately over successive years). Scorers should weigh whether prevention is <em>structural</em> — a hard cap, non-transferability, credit dissolution, progressive mechanisms, cooperative or collective ownership forms that don&#x27;t permit unlimited individual accumulation — versus <em>incidental</em>, a Gini figure that happens to be low today with no mechanism holding it there under stress or over a longer horizon.</p>
+<h2>Note on the threshold</h2><p>Moved from legacy C1.5&#x27;s Pass Threshold, per the boundary resolution in Paper Section 12.2 (commentary moved out of the threshold in v2.0).</p>
+<h2>How scores are anchored</h2><div class="band"><h3><span class="mk s10" aria-hidden="true"></span>1.0, pass</h3><p>A structural mechanism that prevents concentration outright, not merely a favorable Gini figure. <em>Integral&#x27;s ITC design — &quot;credits...cannot be traded, saved, speculated on, accumulated, or converted into influence... just like an energy cycle, not a currency&quot; (Appendix E) — is close to the strongest possible C1.2b answer in the corpus, illustrating exactly the &quot;aces (b), fails (a)&quot; case Section 12.1 describes. CCO-PTF&#x27;s own C4.4 write-up separately projects Gini &lt;0.35 through a different mechanism — conversion limits and acre-equity distribution — and would be a second 1.0 candidate.</em></p></div><div class="band"><h3><span class="mk s05" aria-hidden="true"></span>0.5, partial</h3><p>Real, meaningful reduction in concentration relative to unregulated capitalism, without a structural mechanism confirmed to hold it below the threshold. <em>The corpus&#x27;s existing &quot;cooperative systems: Gini 0.40-0.50&quot; figure (Section 12.3&#x27;s Current Performance) — real progress attributable to distributed ownership, but not confirmed under 0.35; see Appendix H.8a for a worked estimate along these lines.</em></p></div><div class="band"><h3><span class="mk s00" aria-hidden="true"></span>0.0, structural failure</h3><p>No structural prevention mechanism; concentration compounds without limit. <em>Status Quo Market Capitalism&#x27;s Gini 0.85 figure, alongside C4.4&#x27;s own finding that &quot;wealth concentration enables governance capture&quot; — a direct, well-evidenced 0.0.</em></p></div>
+<p class="note">v2.0 (Session 45): this criterion&#x27;s Pass Threshold was reworded without a change of bar (W; NEEC_Criteria_v2_s45.md); the band texts stand.</p>
+<h2>Normative roots</h2><p>From N4 (Universal Wealth Access) + N7 (Governance Legitimacy and Anti-Capture) — a new derivation pairing for this sub-criterion: N4 supplies the &quot;wealth is power&quot; logic, N7 supplies the anti-capture framing that concentration specifically threatens..</p>
+<h2>Judgment calls on this criterion</h2><ul><li><a href="../thresholds.html#c12b-wealth-gini">How equal must wealth be?</a></li></ul>
+<h2>How the systems score</h2><p class="pending-note">Every system's score on this criterion is listed here. Version 2.0 scores are being finalized; this appears when they are published. Version 1 scores remain on the <a href="https://sites.google.com/view/normativeeconomicevaluation/home">original NEEC site</a>.</p>
+<h2>Sources</h2><p>Definition: Paper Section 12.3; restated in v2.0 (NEEC_Criteria_v2_s45.md, Appendix V). Anchors: Paper Appendix H.7v2.</p>
+<p class="actions"><a class="btn" href="../replicate.html?criterion=C1.2b#prompt">Check this criterion with an AI</a><a class="btn quiet" href="https://github.com/BetterToBest/NormativeEvaluation/issues/new?template=push-back.yml&criterion=C1.2b%20Prevention%20of%20Exploitative%20Accumulation&title=Push%20back%3A%20C1.2b%20Prevention%20of%20Exploitative%20Accumulation">Push back on this threshold</a></p>
+</main>
+<footer class="colophon">
+<p>NEEC is part of the <a href="https://bettertobest.github.io/research-hub/">Better To Best Research Hub</a>. Written by Duke Johnson and Claude (Anthropic).
+Text and data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<p><a href="https://github.com/BetterToBest/NormativeEvaluation">Repository</a> <a href="../replicate.html">Replicate</a> <a href="../contribute.html">Report an error</a> <a href="../llms.txt">For AI systems</a></p>
+<p class="build">Built by <code>build_site.py</code> 1.0 from <code>criteria.json</code> (29 criteria, md5 af69e2e8) and <code>neec_corpus.json</code> (md5 ae19a9bc).</p>
+</footer>
+
+<script src="../assets/neec.js" defer></script>
+</body>
+</html>

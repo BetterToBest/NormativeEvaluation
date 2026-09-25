@@ -1,0 +1,49 @@
+name: Propose a criterion
+description: Something an economy ought to achieve that no NEEC criterion measures.
+title: "Criterion proposal: "
+labels: ["criterion-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A criterion joins only through a recorded decision and a new version of the criteria, as the three added in version 2.0 did. A proposal is most useful when its threshold could be tested with published data.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Health Security
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options: ["D1 Material Security", "D2 Human Autonomy", "D3 System Resilience", "D4 Ethical Integrity", "D5 Implementation Viability", "Not sure"]
+    validations:
+      required: true
+  - type: textarea
+    id: requirement
+    attributes:
+      label: What it asks
+      description: One or two sentences on what an economy ought to achieve.
+    validations:
+      required: true
+  - type: textarea
+    id: distinguishes
+    attributes:
+      label: Why no existing criterion measures it
+      description: Name the nearest criteria and the difference.
+    validations:
+      required: true
+  - type: textarea
+    id: threshold
+    attributes:
+      label: A Pass Threshold
+      description: Clauses that evidence could show met or not, and the indicators or data that would measure each.
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: Evidence of need
+      description: The documented harm or risk the criterion answers.
