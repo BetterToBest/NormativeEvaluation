@@ -4,7 +4,7 @@
 place in Session 46, 2026-09-24, by decisions 46.1 to 46.4 (Package C), and tag `s45` keeps the Session 45 text;
 amended in place again in Session 47, 2026-09-24, by decisions 47.1 and 47.2 (C4.6's clause 3 bar), and tag `s46`
 keeps the Session 46 text; in Session 48, 2026-09-24, by decisions 48.1 to 48.3 (the owner's three open
-questions), and tag `s47` keeps the Session 47 text; and in Session 49, 2026-09-25, by decisions 49.1 to 49.12
+questions), and tag `s47` keeps the Session 47 text; and in Session 49, 2026-09-25, by decisions 49.1 to 49.13
 (the public site; no criterion changes), and tag `s48` keeps the Session 48 text.
 Scorer and engineer: Claude. Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
 (the 26 criteria as they stood at `s44`), `neec_corpus.json`. Appendix V below is the one source of the v2.0 text:

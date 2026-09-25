@@ -698,7 +698,7 @@
  "schema": "neec-site-data/1",
  "scores_published": false,
  "sources": {
-  "criteria.json": "8876e547",
+  "criteria.json": "fd134dbd",
   "neec_corpus.json": "ae19a9bc"
  },
  "systems": [
