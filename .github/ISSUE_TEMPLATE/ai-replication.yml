@@ -1,0 +1,63 @@
+name: Report an AI check
+description: What an AI system found using the prompt on the site's Replicate page, whether it agrees or not.
+title: "AI check: "
+labels: ["ai-replication"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Confirmations are logged as carefully as disagreements. Paste the whole answer, including its JSON block.
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options: ["Audit of the published scores", "Blind scoring"]
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: System
+    validations:
+      required: true
+  - type: input
+    id: criterion
+    attributes:
+      label: Criteria checked
+      placeholder: All, or C1.1, C4.6
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options: ["Agrees with every published score checked", "Differs on at least one score", "Found a correction of fact"]
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model, interface and date
+      placeholder: "Model name and version; web app or API; 2026-10-01"
+    validations:
+      required: true
+  - type: input
+    id: tools
+    attributes:
+      label: Tools it used
+      placeholder: Web search, code execution, none
+  - type: textarea
+    id: answer
+    attributes:
+      label: The whole answer
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: json
+    attributes:
+      label: The JSON block
+      render: json
+  - type: textarea
+    id: notes
+    attributes:
+      label: Your notes
+      description: Anything you checked yourself, and where you think the AI went wrong, if it did.

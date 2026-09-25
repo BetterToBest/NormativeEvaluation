@@ -985,6 +985,26 @@ S48_CHECKS = [
                                "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
                                "NEEC_Ostrom_Commons_scoring_scratch.md")},
          stdout="rescoring_s48_output.txt", stderr=EMPTY),
+    dict(name="build_site.py: generates docs/ (77 files, scores not yet published)",
+         cmd=["python", "build_site.py"],
+         files={k: k for k in ("build_site.py", "criteria.json", "neec_corpus.json", "neec_scores.csv",
+                               "summary_blocks_s28.json", "wjp_rol_sf62_2012_2025.csv",
+                               "NEEC_Criteria_v2_s45.md", "NEEC_CONTRIBUTING.md", "NEEC_Paper_v1_4.md",
+                               "NEEC_Report_v1_6.md", "NEEC_OstromCommons_replication_record.md", "CITATION.cff",
+                               "neec_weighting_robustness_analysis_v2.py",
+                               "site/config.json", "site/thresholds.json", "site/ai_prompt.md",
+                               "site/pages/404.html", "site/pages/contribute.html", "site/pages/findings.html",
+                               "site/pages/home.html", "site/pages/method.html", "site/pages/replicate.html",
+                               "site/pages/status.html", "site/pages/thresholds.html",
+                               "site/assets/favicon.svg", "site/assets/neec.css", "site/assets/neec.js",
+                               "site/assets/fonts/OFL-IBMPlexMono.txt", "site/assets/fonts/OFL-SourceSerif4.txt",
+                               "site/assets/fonts/ibm-plex-mono-400.woff2", "site/assets/fonts/ibm-plex-mono-500.woff2",
+                               "site/assets/fonts/source-serif-4-italic.woff2", "site/assets/fonts/source-serif-4-roman.woff2",
+                               ".github/ISSUE_TEMPLATE/score-challenge.yml", ".github/ISSUE_TEMPLATE/new-evidence.yml",
+                               ".github/ISSUE_TEMPLATE/push-back.yml", ".github/ISSUE_TEMPLATE/ai-replication.yml",
+                               ".github/ISSUE_TEMPLATE/propose-system.yml", ".github/ISSUE_TEMPLATE/propose-criterion.yml",
+                               ".github/ISSUE_TEMPLATE/config.yml")},
+         stdout="build_site_output.txt"),
 ]
 
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
@@ -1006,11 +1026,13 @@ def run_check(chk):
         for dest, src in chk["files"].items():
             target = os.path.join(tmp, dest)
             if src == VIEW15:
+                os.makedirs(os.path.dirname(target), exist_ok=True)
                 with open(target, "w", encoding="utf-8") as f:
                     f.write(VIEW15_SOURCE)
                 continue
             if not os.path.isfile(os.path.join(HERE, src)):
                 return "FAIL", [f"missing input file: {src}"]
+            os.makedirs(os.path.dirname(target), exist_ok=True)
             shutil.copy(os.path.join(HERE, src), target)
         proc = subprocess.run([exe] + chk["cmd"][1:], cwd=tmp, capture_output=True)
         expect = chk.get("expect_exit", 0)

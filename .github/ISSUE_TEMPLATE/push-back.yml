@@ -1,0 +1,40 @@
+name: Push back on a threshold
+description: You would set a bar, a reading or a weight differently. Say where, and why.
+title: "Push back: "
+labels: ["push-back"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thresholds are judgments about how much is enough, and NEEC wants disagreements about them on the record. The Thresholds page on the site lists the consequential choices already recorded, each with its reason and alternative.
+  - type: input
+    id: topic
+    attributes:
+      label: The choice you would make differently
+      placeholder: "C4.6 clause 3: the World Justice Project bar"
+    validations:
+      required: true
+  - type: input
+    id: criterion
+    attributes:
+      label: Criteria it affects
+      placeholder: C4.6
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Where you would set it
+      description: A figure, a reading of the clause, or a weight.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: The normative reason. What should the criterion reward, and why does the current choice miss it?
+    validations:
+      required: true
+  - type: textarea
+    id: effect
+    attributes:
+      label: What it would change, if you know
+      description: Which systems would move, and the public data that would show it.

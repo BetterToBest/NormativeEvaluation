@@ -1,0 +1,62 @@
+name: Challenge a score
+description: Contest one criterion score for one system, with evidence.
+title: "Score challenge: "
+labels: ["score-challenge"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One criterion, one system. Read the criterion's Pass Threshold clause by clause (its page on the site, or `criteria.json`) and the system's scoring document first: a 1.0 needs every clause shown by named evidence.
+  - type: input
+    id: system
+    attributes:
+      label: System
+      description: As named on the site or in neec_scores.csv.
+      placeholder: Nordic Social Democracy
+    validations:
+      required: true
+  - type: input
+    id: criterion
+    attributes:
+      label: Criterion
+      description: The code and name, C1.1 to C5.5.
+      placeholder: C4.4 Power Distribution
+    validations:
+      required: true
+  - type: dropdown
+    id: proposed
+    attributes:
+      label: The score you would give
+      options: ["1.0", "0.5", "0.0"]
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of difference
+      options:
+        - "Evidence: a figure or source is wrong or out of date"
+        - "Interpretation: the same evidence, read differently against the clause"
+        - "Scope: a different configuration, date or set of mechanisms"
+        - "Protocol: the protocol is silent or ambiguous here"
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reasoning, clause by clause
+      description: Which clauses are met, not met or not shown, and which passage of the scoring document you disagree with.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Each source with its publisher, title, year or edition, page or table, and the figure.
+    validations:
+      required: true
+  - type: dropdown
+    id: registered
+    attributes:
+      label: Is this call already registered as close in the scoring document?
+      options: ["Yes", "No", "I don't know"]

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How contributions are handled
+    url: https://github.com/BetterToBest/NormativeEvaluation/blob/main/.github/CONTRIBUTING.md
+    about: Where each kind of report goes, and what happens to it.
+  - name: The prompt for checking a score with an AI
+    url: https://bettertobest.github.io/NormativeEvaluation/replicate.html#prompt
+    about: Build the prompt first, then report what the AI found with the "Report an AI check" form.
