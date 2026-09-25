@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 23 (Session 48). Runs every verification and analysis script on file
+Version 24 (Session 49). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -174,6 +174,19 @@ rescoring_s48.py: C4.4's six units in the pass re-read on 48.3's measure (part (
 Nordic Social Democracy's clause 1 bound computed from its published inputs, the consequences with parts (a) to
 (b7), and the score ledger (every entry's published total, each part's change, its total now; the published totals
 checked against neec_scores.csv), with NEEC_Rescoring_s48.md checked against its generated tables: 92 checks.
+Version 24 (Session 49) adds the public site (decisions 49.1 to 49.10, from the site package prepared in a chat
+session, NEEC_Site_Package_s49.md): build_site.py --check, which rebuilds docs/ in its own temporary directory from
+criteria.json, the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and
+site/, compares the result with docs/ file by file, and prints one line, which the harness also shows. Its inputs
+keep their subdirectories, so a check's files may now name paths in subdirectories. A negative control, in which
+the copied docs/index.html is replaced by docs/404.html, must fail with exit 1. Decisions 49.1 to 49.13 are
+recorded in NEEC_Criteria_v2_s45.md, whose md5 criteria.json carries, so the build check's capture is renamed
+build_criteria_s49_output.txt and recaptured; nothing else in criteria.json or the protocol changes. It adds
+rescoring_s49.py, part (b)'s eighth group: the nine part (b) units of C4.3 and C4.5 on the v2.0 clauses,
+CCO-PTF-CIP-SZH's C4.3 re-checked as class M on the same readings, part (a)'s three C4.5 units re-read, Nordic Social
+Democracy's C4.3 computed from the Eurostat figures the script holds, the consequences cumulatively with parts (a)
+to (b7) and decision 48.3, and the score ledger, with NEEC_Rescoring_s49.md checked against its generated tables:
+95 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -926,7 +939,7 @@ S45_CHECKS = [
     dict(name="build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 "
               "criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9",
          cmd=["python", "build_criteria.py"], files={k: k for k in V2_INPUTS},
-         stdout="build_criteria_s48_output.txt", stderr=EMPTY,
+         stdout="build_criteria_s49_output.txt", stderr=EMPTY,
          outputs={"criteria.json": "criteria.json", "SCORING_PROTOCOL.md": "SCORING_PROTOCOL.md"}),
     dict(name="build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 "
               "document passes (negative control)",
@@ -987,10 +1000,63 @@ S48_CHECKS = [
          stdout="rescoring_s48_output.txt", stderr=EMPTY),
 ]
 
+
+def tree(*roots):
+    """Every file under the given directories here, each mapped to itself (the copy keeps the subdirectories)."""
+    out = {}
+    for root in roots:
+        for r, _, fs in os.walk(os.path.join(HERE, root)):
+            for f in fs:
+                rel = os.path.relpath(os.path.join(r, f), HERE).replace(os.sep, "/")
+                out[rel] = rel
+    return dict(sorted(out.items()))
+
+
+# Session 49: the public site (appended after the version 23 checks). build_site.py --check rebuilds docs/ in its own
+# temporary directory from its inputs and site/, and compares the result with docs/, which is copied in whole.
+S49_CHECKS = [
+    dict(name="build_site.py --check: the public site docs/ equals what build_site.py generates from criteria.json, "
+              "the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and "
+              "site/ (decision 49.7)",
+         cmd=["python", "build_site.py", "--check"],
+         files={**{k: k for k in ("build_site.py", "criteria.json", "neec_corpus.json", "neec_scores.csv",
+                                  "summary_blocks_s28.json", "NEEC_Criteria_v2_s45.md", "NEEC_Paper_v1_4.md",
+                                  "wjp_rol_sf62_2012_2025.csv", "neec_weighting_robustness_analysis_v2.py")},
+                **tree("site", "docs", os.path.join(".github", "ISSUE_TEMPLATE"))},
+         stdout="build_site_check_output.txt", stderr=EMPTY, show_stdout=True),
+]
+S49_CHECKS.append(dict(S49_CHECKS[0], files={**S49_CHECKS[0]["files"], "docs/index.html": "docs/404.html"},
+                       name="build_site.py --check rejects a docs/ whose home page is replaced by another page "
+                            "(negative control; exit 1 expected)",
+                       stdout="build_site_check_negative_output.txt", expect_exit=1))
+
+# Session 49: part (b)'s eighth group, C4.3 and C4.5 on the v2.0 clauses, cumulative with parts (a) to (b7) and
+# decision 48.3 (appended after the site checks). It reads the v2.0 criteria.json, so it is not pinned.
+S49_CHECKS.append(
+    dict(name="rescoring_s49.py: rescoring pass part (b), eighth group, the 9 units of C4.3 and C4.5 on the v2.0 "
+              "clauses, CCO-PTF-CIP-SZH's C4.3 re-checked as class M, and part (a)'s 3 units of C4.5 re-read (D28); "
+              "Nordic Social Democracy's C4.3 from Eurostat; consequences with parts (a) to (b7) and 48.3, and the "
+              "score ledger; no corpus file changed",
+         cmd=["python", "rescoring_s49.py"],
+         files={k: k for k in ("rescoring_s49.py", "rescoring_s48.py", "rescoring_s47.py", "rescoring_s43.py",
+                               "rescoring_s42.py", "rescoring_s41.py", "rescoring_s40.py", "rescoring_s39.py",
+                               "rescoring_s38.py", "rescoring_s37.py", "r4_audit_s35.py", "criteria.json",
+                               "criteria_s47_snapshot.json", "criteria_s44_snapshot.json", "neec_corpus.json",
+                               "neec_scores.csv", "NEEC_Report_v1_6.md", "NEEC_Rescoring_s49.md",
+                               "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md", "NEEC_Georgism_LVT_scoring_scratch.md",
+                               "NEEC_MutualCredit_LETS_scoring_scratch.md", "NEEC_DoughnutEconomics_scoring_scratch.md",
+                               "NEEC_UniversalBasicServices_scoring_scratch.md",
+                               "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                               "NEEC_StateCapitalism_China_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                               "NEEC_StateCapitalism_Qatar_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                               "NEEC_Ostrom_Commons_scoring_scratch.md")},
+         stdout="rescoring_s49_output.txt", stderr=EMPTY))
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS + S47_CHECKS + S48_CHECKS)
+          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS)
 
 
 def md5(data):
@@ -1011,6 +1077,7 @@ def run_check(chk):
                 continue
             if not os.path.isfile(os.path.join(HERE, src)):
                 return "FAIL", [f"missing input file: {src}"]
+            os.makedirs(os.path.dirname(target), exist_ok=True)
             shutil.copy(os.path.join(HERE, src), target)
         proc = subprocess.run([exe] + chk["cmd"][1:], cwd=tmp, capture_output=True)
         expect = chk.get("expect_exit", 0)
@@ -1020,6 +1087,8 @@ def run_check(chk):
             notes.append(f"exit status {proc.returncode}, expected {expect}: {tail[0][:120]}")
         elif expect:
             notes.append(f"exit status {proc.returncode}, as expected")
+        if chk.get("show_stdout"):
+            notes.append(proc.stdout.decode("utf-8", "replace").strip())
         for stream, got in (("stdout", proc.stdout), ("stderr", proc.stderr)):
             name = chk.get(stream)
             if not name:

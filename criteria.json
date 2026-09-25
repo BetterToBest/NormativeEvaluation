@@ -6,7 +6,7 @@
     "base": "criteria_s44_snapshot.json",
     "base_md5": "d4b78634cd233adb8c00b1a5e0a00821",
     "record": "NEEC_Criteria_v2_s45.md",
-    "record_md5": "c318eabded5369892808730f0f263916",
+    "record_md5": "2b5499473b68e56f9b56e0df56f4021c",
     "clause_splits": "SCORING_PROTOCOL_s44_snapshot.md, Appendix B (thresholds v2.0 leaves unchanged)",
     "v1": {
       "document": "NEEC_Paper_v1_4.md",

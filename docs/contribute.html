@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contribute | NEEC</title>
+<meta name="description" content="Report an error, add evidence, push back on a threshold, or propose a system or a criterion.">
+<meta name="color-scheme" content="light dark">
+<meta name="generator" content="build_site.py 1.0">
+<link rel="canonical" href="https://bettertobest.github.io/NormativeEvaluation/contribute.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contribute">
+<meta property="og:description" content="Report an error, add evidence, push back on a threshold, or propose a system or a criterion.">
+<meta property="og:url" content="https://bettertobest.github.io/NormativeEvaluation/contribute.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/source-serif-4-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/neec.css">
+<link rel="alternate" type="text/plain" href="llms.txt" title="A plain-text guide for AI systems">
+<link rel="alternate" type="application/json" href="data/neec.json" title="The site's data">
+
+</head>
+<body class="p-contribute">
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+<a class="wordmark" href="index.html" aria-label="NEEC home"><svg class="wm-marks" viewBox="0 0 46 14" aria-hidden="true" focusable="false"><circle cx="7" cy="7" r="5.5" class="wm1"/><circle cx="23" cy="7" r="5" class="wm-ring"/><path d="M23 2 a5 5 0 0 1 0 10z" class="wm1"/><circle cx="39" cy="7" r="5" class="wm-ring wm0"/></svg><span>NEEC</span></a>
+<nav aria-label="Main"><ul><li><a href="findings.html">Findings</a></li><li><a href="systems/index.html">Systems</a></li><li><a href="criteria/index.html">Criteria</a></li><li><a href="thresholds.html">Thresholds</a></li><li><a href="method.html">Method</a></li><li><a href="replicate.html">Replicate</a></li><li><a href="contribute.html" aria-current="page">Contribute</a></li></ul></nav>
+</header>
+
+<main id="main">
+<h1>Contribute</h1>
+<p class="lede">NEEC is built to be challenged. If you think a score, a threshold or a source is wrong, or you have evidence that could change a score, there is a short form for it. Every report is reproduced by the maintainers and answered on the record.</p>
+<h2>Choose what you want to do</h2>
+<dl class="routes">
+<div><dt><a class="btn" href="https://github.com/BetterToBest/NormativeEvaluation/issues/new?template=score-challenge.yml">Challenge a score</a></dt><dd>One criterion for one system: the score you would give, and the evidence for it.</dd></div>
+<div><dt><a class="btn" href="https://github.com/BetterToBest/NormativeEvaluation/issues/new?template=new-evidence.yml">Add evidence</a></dt><dd>A source, a figure or a new edition that bears on a score, whether or not you dispute the score.</dd></div>
+<div><dt><a class="btn" href="https://github.com/BetterToBest/NormativeEvaluation/issues/new?template=push-back.yml">Push back on a threshold</a></dt><dd>You would set a bar, a reading or a weight differently. Say where and why: disagreements about what ought to count are the ones NEEC most wants recorded.</dd></div>
+<div><dt><a class="btn" href="https://github.com/BetterToBest/NormativeEvaluation/issues/new?template=ai-replication.yml">Report an AI check</a></dt><dd>You ran the prompt on the <a href="replicate.html#prompt">Replicate</a> page. Paste the answer, whether it agrees or not.</dd></div>
+<div><dt><a class="btn quiet" href="https://github.com/BetterToBest/NormativeEvaluation/issues/new?template=propose-system.yml">Propose a system</a></dt><dd>An economic system NEEC does not score yet, with its founding literature and any implementations.</dd></div>
+<div><dt><a class="btn quiet" href="https://github.com/BetterToBest/NormativeEvaluation/issues/new?template=propose-criterion.yml">Propose a criterion</a></dt><dd>Something an economy ought to achieve that no criterion measures, with the evidence of need and a threshold that could be measured.</dd></div>
+</dl>
+
+<p>The forms need a free GitHub account. <a href="https://github.com/BetterToBest/NormativeEvaluation/blob/main/.github/CONTRIBUTING.md">The contributing guide</a> explains each route in full, and <a href="https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_CONTRIBUTING.md"><code>NEEC_CONTRIBUTING.md</code></a> gives the method for replication audits and for scoring a new system.</p>
+<h2>What happens to a report</h2>
+<ol class="steps">
+<li>A maintainer reproduces it: the figure, the source, the reading.</li>
+<li>A correction of fact is made. A disagreement of judgment is weighed against the protocol and recorded as a decision with its reason, whichever way it goes.</li>
+<li>A score that changes does so through the recorded rescoring pass, applied by a script and checked by the harness, never by hand, and the record links the report.</li>
+</ol>
+<p>Reports that confirm a score are logged too. Engage with the evidence and the reasoning rather than with people; those are the reports that change things.</p>
+
+</main>
+<footer class="colophon">
+<p>NEEC is part of the <a href="https://bettertobest.github.io/research-hub/">Better To Best Research Hub</a>. Written by Duke Johnson and Claude (Anthropic).
+Text and data under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<p><a href="https://github.com/BetterToBest/NormativeEvaluation">Repository</a> <a href="replicate.html">Replicate</a> <a href="contribute.html">Report an error</a> <a href="llms.txt">For AI systems</a></p>
+<p class="build">Built by <code>build_site.py</code> 1.0 from <code>criteria.json</code> (29 criteria, md5 fd134dbd) and <code>neec_corpus.json</code> (md5 ae19a9bc).</p>
+</footer>
+
+<script src="assets/neec.js" defer></script>
+</body>
+</html>

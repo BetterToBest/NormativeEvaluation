@@ -1,0 +1,36 @@
+name: Add evidence
+description: A source, figure or new edition that bears on a score, whether or not you dispute it.
+title: "New evidence: "
+labels: ["evidence"]
+body:
+  - type: input
+    id: system
+    attributes:
+      label: System
+      description: Leave empty if the evidence bears on a criterion for every system.
+  - type: input
+    id: criterion
+    attributes:
+      label: Criterion
+      placeholder: C4.6 Harm Internalization
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: The evidence
+      description: Publisher, title, year or edition, page or table, the figure itself, and a link if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: bears
+    attributes:
+      label: What it bears on
+      description: Which clause of the Pass Threshold it speaks to, and in which direction, if you can tell.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limits
+      description: Anything that weakens it, such as coverage, method, date or who funded it.

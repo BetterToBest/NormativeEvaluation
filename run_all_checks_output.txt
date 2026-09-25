@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 92 reproducibility checks
+run_all_checks.py -- 95 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 92 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 b4c9e227)
+          README.md == README.md (md5 00d85dbf)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -329,9 +329,9 @@ run_all_checks.py -- 92 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [88] PASS  build_criteria.py (version 2.3) builds criteria.json v2.0, 29 criteria, from the pinned Session 44 criteria and the record's Appendix V, asserts rules A1-A7, and regenerates the protocol as draft.9
-          stdout == build_criteria_s48_output.txt (md5 5baf75ee)
+          stdout == build_criteria_s49_output.txt (md5 fc451715)
           stderr == (empty) (md5 d41d8cd9)
-          criteria.json == criteria.json (md5 af69e2e8)
+          criteria.json == criteria.json (md5 fd134dbd)
           SCORING_PROTOCOL.md == SCORING_PROTOCOL.md (md5 dde8e834)
 
 [89] PASS  build_criteria.py --selftest: each of rules A1-A7 rejects a planted violation, and the clean v2.0 document passes (negative control)
@@ -350,7 +350,22 @@ run_all_checks.py -- 92 reproducibility checks
           stdout == rescoring_s48_output.txt (md5 5de0cba5)
           stderr == (empty) (md5 d41d8cd9)
 
+[93] PASS  build_site.py --check: the public site docs/ equals what build_site.py generates from criteria.json, the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and site/ (decision 49.7)
+          site matches its sources: 77 files, scores not yet published
+          stdout == build_site_check_output.txt (md5 6abfe096)
+          stderr == (empty) (md5 d41d8cd9)
+
+[94] PASS  build_site.py --check rejects a docs/ whose home page is replaced by another page (negative control; exit 1 expected)
+          exit status 1, as expected
+          site differs from its sources: 1 of 77 files (index.html); run python3 build_site.py
+          stdout == build_site_check_negative_output.txt (md5 119a10e0)
+          stderr == (empty) (md5 d41d8cd9)
+
+[95] PASS  rescoring_s49.py: rescoring pass part (b), eighth group, the 9 units of C4.3 and C4.5 on the v2.0 clauses, CCO-PTF-CIP-SZH's C4.3 re-checked as class M, and part (a)'s 3 units of C4.5 re-read (D28); Nordic Social Democracy's C4.3 from Eurostat; consequences with parts (a) to (b7) and 48.3, and the score ledger; no corpus file changed
+          stdout == rescoring_s49_output.txt (md5 5bd45e56)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 92 passed, 0 failed, 0 skipped (of 92).
+SUMMARY: 95 passed, 0 failed, 0 skipped (of 95).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.
