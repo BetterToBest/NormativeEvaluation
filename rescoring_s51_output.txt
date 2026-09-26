@@ -1,0 +1,150 @@
+NEEC rescoring pass, stage 2, group 2.1: the design's modelled units on its published model, v4.20 (NEEC_Rescoring_s51.md)
+inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, neec_scores.csv, r4_audit_s35.py, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, rescoring_s47.py, rescoring_s48.py, rescoring_s49.py, rescoring_s50.py, cco_simulation_checks_s51_output.txt, NEEC_Rescoring_s51.md
+
+[1] THE GROUP: A SCAN OF EVERY PUBLISHED 1.0, AND THE v2.0 CLAUSES
+  PASS the rationale of each of the corpus's 184 published 1.0s is read from the text the audit read (Report v1.6's Part I line, or the entry's scoring document)
+  PASS 27 rationales name modelling, a simulation, a stress test or a projection; each is classified
+  a figure from the design's own modelling: CCO C1.1, CCO C1.2b, CCO C1.4, CCO C2.1, CCO C3.2, CCO C3.3, CCO C4.2, CCO C4.4, CCO C5.3; the word names the system or its framework, not a model's output: NSD C5.4, DE C2.5, CN C5.1, SG C5.1, SG C5.3, IF C5.2; the text contrasts an observed record with projection or modelling: GEO C3.4, GEO C5.3, MC C3.4, MC C5.3, DE C5.3, SWF C5.3, IF C5.3, OS C4.1; the stress test is a real-world episode: CN C3.2; the entry's revision of its own model is the clause's evidence, not a modelled figure: DE C3.4, UBS C3.4; the estimates are NEEC's own review of a design that publishes no model: INT C3.3
+  PASS the 9 that rest on a figure from the entry's own model are all CCO-PTF-CIP-SZH's; the pass re-estimated 4 (C1.1, C2.1, C4.2, C4.4); the other 5 (C1.2b, C1.4, C3.2, C3.3, C5.3) are this group's, with C1.1 re-checked as class I (reading 3.2)
+  PASS every unit of the group is a published 1.0; the five new ones were never re-estimated, and C1.1 stands at 0.5 from part (b3)
+  PASS the audit's codes: C1.1 AS (part (b3) re-estimated it), C1.4 AA, C3.2 AAA, C5.3 AAAA; C1.2b and C3.3 have one clause each and are outside the audit and D28's population
+  PASS v2.0's clauses: C1.1 and C1.4 (class I), C3.2 and C5.3 (class U) keep their Session 44 clauses verbatim; C1.4's scope names the 30%, 50% and 70% scenarios and its indicator for a design is its own model of them; C1.1's indicator is the Societal Poverty Line, and C3.3 (class W) measures poverty on it; C1.2b (class W) and C3.3 keep one clause
+  C1.1 (1) ≥90% poverty reduction within 20 years under base scenario  [class I]
+  C1.1 (2) ≥85% under stress testing  [class I]
+  C1.2b (1) Gini <0.35 for wealth distribution  [class W]
+  C1.4 (1) Poverty <8%  [class I]
+  C1.4 (2) aggregate demand >85% baseline  [class I]
+  C3.2 (1) Long-term inflation ≤3%  [class U]
+  C3.2 (2) stress test inflation ≤5% (when external 8%)  [class U]
+  C3.2 (3) automatic adjustment preventing runaway inflation  [class U]
+  C3.3 (1) Maintain core functions across ≥3 of 4 compound scenarios with degradation <20%  [class W]
+  C5.3 (1) Viable at ≥30% participation  [class U]
+  C5.3 (2) coexistence with traditional markets maintaining ≥90% economic activity  [class U]
+  C5.3 (3) scaling pathway validated through modeling  [class U]
+  C5.3 (4) coordination protocols established  [class U]
+
+[2] THE SIMULATION RUNS (cco_simulation_checks_s51_output.txt)
+  PASS cco_simulation_checks_s51_output.txt md5 b4f481e70166f2f01d1a294765984e14
+  PASS the captured run pins harness.js and index.html at 5a7a7b1 by digest, and its 16 checks pass
+  PASS every figure this record quotes from the runs is in the capture (20 passages)
+  PASS the capture holds 5 tables (C1.1, its 5-year tracking, C1.2b, C1.4, C3.3)
+
+[3] THE RECORDS
+  PASS every unit has one status per v2.0 clause, in the Pass Threshold's order, each with its estimate and its source
+  clause statuses: cleared 7, short 3, not shown 3, out of reach 0, moot 0
+
+[4] THE RULE (D28) AND THE AUDIT'S CODES
+  PASS every verdict follows D28 (1.0 only if every clause is cleared or moot), and none is 0.0 (D28(f))
+  PASS of the five new units 2 stand (C3.2, C5.3) and 3 become 0.5 (C1.2b, C1.4, C3.3; 1.5 points); C1.1, re-checked as class I, stays 0.5
+  PASS the audit's A codes: 7 on C3.2 and C5.3 (class U) carried as cleared on the unit's own text, each with the audit's phrase; 2 departed from, C1.4's two, each with its reason (reading 3.6)
+  CCO C1.4 clause 1: located in no design source; the design's model shows poverty above 8% at its nearest scenario (reading 3.6)
+  CCO C1.4 clause 2: located in no design source; the design's model shows its demand proxy far below 85% at its nearest scenario (reading 3.6)
+  PASS no unit of this group is flagged
+
+[5] REACH (D28(c)) AND EXTENSIONS (D31)
+  PASS no clause of this group is out of reach, and the audit coded none so
+
+[6] FLAG REGISTERS (against the summary blocks, cumulatively with parts (a) and (b) and 48.3)
+  PASS flags added here: 0; removed: 1 (CCO C1.1, which part (b3) added; reading 3.4). Flags added by the pass so far: 22 (against 23 before this group); removed from the published registers: 7
+  Flags added in this group: none; removed: 1 (CCO C1.1, the flag toward 1.0 that part (b3) added; reading 3.4). Flags added by the pass so far: 22 (against 23 before this group); removed from the published registers: 7. CCO-PTF-CIP-SZH's published register holds no flag; the pass's flags on it are now on C3.4, C5.2 (before this group: C1.1, C3.4, C5.2).
+
+[7] THE DESIGN'S OTHER RE-ESTIMATED UNITS, AGAINST v4.20 (reading 3.9)
+  PASS every other unit of the design the pass re-estimated (14, all at 0.5) is checked against v4.20; none reopens
+| Unit | Part | Verdict | What the record read from the model, or its reopening condition | At v4.20 | Outcome |
+|---|---|---|---|---|---|
+| CCO C2.3 | (b1) | 0.5 | no estimate of the level of creative engagement or of meaning scores was located | computes neither | stands |
+| CCO C2.4 | (b1) | 0.5 | no estimate of the share of proposals adopted or of satisfaction with responsiveness | the CIP democratic rate is an input (65%), not an output; computes neither | stands |
+| CCO C3.4 | (b1) | 0.5 (flagged) | reopens if the simulation adds an endogenous price or behavioural channel and the adjustment run is repeated | prices remain an exogenous input rate, damped only by realised PTF and PTH membership (Known Limitations, v4.17); no behavioural response is added, and v4.19's rule scaling cost relief with the Basic Unit is mechanical: not met | stands |
+| CCO C5.1 | (b2) | 0.5 | the components' records decide; no model is read | does not bear | stands |
+| CCO C2.1 | (b4) | 0.5 | the model computes no autonomy or coercion measure | still none | stands |
+| CCO C2.5 | (b5) | 0.5 | the model does not simulate an exit from Public Trust Housing | Public Trust Housing membership is still fixed at construction | stands |
+| CCO C3.5 | (b6) | 0.5 | no share of failures diagnosed or corrected, and no externalised cost, in the model | still none | stands |
+| CCO C4.1 | (b6) | 0.5 | no resource use against regeneration and no debt ratio in the model | still none; v4.19 states that the engine has no budget constraint | stands |
+| CCO C4.2 | (b7) | 0.5 | the model represents neither emissions nor biodiversity | still neither | stands |
+| CCO C4.4 | 48.3 | 0.5 | no simulation run is used: the model represents no governance of decisions | still none | stands |
+| CCO C4.3 | (b8) | 0.5 | the model represents no groups | agents still carry no group attribute | stands |
+| CCO C5.2 | (b9) | 0.5 (flagged) | the model represents no deployment pathway | still none: the population is fixed from year 0 | stands |
+| CCO C5.4 | (b9) | 0.5 | no projection of opposition to repeal or of survival across administrations | still none | stands |
+| CCO C3.1 | (a) | 0.5 | clause 3 (coverage) not shown: participation is opt-in | v4.19 adds automatic stabilizers built on the Research Hub's crisis protocols, off in every preset (the hub's x1.20 rule, a shock-neutral default of x1.35 and a scaled option of +2.8% per 1% of income lost); clause 2 on the design's stated rules is unchanged (the roadmap's fixed 20%); CCO participants, who receive Basic Units, are 77.9% of the reference population, and emergency enrollment extends cost relief, not a cash benefit, at a placeholder 50% take-up: clause 3 still fixes 0.5 | stands |
+
+[8] CONSEQUENCES (computed here on the published 26-criterion structure; no corpus file changes)
+  PASS no failure count changes, so no tier changes (D28(f))
+  PASS no entry scores 1.0 on 9 criteria after this group, as before it: each criterion of the group keeps a 1.0 or had none left
+  After this group C1.1 keeps 0 scores of 1.0 (none); C1.2b keeps 4 scores of 1.0 (DG, PE, INT, MC); C1.4 keeps 1 score of 1.0 (UBI); C3.2 keeps 3 scores of 1.0 (CCO, CN, SG); C3.3 keeps 3 scores of 1.0 (DG, PE, INT); C5.3 keeps 7 scores of 1.0 (SQ, CCO, GEO, UBS, SWF, IF, OS). After parts (a), (b) and this group no entry scores 1.0 on 9 criteria: C1.1 (emptied in part (b3)), C2.1 (emptied in part (b4)), C2.3 (emptied in part (b1)), C2.4 (emptied in part (b1)), C3.1 (emptied in part (b2)), C3.5 (emptied in part (b6)), C4.1 (emptied in part (b6)), C4.2 (emptied in part (b7)), C4.3 (emptied in part (b8)).
+  PASS first place: CCO, 17.0 after part (b), 15.5 now; next, PE at 14.5
+  After this group the corpus has 21 dominance pairs against 22 after part (b) (new: none; lost: CCO>DG), and its frontier holds 14 entries against 13 (SQ, NSD, MS, LM, UBI, DG, FALC, PE, CCO, INT, MC, SWF, IF, OS). First place: CCO, 17.0 after part (b), 15.5 now, ahead of PE, INT at 14.5. Across the pass so far 152 units have been re-estimated, each counted once: 16 stand and 136 are at 0.5 (68.0 points).
+
+[9] THE SCORE LEDGER (published total, each part's change, the total now; 26 criteria)
+  PASS the published totals and failure counts in neec_corpus.json equal neec_scores.csv's for all 23 entries
+  PASS each entry's changes, part by part, sum to the difference between its published total and its total now
+
+[10] ANCHOR EXAMPLES THE PASS SO FAR MOVES (the published anchors, criteria_s44_snapshot.json)
+  PASS this group moves two anchor examples, C1.2b's and C1.4's 1.0 (CCO-PTF-CIP-SZH), 17 across the pass; each band keeps a corpus unit at its value (Integral and three others on C1.2b, Universal Basic Income on C1.4), so the 9 bands left with none are unchanged
+  Anchor examples citing a unit the pass moves: C1.1's 1.0 example, NSD (part (b3)); C1.2b's 1.0 example, CCO (part (2.1)); C1.4's 1.0 example, CCO (part (2.1)); C2.1's 1.0 example, UBI (part (a)); C2.3's 1.0 example, DG (part (b1)); C2.4's 1.0 example, PE (part (b1)); C2.5's 1.0 example, CCO (part (b5)); C3.1's 1.0 example, UBI (part (b2)); C3.2's 1.0 example, PE (part (b4)); C3.5's 1.0 example, CCO (part (b6)); C4.1's 1.0 example, DG (part (b6)); C4.2's 1.0 example, PE (part (b7)); C4.3's 1.0 example, CCO (part (b8)); C5.1's 1.0 example, MS (part (b2)); C5.2's 1.0 example, CCO (part (b9)); C5.4's 1.0 example, CCO (part (b9)); C5.5's 1.0 example, PE (part (b9)). Bands whose example the pass moves and which no corpus unit then scores at their value: C1.1's 1.0, C2.1's 1.0, C2.3's 1.0, C2.4's 1.0, C3.1's 1.0, C3.5's 1.0, C4.1's 1.0, C4.2's 1.0, C4.3's 1.0.
+
+[11] THE RECORD'S TABLES (generated here; NEEC_Rescoring_s51.md must contain them, and the runs' tables, verbatim)
+  PASS NEEC_Rescoring_s51.md contains all 15 generated tables
+  PASS NEEC_Rescoring_s51.md contains the 5 tables of the simulation runs verbatim
+
+| Entry | Criterion | Class | Clauses | Verdict | Flag |
+|---|---|---|---|---|---|
+| CCO | C1.1 | I | S S | 0.5 (part (b3)) → 0.5 | removed (part (b3)'s, toward 1.0) |
+| CCO | C1.2b | W | S | 1.0 → 0.5 |  |
+| CCO | C1.4 | I | U U | 1.0 → 0.5 |  |
+| CCO | C3.2 | U | C C C | 1.0 → 1.0 |  |
+| CCO | C3.3 | W | U | 1.0 → 0.5 |  |
+| CCO | C5.3 | U | C C C C | 1.0 → 1.0 |  |
+
+| Entry | Published (rank) | After part (b) (rank) | After group 2.1 (rank) | Change here | Failures | Tier |
+|---|---:|---:|---:|---:|---:|---|
+| CCO | 24.5 (1) | 17.0 (1) | 15.5 (1) | -1.5 | 0 | Potentially Adequate |
+| PE | 20.5 (2) | 14.5 (2) | 14.5 (2) | 0.0 | 1 | Potentially Adequate |
+| NSD | 19.5 (3) | 13.5 (4) | 13.5 (4) | 0.0 | 2 | Potentially Adequate |
+| INT | 19.5 (3) | 14.5 (2) | 14.5 (2) | 0.0 | 3 | Partially Adequate |
+| DG | 19.0 (5) | 13.5 (4) | 13.5 (4) | 0.0 | 2 | Potentially Adequate |
+| MS | 16.5 (6) | 13.5 (4) | 13.5 (4) | 0.0 | 2 | Potentially Adequate |
+| MMT | 15.5 (7) | 11.5 (13) | 11.5 (13) | 0.0 | 3 | Partially Adequate |
+| UBI | 14.5 (8) | 11.0 (15) | 11.0 (15) | 0.0 | 7 | Structurally Inadequate |
+| MC | 14.5 (8) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate |
+| OS | 14.5 (8) | 13.0 (7) | 13.0 (7) | 0.0 | 3 | Partially Adequate |
+| SWF | 14.0 (11) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate |
+| SG | 14.0 (11) | 12.0 (11) | 12.0 (11) | 0.0 | 4 | Partially Adequate |
+| GEO | 13.5 (13) | 12.5 (8) | 12.5 (8) | 0.0 | 2 | Potentially Adequate |
+| UBS | 13.5 (13) | 12.0 (11) | 12.0 (11) | 0.0 | 3 | Partially Adequate |
+| IF | 13.5 (13) | 11.5 (13) | 11.5 (13) | 0.0 | 5 | Partially Adequate |
+| FALC | 13.0 (16) | 9.5 (16) | 9.5 (16) | 0.0 | 10 | Structurally Inadequate |
+| DE | 11.5 (17) | 9.0 (19) | 9.0 (19) | 0.0 | 8 | Structurally Inadequate |
+| SQ | 10.5 (18) | 9.5 (16) | 9.5 (16) | 0.0 | 9 | Structurally Inadequate |
+| CPS | 10.0 (19) | 7.5 (22) | 7.5 (22) | 0.0 | 12 | Structurally Inadequate |
+| SC | 10.0 (19) | 8.5 (20) | 8.5 (20) | 0.0 | 9 | Structurally Inadequate |
+| CN | 10.0 (19) | 9.5 (16) | 9.5 (16) | 0.0 | 8 | Structurally Inadequate |
+| QA | 9.0 (22) | 8.0 (21) | 8.0 (21) | 0.0 | 10 | Structurally Inadequate |
+| LM | 8.0 (23) | 6.0 (23) | 6.0 (23) | 0.0 | 15 | Structurally Inadequate |
+
+| Entry | Published | (a) | (b1) | (b2) | (b3) | (b4) | (b5) | (b6) | (b7) | 48.3 | (b8) | (b9) | (2.1) | Now | Re-estimated | At 0.5 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| CCO | 24.5 | -0.5 | -1.5 | -0.5 | -0.5 | -0.5 | -0.5 | -1.0 | -0.5 | -0.5 | -0.5 | -1.0 | -1.5 | 15.5 | 20 | 18 |
+| PE | 20.5 |  | -1.5 | -0.5 | -0.5 | -1.5 |  | -0.5 | -0.5 |  | -0.5 | -0.5 |  | 14.5 | 13 | 12 |
+| NSD | 19.5 | -2.5 | -1.0 | -0.5 | -0.5 | -0.5 |  |  |  |  | -0.5 | -0.5 |  | 13.5 | 13 | 12 |
+| INT | 19.5 | -0.5 | -1.0 | -0.5 |  | -1.0 | -0.5 | -1.0 | -0.5 |  |  |  |  | 14.5 | 12 | 10 |
+| DG | 19.0 |  | -1.5 | -0.5 | -0.5 | -0.5 |  | -0.5 | -1.0 |  | -1.0 |  |  | 13.5 | 11 | 11 |
+| MS | 16.5 | -1.0 | -1.5 | -0.5 | -0.5 |  |  |  | 0.5 |  |  |  |  | 13.5 | 8 | 6 |
+| MMT | 15.5 | -1.5 | -1.0 | -0.5 | -0.5 |  |  |  |  |  | -0.5 |  |  | 11.5 | 8 | 8 |
+| UBI | 14.5 | -1.5 | -0.5 | -0.5 | -0.5 |  |  |  |  |  | -0.5 |  |  | 11.0 | 8 | 7 |
+| MC | 14.5 |  | -1.0 | -0.5 |  |  | -0.5 |  |  |  |  |  |  | 12.5 | 5 | 4 |
+| OS | 14.5 | -0.5 |  |  |  |  | -0.5 | -0.5 |  |  |  |  |  | 13.0 | 4 | 3 |
+| SWF | 14.0 |  |  | -0.5 |  |  | -0.5 | -0.5 |  |  |  |  |  | 12.5 | 4 | 3 |
+| SG | 14.0 | -1.0 | -0.5 | -0.5 |  |  |  |  |  |  |  |  |  | 12.0 | 4 | 4 |
+| GEO | 13.5 | -0.5 |  |  |  |  | -0.5 |  |  |  |  |  |  | 12.5 | 2 | 2 |
+| UBS | 13.5 |  | -0.5 | -0.5 |  |  | -0.5 |  |  |  |  |  |  | 12.0 | 4 | 3 |
+| IF | 13.5 | -1.0 |  |  |  |  | -0.5 |  |  |  |  | -0.5 |  | 11.5 | 4 | 4 |
+| FALC | 13.0 | -0.5 | -0.5 |  | -0.5 | -1.0 |  | -0.5 | -0.5 |  |  |  |  | 9.5 | 8 | 7 |
+| DE | 11.5 | -0.5 | -0.5 |  |  |  | -0.5 | -0.5 | -0.5 |  |  |  |  | 9.0 | 5 | 5 |
+| SQ | 10.5 | -0.5 |  |  |  | -0.5 |  |  |  |  |  |  |  | 9.5 | 3 | 2 |
+| CPS | 10.0 | -1.5 |  |  | -0.5 |  |  |  |  |  | -0.5 |  |  | 7.5 | 5 | 5 |
+| SC | 10.0 |  | -1.0 |  |  |  |  |  |  |  |  | -0.5 |  | 8.5 | 3 | 3 |
+| CN | 10.0 |  |  | -0.5 |  |  |  |  |  |  |  |  |  | 9.5 | 1 | 1 |
+| QA | 9.0 | -0.5 |  | -0.5 |  |  |  |  |  |  |  |  |  | 8.0 | 2 | 2 |
+| LM | 8.0 | -1.5 |  |  |  |  |  |  |  |  |  | -0.5 |  | 6.0 | 5 | 4 |
+
+RESCORING STAGE 2, GROUP 2.1, COMPUTED.
