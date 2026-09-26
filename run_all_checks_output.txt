@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 98 reproducibility checks
+run_all_checks.py -- 99 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 98 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 e52b2d9c)
+          README.md == README.md (md5 bf384889)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -379,7 +379,11 @@ run_all_checks.py -- 98 reproducibility checks
           stdout == jev_s50_check_output.txt (md5 4886a15f)
           stderr == (empty) (md5 d41d8cd9)
 
+[99] PASS  rescoring_s51.py: rescoring pass stage 2, group 2.1, CCO-PTF-CIP-SZH's units that rest on the design's own modelling on its published model at v4.20: a scan of every published 1.0, C1.2b, C1.4, C3.2, C3.3 and C5.3 re-read and C1.1 re-checked as class I (D28); the design's other re-estimated units against v4.20; the simulation runs' capture by digest; consequences with parts (a) and (b) and 48.3, and the score ledger; no corpus file changed
+          stdout == rescoring_s51_output.txt (md5 00039f64)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 98 passed, 0 failed, 0 skipped (of 98).
+SUMMARY: 99 passed, 0 failed, 0 skipped (of 99).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

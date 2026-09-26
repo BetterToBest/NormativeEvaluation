@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 25 (Session 50). Runs every verification and analysis script on file
+Version 26 (Session 51). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -196,7 +196,14 @@ C5.4 and C5.5 on the v2.0 clauses, part (a)'s two C5.2 units re-read, Status Quo
 Social Democracy's C5.4 clause 2 from the ISSP 2016 figures it holds, the consequences cumulatively with parts (a) to
 (b8) and decision 48.3, and the score ledger, with NEEC_Rescoring_s50.md checked against its generated tables; and
 jev_s50_check.py, the interpretation check run on that group, which rebuilds every recorded request from its sources
-and compares the recorded answers with the pass's statuses, its summary line shown: 98 checks.
+and compares the recorded answers with the pass's statuses, its summary line shown: 98 checks. Version 26 (Session 51)
+adds rescoring_s51.py, stage 2's first group: CCO-PTF-CIP-SZH's units that rest on the design's own modelling, read on
+its published model at v4.20 (the pin moves from cd0ceec to 5a7a7b1): a scan of every published 1.0's rationale, the
+five units it finds that the pass had not re-estimated, the design's C1.1 re-checked as class I on the Societal Poverty
+Line, the design's other re-estimated units against v4.20, the consequences cumulatively with parts (a) and (b) and
+decision 48.3, and the score ledger, with NEEC_Rescoring_s51.md checked against its generated tables and against the
+tables of the simulation runs, whose captured output (cco_simulation_checks_s51_output.txt) it checks by digest; the
+JavaScript itself is not rerun here, as with Sessions 38 and 40: 99 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1096,10 +1103,25 @@ S50_CHECKS.append(
                                                "NEEC_MutualCredit_LETS_scoring_scratch.md")}},
          stdout="jev_s50_check_output.txt", stderr=EMPTY, show_summary=True))
 
+# Session 51: stage 2's first group, the design's modelled units on its published model at v4.20 (5a7a7b1), cumulative
+# with parts (a) and (b) and decision 48.3. It reads the captured output of cco_simulation_checks_s51.js, not the
+# JavaScript, which needs the simulation's source.
+S51_FILES = {**S50_FILES, **{k: k for k in ("rescoring_s51.py", "NEEC_Rescoring_s51.md",
+                                            "cco_simulation_checks_s51_output.txt")}}
+S51_CHECKS = [
+    dict(name="rescoring_s51.py: rescoring pass stage 2, group 2.1, CCO-PTF-CIP-SZH's units that rest on the design's "
+              "own modelling on its published model at v4.20: a scan of every published 1.0, C1.2b, C1.4, C3.2, C3.3 and "
+              "C5.3 re-read and C1.1 re-checked as class I (D28); the design's other re-estimated units against v4.20; "
+              "the simulation runs' capture by digest; consequences with parts (a) and (b) and 48.3, and the score "
+              "ledger; no corpus file changed",
+         cmd=["python", "rescoring_s51.py"], files=S51_FILES,
+         stdout="rescoring_s51_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS)
+          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS)
 
 
 def md5(data):

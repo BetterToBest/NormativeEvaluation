@@ -1,0 +1,109 @@
+NEEC cco_simulation_checks_s51: CCO-PTF-CIP-SZH on the design's own engine, v4.20
+inputs: harness.js, index.html
+
+[1] THE ENGINE
+  PASS harness.js md5 fe6fa4a3f82a2d572c5e6914cc2345f2 (compassionism-simulation 5a7a7b1, v4.20)
+  PASS index.html md5 c333b6326b95586515743dba6647ca2a (same commit; META.VERSION 4.20)
+  PASS updateRecession and buildRecessionPath in harness.js are the page's, character for character (v4.17 ported them; Session 40 had to append them)
+  PASS seed-42 Full Integration 20yr reproduces v4.20's documented regression: median BLEI 1975 d, BLEI poverty 13.2%, median wealth $570661, wealth poverty 15.8%, Gini 0.518, System Stability 88.8%
+  PASS harness.js's Full Integration, Adverse Environment, Stress Test and High Automation are the page's presets (reference, adverse, stress, hiAI), field for field
+  PASS constants read from source: WEALTH_FLOOR -$10,000, LIVING_WAGE_ANNUAL $49,370, AI displacement 0.012 a year from year 5 and 0.022 from year 15, capped at 0.10 in runYear(); TARGET_GINI 0.25 (a constant, not an output)
+
+[2] THE RUNNER (N = 500 seeds, 1-500, 500 agents)
+  PASS the runner reproduces runScenario() on all 500 seeds of all 8 scenarios (FI, HA, BF, BFm, ADV, BA, BAm, ST): final-year wealth and BLEI poverty, EDC-adjusted Gini, median wealth, the four income and basket measures, housing distress and extreme poverty, and the year-0 figures
+  PASS Full Integration is run once, for 25 years, and read at year 20 as well: runYear() does not read the horizon, and the check above compares its year 20 with the 20-year runScenario(); the Stress Test's Baseline is the Adverse Environment's (recessions and automation mirrored, 3% CPI)
+  PASS v4.20's automation sweep reproduced (seeds 1-500, means of runs): Full Integration 15.27% / 12.43% / $528,624 / 1,834 d; High Automation 29.16% / 26.65% / $340,928 / 1,196 d; Adverse Environment 38.42% / 34.92% / $169,911 / 606 d; Stress Test 61.18% / 59.14% (wealth poverty / BLEI poverty / median wealth / median BLEI)
+  PASS v4.20's refreshed headline reproduced: wealth poverty 78.6% below the shipped Baseline, 69.7% below the matched one, 59.6% below year 0; BLEI poverty 82.4% and 74.6%, ending above its year-0 10.3%; net basket poverty 87.9% below the shipped Baseline, the highest; 66.3% start in basket poverty
+
+[3] C1.1: POVERTY REDUCTION ON THE ENGINE'S MEASURES AND THE SOCIETAL POVERTY LINE (seed means)
+
+| Scenario | Measure | Year 0 | Year 20 | Reduction vs year 0 | Seeds clearing the clause vs year 0 | Paired Baseline (3% CPI), yr 20 | Reduction vs paired Baseline |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Reference (Full Integration) | Societal Poverty Line, cash income | 9.0% | 11.5% | none (27.9% higher) | 0 of 500 at 90% | 9.6% | none (19.2% higher) |
+| Reference (Full Integration) | Societal Poverty Line, incl. in-kind relief | 9.0% | 8.4% | 6.8% | 0 of 500 at 90% | 9.6% | 13.2% |
+| Reference (Full Integration) | Relative income poverty (60% of median), cash | 15.3% | 18.1% | none (18.6% higher) | 0 of 500 at 90% | 16.4% | none (10.7% higher) |
+| Reference (Full Integration) | Relative income poverty, incl. in-kind relief | 15.3% | 14.7% | 3.4% | 0 of 500 at 90% | 16.4% | 9.9% |
+| Reference (Full Integration) | Basket poverty, net | 66.3% | 9.9% | 85.0% | 2 of 500 at 90% | 81.9% | 87.9% |
+| Reference (Full Integration) | Basket poverty, gross | 66.3% | 19.7% | 70.2% | 0 of 500 at 90% | 81.9% | 75.9% |
+| Reference (Full Integration) | Wealth poverty | 37.8% | 15.3% | 59.6% | 0 of 500 at 90% | 71.5% | 78.6% |
+| Reference (Full Integration) | BLEI poverty | 10.3% | 12.4% | none (20.5% higher) | 0 of 500 at 90% | 70.5% | 82.4% |
+| Reference (Full Integration) | Extreme poverty (per 10,000) | 22.0 | 13.1 | 40.3% | 0 of 500 at 90% | 73.1 | 82.0% |
+| Stress: Adverse Environment | Societal Poverty Line, cash income | 9.0% | 15.4% | none (71.7% higher) | 0 of 500 at 85% | 17.2% | 10.5% |
+| Stress: Adverse Environment | Societal Poverty Line, incl. in-kind relief | 9.0% | 9.3% | none (3.3% higher) | 0 of 500 at 85% | 17.2% | 46.2% |
+| Stress: Adverse Environment | Relative income poverty (60% of median), cash | 15.3% | 21.8% | none (42.6% higher) | 0 of 500 at 85% | 23.6% | 7.8% |
+| Stress: Adverse Environment | Relative income poverty, incl. in-kind relief | 15.3% | 14.9% | 2.6% | 0 of 500 at 85% | 23.6% | 37.1% |
+| Stress: Adverse Environment | Basket poverty, net | 66.3% | 58.1% | 12.4% | 0 of 500 at 85% | 95.8% | 39.4% |
+| Stress: Adverse Environment | Basket poverty, gross | 66.3% | 76.6% | none (15.4% higher) | 0 of 500 at 85% | 95.8% | 20.1% |
+| Stress: Adverse Environment | Wealth poverty | 37.8% | 38.4% | none (1.6% higher) | 0 of 500 at 85% | 83.6% | 54.0% |
+| Stress: Adverse Environment | BLEI poverty | 10.3% | 34.9% | none (238.5% higher) | 0 of 500 at 85% | 82.9% | 57.9% |
+| Stress: Adverse Environment | Extreme poverty (per 10,000) | 22.0 | 38.0 | none (72.9% higher) | 0 of 500 at 85% | 85.1 | 55.3% |
+| Stress: the Stress Test preset | Societal Poverty Line, cash income | 9.0% | 17.7% | none (97.1% higher) | 0 of 500 at 85% | 17.2% | none (2.8% higher) |
+| Stress: the Stress Test preset | Societal Poverty Line, incl. in-kind relief | 9.0% | 14.4% | none (60.5% higher) | 0 of 500 at 85% | 17.2% | 16.3% |
+| Stress: the Stress Test preset | Relative income poverty (60% of median), cash | 15.3% | 24.2% | none (58.4% higher) | 0 of 500 at 85% | 23.6% | none (2.4% higher) |
+| Stress: the Stress Test preset | Relative income poverty, incl. in-kind relief | 15.3% | 20.7% | none (35.5% higher) | 0 of 500 at 85% | 23.6% | 12.4% |
+| Stress: the Stress Test preset | Basket poverty, net | 66.3% | 79.7% | none (20.2% higher) | 0 of 500 at 85% | 95.8% | 16.8% |
+| Stress: the Stress Test preset | Basket poverty, gross | 66.3% | 86.1% | none (29.8% higher) | 0 of 500 at 85% | 95.8% | 10.2% |
+| Stress: the Stress Test preset | Wealth poverty | 37.8% | 61.2% | none (61.9% higher) | 0 of 500 at 85% | 83.6% | 26.8% |
+| Stress: the Stress Test preset | BLEI poverty | 10.3% | 59.1% | none (473.2% higher) | 0 of 500 at 85% | 82.9% | 28.7% |
+| Stress: the Stress Test preset | Extreme poverty (per 10,000) | 22.0 | 61.6 | none (180.0% higher) | 0 of 500 at 85% | 85.1 | 27.6% |
+  PASS no measure reaches 90% in the reference run against either comparator (largest 87.9%) or 85% in the Adverse Environment (largest 57.9%); on the Societal Poverty Line the reference run gives none (27.9% higher) against year 0
+
+The reference run at the measurement protocol's 5-year intervals (seed means):
+
+| Measure | Year 0 | Year 5 | Year 10 | Year 15 | Year 20 |
+|---|---:|---:|---:|---:|---:|
+| Societal Poverty Line, cash income | 9.0% | 8.6% | 9.5% | 10.5% | 11.5% |
+| Societal Poverty Line, incl. in-kind relief | 9.0% | 5.8% | 6.5% | 7.3% | 8.4% |
+| Relative income poverty (60% of median), cash | 15.3% | 15.1% | 16.3% | 17.4% | 18.1% |
+| Basket poverty, net | 66.3% | 30.8% | 21.2% | 14.5% | 9.9% |
+| Wealth poverty | 37.8% | 26.8% | 24.0% | 20.1% | 15.3% |
+
+Median cash income, reference run: $39,966 at year 0, $79,370 at year 20 (seed means); the Societal Poverty Line is $20,458 and $40,160 a year.
+
+[4] C1.2b: THE WEALTH GINI (seed means)
+
+| Scenario | Gini | Year 0 | Year 10 | Year 20 | Seeds below 0.35 at year 20 |
+|---|---|---:|---:|---:|---:|
+| Reference (Full Integration) | EDC-adjusted (the engine's KPI) | 0.702 | 0.573 | 0.518 | 0 of 500 |
+| Reference (Full Integration) | net wealth, negatives at zero | 0.601 | 0.557 | 0.510 | 0 of 500 |
+| Baseline (3% CPI) | EDC-adjusted (the engine's KPI) | 0.746 | 0.812 | 0.857 | 0 of 500 |
+| Baseline (3% CPI) | net wealth, negatives at zero | 0.601 | 0.793 | 0.849 | 0 of 500 |
+  PASS the reference run's wealth Gini at year 20 is 0.518 (EDC-adjusted) and 0.510 (net wealth): no seed is below 0.35 on either
+
+[5] C1.4: PAPER v1.4 APPENDIX G's PROTOCOL, RUN RECORD #4 (v4.20)
+
+  PASS the population displacement rate reaches its 0.10 cap in simulated year 13 (0-indexed); the year-15 branch computes 0.142 when it starts, already above the cap, so AI_DISPLACEMENT_RATE_2 still moves no output (Run Records #1 to #3 found the same); the channel slows wage growth by at most 0.10 x each agent's automationRisk a year and displaces no hours
+
+| Year | Full Integration, automation off: SPL poverty (cash / in-kind) | High Automation: SPL poverty (cash / in-kind) | Wealth poverty, off / on | Basket poverty (net), off / on | Aggregate wage income, on / off | Aggregate cash income, on / off |
+|---:|---:|---:|---:|---:|---:|---:|
+| 5 | 8.6% / 5.8% | 8.6% / 5.8% | 26.8% / 26.8% | 30.8% / 30.8% | 100.0% | 100.0% |
+| 10 | 9.5% / 6.5% | 9.6% / 6.6% | 24.0% / 25.4% | 21.2% / 26.4% | 90.2% | 90.7% |
+| 15 | 10.5% / 7.3% | 11.9% / 7.9% | 20.1% / 25.7% | 14.5% / 32.2% | 70.9% | 72.0% |
+| 20 | 11.5% / 8.4% | 15.1% / 9.4% | 15.3% / 27.1% | 9.9% / 40.9% | 56.2% | 57.7% |
+| 25 | 12.1% / 9.4% | 18.0% / 10.6% | 10.9% / 29.2% | 6.8% / 48.6% | 46.2% | 47.8% |
+
+High Automation at year 25, seed means: lowest headcount across the SPL, relative, basket, wealth and BLEI measures 10.6%; seeds with SPL poverty (cash) below 8%: 0 of 500.
+  PASS at the engine's closest analogue to C1.4's scenarios, milder than the 30% scenario, every documented poverty measure and the SPL are at or above 8% at year 25 (SPL 18.0%), and aggregate cash income falls to 47.8% of the automation-off run
+
+[6] C3.3: THE COMPOUND ADVERSE ENVIRONMENT (recessions + AI automation + 2% inflation) AT THE REFERENCE SETTINGS
+
+| Core function (share of the population) | Year | Full Integration, no shock | Adverse Environment | Degradation |
+|---|---:|---:|---:|---:|
+| above the Societal Poverty Line (cash income) | 10 | 90.5% | 90.3% | 0.2% |
+| above the Societal Poverty Line (cash income) | 20 | 88.5% | 84.6% | 4.4% |
+| above the SPL, incl. in-kind relief | 10 | 93.5% | 93.4% | 0.1% |
+| above the SPL, incl. in-kind relief | 20 | 91.6% | 90.7% | 1.0% |
+| above the wealth-poverty line | 10 | 76.0% | 68.8% | 9.4% |
+| above the wealth-poverty line | 20 | 84.7% | 61.6% | 27.3% |
+| out of basket poverty (net) | 10 | 78.8% | 63.3% | 19.7% |
+| out of basket poverty (net) | 20 | 90.1% | 41.9% | 53.5% |
+| not in housing distress (the nearest measure to housing stability) | 10 | 82.3% | 73.4% | 10.8% |
+| not in housing distress (the nearest measure to housing stability) | 20 | 90.4% | 64.4% | 28.8% |
+  PASS in the one compound scenario the engine runs, the poverty function on C3.3's own line (the SPL) degrades by 4.4% at year 20, under 20%, and the nearest measure to housing stability by 28.8%, 20% or more; the functions degraded by 20% or more at year 20 are: above the wealth-poverty line; out of basket poverty; not in housing distress
+
+[7] C3.1: COVERAGE AT THE REFERENCE SETTINGS
+
+CCO participants, the agents who receive Basic Units: 77.9% of the population at year 0 and 77.9% at year 20 (seed means; participation rate 78%).
+  PASS the share receiving the design's benefit is below 90% at the reference settings (77.9%)
+
+CCO SIMULATION CHECKS S51: ALL CHECKS PASSED.
