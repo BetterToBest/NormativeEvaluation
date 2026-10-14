@@ -164,8 +164,9 @@ This runs {N_CHECKS} checks. Each copies exactly the files one script needs into
 directory, runs the script there, and compares its output byte for byte with the captured copy in this
 repository; negative controls confirm that the verifiers reject superseded states. The captured output of
 the whole run is [`run_all_checks_output.txt`](run_all_checks_output.txt), and GitHub Actions repeats the
-run on every push. A finished working session reaches `main` only through
-[`land-session.yml`](.github/workflows/land-session.yml), after every check passes on the merged tree. Not covered: the prose of the Paper and the Report, and the fidelity of the Appendix G
+run on every push. A finished working session reaches `main` by the owner's merge of its pull request, after
+[`harness.yml`](.github/workflows/harness.yml) has run every check on it; on the merge,
+[`land-session.yml`](.github/workflows/land-session.yml) reruns every check on the merged tree and tags the session. Not covered: the prose of the Paper and the Report, and the fidelity of the Appendix G
 JavaScript checks to the Compassionism Simulation's source. The repository keeps every file in one flat
 directory because each check copies its inputs by name.
 

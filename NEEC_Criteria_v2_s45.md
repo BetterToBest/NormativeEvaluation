@@ -7,7 +7,8 @@ keeps the Session 46 text; in Session 48, 2026-09-24, by decisions 48.1 to 48.3 
 questions), and tag `s47` keeps the Session 47 text; in Session 49, 2026-09-25, by decisions 49.1 to 49.13
 (the public site; no criterion changes), and tag `s48` keeps the Session 48 text; and in Session 50, 2026-09-25, by
 decisions 50.1 to 50.7 (the automated interpretation check and the site's address; no criterion changes), and tag
-`s49` keeps the Session 49 text.
+`s49` keeps the Session 49 text; and in Session 52, 2026-10-14, by decisions 52.1 to 52.10 (workflow, landing and the
+simulation pin; no criterion changes), and tag `s51` keeps the Session 51 text.
 Scorer and engineer: Claude. Inputs: `NEEC_Criteria_Review_s44.md` (the review), `criteria_s44_snapshot.json`
 (the 26 criteria as they stood at `s44`), `neec_corpus.json`. Appendix V below is the one source of the v2.0 text:
 `build_criteria.py` reads it, applies it to the snapshot, asserts the rules in section 6, and writes `criteria.json`
@@ -296,6 +297,31 @@ and protocol draft.9 (Appendix B regenerated, seven asserted edits; 47.2, 48.3).
   byte-identical to `docs/index.html` (md5 `0d572c3d`). `CITATION.cff`'s `url` now names it, and `llms.txt` lists it
   under "Start here"; `llms.txt` keeps the version 1 site as version 1's. `CITATION.cff`'s abstract still says 26
   criteria, true of the published corpus, as 49.13 records.
+- **52.1 to 52.10 (workflow and scope, Session 52; no criterion changes).** The workflow package
+  (`NEEC_Workflow_Package_s52.md`) was committed directly by a claude.ai chat session on 2026-10-14 and reached `main`
+  through pull request #13; Session 52 starts from it. Its start-check failures are the ones its section 4
+  predicts ("s51 points at HEAD", 412 tracked files, a new digest); `git diff --stat s51 HEAD` shows only
+  `CLAUDE.md`, `STATE.md`, the package note and `land-session.yml`, and the other checks pass. **52.1** (W3; the
+  owner's, by uploading the package): `STATE.md` holds the standing state; handoffs are self-contained; the usage rule
+  replaces the credit rule. **52.2** (W4; the owner's, by uploading the package): checkpoint commits (`NEEC checkpoint
+  s<n>: `) after each group, and a new session resumes an unlanded branch before new work. **52.3** (W9; the owner's,
+  by merging pull request #13): sessions land by pull request and the owner's merge; `land-session.yml` runs on the
+  merged pull request, reruns every check on `main` and tags each session commit; the README's sentence on landing is
+  corrected in this session (`STATE.md`, Next work, item 2). The owner's answers of 2026-10-14, by `STATE.md` ID:
+  **52.4** (W1; adopted): Opus 5.5 at high for judgment groups, at xhigh only where the readings are contested;
+  Sonnet 5.5 for mechanical sessions. **52.5** (W2; adopted): a shared pass module, and each group a short file of
+  readings whose script writes its tables into the record. **52.6** (W5; adopted): an evidence cache for the class I
+  re-checks and the new units, built in a later Sonnet 5.5 session, with extracts committed with their md5s.
+  **52.7** (W6; adopted): stage 2 is ordered by consequence (failure count, adequacy tier, rank first), and any unit
+  carried forward unread is disclosed. **52.8** (W7; adopted): Report v2.0 Part I is generated from per-unit
+  rationales carried into the corpus at stage 3. **52.9** (W8; the owner's): the simulation pin is frozen at
+  `5a7a7b1` for version 2.0. Paper v2.0 discloses that the simulation has since been overhauled, with revised
+  headline figures, and that the owner maintains both the design and the model; a later simulation version is read in
+  version 2.1. The reopening conditions in `STATE.md` stand as written for 2.0 and do not take effect from a later
+  version's figures. **52.10** (W10; adopted): the chat path for weeks without Claude Code (a repository ZIP worked in
+  a free-plan chat, the changed files returned as a ZIP, uploaded to a branch by the owner and opened as a pull
+  request). The owner's message listed no answers for 48.3, 49.2, 49.3, 49.5, 49.8, 49.9, 50.2, 50.4, 50.5, S50-3.4,
+  S51-3.2 and S51-3.4 to S51-3.7; **each of those stays open**, and all must be settled before stage 3.
 
 ## 2. Method
 
