@@ -1,8 +1,8 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 54 (2026-10-14). It consolidates the standing notes and
-open items of Handoffs 43 to 54, which no longer need to be read for them.
+changed, this file says what holds. Last rewritten by Session 55 (2026-10-14). It consolidates the standing notes and
+open items of Handoffs 43 to 55, which no longer need to be read for them.
 
 ## Position
 
@@ -27,15 +27,18 @@ open items of Handoffs 43 to 54, which no longer need to be read for them.
 
 ## Next work, in order
 
-1. **The evidence cache (W5, decision 52.6), then the next group from the triage (`triage_s52_output.txt`, section 4):
-   C3.5 Failure-Mode Transparency**, class I, 20 units in play, 4 able to change an adequacy tier on their own. The cache
-   comes first, in a Sonnet 5.5 session (decision 52.4): for each class I criterion's units in play, the sources their
-   published rationales cite (and v2.0's measures name) fetched once, the extracts committed with their md5s, so that
-   the reading session works from files and not from the network. C3.5 first, then C1.4, C3.1, C2.4, C2.1, C2.3 and
-   C1.1 in the triage's order. The C3.5 readings follow in an Opus 5.5 session at high, written as groups 2.2 and 2.3
-   were: a script on `pass_common.py` holding the readings (`U(...)`), its group-specific checks and its generated
-   tables (`rescoring_s54.py` is the model for a two-clause criterion), a record, `PARTS` extended, the harness given
-   the new files (as v29 did through `S54_FILES`). Do not touch earlier scripts or their captures.
+1. **C3.5 Failure-Mode Transparency, read in an Opus 5.5 session at high** (class I, 20 units in play, 4 able to change
+   an adequacy tier on their own; `triage_s52_output.txt`, section 4). The C3.5 evidence cache is built (Session 55,
+   `evidence_cache_s55.py`, `evidence_cache/C3.5/`): it holds the rationale location and citation strings of each of the
+   20 units, and four of the five external sources v2.0's measure names (IMF fossil fuel subsidies page and working
+   paper, INTOSAI, UK NAO), as landing-page extracts with md5s. It does not hold the GAO's recommendation-implementation
+   figures (gao.gov refuses this container, HTTP 403), nor the IMF data tables, nor the dated failure records clause 1
+   needs; five units (DG, FALC, MS, PE, SQ) have one-line published rationales that cite nothing. The reading must say
+   where a clause is therefore "not shown" rather than "short". Write it as groups 2.2 and 2.3 were: a script on
+   `pass_common.py` holding the readings (`U(...)`), its group-specific checks and generated tables
+   (`rescoring_s54.py` is the model for a two-clause criterion), a record, `PARTS` extended, the harness given the new
+   files (as v29 did through `S54_FILES`). Do not touch earlier scripts or their captures. Then the cache for C1.4,
+   C3.1, C2.4, C2.1, C2.3 and C1.1 in a Sonnet 5.5 session, in that order, before each is read.
 2. **Then the groups in the triage's order** (section 4 of its output, rerun after each group): C1.4, C4.2, C5.2, C4.1,
    C4.3, C3.1, C2.4, C2.1, C2.3, C1.1, C4.4, C4.5, C2.5, C3.4. Groups already planned partly (C5.2's 16 units at 0.5
    or 0.0, reading 3.2 of `NEEC_Rescoring_s50.md`; C4.3's other 16, part (b8)'s readings 3.2 to 3.5; C4.4's 17, decision

@@ -1,0 +1,34 @@
+NEEC evidence cache, criterion C3.5 (Session 55): digests, and which units have which evidence
+
+[1] EXTERNAL SOURCES NAMED BY v2.0's MEASURE
+  PASS gao_priority (clause 3): NOT CACHED (HTTP 403); https://www.gao.gov/priority-recommendations
+  PASS imf_ffs_topic (clause 4): imf_ffs_topic.txt, 5230 characters, md5 5ca118c1
+  PASS imf_ffs_wp2023 (clause 4): imf_ffs_wp2023.txt, 2781 characters, md5 c08d56ad
+  PASS intosai (clause 3): intosai.txt, 3247 characters, md5 ea8044ba
+  PASS nao_about (clause 3): nao_about.txt, 8215 characters, md5 a272856b
+
+[2] UNITS STILL IN PLAY (rationale located and unchanged; citations it names)
+  PASS 20 units in play now match the index's 20
+  PASS CN 0.0: NEEC_StateCapitalism_China_scoring_scratch.md line 628, 17 citation strings
+  PASS DE 0.5: NEEC_DoughnutEconomics_scoring_scratch.md line 458, 5 citation strings
+  PASS DG 0.5: NEEC_Report_v1_6.md line 954, 0 citation strings
+  PASS FALC 0.5: NEEC_Report_v1_6.md line 1134, 0 citation strings
+  PASS GEO 0.5: NEEC_Georgism_LVT_scoring_scratch.md line 410, 3 citation strings
+  PASS IF 0.5: NEEC_IslamicFinance_scoring_scratch.md line 472, 2 citation strings
+  PASS LM 0.0: NEEC_Report_v1_6.md line 684, 1 citation strings
+  PASS MC 0.5: NEEC_MutualCredit_LETS_scoring_scratch.md line 476, 3 citation strings
+  PASS MMT 0.0: NEEC_Report_v1_6.md line 774, 1 citation strings
+  PASS MS 0.5: NEEC_Report_v1_6.md line 594, 0 citation strings
+  PASS NSD 0.0: NEEC_Report_v1_6.md line 414, 1 citation strings
+  PASS OS 0.5: NEEC_Ostrom_Commons_scoring_scratch.md line 505, 2 citation strings
+  PASS PE 0.5: NEEC_Report_v1_6.md line 1224, 0 citation strings
+  PASS QA 0.0: NEEC_StateCapitalism_Qatar_scoring_scratch.md line 652, 9 citation strings
+  PASS SC 0.0: NEEC_Report_v1_6.md line 1044, 1 citation strings
+  PASS SG 0.5: NEEC_StateCapitalism_Singapore_scoring_scratch.md line 574, 11 citation strings
+  PASS SQ 0.5: NEEC_Report_v1_6.md line 326, 0 citation strings
+  PASS SWF 0.5: NEEC_SovereignWealthFundStatism_scoring_scratch.md line 460, 3 citation strings
+  PASS UBI 0.0: NEEC_Report_v1_6.md line 864, 1 citation strings
+  PASS UBS 0.5: NEEC_UniversalBasicServices_scoring_scratch.md line 515, 3 citation strings
+
+  units whose rationale names a citable source: 15 of 20; sources cached: 4 of 5
+SUMMARY: ALL PASS
