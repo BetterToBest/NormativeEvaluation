@@ -4,8 +4,8 @@ triage_s52.py -- NEEC rescoring pass, stage 2: the consequence triage (decision 
 =========================================================================================
 Session 52. Which of the units the pass has not yet read could, on its own, change an entry's failure count, its
 adequacy tier or its rank? Written as a script so that groups can be read in that order and any unit carried forward
-unread can be named and disclosed. It changes no file and no score. State: the pass cumulatively through group 2.1
-(pass_common.Pass), on the published 26-criterion structure; the 69 new units (C2.6, C3.6, C4.6) have no score and are
+unread can be named and disclosed. It changes no file and no score. State: the pass cumulatively through the last
+part in pass_common.PARTS (pass_common.Pass; Session 53 made the state line and the population check follow it), on the published 26-criterion structure; the 69 new units (C2.6, C3.6, C4.6) have no score and are
 counted apart.
 
 THE REACH OF A UNIT (the widest the pass's rules allow; a screen, not a forecast; the triage's own assumption, 52.7)
@@ -55,7 +55,7 @@ def main():
     v, T, F = p.vsteps[-1], p.steps[-1]["total"], p.steps[-1]["fail"]
     R = pc.ranks(T)
     cls = {k: p.v2[k]["revision"]["cls"] for k in p.v2ids}
-    print(f"NEEC rescoring pass, stage 2: the consequence triage (W6, decision 52.7); state through group 2.1")
+    print(f"NEEC rescoring pass, stage 2: the consequence triage (W6, decision 52.7); state through part {p.tags[-1]}")
     print("inputs: " + ", ".join((pc.CRITERIA, pc.CRIT44, pc.CORPUS)) + ", " + ", ".join(m for _, _, m, _ in pc.PARTS) + "\n")
 
     # [1] population ------------------------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ def main():
     units = [(c, k) for c in p.order for k in p.cids]
     inplay = [(c, k) for c, k in units if reach(p, v, cls, c, k)]
     done = [x for x in units if x in p.merged]
-    check(len(done) == len(p.merged) == 152 and len(units) == 598,
+    check(len(done) == len(p.merged) and len(units) == 598,
           f"{len(done)} of the 598 units on the published 26 criteria are re-estimated; the other {598 - len(done)} are not")
     fixed = 598 - len(done) - len(inplay)
     print(f"  not yet read: {len(inplay)} in play (class D {sum(1 for _, k in inplay if cls[k] == 'D')}, "
