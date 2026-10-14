@@ -65,6 +65,26 @@ request. Ask nothing the repository answers. Where the opening message carries d
   pushes through may lack GitHub's workflow permission, in which case the change is written into the handoff for
   the owner.
 
+## The ledger
+
+The owner reads and answers open decisions in the Project ledger, an artifact
+(https://claude.ai/artifact/KMdxWQ5KAefQVFxQA236pV, project doc `projects/neec`, glossary `meta/glossary`). Every
+decision or flag that waits on the owner, and every issue that needs attention, goes in it, in the same session that
+records it. Per item:
+
+1. A decision `{id: next d<n>, q: "<ID>: <plain question>", options: [default first, then alternatives], def: 0, pick: null,
+   confirmed: false, why: "<one plain sentence> Full reasoning: <file>, section <n>."}` appended to `decisions`; an
+   issue (something broken or at risk, not a choice) goes in `issues` with a `sev` and a note.
+2. A glossary entry whose `code` is the ID (for example `S57-3.2`), `desc` a short plain explanation ending with the
+   record's file, section and its GitHub URL, `refs` `["neec:d:<id>"]`, so the ID in the question opens the extended
+   description.
+3. The ID in `STATE.md`'s table with its ledger id in the Ledger column; the `next` field and `log` updated.
+
+Write with `ArtifactData` (action `batch`, `if_version` pinned to the versions just read). Where the artifact tools
+are unavailable, put the ready-to-apply entries in the handoff under "Ledger entries" and say so in the pull request;
+the next session with the tools applies them first. The owner's answers are read back from the ledger at the start of
+each session (`pick`, `confirmed`) and recorded as numbered decisions (Start, step 5).
+
 ## Standards
 
 - Record every substantive content change as a decision, with its reason and computed consequences; distinguish

@@ -94,35 +94,41 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 IDs as in the owner's decisions sheet (a Claude Doc the owner holds). The owner's message of 2026-10-14 listed no
 answers for these; all stay open and must be settled before stage 3. Nothing else waits on them.
 
-| ID | Item | Recorded in |
-|---|---|---|
-| 48.3 | C4.4 clause 1 defined as the share of employment in democratically accountable organizations (flagged) | record, 48.3 |
-| 49.2 | Site navigation (flagged) | record, 49.1 to 49.10 |
-| 49.3 | The Thresholds page's 11 paraphrases: the owner reads them once | record, 49.1 to 49.10 |
-| 49.5 | The Replicate page's AI prompt design (flagged) | record, 49.1 to 49.10 |
-| 49.8 | `.github/CONTRIBUTING.md`, six issue forms, four new labels (flagged) | record, 49.1 to 49.10 |
-| 49.9 | The visual suite's adaptation; v1's closing panel not carried over (flagged) | record, 49.1 to 49.10 |
-| 50.2 | Jev flag-only (flagged) | record, 50.1 to 50.5 |
-| 50.4 | Jev question design (flagged) | record, 50.1 to 50.5 |
-| 50.5 | Blind replication after stage 3 by a model outside the Claude family (awaiting) | record, 50.1 to 50.5 |
-| S50-3.4 | CCO-PTF-CIP-SZH's C5.2 at 0.5, flagged toward 1.0 | `NEEC_Rescoring_s50.md` 3.4 |
-| S51-3.2 | Scope: published 1.0s resting on the entry's own modelling | `NEEC_Rescoring_s51.md` 3.2 |
-| S51-3.4 | CCO-PTF-CIP-SZH's C1.1 flag toward 1.0 removed | `NEEC_Rescoring_s51.md` 3.4 |
-| S51-3.5 | CCO-PTF-CIP-SZH's C1.2b to 0.5 | `NEEC_Rescoring_s51.md` 3.5 |
-| S51-3.6 | CCO-PTF-CIP-SZH's C1.4 to 0.5 | `NEEC_Rescoring_s51.md` 3.6 |
-| S51-3.7 | CCO-PTF-CIP-SZH's C3.3 to 0.5 | `NEEC_Rescoring_s51.md` 3.7 |
-| S53-3.1 | C1.2a's clause read as a share (70% each reach $60,000), not the engaged participants' median; four entries flagged | `NEEC_Rescoring_s53.md` 3.1 |
-| S53-3.4 | CCO-PTF-CIP-SZH's C1.2a to 0.5: the model's figure rests on agents saving 47% of income (flagged toward 1.0) | `NEEC_Rescoring_s53.md` 3.4 |
-| S53-3.6 | Libertarian Minarchism's C1.2a to 0.5 and MMT + Job Guarantee's to 0.0 (corrections) | `NEEC_Rescoring_s53.md` 3.6 |
-| S54-3.2 | Four designs' C1.3 (Degrowth, FALC, Participatory Economics, Integral) to 0.5: neither clause estimated | `NEEC_Rescoring_s54.md` 3.2 |
-| S54-3.3 | CCO-PTF-CIP-SZH's C1.3 to 0.5: the model has no housing tenure; on its proxy 78.5% to 86.4% of agents are stable over 5 years, 93.6% to 96.8% inside Public Trust Housing (a fifth of agents) | `NEEC_Rescoring_s54.md` 3.3 |
-| S54-3.4 | Centrally Planned Socialism's C1.3 held at 1.0 on a bound (94%), flagged toward 0.5 | `NEEC_Rescoring_s54.md` 3.4 |
-| S54-3.6 | Doughnut Economics' C1.3 held at 0.5, flagged toward 0.0 (the reading of its C1.2a) | `NEEC_Rescoring_s54.md` 3.6 |
-| S56-3.1 | C3.5's clause 4 read on the IMF's total implicit subsidies, cleared under 10% of GDP (alternatives: a lower bound that shows only a shortfall; the environmental components only) | `NEEC_Rescoring_s56.md` 3.1 |
-| S56-3.3 | Libertarian Minarchism's C3.5 to 0.5 (correction), flagged toward 0.0 | `NEEC_Rescoring_s56.md` 3.3 |
-| S56-3.4 | Nordic Social Democracy's and Stakeholder Capitalism's C3.5 to 0.5 on the named indicators (Stakeholder Capitalism flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.4 |
-| S56-3.5 | Universal Basic Services' C3.5 to 0.0 (correction): the published 0.5 credits the host's scrutiny; flagged toward 0.5 | `NEEC_Rescoring_s56.md` 3.5 |
-| S56-3.6 | China's C3.5 held at 0.0 (flagged toward 0.5; on the environmental components alone its clause 4 would clear); Qatar's to 0.5 (flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.6 |
+| ID | Item | Recorded in | Ledger |
+|---|---|---|---|
+| 48.3 | C4.4 clause 1 defined as the share of employment in democratically accountable organizations (flagged) | record, 48.3 | d8 |
+| 49.2 | Site navigation (flagged) | record, 49.1 to 49.10 | d9 |
+| 49.3 | The Thresholds page's 11 paraphrases: the owner reads them once | record, 49.1 to 49.10 | d10 |
+| 49.5 | The Replicate page's AI prompt design (flagged) | record, 49.1 to 49.10 | d11 |
+| 49.8 | `.github/CONTRIBUTING.md`, six issue forms, four new labels (flagged) | record, 49.1 to 49.10 | d12 |
+| 49.9 | The visual suite's adaptation; v1's closing panel not carried over (flagged) | record, 49.1 to 49.10 | d13 |
+| 50.2 | Jev flag-only (flagged) | record, 50.1 to 50.5 | d14 |
+| 50.4 | Jev question design (flagged) | record, 50.1 to 50.5 | d15 |
+| 50.5 | Blind replication after stage 3 by a model outside the Claude family (awaiting) | record, 50.1 to 50.5 | d16 |
+| S50-3.4 | CCO-PTF-CIP-SZH's C5.2 at 0.5, flagged toward 1.0 | `NEEC_Rescoring_s50.md` 3.4 | d17 |
+| S51-3.2 | Scope: published 1.0s resting on the entry's own modelling | `NEEC_Rescoring_s51.md` 3.2 | d18 |
+| S51-3.4 | CCO-PTF-CIP-SZH's C1.1 flag toward 1.0 removed | `NEEC_Rescoring_s51.md` 3.4 | d19 |
+| S51-3.5 | CCO-PTF-CIP-SZH's C1.2b to 0.5 | `NEEC_Rescoring_s51.md` 3.5 | d20 |
+| S51-3.6 | CCO-PTF-CIP-SZH's C1.4 to 0.5 | `NEEC_Rescoring_s51.md` 3.6 | d21 |
+| S51-3.7 | CCO-PTF-CIP-SZH's C3.3 to 0.5 | `NEEC_Rescoring_s51.md` 3.7 | d22 |
+| S53-3.1 | C1.2a's clause read as a share (70% each reach $60,000), not the engaged participants' median; four entries flagged | `NEEC_Rescoring_s53.md` 3.1 | d23 |
+| S53-3.4 | CCO-PTF-CIP-SZH's C1.2a to 0.5: the model's figure rests on agents saving 47% of income (flagged toward 1.0) | `NEEC_Rescoring_s53.md` 3.4 | d24 |
+| S53-3.6 | Libertarian Minarchism's C1.2a to 0.5 and MMT + Job Guarantee's to 0.0 (corrections) | `NEEC_Rescoring_s53.md` 3.6 | d25 |
+| S54-3.2 | Four designs' C1.3 (Degrowth, FALC, Participatory Economics, Integral) to 0.5: neither clause estimated | `NEEC_Rescoring_s54.md` 3.2 | d28 |
+| S54-3.3 | CCO-PTF-CIP-SZH's C1.3 to 0.5: the model has no housing tenure; on its proxy 78.5% to 86.4% of agents are stable over 5 years, 93.6% to 96.8% inside Public Trust Housing (a fifth of agents) | `NEEC_Rescoring_s54.md` 3.3 | d29 |
+| S54-3.4 | Centrally Planned Socialism's C1.3 held at 1.0 on a bound (94%), flagged toward 0.5 | `NEEC_Rescoring_s54.md` 3.4 | d30 |
+| S54-3.6 | Doughnut Economics' C1.3 held at 0.5, flagged toward 0.0 (the reading of its C1.2a) | `NEEC_Rescoring_s54.md` 3.6 | d31 |
+| S56-3.1 | C3.5's clause 4 read on the IMF's total implicit subsidies, cleared under 10% of GDP (alternatives: a lower bound that shows only a shortfall; the environmental components only) | `NEEC_Rescoring_s56.md` 3.1 | d32 |
+| S56-3.3 | Libertarian Minarchism's C3.5 to 0.5 (correction), flagged toward 0.0 | `NEEC_Rescoring_s56.md` 3.3 | d33 |
+| S56-3.4 | Nordic Social Democracy's and Stakeholder Capitalism's C3.5 to 0.5 on the named indicators (Stakeholder Capitalism flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.4 | d34 |
+| S56-3.5 | Universal Basic Services' C3.5 to 0.0 (correction): the published 0.5 credits the host's scrutiny; flagged toward 0.5 | `NEEC_Rescoring_s56.md` 3.5 | d35 |
+| S56-3.6 | China's C3.5 held at 0.0 (flagged toward 0.5; on the environmental components alone its clause 4 would clear); Qatar's to 0.5 (flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.6 | d36 |
+
+**The ledger.** Every open item above is also a numbered decision in the owner's Project ledger
+(https://claude.ai/artifact/KMdxWQ5KAefQVFxQA236pV, project "NEEC Research"; its id is in the Ledger column), written in
+plain words with a default first, the other options after it, and a Reference entry (code = the ID) linking to the
+extended description in the record. Ledger rule for sessions: `CLAUDE.md`, "The ledger". S50-3.4 to S51-3.7 are
+answered in the ledger (d17 to d22, d26); S55-1 is d27. S56-3.2 is evidence only and has no decision.
 
 Method choices Sessions 52 to 56 made that the criteria record does not yet carry (optional, not corrections; carried
 into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5 (decisions 53.3, 56.2 and 56.4 are
