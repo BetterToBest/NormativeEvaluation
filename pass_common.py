@@ -270,7 +270,7 @@ def selftest():
     check([verdict_of(x) for x in probe] == [s37.verdict_of(x) for x in probe] == [1.0, 0.5, 0.5],
           "verdict_of() applies D28: 1.0 only if every clause is cleared or moot, else 0.5")
     p_all = Pass()
-    check(len(PARTS) == 12 and all(t in p_all.part_of.values() for t in p_all.tags if p_all.steps_units[p_all.tags.index(t)]),
+    check(len(PARTS) >= 12 and all(t in p_all.part_of.values() for t in p_all.tags if p_all.steps_units[p_all.tags.index(t)]),
           f"all {len(PARTS)} parts load; {len(p_all.merged)} units are re-estimated")
     check(sum(1 for k in p_all.merged if k[1] not in p_all.cids) == 0,
           "every re-estimated unit lies on a criterion of the published 26-criterion structure")
@@ -282,12 +282,13 @@ def selftest():
     check(all(csv_tot[p_all.names[c]] == (base["total"][c], base["fail"][c]) for c in p_all.names),
           f"published totals and failure counts equal {CSV}'s for all 23 entries")
     # regression on group 2.1: rebuild its generic tables from the parts before it and compare with the script's
-    s51 = p_all.mods[-1]
+    i51 = p_all.tags.index("(2.1)")
+    s51 = p_all.mods[i51]
     buf = io.StringIO()
     with redirect_stdout(buf):
         rc = s51.main()
     check(rc == 0, "rescoring_s51.py's own run still passes")
-    prior = Pass(upto=len(PARTS) - 1)
+    prior = Pass(upto=i51)
     lines = []
     ok2, t = run_group(prior, "(2.1)", s51.UNITS, "NEEC_Rescoring_s51.md", "After part (b)", "After group 2.1", out=lines.append)
     check(ok2, "run_group on group 2.1's readings: records complete, the rule, the ledger sums, the record's tables",

@@ -45,7 +45,10 @@ def main():
     want = {f"s{n}" for n in range(34, last + 1)}
     line(f"tags s34..{a.tag}", want <= tags, "missing " + ", ".join(sorted(want - tags)) if want - tags else "")
     if a.tag in tags:
-        line(f"{a.tag} points at HEAD", git("rev-list", "-n", "1", a.tag) == head)
+        tagged = git("rev-list", "-n", "1", a.tag)
+        same_tree = subprocess.run(["git", "diff", "--quiet", a.tag, "HEAD"]).returncode == 0
+        line(f"{a.tag} points at HEAD, or HEAD is a merge of it with the same files (landing by pull request)",
+             tagged == head or (same_tree and subprocess.run(["git", "merge-base", "--is-ancestor", a.tag, "HEAD"]).returncode == 0))
     files = [f for f in git("ls-files").split("\n") if f]
     line("tracked files", len(files) == a.files, f"{len(files)} (expected {a.files})")
     h = hashlib.md5()

@@ -1,52 +1,61 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Written by the Session 52 package from tag `s51` (`14f435a`, 410 files) on
-2026-09-26 and amended in a claude.ai chat on 2026-10-14, when the package was committed directly and the pull-request
-landing (W9) added; it consolidates the standing notes and open items of Handoffs 43 to 51, which no longer need to be
-read for them.
+changed, this file says what holds. Last rewritten by Session 52 (2026-10-14). It consolidates the standing notes and
+open items of Handoffs 43 to 52, which no longer need to be read for them.
 
 ## Position
 
-- **Stage 2 of the plan** (the rescoring pass on the v2.0 criteria), in progress. Group 2.1 done (Session 51). No
-  session ran between 2026-09-26 and 2026-10-14.
-- **Landing:** by pull request and the owner's merge (W9), from Session 52. Pull request #12 (a duplicate Session 49
-  branch, `claude/clever-newton-17rt1c`, never merged; Session 49 landed as `a379f74`) was closed unmerged on
-  2026-10-14.
+- **Stage 2 of the plan** (the rescoring pass on the v2.0 criteria), in progress. Group 2.1 done (Session 51). Session
+  52 recorded the owner's decisions, corrected the README, and built the shared module and the triage; it scored
+  nothing. The next group is named below.
+- **Landing:** by pull request and the owner's merge (W9, decision 52.3). The session opens the pull request; `harness.yml`
+  checks it; the owner merges; `land-session.yml` reruns the checks on `main` and tags each `NEEC Session <n>` commit.
 - **Criteria:** v2.0, 29 criteria in `criteria.json`; protocol draft.9. Published scores remain on 26 criteria until
   stage 3 applies the pass by generator.
-- **Simulation pin:** `BetterToBest/compassionism-simulation` at `5a7a7b1` (v4.20), `harness.js` md5 `fe6fa4a3`,
-  `index.html` md5 `c333b632`. **Research Hub pin:** `8e8a6ba`.
-- **Harness:** v26, 99 checks, byte-identical under Python 3.11 and 3.12.
+- **Simulation pin, frozen for v2.0 (decision 52.9):** `BetterToBest/compassionism-simulation` at `5a7a7b1` (v4.20),
+  `harness.js` md5 `fe6fa4a3`, `index.html` md5 `c333b632`. **Research Hub pin:** `8e8a6ba`.
+- **Harness:** v27, 101 checks, byte-identical under Python 3.11, 3.12 and 3.13.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
   `scores.publish` false, decision 49.1).
-- **Provisional standing on the published 26-criterion structure:** CCO-PTF-CIP-SZH 15.5/26 (published 24.5);
-  Participatory Economics and Integral 14.5. Not for publication before stage 3.
+- **Provisional standing on the published 26-criterion structure** (not for publication before stage 3): CCO-PTF-CIP-SZH
+  15.5/26 (published 24.5), first; Participatory Economics and Integral 14.5; no single unit can change who is first
+  except PE C4.5, INT C1.2a and INT C5.2 (`triage_s52_output.txt`).
 
 ## Next work, in order
 
-1. Record the owner's answers to the items below, if the opening message carries them, in one amendment of
-   `NEEC_Criteria_v2_s45.md` (one run of the site's regeneration chain).
-2. Correction carried by W9: `build_readme.py` says a session reaches `main` "only through `land-session.yml`"; it now
-   reaches `main` by the owner's merge of its pull request, after `harness.yml` passes on it, and `land-session.yml`
-   tags it. Amend that sentence, regenerate `README.md` and recapture as the chain requires.
-3. If W2 is adopted: the shared pass module, before any new group. If W6 is adopted: the consequence triage (which
-   remaining units could change a failure count, an adequacy tier or a rank), written as a script with captured
-   output, so that later groups are read in that order.
-4. Class M re-checks, cumulative with `rescoring_s51.py` (`PRIOR` gains
-   `("(2.1)", "rescoring_s51", "rescoring_s51.py", 51)`; its re-read unit supersedes part (b3)'s C1.1):
-   C5.2's 16 units at 0.5 or 0.0 (reading 3.2 of `NEEC_Rescoring_s50.md`); C4.3's other 16 units (part (b8)'s readings
-   3.2 to 3.5); C4.4's 17 units (48.3); C4.1's four part (b6) units (FALC, PE, INT, SWF) on its debt clause.
-5. The rest of class M (C1.2a, C1.3, C3.4, C4.1, C4.2, C4.3, C5.2 not yet read on v2.0; the design's C1.2a and C1.3
-   read the model at `5a7a7b1`, reading 3.10 of `NEEC_Rescoring_s51.md`); class D rises (25 units at 0.5); class I
-   re-checks (42 configured-economy units among them); the 69 new units (C2.6, C3.6 and C4.6, 23 each).
-6. Stage 3 (apply the pass by generator; `scores.publish` true), stage 4 (Report and Paper v2.0), stage 5 (Paper
+1. **The next group, from the triage (`triage_s52_output.txt`, section 4): C1.2a Wealth Building for Resilience**,
+   class M, 23 units, 6 of them able to change an adequacy tier on their own (most of any criterion). Model: Opus 5.5
+   at high; xhigh only if a reading is contested (decision 52.4). Written in the new form: a short readings file
+   (`UNITS` in the form of `rescoring_s37.U`) and a short script on `pass_common.py` (its `Pass`, `run_group`, and
+   the group-specific checks only); add the group to `PARTS` in `pass_common.py`. The design's C1.2a reads the model at
+   `5a7a7b1` (reading 3.10 of `NEEC_Rescoring_s51.md`). Do not touch the existing scripts or their captures.
+2. **Then the groups in the triage's order** (section 4 of its output): C3.5, C1.3, C1.4, C4.2, C5.2, C4.1, C4.3, C3.1,
+   C2.3, C2.1, C2.4, C1.1, C4.4, C4.5, C2.5, C3.4. Groups already planned partly (C5.2's 16 units at 0.5 or 0.0, reading
+   3.2 of `NEEC_Rescoring_s50.md`; C4.3's other 16, part (b8)'s readings 3.2 to 3.5; C4.4's 17, decision 48.3; C4.1's
+   four part (b6) units on its debt clause) are read within their criterion's group. `rescoring_s51.py`'s unit supersedes
+   part (b3)'s C1.1. Class I groups use the evidence cache (W5, decision 52.6): build it first, in a Sonnet 5.5 session,
+   before the first class I group (C3.5 is the first).
+3. **The 69 new units** (C2.6, C3.6, C4.6; 23 each): no score exists, so none can be carried forward; they change
+   every entry's failure count and total on the 29. Done after the class I and M groups, with the evidence cache.
+4. **Carry-forward (decision 52.7):** the triage names ten units that could change no failure count, tier or rank on
+   their own (CCO C1.2a, CCO C1.3, CCO C4.5, CN C2.5, CPS C1.3, MS C4.5, NSD C4.5, PE C2.5, SQ C2.5, UBI C1.4). Reading
+   them is cheap inside their criterion's group; any left unread is listed in Report v2.0 and the Paper. The triage is
+   rerun after each group (`python3 triage_s52.py`; its capture is replaced when the state changes).
+5. Stage 3 (apply the pass by generator; `scores.publish` true; Report v2.0 Part I from per-unit rationales, decision
+   52.8), stage 4 (Report and Paper v2.0; the Paper discloses the simulation overhaul, decision 52.9), stage 5 (Paper
    PDF from a committed build script).
+
+## Decided (Session 52; the record's decisions 52.1 to 52.10)
+
+Applied or adopted: W1 model routing, W2 shared pass module (built), W3 this file and self-contained handoffs, W4
+checkpoints, W5 evidence cache (to build), W6 consequence triage (built), W7 Report Part I from rationales, W8 pin frozen
+at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
-IDs as in the owner's decisions sheet (a Claude Doc the owner holds) and in the opening message. Nothing waits on any
-of them yet; all must be settled before stage 3.
+IDs as in the owner's decisions sheet (a Claude Doc the owner holds). The owner's message of 2026-10-14 listed no
+answers for these; all stay open and must be settled before stage 3. Nothing else waits on them.
 
 | ID | Item | Recorded in |
 |---|---|---|
@@ -65,25 +74,17 @@ of them yet; all must be settled before stage 3.
 | S51-3.5 | CCO-PTF-CIP-SZH's C1.2b to 0.5 | `NEEC_Rescoring_s51.md` 3.5 |
 | S51-3.6 | CCO-PTF-CIP-SZH's C1.4 to 0.5 | `NEEC_Rescoring_s51.md` 3.6 |
 | S51-3.7 | CCO-PTF-CIP-SZH's C3.3 to 0.5 | `NEEC_Rescoring_s51.md` 3.7 |
-| W1 | Model routing (below) | this file |
-| W2 | A shared pass module; each group a short file of readings; scripts write their tables into records | this file |
-| W3 | This file, self-contained handoffs, the usage rule in `CLAUDE.md` (applied by the package) | package note |
-| W4 | Checkpoints and resume (applied by the package) | package note |
-| W5 | An evidence cache for the class I re-checks and new units, built once, extracts committed with md5s | this file |
-| W6 | Stage 2 ordered by consequence (failure count, tier, rank first); any carry-forward disclosed | this file |
-| W7 | Report v2.0 Part I generated from per-unit rationales carried into the corpus at stage 3 | this file |
-| W8 | The simulation pin for v2.0: freeze at `5a7a7b1`, or read a later version before stage 3 (the simulation has since been overhauled; see Standing notes) | this file |
-| W9 | Landing by pull request: the session opens it, the owner merges it, `land-session.yml` tags on merge (applied by the owner's merge of the pull request that carries this file) | package note, section 5 |
-| W10 | A chat path for weeks without Claude Code: a free-plan chat session works on a repository ZIP and returns a changed-files ZIP that the owner uploads to a branch and opens as a pull request | package note, section 5 |
 
-## Model routing
+Method choices Session 52 made that the criteria record does not yet carry (optional, not corrections; carried into the
+record at its next amendment): 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
+key (Handoff 52, section 4).
 
-Until the owner answers W1, Handoff 45's plan stands: Opus 5.5 at xhigh for stage 2, xhigh and high for the
-Report and the Paper (stage 4), high for stages 3 and 5. Proposed in W1 (amended 2026-10-14, Sonnet 5.5 having
-replaced Sonnet 5): Opus 5.5 at high for judgment groups, xhigh only for groups whose readings are contested;
-Sonnet 5.5 for mechanical sessions (recording decisions, the shared pass module, the triage script, evidence
-extraction, the stage 3 generator, the site, the PDF, harness repairs). Judgment stays with Opus because the harness
-catches mechanical errors, not misreadings.
+## Model routing (decision 52.4)
+
+Opus 5.5 at high for judgment groups (class M re-reads, class I readings, the Report and Paper), xhigh only for groups
+whose readings are contested; Sonnet 5.5 for mechanical sessions (the evidence cache, the stage 3 generator, the
+site, the PDF, harness repairs). Judgment stays with Opus because the harness catches mechanical errors, not
+misreadings. Only the owner can set the model; the handoff names it in its first line.
 
 ## Reopening conditions (CCO-PTF-CIP-SZH's units and the simulation)
 
@@ -128,8 +129,13 @@ A new simulation version reopens a unit only through these, recorded before the 
 - **Version 1** remains on the original Google Site; the owner has been asked to mark its scores as superseded (on
   the v1 home and report pages, the Medium article and the public visual-suite artifact) and to point the Research
   Hub's comparison entry at the v2 site. Whether that is done is not recorded here.
-- **The simulation overhaul.** The owner reports (2026-10-14) that the Compassionism Simulation has been overhauled
-  since `5a7a7b1` and that many of its headline figures changed, several less favourably. The pass reads the pin, so
-  nothing in the repository changes by that report; W8 decides whether v2.0 reads the pin or a later version. The
-  reopening conditions above were written as conditions for raising a unit; a later version that weakens a figure a
-  unit rests on is a separate question, to be recorded under W8 if the owner chooses to read it.
+- **The simulation overhaul (decision 52.9).** The owner reports (2026-10-14) that the Compassionism Simulation has been
+  overhauled since `5a7a7b1` and that many headline figures changed, several less favourably. Version 2.0 is frozen at
+  the pin; Paper v2.0 discloses that the simulation has since been overhauled with revised headline figures, and that the
+  owner maintains both the design and the model. A later version is read in version 2.1. The reopening conditions above
+  are written for raising a unit in 2.0 and do not take effect from a later version's figures.
+- **The shared pass module and the triage.** `python3 pass_common.py --selftest` reproduces group 2.1's tables from the
+  parts before it; a new group is added to `PARTS` there. `python3 triage_s52.py` prints the consequence triage on the
+  state through the last part; after a group lands, replace `triage_s52_output.txt` and recapture the harness.
+- **Class D count.** Earlier files say "25 units at 0.5" for class D; after decision 48.3 moved C4.4 to class M the
+  count is 18 at 0.5 (C2.5 and C4.5), with 12 more at 0.0 that class D could also raise (`triage_s52_output.txt`).
