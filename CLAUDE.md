@@ -37,8 +37,12 @@ request. Ask nothing the repository answers. Where the opening message carries d
   message begins `NEEC checkpoint s<n>: `, pushed to your branch. A checkpoint need not pass the harness.
 - Never print large files or long outputs: the Paper, the Report, `criteria.json`, recorded Jev responses, harness
   output (compare with `cmp`; show only its SUMMARY line). Scripts print file names and summaries, not data.
-- The next session's model and effort follow `STATE.md`, "Model routing"; name them in the handoff's first line.
-  Only the owner can set them.
+- **Suggest the next session's model and effort.** Every session ends by recommending both for the one after it,
+  from `STATE.md`, "Model routing" (Opus 5.5 at high for judgment groups, xhigh only where the readings are
+  contested; Sonnet 5.5 for mechanical sessions). Put the recommendation, with a clause of reason, in three places:
+  the handoff's first line, the first item of `STATE.md`'s "Next work, in order", and the pull request body. If the
+  next group looks harder or easier than the routing assumed, say so and name the model and effort you would
+  choose instead. Only the owner can set them.
 
 ## Finish: how a session lands
 
@@ -51,8 +55,9 @@ request. Ask nothing the repository answers. Where the opening message carries d
 - The last commit's message begins `NEEC Session <n>: `. Push the branch, then open a pull request into `main` with
   the REST API (`gh api repos/BetterToBest/NormativeEvaluation/pulls -f title=... -f head=<branch> -f base=main -f
   body=...`). Title: the last commit's subject line. Body, short: what changed; the decisions the session made, each
-  marked correction or optional; the items awaiting the owner; whether the session stopped at a limit; and, if the
-  branch stacks on another open pull request, its number. Never merge it.
+  marked correction or optional; the items awaiting the owner; the suggested model and effort for the next session;
+  whether the session stopped at a limit; and, if the branch stacks on another open pull request, its number. Never
+  merge it.
 - The owner reviews and merges. `.github/workflows/harness.yml` runs every check on the pull request;
   `.github/workflows/land-session.yml` runs when it is merged, reruns every check on `main`, tags each
   `NEEC Session <n>` commit the pull request carries `s<n>`, publishes a release and requests a Pages build.
