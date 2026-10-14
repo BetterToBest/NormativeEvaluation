@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 29 (Session 54). Runs every verification and analysis script on file
+Version 30 (Session 56). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -215,7 +215,12 @@ checks now load group 2.2 as a part of the pass: 102 checks. Version 29 (Session
 group 2.3: the 20 units of C1.3 not yet re-estimated, re-read as class M on v2.0's two clauses, the figures the readings
 derive recomputed, the design's unit on its published model through the captured output of cco_c13_checks_s54.js,
 checked by digest, and the consequences cumulatively with every part before it, with NEEC_Rescoring_s54.md checked
-against its generated tables; the Session 52 checks now load group 2.3 as a part of the pass: 103 checks.
+against its generated tables; the Session 52 checks now load group 2.3 as a part of the pass: 103 checks. Version 30
+(Session 56) adds rescoring_s56.py, stage 2's group 2.4 and the first class I group: the 20 units of C3.5 not yet
+re-estimated, read on the indicators v2.0 names, every file the session added to the evidence cache checked by digest
+and every passage quoted from it found there, clause 4 recomputed from the IMF rows, and the consequences cumulatively
+with every part before it, with NEEC_Rescoring_s56.md checked against its generated tables; the Session 52 checks now
+load group 2.4 as a part of the pass: 104 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1175,11 +1180,28 @@ S54_CHECKS = [
          stdout="rescoring_s54_output.txt", stderr=EMPTY),
 ]
 
+# Session 56: group 2.4, C3.5 read as class I, on the shared module. pass_common.PARTS now includes it, so the Session 52
+# checks load its files too. It reads the sources the session added to the evidence cache, not the network.
+S56_FILES = {**S54_FILES, **{k: k for k in ("rescoring_s56.py", "NEEC_Rescoring_s56.md")},
+             **{"evidence_cache/C3.5/" + k: "evidence_cache/C3.5/" + k
+                for k in ("imf_ffs_rows_s56.json", "gao_fy2024_govexec.txt", "cnao_rectification_2023.txt",
+                          "cnao_rectification_2024.txt", "cnao_rectification_2025.txt", "riksrevisionen_ar2020.txt")}}
+for _c in S52_CHECKS:
+    _c["files"] = S56_FILES
+S56_CHECKS = [
+    dict(name="rescoring_s56.py: rescoring pass stage 2, group 2.4, C3.5 Failure-Mode Transparency read as class I (the "
+              "20 units not yet re-estimated): the sources added to the evidence cache by digest and every passage "
+              "quoted, clause 4 recomputed from the IMF rows, the rule with 0.0 on a stated whole-criterion reason "
+              "(53.2), consequences cumulatively with every part before it; no corpus file changed",
+         cmd=["python", "rescoring_s56.py"], files=S56_FILES,
+         stdout="rescoring_s56_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS)
+          + S54_CHECKS + S56_CHECKS)
 
 
 def md5(data):

@@ -1,8 +1,8 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 55 (2026-10-14). It consolidates the standing notes and
-open items of Handoffs 43 to 55, which no longer need to be read for them.
+changed, this file says what holds. Last rewritten by Session 56 (2026-10-14). It consolidates the standing notes and
+open items of Handoffs 43 to 56, which no longer need to be read for them.
 
 ## Position
 
@@ -11,47 +11,61 @@ open items of Handoffs 43 to 55, which no longer need to be read for them.
   `NEEC_Rescoring_s53.md`): all 23 units read, no entry clears C1.2a, five fall, one rises, no tier changes. **Group
   2.3, C1.3 re-read as class M, done (Session 54, `NEEC_Rescoring_s54.md`)**: the 20 units not yet re-estimated read;
   only Centrally Planned Socialism clears C1.3 (flagged); five designs fall from 1.0 to 0.5; no failure count or tier
-  changes. The next group is named below.
+  changes. **Group 2.4, C3.5 read as class I, done (Session 56, `NEEC_Rescoring_s56.md`)**, the first class I group:
+  the 20 units not yet re-estimated read on v2.0's indicators; no unit can reach 1.0 (clause 2 is shown for no entry);
+  four rise from 0.0 to 0.5 (Nordic Social Democracy, Libertarian Minarchism, Stakeholder Capitalism, Qatar), Universal
+  Basic Services falls from 0.5 to 0.0; five failure counts change, no tier. The next group is named below.
 - **Landing:** by pull request and the owner's merge (W9, decision 52.3). The session opens the pull request; `harness.yml`
   checks it; the owner merges; `land-session.yml` reruns the checks on `main` and tags each `NEEC Session <n>` commit.
 - **Criteria:** v2.0, 29 criteria in `criteria.json`; protocol draft.9. Published scores remain on 26 criteria until
   stage 3 applies the pass by generator.
 - **Simulation pin, frozen for v2.0 (decision 52.9):** `BetterToBest/compassionism-simulation` at `5a7a7b1` (v4.20),
   `harness.js` md5 `fe6fa4a3`, `index.html` md5 `c333b632`. **Research Hub pin:** `8e8a6ba`.
-- **Harness:** v29, 103 checks, byte-identical under Python 3.11 (the container) and checked by `harness.yml` on 3.12.
+- **Harness:** v30, 104 checks, byte-identical in the container (Python 3.13 in Session 56; 3.11 before) and checked by
+  `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
   `scores.publish` false, decision 49.1).
 - **Provisional standing on the published 26-criterion structure** (not for publication before stage 3): CCO-PTF-CIP-SZH
   14.5/26 (published 24.5), first; Participatory Economics and Integral 14.0; eight units not yet read could each change
-  who is first (`triage_s52_output.txt`, section 2).
+  who is first (`triage_s52_output.txt`, section 2: NSD C2.5, PE C2.5, PE C4.5, PE C5.2, INT C1.1, INT C1.4, INT C4.3,
+  INT C5.2).
 
 ## Next work, in order
 
-1. **C3.5 Failure-Mode Transparency, read in an Opus 5.5 session at high** (class I, 20 units in play, 4 able to change
-   an adequacy tier on their own; `triage_s52_output.txt`, section 4). The C3.5 evidence cache is built (Session 55,
-   `evidence_cache_s55.py`, `evidence_cache/C3.5/`): it holds the rationale location and citation strings of each of the
-   20 units, and four of the five external sources v2.0's measure names (IMF fossil fuel subsidies page and working
-   paper, INTOSAI, UK NAO), as landing-page extracts with md5s. It does not hold the GAO's recommendation-implementation
-   figures (gao.gov refuses this container, HTTP 403), nor the IMF data tables, nor the dated failure records clause 1
-   needs; five units (DG, FALC, MS, PE, SQ) have one-line published rationales that cite nothing. The reading must say
-   where a clause is therefore "not shown" rather than "short". Write it as groups 2.2 and 2.3 were: a script on
-   `pass_common.py` holding the readings (`U(...)`), its group-specific checks and generated tables
-   (`rescoring_s54.py` is the model for a two-clause criterion), a record, `PARTS` extended, the harness given the new
-   files (as v29 did through `S54_FILES`). Do not touch earlier scripts or their captures. Then the cache for C1.4,
-   C3.1, C2.4, C2.1, C2.3 and C1.1 in a Sonnet 5.5 session, in that order, before each is read.
-2. **Then the groups in the triage's order** (section 4 of its output, rerun after each group): C1.4, C4.2, C5.2, C4.1,
-   C4.3, C3.1, C2.4, C2.1, C2.3, C1.1, C4.4, C4.5, C2.5, C3.4. Groups already planned partly (C5.2's 16 units at 0.5
-   or 0.0, reading 3.2 of `NEEC_Rescoring_s50.md`; C4.3's other 16, part (b8)'s readings 3.2 to 3.5; C4.4's 17, decision
-   48.3; C4.1's four part (b6) units on its debt clause) are read within their criterion's group. `rescoring_s51.py`'s
-   unit supersedes part (b3)'s C1.1.
+1. **C5.2 Staged Transition Pathways, re-read as class M in an Opus 5.5 session at high** (16 units in play, 4 able to
+   change an adequacy tier on their own; `triage_s52_output.txt`, section 4, rerun after group 2.4). A judgment re-read
+   with no evidence cache; its 16 units at 0.5 or 0.0 were planned in reading 3.2 of `NEEC_Rescoring_s50.md`. Write it as
+   groups 2.2 to 2.4 were: a script on `pass_common.py` holding the readings (`U(...)`), its group-specific checks and
+   generated tables (`rescoring_s56.py` is the model for a four-clause criterion, `rescoring_s54.py` for a class M one), a
+   record, `PARTS` extended, the harness given the new files (as v30 did through `S56_FILES`). Do not touch earlier
+   scripts or their captures. High, not xhigh: the readings are planned in part, and the owner holds the contested
+   CCO-PTF-CIP-SZH unit (S50-3.4).
+2. **Then the groups in the triage's order** (rerun after each group): C1.4, C4.2, C4.3, C3.1, C4.1, C2.3, C2.4, C2.1,
+   C1.1, C4.4, C4.5, C2.5, C3.4. The class I groups (C1.4, C3.1, C2.3, C2.4, C2.1, C1.1) need their evidence cache first,
+   in a Sonnet 5.5 session, C1.4's next; the cache script should read the state before its group (`pc.Pass(upto=...)`),
+   since `evidence_cache_s55.py`'s check [2] reports a failure once its group is read (it is not a harness check).
+   Groups already planned partly (C4.3's other 16, part (b8)'s readings 3.2 to 3.5; C4.4's 17, decision 48.3; C4.1's
+   four part (b6) units on its debt clause) are read within their criterion's group. `rescoring_s51.py`'s unit
+   supersedes part (b3)'s C1.1.
 3. **The 69 new units** (C2.6, C3.6, C4.6; 23 each): no score exists, so none can be carried forward; they change
    every entry's failure count and total on the 29. Done after the class I and M groups, with the evidence cache.
-4. **Carry-forward (decision 52.7):** the triage now names six units that could change no failure count, tier or rank
-   on their own (CCO C4.5, CN C2.5, MS C4.5, NSD C4.5, OS C4.5, SQ C2.5). Reading them is cheap inside their
+4. **Carry-forward (decision 52.7):** the triage now names seven units that could change no failure count, tier or rank
+   on their own (CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, SG C2.5, SQ C2.5, UBS C4.5). Reading them is cheap inside their
    criterion's group; any left unread is listed in Report v2.0 and the Paper.
 5. Stage 3 (apply the pass by generator; `scores.publish` true; Report v2.0 Part I from per-unit rationales, decision
-   52.8; C1.2a's 1.0 band drops its example, as C1.1's did), stage 4 (Report and Paper v2.0; the Paper discloses the
-   simulation overhaul, decision 52.9), stage 5 (Paper PDF from a committed build script).
+   52.8; C1.2a's 1.0 band drops its example, as C1.1's did; C3.5's 0.0 band takes its examples from the units at 0.0
+   after group 2.4), stage 4 (Report and Paper v2.0; the Paper discloses the simulation overhaul, decision 52.9), stage 5
+   (Paper PDF from a committed build script).
+
+## Decided (Session 56, under the delegation; `NEEC_Rescoring_s56.md`)
+
+56.1 the reading of C3.5's clauses on v2.0's indicators (clause 1 from a dated record the scoring document names;
+clause 3 the audit office's own rate on its stated basis, 70% clearing; clause 4 the IMF's total implicit subsidies,
+2022, cleared under 10% of GDP; two alternatives carried in flags); 56.2 Libertarian Minarchism's C3.5 0.0 → 0.5 (a
+correction); 56.3 Nordic Social Democracy's and Stakeholder Capitalism's 0.0 → 0.5 on the named indicators, Status
+Quo's 0.5 held; 56.4 Universal Basic Services' 0.5 → 0.0 (a correction), Universal Basic Income's and MMT + Job
+Guarantee's 0.0 held; 56.5 China's 0.0 held, Qatar's 0.0 → 0.5, Singapore's 0.5 held. Carried into the criteria record
+at its next amendment, with 54.1 to 54.3, 53.1 to 53.3, 52.11 and 52.12.
 
 ## Decided (Session 54, under the delegation; `NEEC_Rescoring_s54.md`)
 
@@ -104,10 +118,16 @@ answers for these; all stay open and must be settled before stage 3. Nothing els
 | S54-3.3 | CCO-PTF-CIP-SZH's C1.3 to 0.5: the model has no housing tenure; on its proxy 78.5% to 86.4% of agents are stable over 5 years, 93.6% to 96.8% inside Public Trust Housing (a fifth of agents) | `NEEC_Rescoring_s54.md` 3.3 |
 | S54-3.4 | Centrally Planned Socialism's C1.3 held at 1.0 on a bound (94%), flagged toward 0.5 | `NEEC_Rescoring_s54.md` 3.4 |
 | S54-3.6 | Doughnut Economics' C1.3 held at 0.5, flagged toward 0.0 (the reading of its C1.2a) | `NEEC_Rescoring_s54.md` 3.6 |
+| S56-3.1 | C3.5's clause 4 read on the IMF's total implicit subsidies, cleared under 10% of GDP (alternatives: a lower bound that shows only a shortfall; the environmental components only) | `NEEC_Rescoring_s56.md` 3.1 |
+| S56-3.3 | Libertarian Minarchism's C3.5 to 0.5 (correction), flagged toward 0.0 | `NEEC_Rescoring_s56.md` 3.3 |
+| S56-3.4 | Nordic Social Democracy's and Stakeholder Capitalism's C3.5 to 0.5 on the named indicators (Stakeholder Capitalism flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.4 |
+| S56-3.5 | Universal Basic Services' C3.5 to 0.0 (correction): the published 0.5 credits the host's scrutiny; flagged toward 0.5 | `NEEC_Rescoring_s56.md` 3.5 |
+| S56-3.6 | China's C3.5 held at 0.0 (flagged toward 0.5; on the environmental components alone its clause 4 would clear); Qatar's to 0.5 (flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.6 |
 
-Method choices Sessions 52 to 54 made that the criteria record does not yet carry (optional, not corrections; carried
-into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3 (decision 53.3 is a correction), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
-key (Handoff 52, section 4).
+Method choices Sessions 52 to 56 made that the criteria record does not yet carry (optional, not corrections; carried
+into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5 (decisions 53.3, 56.2 and 56.4 are
+corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering key (Handoff 52,
+section 4).
 
 ## Model routing (decision 52.4)
 
@@ -142,7 +162,8 @@ A new simulation version reopens a unit only through these, recorded before the 
   `site/`) needs the chain: `build_criteria.py` in a temporary directory with its four inputs, copy `criteria.json`
   and the capture back, `build_site.py`, `build_readme.py`, then the harness. Every amendment of the criteria record
   changes `criteria.json`'s `record_md5` and the footer of 64 `docs/` pages. Never edit `docs/` by hand (check 93).
-- **Python.** The cloud container's `python3` is 3.11; the workflows use 3.12; the harness reproduces on both. A
+- **Python.** The cloud container's `python3` was 3.11 to Session 55 and 3.13 in Session 56; the workflows use 3.12; the
+  harness reproduces on each. A
   check's summary line is shown in the harness with `show_summary=True`.
 - **PDFs in the container.** `pypdf` fails on the container's `cryptography` build; `apt-get install -y
   poppler-utils` gives `pdftotext`. It does not persist between sessions.
@@ -184,5 +205,11 @@ A new simulation version reopens a unit only through these, recorded before the 
   shares are quoted from the publisher's catalogue); JCHS's *State of the Nation's Housing 2025* via NLIHC's summary;
   Census P60-282; Eviction Lab's 2022 update. A new simulation runner, `cco_c13_checks_s54.js`, captured
   (`cco_c13_checks_s54_output.txt`, md5 30d131f0), runs in under a minute.
+- **Sources used by group 2.4** (cached in `evidence_cache/C3.5/` by `rescoring_s56.py --fetch`, digests held in the
+  script): the IMF Fossil Fuel Subsidies Data 2023 update, country rows from the IMF Climate Change Indicators
+  Dashboard's ArcGIS service (climatedata.imf.org serves the dataset; imf.org's own download link was not found); GAO's
+  fiscal 2024 rate through Government Executive (gao.gov and files.gao.gov refuse the container, HTTP 403); China's
+  audit rectification reports through Xinhua and China Daily (audit.gov.cn does not answer); Riksrevisionen's 2020 annual
+  report on riksdagen.se. Singapore's AGO refuses (403) and Qatar's State Audit Bureau does not answer.
 - **Class D count.** Earlier files say "25 units at 0.5" for class D; after decision 48.3 moved C4.4 to class M the
   count is 18 at 0.5 (C2.5 and C4.5), with 12 more at 0.0 that class D could also raise (`triage_s52_output.txt`).

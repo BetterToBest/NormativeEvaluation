@@ -41,7 +41,8 @@ PARTS = (("(a)", "rescoring_s37", "rescoring_s37.py", 37), ("(b1)", "rescoring_s
          ("(b6)", "rescoring_s43", "rescoring_s43.py", 43), ("(b7)", "rescoring_s47", "rescoring_s47.py", 47),
          ("48.3", "rescoring_s48", "rescoring_s48.py", 48), ("(b8)", "rescoring_s49", "rescoring_s49.py", 49),
          ("(b9)", "rescoring_s50", "rescoring_s50.py", 50), ("(2.1)", "rescoring_s51", "rescoring_s51.py", 51),
-         ("(2.2)", "rescoring_s53", "rescoring_s53.py", 53), ("(2.3)", "rescoring_s54", "rescoring_s54.py", 54))
+         ("(2.2)", "rescoring_s53", "rescoring_s53.py", 53), ("(2.3)", "rescoring_s54", "rescoring_s54.py", 54),
+         ("(2.4)", "rescoring_s56", "rescoring_s56.py", 56))
 STATUS = {"C": "cleared", "S": "short", "U": "not shown", "R": "out of reach", "M": "moot"}
 
 
