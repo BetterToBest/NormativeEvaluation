@@ -1,0 +1,88 @@
+NEEC rescoring pass, stage 2, group 2.4: C3.5 Failure-Mode Transparency, class I (NEEC_Rescoring_s56.md)
+inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, pass_common.py and the 14 parts before this group, 6 files of evidence_cache/C3.5/, NEEC_Rescoring_s56.md
+
+[1] THE GROUP
+  PASS one unit per entry on C3.5 not yet re-estimated, 20 in all; CPS, CCO, INT were re-estimated before this group ((a), (b6), (b6)) and are not re-read
+  PASS C3.5 is class I with four clauses in v2.0
+  PASS published scores of the 20: 1.0 x0, 0.5 x13, 0.0 x7; this group raises 4 (NSD, LM, SC, QA), lowers 1 (UBS) and holds 15
+  PASS 4 units are 0.0, each on a stated whole-criterion reason (protocol 2.1): MMT (held), UBI (held), UBS (from 0.5), CN (held)
+  PASS no unit clears clause 2, which v2.0 marks aspirational, so none can reach 1.0; after this group no entry is at 1.0 on C3.5
+
+[2] THE SOURCES ADDED TO THE CACHE (digests; every figure quoted found in its file)
+  PASS imf_ffs_rows_s56.json: md5 dbd31b4b, 36 rows
+  PASS gao_fy2024_govexec.txt: md5 357aecca, 3 passage(s) quoted
+  PASS cnao_rectification_2023.txt: md5 2740055a, 1 passage(s) quoted
+  PASS cnao_rectification_2024.txt: md5 f47c55e4, 1 passage(s) quoted
+  PASS cnao_rectification_2025.txt: md5 cdbda9e5, 2 passage(s) quoted
+  PASS riksrevisionen_ar2020.txt: md5 3e9c1d11, 1 passage(s) quoted
+
+[3] THE INDICATOR READINGS (decision 56.1)
+  PASS the IMF rows: 9 countries x 4 series, percent of GDP, 2022 read
+  PASS clause 4: each configured national economy's status follows its implicit subsidies (cleared under 10% of GDP, short at 10% or more): SQ 3.23%, CN 10.95%, SG 3.03%, QA 7.31%, NSD 0.05% (Finland) to 0.58% (Denmark); Stakeholder Capitalism on its host economy, the United States
+  PASS on the environmental components alone (global warming and local air pollution; decision 56.1, alternative (b)) every status is the same except China's, 9.59% against 10.95%, which would clear: carried in China's flag
+  PASS clause 3: GAO's four-year rate, 70% in fiscal 2024, is at the bar (correction success at least 70%): cleared for Status Quo and for Stakeholder Capitalism's host economy
+  PASS clause 3, China: 98% of the 2,186 issues requiring immediate action, but about 51% of all 4,238 issues, resolved by the report; on GAO's basis not shown
+  PASS clause 3, the Nordic configuration: Sweden's nearly 85% within a year is one country's; not shown for the configuration
+
+[4] FLAGS
+  PASS flags: LM toward 0.0 (reading 3.3), SC toward 0.0 (reading 3.4), UBS toward 0.5 (reading 3.5), CN toward 0.5 (reading 3.6), SG toward 0.0 (reading 3.6), QA toward 0.0 (reading 3.6), IF toward 0.0 (reading 3.7)
+
+[5] THE SHARED MODULE'S CHECKS (records, the rule, consequences, ledger, dominance, anchors)
+  PASS every unit has one status per v2.0 clause, each with its estimate and its source
+  PASS every verdict follows D28 (1.0 only if every clause is cleared or moot, otherwise 0.5), and each 0.0 rests on its stated whole-criterion reason (protocol 2.1) with no clause cleared
+  PASS each entry's changes, part by part, sum to the difference between its published total and its total now
+  PASS NEEC_Rescoring_s56.md contains all 4 generated tables
+
+[6] THE RECORD'S UNIT TABLES (generated here; NEEC_Rescoring_s56.md must contain them verbatim)
+  PASS NEEC_Rescoring_s56.md contains all 25 generated tables
+
+| Entry | Published | Clause 1 | Clause 2 | Clause 3 | Clause 4 | Verdict | Flag |
+|---|---:|---|---|---|---|---:|---|
+| SQ | 0.5 | not shown | not shown | cleared | cleared | 0.5 |  |
+| NSD | 0.0 | not shown | not shown | not shown | cleared | 0.5 |  |
+| MS | 0.5 | not shown | not shown | not shown | not shown | 0.5 |  |
+| LM | 0.0 | not shown | not shown | not shown | not shown | 0.5 | toward 0.0 |
+| MMT | 0.0 | not shown | not shown | out of reach | out of reach | 0.0 |  |
+| UBI | 0.0 | not shown | not shown | out of reach | out of reach | 0.0 |  |
+| DG | 0.5 | not shown | not shown | not shown | not shown | 0.5 |  |
+| SC | 0.0 | not shown | not shown | cleared | cleared | 0.5 | toward 0.0 |
+| FALC | 0.5 | not shown | not shown | not shown | not shown | 0.5 |  |
+| PE | 0.5 | not shown | not shown | not shown | not shown | 0.5 |  |
+| GEO | 0.5 | not shown | not shown | not shown | out of reach | 0.5 |  |
+| MC | 0.5 | not shown | not shown | not shown | out of reach | 0.5 |  |
+| DE | 0.5 | not shown | not shown | not shown | not shown | 0.5 |  |
+| UBS | 0.5 | not shown | not shown | out of reach | out of reach | 0.0 | toward 0.5 |
+| SWF | 0.5 | not shown | not shown | not shown | out of reach | 0.5 |  |
+| CN | 0.0 | short | not shown | not shown | short | 0.0 | toward 0.5 |
+| SG | 0.5 | not shown | not shown | not shown | cleared | 0.5 | toward 0.0 |
+| QA | 0.0 | short | not shown | not shown | cleared | 0.5 | toward 0.0 |
+| IF | 0.5 | not shown | not shown | not shown | out of reach | 0.5 | toward 0.0 |
+| OS | 0.5 | not shown | not shown | not shown | not shown | 0.5 |  |
+
+| Entry | Published (rank) | After group 2.3 (rank) | After group 2.4 (rank) | Change here | Failures | Tier |
+|---|---:|---:|---:|---:|---:|---|
+| CCO | 24.5 (1) | 14.5 (1) | 14.5 (1) | 0.0 | 0 | Potentially Adequate |
+| PE | 20.5 (2) | 14.0 (2) | 14.0 (2) | 0.0 | 1 | Potentially Adequate |
+| NSD | 19.5 (3) | 13.0 (4) | 13.5 (4) | 0.5 | 1 | Potentially Adequate |
+| INT | 19.5 (3) | 14.0 (2) | 14.0 (2) | 0.0 | 3 | Partially Adequate |
+| DG | 19.0 (5) | 13.0 (4) | 13.0 (5) | 0.0 | 2 | Potentially Adequate |
+| MS | 16.5 (6) | 13.0 (4) | 13.0 (5) | 0.0 | 2 | Potentially Adequate |
+| MMT | 15.5 (7) | 11.0 (14) | 11.0 (14) | 0.0 | 4 | Partially Adequate |
+| UBI | 14.5 (8) | 11.0 (14) | 11.0 (14) | 0.0 | 7 | Structurally Inadequate |
+| MC | 14.5 (8) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate |
+| OS | 14.5 (8) | 13.0 (4) | 13.0 (5) | 0.0 | 3 | Partially Adequate |
+| SWF | 14.0 (11) | 12.5 (8) | 12.5 (8) | 0.0 | 3 | Partially Adequate |
+| SG | 14.0 (11) | 11.5 (12) | 11.5 (11) | 0.0 | 4 | Partially Adequate |
+| GEO | 13.5 (13) | 12.5 (8) | 12.5 (8) | 0.0 | 2 | Potentially Adequate |
+| UBS | 13.5 (13) | 12.0 (11) | 11.5 (11) | -0.5 | 4 | Partially Adequate |
+| IF | 13.5 (13) | 11.5 (12) | 11.5 (11) | 0.0 | 5 | Partially Adequate |
+| FALC | 13.0 (16) | 9.0 (18) | 9.0 (18) | 0.0 | 10 | Structurally Inadequate |
+| DE | 11.5 (17) | 9.0 (18) | 9.0 (18) | 0.0 | 8 | Structurally Inadequate |
+| SQ | 10.5 (18) | 9.5 (16) | 9.5 (16) | 0.0 | 9 | Structurally Inadequate |
+| CPS | 10.0 (19) | 7.5 (22) | 7.5 (22) | 0.0 | 12 | Structurally Inadequate |
+| SC | 10.0 (19) | 8.5 (20) | 9.0 (18) | 0.5 | 8 | Structurally Inadequate |
+| CN | 10.0 (19) | 9.5 (16) | 9.5 (16) | 0.0 | 8 | Structurally Inadequate |
+| QA | 9.0 (22) | 8.0 (21) | 8.5 (21) | 0.5 | 9 | Structurally Inadequate |
+| LM | 8.0 (23) | 6.5 (23) | 7.0 (23) | 0.5 | 13 | Structurally Inadequate |
+
+RESCORING STAGE 2, GROUP 2.4, COMPUTED.
