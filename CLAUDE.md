@@ -8,6 +8,10 @@ nothing.
 
 ## Start
 
+**The owner's opening prompt is usually just `Continue NEEC.`** That means: do the steps below, then the task in the
+newest handoff's "Next session: start here" (its first line names the model and effort), and finish with a pull
+request. Ask nothing the repository answers. Where the opening message carries decisions, record them first (step 5).
+
 1. If a `NEEC_repository_s<n>.zip` is at the repository root, a chat session's package has not been applied yet:
    apply it first, as the note inside it describes.
 2. Run `git fetch -q origin` and list open pull requests with
