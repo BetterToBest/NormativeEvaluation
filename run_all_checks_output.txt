@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 102 reproducibility checks
+run_all_checks.py -- 103 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 102 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 15b6b657)
+          README.md == README.md (md5 5b025514)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -384,18 +384,22 @@ run_all_checks.py -- 102 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [100] PASS  pass_common.py --selftest: the pass's shared module reproduces the pass's rules (tier, ranks, D28) and group 2.1's consequences table, ledger, dominance line and anchors line verbatim
-          stdout == pass_common_selftest_output.txt (md5 f1918aee)
+          stdout == pass_common_selftest_output.txt (md5 913ffc5f)
           stderr == (empty) (md5 d41d8cd9)
 
 [101] PASS  triage_s52.py: the consequence triage (W6): which units not yet read could change a failure count, an adequacy tier or a rank on their own, the entries and criteria by that, the order of groups, the units that could change none
-          stdout == triage_s52_output.txt (md5 f9d795b6)
+          stdout == triage_s52_output.txt (md5 31a2e89e)
           stderr == (empty) (md5 d41d8cd9)
 
 [102] PASS  rescoring_s53.py: rescoring pass stage 2, group 2.2, C1.2a Wealth Building for Resilience re-read as class M (all 23 units): v2.0's price basis recomputed, the design's unit on its published model (the runs' capture by digest), the rule with 0.0 on a stated whole-criterion reason (53.2), consequences cumulatively with every part before it; no corpus file changed
           stdout == rescoring_s53_output.txt (md5 1f7c213e)
           stderr == (empty) (md5 d41d8cd9)
 
+[103] PASS  rescoring_s54.py: rescoring pass stage 2, group 2.3, C1.3 Housing Security re-read as class M (the 20 units not yet re-estimated): the figures the readings derive recomputed, the design's unit on its published model (the runs' capture by digest), the rule with 0.0 on a stated whole-criterion reason (53.2), consequences cumulatively with every part before it; no corpus file changed
+          stdout == rescoring_s54_output.txt (md5 da630cea)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 102 passed, 0 failed, 0 skipped (of 102).
+SUMMARY: 103 passed, 0 failed, 0 skipped (of 103).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.
