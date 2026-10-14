@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 99 reproducibility checks
+run_all_checks.py -- 101 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 99 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 3f8620cd)
+          README.md == README.md (md5 91842c98)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -383,7 +383,15 @@ run_all_checks.py -- 99 reproducibility checks
           stdout == rescoring_s51_output.txt (md5 00039f64)
           stderr == (empty) (md5 d41d8cd9)
 
+[100] PASS  pass_common.py --selftest: the pass's shared module reproduces the pass's rules (tier, ranks, D28) and group 2.1's consequences table, ledger, dominance line and anchors line verbatim
+          stdout == pass_common_selftest_output.txt (md5 b6cc07a3)
+          stderr == (empty) (md5 d41d8cd9)
+
+[101] PASS  triage_s52.py: the consequence triage (W6): which units not yet read could change a failure count, an adequacy tier or a rank on their own, the entries and criteria by that, the order of groups, the units that could change none
+          stdout == triage_s52_output.txt (md5 d1394d8e)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 99 passed, 0 failed, 0 skipped (of 99).
+SUMMARY: 101 passed, 0 failed, 0 skipped (of 101).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.
