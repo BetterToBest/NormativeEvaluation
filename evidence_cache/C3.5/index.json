@@ -1,0 +1,293 @@
+{
+ "built_by": "Session 55",
+ "criterion": "C3.5",
+ "sources": {
+  "gao_priority": {
+   "clause": "clause 3",
+   "file": null,
+   "http": "403",
+   "title": "US Government Accountability Office, priority recommendations",
+   "url": "https://www.gao.gov/priority-recommendations"
+  },
+  "imf_ffs_topic": {
+   "chars": 5230,
+   "clause": "clause 4",
+   "extract_md5": "5ca118c1dedf8f31b46ffe1385f27c42",
+   "file": "imf_ffs_topic.txt",
+   "http": "200",
+   "raw_md5": "345524b5befab7b0b7fa9342deed8037",
+   "title": "IMF, energy subsidies topic page (the Fossil Fuel Subsidies Data)",
+   "url": "https://www.imf.org/en/Topics/climate-change/energy-subsidies"
+  },
+  "imf_ffs_wp2023": {
+   "chars": 2781,
+   "clause": "clause 4",
+   "extract_md5": "c08d56adef67a56c457cb956ee08d8ef",
+   "file": "imf_ffs_wp2023.txt",
+   "http": "200",
+   "raw_md5": "8519e68707dcbf346e858e2232414de0",
+   "title": "IMF working paper, IMF Fossil Fuel Subsidies Data: 2023 Update",
+   "url": "https://www.imf.org/en/Publications/WP/Issues/2023/08/22/IMF-Fossil-Fuel-Subsidies-Data-2023-Update-537281"
+  },
+  "intosai": {
+   "chars": 3247,
+   "clause": "clause 3",
+   "extract_md5": "ea8044ba6af3d22a015f3b42b3b7c08c",
+   "file": "intosai.txt",
+   "http": "200",
+   "raw_md5": "2a9ad7896299f89b39aaa5f7f0a7bfb1",
+   "title": "INTOSAI, the supreme audit institutions' body",
+   "url": "https://www.intosai.org/"
+  },
+  "nao_about": {
+   "chars": 8215,
+   "clause": "clause 3",
+   "extract_md5": "a272856be4cc617c29144d92282c716a",
+   "file": "nao_about.txt",
+   "http": "200",
+   "raw_md5": "811de1b2f1d80988a6daaf7f2c9b81fd",
+   "title": "UK National Audit Office, about the NAO and its recommendations work",
+   "url": "https://www.nao.org.uk/about-us/"
+  }
+ },
+ "units": {
+  "CN": {
+   "chars": 3586,
+   "cites": [
+    "China Daily",
+    "December 2019",
+    "Disaster casualties.",
+    "Domain 3 = 0.5 + 1.0 + 0.5 + 0.5 + 0.0 = 2.5/5 (50%)",
+    "Economic statistics.",
+    "Epidemic early warning.",
+    "Flagged as contestable:",
+    "Frontline",
+    "January 2020",
+    "June 2025",
+    "March 2020)",
+    "Mortality.",
+    "People's Daily",
+    "Protest and labour information.",
+    "Rationale:",
+    "Score Justification:",
+    "Why this diverges from the CPS precedent."
+   ],
+   "file": "NEEC_StateCapitalism_China_scoring_scratch.md",
+   "line": 628,
+   "md5": "a79f318c6734c13a2203aaf889cd5cc9",
+   "score": 0.0
+  },
+  "DE": {
+   "chars": 1933,
+   "cites": [
+    "Domain 3 Total: 3.0/5 (60%)",
+    "Rationale:",
+    "Score Justification:",
+    "accelerating",
+    "correction"
+   ],
+   "file": "NEEC_DoughnutEconomics_scoring_scratch.md",
+   "line": 458,
+   "md5": "46df60e0bf3e3ef47c216f3e836ad756",
+   "score": 0.5
+  },
+  "DG": {
+   "chars": 225,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 954,
+   "md5": "1ef72a297172cfb4434c0b68503df8dd",
+   "score": 0.5
+  },
+  "FALC": {
+   "chars": 214,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 1134,
+   "md5": "11453826bc396a93a6c86b6a7ca73b48",
+   "score": 0.5
+  },
+  "GEO": {
+   "chars": 1225,
+   "cites": [
+    "Domain 3 Total: 3.0/5 (60%)",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_Georgism_LVT_scoring_scratch.md",
+   "line": 410,
+   "md5": "d7135c94676523fe78997a59a6d3ecef",
+   "score": 0.5
+  },
+  "IF": {
+   "chars": 1568,
+   "cites": [
+    ". IFSB WP-10 reports that Islamic banks",
+    "Flagged:"
+   ],
+   "file": "NEEC_IslamicFinance_scoring_scratch.md",
+   "line": 472,
+   "md5": "082c7aeb457112cbe68e1b73b8c904c2",
+   "score": 0.5
+  },
+  "LM": {
+   "chars": 245,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 684,
+   "md5": "3843d0269c41a7a7fb60f7579ac96632",
+   "score": 0.0
+  },
+  "MC": {
+   "chars": 1579,
+   "cites": [
+    "Domain 3 Total: 3.0/5 (60%)",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_MutualCredit_LETS_scoring_scratch.md",
+   "line": 476,
+   "md5": "2276b5eecad889d259e96980cf92d2b6",
+   "score": 0.5
+  },
+  "MMT": {
+   "chars": 251,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 774,
+   "md5": "9b537153a1dae518fa269e55b3a2199a",
+   "score": 0.0
+  },
+  "MS": {
+   "chars": 220,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 594,
+   "md5": "c97c8d7673007cb5f6c9a458de420a65",
+   "score": 0.5
+  },
+  "NSD": {
+   "chars": 265,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 414,
+   "md5": "83022f7f50ce360596a5fca4b60ca7bf",
+   "score": 0.0
+  },
+  "OS": {
+   "chars": 1500,
+   "cites": [
+    "International Journal of the Commons",
+    "Score: 0.5. Scope scenario, not a flag (decision D18(b)):"
+   ],
+   "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+   "line": 505,
+   "md5": "0e3690423a49162d5ecb440fa211b243",
+   "score": 0.5
+  },
+  "PE": {
+   "chars": 252,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 1224,
+   "md5": "b7eb65af49b417cf3cb7ac23e8295d30",
+   "score": 0.5
+  },
+  "QA": {
+   "chars": 2458,
+   "cites": [
+    "AFP, 2022)",
+    "Domain 3 = 0.5 + 0.5 + 0.5 + 0.5 + 0.0 = 2.0/5 (40%)",
+    "Externalization.",
+    "Gaps and suppression.",
+    "House, 2025)",
+    "Qatar invited the ILO in. The resulting report",
+    "Rationale:",
+    "Score Justification:",
+    "Visibility."
+   ],
+   "file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+   "line": 652,
+   "md5": "e892fffb32c8a2a2c0bf14317f7f7870",
+   "score": 0.0
+  },
+  "SC": {
+   "chars": 288,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 1044,
+   "md5": "fb7c7c56840e10b864cb2a7521018469",
+   "score": 0.0
+  },
+  "SG": {
+   "chars": 2983,
+   "cites": [
+    "Constrained criticism.",
+    "Domain 3 = 0.5 + 1.0 + 0.5 + 1.0 + 0.5 = 3.5/5 (70%)",
+    "Externalized costs.",
+    "Flagged as contestable:",
+    "January 2023",
+    "Rationale \u2014 what is obscured.",
+    "Rationale \u2014 what is visible.",
+    "Score Justification:",
+    "Unconsolidated state-enterprise data.",
+    "Unmeasured failure.",
+    "Why this contrasts with China."
+   ],
+   "file": "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+   "line": 574,
+   "md5": "ac0a99c00e2746f47d707f1701ee822b",
+   "score": 0.5
+  },
+  "SQ": {
+   "chars": 255,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 326,
+   "md5": "441322ced105f6ce15e57c6269d18570",
+   "score": 0.5
+  },
+  "SWF": {
+   "chars": 1581,
+   "cites": [
+    "Domain 3 = 0.5 + 0.5 + 0.5 + 1.0 + 0.5 = 3.0/5 (60%)",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+   "line": 460,
+   "md5": "cb68c44513d46337afa7dbb9e999dad0",
+   "score": 0.5
+  },
+  "UBI": {
+   "chars": 272,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 864,
+   "md5": "d04914f4fb3a8ec32001035c29b84345",
+   "score": 0.0
+  },
+  "UBS": {
+   "chars": 1699,
+   "cites": [
+    "Domain 3 Total: 3.0/5 (60%)",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_UniversalBasicServices_scoring_scratch.md",
+   "line": 515,
+   "md5": "68ae09c32cce919c291cf295d1001d9b",
+   "score": 0.5
+  }
+ }
+}
