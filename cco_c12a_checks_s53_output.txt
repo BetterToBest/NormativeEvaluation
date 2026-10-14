@@ -1,0 +1,28 @@
+NEEC cco_c12a_checks_s53: CCO-PTF-CIP-SZH's C1.2a on the design's own engine, v4.20
+inputs: harness.js, index.html
+
+[1] THE ENGINE AND THE BAR
+  PASS harness.js md5 fe6fa4a3f82a2d572c5e6914cc2345f2 (compassionism-simulation 5a7a7b1, v4.20)
+  PASS index.html md5 c333b6326b95586515743dba6647ca2a (same commit; META.VERSION 4.20)
+  PASS the reference run (Full Integration) holds prices constant (inflRate 0) and the Adverse Environment runs at 2%; the bar, $60,000 in 2019 dollars, is $71510 in the engine's 2023 dollars
+
+[2] THE RUNNER (N = 500 seeds, 1-500, 500 agents)
+  PASS the runner reproduces runScenario()'s year-20 median wealth and wealth poverty on all 500 seeds of all 4 scenarios (FI, BFm, ADV, BAm)
+
+[3] C1.2a: 20-YEAR NET-WEALTH ACCUMULATION, 2019 DOLLARS (seed means; the bar is $60,000)
+| Scenario | Net worth read as | Share accumulating >=$60,000 | Seeds at 70% or more | Median accumulation | 30th percentile | Saving share of cash income |
+|---|---|---:|---:|---:|---:|---:|
+| Reference (Full Integration), 0% | wealth (the engine's figure) | 76.6% | 500 of 500 | $382,005 | $141,971 | 47.2% |
+| Reference (Full Integration), 0% | wealth + acre equity | 77.4% | 500 of 500 | $394,581 | $151,839 |  |
+| Baseline, matched (0%) | wealth (the engine's figure) | 41.4% | 0 of 500 | -$11,325 | -$30,577 | 20.0% |
+| Baseline, matched (0%) | wealth + acre equity | 41.4% | 0 of 500 | -$11,325 | -$30,577 |  |
+| Adverse Environment, 2% | wealth (the engine's figure) | 46.6% | 0 of 500 | $35,418 | -$21,788 | 29.2% |
+| Adverse Environment, 2% | wealth + acre equity | 47.9% | 0 of 500 | $46,211 | -$19,393 |  |
+| Baseline, matched to Adverse (2%) | wealth (the engine's figure) | 13.6% | 0 of 500 | -$27,030 | -$50,336 | 2.3% |
+| Baseline, matched to Adverse (2%) | wealth + acre equity | 13.6% | 0 of 500 | -$27,030 | -$50,336 |  |
+  PASS in the reference run 76.6% of agents accumulate $60,000 (2019) or more on the engine's wealth, 77.4% with acre equity; the median accumulation is $382,005 and the 30th percentile $141,971 (2019 dollars)
+  PASS the matched Baseline (no CCO, PTF, PTH, SZH or CIP; 0%) does not clear: 41.4% accumulate $60,000, median -$11,325; the design adds 35.3 points to the share
+  PASS runYear() adds wage income less the basket's cost to wealth (a.wealth+=annualWageUSD-costUSD), so an agent saves every dollar above its basket: agents keep 47.2% of 20 years' cash income as net worth in the reference run (20.0% in the matched Baseline, where many draw wealth down), more than five times the US personal saving rate of 3.4% to 5.6% in 2022-2025 (BEA, FRED series PSAVERT)
+  NOTE Adverse Environment: 46.6% accumulate $60,000 (2019) on the engine's wealth, 0 of 500 seeds at 70% or more; median $35,418 (C1.2a has no stress clause)
+
+CCO C1.2a SIMULATION CHECKS: ALL PASSED.

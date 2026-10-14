@@ -16,10 +16,13 @@ WHAT IT HOLDS
   run_group(...)   for a group's readings: records complete, the D28 rule, consequences, dominance, the ledger, the
                    anchor examples moved, and the record file containing every generated table verbatim.
   helpers          read, load, f1, tier, verdict_of, ranks, dominance, order_codes, summ.
+Session 53 (decision 53.2): a class M re-read may hold or set 0.0 on a unit's stated whole-criterion reason (`zero`,
+protocol 2.1), never with its clause cleared; check_rule and the dominance line allow for it, and print what they
+printed before for every group without such a unit.
 
 Usage: python3 pass_common.py --selftest   (reads criteria.json, criteria_s44_snapshot.json, neec_corpus.json,
-                                            neec_scores.csv, r4_audit_s35.py, rescoring_s37.py to rescoring_s51.py and
-                                            the files they read, NEEC_Rescoring_s51.md; writes nothing)
+                                            neec_scores.csv, r4_audit_s35.py, the scripts of PARTS and the files they
+                                            read, NEEC_Rescoring_s51.md; writes nothing)
 Prints file names only. Deterministic.
 """
 import csv
@@ -37,7 +40,8 @@ PARTS = (("(a)", "rescoring_s37", "rescoring_s37.py", 37), ("(b1)", "rescoring_s
          ("(b4)", "rescoring_s41", "rescoring_s41.py", 41), ("(b5)", "rescoring_s42", "rescoring_s42.py", 42),
          ("(b6)", "rescoring_s43", "rescoring_s43.py", 43), ("(b7)", "rescoring_s47", "rescoring_s47.py", 47),
          ("48.3", "rescoring_s48", "rescoring_s48.py", 48), ("(b8)", "rescoring_s49", "rescoring_s49.py", 49),
-         ("(b9)", "rescoring_s50", "rescoring_s50.py", 50), ("(2.1)", "rescoring_s51", "rescoring_s51.py", 51))
+         ("(b9)", "rescoring_s50", "rescoring_s50.py", 50), ("(2.1)", "rescoring_s51", "rescoring_s51.py", 51),
+         ("(2.2)", "rescoring_s53", "rescoring_s53.py", 53))
 STATUS = {"C": "cleared", "S": "short", "U": "not shown", "R": "out of reach", "M": "moot"}
 
 
@@ -141,16 +145,26 @@ def check_records(p, units, ok_print):
         for i, (st, est, src) in enumerate(rec["clauses"]):
             if st not in STATUS or not est.strip() or not src.strip():
                 bad.append(f"{key} clause {i + 1}: status {st!r}, or an empty estimate or source")
-            if "|" in est + src + rec["note"] or "{" in est:
+            if "|" in est + src + rec["note"] + (rec.get("zero") or "") or "{" in est:
                 bad.append(f"{key} clause {i + 1}: a pipe character or an unfilled field")
     return ok_print(not bad, "every unit has one status per v2.0 clause, each with its estimate and its source",
                     "; ".join(bad[:3]))
 
 
 def check_rule(units, ok_print):
-    wrong = [k for k, r in units.items() if verdict_of(r["clauses"]) != r["verdict"]]
-    return ok_print(not wrong and all(r["verdict"] in (0.5, 1.0) for r in units.values()),
-                    "every verdict follows D28 (1.0 only if every clause is cleared or moot), and none is 0.0",
+    """D28 for every unit. A class M re-read (decision 53.2) may also hold or set 0.0, but only on a stated whole-
+    criterion reason under protocol 2.1 (the unit's `zero`) and never with a clause cleared: D28(f), a clause-level
+    gap alone never makes 0.0. Groups without such a unit print the rule as parts (a) to group 2.1 stated it."""
+    def right(r):
+        if r.get("zero"):
+            return r["verdict"] == 0.0 and not any(st in "CM" for st, _, _ in r["clauses"])
+        return r["verdict"] in (0.5, 1.0) and verdict_of(r["clauses"]) == r["verdict"]
+    wrong = [k for k, r in units.items() if not right(r)]
+    if not any(r.get("zero") for r in units.values()):
+        return ok_print(not wrong, "every verdict follows D28 (1.0 only if every clause is cleared or moot), and none "
+                        "is 0.0", str(wrong))
+    return ok_print(not wrong, "every verdict follows D28 (1.0 only if every clause is cleared or moot, otherwise 0.5), "
+                    "and each 0.0 rests on its stated whole-criterion reason (protocol 2.1) with no clause cleared",
                     str(wrong))
 
 
@@ -195,6 +209,16 @@ def dominance_line(p, vp, vn, steps, merged, prev_label):
     n_all = len(merged)
     st_all = sum(1 for r in merged.values() if r["verdict"] == 1.0)
     pts_all = sum(1.0 - r["verdict"] for r in merged.values())
+    pub = {k: p.vec[k[0]][k[1]] for k in merged}
+    if all(v == 1.0 for v in pub.values()):
+        tail = f"{st_all} stand and {n_all - st_all} are at 0.5 ({f1(pts_all)} points)."
+    else:
+        at = {x: sum(1 for r in merged.values() if r["verdict"] == x) for x in (1.0, 0.5, 0.0)}
+        up = sum(1 for k, r in merged.items() if r["verdict"] > pub[k])
+        down = sum(1 for k, r in merged.items() if r["verdict"] < pub[k])
+        net = sum(r["verdict"] - pub[k] for k, r in merged.items())
+        tail = (f"{at[1.0]} are at 1.0, {at[0.5]} at 0.5 and {at[0.0]} at 0.0; against their published scores {down} "
+                f"fell, {up} rose and {n_all - up - down} are unchanged (net {f1(net)} points).")
     return (f"After this group the corpus has {len(pn)} dominance pairs against {len(pp)} after {prev_label} (new: " +
             (", ".join(f"{a}>{b}" for a, b in gained) or "none") + "; lost: " +
             (", ".join(f"{a}>{b}" for a, b in lost) or "none") + f"), and its frontier holds {len(fn)} entries "
@@ -202,7 +226,7 @@ def dominance_line(p, vp, vn, steps, merged, prev_label):
             f"{f1(mp['total'][first[0]])} after {prev_label}, {f1(after['total'][first[0]])} now, ahead of "
             + ", ".join(c for c in order if after["total"][c] == after["total"][second])
             + f" at {f1(after['total'][second])}. Across the pass so far {n_all} units have been re-estimated, each "
-            f"counted once: {st_all} stand and {n_all - st_all} are at 0.5 ({f1(pts_all)} points).")
+            f"counted once: " + tail)
 
 
 def anchors_line(p, merged, part_of, vn):
