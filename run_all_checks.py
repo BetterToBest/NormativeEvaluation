@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 26 (Session 51). Runs every verification and analysis script on file
+Version 27 (Session 52). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -203,7 +203,10 @@ five units it finds that the pass had not re-estimated, the design's C1.1 re-che
 Line, the design's other re-estimated units against v4.20, the consequences cumulatively with parts (a) and (b) and
 decision 48.3, and the score ledger, with NEEC_Rescoring_s51.md checked against its generated tables and against the
 tables of the simulation runs, whose captured output (cco_simulation_checks_s51_output.txt) it checks by digest; the
-JavaScript itself is not rerun here, as with Sessions 38 and 40: 99 checks.
+JavaScript itself is not rerun here, as with Sessions 38 and 40: 99 checks. Version 27 (Session 52)
+adds pass_common.py, the pass's shared module (decision 52.5), checked by its --selftest, which rebuilds group 2.1's
+consequences table, ledger, dominance line and anchors line from the parts before it and compares them verbatim with
+the script's own; and triage_s52.py, the consequence triage (decision 52.7): 101 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1118,10 +1121,25 @@ S51_CHECKS = [
          stdout="rescoring_s51_output.txt", stderr=EMPTY),
 ]
 
+# Session 52: the shared pass module (decision 52.5) and the consequence triage (decision 52.7). Both read the pass
+# cumulatively through group 2.1 and change no file and no score.
+S52_FILES = {**S51_FILES, **{k: k for k in ("pass_common.py", "triage_s52.py", "neec_scores.csv")}}
+S52_CHECKS = [
+    dict(name="pass_common.py --selftest: the pass's shared module reproduces the pass's rules (tier, ranks, D28) and "
+              "group 2.1's consequences table, ledger, dominance line and anchors line verbatim",
+         cmd=["python", "pass_common.py", "--selftest"], files=S52_FILES,
+         stdout="pass_common_selftest_output.txt", stderr=EMPTY),
+    dict(name="triage_s52.py: the consequence triage (W6): which units not yet read could change a failure count, an "
+              "adequacy tier or a rank on their own, the entries and criteria by that, the order of groups, the units "
+              "that could change none",
+         cmd=["python", "triage_s52.py"], files=S52_FILES,
+         stdout="triage_s52_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS)
+          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS)
 
 
 def md5(data):
