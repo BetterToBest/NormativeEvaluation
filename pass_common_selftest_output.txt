@@ -1,11 +1,11 @@
 pass_common.py --selftest: the shared module reproduces the pass's established rules and group 2.1's tables
-inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, neec_scores.csv, r4_audit_s35.py, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, rescoring_s47.py, rescoring_s48.py, rescoring_s49.py, rescoring_s50.py, rescoring_s51.py, rescoring_s53.py, NEEC_Rescoring_s51.md
+inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, neec_scores.csv, r4_audit_s35.py, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, rescoring_s47.py, rescoring_s48.py, rescoring_s49.py, rescoring_s50.py, rescoring_s51.py, rescoring_s53.py, rescoring_s54.py, NEEC_Rescoring_s51.md
 
   PASS tier() equals rescoring_s37.tier for 0 to 29 failures
   PASS ranks() equals the pass's
   PASS f1() equals the pass's
   PASS verdict_of() applies D28: 1.0 only if every clause is cleared or moot, else 0.5
-  PASS all 13 parts load; 175 units are re-estimated
+  PASS all 14 parts load; 195 units are re-estimated
   PASS every re-estimated unit lies on a criterion of the published 26-criterion structure
   PASS 29 v2.0 criteria, 26 published criteria, 23 entries
   PASS published totals and failure counts equal neec_scores.csv's for all 23 entries

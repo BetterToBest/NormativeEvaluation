@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 28 (Session 53). Runs every verification and analysis script on file
+Version 29 (Session 54). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -211,7 +211,11 @@ rescoring_s53.py, stage 2's group 2.2 and the first written on the shared module
 class M on v2.0's price basis, every 2019-dollar figure recomputed from the series it holds, the design's unit on its
 published model through the captured output of cco_c12a_checks_s53.js, checked by digest, and the consequences
 cumulatively with every part before it, with NEEC_Rescoring_s53.md checked against its generated tables; the Session 52
-checks now load group 2.2 as a part of the pass: 102 checks.
+checks now load group 2.2 as a part of the pass: 102 checks. Version 29 (Session 54) adds rescoring_s54.py, stage 2's
+group 2.3: the 20 units of C1.3 not yet re-estimated, re-read as class M on v2.0's two clauses, the figures the readings
+derive recomputed, the design's unit on its published model through the captured output of cco_c13_checks_s54.js,
+checked by digest, and the consequences cumulatively with every part before it, with NEEC_Rescoring_s54.md checked
+against its generated tables; the Session 52 checks now load group 2.3 as a part of the pass: 103 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1156,10 +1160,26 @@ S53_CHECKS = [
          stdout="rescoring_s53_output.txt", stderr=EMPTY),
 ]
 
+# Session 54: group 2.3, C1.3 re-read as class M, on the shared module. pass_common.PARTS now includes it, so the
+# Session 52 checks load its files too. It reads the captured output of cco_c13_checks_s54.js, not the JavaScript.
+S54_FILES = {**S53_FILES, **{k: k for k in ("rescoring_s54.py", "NEEC_Rescoring_s54.md",
+                                            "cco_c13_checks_s54_output.txt")}}
+for _c in S52_CHECKS:
+    _c["files"] = S54_FILES
+S54_CHECKS = [
+    dict(name="rescoring_s54.py: rescoring pass stage 2, group 2.3, C1.3 Housing Security re-read as class M (the 20 "
+              "units not yet re-estimated): the figures the readings derive recomputed, the design's unit on its "
+              "published model (the runs' capture by digest), the rule with 0.0 on a stated whole-criterion reason "
+              "(53.2), consequences cumulatively with every part before it; no corpus file changed",
+         cmd=["python", "rescoring_s54.py"], files=S54_FILES,
+         stdout="rescoring_s54_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
-          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS)
+          + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
+          + S54_CHECKS)
 
 
 def md5(data):
