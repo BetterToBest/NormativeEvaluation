@@ -1,0 +1,33 @@
+NEEC cco_c13_checks_s54: CCO-PTF-CIP-SZH's C1.3 on the design's own engine, v4.20
+inputs: harness.js, index.html
+
+[1] THE ENGINE AND WHAT IT MODELS
+  PASS harness.js md5 fe6fa4a3f82a2d572c5e6914cc2345f2 (compassionism-simulation 5a7a7b1, v4.20)
+  PASS index.html md5 c333b6326b95586515743dba6647ca2a (same commit; META.VERSION 4.20)
+  PASS housingDistressOf() counts an agent whose cash income plus start-of-year savings falls short of its basket; it reads no tenure, rent or eviction
+  PASS Public Trust Housing is on in the reference run with an uptake of 20% of agents (the same in the Adverse Environment)
+
+[2] THE RUNNER (N = 500 seeds, 1-500, 500 agents)
+  PASS the runner reproduces runScenario()'s year-20 housing distress, median wealth and wealth poverty on all 500 seeds of all 4 scenarios (FI, BFm, ADV, BAm)
+
+[3] C1.3, CLAUSE 1, ON THE ENGINE'S NEAREST MEASURE: AGENTS WITH NO YEAR OF HOUSING DISTRESS IN A 5-YEAR WINDOW (seed means)
+| Scenario | Agents | Years 1-5 | Years 6-10 | Years 11-15 | Years 16-20 | Lowest window | Seeds at 88% or more, years 16-20 |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Reference (Full Integration), 0% | all | 80.1% | 78.5% | 81.8% | 86.4% | 78.5% | 83 of 500 |
+| Reference (Full Integration), 0% | in PTH | 93.9% | 93.6% | 95.2% | 96.8% | 93.6% | 500 of 500 |
+| Reference (Full Integration), 0% | outside PTH | 76.7% | 74.7% | 78.4% | 83.7% | 74.7% | 1 of 500 |
+| Baseline, matched (0%) | all | 57.8% | 51.5% | 50.4% | 51.1% | 50.4% | 0 of 500 |
+| Adverse Environment, 2% | all | 77.6% | 72.4% | 68.4% | 63.5% | 63.5% | 0 of 500 |
+| Adverse Environment, 2% | in PTH | 92.7% | 90.1% | 88.0% | 84.9% | 84.9% | 95 of 500 |
+| Adverse Environment, 2% | outside PTH | 73.8% | 68.0% | 63.4% | 58.1% | 58.1% | 0 of 500 |
+| Baseline, matched to Adverse (2%) | all | 53.8% | 41.8% | 32.0% | 23.2% | 23.2% | 0 of 500 |
+  PASS Public Trust Housing holds 20.1% of agents in the reference run (seed mean); the other 79.9% are housed as the Baseline houses them
+  PASS reference run: 86.4% of agents pass years 16-20 with no year of distress against 51.1% in the matched Baseline; the lowest window is 78.5%, under 88%
+  PASS inside Public Trust Housing 96.8% pass years 16-20 with no year of distress; outside it 83.7%
+  NOTE Adverse Environment: 63.5% of agents pass years 16-20 with no year of distress, against 23.2% in its matched Baseline (C1.3 names resistance to market volatility)
+  NOTE reference run, share of agents in distress by year (seed means): y1 6.9%, y2 12.6%, y3 15.9%, y4 17.9%, y5 18.9%, y6 19.3%, y7 19.3%, y8 18.9%, y9 18.4%, y10 17.7%, y11 16.9%, y12 16.1%, y13 15.2%, y14 14.3%, y15 13.5%, y16 12.6%, y17 11.8%, y18 11.0%, y19 10.3%, y20 9.6%
+
+[4] C1.3, CLAUSE 2
+  PASS the engine carries no housing-cost line: the basket (LIVING_WAGE_ANNUAL) is one sum, which PTH membership scales by 0.65 as a whole, so housing costs as a share of disposable income at 80% of the median are not computed
+
+CCO C1.3 SIMULATION CHECKS: ALL PASSED.
