@@ -405,6 +405,8 @@ class Site:
             banner = ('<p class="banner" role="note">Preview build. It shows the corpus\'s published scores '
                       f'({len(M["corpus_crits"])} criteria, being re-estimated for version {esc(cfg["scores"]["release"])}); '
                       'the public site shows no scores until version 2.0 is released.</p>')
+        elif M["gate"] and cfg["scores"].get("provisional_note"):
+            banner = f'<p class="banner" role="note">{esc(cfg["scores"]["provisional_note"])}</p>'
         full_title = esc(title) + ("" if pid == "home" else " | NEEC")
         head_data = ""
         if data is not None:

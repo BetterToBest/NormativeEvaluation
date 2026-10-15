@@ -351,8 +351,8 @@ run_all_checks.py -- 112 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [93] PASS  build_site.py --check: the public site docs/ equals what build_site.py generates from criteria.json, the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and site/ (decision 49.7)
-          site matches its sources: 77 files, scores not yet published
-          stdout == build_site_check_output.txt (md5 6abfe096)
+          site matches its sources: 77 files, scores published
+          stdout == build_site_check_output.txt (md5 fe5f3068)
           stderr == (empty) (md5 d41d8cd9)
 
 [94] PASS  build_site.py --check rejects a docs/ whose home page is replaced by another page (negative control; exit 1 expected)

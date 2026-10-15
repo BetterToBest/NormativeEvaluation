@@ -1,7 +1,7 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 65 (the accelerated groups and stage 3's generator) (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 66 (publish with the provisional notice) (2026-10-15). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
@@ -66,8 +66,8 @@ publish gate is not flipped, awaiting the owner (d49).** The stage 2 pass has no
   design paper changed).
 - **Harness:** v37, 112 checks (rescoring_s65.py, apply_pass_s65.py --check), byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and
   checked by `harness.yml` on 3.12.
-- **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
-  `scores.publish` false, decision 49.1); the v2 files exist and the site builds with them (d49 awaits the owner).
+- **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, v2.0 scores published with a provisional notice (decision 66.1; `site/config.json` `scores.publish` true,
+  `scores.provisional_note`) once the Session 66 pull request is merged. Remove the note when Report and Paper v2.0 are released.
 - **Provisional standing after the pass** (not for publication until the owner's go, d49). On the 26 criteria: CCO-PTF-CIP-SZH
   and Participatory Economics share first at 14.5; Integral 14.0; Nordic Social Democracy 13.5. On the 29 (with the 69 new
   units): CCO and PE 16.0, Integral 15.5, Nordic Social Democracy 15.0, Degrowth and Market Socialism 14.5; 7 entries Potentially
@@ -75,10 +75,9 @@ publish gate is not flipped, awaiting the owner (d49).** The stage 2 pass has no
 
 ## Next work, in order
 
-1. **Publish (decision 65.6, ledger d49; owner's go): Sonnet 5.5 at medium** (mechanical). Steps are in `NEEC_Project_Handoff_65.md`,
-   section 4: point `site/config.json` at the three v2 files and set `scores.publish` true, add a provisional notice to the
-   public pages, run `python3 build_site.py`, commit `docs/`, update the harness's site checks. Verified in a scratch copy: it builds.
-2. **Report v2.0 and Paper v2.0 (stage 4): Opus 5.5 at high** (judgment prose): Part I from the per-unit tables in the rescoring
+0. **Next session: Opus 5.5 at high** (Report and Paper v2.0 are judgment prose); then remove the provisional note from `site/config.json`.
+
+1. **Report v2.0 and Paper v2.0 (stage 4): Opus 5.5 at high** (judgment prose): Part I from the per-unit tables in the rescoring
    records (decision 52.8), the Paper disclosing the simulation overhaul (52.9), that Integral was read on its white paper of
    December 2025, and the accelerated groups' limits (open items below). Then the PDF from a committed build script (stage 5; Sonnet 5.5).
 3. **Open items from the accelerated pass** (none changes a verdict as recorded; each is a challenge route): (a) the 17 designs and
