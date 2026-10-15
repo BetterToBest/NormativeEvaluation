@@ -1,7 +1,7 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 61 (group 2.8, C4.3 read) (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 62 (C3.1 evidence cache built; no reading) (2026-10-15). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
@@ -53,10 +53,11 @@ first place stays shared; Status Quo gains a failure, no tier changes. The next 
 
 ## Next work, in order
 
-1. **C3.1 Crisis Response Capacity's evidence cache, in a Sonnet 5.5 session at medium** (mechanical: C3.1 is class I,
-   16 units in play, 3 tier-capable, and its readings need the cache first, as Session 59 built C1.4's;
-   `evidence_cache_s59.py` is the model). Then **group 2.9, C3.1 read as class I, in an Opus 5.5 session at high**
-   (`rescoring_s60.py` is the model for a class I group; `rescoring_s61.py` for one reading national surveys).
+1. **Group 2.9, C3.1 read as class I, in an Opus 5.5 session at high** (judgment group: 16 units in play, 3
+   tier-capable; xhigh only if the readings are contested). The evidence cache is built (Session 62,
+   `evidence_cache_s62.py`, `evidence_cache/C3.1/`; the ILO database was unreachable, HTTP 403, so clause 3 rests on the
+   World Bank coverage page and the designs' text). `rescoring_s60.py` is the model for a class I group;
+   `rescoring_s61.py` for one reading national surveys. Next after it: C1.1's evidence cache, Sonnet 5.5 at medium.
 2. **Then the groups in the triage's order** (rerun after each group): C3.1, C1.1, C4.2, C4.1, C2.1, C2.3, C2.4, C4.4,
    C4.5, C2.5, C3.4. The class I groups (C3.1, C1.1, C2.1, C2.4, C2.3) need their evidence cache first, in a Sonnet 5.5
    session at medium. Groups already planned partly (C4.4's 17, decision 48.3; C4.1's four part (b6) units on its debt
