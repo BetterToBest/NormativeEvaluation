@@ -1,0 +1,245 @@
+{
+ "built_by": "Session 62",
+ "criterion": "C3.1",
+ "sources": {
+  "eurostat_gov_esms": {
+   "chars": 12000,
+   "clause": "scaling clause",
+   "extract_md5": "6c30b00c1afc3c6a4db5ee653b3d5af0",
+   "file": "eurostat_gov_esms.txt",
+   "http": "200",
+   "raw_md5": "ed68f925811d938af953e22f2578eec3",
+   "title": "Eurostat, government expenditure by function, metadata (social benefits, D.62)",
+   "url": "https://ec.europa.eu/eurostat/cache/metadata/en/gov_10a_exp_esms.htm"
+  },
+  "imf_fiscal_db": {
+   "chars": 4124,
+   "clause": "response-time clause",
+   "extract_md5": "cd2f91706a6d37a3109fd5c54a9eee62",
+   "file": "imf_fiscal_db.txt",
+   "http": "200",
+   "raw_md5": "729499782e9759b99bd6701b433f19d7",
+   "title": "IMF, Fiscal Policies Database in Response to COVID-19 (country fiscal measures)",
+   "url": "https://www.imf.org/en/Topics/imf-and-covid19/Fiscal-Policies-Database-in-Response-to-COVID-19"
+  },
+  "un_sdg_131_metadata": {
+   "chars": 6402,
+   "clause": "coverage clause",
+   "extract_md5": "3c852295444d691aefeaa180fa617e6b",
+   "file": "un_sdg_131_metadata.txt",
+   "http": "200",
+   "raw_md5": "3225473f77913829c23cbc9ea89eb0d1",
+   "title": "UN SDG indicator 1.3.1 metadata (population covered by social protection floors/systems)",
+   "url": "https://unstats.un.org/sdgs/metadata/?Text=&Goal=1&Target=1.3"
+  },
+  "un_sna2008": {
+   "chars": 64,
+   "clause": "scaling clause",
+   "extract_md5": "15b9d37f62403f6813cfe83b60d3bb0d",
+   "file": "un_sna2008.txt",
+   "http": "200",
+   "raw_md5": "d91ef338c5516c8801b2d4310e7210e1",
+   "title": "UN Statistics Division, System of National Accounts 2008 (item D.62, social benefits other than in kind)",
+   "url": "https://unstats.un.org/unsd/nationalaccount/sna2008.asp"
+  },
+  "wb_final_consumption": {
+   "chars": 2904,
+   "clause": "scaling clause",
+   "extract_md5": "48f9b80a64e8bfafe664a887e445ec7c",
+   "file": "wb_final_consumption.txt",
+   "http": "200",
+   "raw_md5": "978832cc421932f89b3f24265ad4f757",
+   "title": "World Bank, final consumption expenditure (current US$), national accounts",
+   "url": "https://data.worldbank.org/indicator/NE.CON.TOTL.CD"
+  },
+  "wb_sp_coverage": {
+   "chars": 2838,
+   "clause": "coverage clause",
+   "extract_md5": "bc915f477b6e540807ac3eefec5ebe4b",
+   "file": "wb_sp_coverage.txt",
+   "http": "200",
+   "raw_md5": "9c58d20d2cf52d334bf1b7e59f38645d",
+   "title": "World Bank, coverage of social protection and labor programs (% of population)",
+   "url": "https://data.worldbank.org/indicator/per_allsp.cov_pop_tot"
+  }
+ },
+ "units": {
+  "CN": {
+   "chars": 1328,
+   "cites": [
+    "China Leadership Monitor",
+    "November 2008",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_StateCapitalism_China_scoring_scratch.md",
+   "line": 503,
+   "md5": "d25258c4150b79cc93f4e62ef5fe3744",
+   "score": 0.5
+  },
+  "CPS": {
+   "chars": 235,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 496,
+   "md5": "f61ae6864953a40c5965eed0bd542e23",
+   "score": 0.5
+  },
+  "DE": {
+   "chars": 1047,
+   "cites": [
+    "April 2020",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_DoughnutEconomics_scoring_scratch.md",
+   "line": 383,
+   "md5": "1a48aa9e46d8b7e1aa092a619652013e",
+   "score": 0.5
+  },
+  "FALC": {
+   "chars": 285,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 1126,
+   "md5": "a95a91608974943fe889e601192f31d3",
+   "score": 0.5
+  },
+  "GEO": {
+   "chars": 1275,
+   "cites": [
+    "Rationale:",
+    "Score Justification:",
+    "scale up",
+    "stability"
+   ],
+   "file": "NEEC_Georgism_LVT_scoring_scratch.md",
+   "line": 339,
+   "md5": "c600023bb9b7a5430715314ba2349c38",
+   "score": 0.5
+  },
+  "IF": {
+   "chars": 1359,
+   "cites": [],
+   "file": "NEEC_IslamicFinance_scoring_scratch.md",
+   "line": 383,
+   "md5": "58f1698104b1824770e6773a773140aa",
+   "score": 0.5
+  },
+  "LM": {
+   "chars": 246,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 676,
+   "md5": "4544a7ee4d5747ff90982d0bdf54d4cd",
+   "score": 0.0
+  },
+  "MC": {
+   "chars": 2232,
+   "cites": [
+    "Rationale:",
+    "Score Justification:",
+    "countercyclically",
+    "resilient"
+   ],
+   "file": "NEEC_MutualCredit_LETS_scoring_scratch.md",
+   "line": 366,
+   "md5": "1afa6a8842ad20d85933783831b8c5db",
+   "score": 0.5
+  },
+  "MS": {
+   "chars": 274,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 586,
+   "md5": "6fecd99891569f6fd2c541c8b321fc2e",
+   "score": 0.5
+  },
+  "OS": {
+   "chars": 1199,
+   "cites": [
+    "Score: 0.5. Scope scenario, not a flag (decision D18(b)):"
+   ],
+   "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+   "line": 416,
+   "md5": "2e4460d6f48e887c8857137c834abf3b",
+   "score": 0.5
+  },
+  "QA": {
+   "chars": 1826,
+   "cites": [
+    "Affairs, 2026)",
+    "Coverage is uneven.",
+    "December 2025)",
+    "First-quarter 2026",
+    "Frontiers in Sustainable Food Systems",
+    "June 2026)",
+    "March 2020",
+    "Qatar-specific 2026",
+    "Rationale:",
+    "Responses are discretionary, not automatic.",
+    "Score Justification:"
+   ],
+   "file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+   "line": 539,
+   "md5": "da14b627fecef862468af1587eaa726f",
+   "score": 0.5
+  },
+  "SC": {
+   "chars": 263,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 1036,
+   "md5": "1dd399c78e8fee9c65ad21f9337c1157",
+   "score": 0.5
+  },
+  "SG": {
+   "chars": 1350,
+   "cites": [
+    "IMF, 2021)",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+   "line": 477,
+   "md5": "652974d481d55ce335ef533c73158664",
+   "score": 0.5
+  },
+  "SQ": {
+   "chars": 302,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 318,
+   "md5": "dd0deadb362c99cdd75020224ff33c10",
+   "score": 0.0
+  },
+  "SWF": {
+   "chars": 1420,
+   "cites": [
+    "May 2020",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+   "line": 387,
+   "md5": "219e0fbce9a73bc294a8b45a1d764fef",
+   "score": 0.5
+  },
+  "UBS": {
+   "chars": 1538,
+   "cites": [
+    "March 2020",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_UniversalBasicServices_scoring_scratch.md",
+   "line": 427,
+   "md5": "b9c4a6b312414cd0528e114a383ad054",
+   "score": 0.5
+  }
+ }
+}
