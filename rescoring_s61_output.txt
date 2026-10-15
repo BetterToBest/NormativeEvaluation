@@ -1,0 +1,82 @@
+NEEC rescoring pass, stage 2, group 2.8: C4.3 Group Equity, class M (NEEC_Rescoring_s61.md)
+inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, pass_common.py and the 19 parts before this group, 3 files of evidence_cache/C4.3/, the scoring documents holding the units' rationales, NEEC_Rescoring_s61.md
+
+[1] THE GROUP
+  PASS one unit per entry on C4.3 not yet re-estimated, 16 in all; NSD, CPS, MMT, UBI, DG, PE, CCO were re-estimated before this group ((b8)) and are not re-read
+  PASS C4.3 is class M with two clauses in v2.0, under the scope 'on each declared axis, non-citizen residents included', measured between the least and most advantaged groups
+  PASS published scores of the 16: 1.0 x0, 0.5 x13, 0.0 x3; this group raises 0, lowers 1 (SQ) and holds 15
+  PASS 4 units are 0.0, each on a stated whole-criterion reason (protocol 2.1): the three published 0.0s hold (LM, CN, QA) and Status Quo falls to 0.0
+  PASS no unit clears either clause, so none is 1.0; after this group no entry is at 1.0 on C4.3
+  PASS 4 clauses short, on national household surveys (SG, SQ); 28 not shown
+
+[2] THE CACHE (evidence_cache/C4.3/) AND THE PUBLISHED RATIONALES
+  PASS us_census_h05_extract.txt: md5 7d541a44, 4 passage(s) quoted found
+  PASS sg_ghs2025_table6_1.txt: md5 d709c07c, 2 passage(s) quoted found
+  PASS integral_wp_v01_c43_extract.txt: md5 2292b6fb, 5 passage(s) quoted found
+  PASS each of the 16 published rationales is at the line held here, headed with its published score
+
+[3] THE GAPS THE READINGS QUOTE (recomputed from the cache)
+  PASS United States, Black against Asian households (least and most advantaged): 44.8% in 2002, 52.5% in 2025; three-year means -0.5, trend +0.2 per five years
+  PASS United States, Black against white non-Hispanic: 40.2% to 37.9% (-2.3), trend -2.3; between 34.8% and 44.7% in 53 editions since 1972
+  PASS Status Quo's clauses quote the recomputed figures
+  PASS Singapore: the twelve medians held are Table 6.1's; Malay against Indian households 32.1% (2020) to 35.9% (2025); per member, against Chinese, 41.7% to 43.6%: both widen
+  PASS Qatar: the 2012/13 survey's means give a gap of 66.4% between non-Qatari and Qatari households
+
+[4] FLAGS
+  PASS flags: SQ toward 0.5 (reading 3.3), SC toward 0.0 (reading 3.6), GEO toward 0.0 (reading 3.6), MC toward 0.0 (reading 3.6), SWF toward 0.0 (reading 3.6), CN toward 0.5 (reading 3.5), SG toward 0.0 (reading 3.4), IF toward 0.0 (reading 3.6), OS toward 0.0 (reading 3.6)
+
+[5] THE SHARED MODULE'S CHECKS (records, the rule, consequences, ledger, dominance, anchors)
+  PASS every unit has one status per v2.0 clause, each with its estimate and its source
+  PASS every verdict follows D28 (1.0 only if every clause is cleared or moot, otherwise 0.5), and each 0.0 rests on its stated whole-criterion reason (protocol 2.1) with no clause cleared
+  PASS each entry's changes, part by part, sum to the difference between its published total and its total now
+  PASS NEEC_Rescoring_s61.md contains all 4 generated tables
+
+[6] THE RECORD'S UNIT TABLES (generated here; NEEC_Rescoring_s61.md must contain them verbatim)
+  PASS NEEC_Rescoring_s61.md contains all 21 generated tables
+
+| Entry | Published | Rate | Convergence | Verdict | Flag |
+|---|---:|---|---|---:|---|
+| SQ | 0.5 | short | short | 0.0 | toward 0.5 |
+| MS | 0.5 | not shown | not shown | 0.5 |  |
+| LM | 0.0 | not shown | not shown | 0.0 |  |
+| SC | 0.5 | not shown | not shown | 0.5 | toward 0.0 |
+| FALC | 0.5 | not shown | not shown | 0.5 |  |
+| INT | 0.5 | not shown | not shown | 0.5 |  |
+| GEO | 0.5 | not shown | not shown | 0.5 | toward 0.0 |
+| MC | 0.5 | not shown | not shown | 0.5 | toward 0.0 |
+| DE | 0.5 | not shown | not shown | 0.5 |  |
+| UBS | 0.5 | not shown | not shown | 0.5 |  |
+| SWF | 0.5 | not shown | not shown | 0.5 | toward 0.0 |
+| CN | 0.0 | not shown | not shown | 0.0 | toward 0.5 |
+| SG | 0.5 | short | short | 0.5 | toward 0.0 |
+| QA | 0.0 | not shown | not shown | 0.0 |  |
+| IF | 0.5 | not shown | not shown | 0.5 | toward 0.0 |
+| OS | 0.5 | not shown | not shown | 0.5 | toward 0.0 |
+
+| Entry | Published (rank) | After group 2.7 (rank) | After group 2.8 (rank) | Change here | Failures | Tier |
+|---|---:|---:|---:|---:|---:|---|
+| CCO | 24.5 (1) | 14.5 (1) | 14.5 (1) | 0.0 | 0 | Potentially Adequate |
+| PE | 20.5 (2) | 14.0 (3) | 14.0 (3) | 0.0 | 1 | Potentially Adequate |
+| NSD | 19.5 (3) | 13.5 (4) | 13.5 (4) | 0.0 | 1 | Potentially Adequate |
+| INT | 19.5 (3) | 14.5 (1) | 14.5 (1) | 0.0 | 2 | Potentially Adequate |
+| DG | 19.0 (5) | 13.0 (5) | 13.0 (5) | 0.0 | 2 | Potentially Adequate |
+| MS | 16.5 (6) | 13.0 (5) | 13.0 (5) | 0.0 | 2 | Potentially Adequate |
+| MMT | 15.5 (7) | 11.0 (14) | 11.0 (14) | 0.0 | 4 | Partially Adequate |
+| UBI | 14.5 (8) | 10.5 (15) | 10.5 (15) | 0.0 | 7 | Structurally Inadequate |
+| MC | 14.5 (8) | 12.5 (9) | 12.5 (9) | 0.0 | 3 | Partially Adequate |
+| OS | 14.5 (8) | 13.0 (5) | 13.0 (5) | 0.0 | 3 | Partially Adequate |
+| SWF | 14.0 (11) | 13.0 (5) | 13.0 (5) | 0.0 | 3 | Partially Adequate |
+| SG | 14.0 (11) | 11.5 (11) | 11.5 (11) | 0.0 | 4 | Partially Adequate |
+| GEO | 13.5 (13) | 12.5 (9) | 12.5 (9) | 0.0 | 2 | Potentially Adequate |
+| UBS | 13.5 (13) | 11.5 (11) | 11.5 (11) | 0.0 | 4 | Partially Adequate |
+| IF | 13.5 (13) | 11.5 (11) | 11.5 (11) | 0.0 | 5 | Partially Adequate |
+| FALC | 13.0 (16) | 9.0 (18) | 9.0 (17) | 0.0 | 10 | Structurally Inadequate |
+| DE | 11.5 (17) | 9.0 (18) | 9.0 (17) | 0.0 | 8 | Structurally Inadequate |
+| SQ | 10.5 (18) | 9.5 (16) | 9.0 (17) | -0.5 | 10 | Structurally Inadequate |
+| CPS | 10.0 (19) | 7.5 (22) | 7.5 (22) | 0.0 | 12 | Structurally Inadequate |
+| SC | 10.0 (19) | 9.0 (18) | 9.0 (17) | 0.0 | 8 | Structurally Inadequate |
+| CN | 10.0 (19) | 9.5 (16) | 9.5 (16) | 0.0 | 8 | Structurally Inadequate |
+| QA | 9.0 (22) | 8.5 (21) | 8.5 (21) | 0.0 | 9 | Structurally Inadequate |
+| LM | 8.0 (23) | 7.0 (23) | 7.0 (23) | 0.0 | 13 | Structurally Inadequate |
+
+RESCORING STAGE 2, GROUP 2.8, COMPUTED.
