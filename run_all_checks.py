@@ -250,7 +250,13 @@ stage 2's group 2.9, the third class I group: the 16 units of C3.1 not yet re-es
 data files the group added to the evidence cache (and Session 62's index) checked by digest and every passage quoted found
 there, every figure the readings quote recomputed from them, each published rationale located and compared with the
 index, and the consequences cumulatively with every part before it, with NEEC_Rescoring_s63.md checked against its
-generated tables; the Session 52 checks now load group 2.9 as a part of the pass: 109 checks.
+generated tables; the Session 52 checks now load group 2.9 as a part of the pass: 109 checks. Version 36 (Session 64) adds
+rescoring_s64.py, stage 2's group 2.10: the 16 units of C4.2 not yet re-estimated, re-read as class M on the four clauses
+v2.0 names (consumption-based carbon, the Red List Index, footprint against biocapacity, the downscaled boundaries), the
+two data files the group added to the evidence cache checked by digest and the rows quoted found there, every rate and index
+change the readings quote recomputed from them, each published rationale located, and the consequences cumulatively with
+every part before it, with NEEC_Rescoring_s64.md checked against its generated tables; the Session 52 checks now load group
+2.10 as a part of the pass: 110 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1326,11 +1332,29 @@ S63_CHECKS = [
          stdout="rescoring_s63_output.txt", stderr=EMPTY),
 ]
 
+# Session 64: group 2.10, C4.2 read as class M, on the shared module. pass_common.PARTS now includes it, so the Session
+# 52 checks load its files too. It reads the two data files it added to the evidence cache and the scoring documents
+# holding the units' rationales, not the network.
+S64_FILES = {**S63_FILES, **{k: k for k in ("rescoring_s64.py", "NEEC_Rescoring_s64.md")},
+             **{"evidence_cache/C4.2/" + k: "evidence_cache/C4.2/" + k
+                for k in ("owid_gcb_consumption_co2.csv", "owid_iucn_red_list_index.csv")}}
+for _c in S52_CHECKS:
+    _c["files"] = S64_FILES
+S64_CHECKS = [
+    dict(name="rescoring_s64.py: rescoring pass stage 2, group 2.10, C4.2 Ecological Compliance re-read as class M (the "
+              "16 units not yet re-estimated): the evidence cache's two data files by digest and the rows quoted, every "
+              "rate and index change quoted recomputed from the cache, each published rationale located, the rule with "
+              "0.0 on a stated whole-criterion reason (53.2, 64.2), consequences cumulatively with every part before "
+              "it; no corpus file changed",
+         cmd=["python", "rescoring_s64.py"], files=S64_FILES,
+         stdout="rescoring_s64_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS)
 
 
 def md5(data):

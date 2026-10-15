@@ -1,7 +1,7 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 63 (group 2.9, C3.1 read) (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 64 (group 2.10, C4.2 read) (2026-10-15). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
@@ -36,7 +36,16 @@ first place stays shared; Status Quo gains a failure, no tier changes. **Group 2
 the ILO's SDG 1.3.1 through the UN SDG API): no unit clears all three clauses, so none is 1.0; Status Quo rises from 0.0
 to 0.5 (a correction: US benefits rose 35.5% in 2020 against a 2.1% fall in real GDP, the CARES Act was signed within a
 week of the claims jump, coverage is 78.8%; flagged toward 0.0); 15 hold, Libertarian Minarchism at 0.0; Qatar
-(coverage 4.1%) and Doughnut Economics are flagged toward 0.0; no tier changes. The next group is named below.
+(coverage 4.1%) and Doughnut Economics are flagged toward 0.0; no tier changes. **Group 2.10, C4.2 Ecological Compliance re-read as class M, done (Session 64, `NEEC_Rescoring_s64.md`)**,
+on two data files Session 64 added to the cache (the Global Carbon Budget's consumption-based accounts and the IUCN Red List
+Index, as Our World in Data republishes them): **nothing moves**. All 16 hold, eight at 0.5 and eight at 0.0; no unit clears
+all four clauses, so none is 1.0. The four configured economies are short on carbon (the United States cuts
+consumption-based emissions 0.7% a year over 2019-2023 against a bar of 3.8%; China and Qatar raise them; Singapore's sign
+depends on the window) and on biodiversity; Nordic Social Democracy clears clause 2 (the index unchanged 2015-2025 in
+Denmark, Finland, Norway, Sweden), the first C4.2 clause cleared in the pass, and is short on carbon (Denmark and Sweden);
+the footprint and boundary clauses are not shown for any unit (the footprint accounts were unreachable). Six flags, two of
+which could change a tier (Market Socialism toward 0.0, Sovereign Wealth Fund Statism toward 0.5); no tier or rank changes.
+The next group is named below.
 - **Landing:** by pull request and the owner's merge (W9, decision 52.3). The session opens the pull request; `harness.yml`
   checks it; the owner merges; `land-session.yml` reruns the checks on `main` and tags each `NEEC Session <n>` commit.
 - **Criteria:** v2.0, 29 criteria in `criteria.json`; protocol draft.9. Published scores remain on 26 criteria until
@@ -46,7 +55,7 @@ week of the claims jump, coverage is 78.8%; flagged toward 0.0); 15 hold, Libert
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
-- **Harness:** v35, 109 checks, byte-identical in the container (Python 3.13 in Sessions 56 to 63; 3.11 before) and
+- **Harness:** v36, 110 checks, byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and
   checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
   `scores.publish` false, decision 49.1).
@@ -58,17 +67,19 @@ week of the claims jump, coverage is 78.8%; flagged toward 0.0); 15 hold, Libert
 
 ## Next work, in order
 
-1. **Group 2.10, C4.2 Ecological Compliance read as class M, in an Opus 5.5 session at high** (a judgment re-read, no
-   evidence cache needed: 16 units in play, 3 tier-capable; xhigh only if the readings turn out contested). Session 63 ran
-   on Sonnet 5.5, not on the Opus 5.5 at high the routing assigns judgment groups, so the owner may wish to have group
-   2.9's judgment calls (Status Quo's correction, the Qatar and Doughnut Economics flags) read again in an Opus session;
-   d39 to d41 are in the ledger. After C4.2 the triage's order is C1.1 (class I; its evidence cache first, in a Sonnet 5.5
-   session at medium), C4.1, C2.1, C2.4, C2.3, C4.4, C4.5, C2.5, C3.4.
+1. **Session 65: Sonnet 5.5 at medium builds C1.1's evidence cache** (mechanical: the sources of C1.1 Poverty Elimination
+   Capacity, class I, 14 units in play, 3 tier-capable, which the triage now puts first; the configurations' baseline
+   poverty on the Societal Poverty Line is the figure group 2.7 did not need). Reading C1.1 follows in an Opus 5.5 session
+   at high. If the owner would rather stay on Opus, the group needing no cache is C4.1 Intergenerational Justice (class M,
+   15 units in play, 3 tier-capable; Opus 5.5 at high). Session 64 ran on Sonnet 5.5, not on the Opus 5.5 at high the routing
+   assigns judgment groups, so the owner may wish to have group 2.10's judgment calls read again in an Opus session (d42
+   and d43 are in the ledger; the owner accepted group 2.9's, d39 to d41). The triage's order after C1.1: C4.1, C2.1, C2.4, C2.3, C4.4,
+   C4.5, C2.5, C3.4.
 2. **Then the groups in the triage's order** (rerun after each group). The class I groups left (C1.1, C2.1, C2.4, C2.3)
    need their evidence cache first, in a Sonnet 5.5 session at medium. Groups already planned partly (C4.4's 17, decision
    48.3; C4.1's four part (b6) units on its debt clause) are read within their criterion's group. `rescoring_s51.py`'s unit
-   supersedes part (b3)'s C1.1. Write each group as groups 2.2 to 2.9 were: a script on `pass_common.py` holding the
-   readings (`U(...)`), its group-specific checks and generated tables (`rescoring_s58.py` is the model for a class M
+   supersedes part (b3)'s C1.1. Write each group as groups 2.2 to 2.10 were: a script on `pass_common.py` holding the
+   readings (`U(...)`), its group-specific checks and generated tables (`rescoring_s64.py` and `rescoring_s58.py` are the models for a class M
    criterion, `rescoring_s63.py` for a class I one that reads national figures), a record, `PARTS` extended, the harness
    given the new files (and `pass_common_selftest_output.txt`, `triage_s52_output.txt` and the README recaptured). Do not
    touch earlier scripts or their captures. C1.1's group reads the configurations' baseline poverty on the Societal
@@ -87,6 +98,23 @@ week of the claims jump, coverage is 78.8%; flagged toward 0.0); 15 hold, Libert
    C3.5's 0.0 band takes its examples from the units at 0.0 after group 2.4; C5.2's bands take theirs from the units
    after group 2.6), stage 4 (Report and Paper v2.0; the Paper discloses the simulation overhaul, decision 52.9, and
    that Integral was read on its white paper of December 2025), stage 5 (Paper PDF from a committed build script).
+
+## Decided (Session 64, under the delegation; `NEEC_Rescoring_s64.md`, section 3)
+
+From the owner (ledger, read at the start; recorded first): **64.7** d39, d40 and d41 answered "Accept" with their defaults
+(2026-10-15): decisions 63.1 to 63.4 stand as owner-confirmed (clause 2 counts any increase; Status Quo's C3.1 is 0.5; Qatar
+and Doughnut Economics held at 0.5, flagged toward 0.0); no score changes. d38 still paused. Under the delegation: **64.1** a method choice: C4.2's clause 1 is the
+compound annual rate of consumption-based CO2 on the Global Carbon Budget's accounts, read on three windows (2019 to 2023,
+2013 to 2023, 2007 to 2023) and short only where every window falls short; clause 2 is the Red List Index over 2015 to
+2025 at its two decimals (ledger d42). **64.2** a method choice: 0.0 and 0.5 on C4.2 are drawn by protocol 2.1's three
+conditions read on the measure, as 61.1 did for C4.3; a mechanism bearing on the criterion without fixing its direction is
+0.5 with a flag. **64.3** the four configured economies' 0.0s held (Status Quo, China, Singapore, Qatar); the published
+flags toward 0.5 for China and Singapore kept. **64.4** Nordic Social Democracy held at 0.5: clause 2 cleared, clause 1
+short (ledger d43). **64.5** the seven designs and mechanisms at 0.5 held; Market Socialism, Universal Basic Income and
+Centrally Planned Socialism flagged toward 0.0. **64.6** Libertarian Minarchism, Stakeholder Capitalism, Islamic Finance and
+Sovereign Wealth Fund Statism held at 0.0; the last flagged toward 0.5 (ledger d43). No score changes. Two flags could
+change a tier (Market Socialism toward 0.0; Sovereign Wealth Fund Statism toward 0.5). Session 64 ran on Sonnet 5.5, not
+the routed Opus 5.5 at high (disclosed in the record's section 8).
 
 ## Decided (Session 63, under the delegation; `NEEC_Rescoring_s63.md`, section 3)
 
@@ -194,26 +222,26 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 The owner answered every earlier item in the ledger (decisions 57.1, 58.1, 58.2). Under decision 57.2 only
 CCO-PTF-CIP-SZH's score changes wait on the owner; other entries' changes are decided under the delegation. One item is
-open, paused at the owner's request (S57-3.3); it must be settled before stage 3, and nothing else waits on it. The three
-items of Session 63 are the scorer's own delegated decisions, put in the ledger for the owner to confirm or reverse; none blocks.
+open, paused at the owner's request (S57-3.3); it must be settled before stage 3, and nothing else waits on it. The two
+items of Session 64 (d42, d43) are the scorer's own delegated decisions, put in the ledger for the owner to confirm or reverse; none blocks.
 
 | ID | Item | Recorded in | Ledger |
 |---|---|---|---|
 | S57-3.3 | CCO-PTF-CIP-SZH's other eight simulation units hold on v5.6.0 (C1.2a and C3.4 flagged toward 1.0; C3.4's clause 4 now short). **Paused by the owner** (decision 58.2) until all of the design's readings are in; Next work, item 5 | `NEEC_Rescoring_s57.md` 3.3 to 3.12 | d38 |
-| S63-3.1 | What C3.1's scaling clause counts: any increase in benefits, legislated or automatic (decision 63.1; delegated, may be reversed) | NEEC_Rescoring_s63.md, 3.1 | d39 |
-| S63-3.2 | Status Quo's C3.1 0.0 → 0.5, flagged toward 0.0 (decision 63.2; a correction under the delegation) | NEEC_Rescoring_s63.md, 3.2 | d40 |
-| S63-3.4 | Qatar's and Doughnut Economics' C3.1 held at 0.5, each flagged toward 0.0 (decisions 63.3, 63.4) | NEEC_Rescoring_s63.md, 3.3, 3.4 | d41 |
+| S64-3.1 | How C4.2's clauses are read: the carbon rate on three windows, the Red List Index at its two decimals, 0.0 against 0.5 by protocol 2.1 (decisions 64.1, 64.2; delegated, may be reversed) | NEEC_Rescoring_s64.md, 3.1, 3.2 | d42 |
+| S64-3.5 | All 16 C4.2 units hold; Market Socialism flagged toward 0.0 and Sovereign Wealth Fund Statism toward 0.5, each able to change a tier (decisions 64.3 to 64.6) | NEEC_Rescoring_s64.md, 3.3 to 3.7 | d43 |
 
-S57-3.9 (ledger d37) was answered: the owner kept C3.2 at 1.0 (decision 58.1).
+S57-3.9 (ledger d37) was answered: the owner kept C3.2 at 1.0 (decision 58.1). S63-3.1, S63-3.2 and S63-3.4 (d39 to d41)
+were answered: accepted as recorded (decision 64.7).
 
 **The ledger.** Every open item above is also a numbered decision in the owner's Project ledger
 (https://claude.ai/artifact/KMdxWQ5KAefQVFxQA236pV, project "NEEC Research"; its id is in the Ledger column), written in
 plain words with a default first, the other options after it, and a Reference entry (code = the ID) linking to the
 extended description in the record. Ledger rule for sessions: `CLAUDE.md`, "The ledger", with decision 57.2.
 
-Method choices Sessions 52 to 63 made that the criteria record does not yet carry (optional, not corrections; carried
+Method choices Sessions 52 to 64 made that the criteria record does not yet carry (optional, not corrections; carried
 into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5, 57.6, 57.8, 58.3, 58.8, 60.1, 60.3
-to 60.5, 61.1, 61.3 to 61.5, 63.1, 63.3 to 63.5 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2, 61.2 and 63.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
+to 60.5, 61.1, 61.3 to 61.5, 63.1, 63.3 to 63.5, 64.1 to 64.6 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2, 61.2 and 63.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
 key (Handoff 52, section 4).
 
 ## Model routing (decision 52.4)
