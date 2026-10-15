@@ -115,7 +115,8 @@
       "short": "Libertarian Minarchism"
     },
     "MMT": {
-      "short": "MMT + Job Guarantee"
+      "short": "MMT + Job Guarantee",
+      "note": "MMT is Modern Monetary Theory. The Job Guarantee is a public employment offer at a fixed wage."
     },
     "UBI": {
       "short": "Universal Basic Income"
@@ -133,16 +134,19 @@
       "short": "Participatory Economics"
     },
     "CCO": {
-      "short": "CCO-PTF-CIP-SZH"
+      "short": "CCO-PTF-CIP-SZH",
+      "note": "CCO-PTF-CIP-SZH combines four components: CCO is Creative Currency Octaves, PTF is Public Trust Foundations, CIP is Citizens Internet Portal, and SZH is Social Zone Harmonization. Also referred to in the literature as Compassionism."
     },
     "INT": {
       "short": "Integral"
     },
     "GEO": {
-      "short": "Georgism / LVT"
+      "short": "Georgism / LVT",
+      "note": "LVT is Land Value Tax, a levy on the value of land itself rather than on buildings or labour."
     },
     "MC": {
-      "short": "Mutual Credit / LETS"
+      "short": "Mutual Credit / LETS",
+      "note": "LETS is Local Exchange Trading Systems, community networks that record members' trades in a shared ledger of credits."
     },
     "DE": {
       "short": "Doughnut Economics"
@@ -157,7 +161,8 @@
       "short": "State Capitalism / China"
     },
     "SG": {
-      "short": "State Capitalism / Singapore"
+      "short": "State Capitalism / Singapore",
+      "note": "GLC is Government-Linked Company, a firm in which the state holds a controlling stake."
     },
     "QA": {
       "short": "State Capitalism / Qatar"
