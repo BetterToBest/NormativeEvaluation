@@ -212,6 +212,16 @@ name the simulation (C2.5, C3.5, C4.1 to C4.4, C5.2, C5.4) were checked against 
 model now computes (it still has no resource flows, emissions, public debt, group income gaps, power distribution or
 political survival; C2.5's exit liquidity follows the same liquid-share rule for Acre Equity as when it was read), so none reopens.
 
+**3.13 The group's decisions, numbered.** 57.5 the simulation pin moves to `d10ed6e` (v5.6.0), the Research Hub's stays
+`8e8a6ba` (3.2); 57.6 a clause that clears only at a backing share the design's sources do not establish is not shown,
+and both ends of the sweep are reported (3.3; a method choice); 57.7 CCO-PTF-CIP-SZH's C3.2 1.0 → 0.5, flagged toward
+1.0 (3.9; a correction, awaiting the owner, ledger S57-3.9); 57.8 C3.4's adjustment run repeated on a collapse test fixed
+before the run: clause 4 short, the unit held at 0.5 and flagged toward 1.0 (3.11; a method choice); 57.9 C1.1, C1.2a
+(flagged toward 1.0), C1.2b, C1.3, C1.4, C3.3 and C5.3 held on v5.6.0, no reopening condition but C3.4's met (3.4 to
+3.8, 3.10, 3.12; ledger S57-3.3, for the owner's information); 57.10 the shared module and the triage name a shared first
+place as shared, and the module's self-test allows a part whose units a later part has all superseded (harness v31; no
+earlier output changes but the self-test's list of inputs and parts).
+
 ## 4. The units
 
 ### 4.1 Summary (generated)

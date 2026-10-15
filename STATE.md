@@ -1,8 +1,8 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 56 (2026-10-14). It consolidates the standing notes and
-open items of Handoffs 43 to 56, which no longer need to be read for them.
+changed, this file says what holds. Last rewritten by Session 57 (2026-10-15). It consolidates the standing notes and
+open items of Handoffs 43 to 57, which no longer need to be read for them.
 
 ## Position
 
@@ -14,32 +14,41 @@ open items of Handoffs 43 to 56, which no longer need to be read for them.
   changes. **Group 2.4, C3.5 read as class I, done (Session 56, `NEEC_Rescoring_s56.md`)**, the first class I group:
   the 20 units not yet re-estimated read on v2.0's indicators; no unit can reach 1.0 (clause 2 is shown for no entry);
   four rise from 0.0 to 0.5 (Nordic Social Democracy, Libertarian Minarchism, Stakeholder Capitalism, Qatar), Universal
-  Basic Services falls from 0.5 to 0.0; five failure counts change, no tier. The next group is named below.
+  Basic Services falls from 0.5 to 0.0; five failure counts change, no tier. **Group 2.5, CCO-PTF-CIP-SZH's nine
+  simulation units re-read on the overhauled simulation, v5.6.0, done (Session 57, `NEEC_Rescoring_s57.md`;** decision
+  57.3, the owner's message): C3.2 falls from 1.0 to 0.5 (the model's main reading shows the programme raising prices
+  50.8% a year; under 3% only at full backing), **awaiting the owner (S57-3.9)**; C1.1, C1.2a, C1.2b, C1.3, C1.4, C3.3,
+  C3.4 and C5.3 hold. No failure count or tier changes. The next group is named below.
 - **Landing:** by pull request and the owner's merge (W9, decision 52.3). The session opens the pull request; `harness.yml`
   checks it; the owner merges; `land-session.yml` reruns the checks on `main` and tags each `NEEC Session <n>` commit.
 - **Criteria:** v2.0, 29 criteria in `criteria.json`; protocol draft.9. Published scores remain on 26 criteria until
   stage 3 applies the pass by generator.
-- **Simulation pin, frozen for v2.0 (decision 52.9):** `BetterToBest/compassionism-simulation` at `5a7a7b1` (v4.20),
-  `harness.js` md5 `fe6fa4a3`, `index.html` md5 `c333b632`. **Research Hub pin:** `8e8a6ba`.
-- **Harness:** v30, 104 checks, byte-identical in the container (Python 3.13 in Session 56; 3.11 before) and checked by
-  `harness.yml` on 3.12.
+- **Simulation pin (decisions 57.3, 57.5; 52.9's freeze superseded):** `BetterToBest/compassionism-simulation` at
+  `d10ed6e` (v5.6.0), `harness.js` md5 `84be3bc9`, `index.html` md5 `2e1cc8c7`; its engine is the v5.6 release's.
+  Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
+  commits move only the simulation's pages; no design paper changed).
+- **Harness:** v31, 105 checks, byte-identical in the container (Python 3.13 in Sessions 56 and 57; 3.11 before) and
+  checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
   `scores.publish` false, decision 49.1).
-- **Provisional standing on the published 26-criterion structure** (not for publication before stage 3): CCO-PTF-CIP-SZH
-  14.5/26 (published 24.5), first; Participatory Economics and Integral 14.0; eight units not yet read could each change
-  who is first (`triage_s52_output.txt`, section 2: NSD C2.5, PE C2.5, PE C4.5, PE C5.2, INT C1.1, INT C1.4, INT C4.3,
-  INT C5.2).
+- **Provisional standing on the published 26-criterion structure** (not for publication before stage 3): first place
+  is shared at 14.0/26 by CCO-PTF-CIP-SZH (published 24.5; 14.5 if the owner reverses S57-3.9), Participatory Economics
+  and Integral; Nordic Social Democracy 13.5. Sixteen units not yet read could each change who is first
+  (`triage_s52_output.txt`, section 2).
 
 ## Next work, in order
 
-1. **C5.2 Staged Transition Pathways, re-read as class M in an Opus 5.5 session at high** (16 units in play, 4 able to
-   change an adequacy tier on their own; `triage_s52_output.txt`, section 4, rerun after group 2.4). A judgment re-read
-   with no evidence cache; its 16 units at 0.5 or 0.0 were planned in reading 3.2 of `NEEC_Rescoring_s50.md`. Write it as
+1. **C5.2 Staged Transition Pathways (group 2.6), re-read as class M in an Opus 5.5 session at high** (16 units in
+   play, 4 able to change an adequacy tier on their own; `triage_s52_output.txt`, section 4, rerun after group 2.5).
+   Opus at high because the readings are judgment and partly planned; xhigh is not needed: CCO-PTF-CIP-SZH's own C5.2
+   was read in part (b9) and is not in play. First apply the owner's answers to S57-3.9 and S57-3.3 from the ledger
+   (if S57-3.9 is reversed, group 2.5's C3.2 unit is restored to 1.0 by a recorded decision, not by editing the
+   record). A judgment re-read with no evidence cache; its 16 units at 0.5 or 0.0 were planned in reading 3.2 of `NEEC_Rescoring_s50.md`. Write it as
    groups 2.2 to 2.4 were: a script on `pass_common.py` holding the readings (`U(...)`), its group-specific checks and
    generated tables (`rescoring_s56.py` is the model for a four-clause criterion, `rescoring_s54.py` for a class M one), a
-   record, `PARTS` extended, the harness given the new files (as v30 did through `S56_FILES`). Do not touch earlier
-   scripts or their captures. High, not xhigh: the readings are planned in part, and the owner holds the contested
-   CCO-PTF-CIP-SZH unit (S50-3.4).
+   record, `PARTS` extended, the harness given the new files (as v31 did through `S57_FILES`). Do not touch earlier
+   scripts or their captures. Under decision 57.2 the 16 readings need no owner confirmation (none is
+   CCO-PTF-CIP-SZH's); with first place shared, PE's and INT's C5.2 can each decide who is first, so read them closely.
 2. **Then the groups in the triage's order** (rerun after each group): C1.4, C4.2, C4.3, C3.1, C4.1, C2.3, C2.4, C2.1,
    C1.1, C4.4, C4.5, C2.5, C3.4. The class I groups (C1.4, C3.1, C2.3, C2.4, C2.1, C1.1) need their evidence cache first,
    in a Sonnet 5.5 session, C1.4's next; the cache script should read the state before its group (`pc.Pass(upto=...)`),
@@ -49,13 +58,30 @@ open items of Handoffs 43 to 56, which no longer need to be read for them.
    supersedes part (b3)'s C1.1.
 3. **The 69 new units** (C2.6, C3.6, C4.6; 23 each): no score exists, so none can be carried forward; they change
    every entry's failure count and total on the 29. Done after the class I and M groups, with the evidence cache.
-4. **Carry-forward (decision 52.7):** the triage now names seven units that could change no failure count, tier or rank
-   on their own (CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, SG C2.5, SQ C2.5, UBS C4.5). Reading them is cheap inside their
+4. **Carry-forward (decision 52.7):** the triage now names eight units that could change no failure count, tier or rank
+   on their own (CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, PE C2.5, SG C2.5, SQ C2.5, UBS C4.5); with first place shared,
+   CCO C4.5 and PE C2.5 could each still decide who is first alone, so read them rather than carry them. Reading them is cheap inside their
    criterion's group; any left unread is listed in Report v2.0 and the Paper.
 5. Stage 3 (apply the pass by generator; `scores.publish` true; Report v2.0 Part I from per-unit rationales, decision
    52.8; C1.2a's 1.0 band drops its example, as C1.1's did; C3.5's 0.0 band takes its examples from the units at 0.0
    after group 2.4), stage 4 (Report and Paper v2.0; the Paper discloses the simulation overhaul, decision 52.9), stage 5
    (Paper PDF from a committed build script).
+
+## Decided (Session 57; `NEEC_Rescoring_s57.md`, section 3)
+
+From the owner (2026-10-14): **57.1** the ledger's answers: the default confirmed for d1 to d16 (W1 to W10, 48.3, 49.2,
+49.3, 49.5, 49.8, 49.9, 50.2, 50.4, 50.5), d18, d23, d25, d27, d28, d30, d31 and d32 to d36, each now settled for v2.0;
+the CCO-PTF-CIP-SZH items d17, d19 to d22, d24, d26 and d29 taken up by 57.3 and group 2.5 (S50-3.4's C5.2 stays 0.5
+with its flag: its reopening condition is a deployment, which no simulation meets). **57.2** a standing rule: score
+changes for entries other than CCO-PTF-CIP-SZH need no owner confirmation; they are decided under the delegation and
+listed here; CCO-PTF-CIP-SZH's score changes still go to the ledger. **57.3** read the overhauled simulation now
+(supersedes 52.9 and d26's "in version 2.1"); a later version is read when the owner releases it for scoring; Paper
+v2.0 states the version read and that the simulation is still being revised. **57.4** the owner's note on C1.3's tenure
+read: the design's tenure forms are features the model does not yet carry; passed to the simulation's maintainers.
+Under the delegation: **57.5** the pin to `d10ed6e`; **57.6** a clause clearing only at a backing share the design does
+not state is not shown, both ends reported; **57.7** CCO-PTF-CIP-SZH's C3.2 1.0 → 0.5 (a correction; awaiting the owner,
+S57-3.9); **57.8** C3.4's adjustment run repeated on a collapse test fixed before the run (clause 4 short, flagged toward
+1.0); **57.9** the other seven units held; **57.10** the shared module and the triage name a shared first place.
 
 ## Decided (Session 56, under the delegation; `NEEC_Rescoring_s56.md`)
 
@@ -91,49 +117,24 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
-IDs as in the owner's decisions sheet (a Claude Doc the owner holds). The owner's message of 2026-10-14 listed no
-answers for these; all stay open and must be settled before stage 3. Nothing else waits on them.
+The owner answered every earlier item in the ledger on 2026-10-14 (decision 57.1). Under decision 57.2 only
+CCO-PTF-CIP-SZH's score changes wait on the owner; other entries' changes are decided under the delegation. Nothing else
+waits on these items, but each must be settled before stage 3.
 
 | ID | Item | Recorded in | Ledger |
 |---|---|---|---|
-| 48.3 | C4.4 clause 1 defined as the share of employment in democratically accountable organizations (flagged) | record, 48.3 | d8 |
-| 49.2 | Site navigation (flagged) | record, 49.1 to 49.10 | d9 |
-| 49.3 | The Thresholds page's 11 paraphrases: the owner reads them once | record, 49.1 to 49.10 | d10 |
-| 49.5 | The Replicate page's AI prompt design (flagged) | record, 49.1 to 49.10 | d11 |
-| 49.8 | `.github/CONTRIBUTING.md`, six issue forms, four new labels (flagged) | record, 49.1 to 49.10 | d12 |
-| 49.9 | The visual suite's adaptation; v1's closing panel not carried over (flagged) | record, 49.1 to 49.10 | d13 |
-| 50.2 | Jev flag-only (flagged) | record, 50.1 to 50.5 | d14 |
-| 50.4 | Jev question design (flagged) | record, 50.1 to 50.5 | d15 |
-| 50.5 | Blind replication after stage 3 by a model outside the Claude family (awaiting) | record, 50.1 to 50.5 | d16 |
-| S50-3.4 | CCO-PTF-CIP-SZH's C5.2 at 0.5, flagged toward 1.0 | `NEEC_Rescoring_s50.md` 3.4 | d17 |
-| S51-3.2 | Scope: published 1.0s resting on the entry's own modelling | `NEEC_Rescoring_s51.md` 3.2 | d18 |
-| S51-3.4 | CCO-PTF-CIP-SZH's C1.1 flag toward 1.0 removed | `NEEC_Rescoring_s51.md` 3.4 | d19 |
-| S51-3.5 | CCO-PTF-CIP-SZH's C1.2b to 0.5 | `NEEC_Rescoring_s51.md` 3.5 | d20 |
-| S51-3.6 | CCO-PTF-CIP-SZH's C1.4 to 0.5 | `NEEC_Rescoring_s51.md` 3.6 | d21 |
-| S51-3.7 | CCO-PTF-CIP-SZH's C3.3 to 0.5 | `NEEC_Rescoring_s51.md` 3.7 | d22 |
-| S53-3.1 | C1.2a's clause read as a share (70% each reach $60,000), not the engaged participants' median; four entries flagged | `NEEC_Rescoring_s53.md` 3.1 | d23 |
-| S53-3.4 | CCO-PTF-CIP-SZH's C1.2a to 0.5: the model's figure rests on agents saving 47% of income (flagged toward 1.0) | `NEEC_Rescoring_s53.md` 3.4 | d24 |
-| S53-3.6 | Libertarian Minarchism's C1.2a to 0.5 and MMT + Job Guarantee's to 0.0 (corrections) | `NEEC_Rescoring_s53.md` 3.6 | d25 |
-| S54-3.2 | Four designs' C1.3 (Degrowth, FALC, Participatory Economics, Integral) to 0.5: neither clause estimated | `NEEC_Rescoring_s54.md` 3.2 | d28 |
-| S54-3.3 | CCO-PTF-CIP-SZH's C1.3 to 0.5: the model has no housing tenure; on its proxy 78.5% to 86.4% of agents are stable over 5 years, 93.6% to 96.8% inside Public Trust Housing (a fifth of agents) | `NEEC_Rescoring_s54.md` 3.3 | d29 |
-| S54-3.4 | Centrally Planned Socialism's C1.3 held at 1.0 on a bound (94%), flagged toward 0.5 | `NEEC_Rescoring_s54.md` 3.4 | d30 |
-| S54-3.6 | Doughnut Economics' C1.3 held at 0.5, flagged toward 0.0 (the reading of its C1.2a) | `NEEC_Rescoring_s54.md` 3.6 | d31 |
-| S56-3.1 | C3.5's clause 4 read on the IMF's total implicit subsidies, cleared under 10% of GDP (alternatives: a lower bound that shows only a shortfall; the environmental components only) | `NEEC_Rescoring_s56.md` 3.1 | d32 |
-| S56-3.3 | Libertarian Minarchism's C3.5 to 0.5 (correction), flagged toward 0.0 | `NEEC_Rescoring_s56.md` 3.3 | d33 |
-| S56-3.4 | Nordic Social Democracy's and Stakeholder Capitalism's C3.5 to 0.5 on the named indicators (Stakeholder Capitalism flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.4 | d34 |
-| S56-3.5 | Universal Basic Services' C3.5 to 0.0 (correction): the published 0.5 credits the host's scrutiny; flagged toward 0.5 | `NEEC_Rescoring_s56.md` 3.5 | d35 |
-| S56-3.6 | China's C3.5 held at 0.0 (flagged toward 0.5; on the environmental components alone its clause 4 would clear); Qatar's to 0.5 (flagged toward 0.0) | `NEEC_Rescoring_s56.md` 3.6 | d36 |
+| S57-3.9 | CCO-PTF-CIP-SZH's C3.2 from 1.0 to 0.5 (a correction): on the overhauled simulation's main reading the programme raises prices 50.8% a year; under 3% only if new output backs every dollar the Source pays, which the design does not state; flagged toward 1.0 | `NEEC_Rescoring_s57.md` 3.9 | d37 |
+| S57-3.3 | CCO-PTF-CIP-SZH's other eight simulation units hold on v5.6.0 (C1.2a and C3.4 flagged toward 1.0; C3.4's clause 4 now short); for the owner's information, default accept | `NEEC_Rescoring_s57.md` 3.3 to 3.12 | d38 |
 
 **The ledger.** Every open item above is also a numbered decision in the owner's Project ledger
 (https://claude.ai/artifact/KMdxWQ5KAefQVFxQA236pV, project "NEEC Research"; its id is in the Ledger column), written in
 plain words with a default first, the other options after it, and a Reference entry (code = the ID) linking to the
-extended description in the record. Ledger rule for sessions: `CLAUDE.md`, "The ledger". S50-3.4 to S51-3.7 are
-answered in the ledger (d17 to d22, d26); S55-1 is d27. S56-3.2 is evidence only and has no decision.
+extended description in the record. Ledger rule for sessions: `CLAUDE.md`, "The ledger", with decision 57.2.
 
-Method choices Sessions 52 to 56 made that the criteria record does not yet carry (optional, not corrections; carried
-into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5 (decisions 53.3, 56.2 and 56.4 are
-corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering key (Handoff 52,
-section 4).
+Method choices Sessions 52 to 57 made that the criteria record does not yet carry (optional, not corrections; carried
+into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5, 57.6, 57.8 (decisions 53.3, 56.2,
+56.4 and 57.7 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
+key (Handoff 52, section 4).
 
 ## Model routing (decision 52.4)
 
@@ -144,17 +145,22 @@ misreadings. Only the owner can set the model; the handoff names it in its first
 
 ## Reopening conditions (CCO-PTF-CIP-SZH's units and the simulation)
 
-A new simulation version reopens a unit only through these, recorded before the version existed:
+A simulation version the owner releases for scoring (decision 57.3) reopens a unit only through these. Group 2.5
+evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
 
 - **C1.1:** the model behind the papers' 98% is published and reproduces 98%; or a version reaches a 90% reduction in
   the reference run and 85% in the Adverse Environment, on the Societal Poverty Line.
 - **C1.4:** an hours-displacement lever, with poverty under 8% and aggregate demand above 85% of baseline in the 30%,
   50% and 70% scenarios.
 - **C3.3:** compound scenarios: degradation under 20% on every core function in at least three of four.
-- **C3.4** (0.5, flagged toward 1.0): an endogenous price or behavioural channel, with the adjustment run repeated.
-- **C1.2a** (0.5, flagged toward 1.0, S53-3.4): for version 2.1, a version of the model with a sourced consumption rule
-  that still shows 70% of agents accumulating $60,000 (2019 dollars) in 20 years in the reference run.
-- **C1.3** (0.5, S54-3.3): for version 2.1, a version of the model with housing tenure and a housing-cost line that
+- **C3.2** (0.5, flagged toward 1.0, S57-3.9): the design's sources state how the Source is paid for, or a sourced
+  output response, and the model on that basis shows the programme's inflation at or under 3% a year in the reference
+  run; or a modelled automatic adjustment that restrains issuance or conversion holds it there at the main reading.
+- **C3.4** (0.5, flagged toward 1.0): met on v5.6.0 and re-read (group 2.5, reading 3.11). Reopens if a version shows
+  no seed collapsing on reading 3.11's test, or if the owner adopts the flag's reading of a collapse.
+- **C1.2a** (0.5, flagged toward 1.0): v5.6.0 has a sourced consumption rule and shows 13.9% of participants at the bar
+  in the reference run (91.1% at full backing); reopens if the reference run shows 70%, or on C3.2's backing condition.
+- **C1.3** (0.5, S54-3.3; the owner's tenure note, 57.4): a version of the model with housing tenure and a housing-cost line that
   shows 88% of all agents stable over 5-year windows and housing costs at or under 30% of disposable income at 80% of
   the median, in the reference run.
 - **C5.2** (0.5, flagged toward 1.0, S50-3.4): a municipal pilot of the currency or the portal, or any deployment of
@@ -173,10 +179,14 @@ A new simulation version reopens a unit only through these, recorded before the 
   check's summary line is shown in the harness with `show_summary=True`.
 - **PDFs in the container.** `pypdf` fails on the container's `cryptography` build; `apt-get install -y
   poppler-utils` gives `pdftotext`. It does not persist between sessions.
-- **Simulation runs.** Clone `BetterToBest/compassionism-simulation` at the pin beside the repository and run
-  `node cco_simulation_checks_s51.js ../compassionism-simulation/harness.js ../compassionism-simulation/index.html`;
-  output must equal `cco_simulation_checks_s51_output.txt` (md5 `b4f481e7`). Its runner is the model for later runs;
-  the harness checks captures by digest and does not rerun JavaScript.
+- **Simulation runs.** Clone `BetterToBest/compassionism-simulation` at the pin (`d10ed6e`) beside the repository and run
+  `node cco_sim_v56_checks_s57.js run ../compassionism-simulation/harness.js LO HI part_LO.json` for seeds 1-125,
+  126-250, 251-375 and 376-500 (side by side, about 90 minutes on four cores), then `node cco_sim_v56_checks_s57.js
+  report ../compassionism-simulation/harness.js part_*.json`; output must equal `cco_sim_v56_checks_s57_output.txt` (md5
+  `cd2ec0c9`). v5 runners must set the test-bed's study profile (`applyNR6()`, `tbSetG(TB_PROFILE_G)`) before any run, or
+  the programme rows do not reproduce the release; the runner checks reproduction before any table. Earlier runners
+  (`cco_simulation_checks_s51.js` and the s53, s54 ones) run on `5a7a7b1`. The harness checks captures by digest and does
+  not rerun JavaScript.
 - **Jev.** Runs go through the owner's Composio connection (a claude.ai chat, or a cloud session with the connector
   attached). Pin the model in every request (`jev-1.13.0`); transcribe responses into a recorded file a script
   checks with no network call. A direct API call would need a TypeSafe key set by the owner as an environment
@@ -191,11 +201,15 @@ A new simulation version reopens a unit only through these, recorded before the 
 - **Version 1** remains on the original Google Site; the owner has been asked to mark its scores as superseded (on
   the v1 home and report pages, the Medium article and the public visual-suite artifact) and to point the Research
   Hub's comparison entry at the v2 site. Whether that is done is not recorded here.
-- **The simulation overhaul (decision 52.9).** The owner reports (2026-10-14) that the Compassionism Simulation has been
-  overhauled since `5a7a7b1` and that many headline figures changed, several less favourably. Version 2.0 is frozen at
-  the pin; Paper v2.0 discloses that the simulation has since been overhauled with revised headline figures, and that the
-  owner maintains both the design and the model. A later version is read in version 2.1. The reopening conditions above
-  are written for raising a unit in 2.0 and do not take effect from a later version's figures.
+- **The simulation (decision 57.3).** Version 2.0 reads v5.6.0 for CCO-PTF-CIP-SZH's units. Its results turn on the
+  backing share, which the design does not state; the pass reads both ends (57.6). The owner notes the simulation still
+  has limitations and will be updated again: a later version is read when the owner releases it for scoring, through the
+  reopening conditions above. Paper v2.0 states the version read, that the simulation is still being revised, and that
+  the owner maintains both the design and the model. The record's section 8 lists what the units would need from the
+  model.
+- **Ties.** First place is shared after group 2.5; `pass_common.py` and `triage_s52.py` name a shared first place as
+  shared (57.10). The triage's "could change none" screen reads an entry's own rank, so with a tie it can list a unit that
+  decides who is first (Next work, item 4).
 - **The shared pass module and the triage.** `python3 pass_common.py --selftest` reproduces group 2.1's tables from the
   parts before it; a new group is added to `PARTS` there, and the harness's S52 checks must then be given the group's
   files (v29 does this through `S54_FILES`; a later version extends it the same way). `python3 triage_s52.py` prints the
@@ -211,6 +225,9 @@ A new simulation version reopens a unit only through these, recorded before the 
   shares are quoted from the publisher's catalogue); JCHS's *State of the Nation's Housing 2025* via NLIHC's summary;
   Census P60-282; Eviction Lab's 2022 update. A new simulation runner, `cco_c13_checks_s54.js`, captured
   (`cco_c13_checks_s54_output.txt`, md5 30d131f0), runs in under a minute.
+- **Figures used by group 2.5** (held in `rescoring_s57.py`): CPI-U annual averages 255.657 (2019) and 321.943 (2025;
+  BLS, as the simulation's sources cite it; FRED's annual series omits 2025 for October 2025's missing month, and the 11
+  published months average to it); the v5.6 release's published figures (`data/releases/v5.6.json` at `d10ed6e`).
 - **Sources used by group 2.4** (cached in `evidence_cache/C3.5/` by `rescoring_s56.py --fetch`, digests held in the
   script): the IMF Fossil Fuel Subsidies Data 2023 update, country rows from the IMF Climate Change Indicators
   Dashboard's ArcGIS service (climatedata.imf.org serves the dataset; imf.org's own download link was not found); GAO's
