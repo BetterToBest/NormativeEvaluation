@@ -418,6 +418,7 @@ class Site:
             ld = ('<script type="application/ld+json">' + json.dumps(jsonld, ensure_ascii=False, sort_keys=True) + "</script>")
         url = self.base + ("" if rel == "index.html" else rel)
         main = main.replace("{root}", root)
+        main = gloss_acronyms(main, cfg.get("acronyms", {}))
         doc = f"""<!doctype html>
 <html lang="en">
 <head>
@@ -442,7 +443,7 @@ class Site:
 <body class="p-{pid}">
 <a class="skip" href="#main">Skip to content</a>
 <header class="masthead">
-<a class="wordmark" href="{root}index.html" aria-label="NEEC home">{WORDMARK}<span>NEEC</span></a>
+<a class="wordmark" href="{root}index.html" aria-label="NEEC home" title="{esc(cfg["site"]["wordmark_title"])}">{WORDMARK}<span>NEEC</span></a>
 <nav aria-label="Main"><ul>{nav}</ul></nav>
 </header>
 {banner}
@@ -498,6 +499,40 @@ def legend(M):
         items.append(("sp", "not yet published"))
     return ('<ul class="legend" aria-label="Key">' +
             "".join(f'<li><span class="mk {c}" aria-hidden="true"></span>{esc(t)}</li>' for c, t in items) + "</ul>")
+
+
+_NO_GLOSS = {"code", "pre", "script", "style", "svg", "abbr", "textarea", "select", "option", "button", "title"}
+
+
+def gloss_acronyms(main, acr):
+    """Wrap the first plain-text use of each configured acronym on a page in <abbr title="...">, unless the page
+    already spells it out. Hyphenated uses (CCO-PTF-CIP-SZH) are left alone; text inside code, pre and the like is skipped."""
+    if not acr:
+        return main
+    plain = re.sub(r"<[^>]+>", " ", main)
+    todo = {a: t for a, t in acr.items() if t.lower() not in plain.lower()}
+    pat = re.compile(r"(?<![\w-])(" + "|".join(re.escape(a) for a in sorted(todo, key=len, reverse=True)) + r")(?![\w-])") if todo else None
+    if not pat:
+        return main
+    out, depth, done = [], 0, set()
+    for tok in re.split(r"(<[^>]+>)", main):
+        if tok.startswith("<"):
+            m = re.match(r"<(/?)([a-zA-Z0-9]+)", tok)
+            if m and m.group(2).lower() in _NO_GLOSS and not tok.endswith("/>"):
+                depth += -1 if m.group(1) else 1
+                depth = max(depth, 0)
+            out.append(tok)
+        elif depth or not tok.strip():
+            out.append(tok)
+        else:
+            def sub(m):
+                a = m.group(1)
+                if a in done:
+                    return a
+                done.add(a)
+                return f'<abbr title="{esc(todo[a])}">{a}</abbr>'
+            out.append(pat.sub(sub, tok))
+    return "".join(out)
 
 
 def field(M, caption):
