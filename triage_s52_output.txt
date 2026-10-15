@@ -1,66 +1,65 @@
-NEEC rescoring pass, stage 2: the consequence triage (W6, decision 52.7); state through part (2.7)
-inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, rescoring_s47.py, rescoring_s48.py, rescoring_s49.py, rescoring_s50.py, rescoring_s51.py, rescoring_s53.py, rescoring_s54.py, rescoring_s56.py, rescoring_s57.py, owner_s58.py, rescoring_s58.py, rescoring_s60.py
+NEEC rescoring pass, stage 2: the consequence triage (W6, decision 52.7); state through part (2.8)
+inputs: criteria.json, criteria_s44_snapshot.json, neec_corpus.json, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, rescoring_s47.py, rescoring_s48.py, rescoring_s49.py, rescoring_s50.py, rescoring_s51.py, rescoring_s53.py, rescoring_s54.py, rescoring_s56.py, rescoring_s57.py, owner_s58.py, rescoring_s58.py, rescoring_s60.py, rescoring_s61.py
 
 [1] POPULATION (units = 23 entries x 29 v2.0 criteria)
   PASS classes by units: W 115, D 46, I 161, M 184, U 92, N 69 (667), as the criteria record's section 7
-  PASS 251 of the 598 units on the published 26 criteria are re-estimated; the other 347 are not
-  not yet read: 176 in play (class D 30, I 75, M 71); 171 fixed by class (W or U); and the 69 new units, unscored
+  PASS 267 of the 598 units on the published 26 criteria are re-estimated; the other 331 are not
+  not yet read: 160 in play (class D 30, I 75, M 55); 171 fixed by class (W or U); and the 69 new units, unscored
 
 [2] WHAT EACH UNIT COULD CHANGE ON ITS OWN (all other scores held)
-  of 176: 157 could change a failure count, 24 an adequacy tier, 166 a rank; 7 could change none of the three
+  of 160: 141 could change a failure count, 20 an adequacy tier, 146 a rank; 6 could change none of the three
   PASS the tier screen reproduced by a second computation
   PASS first place is shared by CCO, INT at 14.5; the next total is 14.0
-  units that alone could change who is first: 7 (NSD C2.5, PE C2.5, PE C4.5, CCO C4.5, INT C1.1, INT C3.4, INT C4.3)
-  the units that could change none of the three (the only candidates to carry forward without a reason): CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, SG C2.5, SQ C2.5, UBS C4.5
+  units that alone could change who is first: 6 (NSD C2.5, PE C2.5, PE C4.5, CCO C4.5, INT C1.1, INT C3.4)
+  the units that could change none of the three (the only candidates to carry forward without a reason): CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, SG C2.5, UBS C4.5
 
 [3] ENTRIES (published structure; total, failures, tier now; units in play; those that could change the tier)
 | Entry | Total (rank) | Failures | Tier | In play | Tier-capable alone | To a worse tier: needs / can | To a better tier: needs / can |
 |---|---:|---:|---|---:|---:|---|---|
 | CCO | 14.5 (1) | 0 | Potentially Adequate | 1 | 0 | 3 / 0 |  |
-| INT | 14.5 (1) | 2 | Potentially Adequate | 3 | 2 | 1 / 2 |  |
+| INT | 14.5 (1) | 2 | Potentially Adequate | 2 | 1 | 1 / 1 |  |
 | PE | 14.0 (3) | 1 | Potentially Adequate | 2 | 0 | 2 / 0 |  |
 | NSD | 13.5 (4) | 1 | Potentially Adequate | 4 | 0 | 2 / 2 |  |
-| MS | 13.0 (5) | 2 | Potentially Adequate | 6 | 4 | 1 / 4 |  |
+| MS | 13.0 (5) | 2 | Potentially Adequate | 5 | 3 | 1 / 3 |  |
 | DG | 13.0 (5) | 2 | Potentially Adequate | 1 | 0 | 1 / 0 |  |
-| SWF | 13.0 (5) | 3 | Partially Adequate | 9 | 2 | 3 / 7 | 1 / 2 |
-| OS | 13.0 (5) | 3 | Partially Adequate | 9 | 0 | 3 / 8 | 1 / 0 |
-| GEO | 12.5 (9) | 2 | Potentially Adequate | 10 | 9 | 1 / 9 |  |
-| MC | 12.5 (9) | 3 | Partially Adequate | 10 | 0 | 3 / 9 | 1 / 0 |
-| UBS | 11.5 (11) | 4 | Partially Adequate | 10 | 0 | 2 / 9 | 2 / 0 |
-| SG | 11.5 (11) | 4 | Partially Adequate | 11 | 0 | 2 / 7 | 2 / 3 |
-| IF | 11.5 (11) | 5 | Partially Adequate | 10 | 7 | 1 / 7 | 3 / 2 |
+| SWF | 13.0 (5) | 3 | Partially Adequate | 8 | 2 | 3 / 6 | 1 / 2 |
+| OS | 13.0 (5) | 3 | Partially Adequate | 8 | 0 | 3 / 7 | 1 / 0 |
+| GEO | 12.5 (9) | 2 | Potentially Adequate | 9 | 8 | 1 / 8 |  |
+| MC | 12.5 (9) | 3 | Partially Adequate | 9 | 0 | 3 / 8 | 1 / 0 |
+| UBS | 11.5 (11) | 4 | Partially Adequate | 9 | 0 | 2 / 8 | 2 / 0 |
+| SG | 11.5 (11) | 4 | Partially Adequate | 10 | 0 | 2 / 6 | 2 / 3 |
+| IF | 11.5 (11) | 5 | Partially Adequate | 9 | 6 | 1 / 6 | 3 / 2 |
 | MMT | 11.0 (14) | 4 | Partially Adequate | 6 | 0 | 2 / 4 | 2 / 0 |
 | UBI | 10.5 (15) | 7 | Structurally Inadequate | 6 | 0 |  | 2 / 2 |
-| SQ | 9.5 (16) | 9 | Structurally Inadequate | 12 | 0 |  | 4 / 5 |
-| CN | 9.5 (16) | 8 | Structurally Inadequate | 12 | 0 |  | 3 / 6 |
-| SC | 9.0 (18) | 8 | Structurally Inadequate | 11 | 0 |  | 3 / 3 |
-| FALC | 9.0 (18) | 10 | Structurally Inadequate | 6 | 0 |  | 5 / 3 |
-| DE | 9.0 (18) | 8 | Structurally Inadequate | 8 | 0 |  | 3 / 3 |
-| QA | 8.5 (21) | 9 | Structurally Inadequate | 12 | 0 |  | 4 / 6 |
+| CN | 9.5 (16) | 8 | Structurally Inadequate | 11 | 0 |  | 3 / 5 |
+| SQ | 9.0 (17) | 10 | Structurally Inadequate | 11 | 0 |  | 5 / 5 |
+| SC | 9.0 (17) | 8 | Structurally Inadequate | 10 | 0 |  | 3 / 3 |
+| FALC | 9.0 (17) | 10 | Structurally Inadequate | 5 | 0 |  | 5 / 3 |
+| DE | 9.0 (17) | 8 | Structurally Inadequate | 7 | 0 |  | 3 / 3 |
+| QA | 8.5 (21) | 9 | Structurally Inadequate | 11 | 0 |  | 4 / 5 |
 | CPS | 7.5 (22) | 12 | Structurally Inadequate | 9 | 0 |  | 7 / 5 |
-| LM | 7.0 (23) | 13 | Structurally Inadequate | 8 | 0 |  | 8 / 7 |
-  entries with no tier-capable unit alone: CCO, PE, NSD, DG, OS, MC, UBS, SG, MMT, UBI, SQ, CN, SC, FALC, DE, QA, CPS, LM; entries whose tier cannot change even if every unit in play moved the worst way for it: CCO, PE, DG, FALC, CPS, LM
+| LM | 7.0 (23) | 13 | Structurally Inadequate | 7 | 0 |  | 8 / 6 |
+  entries with no tier-capable unit alone: CCO, PE, NSD, DG, OS, MC, UBS, SG, MMT, UBI, CN, SQ, SC, FALC, DE, QA, CPS, LM; entries whose tier cannot change even if every unit in play moved the worst way for it: CCO, PE, DG, FALC, CPS, LM
 
 [4] GROUPS BY CRITERION, IN THE ORDER TO READ THEM (tier-capable units, then rank displacement, then units)
 | Order | Criterion | Class | Reading | Units in play | Tier-capable | Rank displacement (sum) | Failure-capable |
 |---:|---|---|---|---:|---:|---:|---:|
-| 1 | C4.3 Group Equity | M | judgment re-read (class M) | 16 | 4 | 38 | 16 |
-| 2 | C3.1 Crisis Response Capacity | I | evidence re-check (class I; the evidence cache of W5) | 16 | 3 | 35 | 16 |
-| 3 | C4.2 Ecological Compliance | M | judgment re-read (class M) | 16 | 3 | 34 | 16 |
-| 4 | C1.1 Poverty Elimination Capacity | I | evidence re-check (class I; the evidence cache of W5) | 14 | 3 | 31 | 14 |
-| 5 | C4.1 Intergenerational Justice | M | judgment re-read (class M) | 15 | 3 | 30 | 15 |
-| 6 | C2.1 Freedom from Coercion | I | evidence re-check (class I; the evidence cache of W5) | 15 | 2 | 36 | 15 |
-| 7 | C2.4 Democratic Participation | I | evidence re-check (class I; the evidence cache of W5) | 15 | 2 | 35 | 15 |
-| 8 | C2.3 Creative Development Opportunities | I | evidence re-check (class I; the evidence cache of W5) | 15 | 2 | 34 | 15 |
-| 9 | C4.4 Power Distribution | M | judgment re-read (class M) | 17 | 1 | 42 | 17 |
-| 10 | C4.5 Exploitation Elimination | D | rises only (class D) | 17 | 1 | 31 | 7 |
-| 11 | C2.5 Exit Rights and Mobility | D | rises only (class D) | 13 | 0 | 23 | 5 |
-| 12 | C3.4 Epistemic Adaptability | M | judgment re-read (class M) | 7 | 0 | 10 | 6 |
+| 1 | C3.1 Crisis Response Capacity | I | evidence re-check (class I; the evidence cache of W5) | 16 | 3 | 38 | 16 |
+| 2 | C1.1 Poverty Elimination Capacity | I | evidence re-check (class I; the evidence cache of W5) | 14 | 3 | 35 | 14 |
+| 3 | C4.2 Ecological Compliance | M | judgment re-read (class M) | 16 | 3 | 33 | 16 |
+| 4 | C4.1 Intergenerational Justice | M | judgment re-read (class M) | 15 | 3 | 29 | 15 |
+| 5 | C2.1 Freedom from Coercion | I | evidence re-check (class I; the evidence cache of W5) | 15 | 2 | 38 | 15 |
+| 6 | C2.3 Creative Development Opportunities | I | evidence re-check (class I; the evidence cache of W5) | 15 | 2 | 38 | 15 |
+| 7 | C2.4 Democratic Participation | I | evidence re-check (class I; the evidence cache of W5) | 15 | 2 | 38 | 15 |
+| 8 | C4.4 Power Distribution | M | judgment re-read (class M) | 17 | 1 | 39 | 17 |
+| 9 | C4.5 Exploitation Elimination | D | rises only (class D) | 17 | 1 | 29 | 7 |
+| 10 | C2.5 Exit Rights and Mobility | D | rises only (class D) | 13 | 0 | 23 | 5 |
+| 11 | C3.4 Epistemic Adaptability | M | judgment re-read (class M) | 7 | 0 | 13 | 6 |
   PASS the criteria's units and tier-capable units sum to the totals above
 
 [5] THE 69 NEW UNITS (C2.6, C3.6, C4.6; 23 each): no score exists, so none can be carried forward; each entry gains three criteria, so every entry's failure count and total on the 29 can change by up to 3 failures and 3.0 points. They are the one certain change to the corpus' results.
   PASS the new criteria are class N and outside the published 26
 
-NEXT GROUP FROM THE TRIAGE: C4.3 Group Equity (M, 16 units, 4 tier-capable); model by the reading: Opus 5.5 high.
+NEXT GROUP FROM THE TRIAGE: C3.1 Crisis Response Capacity (I, 16 units, 3 tier-capable); model by the reading: Sonnet 5.5 for the evidence, Opus 5.5 high for the readings.
 
 CONSEQUENCE TRIAGE COMPUTED.
