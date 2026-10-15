@@ -1,12 +1,12 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 64 (group 2.10, C4.2 read) (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 65 (the accelerated groups and stage 3's generator) (2026-10-15). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
 
-- **Stage 2 of the plan** (the rescoring pass on the v2.0 criteria), in progress. Group 2.1 done (Session 51); Session
+- **Stage 2 of the plan** (the rescoring pass on the v2.0 criteria), complete in Session 65; stage 3's generator written, application awaiting the owner. Group 2.1 done (Session 51); Session
   52 built the shared module and the triage; group 2.2, C1.2a re-read as class M, done (Session 53,
   `NEEC_Rescoring_s53.md`): all 23 units read, no entry clears C1.2a, five fall, one rises, no tier changes. **Group
   2.3, C1.3 re-read as class M, done (Session 54, `NEEC_Rescoring_s54.md`)**: the 20 units not yet re-estimated read;
@@ -45,7 +45,16 @@ depends on the window) and on biodiversity; Nordic Social Democracy clears claus
 Denmark, Finland, Norway, Sweden), the first C4.2 clause cleared in the pass, and is short on carbon (Denmark and Sweden);
 the footprint and boundary clauses are not shown for any unit (the footprint accounts were unreachable). Six flags, two of
 which could change a tier (Market Socialism toward 0.0, Sovereign Wealth Fund Statism toward 0.5); no tier or rank changes.
-The next group is named below.
+**Session 65 (decision 65.1, the owner's request to finish the pass in one or two sessions) read every remaining unit in play and
+scored the 69 new units (`NEEC_Rescoring_s65.md`, `rescoring_s65.py`)**: C4.1, C4.4, C3.4, C4.5, C2.5, C1.1 (128 units not yet
+re-estimated across the nine criteria, with C2.1, C2.4 and C2.3 held without re-measuring their indicators, decision 65.2): four rise,
+one falls, 123 hold. Status Quo C4.1 and C4.4 0.0 to 0.5 (corrections), Qatar C4.1 0.5 to 1.0 (flagged toward 0.5), Participatory
+Economics C4.5 0.0 to 0.5 (flagged toward 0.0), Integral C3.4 1.0 to 0.5 (flagged toward 1.0). On the 26 criteria first place is
+shared by CCO-PTF-CIP-SZH and Participatory Economics at 14.5 (Integral 14.0, Nordic Social Democracy 13.5); on the 29, with the 69
+new units (no 1.0; China and Centrally Planned Socialism the 0.0s), CCO-PTF-CIP-SZH and Participatory Economics 16.0, Integral
+15.5, Nordic Social Democracy 15.0; tiers 7 Potentially, 7 Partially, 9 Structurally Inadequate. **Stage 3's generator is written
+(`apply_pass_s65.py`: `neec_corpus_v2.json`, `neec_scores_v2.csv`, `summary_blocks_v2.json`), and the site builds with them; the
+publish gate is not flipped, awaiting the owner (d49).** The stage 2 pass has no unit left in play.
 - **Landing:** by pull request and the owner's merge (W9, decision 52.3). The session opens the pull request; `harness.yml`
   checks it; the owner merges; `land-session.yml` reruns the checks on `main` and tags each `NEEC Session <n>` commit.
 - **Criteria:** v2.0, 29 criteria in `criteria.json`; protocol draft.9. Published scores remain on 26 criteria until
@@ -55,49 +64,42 @@ The next group is named below.
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
-- **Harness:** v36, 110 checks, byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and
+- **Harness:** v37, 112 checks (rescoring_s65.py, apply_pass_s65.py --check), byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and
   checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
-  `scores.publish` false, decision 49.1).
-- **Provisional standing on the published 26-criterion structure** (not for publication before stage 3): first place
-  is shared at 14.5/26 by CCO-PTF-CIP-SZH (published 24.5) and Integral; Participatory Economics 14.0; Nordic Social
-  Democracy 13.5. Seven entries are Potentially Adequate (CCO, PE, NSD, INT, DG, MS, GEO). Six units not yet read
-  could each change who is first (NSD C2.5, PE C2.5, PE C4.5, CCO C4.5, INT C1.1, INT C3.4; `triage_s52_output.txt`,
-  section 2).
+  `scores.publish` false, decision 49.1); the v2 files exist and the site builds with them (d49 awaits the owner).
+- **Provisional standing after the pass** (not for publication until the owner's go, d49). On the 26 criteria: CCO-PTF-CIP-SZH
+  and Participatory Economics share first at 14.5; Integral 14.0; Nordic Social Democracy 13.5. On the 29 (with the 69 new
+  units): CCO and PE 16.0, Integral 15.5, Nordic Social Democracy 15.0, Degrowth and Market Socialism 14.5; 7 entries Potentially
+  Adequate, 7 Partially, 9 Structurally Inadequate. The full table is in `NEEC_Rescoring_s65.md`.
 
 ## Next work, in order
 
-1. **Session 65: Sonnet 5.5 at medium builds C1.1's evidence cache** (mechanical: the sources of C1.1 Poverty Elimination
-   Capacity, class I, 14 units in play, 3 tier-capable, which the triage now puts first; the configurations' baseline
-   poverty on the Societal Poverty Line is the figure group 2.7 did not need). Reading C1.1 follows in an Opus 5.5 session
-   at high. If the owner would rather stay on Opus, the group needing no cache is C4.1 Intergenerational Justice (class M,
-   15 units in play, 3 tier-capable; Opus 5.5 at high). Session 64 ran on Sonnet 5.5, not on the Opus 5.5 at high the routing
-   assigns judgment groups, so the owner may wish to have group 2.10's judgment calls read again in an Opus session (d42
-   and d43 are in the ledger; the owner accepted group 2.9's, d39 to d41). The triage's order after C1.1: C4.1, C2.1, C2.4, C2.3, C4.4,
-   C4.5, C2.5, C3.4.
-2. **Then the groups in the triage's order** (rerun after each group). The class I groups left (C1.1, C2.1, C2.4, C2.3)
-   need their evidence cache first, in a Sonnet 5.5 session at medium. Groups already planned partly (C4.4's 17, decision
-   48.3; C4.1's four part (b6) units on its debt clause) are read within their criterion's group. `rescoring_s51.py`'s unit
-   supersedes part (b3)'s C1.1. Write each group as groups 2.2 to 2.10 were: a script on `pass_common.py` holding the
-   readings (`U(...)`), its group-specific checks and generated tables (`rescoring_s64.py` and `rescoring_s58.py` are the models for a class M
-   criterion, `rescoring_s63.py` for a class I one that reads national figures), a record, `PARTS` extended, the harness
-   given the new files (and `pass_common_selftest_output.txt`, `triage_s52_output.txt` and the README recaptured). Do not
-   touch earlier scripts or their captures. C1.1's group reads the configurations' baseline poverty on the Societal
-   Poverty Line, which group 2.7 did not need (reading 3.1).
-3. **The 69 new units** (C2.6, C3.6, C4.6; 23 each): no score exists, so none can be carried forward; they change
-   every entry's failure count and total on the 29. Done after the class I and M groups, with the evidence cache.
-4. **Carry-forward (decision 52.7):** the triage now names seven units that could change no failure count, tier or rank
-   on their own (CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, SG C2.5, SQ C2.5, UBS C4.5); with first place shared, CCO C4.5
-   could still decide who is first alone, so read it rather than carry it. Reading them is cheap inside their
-   criterion's group; any left unread is listed in Report v2.0 and the Paper.
-5. **CCO-PTF-CIP-SZH's paused item (decision 58.2):** when the design's last units are read (its C4.5 is the one left in
-   play), list every CCO-PTF-CIP-SZH reading together for the owner, as the owner asked under d38, with the owner's d37
-   reasoning (the backing by creative output) noted against each unit it could bear on (C1.2a first).
-6. Stage 3 (apply the pass by generator; `scores.publish` true; Report v2.0 Part I from per-unit rationales, decision
-   52.8, with the clauses group 2.6 and part (b9) left not estimated; C1.2a's 1.0 band drops its example, as C1.1's did;
-   C3.5's 0.0 band takes its examples from the units at 0.0 after group 2.4; C5.2's bands take theirs from the units
-   after group 2.6), stage 4 (Report and Paper v2.0; the Paper discloses the simulation overhaul, decision 52.9, and
-   that Integral was read on its white paper of December 2025), stage 5 (Paper PDF from a committed build script).
+1. **Publish (decision 65.6, ledger d49; owner's go): Sonnet 5.5 at medium** (mechanical). Steps are in `NEEC_Project_Handoff_65.md`,
+   section 4: point `site/config.json` at the three v2 files and set `scores.publish` true, add a provisional notice to the
+   public pages, run `python3 build_site.py`, commit `docs/`, update the harness's site checks. Verified in a scratch copy: it builds.
+2. **Report v2.0 and Paper v2.0 (stage 4): Opus 5.5 at high** (judgment prose): Part I from the per-unit tables in the rescoring
+   records (decision 52.8), the Paper disclosing the simulation overhaul (52.9), that Integral was read on its white paper of
+   December 2025, and the accelerated groups' limits (open items below). Then the PDF from a committed build script (stage 5; Sonnet 5.5).
+3. **Open items from the accelerated pass** (none changes a verdict as recorded; each is a challenge route): (a) the 17 designs and
+   mechanisms on C2.6, C3.6 and C4.6 are 0.5 by a stated rule, not read from their papers; (b) clause 1 of C2.1, C2.4 and C2.3 for
+   the configured economies (Gallup, turnout, OECD trust, time-use) was not re-measured; (c) the law-in-force clauses of C2.6 and
+   C4.6 and C4.6's mortality clause were not shown for any economy; (d) a Nordic finding for the owner: the Societal Poverty Line
+   headcount has risen since 2000 (Sweden 7.3% to 12.4%), which bears on Nordic Social Democracy's earlier C1.1 reading.
+4. **CCO-PTF-CIP-SZH's paused item (decision 58.2):** every CCO reading is now in; list them together for the owner with d37's
+   reasoning noted against each unit it could bear on (C1.2a first).
+5. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change is needed for it.
+
+## Decided (Session 65, under the delegation; `NEEC_Rescoring_s65.md`)
+
+All delegated and optional (may be reversed) except the corrections marked. 65.1 the nine remaining criteria are read in one script
+and one record on the rules of groups 2.2 to 2.10 (procedural). 65.2 C2.1, C2.4, C2.3 are held at their published scores without
+re-measuring the indicators, because a 1.0 needs a clause no unit shows (d47). 65.3 the 69 new units are scored: configured economies
+on cached series (Freedom House, Penn World Table 10.01, WJP 6.2), designs 0.5 on the bands' own wording, a mechanism's clause outside
+its reach 0.5 at most (D28(c)), China C2.6 and the planned economy 0.0 (d48). 65.4 stage 3's generator writes three v2 files without
+touching the files the pass was computed against. 65.5 corrections: Status Quo C4.1 and C4.4 0.0 to 0.5, Qatar C4.1 0.5 to 1.0,
+Participatory Economics C4.5 0.0 to 0.5, Integral C3.4 1.0 to 0.5 (d44 to d46). 65.6 the publish gate is left for the owner (d49): an
+auto-mode classifier refused the config change, which is consistent with decision 49.1.
 
 ## Decided (Session 64, under the delegation; `NEEC_Rescoring_s64.md`, section 3)
 
@@ -229,6 +231,12 @@ items of Session 64 (d42, d43) are the scorer's own delegated decisions, put in 
 |---|---|---|---|
 | S57-3.3 | CCO-PTF-CIP-SZH's other eight simulation units hold on v5.6.0 (C1.2a and C3.4 flagged toward 1.0; C3.4's clause 4 now short). **Paused by the owner** (decision 58.2) until all of the design's readings are in; Next work, item 5 | `NEEC_Rescoring_s57.md` 3.3 to 3.12 | d38 |
 | S64-3.1 | How C4.2's clauses are read: the carbon rate on three windows, the Red List Index at its two decimals, 0.0 against 0.5 by protocol 2.1 (decisions 64.1, 64.2; delegated, may be reversed) | NEEC_Rescoring_s64.md, 3.1, 3.2 | d42 |
+| S65-3.1 | Participatory Economics C4.5 0.0 to 0.5; first place now shared by CCO and PE at 14.5 | NEEC_Rescoring_s65.md, C4.5 | d44 |
+| S65-3.2 | Integral C3.4 1.0 to 0.5 | NEEC_Rescoring_s65.md, C3.4 | d45 |
+| S65-3.3 | Qatar C4.1 0.5 to 1.0; Status Quo C4.1, C4.4 0.0 to 0.5 | NEEC_Rescoring_s65.md, C4.1, C4.4 | d46 |
+| S65-3.4 | C2.1, C2.4, C2.3 held without re-measuring | NEEC_Rescoring_s65.md, C2.1, C2.4, C2.3 | d47 |
+| S65-3.5 | How the 69 new units were scored | NEEC_Rescoring_s65.md, C2.6, C3.6, C4.6 | d48 |
+| S65-3.6 | Publish the v2.0 scores on the live site | NEEC_Project_Handoff_65.md, section 4 | d49 |
 | S64-3.5 | All 16 C4.2 units hold; Market Socialism flagged toward 0.0 and Sovereign Wealth Fund Statism toward 0.5, each able to change a tier (decisions 64.3 to 64.6) | NEEC_Rescoring_s64.md, 3.3 to 3.7 | d43 |
 
 S57-3.9 (ledger d37) was answered: the owner kept C3.2 at 1.0 (decision 58.1). S63-3.1, S63-3.2 and S63-3.4 (d39 to d41)
