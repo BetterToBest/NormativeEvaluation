@@ -1096,8 +1096,8 @@ S49_CHECKS = [
               "the corpus, the record, Paper v1.4, the A.4 weighting script, the WJP extract, the issue forms and "
               "site/ (decision 49.7)",
          cmd=["python", "build_site.py", "--check"],
-         files={**{k: k for k in ("build_site.py", "criteria.json", "neec_corpus.json", "neec_scores.csv",
-                                  "summary_blocks_s28.json", "NEEC_Criteria_v2_s45.md", "NEEC_Paper_v1_4.md",
+         files={**{k: k for k in ("build_site.py", "criteria.json", "neec_corpus_v2.json", "neec_scores_v2.csv",
+                                  "summary_blocks_v2.json", "NEEC_Criteria_v2_s45.md", "NEEC_Paper_v1_4.md",
                                   "wjp_rol_sf62_2012_2025.csv", "neec_weighting_robustness_analysis_v2.py")},
                 **tree("site", "docs", os.path.join(".github", "ISSUE_TEMPLATE"))},
          stdout="build_site_check_output.txt", stderr=EMPTY, show_stdout=True),

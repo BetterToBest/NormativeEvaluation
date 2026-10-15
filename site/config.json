@@ -18,11 +18,12 @@
     "discussion_category": "ideas"
   },
   "scores": {
-    "publish": false,
+    "publish": true,
+    "provisional_note": "Provisional scores. These version 2.0 scores come from a rescoring pass still in progress: Report v2.0 and Paper v2.0 are not yet written, and some readings are open to challenge (see the Contribute page). Totals may change before release.",
     "release": "2.0",
-    "corpus": "neec_corpus.json",
-    "csv": "neec_scores.csv",
-    "summary_blocks": "summary_blocks_s28.json"
+    "corpus": "neec_corpus_v2.json",
+    "csv": "neec_scores_v2.csv",
+    "summary_blocks": "summary_blocks_v2.json"
   },
   "sources": {
     "criteria": "criteria.json",
