@@ -1,0 +1,256 @@
+{
+ "built_by": "Session 59",
+ "criterion": "C1.4",
+ "sources": {
+  "oecd_national_accounts": {
+   "clause": "demand clause",
+   "file": null,
+   "http": "403",
+   "title": "OECD, national accounts statistics (household final consumption)",
+   "url": "https://www.oecd.org/en/topics/sub-issues/national-accounts.html"
+  },
+  "wb_final_consumption": {
+   "chars": 2904,
+   "clause": "demand clause",
+   "extract_md5": "48f9b80a64e8bfafe664a887e445ec7c",
+   "file": "wb_final_consumption.txt",
+   "http": "200",
+   "raw_md5": "978832cc421932f89b3f24265ad4f757",
+   "title": "World Bank, final consumption expenditure (current US$), national accounts",
+   "url": "https://data.worldbank.org/indicator/NE.CON.TOTL.CD"
+  },
+  "wb_final_consumption_kd": {
+   "chars": 2984,
+   "clause": "demand clause",
+   "extract_md5": "81b7ccaa8107b496dc0465df6c284b53",
+   "file": "wb_final_consumption_kd.txt",
+   "http": "200",
+   "raw_md5": "a12734f400dde624ad0578e37e5197db",
+   "title": "World Bank, final consumption expenditure (constant 2015 US$)",
+   "url": "https://data.worldbank.org/indicator/NE.CON.TOTL.KD"
+  },
+  "wb_pip_methods": {
+   "chars": 2880,
+   "clause": "poverty clause",
+   "extract_md5": "578656a0c597512ffe3c1054254954aa",
+   "file": "wb_pip_methods.txt",
+   "http": "200",
+   "raw_md5": "e07b95a94392828451785b0b466c6cc5",
+   "title": "World Bank PIP, methodology page (Societal Poverty Line)",
+   "url": "https://datanalytics.worldbank.org/PIP-Methodology/"
+  }
+ },
+ "units": {
+  "CN": {
+   "chars": 1985,
+   "cites": [
+    "August 2025",
+    "February 2026",
+    "June 2023",
+    "May 2026",
+    "Rationale:",
+    "Robotics 2025",
+    "Score Justification:"
+   ],
+   "file": "NEEC_StateCapitalism_China_scoring_scratch.md",
+   "line": 287,
+   "md5": "ea5125e5b7c8c99a7fff5d5564d35e84",
+   "score": 0.5
+  },
+  "CPS": {
+   "chars": 282,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 478,
+   "md5": "a22503a5385d8222814f3cd0a9572d47",
+   "score": 0.5
+  },
+  "DE": {
+   "chars": 1550,
+   "cites": [
+    "Rationale:",
+    "Score Justification:",
+    "sufficient"
+   ],
+   "file": "NEEC_DoughnutEconomics_scoring_scratch.md",
+   "line": 217,
+   "md5": "10f04fb80e862c06843e88f23cfd20e8",
+   "score": 0.0
+  },
+  "DG": {
+   "chars": 270,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 928,
+   "md5": "84a5896d575372934d0dc68041375f0f",
+   "score": 0.5
+  },
+  "GEO": {
+   "chars": 1604,
+   "cites": [
+    "Dividend-dependent criterion \u2014 see Overview.",
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_Georgism_LVT_scoring_scratch.md",
+   "line": 174,
+   "md5": "4f634179018f986d22abfa831eec5e56",
+   "score": 0.5
+  },
+  "IF": {
+   "chars": 1257,
+   "cites": [
+    "Flagged:"
+   ],
+   "file": "NEEC_IslamicFinance_scoring_scratch.md",
+   "line": 252,
+   "md5": "ba8a7b23685a4c2d866750f20c927171",
+   "score": 0.0
+  },
+  "INT": {
+   "chars": 692,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 1382,
+   "md5": "d873ee1a38d894c703d6c40ae99053f0",
+   "score": 0.5
+  },
+  "LM": {
+   "chars": 261,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 658,
+   "md5": "d9e9a82530a139719e51a8eba47cd36b",
+   "score": 0.0
+  },
+  "MC": {
+   "chars": 1672,
+   "cites": [
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_MutualCredit_LETS_scoring_scratch.md",
+   "line": 187,
+   "md5": "267c59356ad84476db20da71f3f996a0",
+   "score": 0.5
+  },
+  "MMT": {
+   "chars": 331,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 748,
+   "md5": "e7b479d3c9fc4408efd88107ef57e484",
+   "score": 0.5
+  },
+  "MS": {
+   "chars": 281,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 568,
+   "md5": "f97a78c23b61038d635cb6916e265e8b",
+   "score": 0.5
+  },
+  "NSD": {
+   "chars": 285,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 388,
+   "md5": "4f0b55f0490df756d97f4379cc67bc69",
+   "score": 0.5
+  },
+  "OS": {
+   "chars": 1063,
+   "cites": [
+    "Score: 0.5. Alternative if resolved the other way: 0.0",
+    "not conditioned on employment"
+   ],
+   "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+   "line": 279,
+   "md5": "e6fc5eb3553ceeaf53590a9baec64366",
+   "score": 0.5
+  },
+  "QA": {
+   "chars": 2439,
+   "cites": [
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+   "line": 321,
+   "md5": "0f8aed95eed1e4d985ff4ea142d302c5",
+   "score": 0.5
+  },
+  "SC": {
+   "chars": 283,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 1018,
+   "md5": "ba267ab79692bde272fe454fe6979bb9",
+   "score": 0.0
+  },
+  "SG": {
+   "chars": 1784,
+   "cites": [
+    "April 2025",
+    "December 2020",
+    "December 2025",
+    "Fiscal capacity for emergencies.",
+    "IMF, 2026)",
+    "Jobseeker Support.",
+    "Rationale:",
+    "Score Justification:",
+    "Training."
+   ],
+   "file": "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+   "line": 281,
+   "md5": "b5863a3cb820c9f6a1b0db8eba102b13",
+   "score": 0.5
+  },
+  "SQ": {
+   "chars": 311,
+   "cites": [
+    "STRUCTURAL FAILURE."
+   ],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 300,
+   "md5": "ffa26771edf7c52a9ba99fc99c8b6074",
+   "score": 0.0
+  },
+  "SWF": {
+   "chars": 1229,
+   "cites": [
+    "Rationale:",
+    "Score Justification:"
+   ],
+   "file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+   "line": 246,
+   "md5": "f5fdd77fd7cee62d76920d5f5b351043",
+   "score": 0.5
+  },
+  "UBI": {
+   "chars": 278,
+   "cites": [],
+   "file": "NEEC_Report_v1_6.md",
+   "line": 838,
+   "md5": "a903f47be9cdb09343298e9e0b4ea213",
+   "score": 1.0
+  },
+  "UBS": {
+   "chars": 1913,
+   "cites": [
+    "Rationale:",
+    "Score Justification:",
+    "amount of wage income",
+    "income-need"
+   ],
+   "file": "NEEC_UniversalBasicServices_scoring_scratch.md",
+   "line": 232,
+   "md5": "e2552da7435228d9ebb37aed6d877dbc",
+   "score": 0.5
+  }
+ }
+}
