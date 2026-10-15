@@ -160,7 +160,7 @@ def model(L):
         code = e["code"]
         conf = cfg["systems"].get(code, {})
         blk = blocks.get(code, {})
-        s = dict(code=code, key=e["key"], name=e["display_name"], short=conf.get("short", e["display_name"]),
+        s = dict(code=code, key=e["key"], name=e["display_name"], short=conf.get("short", e["display_name"]), note=conf.get("note", ""),
                  slug=sslug(code), scope=e["scope_class"],
                  docs=blk.get("record", {}).get("documents", []),
                  scored=blk.get("record", {}).get("scored", ""),
@@ -712,6 +712,8 @@ def system_page(S, s):
     info = M["cfg"]["scope_classes"][s["scope"]]
     parts = [f'<h1>{esc(s["name"])}</h1>',
              f'<p class="lede">{esc(info["label"])}: {esc(info["gloss"])}. Code <code>{s["code"]}</code>.</p>']
+    if s["note"]:
+        parts.append(f'<p class="note">{esc(s["note"])}</p>')
     if s["code"] == M["cfg"]["site"]["author_design"]:
         parts.append('<p class="note">Designed by Duke Johnson, one of NEEC\'s two authors. The '
                      '<a href="{root}method.html#disclosure">disclosure</a> says how the project handles this.</p>')
