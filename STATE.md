@@ -1,7 +1,7 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 62 (C3.1 evidence cache built; no reading) (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 63 (group 2.9, C3.1 read) (2026-10-15). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
@@ -31,7 +31,12 @@ is 1.0; Status Quo falls from 0.5 to 0.0 (a correction: on the Census series the
 is above 50% and wider than in 2002, and the Black-white gap has stayed between 35% and 45% since 1972), which also
 resolves the 0.0 anchor's inconsistency logged since Handoff 30; 15 hold, three at 0.0 (LM, CN, QA); Singapore's clauses
 are short on its 2025 survey (the Malay gap widened) and it holds at 0.5; Integral holds at 0.5 on its white paper, so
-first place stays shared; Status Quo gains a failure, no tier changes. The next group is named below.
+first place stays shared; Status Quo gains a failure, no tier changes. **Group 2.9, C3.1 read as class I, done (Session 63,
+`NEEC_Rescoring_s63.md`)**, on the cache Session 62 built and ten data files Session 63 added (BEA series through FRED;
+the ILO's SDG 1.3.1 through the UN SDG API): no unit clears all three clauses, so none is 1.0; Status Quo rises from 0.0
+to 0.5 (a correction: US benefits rose 35.5% in 2020 against a 2.1% fall in real GDP, the CARES Act was signed within a
+week of the claims jump, coverage is 78.8%; flagged toward 0.0); 15 hold, Libertarian Minarchism at 0.0; Qatar
+(coverage 4.1%) and Doughnut Economics are flagged toward 0.0; no tier changes. The next group is named below.
 - **Landing:** by pull request and the owner's merge (W9, decision 52.3). The session opens the pull request; `harness.yml`
   checks it; the owner merges; `land-session.yml` reruns the checks on `main` and tags each `NEEC Session <n>` commit.
 - **Criteria:** v2.0, 29 criteria in `criteria.json`; protocol draft.9. Published scores remain on 26 criteria until
@@ -41,7 +46,7 @@ first place stays shared; Status Quo gains a failure, no tier changes. The next 
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
-- **Harness:** v34, 108 checks, byte-identical in the container (Python 3.13 in Sessions 56 to 61; 3.11 before) and
+- **Harness:** v35, 109 checks, byte-identical in the container (Python 3.13 in Sessions 56 to 63; 3.11 before) and
   checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
   `scores.publish` false, decision 49.1).
@@ -53,24 +58,25 @@ first place stays shared; Status Quo gains a failure, no tier changes. The next 
 
 ## Next work, in order
 
-1. **Group 2.9, C3.1 read as class I, in an Opus 5.5 session at high** (judgment group: 16 units in play, 3
-   tier-capable; xhigh only if the readings are contested). The evidence cache is built (Session 62,
-   `evidence_cache_s62.py`, `evidence_cache/C3.1/`; the ILO database was unreachable, HTTP 403, so clause 3 rests on the
-   World Bank coverage page and the designs' text). `rescoring_s60.py` is the model for a class I group;
-   `rescoring_s61.py` for one reading national surveys. Next after it: C1.1's evidence cache, Sonnet 5.5 at medium.
-2. **Then the groups in the triage's order** (rerun after each group): C3.1, C1.1, C4.2, C4.1, C2.1, C2.3, C2.4, C4.4,
-   C4.5, C2.5, C3.4. The class I groups (C3.1, C1.1, C2.1, C2.4, C2.3) need their evidence cache first, in a Sonnet 5.5
-   session at medium. Groups already planned partly (C4.4's 17, decision 48.3; C4.1's four part (b6) units on its debt
-   clause) are read within their criterion's group. `rescoring_s51.py`'s unit supersedes part (b3)'s C1.1. Write each
-   group as groups 2.2 to 2.7 were: a script on `pass_common.py` holding the readings (`U(...)`), its group-specific
-   checks and generated tables (`rescoring_s58.py` is the model for a class M criterion, `rescoring_s60.py` and
-   `rescoring_s56.py` for a class I one), a record, `PARTS` extended, the harness given the new files. Do not touch
-   earlier scripts or their captures. C1.1's group reads the configurations' baseline poverty on the Societal Poverty
-   Line, which group 2.7 did not need (reading 3.1).
+1. **Group 2.10, C4.2 Ecological Compliance read as class M, in an Opus 5.5 session at high** (a judgment re-read, no
+   evidence cache needed: 16 units in play, 3 tier-capable; xhigh only if the readings turn out contested). Session 63 ran
+   on Sonnet 5.5, not on the Opus 5.5 at high the routing assigns judgment groups, so the owner may wish to have group
+   2.9's judgment calls (Status Quo's correction, the Qatar and Doughnut Economics flags) read again in an Opus session;
+   d39 to d41 are in the ledger. After C4.2 the triage's order is C1.1 (class I; its evidence cache first, in a Sonnet 5.5
+   session at medium), C4.1, C2.1, C2.4, C2.3, C4.4, C4.5, C2.5, C3.4.
+2. **Then the groups in the triage's order** (rerun after each group). The class I groups left (C1.1, C2.1, C2.4, C2.3)
+   need their evidence cache first, in a Sonnet 5.5 session at medium. Groups already planned partly (C4.4's 17, decision
+   48.3; C4.1's four part (b6) units on its debt clause) are read within their criterion's group. `rescoring_s51.py`'s unit
+   supersedes part (b3)'s C1.1. Write each group as groups 2.2 to 2.9 were: a script on `pass_common.py` holding the
+   readings (`U(...)`), its group-specific checks and generated tables (`rescoring_s58.py` is the model for a class M
+   criterion, `rescoring_s63.py` for a class I one that reads national figures), a record, `PARTS` extended, the harness
+   given the new files (and `pass_common_selftest_output.txt`, `triage_s52_output.txt` and the README recaptured). Do not
+   touch earlier scripts or their captures. C1.1's group reads the configurations' baseline poverty on the Societal
+   Poverty Line, which group 2.7 did not need (reading 3.1).
 3. **The 69 new units** (C2.6, C3.6, C4.6; 23 each): no score exists, so none can be carried forward; they change
    every entry's failure count and total on the 29. Done after the class I and M groups, with the evidence cache.
-4. **Carry-forward (decision 52.7):** the triage now names six units that could change no failure count, tier or rank
-   on their own (CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, SG C2.5, UBS C4.5); with first place shared, CCO C4.5
+4. **Carry-forward (decision 52.7):** the triage now names seven units that could change no failure count, tier or rank
+   on their own (CCO C4.5, CN C2.5, CPS C2.5, IF C4.5, SG C2.5, SQ C2.5, UBS C4.5); with first place shared, CCO C4.5
    could still decide who is first alone, so read it rather than carry it. Reading them is cheap inside their
    criterion's group; any left unread is listed in Report v2.0 and the Paper.
 5. **CCO-PTF-CIP-SZH's paused item (decision 58.2):** when the design's last units are read (its C4.5 is the one left in
@@ -81,6 +87,17 @@ first place stays shared; Status Quo gains a failure, no tier changes. The next 
    C3.5's 0.0 band takes its examples from the units at 0.0 after group 2.4; C5.2's bands take theirs from the units
    after group 2.6), stage 4 (Report and Paper v2.0; the Paper discloses the simulation overhaul, decision 52.9, and
    that Integral was read on its white paper of December 2025), stage 5 (Paper PDF from a committed build script).
+
+## Decided (Session 63, under the delegation; `NEEC_Rescoring_s63.md`, section 3)
+
+No owner's answer was waiting (d38 still paused). **63.1** a method choice: C3.1's clause 2 counts any increase in
+household benefits against the fall in real GDP, legislated or automatic (automatism is tested by clause 1); clause 3 is
+the ILO's SDG 1.3.1 estimate read through the UN SDG API; the United States' D.62 is proxied by the BEA's government
+social benefits to persons (ledger d39). **63.2** Status Quo's C3.1 0.0 → 0.5 (a correction; flagged toward 0.0; d40).
+**63.3** China, Singapore and Qatar held at 0.5 (coverage 75.6%, 100% and 4.1%); Qatar flagged toward 0.0 (d41). **63.4**
+eleven designs' and mechanisms' units held at 0.5, Doughnut Economics flagged toward 0.0 (d41). **63.5** Libertarian
+Minarchism held at 0.0 (the only 0.0 now). Ostrom-style commons' scope scenario kept as published (reading 3.6). No flag
+could change a tier. Session 63 ran on Sonnet 5.5, not the routed Opus 5.5 at high (disclosed in the record's section 8).
 
 ## Decided (Session 61, under the delegation; `NEEC_Rescoring_s61.md`, section 3)
 
@@ -177,11 +194,15 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 The owner answered every earlier item in the ledger (decisions 57.1, 58.1, 58.2). Under decision 57.2 only
 CCO-PTF-CIP-SZH's score changes wait on the owner; other entries' changes are decided under the delegation. One item is
-open, paused at the owner's request; it must be settled before stage 3, and nothing else waits on it.
+open, paused at the owner's request (S57-3.3); it must be settled before stage 3, and nothing else waits on it. The three
+items of Session 63 are the scorer's own delegated decisions, put in the ledger for the owner to confirm or reverse; none blocks.
 
 | ID | Item | Recorded in | Ledger |
 |---|---|---|---|
 | S57-3.3 | CCO-PTF-CIP-SZH's other eight simulation units hold on v5.6.0 (C1.2a and C3.4 flagged toward 1.0; C3.4's clause 4 now short). **Paused by the owner** (decision 58.2) until all of the design's readings are in; Next work, item 5 | `NEEC_Rescoring_s57.md` 3.3 to 3.12 | d38 |
+| S63-3.1 | What C3.1's scaling clause counts: any increase in benefits, legislated or automatic (decision 63.1; delegated, may be reversed) | NEEC_Rescoring_s63.md, 3.1 | d39 |
+| S63-3.2 | Status Quo's C3.1 0.0 → 0.5, flagged toward 0.0 (decision 63.2; a correction under the delegation) | NEEC_Rescoring_s63.md, 3.2 | d40 |
+| S63-3.4 | Qatar's and Doughnut Economics' C3.1 held at 0.5, each flagged toward 0.0 (decisions 63.3, 63.4) | NEEC_Rescoring_s63.md, 3.3, 3.4 | d41 |
 
 S57-3.9 (ledger d37) was answered: the owner kept C3.2 at 1.0 (decision 58.1).
 
@@ -190,9 +211,9 @@ S57-3.9 (ledger d37) was answered: the owner kept C3.2 at 1.0 (decision 58.1).
 plain words with a default first, the other options after it, and a Reference entry (code = the ID) linking to the
 extended description in the record. Ledger rule for sessions: `CLAUDE.md`, "The ledger", with decision 57.2.
 
-Method choices Sessions 52 to 61 made that the criteria record does not yet carry (optional, not corrections; carried
+Method choices Sessions 52 to 63 made that the criteria record does not yet carry (optional, not corrections; carried
 into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5, 57.6, 57.8, 58.3, 58.8, 60.1, 60.3
-to 60.5, 61.1, 61.3 to 61.5 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2 and 61.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
+to 60.5, 61.1, 61.3 to 61.5, 63.1, 63.3 to 63.5 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2, 61.2 and 63.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
 key (Handoff 52, section 4).
 
 ## Model routing (decision 52.4)
@@ -266,12 +287,12 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
   reopening conditions above. Paper v2.0 states the version read, that the simulation is still being revised, and that
   the owner maintains both the design and the model. The record's section 8 lists what the units would need from the
   model.
-- **Ties.** First place is shared after group 2.8, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
+- **Ties.** First place is shared after group 2.9, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
   `triage_s52.py` name a shared first place as shared (57.10). The triage's "could change none" screen reads an entry's
   own rank, so with a tie it can list a unit that decides who is first (Next work, item 4).
 - **The shared pass module and the triage.** `python3 pass_common.py --selftest` reproduces group 2.1's tables from the
   parts before it; a new group is added to `PARTS` there, and the harness's S52 checks must then be given the group's
-  files (v29 does this through `S54_FILES`; v34 through `S61_FILES`). An owner's decision that changes a score is
+  files (v29 does this through `S54_FILES`; v35 through `S63_FILES`). An owner's decision that changes a score is
   applied as a part of its own (decision 58.8): `owner_s58.py` holds part "58.1"'s one unit, and the next group's
   script checks it. `python3 triage_s52.py` prints the
   consequence triage on the state through the last part (since Session 53 it reads the state from `PARTS` and holds no
@@ -295,6 +316,13 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
   Milligan on Quebec's childcare; the ACT Treasury's tax reform page and The Canberra Times of 3 July 2026 (the Pegasus
   Economics review); Isaac and Franke on the Kerala campaign (publisher's summary). The P2P Foundation wiki refused the
   container (HTTP 403).
+- **Sources used by group 2.9** (cached in `evidence_cache/C3.1/` by Sessions 62 and 63, digests held in
+  `rescoring_s63.py` and `evidence_cache_s63.py`): the BEA's series A063RC1A027NBEA, GDPCA and A063RC1 and the Department
+  of Labor's ICSA, through FRED (`fred.stlouisfed.org/graph/fredgraph.csv?id=...`, reachable; the daily fetch once
+  returned HTTP 000 and worked on retry); the ILO's SDG indicator 1.3.1 (series SI_COV_BENFTS) through
+  `unstats.un.org/sdgapi/v1/sdg/Series/Data`, reachable where the ILO's own pages are HTTP 403; the CARES Act's dates from
+  Wikipedia's API (HTTP 429 without a user agent, and again on a second fetch; the lead is cached as written). Not
+  cached: the IMF's fiscal-measures database (script-rendered), any D.62 series outside the United States.
 - **Sources used by group 2.8** (cached in `evidence_cache/C4.3/` by Session 61, digests held in `rescoring_s61.py`):
   the Census Bureau's CPS ASEC Table H-5 (xlsx md5 9086455a; seven series extracted), Singapore's General Household
   Survey 2025, Table 6.1 (PDF md5 051185ee, from singstat.gov.sg/files/), and five passages of Integral's white paper
