@@ -226,7 +226,14 @@ to d10ed6e, decision 57.3), through the captured output of cco_sim_v56_checks_s5
 reproduce the v5.6 release's published figures; the reopening conditions evaluated; the consequences cumulatively with
 every part before it, with NEEC_Rescoring_s57.md checked against its generated tables. pass_common.py's dominance line
 names a shared first place as shared (no earlier group had one), and its self-test allows a part whose units a later part
-has all superseded; the Session 52 checks now load group 2.5 as a part of the pass: 105 checks.
+has all superseded; the Session 52 checks now load group 2.5 as a part of the pass: 105 checks. Version 32 (Session 58)
+adds rescoring_s58.py, stage 2's group 2.6: the 16 units of C5.2 not yet re-estimated, re-read as class M on v2.0's five
+clauses under the scope "each shown feasible by precedent or component evidence", the stage counts and spans the
+readings derive recomputed, the clauses not estimated each tied to the clause that fixes its verdict, and the
+consequences cumulatively with every part before it, with NEEC_Rescoring_s58.md checked against its generated tables;
+it also checks owner_s58.py, the owner's decision 58.1 applied as a part of the pass of its own (CCO-PTF-CIP-SZH's C3.2
+restored to 1.0), against the captured simulation output by digest; the Session 52 checks now load both as parts of
+the pass: 106 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1219,11 +1226,26 @@ S57_CHECKS = [
          stdout="rescoring_s57_output.txt", stderr=EMPTY),
 ]
 
+# Session 58: the owner's decision 58.1 as part "58.1" (owner_s58.py) and group 2.6, C5.2 re-read as class M, on the
+# shared module. pass_common.PARTS now includes both, so the Session 52 checks load their files too.
+S58_FILES = {**S57_FILES, **{k: k for k in ("owner_s58.py", "rescoring_s58.py", "NEEC_Rescoring_s58.md")}}
+for _c in S52_CHECKS:
+    _c["files"] = S58_FILES
+S58_CHECKS = [
+    dict(name="rescoring_s58.py: rescoring pass stage 2, group 2.6, C5.2 Staged Transition Pathways re-read as class M "
+              "(the 16 units not yet re-estimated): the precedents' stages and spans recomputed, the clauses not "
+              "estimated tied to the clause fixing each verdict, the owner's part 58.1 checked against the runs' "
+              "capture, the rule with 0.0 on a stated whole-criterion reason (53.2), consequences cumulatively with "
+              "every part before it; no corpus file changed",
+         cmd=["python", "rescoring_s58.py"], files=S58_FILES,
+         stdout="rescoring_s58_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS + S57_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS)
 
 
 def md5(data):
