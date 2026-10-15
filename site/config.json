@@ -15,7 +15,8 @@
     "authors": "Duke Johnson and Claude (Anthropic)",
     "author_design": "CCO",
     "discussions": false,
-    "discussion_category": "ideas"
+    "discussion_category": "ideas",
+    "wordmark_title": "NEEC: Normative Economic Evaluation Criteria"
   },
   "scores": {
     "publish": true,
@@ -218,5 +219,40 @@
     "ai": "ai-replication.yml",
     "system": "propose-system.yml",
     "criterion": "propose-criterion.yml"
+  },
+  "acronyms": {
+    "GDP": "Gross Domestic Product",
+    "OECD": "Organisation for Economic Co-operation and Development",
+    "SDG": "Sustainable Development Goal",
+    "IMF": "International Monetary Fund",
+    "COVID": "Coronavirus disease",
+    "PPP": "purchasing power parity",
+    "EU-SILC": "European Union Statistics on Income and Living Conditions",
+    "IPCC": "Intergovernmental Panel on Climate Change",
+    "TFP": "total factor productivity",
+    "PFD": "Permanent Fund Dividend",
+    "ESG": "environmental, social and governance",
+    "ILO": "International Labour Organization",
+    "ONS": "Office for National Statistics",
+    "IUCN": "International Union for Conservation of Nature",
+    "WHO": "World Health Organization",
+    "IHME": "Institute for Health Metrics and Evaluation",
+    "WDI": "World Development Indicators",
+    "HETUS": "Harmonised European Time Use Surveys",
+    "EESC": "European Economic and Social Committee",
+    "PFAS": "per- and polyfluoroalkyl substances",
+    "AI": "artificial intelligence",
+    "UBI": "Universal Basic Income",
+    "UBS": "Universal Basic Services",
+    "SWF": "Sovereign Wealth Fund",
+    "FALC": "Fully Automated Luxury Communism",
+    "MMT": "Modern Monetary Theory",
+    "LETS": "Local Exchange Trading Systems",
+    "LVT": "Land Value Tax",
+    "GLC": "Government-Linked Company",
+    "CCO": "Creative Currency Octaves",
+    "PTF": "Public Trust Foundations",
+    "CIP": "Citizens Internet Portal",
+    "SZH": "Social Zone Harmonization"
   }
 }
