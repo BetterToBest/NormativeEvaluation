@@ -71,6 +71,7 @@ const share = (xs, f) => xs.filter(f).length / xs.length * 100;
 const ginW = xs => H.giniOfArr(xs) * xs.length / (xs.length - 1);
 const ENVS = { ref: ['Reference', H.FULL_INTEGRATION], adv: ['Adverse', H.ADVERSE_REFERENCE], st: ['Stress Test', H.STRESS_TEST] };
 const SNALL = { abawd: true, slope: true }, SC = H.SPEND_SOURCED;
+H.applyNR6(); H.tbSetG(H.TB_PROFILE_G);   // the testbed's study profile, set before every section (harness.js, testbed)
 
 function study(env, adjust, lo, hi) {
   const P = Object.assign({}, ENVS[env][1]), PR = H.tbPresets(P), rows = H.releaseRowsV54(SC);
