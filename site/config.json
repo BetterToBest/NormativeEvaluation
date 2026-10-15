@@ -139,7 +139,8 @@
       "note": "CCO-PTF-CIP-SZH combines four components: CCO is Creative Currency Octaves, PTF is Public Trust Foundations, CIP is Citizens Internet Portal, and SZH is Social Zone Harmonization. Also referred to in the literature as Compassionism."
     },
     "INT": {
-      "short": "Integral"
+      "short": "Integral",
+      "note": "Integral's design uses three named parts: COS is the Cooperative Organization System for distributed production, ITC is Integral Time Credits for tracking contribution, and FRS is the Feedback & Review System for continuous monitoring."
     },
     "GEO": {
       "short": "Georgism / LVT",
@@ -253,6 +254,7 @@
     "CCO": "Creative Currency Octaves",
     "PTF": "Public Trust Foundations",
     "CIP": "Citizens Internet Portal",
-    "SZH": "Social Zone Harmonization"
+    "SZH": "Social Zone Harmonization",
+    "ITC": "Integral Time Credits"
   }
 }
