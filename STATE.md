@@ -1,7 +1,7 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 58 (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 59 (cache for C1.4 built; no decision) (2026-10-15). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
@@ -41,15 +41,12 @@ open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Next work, in order
 
-1. **C1.4 Automation Resilience (group 2.7) needs its evidence cache first: a Sonnet 5.5 session at medium effort**
-   (fetching, digesting and indexing sources is mechanical; the judgment comes after). The triage, rerun after group
-   2.6, puts C1.4 first (class I, 20 units in play, 4 tier-capable; `triage_s52_output.txt`, section 4). Build it as
-   `evidence_cache_s55.py` built C3.5's (`evidence_cache/C1.4/`, an index, digests held in the script), reading the
-   state before the group (`pc.Pass(upto=...)`), since `evidence_cache_s55.py`'s check [2] reports a failure once its
-   group is read (it is not a harness check). C1.4 is class I: its indicators are named in v2.0's text
-   (`criteria.json`); the cache gathers each unit's indicator sources, not readings. Then **an Opus 5.5 session at high**
-   reads C1.4 from the cache (Integral's C1.4 can decide who is first; INT has 3 tier-capable units). CCO-PTF-CIP-SZH's
-   C1.4 was read in group 2.5 and is not in play.
+1. **C1.4 Automation Resilience (group 2.7): read it from the cache Session 59 built (`evidence_cache_s59.py`,
+   `evidence_cache/C1.4/`), in an Opus 5.5 session at high** (class I judgment; Integral's C1.4 can decide who is
+   first, INT has 3 tier-capable units; xhigh only if the readings prove contested). 20 units in play, 4
+   tier-capable. Write it as `rescoring_s56.py` wrote C3.5, on `pc.Pass(upto=...)` (the cache's check [2] reports a
+   failure once its group is read; it is not a harness check), register the cache files used in the harness, extend
+   `PARTS`. The OECD page was not cached (HTTP 403). CCO-PTF-CIP-SZH's C1.4 was read in group 2.5 and is not in play.
 2. **Then the groups in the triage's order** (rerun after each group): C4.3, C3.1, C4.2, C4.1, C1.1, C2.3, C2.4, C2.1,
    C4.4, C4.5, C2.5, C3.4. The class I groups (C3.1, C1.1, C2.3, C2.4, C2.1) need their evidence cache first, in a
    Sonnet 5.5 session. Groups already planned partly (C4.3's other 16, part (b8)'s readings 3.2 to 3.5; C4.4's 17,
