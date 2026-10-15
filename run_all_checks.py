@@ -244,7 +244,13 @@ between the median household incomes of the least and most advantaged groups on 
 the group added to the evidence cache checked by digest and every passage quoted found there, every gap the readings
 quote recomputed from them, each published rationale located, and the consequences cumulatively with every part before
 it, with NEEC_Rescoring_s61.md checked against its generated tables; the Session 52 checks now load group 2.8 as a part
-of the pass: 108 checks.
+of the pass: 108 checks. Version 35 (Session 63) adds rescoring_s63.py,
+stage 2's group 2.9, the third class I group: the 16 units of C3.1 not yet re-estimated, read on the measure v2.0 names
+(days to the first increased payment, social benefits against the fall in real GDP, and the ILO's coverage), the ten
+data files the group added to the evidence cache (and Session 62's index) checked by digest and every passage quoted found
+there, every figure the readings quote recomputed from them, each published rationale located and compared with the
+index, and the consequences cumulatively with every part before it, with NEEC_Rescoring_s63.md checked against its
+generated tables; the Session 52 checks now load group 2.9 as a part of the pass: 109 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1298,11 +1304,33 @@ S61_CHECKS = [
          stdout="rescoring_s61_output.txt", stderr=EMPTY),
 ]
 
+# Session 63: group 2.9, C3.1 read as class I, on the shared module. pass_common.PARTS now includes it, so the Session
+# 52 checks load its files too. It reads the ten data files it added to the evidence cache, Session 62's index and the
+# scoring documents holding the units' rationales, not the network.
+S63_FILES = {**S61_FILES, **{k: k for k in ("rescoring_s63.py", "NEEC_Rescoring_s63.md",
+                                             "NEEC_Georgism_LVT_scoring_scratch.md",
+                                             "NEEC_MutualCredit_LETS_scoring_scratch.md")},
+             **{"evidence_cache/C3.1/" + k: "evidence_cache/C3.1/" + k
+                for k in ("index.json", "fred_benefits_annual.csv", "fred_realgdp_annual.csv",
+                          "fred_benefits_monthly.csv", "fred_claims_weekly.csv", "sdg131_840.json", "sdg131_156.json",
+                          "sdg131_702.json", "sdg131_634.json", "sdg131_578.json", "cares_act_wikipedia_lead.txt")}}
+for _c in S52_CHECKS:
+    _c["files"] = S63_FILES
+S63_CHECKS = [
+    dict(name="rescoring_s63.py: rescoring pass stage 2, group 2.9, C3.1 Crisis Response Capacity read as class I (the "
+              "16 units not yet re-estimated): the evidence cache's data files by digest and every passage quoted, every "
+              "figure quoted recomputed from the cache, each published rationale located and unchanged since the "
+              "cache's index, the rule with 0.0 on a stated whole-criterion reason (53.2, 63.1), consequences "
+              "cumulatively with every part before it; no corpus file changed",
+         cmd=["python", "rescoring_s63.py"], files=S63_FILES,
+         stdout="rescoring_s63_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS)
 
 
 def md5(data):
