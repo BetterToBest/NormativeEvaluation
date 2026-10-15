@@ -261,7 +261,9 @@ rescoring_s65.py, the accelerated groups (decision 65.1): the remaining nine cri
 C2.1, C2.4, C2.3) read in one script and one record, and the three new criteria (C2.6, C3.6, C4.6; 69 units) scored, with the
 data files the groups added to the evidence cache checked by digest, every figure the readings quote recomputed from them,
 each published rationale located, the consequences cumulatively with every part before it, and NEEC_Rescoring_s65.md compared
-byte for byte with the record the script generates; the Session 52 checks now load it as a part of the pass: 111 checks.
+byte for byte with the record the script generates; the Session 52 checks now load it as a part of the pass; and apply_pass_s65.py,
+stage 3's generator, checked against the three v2 files it writes (the corpus on the 29 criteria, the scores CSV and the site's
+blocks): 112 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1376,6 +1378,19 @@ S65_CHECKS = [
          cmd=["python", "rescoring_s65.py"], files=S65_FILES,
          stdout="rescoring_s65_output.txt", stderr=EMPTY),
 ]
+
+# Session 65, stage 3: the generator that applies the pass. It reads neec_corpus.json (the published vectors the pass was computed
+# against), the pass's parts through pass_common.py, summary_blocks_s28.json and the record, and checks the three v2 files it wrote.
+S65B_FILES = {**S65_FILES, **{k: k for k in ("apply_pass_s65.py", "neec_corpus_v2.json", "neec_scores_v2.csv",
+                                             "summary_blocks_v2.json", "summary_blocks_s28.json")}}
+S65_CHECKS.append(
+    dict(name="apply_pass_s65.py --check: stage 3, the generator that applies the rescoring pass: the 23 entries on the 29 "
+              "criteria (neec_corpus_v2.json), their totals, domain sums, failures and tiers (neec_scores_v2.csv) and the "
+              "site's blocks (summary_blocks_v2.json) equal what the pass produces from the published vectors; the 26 "
+              "criteria's final scores are the pass's final state; each total on the 29 is the pass's total on the 26 plus "
+              "the three new units; the record's table on the 29 shows the same totals and ranks; no published file changed",
+         cmd=["python", "apply_pass_s65.py", "--check"], files=S65B_FILES,
+         stdout="apply_pass_s65_output.txt", stderr=EMPTY))
 
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
