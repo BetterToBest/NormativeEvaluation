@@ -233,7 +233,12 @@ readings derive recomputed, the clauses not estimated each tied to the clause th
 consequences cumulatively with every part before it, with NEEC_Rescoring_s58.md checked against its generated tables;
 it also checks owner_s58.py, the owner's decision 58.1 applied as a part of the pass of its own (CCO-PTF-CIP-SZH's C3.2
 restored to 1.0), against the captured simulation output by digest; the Session 52 checks now load both as parts of
-the pass: 106 checks.
+the pass: 106 checks. Version 33 (Session 60) adds rescoring_s60.py, stage 2's
+group 2.7, the second class I group: the 20 units of C1.4 not yet re-estimated, read on the measure v2.0 names (each
+clause a level in each of three displacement scenarios), every file of the evidence cache the readings use checked by
+digest and every passage quoted from it found there, each published rationale located where the cache's index puts it,
+and the consequences cumulatively with every part before it, with NEEC_Rescoring_s60.md checked against its generated
+tables; the Session 52 checks now load group 2.7 as a part of the pass: 107 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1241,11 +1246,39 @@ S58_CHECKS = [
          stdout="rescoring_s58_output.txt", stderr=EMPTY),
 ]
 
+# Session 60: group 2.7, C1.4 read as class I, on the shared module. pass_common.PARTS now includes it, so the Session 52
+# checks load its files too. It reads the evidence cache Session 59 built and the two extracts Session 60 added, and the
+# scoring documents the cache's index names, not the network.
+S60_FILES = {**S58_FILES, **{k: k for k in ("rescoring_s60.py", "NEEC_Rescoring_s60.md", "NEEC_Report_v1_6.md",
+                                            "NEEC_StateCapitalism_China_scoring_scratch.md",
+                                            "NEEC_DoughnutEconomics_scoring_scratch.md",
+                                            "NEEC_Georgism_LVT_scoring_scratch.md", "NEEC_IslamicFinance_scoring_scratch.md",
+                                            "NEEC_MutualCredit_LETS_scoring_scratch.md",
+                                            "NEEC_Ostrom_Commons_scoring_scratch.md",
+                                            "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+                                            "NEEC_StateCapitalism_Singapore_scoring_scratch.md",
+                                            "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+                                            "NEEC_UniversalBasicServices_scoring_scratch.md")},
+             **{"evidence_cache/C1.4/" + k: "evidence_cache/C1.4/" + k
+                for k in ("index.json", "wb_pip_methods.txt", "wb_final_consumption.txt", "wb_final_consumption_kd.txt",
+                          "wb_fce_kd_metadata.txt", "integral_wp_v01_extract.txt")}}
+for _c in S52_CHECKS:
+    _c["files"] = S60_FILES
+S60_CHECKS = [
+    dict(name="rescoring_s60.py: rescoring pass stage 2, group 2.7, C1.4 Automation Resilience read as class I (the 20 "
+              "units not yet re-estimated): the evidence cache's files by digest and every passage quoted, each "
+              "published rationale located by the cache's index, the measure's reading (60.1), the rule with 0.0 on a "
+              "stated whole-criterion reason (53.2), consequences cumulatively with every part before it; no corpus "
+              "file changed",
+         cmd=["python", "rescoring_s60.py"], files=S60_FILES,
+         stdout="rescoring_s60_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS)
 
 
 def md5(data):

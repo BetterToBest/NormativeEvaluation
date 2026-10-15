@@ -1,7 +1,7 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 59 (cache for C1.4 built; no decision) (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 60 (group 2.7, C1.4 read) (2026-10-15). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
@@ -21,7 +21,10 @@ open items of Handoffs 43 to 58, which no longer need to be read for them.
   (v0.1, December 2025), flagged toward 0.0; Sovereign Wealth Fund Statism rises from 0.5 to 1.0 on Norway's and
   Timor-Leste's deployments, flagged toward 0.5; the other 14 hold (Centrally Planned Socialism and Fully Automated
   Luxury Communism at 0.0). **Integral moves from Partially to Potentially Adequate**, the pass's first tier change in
-  stage 2's groups. The next group is named below.
+  stage 2's groups. **Group 2.7, C1.4 read as class I, done (Session 60, `NEEC_Rescoring_s60.md`)**, on the cache
+Session 59 built: no unit's sources state either clause in any displacement scenario, so none is 1.0; Universal Basic
+Income falls from 1.0 to 0.5 (a correction, as parts (b4) and 2.5 read the other 1.0s); 19 hold, five at 0.0; Integral
+holds at 0.5 on its white paper, so first place stays shared; no tier changes. The next group is named below.
 - **Landing:** by pull request and the owner's merge (W9, decision 52.3). The session opens the pull request; `harness.yml`
   checks it; the owner merges; `land-session.yml` reruns the checks on `main` and tags each `NEEC Session <n>` commit.
 - **Criteria:** v2.0, 29 criteria in `criteria.json`; protocol draft.9. Published scores remain on 26 criteria until
@@ -29,33 +32,34 @@ open items of Handoffs 43 to 58, which no longer need to be read for them.
 - **Simulation pin (decisions 57.3, 57.5; 52.9's freeze superseded):** `BetterToBest/compassionism-simulation` at
   `d10ed6e` (v5.6.0), `harness.js` md5 `84be3bc9`, `index.html` md5 `2e1cc8c7`; its engine is the v5.6 release's.
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
-  commits move only the simulation's pages; no design paper changed).
-- **Harness:** v32, 106 checks, byte-identical in the container (Python 3.13 in Sessions 56 to 58; 3.11 before) and
+  commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
+  design paper changed).
+- **Harness:** v33, 107 checks, byte-identical in the container (Python 3.13 in Sessions 56 to 60; 3.11 before) and
   checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, scores gated (`site/config.json`
   `scores.publish` false, decision 49.1).
 - **Provisional standing on the published 26-criterion structure** (not for publication before stage 3): first place
   is shared at 14.5/26 by CCO-PTF-CIP-SZH (published 24.5) and Integral; Participatory Economics 14.0; Nordic Social
-  Democracy 13.5. Seven entries are Potentially Adequate (CCO, PE, NSD, INT, DG, MS, GEO). Eight units not yet read
-  could each change who is first (`triage_s52_output.txt`, section 2).
+  Democracy 13.5. Seven entries are Potentially Adequate (CCO, PE, NSD, INT, DG, MS, GEO). Seven units not yet read
+  could each change who is first (NSD C2.5, PE C2.5, PE C4.5, CCO C4.5, INT C1.1, INT C3.4, INT C4.3;
+  `triage_s52_output.txt`, section 2).
 
 ## Next work, in order
 
-1. **C1.4 Automation Resilience (group 2.7): read it from the cache Session 59 built (`evidence_cache_s59.py`,
-   `evidence_cache/C1.4/`), in an Opus 5.5 session at high** (class I judgment; Integral's C1.4 can decide who is
-   first, INT has 3 tier-capable units; xhigh only if the readings prove contested). 20 units in play, 4
-   tier-capable. Write it as `rescoring_s56.py` wrote C3.5, on `pc.Pass(upto=...)` (the cache's check [2] reports a
-   failure once its group is read; it is not a harness check), register the cache files used in the harness, extend
-   `PARTS`. The OECD page was not cached (HTTP 403). CCO-PTF-CIP-SZH's C1.4 was read in group 2.5 and is not in play.
-2. **Then the groups in the triage's order** (rerun after each group): C4.3, C3.1, C4.2, C4.1, C1.1, C2.3, C2.4, C2.1,
-   C4.4, C4.5, C2.5, C3.4. The class I groups (C3.1, C1.1, C2.3, C2.4, C2.1) need their evidence cache first, in a
-   Sonnet 5.5 session. Groups already planned partly (C4.3's other 16, part (b8)'s readings 3.2 to 3.5; C4.4's 17,
-   decision 48.3; C4.1's four part (b6) units on its debt clause) are read within their criterion's group.
-   `rescoring_s51.py`'s unit supersedes part (b3)'s C1.1. Write each group as groups 2.2 to 2.6 were: a script on
-   `pass_common.py` holding the readings (`U(...)`), its group-specific checks and generated tables (`rescoring_s58.py`
-   is the model for a five-clause class M criterion with clauses not estimated, `rescoring_s56.py` for a class I one),
-   a record, `PARTS` extended, the harness given the new files (as v32 did through `S58_FILES`). Do not touch earlier
-   scripts or their captures.
+1. **C4.3 Group Equity (group 2.8), class M, in an Opus 5.5 session at high** (a judgment re-read with no cache
+   needed; 16 units in play, 4 tier-capable, and Integral's C4.3 can decide who is first; xhigh only if the readings
+   prove contested). Part (b8) planned its readings 3.2 to 3.5 (`NEEC_Rescoring_s49.md`). Write it as `rescoring_s58.py`
+   wrote C5.2 (class M), on `pc.Pass(upto=...)`, extend `PARTS`, give the harness the new files (as v33 did through
+   `S60_FILES`), rerun the triage.
+2. **Then the groups in the triage's order** (rerun after each group): C3.1, C4.2, C1.1, C4.1, C2.1, C2.4, C2.3, C4.4,
+   C4.5, C2.5, C3.4. The class I groups (C3.1, C1.1, C2.1, C2.4, C2.3) need their evidence cache first, in a Sonnet 5.5
+   session at medium. Groups already planned partly (C4.4's 17, decision 48.3; C4.1's four part (b6) units on its debt
+   clause) are read within their criterion's group. `rescoring_s51.py`'s unit supersedes part (b3)'s C1.1. Write each
+   group as groups 2.2 to 2.7 were: a script on `pass_common.py` holding the readings (`U(...)`), its group-specific
+   checks and generated tables (`rescoring_s58.py` is the model for a class M criterion, `rescoring_s60.py` and
+   `rescoring_s56.py` for a class I one), a record, `PARTS` extended, the harness given the new files. Do not touch
+   earlier scripts or their captures. C1.1's group reads the configurations' baseline poverty on the Societal Poverty
+   Line, which group 2.7 did not need (reading 3.1).
 3. **The 69 new units** (C2.6, C3.6, C4.6; 23 each): no score exists, so none can be carried forward; they change
    every entry's failure count and total on the 29. Done after the class I and M groups, with the evidence cache.
 4. **Carry-forward (decision 52.7):** the triage now names seven units that could change no failure count, tier or rank
@@ -70,6 +74,19 @@ open items of Handoffs 43 to 58, which no longer need to be read for them.
    C3.5's 0.0 band takes its examples from the units at 0.0 after group 2.4; C5.2's bands take theirs from the units
    after group 2.6), stage 4 (Report and Paper v2.0; the Paper discloses the simulation overhaul, decision 52.9, and
    that Integral was read on its white paper of December 2025), stage 5 (Paper PDF from a committed build script).
+
+## Decided (Session 60, under the delegation; `NEEC_Rescoring_s60.md`, section 3)
+
+No owner's answer was waiting (d38 still paused). **60.1** a method choice: C1.4's clauses are levels in each of three
+displacement scenarios on the measure v2.0 names, shown only by a model of the scenarios; a rationale's judgement of what
+a system "can maintain" is not an estimate; final consumption expenditure includes general government's, so in-kind
+provision counts toward demand. **60.2** Universal Basic Income's C1.4 1.0 → 0.5 (a correction: silence is not
+clearance, as for FALC, PE and CCO). **60.3** the fourteen 0.5s held (Universal Basic Services' demand-side finding not
+borne out on the measure; Qatar's buffer covers part of the population). **60.4** the five 0.0s held; Status Quo and
+Stakeholder Capitalism flagged toward 0.5 and Singapore toward 0.0 on an open peer question (a time-limited jobseeker
+payment counted as a buffer for Singapore and not for the United States); no flag could change a tier. **60.5**
+Integral's 0.5 held on its white paper (essentials accessible "regardless of age or ability", but access "emerges from
+participation"; no model of the scenarios). Islamic Finance's and Ostrom's published flags kept.
 
 ## Decided (Session 58; `NEEC_Rescoring_s58.md`, section 3)
 
@@ -152,9 +169,9 @@ S57-3.9 (ledger d37) was answered: the owner kept C3.2 at 1.0 (decision 58.1).
 plain words with a default first, the other options after it, and a Reference entry (code = the ID) linking to the
 extended description in the record. Ledger rule for sessions: `CLAUDE.md`, "The ledger", with decision 57.2.
 
-Method choices Sessions 52 to 58 made that the criteria record does not yet carry (optional, not corrections; carried
-into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5, 57.6, 57.8, 58.3, 58.8 (decisions
-53.3, 56.2, 56.4, 57.7, 58.4 and 58.5 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
+Method choices Sessions 52 to 60 made that the criteria record does not yet carry (optional, not corrections; carried
+into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5, 57.6, 57.8, 58.3, 58.8, 60.1, 60.3
+to 60.5 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5 and 60.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
 key (Handoff 52, section 4).
 
 ## Model routing (decision 52.4)
@@ -228,12 +245,12 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
   reopening conditions above. Paper v2.0 states the version read, that the simulation is still being revised, and that
   the owner maintains both the design and the model. The record's section 8 lists what the units would need from the
   model.
-- **Ties.** First place is shared after group 2.6, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
+- **Ties.** First place is shared after group 2.7, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
   `triage_s52.py` name a shared first place as shared (57.10). The triage's "could change none" screen reads an entry's
   own rank, so with a tie it can list a unit that decides who is first (Next work, item 4).
 - **The shared pass module and the triage.** `python3 pass_common.py --selftest` reproduces group 2.1's tables from the
   parts before it; a new group is added to `PARTS` there, and the harness's S52 checks must then be given the group's
-  files (v29 does this through `S54_FILES`; v32 through `S58_FILES`). An owner's decision that changes a score is
+  files (v29 does this through `S54_FILES`; v33 through `S60_FILES`). An owner's decision that changes a score is
   applied as a part of its own (decision 58.8): `owner_s58.py` holds part "58.1"'s one unit, and the next group's
   script checks it. `python3 triage_s52.py` prints the
   consequence triage on the state through the last part (since Session 53 it reads the state from `PARTS` and holds no
@@ -257,6 +274,12 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
   Milligan on Quebec's childcare; the ACT Treasury's tax reform page and The Canberra Times of 3 July 2026 (the Pegasus
   Economics review); Isaac and Franke on the Kerala campaign (publisher's summary). The P2P Foundation wiki refused the
   container (HTTP 403).
+- **Sources used by group 2.7** (cached in `evidence_cache/C1.4/`; Session 59's by `evidence_cache_s59.py --fetch`, two
+  added by Session 60 and held by digest in `rescoring_s60.py`): the World Bank's PIP methodology page, the WDI pages for
+  final consumption expenditure (current and constant US$), the WDI source note for NE.CON.TOTL.KD (from
+  api.worldbank.org), and five passages of Integral's white paper v0.1 (PDF md5 a6defc9a). The OECD national accounts
+  page refused the container (HTTP 403). `evidence_cache_s59.py`'s check [2] now reports a failure, as expected once the
+  group is read; it is not a harness check.
 - **Figures used by group 2.5** (held in `rescoring_s57.py`): CPI-U annual averages 255.657 (2019) and 321.943 (2025;
   BLS, as the simulation's sources cite it; FRED's annual series omits 2025 for October 2025's missing month, and the 11
   published months average to it); the v5.6 release's published figures (`data/releases/v5.6.json` at `d10ed6e`).
