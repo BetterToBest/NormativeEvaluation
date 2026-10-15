@@ -31,8 +31,8 @@ sys.path.insert(0, HERE)
 import pass_common as pc  # noqa: E402
 
 TAG, RECORD = "(2.11)", "NEEC_Rescoring_s65.md"
-CRITS = ["C4.1", "C4.4", "C3.4", "C4.5", "C2.5", "C1.1", "C2.1", "C2.4", "C2.3"]
-UNITS = {}
+CRITS = ["C4.1", "C4.4", "C3.4", "C4.5", "C2.5", "C1.1", "C2.1", "C2.4", "C2.3", "C2.6", "C3.6", "C4.6"]
+ALL = {}            # every unit this script reads, the 26 published criteria's and the three new criteria's
 GENERATED = {}
 NOTES = {}
 FLAGS_TIER = {}
@@ -46,7 +46,7 @@ SCRATCH = {"DE": "NEEC_DoughnutEconomics", "UBS": "NEEC_UniversalBasicServices",
 def U(code, crit, verdict, clauses, flag=None, note="", zero=None):
     """One unit. clauses: one (status, estimate, source) per v2.0 clause. flag: (alternative, reading). zero: protocol 2.1's
     whole-criterion reason (decision 53.2)."""
-    UNITS[(code, crit)] = dict(verdict=verdict, clauses=list(clauses), flag=flag, note=note, zero=zero)
+    ALL[(code, crit)] = dict(verdict=verdict, clauses=list(clauses), flag=flag, note=note, zero=zero)
 
 
 def rat_head(code, crit):
@@ -215,7 +215,7 @@ def checks_C41(check, p):
           "the quoted 2023 figures (Finland 77.2%, China 84.1%) are in the cache")
     for code, isos in C41_ECON.items():
         want = c41_status(isos)
-        got = (UNITS[(code, "C4.1")]["clauses"][0][0], UNITS[(code, "C4.1")]["clauses"][1][0])
+        got = (ALL[(code, "C4.1")]["clauses"][0][0], ALL[(code, "C4.1")]["clauses"][1][0])
         check(want == got, f"{code}: clause statuses {got} equal those the cache gives")
 
 
@@ -453,7 +453,7 @@ def checks_C45(check, p):
     d = p.v2["C4.5"]["definition"]
     check(p.v2["C4.5"]["revision"]["cls"] == "D" and len(d["clauses"]) == 2 and "10% GDP" in d["clauses"][0],
           "C4.5 is class D with two clauses in v2.0: extraction rates below 10% of GDP, exit rights; no unit falls")
-    check(all(r["verdict"] >= p.vec[k][c] for (k, c), r in UNITS.items() if c == "C4.5"), "no C4.5 unit falls (class D)")
+    check(all(r["verdict"] >= p.vec[k][c] for (k, c), r in ALL.items() if c == "C4.5"), "no C4.5 unit falls (class D)")
 
 
 # =========================================================================================================================
@@ -500,7 +500,7 @@ def checks_C25(check, p):
     d = p.v2["C2.5"]["definition"]
     check(p.v2["C2.5"]["revision"]["cls"] == "D" and len(d["clauses"]) == 3 and "3 months" in d["clauses"][0],
           "C2.5 is class D with three clauses in v2.0 (the association clause deleted); no unit falls")
-    check(all(r["verdict"] >= p.vec[k][c] for (k, c), r in UNITS.items() if c == "C2.5"), "no C2.5 unit falls (class D)")
+    check(all(r["verdict"] >= p.vec[k][c] for (k, c), r in ALL.items() if c == "C2.5"), "no C2.5 unit falls (class D)")
 
 
 # =========================================================================================================================
@@ -674,6 +674,278 @@ def checks_C23(check, p):
           "C2.3 is class I with three clauses in v2.0: 50% creative engagement (aspirational unless a survey is named), 10 hours, 70/100")
 
 
+# =========================================================================================================================
+# THE THREE NEW CRITERIA (class N): C2.6 Civil Liberties and Rule of Law, C3.6 Productive and Innovative Capacity, C4.6 Harm
+# Internalization. No score exists, so each of the 69 units is scored here on all its clauses (decision 65.3, delegated,
+# optional). Configured economies are read on the series v2.0 names, cached in evidence_cache/; designs on their stated
+# provisions, which this pass did not re-read criterion by criterion: a design with no stated provision is "not shown"
+# (0.5 by D28), and a mechanism's clause outside its reach is "out of reach" (0.5 at most, protocol 3.2, D28(c)).
+# =========================================================================================================================
+NEW = ["C2.6", "C3.6", "C4.6"]
+CONFIGURED = ["SQ", "NSD", "CPS", "CN", "SG", "QA"]
+SYSTEMS = ["MS", "LM", "DG", "SC", "FALC", "PE", "CCO", "INT", "DE"]
+MECHS = ["MMT", "UBI", "GEO", "MC", "UBS", "SWF", "IF", "OS"]
+ISO3 = {"SQ": ["USA"], "NSD": ["DNK", "FIN", "NOR", "SWE"], "CN": ["CHN"], "SG": ["SGP"], "QA": ["QAT"]}
+ENT = {"USA": "United States", "CHN": "China", "SGP": "Singapore", "QAT": "Qatar", "DNK": "Denmark", "FIN": "Finland",
+       "NOR": "Norway", "SWE": "Sweden"}
+NOSRC = "the system's own sources"
+
+
+def fh(entity):
+    import csv
+    best = None
+    for row in csv.DictReader(open(os.path.join(HERE, "evidence_cache", "C2.6", "owid_freedom_house_civil_liberties_rating.csv"),
+                                   encoding="utf-8")):
+        if row["Entity"] == entity and (best is None or int(row["Year"]) > best[0]):
+            best = (int(row["Year"]), int(row[list(row)[3]]))
+    return best
+
+
+def pwt(iso):
+    import csv
+    rows = {}
+    for row in csv.DictReader(open(os.path.join(HERE, "evidence_cache", "C3.6", "pwt1001_selected_economies.csv"))):
+        if row["countrycode"] == iso:
+            rows[int(row["year"])] = row
+    y1 = max(rows)
+    y0 = y1 - 20
+
+    def g(y, k):
+        v = rows[y][k]
+        return float(v) if v != "" else None
+
+    out = None
+    if all(g(y, k) for y in (y0, y1) for k in ("rgdpo", "emp", "avh")):
+        f = lambda y: g(y, "rgdpo") / (g(y, "emp") * g(y, "avh"))
+        out = 100 * ((f(y1) / f(y0)) ** (1 / 20) - 1)
+    tfp = None
+    if g(y0, "rtfpna") and g(y1, "rtfpna"):
+        tfp = 100 * ((g(y1, "rtfpna") / g(y0, "rtfpna")) ** (1 / 20) - 1)
+    return y0, y1, out, tfp
+
+
+def wjp(iso):
+    import csv
+    best = None
+    for row in csv.DictReader(open(os.path.join(HERE, "wjp_rol_sf62_2012_2025.csv"), encoding="utf-8")):
+        if row["code"] == iso and (best is None or row["edition"] > best[0]):
+            best = (row["edition"], float(row["sf62"]))
+    return best
+
+
+FHSRC = ("Freedom House, Freedom in the World civil-liberties rating (1-7; rating 1 is the top band, 53 or more of 60, and 6-7 "
+         "the two lowest, 16 or less), as Our World in Data republishes it (evidence_cache/C2.6/owid_freedom_house_civil_"
+         "liberties_rating.csv, retrieved 2026-10-15)")
+PWTSRC = ("Penn World Table 10.01 (rgdpo, emp, avh, rtfpna), 20 years to 2019, the table's last year (evidence_cache/C3.6/"
+          "pwt1001_selected_economies.csv, retrieved 2026-10-15)")
+WJPSRC = ("World Justice Project Rule of Law Index, sub-factor 6.2, edition 2025 (wjp_rol_sf62_2012_2025.csv, in this repository)")
+LAWNS = "the law in force is not named in this pass"
+Z_BAND = "the band's numeric test: a Freedom House rating of 6 or 7 is a score of 16 or less (protocol 2.1)"
+
+
+def new_unit(code, crit, verdict, clauses, flag=None, note="", zero=None):
+    U(code, crit, verdict, clauses, flag=flag, note=note, zero=zero)
+
+
+def lib_rating(isos):
+    return [(ENT[i], fh(ENT[i])) for i in isos]
+
+
+# ---- C2.6 --------------------------------------------------------------------------------------------------------------
+def c26_cfg(code, verdict, zero=None, flag=None, note=""):
+    r = lib_rating(ISO3[code])
+    txt = "; ".join(f"{e} {v[1]} ({v[0]} edition)" for e, v in r)
+    top = all(v[1] == 1 for _, v in r)
+    low = all(v[1] >= 6 for _, v in r)
+    c1 = ("C" if top else "S", f"civil-liberties rating: {txt}", FHSRC)
+    c = [c1, ("U", LAWNS + "; consent to treatment is not shown", "the law in force"),
+         ("U", LAWNS + "; the limits on compulsion are not shown", "the law in force")]
+    new_unit(code, "C2.6", verdict, c, flag=flag, zero=zero, note=note)
+
+
+c26_cfg("SQ", 0.5, note="rating 2 is below the top band, so clause 1 is short; clauses 2 and 3 are not shown, so the unit is 0.5")
+c26_cfg("NSD", 0.5, flag=("1.0", "3.7"),
+        note="all four countries are in the top band (clause 1 cleared); the statutes on consent and the limits on compulsion "
+             "(each country's patients' rights and communicable-diseases acts) are not named in this pass, so the unit is 0.5, "
+             "flagged toward 1.0 (reading 3.7)")
+c26_cfg("CN", 0.0, zero=Z_BAND, note="rating 6: a score of 16 or less, which is the 0.0 band by its numeric test")
+c26_cfg("SG", 0.5, note="rating 4 is in the 17-to-52 range; clauses 2 and 3 not shown")
+c26_cfg("QA", 0.5, note="rating 5 is in the 17-to-52 range; clauses 2 and 3 not shown")
+new_unit("CPS", "C2.6", 0.0,
+         [("S", "a single-party state with no independent adjudication between the system's administrators and its participants "
+                "(Report v1.6 C2.1 and C4.4 findings: assignment to jobs, restricted mobility, surveillance)", REP("CPS", "C2.1")),
+          ("U", LAWNS, "the law in force"), ("U", LAWNS, "the law in force")],
+         zero="a design that subordinates expression, association and due process to its administration with no independent "
+              "adjudication (the 0.0 band)", note="scored from the published findings; no Freedom House rating exists for the "
+                                                  "configuration as a present-day economy")
+for code in SYSTEMS + MECHS:
+    mech = code in MECHS
+    c1 = ("R" if mech else "U",
+          ("the mechanism does not govern the civil liberties of the economy it operates in (protocol 3.2, reach); it adds or "
+           "takes nothing" if mech else "the system's sources state no answer to the fifteen civil-liberties questions"),
+          NOSRC)
+    c2 = ("R" if mech else "U", "out of reach" if mech else "the sources state no consent provision", NOSRC)
+    c3 = ("R" if mech else "U", "out of reach" if mech else "the sources state no limits on compulsion", NOSRC)
+    new_unit(code, "C2.6", 0.5, [c1, c2, c3],
+             flag=(("1.0", "3.8") if code == "LM" else None),
+             note=("a mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))" if mech else
+                   "the design's guarantees are unstated for these questions, which is the 0.5 band's own wording; this pass did "
+                   "not read the design's sources for it, so the unit is open to challenge") +
+                  ("; flagged toward 1.0 because limiting the state's scope is the design's central guarantee (reading 3.8)" if code == "LM" else ""))
+
+
+# ---- C3.6 --------------------------------------------------------------------------------------------------------------
+def pw(iso):
+    y0, y1, out, tfp = pwt(iso)
+    return y0, y1, out, tfp
+
+
+def c3_cfg(code, verdict, flag=None, note="", zero=None):
+    parts1, parts2, ok1, ok2 = [], [], True, True
+    for iso in ISO3[code]:
+        y0, y1, out, tfp = pw(iso)
+        parts1.append(f"{ENT[iso]} {out:+.2f}% a year" if out is not None else f"{ENT[iso]} not available (no hours series)")
+        parts2.append(f"{ENT[iso]} {tfp:+.2f}% a year" if tfp is not None else f"{ENT[iso]} not available")
+        ok1 &= out is not None and out >= 0
+        ok2 &= tfp is not None and tfp >= 0
+    c1 = ("C" if ok1 else ("U" if any("not available" in x for x in parts1) else "S"),
+          f"real output per hour worked, {y0}-{y1}: " + ", ".join(parts1), PWTSRC)
+    c2 = ("C" if ok2 else "S", f"total factor productivity, {y0}-{y1}: " + ", ".join(parts2), PWTSRC)
+    c3 = ("U", "the C1.1 basket's provision at the economy's actual hours is not assessed in this pass", "the economy's record")
+    new_unit(code, "C3.6", verdict, [c1, c2, c3], flag=flag, note=note, zero=zero)
+
+
+c3_cfg("SQ", 0.5, note="clauses 1 and 2 cleared on the table; clause 3 not assessed, so 0.5")
+c3_cfg("NSD", 0.5, note="clause 2 is short in Norway (-0.38% a year) though positive in the other three; clause 3 not assessed")
+c3_cfg("CN", 0.5, note="both productivity clauses cleared; clause 3 not assessed, so 0.5")
+c3_cfg("SG", 0.5, flag=("0.0", "3.9"),
+       note="total factor productivity declined over the 20 years on the table, though output per hour rose; the 0.0 band needs "
+            "a decline with no credible pathway under the system's own logic, which is not shown, so 0.5, flagged toward 0.0 "
+            "(reading 3.9)")
+c3_cfg("QA", 0.5, flag=("0.0", "3.9"),
+       note="the table has no hours series for Qatar, and total factor productivity fell 4.7% a year, which is a steep fall that "
+            "reflects the table's treatment of a resource economy; flagged toward 0.0 (reading 3.9)")
+new_unit("CPS", "C3.6", 0.0,
+         [("S", "output per hour growth slowed to a halt in the 1970s and 1980s (Easterly and Fischer 1995, 'The Soviet Economic "
+                "Decline', World Bank Economic Review 9(3); not cached in this repository)", "the literature cited"),
+          ("S", "total factor productivity growth fell to zero or below over the same decades (the same paper)", "the literature cited"),
+          ("U", "not assessed", "the economy's record")],
+         zero="a decline in total factor productivity with no credible pathway under the system's own logic, which suppressed the "
+              "price signals it did not replace (the 0.0 band); read from the literature, so flagged for challenge",
+         flag=("0.5", "3.10"), note="scored from the literature, not from a cached series, because the Penn World Table does not "
+                                    "cover the configuration")
+for code in SYSTEMS + MECHS:
+    mech = code in MECHS
+    c1 = ("R" if mech else "U", ("the mechanism does not govern output per hour of the economy it operates in (reach)" if mech
+                                  else "the sources state no mechanism for allocating investment and rewarding improvement with a record"),
+          NOSRC)
+    c2 = ("R" if mech else "U", "out of reach" if mech else "no component record is cited for total factor productivity", NOSRC)
+    c3 = ("R" if mech else "U", "out of reach" if mech else "no provisioning account at the design's stated hours is given", NOSRC)
+    new_unit(code, "C3.6", 0.5, [c1, c2, c3],
+             note=("a mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))" if mech else
+                   "the design has an allocation mechanism of its own, but its productivity is shown by projection resting on "
+                   "untested assumptions at best, which is the 0.5 band's wording; not read criterion by criterion in this pass"))
+
+
+# ---- C4.6 --------------------------------------------------------------------------------------------------------------
+def c4_cfg(code, verdict, c2, flag=None, note="", zero=None):
+    parts, ok = [], True
+    for iso in ISO3[code]:
+        ed, v = wjp(iso)
+        parts.append(f"{ENT[iso]} {v:.2f}")
+        ok &= v >= 0.77
+    c3 = ("C" if ok else "S", f"WJP sub-factor 6.2 (edition 2025): " + ", ".join(parts) + " against the bar of 0.77", WJPSRC)
+    c1 = ("U", "the SDG 3.9 mortality series does not span 20 years and the IHME series was not reachable, so the start-to-end "
+               "comparison is not made", "WHO Global Health Observatory (SDG 3.9.1 to 3.9.3)")
+    new_unit(code, "C4.6", verdict, [c1, c2, c3], flag=flag, note=note, zero=zero)
+
+
+c4_cfg("SQ", 0.5, ("C", "tort, product-liability and environmental-liability law, class actions and CERCLA; BP's 2016 Deepwater "
+                        "Horizon settlement (over US$20 billion) is a claim decided against the party that caused the harm and paid",
+                   "the law in force and the settlement record; not cached"),
+       note="clause 3 cleared (0.87), clause 2 shown, clause 1 not shown, so 0.5")
+c4_cfg("NSD", 0.5, ("U", "each country has an environmental-damage compensation statute, but no claim paid within the window is named "
+                         "in this pass", "the law in force"),
+       note="clause 3 cleared in all four (0.92 to 0.99); clauses 1 and 2 not shown; 0.5")
+c4_cfg("CN", 0.5, ("U", "the 2015 Environmental Protection Law lets approved NGOs bring public-interest suits, but a claim paid "
+                        "within the window is not named in this pass", "the law in force"),
+       note="clause 3 short (0.61); a mechanism exists, so 0.5")
+c4_cfg("SG", 0.5, ("U", "no claim paid within the window is named in this pass", "the law in force"),
+       note="clause 3 cleared (0.94); clauses 1 and 2 not shown; 0.5")
+c4_cfg("QA", 0.5, ("U", "no claim paid within the window is named in this pass", "the law in force"),
+       note="clause 3 short (0.66); a mechanism exists, so 0.5")
+new_unit("CPS", "C4.6", 0.0,
+         [("S", "pollution toll not reduced: the Aral Sea and Chernobyl (Report v1.6 C4.1 and C4.2 findings)", REP("CPS", "C4.1")),
+          ("S", "no liability enforceable by those harmed; the state was both polluter and regulator", REP("CPS", "C4.2")),
+          ("S", "the regulators were agencies of the planners they would regulate", REP("CPS", "C4.4"))],
+         zero="no structural mechanism made harm a cost to whoever caused it: the regulator was controlled by the party it "
+              "regulated (the 0.0 band)")
+for code in SYSTEMS + MECHS:
+    mech = code in MECHS
+    if mech:
+        c = [("R", "the mechanism does not govern pollution mortality of the economy it operates in (reach)", NOSRC),
+             ("R", "out of reach: liability is that of the host economy", NOSRC), ("R", "out of reach", NOSRC)]
+    else:
+        c = [("U", "the sources state no pollution-mortality path", NOSRC),
+             ("U", "the sources state no liability provision enforceable by those harmed", NOSRC),
+             ("U", "the sources state no regulatory-independence provision", NOSRC)]
+    new_unit(code, "C4.6", 0.5, c,
+             note=("a mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))" if mech else
+                   "the design coexists with, or states, some mechanism that prices or limits harm; this pass did not read its "
+                   "sources for the three clauses, so the unit is open to challenge"))
+
+NOTES["C2.6"] = (
+    "C2.6 is class N: no score existed, so every unit is scored on all three clauses (a Freedom House civil-liberties score of "
+    "at least 53 of 60, consent to medical treatment protected in law, compulsion prescribed by law, time-limited and "
+    "reviewable). The configured economies are read on Freedom House's 1-7 civil-liberties rating (cached), which v2.0's bands "
+    "tie to the scores: rating 1 is 53 or more, 6 and 7 are 16 or less. The United States (2), Singapore (4) and Qatar (5) are "
+    "short on clause 1; the four Nordic countries (1) clear it; **China (6) is 0.0 by the band's numeric test.** The statutes "
+    "on consent and compulsion are not named in this pass, so no configured economy is 1.0, and Nordic Social Democracy is "
+    "0.5 flagged toward 1.0. Centrally Planned Socialism is 0.0 on the published findings. The seventeen designs and "
+    "mechanisms are 0.5 on a stated rule: a design's unstated guarantees are the 0.5 band's own wording, and a mechanism's "
+    "clauses outside its reach hold it at 0.5 at most (D28(c)). **These 17 are the least-read units in the pass.**")
+NOTES["C3.6"] = (
+    "C3.6 is class N, three clauses: real output per hour worked and total factor productivity non-declining over 20 years, "
+    "and the poverty basket provisioned at the system's working time. The Penn World Table 10.01 (cached) gives the twenty "
+    "years to 2019: the United States (+1.6% output per hour, +0.6% TFP), China (+6.5%, +0.9%) and Sweden clear both; "
+    "Norway's TFP fell (-0.4% a year), so Nordic Social Democracy is short on clause 2; Singapore's TFP fell (-0.4%) and "
+    "Qatar's (-4.7%, with no hours series) is a resource economy's artefact; clause 3 is not assessed for any economy, so none "
+    "is 1.0. Centrally Planned Socialism is 0.0 from the literature on the Soviet decline. The seventeen designs and "
+    "mechanisms are 0.5 on the same stated rule as C2.6.")
+NOTES["C4.6"] = (
+    "C4.6 is class N, three clauses: pollution mortality no higher at the end of 20 years than at the start, liability "
+    "enforceable by those harmed with a paid claim named, and regulation free of improper influence (WJP sub-factor 6.2 of "
+    "0.77 or more). The WJP series (in this repository) clears clause 3 for the United States (0.87), Singapore (0.94) and the "
+    "four Nordic countries (0.92 to 0.99) and fails it for China (0.61) and Qatar (0.66). The mortality series could not be "
+    "compared over 20 years (the WHO SDG series is short and the IHME series was unreachable), so clause 1 is not shown for "
+    "any economy, and no economy is 1.0. Centrally Planned Socialism is 0.0 (the regulator was the polluter). The seventeen "
+    "designs and mechanisms are 0.5 on the same stated rule as C2.6.")
+
+
+def checks_new(check, p):
+    print("\n[N] THE THREE NEW CRITERIA: THE CACHE AND THE FIGURES THE READINGS QUOTE")
+    for c in NEW:
+        d = p.v2[c]["definition"]
+        check(p.v2[c]["revision"]["cls"] == "N" and len(d["clauses"]) == 3, f"{c} is class N with three clauses in v2.0")
+    check(len([k for k in ALL if k[1] in NEW]) == 69 and all(len([1 for k in ALL if k[1] == c]) == 23 for c in NEW),
+          "69 units: 23 entries on each of C2.6, C3.6 and C4.6")
+    for (crit, name), want in {("C2.6", "owid_freedom_house_civil_liberties_rating.csv"): "826b197def081492e1473d37cbc61771",
+                               ("C3.6", "pwt1001_selected_economies.csv"): "811f205d23ae23bf086b5a5addfeff08"}.items():
+        raw = open(os.path.join(HERE, "evidence_cache", crit, name), "rb").read()
+        check(hashlib.md5(raw).hexdigest() == want, f"evidence_cache/{crit}/{name}: md5 {want[:8]}")
+    check(fh("United States")[1] == 2 and fh("China")[1] == 6 and fh("Singapore")[1] == 4 and fh("Qatar")[1] == 5
+          and all(fh(e)[1] == 1 for e in ("Denmark", "Finland", "Norway", "Sweden")),
+          "Freedom House civil-liberties ratings: United States 2, China 6, Singapore 4, Qatar 5, the four Nordic countries 1")
+    us, ch, no = pwt("USA"), pwt("CHN"), pwt("NOR")
+    check(abs(us[2] - 1.59) < 0.01 and abs(us[3] - 0.61) < 0.01 and abs(ch[2] - 6.50) < 0.01 and abs(no[3] + 0.38) < 0.01
+          and pwt("QAT")[2] is None and abs(pwt("QAT")[3] + 4.70) < 0.01 and abs(pwt("SGP")[3] + 0.36) < 0.01,
+          "Penn World Table 2000-2019 rates: United States +1.59% and +0.61%, China +6.50%, Norway TFP -0.38%, Singapore TFP "
+          "-0.36%, Qatar TFP -4.70% with no hours series")
+    w = {i: wjp(i)[1] for i in ENT}
+    check(all(w[i] >= 0.77 for i in ("USA", "SGP", "DNK", "FIN", "NOR", "SWE")) and w["CHN"] < 0.77 and w["QAT"] < 0.77,
+          "WJP 6.2: the United States, Singapore and the Nordic four at or above 0.77; China and Qatar below")
+
+
 def checks_C44(check, p):
     print("\n[C4.4] THE CACHE AND THE CLASSIFICATIONS THE READINGS QUOTE")
     d = p.v2["C4.4"]["definition"]
@@ -687,7 +959,14 @@ def checks_C44(check, p):
           "2024 regimes: United States liberal democracy; China and Qatar closed autocracies; Singapore an electoral autocracy")
 
 
-CHECKS = {"C4.1": checks_C41, "C4.4": checks_C44, "C3.4": checks_C34, "C4.5": checks_C45, "C2.5": checks_C25, "C1.1": checks_C11, "C2.1": checks_C21, "C2.4": checks_C24, "C2.3": checks_C23}
+CHECKS = {"C4.1": checks_C41, "C4.4": checks_C44, "C3.4": checks_C34, "C4.5": checks_C45, "C2.5": checks_C25, "C1.1": checks_C11, "C2.1": checks_C21, "C2.4": checks_C24, "C2.3": checks_C23, "NEW": checks_new}
+
+
+# pass_common.Pass reads UNITS of every part: the units on the published 26-criterion structure. The 69 units of the three new
+# criteria have no published score to change and are in NEW_UNITS (and in ALL, which this script's own checks use).
+_cids26 = {c["id"] for c in json.load(open(os.path.join(HERE, "criteria_s44_snapshot.json")))["criteria"]}
+UNITS = {k: v for k, v in ALL.items() if k[1] in _cids26}
+NEW_UNITS = {k: v for k, v in ALL.items() if k[1] not in _cids26}
 
 
 # =========================================================================================================================
@@ -704,9 +983,13 @@ def build_record(t, p):
          "Criteria in this record: " + ", ".join(f"{c} {p.v2[c]['name']}" for c in CRITS) + ".", ""]
     for c in CRITS:
         L += [f"## {c} {p.v2[c]['name']}", "", NOTES[c], "", t[f"summary {c}"], ""]
-        for code in [k for (k, cc) in UNITS if cc == c]:
+        for code in [k for (k, cc) in ALL if cc == c]:
             L += [t[f"unit {code} {c}"], ""]
-    L += ["## Consequences", "", t["consequences"], "", t["dominance"], "", t["ledger"], "", t["anchors"], ""]
+    L += ["## Consequences on the 26 criteria", "", t["consequences"], "", t["dominance"], "", t["ledger"], "", t["anchors"], ""]
+    if "on29" in t:
+        L += ["## Totals on the 29 criteria (provisional)", "",
+              "Each entry's total after the pass on the 26, plus its three new units; failures count every 0.0 on the 29, with "
+              "the tier thresholds of the 26-criterion structure held until stage 3 decides them.", "", t["on29"], ""]
     return "\n".join(L)
 
 
@@ -728,51 +1011,68 @@ def main():
 
     print("[1] THE GROUPS")
     for c in CRITS:
-        mine = [k for k in p.order if (k, c) in UNITS]
+        mine = [k for k in p.order if (k, c) in ALL]
+        if c in NEW:
+            vv = [ALL[(k, c)]["verdict"] for k in mine]
+            check(mine == p.order and len(vv) == 23,
+                  f"{c}: one unit per entry, none scored before (class N): 1.0 x{vv.count(1.0)}, 0.5 x{vv.count(0.5)}, 0.0 x{vv.count(0.0)}")
+            continue
         before = [k for k in p.order if (k, c) in p.merged]
-        check(sorted(mine + before) == sorted(p.order) and len(mine) == sum(1 for (_, cc) in UNITS if cc == c),
+        check(sorted(mine + before) == sorted(p.order) and len(mine) == sum(1 for (_, cc) in ALL if cc == c),
               f"{c}: one unit per entry not yet re-estimated ({len(mine)}); {len(before)} were re-estimated before and are not re-read")
         pub = {k: p.vec[k][c] for k in p.order}
-        rise = [k for k in mine if UNITS[(k, c)]["verdict"] > pub[k]]
-        fall = [k for k in mine if UNITS[(k, c)]["verdict"] < pub[k]]
+        rise = [k for k in mine if ALL[(k, c)]["verdict"] > pub[k]]
+        fall = [k for k in mine if ALL[(k, c)]["verdict"] < pub[k]]
         check(True, f"{c}: raises {len(rise)} ({', '.join(rise)}), lowers {len(fall)} ({', '.join(fall)}), holds "
                     f"{len(mine) - len(rise) - len(fall)}")
         bad = [k for k in mine if not rat_head(k, c)[2].startswith(f"{c} {p.v2[c]['name']}: {pc.f1(pub[k])}")]
         check(not bad, f"{c}: each published rationale is found by heading at its published score", ", ".join(bad))
     for c in CRITS:
-        CHECKS[c](check, p)
+        if c not in NEW:
+            CHECKS[c](check, p)
+    if any(c in NEW for c in CRITS):
+        CHECKS["NEW"](check, p)
 
     print("\n[3] FLAGS")
-    fl = {k: v for k, v in UNITS.items() if v["flag"]}
-    vn = p.vectors([UNITS], start=p.vsteps[-1])[-1]
+    fl = {k: v for k, v in ALL.items() if v["flag"]}
+    vn = p.vectors([ALL], start=p.vsteps[-1])[-1]
     tiers = []
     for (code, c), r in fl.items():
         v = dict(vn[code])
-        v[c] = float(r["flag"][0][:3])
-        if pc.tier(sum(1 for k in p.cids if vn[code][k] == 0.0)) != pc.tier(sum(1 for k in p.cids if v[k] == 0.0)):
+        v29 = {**{k: ALL[(code, k)]["verdict"] for k in NEW if (code, k) in ALL}, **vn[code]}
+        alt = {**v29, c: float(r["flag"][0][:3])}
+        if pc.tier(sum(1 for k in v29 if v29[k] == 0.0)) != pc.tier(sum(1 for k in alt if alt[k] == 0.0)):
             tiers.append(f"{code} {c}")
     FLAGS_TIER["tier"] = sorted(tiers)
     check(True, f"{len(fl)} flags ({', '.join(f'{k[0]} {k[1]} toward {v['flag'][0]}' for k, v in fl.items())}); those that could change a tier: {', '.join(sorted(tiers)) or 'none'}")
 
     print("\n[4] THE SHARED MODULE'S CHECKS (records, the rule, consequences, ledger, dominance, anchors)")
-    good, t = pc.run_group(p, TAG, UNITS, RECORD, "After group 2.10", "After the accelerated groups")
+    old = {k: v for k, v in ALL.items() if k[1] in p.cids}
+    new = {k: v for k, v in ALL.items() if k[1] not in p.cids}
+    good, t = pc.run_group(p, TAG, old, RECORD, "After group 2.10", "After the accelerated groups")
     ok = ok and good
+    if new:
+        # the shared module's consequence tables are on the 26 published criteria; the new criteria's units get its record
+        # and rule checks here, and their totals are in the record's table on the 29
+        pc.check_records(p, new, check)
+        pc.check_rule(new, check)
 
     for c in CRITS:
         cl = p.v2[c]["definition"]["clauses"]
-        pub = {k: p.vec[k][c] for k in p.order}
+        pub = {k: p.vec[k].get(c) for k in p.order}
+        fp = lambda x: "new" if x is None else pc.f1(x)
         rows_ = ["| Entry | Published | " + " | ".join(f"Clause {i + 1}" for i in range(len(cl))) + " | Verdict | Flag |",
                  "|---|---:|" + "---|" * len(cl) + "---:|---|"]
-        for (code, cc), r in UNITS.items():
+        for (code, cc), r in ALL.items():
             if cc != c:
                 continue
-            rows_.append(f"| {code} | {pc.f1(pub[code])} | " + " | ".join(pc.STATUS[x[0]] for x in r["clauses"]) +
+            rows_.append(f"| {code} | {fp(pub[code])} | " + " | ".join(pc.STATUS[x[0]] for x in r["clauses"]) +
                          f" | {pc.f1(r['verdict'])} | {('toward ' + r['flag'][0][:3]) if r['flag'] else ''} |")
         t[f"summary {c}"] = "\n".join(rows_)
-        for (code, cc), r in UNITS.items():
+        for (code, cc), r in ALL.items():
             if cc != c:
                 continue
-            lines = [f"#### {code} {c} {p.v2[c]['name']}: {pc.f1(pub[code])} → {pc.f1(r['verdict'])}", "",
+            lines = [f"#### {code} {c} {p.v2[c]['name']}: {fp(pub[code])} → {pc.f1(r['verdict'])}", "",
                      "| # | Clause (v2.0) | Status | Estimate | Source |", "|---:|---|---|---|---|"]
             for i, (s_, est, src_) in enumerate(r["clauses"]):
                 lines.append(f"| {i + 1} | {cl[i]} | {pc.STATUS[s_]} | {est} | {src_} |")
@@ -783,6 +1083,17 @@ def main():
             if r["note"]:
                 lines += ["", f"*Note:* {r['note']}."]
             t[f"unit {code} {c}"] = "\n".join(lines)
+    if all(c in CRITS for c in NEW):
+        v29 = {code: {**vn[code], **{k: ALL[(code, k)]["verdict"] for k in NEW}} for code in p.order}
+        tot = {code: sum(v.values()) for code, v in v29.items()}
+        fails = {code: sum(1 for x in v.values() if x == 0.0) for code, v in v29.items()}
+        rk = pc.ranks(tot)
+        rows29 = ["| Entry | Total on 29 (rank) | Of which on the 26 | Of which on the three new | Failures | Tier |",
+                  "|---|---:|---:|---:|---:|---|"]
+        for code in sorted(p.order, key=lambda c_: (-tot[c_], p.order.index(c_))):
+            n26 = sum(vn[code][k] for k in p.cids)
+            rows29.append(f"| {code} | {pc.f1(tot[code])} ({rk[code]}) | {pc.f1(n26)} | {pc.f1(tot[code] - n26)} | {fails[code]} | {pc.tier(fails[code])} |")
+        t["on29"] = "\n".join(rows29)
     rec = build_record(t, p)
     if "--write-record" in sys.argv[1:]:
         open(os.path.join(HERE, RECORD), "w", encoding="utf-8").write(rec)

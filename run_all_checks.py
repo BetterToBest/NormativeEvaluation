@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 30 (Session 56). Runs every verification and analysis script on file
+Version 37 (Session 65). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -256,7 +256,12 @@ v2.0 names (consumption-based carbon, the Red List Index, footprint against bioc
 two data files the group added to the evidence cache checked by digest and the rows quoted found there, every rate and index
 change the readings quote recomputed from them, each published rationale located, and the consequences cumulatively with
 every part before it, with NEEC_Rescoring_s64.md checked against its generated tables; the Session 52 checks now load group
-2.10 as a part of the pass: 110 checks.
+2.10 as a part of the pass: 110 checks. Version 37 (Session 65) adds
+rescoring_s65.py, the accelerated groups (decision 65.1): the remaining nine criteria (C4.1, C4.4, C3.4, C4.5, C2.5, C1.1,
+C2.1, C2.4, C2.3) read in one script and one record, and the three new criteria (C2.6, C3.6, C4.6; 69 units) scored, with the
+data files the groups added to the evidence cache checked by digest, every figure the readings quote recomputed from them,
+each published rationale located, the consequences cumulatively with every part before it, and NEEC_Rescoring_s65.md compared
+byte for byte with the record the script generates; the Session 52 checks now load it as a part of the pass: 111 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1350,11 +1355,33 @@ S64_CHECKS = [
          stdout="rescoring_s64_output.txt", stderr=EMPTY),
 ]
 
+# Session 65: the accelerated groups, one script (rescoring_s65.py), on the shared module. pass_common.PARTS includes it, so the
+# Session 52 checks load its files too. It reads the data files it added to the evidence cache (C1.1, C2.6, C3.6, C4.1, C4.4),
+# the scoring documents holding the units' rationales and wjp_rol_sf62_2012_2025.csv, not the network.
+S65_FILES = {**S64_FILES, **{k: k for k in ("rescoring_s65.py", "NEEC_Rescoring_s65.md", "wjp_rol_sf62_2012_2025.csv")},
+             **{"evidence_cache/" + k: "evidence_cache/" + k
+                for k in ("C4.1/imf_weo_gross_debt_pct_gdp.json", "C4.1/wb_gross_savings_pct_gni.json",
+                          "C4.1/wb_consumption_fixed_capital_pct_gni.json", "C4.4/owid_vdem_regimes_of_the_world.csv",
+                          "C1.1/wb_societal_poverty_rate.json", "C2.6/owid_freedom_house_civil_liberties_rating.csv",
+                          "C3.6/pwt1001_selected_economies.csv")}}
+for _c in S52_CHECKS:
+    _c["files"] = S65_FILES
+S65_CHECKS = [
+    dict(name="rescoring_s65.py: rescoring pass stage 2, the accelerated groups (C4.1, C4.4, C3.4, C4.5, C2.5, C1.1, C2.1, "
+              "C2.4, C2.3: the 128 units not yet re-estimated, and the three new criteria C2.6, C3.6, C4.6: 69 units): the "
+              "evidence cache's data files by digest, every figure quoted recomputed from them, each published rationale "
+              "located, the rule with 0.0 on a stated whole-criterion reason (53.2), consequences cumulatively with every "
+              "part before it, and the record compared byte for byte with the one the script generates; no corpus file "
+              "changed",
+         cmd=["python", "rescoring_s65.py"], files=S65_FILES,
+         stdout="rescoring_s65_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS + S65_CHECKS)
 
 
 def md5(data):

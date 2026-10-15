@@ -34,7 +34,9 @@ SOURCES = {("C4.1", "imf_weo_gross_debt_pct_gdp.json"): IMF,
            ("C4.1", "wb_gross_savings_pct_gni.json"): WB.format("NY.GNS.ICTR.GN.ZS"),
            ("C4.1", "wb_consumption_fixed_capital_pct_gni.json"): WB.format("NY.ADJ.DKAP.GN.ZS"),
            ("C4.4", "owid_vdem_regimes_of_the_world.csv"): OWID.format("political-regime"),
-           ("C1.1", "wb_societal_poverty_rate.json"): WB.format("SI.POV.SOPO")}
+           ("C1.1", "wb_societal_poverty_rate.json"): WB.format("SI.POV.SOPO"),
+           ("C2.6", "owid_freedom_house_civil_liberties_rating.csv"): OWID.format("civil-liberties-fh"),
+           ("C3.6", "pwt1001_selected_economies.csv"): "https://dataverse.nl/api/access/datafile/354098"}
 # md5 of each file as fetched and written by --fetch (2026-10-15)
 FILES = {
     ("C4.1", "imf_weo_gross_debt_pct_gdp.json"): "148ad7d2c97f421dcadc839ea72f99e1",
@@ -42,6 +44,8 @@ FILES = {
     ("C4.1", "wb_consumption_fixed_capital_pct_gni.json"): "56352b479a298464aacc85eeedd1d136",
     ("C4.4", "owid_vdem_regimes_of_the_world.csv"): "c388c56ed1f40ffc8b93271236be431d",
     ("C1.1", "wb_societal_poverty_rate.json"): "49aa64030c6f5d6349faa72a8b9952bf",
+    ("C2.6", "owid_freedom_house_civil_liberties_rating.csv"): "826b197def081492e1473d37cbc61771",
+    ("C3.6", "pwt1001_selected_economies.csv"): "811f205d23ae23bf086b5a5addfeff08",
 }
 
 
@@ -59,7 +63,14 @@ def fetch():
         if code.decode().strip() != "200" or not body:
             print(f"FAILED {crit}/{name}: HTTP {code.decode().strip()}")
             continue
-        if name.endswith(".csv"):
+        if name.startswith("pwt"):
+            import pandas as pd
+            open("/tmp/_pwt.dta", "wb").write(body)
+            df = pd.read_stata("/tmp/_pwt.dta")
+            df = df[df.countrycode.isin(ISO)][["countrycode", "year", "rgdpo", "emp", "avh", "rtfpna"]]
+            df = df.sort_values(["countrycode", "year"])
+            data = df.to_csv(index=False, lineterminator="\n", float_format="%.6f").encode("utf-8")
+        elif name.endswith(".csv"):
             rows = list(csv.reader(io.StringIO(body.decode("utf-8"))))
             keep = [rows[0]] + sorted((x for x in rows[1:] if x[0] in ENTITIES), key=lambda x: (x[0], int(x[2])))
             buf = io.StringIO()

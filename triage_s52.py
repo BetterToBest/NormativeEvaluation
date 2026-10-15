@@ -153,6 +153,10 @@ def main():
           "and 3.0 points. They are the one certain change to the corpus' results.")
     check(all(k in p.v2 and cls[k] == "N" for k in NEW) and not any(k in p.cids for k in NEW),
           "the new criteria are class N and outside the published 26")
+    if not crit_rows:
+        print("\nNEXT GROUP FROM THE TRIAGE: none; every unit in play has been read (Session 65).")
+        print("\nCONSEQUENCE TRIAGE COMPUTED." if ok else "\nCONSEQUENCE TRIAGE: CHECKS FAILED.")
+        return 0 if ok else 1
     top = crit_rows[0]
     print(f"\nNEXT GROUP FROM THE TRIAGE: {top[0]} {p.v2[top[0]]['name']} ({top[1]}, {top[2]} units, {top[3]} tier-capable); "
           f"model by the reading: {'Opus 5.5 high' if top[1] == 'M' else 'Sonnet 5.5 for the evidence, Opus 5.5 high for the readings'}.")
