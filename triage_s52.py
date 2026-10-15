@@ -99,8 +99,12 @@ def main():
         [d for d in p.order if (T[d] if d != x[0] else T[d] - v[x[0]][x[1]] + y) == max(
             T[e] if e != x[0] else T[e] - v[x[0]][x[1]] + y for e in p.order)] != first
         for y in reach(p, v, cls, *x))]
-    check(len(first) == 1, f"first place is {first[0]} at {pc.f1(T[first[0]])}; the next total is "
-                          f"{pc.f1(sorted(T.values())[-2])}")
+    if len(first) == 1:
+        check(True, f"first place is {first[0]} at {pc.f1(T[first[0]])}; the next total is "
+                    f"{pc.f1(sorted(T.values())[-2])}")
+    else:   # Session 57: a shared first place (group 2.5); "who is first" is then the set of entries sharing it
+        check(True, f"first place is shared by {', '.join(first)} at {pc.f1(T[first[0]])}; the next total is "
+                    f"{pc.f1(max(x for x in T.values() if x < T[first[0]]))}")
     print(f"  units that alone could change who is first: {len(lead)}" + (f" ({', '.join(c + ' ' + k for c, k in lead)})" if lead else ""))
     print("  the units that could change none of the three (the only candidates to carry forward without a reason): "
           + (", ".join(f"{c} {k}" for c, k in none) or "none"))
