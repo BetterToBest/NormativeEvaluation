@@ -31,7 +31,7 @@ sys.path.insert(0, HERE)
 import pass_common as pc  # noqa: E402
 
 TAG, RECORD = "(2.11)", "NEEC_Rescoring_s65.md"
-CRITS = ["C4.1", "C4.4", "C3.4", "C4.5", "C2.5"]
+CRITS = ["C4.1", "C4.4", "C3.4", "C4.5", "C2.5", "C1.1", "C2.1", "C2.4", "C2.3"]
 UNITS = {}
 GENERATED = {}
 NOTES = {}
@@ -503,6 +503,177 @@ def checks_C25(check, p):
     check(all(r["verdict"] >= p.vec[k][c] for (k, c), r in UNITS.items() if c == "C2.5"), "no C2.5 unit falls (class D)")
 
 
+# =========================================================================================================================
+# C1.1 POVERTY ELIMINATION CAPACITY (class I): 1 >= 90% poverty reduction within 20 years (base); 2 >= 85% under stress
+# poverty = below the World Bank Societal Poverty Line (2021 PPP); reduction = (baseline - rate at year 20) / baseline
+# =========================================================================================================================
+C11 = "evidence_cache/C1.1/"
+C11_MD5 = {"wb_societal_poverty_rate.json": "49aa64030c6f5d6349faa72a8b9952bf"}
+SPL = ("World Bank Poverty and Inequality Platform, headcount at the Societal Poverty Line (2021 PPP), through the World Bank "
+       "WDI API, indicator SI.POV.SOPO (" + C11 + "wb_societal_poverty_rate.json, retrieved 2026-10-15)")
+
+
+def spl(iso):
+    return {int(y): v for y, v in jload("C1.1", "wb_societal_poverty_rate.json")[iso].items()}
+
+
+def spl_red(iso, end):
+    d = spl(iso)
+    return d[end - 20], d[end], 100.0 * (d[end - 20] - d[end]) / d[end - 20]
+
+
+def c11(code, verdict, c1, c2, note, flag=None, zero=None, src=None):
+    rep = REP(code, "C1.1")
+    U(code, "C1.1", verdict, [(c1[0], c1[1], (src or rep)), (c2[0], c2[1], rep)], flag=flag, note=note, zero=zero)
+
+
+NOSTRESS = ("U", "no stress-test record or projection at the Societal Poverty Line is stated")
+a, b, r_ = spl_red("USA", 2024)
+c11("SQ", 0.5, ("S", f"the headcount at the Societal Poverty Line was {a:.1f}% in 2004 and {b:.1f}% in 2024, a change of "
+                     f"{-r_:+.1f}% (no reduction) over the 20-year window ending 2024"), NOSTRESS,
+    "holds at 0.5: no reduction in the window, but the 0.0 band requires the absence of any state mechanism and the band's own "
+    "note keeps this unit at 0.5 because welfare programs exist", src=SPL + "; " + REP("SQ", "C1.1"))
+a, b, r_ = spl_red("CHN", 2022)
+c11("CN", 0.5, ("S", f"the headcount at the Societal Poverty Line fell from {a:.1f}% in 2002 to {b:.1f}% in 2022, a reduction of "
+                     f"{r_:.1f}% over the 20-year window ending 2022: in the 0.5 band's 30-89%, short of 90%"), NOSTRESS,
+    "holds at 0.5; published as contestable, and the figure at the Societal Poverty Line is below the extreme-poverty record "
+    "the published rationale cites", src=SPL + "; " + REP("CN", "C1.1"))
+c11("SG", 0.5, ("U", "Singapore has no series at the Societal Poverty Line in the Platform, so no reduction can be computed"), NOSTRESS,
+    "holds at 0.5; published as contestable", src=SPL + "; " + REP("SG", "C1.1"))
+c11("QA", 0.5, ("U", f"one observation only ({spl('QAT')[2017]:.1f}% in 2017), so no baseline and no reduction can be computed"), NOSTRESS,
+    "holds at 0.5; published as contestable", src=SPL + "; " + REP("QA", "C1.1"))
+DESIGN_C1 = ("U", "no projected rate at the Societal Poverty Line is stated for the economy the design is proposed for")
+c11("LM", 0.0, DESIGN_C1, NOSTRESS, "holds at 0.0 on the published finding that the system refuses poverty elimination as a state "
+                                    "function",
+    zero="the system excludes poverty elimination as a legitimate function by its own logic (protocol 2.1, second condition)")
+for code, why in [("SC", "corporate programs provide charity, not systematic elimination"),
+                  ("INT", "the mechanisms are underspecified: no baseline security for transition periods"),
+                  ("GEO", "a citizen's dividend is the UBI-type mechanism, and whether it reaches a sufficient level is unresolved"),
+                  ("MC", "the evidence runs both ways by context"),
+                  ("DE", "the social foundation names the goods but sets no mechanism"),
+                  ("UBS", "the sector list maps onto a cost-of-living poverty measure, with no projected rate"),
+                  ("SWF", "the fund's dividend is real but its size relative to the line is not projected"),
+                  ("IF", "contestable; no projected rate"), ("OS", "contestable; no projected rate")]:
+    c11(code, 0.5, DESIGN_C1, NOSTRESS, f"held at the published 0.5: {why}")
+
+NOTES["C1.1"] = (
+    "C1.1 is class I with two clauses: at least 90% poverty reduction within 20 years, and at least 85% under stress, where "
+    "poverty is the World Bank Societal Poverty Line headcount (2021 PPP) and reduction is (baseline - rate at year 20) / "
+    "baseline. The Platform's headcount (cached in `evidence_cache/C1.1/`) gives the configured economies' figures: the "
+    "United States 19.0% in 2004 and 20.2% in 2024 (no reduction), China 47.8% in 2002 and 19.7% in 2022 (a reduction of "
+    "58.8%), Qatar one observation (17.6% in 2017), Singapore none. **Nothing moves: all 14 units hold**, none at 1.0. "
+    "Status Quo stays at 0.5 because the 0.0 band requires the absence of any state mechanism; China's 58.8% sits inside the "
+    "0.5 band; Singapore and Qatar cannot be computed. The nine designs and mechanisms are held at their published scores "
+    "because none states a projected rate at the Societal Poverty Line; Libertarian Minarchism stays at 0.0 on protocol 2.1's "
+    "second condition. The Nordic countries' headcount at the same line has risen since 2000 (Sweden 7.3% to 12.4%), which "
+    "bears on Nordic Social Democracy's earlier reading, not on this group's units; it is noted for the owner.")
+
+
+def checks_C11(check, p):
+    print("\n[C1.1] THE CACHE AND THE FIGURES THE READINGS QUOTE")
+    d = p.v2["C1.1"]["definition"]
+    check(p.v2["C1.1"]["revision"]["cls"] == "I" and len(d["clauses"]) == 2 and "90%" in d["clauses"][0],
+          "C1.1 is class I with two clauses in v2.0: 90% reduction in 20 years, 85% under stress")
+    for name, want in C11_MD5.items():
+        raw = open(os.path.join(HERE, C11, name), "rb").read()
+        check(hashlib.md5(raw).hexdigest() == want, f"{C11}{name}: md5 {want[:8]}")
+    ua, ub, ur = spl_red("USA", 2024)
+    ca, cb, cr_ = spl_red("CHN", 2022)
+    check(ur < 0 and 30 <= cr_ < 90 and abs(cr_ - 58.8) < 0.05 and abs(ua - 19.0) < 0.05 and abs(ub - 20.2) < 0.05,
+          f"United States {ua:.1f}% to {ub:.1f}% (no reduction); China {ca:.1f}% to {cb:.1f}%, a reduction of {cr_:.1f}%")
+    check(sorted(spl("QAT")) == [2017] and not jload("C1.1", "wb_societal_poverty_rate.json")["SGP"],
+          "Qatar has one observation and Singapore none, so neither reduction can be computed")
+    check(spl("SWE")[2000] < 8 and spl("SWE")[2023] > 12, "Sweden's headcount rose from 7.3% to 12.4% (2000-2023)")
+
+
+# =========================================================================================================================
+# C2.1, C2.4, C2.3 (class I; no unit in play is at 1.0). Held at their published scores, and not re-measured against the named
+# indicators in this pass: decision 65.2 (delegated, optional). The reasons the verdicts cannot move are stated per criterion.
+# =========================================================================================================================
+def quote(code, crit, n=190):
+    fn, i, _ = rat_head(code, crit)
+    lines = open(os.path.join(HERE, fn), encoding="utf-8").read().split("\n")
+    t = " ".join(x.strip() for x in lines[i - 1:i + 3] if x.strip() and not x.startswith("## **C") or x is lines[i - 1])
+    t = re.sub(r"^#+ \**C\d\.\d[a-z]?[^:]*: [0-9.]+( \([^)]*\))?( [^*]*?)?\**\s*", "", t)
+    t = re.sub(r"\*\*STRUCTURAL FAILURE\.\*\*\s*|\*\*Rationale:\*\*\s*|\*|#", "", t).replace("|", "/").replace("{", "(").replace("}", ")").strip()
+    t = t[:n].rsplit(" ", 1)[0]
+    return t + "..."
+
+
+def class_i_hold(crit, codes, invariance, zero_reason, ncl, label):
+    for code in codes:
+        pub = pc_pub[code][crit]
+        rep = REP(code, crit)
+        q = quote(code, crit)
+        cl = [("U", f"the named indicator is not re-measured in this pass; the published rationale reads: {q}", rep)] * ncl
+        U(code, crit, pub, cl,
+          note=f"held at the published {pc.f1(pub)} (decision 65.2): {invariance}",
+          zero=(zero_reason if pub == 0.0 else None))
+
+
+pc_pub = {e["code"]: e["vector"] for e in json.load(open(os.path.join(HERE, "neec_corpus.json")))["entries"]}
+Z_PUB = ("the published 0.0 stands on its published whole-criterion finding (protocol 2.1); the indicator cannot clear a clause "
+         "the finding does not rest on")
+class_i_hold("C2.1", ["SQ", "CPS", "LM", "MMT", "SC", "GEO", "MC", "DE", "UBS", "SWF", "CN", "SG", "QA", "IF", "OS"],
+             "clause 2 (revealed-preference evidence) is aspirational and no unit in play names a study that shows it, so none "
+             "can be 1.0 whatever clause 1 (the Gallup share, 70%) gives; a 0.5 moves to 0.0 only on a whole-criterion reason, "
+             "and none is stated", Z_PUB, 2, "C2.1")
+class_i_hold("C2.4", ["SQ", "CPS", "UBI", "SC", "FALC", "GEO", "MC", "DE", "UBS", "SWF", "CN", "SG", "QA", "IF", "OS"],
+             "a 1.0 needs all three clauses (turnout of 70%, 35% of citizen proposals adopted, 65% saying people like them have "
+             "a say), and no unit in play shows the second: the configured economies have no binding citizen-initiative process "
+             "at the national level, so the clause is not met by v2.0's own wording, and the designs state no adoption rate; a "
+             "0.5 moves to 0.0 only on a whole-criterion reason, and none is stated", Z_PUB, 3, "C2.4")
+class_i_hold("C2.3", ["SQ", "CPS", "MMT", "UBI", "SC", "GEO", "MC", "DE", "UBS", "SWF", "CN", "SG", "QA", "IF", "OS"],
+             "clause 1 (50% regular creative engagement) is aspirational unless a survey recording weekly frequency is named, and "
+             "no unit in play names one, so none can be 1.0 whatever clauses 2 and 3 (10 weekly hours, 70/100 purpose) give; a "
+             "0.5 moves to 0.0 only on a whole-criterion reason, and none is stated", Z_PUB, 3, "C2.3")
+
+NOTES["C2.1"] = (
+    "C2.1 is class I with two clauses: at least 70% of adults reporting genuine autonomy (Gallup World Poll, 'freedom to "
+    "make life choices'), and revealed-preference evidence. The Gallup series could not be fetched in this session (the "
+    "World Happiness Report's file is blocked from the container and no open republication was found), so the indicator is "
+    "not re-measured. **All 15 units hold at their published scores, and the verdict cannot move on that series:** clause 2 is "
+    "aspirational and no unit names a study, so none can be 1.0; the five 0.0s (Centrally Planned Socialism, Libertarian "
+    "Minarchism, Doughnut Economics, China, Qatar) rest on whole-criterion findings. Re-measuring the four configured "
+    "economies on the Gallup share is an open item that cannot change a verdict under the rule above.")
+NOTES["C2.4"] = (
+    "C2.4 is class I with three clauses: turnout of at least 70% of the voting-age population, at least 35% of citizen "
+    "proposals adopted, and at least 65% saying the system lets people like them have a say. **All 15 units hold at their "
+    "published scores.** No unit in play shows clause 2: the configured economies have no binding citizen-initiative process "
+    "at the national level (v2.0: where none exists the clause is not met) and the designs state no adoption rate, so none "
+    "can be 1.0; the four 0.0s (Centrally Planned Socialism, Fully Automated Luxury Communism, China, Qatar) rest on the "
+    "absence of any participation mechanism. The IDEA turnout series and the OECD trust survey were not re-fetched; "
+    "re-measuring them is an open item that cannot change a verdict under the rule above.")
+NOTES["C2.3"] = (
+    "C2.3 is class I with three clauses: 50% regular creative engagement (aspirational unless a survey recording weekly "
+    "frequency is named), 10 or more weekly hours on non-subsistence pursuits, and purpose scores of at least 70/100. **All 15 "
+    "units hold at their published scores.** No unit in play names a survey for clause 1, so none can be 1.0; the lone 0.0 "
+    "(Centrally Planned Socialism) rests on the suppression of creative expression. The time-use and well-being series were "
+    "not re-fetched; re-measuring them is an open item that cannot change a verdict under the rule above.")
+
+
+def checks_C21(check, p):
+    print("\n[C2.1] THE CRITERION")
+    d = p.v2["C2.1"]["definition"]
+    check(p.v2["C2.1"]["revision"]["cls"] == "I" and len(d["clauses"]) == 2 and "70%" in d["clauses"][0]
+          and "no agency publishes revealed-preference" in d["measurement"],
+          "C2.1 is class I with two clauses in v2.0: 70% autonomy (Gallup), revealed-preference evidence named by a study")
+
+
+def checks_C24(check, p):
+    print("\n[C2.4] THE CRITERION")
+    d = p.v2["C2.4"]["definition"]
+    check(p.v2["C2.4"]["revision"]["cls"] == "I" and len(d["clauses"]) == 3 and "where no such process exists the clause is not met" in d["measurement"],
+          "C2.4 is class I with three clauses in v2.0: 70% turnout, 35% of proposals adopted (not met where no process exists), 65% say")
+
+
+def checks_C23(check, p):
+    print("\n[C2.3] THE CRITERION")
+    d = p.v2["C2.3"]["definition"]
+    check(p.v2["C2.3"]["revision"]["cls"] == "I" and len(d["clauses"]) == 3 and "aspirational unless the scoring document names a survey" in d["measurement"],
+          "C2.3 is class I with three clauses in v2.0: 50% creative engagement (aspirational unless a survey is named), 10 hours, 70/100")
+
+
 def checks_C44(check, p):
     print("\n[C4.4] THE CACHE AND THE CLASSIFICATIONS THE READINGS QUOTE")
     d = p.v2["C4.4"]["definition"]
@@ -516,7 +687,7 @@ def checks_C44(check, p):
           "2024 regimes: United States liberal democracy; China and Qatar closed autocracies; Singapore an electoral autocracy")
 
 
-CHECKS = {"C4.1": checks_C41, "C4.4": checks_C44, "C3.4": checks_C34, "C4.5": checks_C45, "C2.5": checks_C25}
+CHECKS = {"C4.1": checks_C41, "C4.4": checks_C44, "C3.4": checks_C34, "C4.5": checks_C45, "C2.5": checks_C25, "C1.1": checks_C11, "C2.1": checks_C21, "C2.4": checks_C24, "C2.3": checks_C23}
 
 
 # =========================================================================================================================

@@ -33,13 +33,15 @@ ENTITIES = ["China", "Denmark", "Finland", "Norway", "Qatar", "Singapore", "Swed
 SOURCES = {("C4.1", "imf_weo_gross_debt_pct_gdp.json"): IMF,
            ("C4.1", "wb_gross_savings_pct_gni.json"): WB.format("NY.GNS.ICTR.GN.ZS"),
            ("C4.1", "wb_consumption_fixed_capital_pct_gni.json"): WB.format("NY.ADJ.DKAP.GN.ZS"),
-           ("C4.4", "owid_vdem_regimes_of_the_world.csv"): OWID.format("political-regime")}
+           ("C4.4", "owid_vdem_regimes_of_the_world.csv"): OWID.format("political-regime"),
+           ("C1.1", "wb_societal_poverty_rate.json"): WB.format("SI.POV.SOPO")}
 # md5 of each file as fetched and written by --fetch (2026-10-15)
 FILES = {
     ("C4.1", "imf_weo_gross_debt_pct_gdp.json"): "148ad7d2c97f421dcadc839ea72f99e1",
     ("C4.1", "wb_gross_savings_pct_gni.json"): "f84dd1655a39ca4107ee4e348c4da369",
     ("C4.1", "wb_consumption_fixed_capital_pct_gni.json"): "56352b479a298464aacc85eeedd1d136",
     ("C4.4", "owid_vdem_regimes_of_the_world.csv"): "c388c56ed1f40ffc8b93271236be431d",
+    ("C1.1", "wb_societal_poverty_rate.json"): "49aa64030c6f5d6349faa72a8b9952bf",
 }
 
 
