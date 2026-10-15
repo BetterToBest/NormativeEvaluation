@@ -15,7 +15,7 @@ import sys
 import urllib.request
 
 REPO = "BetterToBest/NormativeEvaluation"
-SIM_PIN = "5a7a7b1"
+SIM_PIN = "d10ed6e"
 HUB_PIN = "8e8a6ba"
 
 

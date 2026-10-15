@@ -1,0 +1,104 @@
+[1] THE ENGINE
+harness.js md5 84be3bc9, index.html md5 2e1cc8c7, commit d10ed6e
+PASS  harness.js and the engine block in index.html are the v5.6 release's (data/releases/v5.6.json, meta.manifest: harnessSha256 bed37dfc, engineBlockSha256 973e7ce4, release commit 5bf5bcc)
+PASS  constants read from source: wealth line $25,000, living-wage basket $49,370, 500 adults, 20 years
+PASS  the parts cover seeds 1-500 in order, each from the same engine block
+
+[2] REPRODUCTION OF THE v5.6 RELEASE (data/releases/v5.6.json: panels.20 and backing; values as published)
+PASS  Reference: too little wealth, below the cost of living and programme inflation for the no-programme run, the release row (a = 0) and H1 (a = 1) equal the published figures; the wealth Gini at year 20, 0.4917, likewise; the hook's own count of too little wealth equals the engine's
+PASS  Adverse: too little wealth, below the cost of living and programme inflation for the no-programme run, the release row (a = 0) and H1 (a = 1) equal the published figures; the hook's own count of too little wealth equals the engine's
+PASS  Stress Test: too little wealth, below the cost of living and programme inflation for the no-programme run, the release row (a = 0) and H1 (a = 1) equal the published figures; the hook's own count of too little wealth equals the engine's
+
+[3] C1.1: THE SOCIETAL POVERTY LINE (2021 PPP: max($3.00, $1.30 + 0.5 x median) a day; disposable income per adult, year-0 dollars; X = with the in-kind value of price cuts)
+| Environment | Run | SPL, year 0 | SPL, year 20 | Reduction from year 0 | SPL X, year 20 | Below the cost of living, year 20 | Median disposable income, year 20 |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Reference | No program (today's safety net) | 6.1% | 7.9% | -27.9% | 7.9% | 41.3% | $52,515 |
+| Reference | Compassionism, release row (a = 0) | 7.3% | 7.7% | -6.0% | 4.6% | 14.9% | $48,109 |
+| Reference | Compassionism, H1 (a = 1) | 7.3% | 9.5% | -30.0% | 5.7% | 9.3% | $62,234 |
+| Adverse | No program (today's safety net) | 6.1% | 7.3% | -18.3% | 7.3% | 73.1% | $33,263 |
+| Adverse | Compassionism, release row (a = 0) | 7.3% | 8.3% | -14.0% | 6.8% | 39.2% | $30,249 |
+| Adverse | Compassionism, H1 (a = 1) | 7.3% | 9.7% | -32.3% | 8.8% | 45.6% | $36,499 |
+| Stress Test | No program (today's safety net) | 6.1% | 7.3% | -18.3% | 7.3% | 73.1% | $33,263 |
+| Stress Test | Compassionism, release row (a = 0) | 6.6% | 7.3% | -11.2% | 9.4% | 62.4% | $31,122 |
+| Stress Test | Compassionism, H1 (a = 1) | 6.6% | 8.1% | -23.3% | 8.4% | 61.7% | $34,499 |
+
+Reductions against the paired no-programme run at year 20 (release row; H1):
+- Reference: SPL 1.5%; -20.8%. SPL X 42.0%; 27.7%. Below the cost of living (person-years, the release's measure) 60.3%; 70.7%. Below 30 days of basic living 55.9%; 74.5%.
+- Adverse: SPL -14.5%; -32.8%. SPL X 6.9%; -20.3%. Below the cost of living (person-years, the release's measure) 52.9%; 49.9%. Below 30 days of basic living 44.6%; 61.9%.
+- Stress Test: SPL -0.8%; -11.8%. SPL X -29.2%; -15.0%. Below the cost of living (person-years, the release's measure) 20.0%; 20.3%. Below 30 days of basic living -12.0%; 24.5%.
+PASS  Reference: no reduction above reaches 90% (largest 74.5%)
+
+[4] C1.2a: NET WEALTH WITH ACRE EQUITY AT YEAR 20, AGAINST $60,000 IN 2019 DOLLARS ($75,557 in the engine's year-0 dollars, 2025)
+| Environment | Run | Adults at the bar | Without Acre Equity | Participants at the bar | Participants | Seeds with 70% of participants at the bar | Median net wealth |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Reference | No program (today's safety net) | 61.2% | 61.2% | - | - | - | $174,124 |
+| Reference | Compassionism, release row (a = 0) | 12.1% | 11.4% | 13.9% | 84.0% | 0 of 500 | $30,728 |
+| Reference | Compassionism, H1 (a = 1) | 87.2% | 87.0% | 91.1% | 82.6% | 500 of 500 | $437,409 |
+| Adverse | No program (today's safety net) | 47.0% | 47.0% | - | - | - | $55,535 |
+| Adverse | Compassionism, release row (a = 0) | 1.5% | 1.3% | 1.7% | 84.0% | 0 of 500 | $9,384 |
+| Adverse | Compassionism, H1 (a = 1) | 69.8% | 69.5% | 77.9% | 57.7% | 498 of 500 | $209,707 |
+| Stress Test | No program (today's safety net) | 47.0% | 47.0% | - | - | - | $55,535 |
+| Stress Test | Compassionism, release row (a = 0) | 5.0% | 4.9% | 8.9% | 43.7% | 0 of 500 | $585 |
+| Stress Test | Compassionism, H1 (a = 1) | 56.0% | 55.9% | 69.7% | 30.0% | 235 of 500 | $115,140 |
+
+[5] C1.2b: THE WEALTH GINI AT YEAR 20 (debts as zero, x n/(n-1), as the engine reports it)
+| Environment | Run | Gini | With Acre Equity | Seeds below 0.35 |
+|---|---|---:|---:|---:|
+| Reference | No program (today's safety net) | 0.755 | 0.755 | 0 of 500 |
+| Reference | Compassionism, release row (a = 0) | 0.492 | 0.477 | 0 of 500 |
+| Reference | Compassionism, H1 (a = 1) | 0.602 | 0.600 | 0 of 500 |
+| Adverse | No program (today's safety net) | 0.803 | 0.803 | 0 of 500 |
+| Adverse | Compassionism, release row (a = 0) | 0.644 | 0.610 | 0 of 500 |
+| Adverse | Compassionism, H1 (a = 1) | 0.684 | 0.682 | 0 of 500 |
+| Stress Test | No program (today's safety net) | 0.803 | 0.803 | 0 of 500 |
+| Stress Test | Compassionism, release row (a = 0) | 0.762 | 0.748 | 0 of 500 |
+| Stress Test | Compassionism, H1 (a = 1) | 0.759 | 0.759 | 0 of 500 |
+
+[6] C1.3: ADULTS PASSING A 5-YEAR WINDOW WITH NO YEAR OF DISTRESS (years 1-5 ... 16-20; PTH = Public Trust Housing)
+| Environment | Run | Years 1-5 | 6-10 | 11-15 | 16-20 | Lowest | In PTH (share; lowest window) | Outside PTH, lowest window |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| Reference | No program (today's safety net) | 75.7% | 72.4% | 70.7% | 70.1% | 70.1% | - | - |
+| Reference | Compassionism, release row (a = 0) | 82.2% | 79.0% | 78.0% | 79.6% | 78.0% | 20.0%; 79.4% | 77.6% |
+| Reference | Compassionism, H1 (a = 1) | 86.1% | 90.8% | 91.9% | 92.7% | 86.1% | 20.0%; 87.3% | 85.8% |
+| Adverse | No program (today's safety net) | 73.8% | 67.4% | 62.1% | 57.5% | 57.5% | - | - |
+| Adverse | Compassionism, release row (a = 0) | 80.5% | 70.4% | 62.5% | 55.9% | 55.9% | 20.0%; 57.0% | 55.6% |
+| Adverse | Compassionism, H1 (a = 1) | 85.3% | 86.2% | 83.3% | 79.8% | 79.8% | 20.0%; 81.0% | 79.4% |
+| Stress Test | No program (today's safety net) | 73.8% | 67.4% | 62.1% | 57.5% | 57.5% | - | - |
+| Stress Test | Compassionism, release row (a = 0) | 74.9% | 63.0% | 50.7% | 41.5% | 41.5% | 9.9%; 43.5% | 41.3% |
+| Stress Test | Compassionism, H1 (a = 1) | 78.7% | 75.1% | 70.7% | 66.5% | 66.5% | 9.9%; 68.1% | 66.4% |
+
+[7] C3.2: PROGRAMME INFLATION (the basket index's annual rise from the programme) AND THE PRICE LEVEL AT YEAR 20
+| Environment | Outside inflation | Run | Programme inflation a year | Price level, year 20 (median over seeds) | Seeds at or under 3% |
+|---|---:|---|---:|---:|---:|
+| Reference | 0% | Compassionism, release row (a = 0) | 50.8% | 2440.74 | 0 of 500 |
+| Reference | 0% | Compassionism, H1 (a = 1) | 0.1% | 1.02 | 500 of 500 |
+| Adverse | 2% | Compassionism, release row (a = 0) | 60.9% | 12159.65 | 0 of 500 |
+| Adverse | 2% | Compassionism, H1 (a = 1) | 0.1% | 1.47 | 500 of 500 |
+| Stress Test | 2% | Compassionism, release row (a = 0) | 27.4% | 145.14 | 0 of 500 |
+| Stress Test | 2% | Compassionism, H1 (a = 1) | 0.0% | 1.46 | 500 of 500 |
+
+[8] C3.3: THE ADVERSE ENVIRONMENT AGAINST THE REFERENCE, YEAR 20, SAME SEEDS (degradation = fall in the share, % of the Reference share)
+| Run | Function (share of adults at year 20) | Reference | Adverse | Degradation | Stress Test | Degradation |
+|---|---|---:|---:|---:|---:|---:|
+| Compassionism, release row (a = 0) | Not below the cost of living | 85.1% | 60.8% | 28.6% | 37.6% | 55.8% |
+| Compassionism, release row (a = 0) | Above the Societal Poverty Line | 92.3% | 91.7% | 0.6% | 92.7% | -0.4% |
+| Compassionism, release row (a = 0) | Not in housing distress | 83.7% | 59.7% | 28.7% | 43.7% | 47.8% |
+| Compassionism, release row (a = 0) | Above the wealth line (six months of costs) | 55.6% | 19.1% | 65.7% | 23.7% | 57.3% |
+| Compassionism, H1 (a = 1) | Not below the cost of living | 90.7% | 54.4% | 40.0% | 38.3% | 57.7% |
+| Compassionism, H1 (a = 1) | Above the Societal Poverty Line | 90.5% | 90.3% | 0.2% | 91.9% | -1.5% |
+| Compassionism, H1 (a = 1) | Not in housing distress | 93.8% | 80.0% | 14.7% | 66.9% | 28.6% |
+| Compassionism, H1 (a = 1) | Above the wealth line (six months of costs) | 91.3% | 77.4% | 15.3% | 63.9% | 30.1% |
+
+[9] C3.4: THE BASIC UNIT STEPPED FROM YEAR 10 AND HELD, REFERENCE, EACH SEED AGAINST THE UNADJUSTED RUN
+| Backing | Step | Below the cost of living, year 20: adjusted / unadjusted | Price level, year 20 (median): adjusted / unadjusted | Largest excess rise, cost of living (points) | Largest excess price rise (points) | Seeds collapsing |
+|---|---|---:|---:|---:|---:|---:|
+| a = 0 (release row) | x0.7 | 24.1% / 14.9% | 1286.04 / 2440.74 | 16.6 | 0.0 | 339 of 500 |
+| a = 0 (release row) | x0.8 | 21.5% / 14.9% | 1690.58 / 2440.74 | 12.8 | 0.0 | 43 of 500 |
+| a = 0 (release row) | x1.2 | 10.4% / 14.9% | 2978.14 / 2440.74 | -0.6 | 5.9 | 0 of 500 |
+| a = 0 (release row) | x1.3 | 9.0% / 14.9% | 2976.78 / 2440.74 | -1.2 | 6.8 | 0 of 500 |
+| a = 1 (H1) | x0.7 | 15.3% / 9.3% | 1.02 / 1.02 | 14.0 | 0.1 | 97 of 500 |
+| a = 1 (H1) | x0.8 | 13.2% / 9.3% | 1.02 / 1.02 | 10.8 | 0.1 | 1 of 500 |
+| a = 1 (H1) | x1.2 | 6.7% / 9.3% | 1.02 / 1.02 | 0.0 | 0.1 | 0 of 500 |
+| a = 1 (H1) | x1.3 | 6.1% / 9.3% | 1.02 / 1.02 | 0.0 | 0.1 | 0 of 500 |
+
+SUMMARY: all checks pass; 500 seeds.

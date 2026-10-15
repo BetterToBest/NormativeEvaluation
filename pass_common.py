@@ -42,7 +42,8 @@ PARTS = (("(a)", "rescoring_s37", "rescoring_s37.py", 37), ("(b1)", "rescoring_s
          ("48.3", "rescoring_s48", "rescoring_s48.py", 48), ("(b8)", "rescoring_s49", "rescoring_s49.py", 49),
          ("(b9)", "rescoring_s50", "rescoring_s50.py", 50), ("(2.1)", "rescoring_s51", "rescoring_s51.py", 51),
          ("(2.2)", "rescoring_s53", "rescoring_s53.py", 53), ("(2.3)", "rescoring_s54", "rescoring_s54.py", 54),
-         ("(2.4)", "rescoring_s56", "rescoring_s56.py", 56))
+         ("(2.4)", "rescoring_s56", "rescoring_s56.py", 56),
+         ("(2.5)", "rescoring_s57", "rescoring_s57.py", 57))
 STATUS = {"C": "cleared", "S": "short", "U": "not shown", "R": "out of reach", "M": "moot"}
 
 
@@ -220,14 +221,21 @@ def dominance_line(p, vp, vn, steps, merged, prev_label):
         net = sum(r["verdict"] - pub[k] for k, r in merged.items())
         tail = (f"{at[1.0]} are at 1.0, {at[0.5]} at 0.5 and {at[0.0]} at 0.0; against their published scores {down} "
                 f"fell, {up} rose and {n_all - up - down} are unchanged (net {f1(net)} points).")
+    if len(first) == 1:
+        place = (f"First place: {first[0]}, {f1(mp['total'][first[0]])} after {prev_label}, "
+                 f"{f1(after['total'][first[0]])} now, ahead of "
+                 + ", ".join(c for c in order if after["total"][c] == after["total"][second])
+                 + f" at {f1(after['total'][second])}.")
+    else:   # Session 57: a shared first place is named as shared (no earlier group had one, so their text is unchanged)
+        place = (f"First place is shared by {', '.join(first[:-1])} and {first[-1]} at {f1(after['total'][first[0]])} ("
+                 + ", ".join(f"{c} {f1(mp['total'][c])}" for c in first) + f" after {prev_label}), ahead of "
+                 + ", ".join(c for c in order if after["total"][c] == after["total"][second])
+                 + f" at {f1(after['total'][second])}.")
     return (f"After this group the corpus has {len(pn)} dominance pairs against {len(pp)} after {prev_label} (new: " +
             (", ".join(f"{a}>{b}" for a, b in gained) or "none") + "; lost: " +
             (", ".join(f"{a}>{b}" for a, b in lost) or "none") + f"), and its frontier holds {len(fn)} entries "
-            f"against {len(fp)} (" + ", ".join(c for c in order if c in fn) + f"). First place: {first[0]}, "
-            f"{f1(mp['total'][first[0]])} after {prev_label}, {f1(after['total'][first[0]])} now, ahead of "
-            + ", ".join(c for c in order if after["total"][c] == after["total"][second])
-            + f" at {f1(after['total'][second])}. Across the pass so far {n_all} units have been re-estimated, each "
-            f"counted once: " + tail)
+            f"against {len(fp)} (" + ", ".join(c for c in order if c in fn) + f"). {place} Across the pass so far "
+            f"{n_all} units have been re-estimated, each counted once: " + tail)
 
 
 def anchors_line(p, merged, part_of, vn):
@@ -295,7 +303,7 @@ def selftest():
     check([verdict_of(x) for x in probe] == [s37.verdict_of(x) for x in probe] == [1.0, 0.5, 0.5],
           "verdict_of() applies D28: 1.0 only if every clause is cleared or moot, else 0.5")
     p_all = Pass()
-    check(len(PARTS) >= 12 and all(t in p_all.part_of.values() for t in p_all.tags if p_all.steps_units[p_all.tags.index(t)]),
+    check(len(PARTS) >= 12 and all(k in p_all.merged for u in p_all.steps_units for k in u),   # s57: a later part may supersede every unit of an earlier one
           f"all {len(PARTS)} parts load; {len(p_all.merged)} units are re-estimated")
     check(sum(1 for k in p_all.merged if k[1] not in p_all.cids) == 0,
           "every re-estimated unit lies on a criterion of the published 26-criterion structure")

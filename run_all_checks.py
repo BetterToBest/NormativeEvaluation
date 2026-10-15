@@ -220,7 +220,13 @@ against its generated tables; the Session 52 checks now load group 2.3 as a part
 re-estimated, read on the indicators v2.0 names, every file the session added to the evidence cache checked by digest
 and every passage quoted from it found there, clause 4 recomputed from the IMF rows, and the consequences cumulatively
 with every part before it, with NEEC_Rescoring_s56.md checked against its generated tables; the Session 52 checks now
-load group 2.4 as a part of the pass: 104 checks.
+load group 2.4 as a part of the pass: 104 checks. Version 31 (Session 57) adds rescoring_s57.py, stage 2's group 2.5:
+CCO-PTF-CIP-SZH's nine simulation units re-read on the design's published model at v5.6.0 (the pin moves from 5a7a7b1
+to d10ed6e, decision 57.3), through the captured output of cco_sim_v56_checks_s57.js, checked by digest, whose own checks
+reproduce the v5.6 release's published figures; the reopening conditions evaluated; the consequences cumulatively with
+every part before it, with NEEC_Rescoring_s57.md checked against its generated tables. pass_common.py's dominance line
+names a shared first place as shared (no earlier group had one), and its self-test allows a part whose units a later part
+has all superseded; the Session 52 checks now load group 2.5 as a part of the pass: 105 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1197,11 +1203,27 @@ S56_CHECKS = [
          stdout="rescoring_s56_output.txt", stderr=EMPTY),
 ]
 
+# Session 57: group 2.5, CCO-PTF-CIP-SZH's simulation units re-read on the design's published model at v5.6.0 (d10ed6e;
+# decision 57.3), on the shared module. pass_common.PARTS now includes it, so the Session 52 checks load its files too. It
+# reads the captured output of cco_sim_v56_checks_s57.js, not the JavaScript, which needs the simulation's source.
+S57_FILES = {**S56_FILES, **{k: k for k in ("rescoring_s57.py", "NEEC_Rescoring_s57.md",
+                                            "cco_sim_v56_checks_s57_output.txt")}}
+for _c in S52_CHECKS:
+    _c["files"] = S57_FILES
+S57_CHECKS = [
+    dict(name="rescoring_s57.py: rescoring pass stage 2, group 2.5, CCO-PTF-CIP-SZH's nine simulation units re-read on "
+              "the design's published model at v5.6.0: the runs' capture by digest, the release's figures reproduced, "
+              "every figure quoted found in it, the reopening conditions evaluated, the rule, consequences cumulatively "
+              "with every part before it; no corpus file changed",
+         cmd=["python", "rescoring_s57.py"], files=S57_FILES,
+         stdout="rescoring_s57_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS)
 
 
 def md5(data):
