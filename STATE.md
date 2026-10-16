@@ -1,7 +1,7 @@
 # NEEC state
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 66 (publish with the provisional notice) (2026-10-15). It consolidates the standing notes and
+changed, this file says what holds. Last rewritten by Session 67 (the owner's plan limit; ledger answers recorded; CCO listing) (2026-10-16). It consolidates the standing notes and
 open items of Handoffs 43 to 58, which no longer need to be read for them.
 
 ## Position
@@ -75,7 +75,11 @@ publish gate is not flipped, awaiting the owner (d49).** The stage 2 pass has no
 
 ## Next work, in order
 
-0. **Next session: Opus 5.5 at high** (Report and Paper v2.0 are judgment prose); then remove the provisional note from `site/config.json`.
+0. **Next session: Claude Chat (free) from 2026-10-17, because the owner's Claude Pro plan ends** (decisions 67.2, d50). Drafts are
+   written in Chat and landed by decision d7's path (repository ZIP in, changed-files ZIP out, the owner opens the pull request).
+   If a Claude Code session returns: Opus 5.5 at high for the prose, Sonnet 5.5 at medium for the landing. Handoff 67, section 3,
+   is the task list (s41 Report Part I per domain, s42 Paper disclosures, s44 limits page, s43 landing: remove the provisional note
+   from `site/config.json`, rebuild). s6 and s7 are dropped (67.3).
 
 1. **Report v2.0 and Paper v2.0 (stage 4): Opus 5.5 at high** (judgment prose): Part I from the per-unit tables in the rescoring
    records (decision 52.8), the Paper disclosing the simulation overhaul (52.9), that Integral was read on its white paper of
@@ -85,9 +89,14 @@ publish gate is not flipped, awaiting the owner (d49).** The stage 2 pass has no
    the configured economies (Gallup, turnout, OECD trust, time-use) was not re-measured; (c) the law-in-force clauses of C2.6 and
    C4.6 and C4.6's mortality clause were not shown for any economy; (d) a Nordic finding for the owner: the Societal Poverty Line
    headcount has risen since 2000 (Sweden 7.3% to 12.4%), which bears on Nordic Social Democracy's earlier C1.1 reading.
-4. **CCO-PTF-CIP-SZH's paused item (decision 58.2):** every CCO reading is now in; list them together for the owner with d37's
-   reasoning noted against each unit it could bear on (C1.2a first).
+4. **CCO-PTF-CIP-SZH's paused item (decision 58.2):** listed in `NEEC_CCO_Paused_Readings_s67.md` (Session 67); the owner answers d38.
 5. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change is needed for it.
+
+## Decided (Session 67; `NEEC_Project_Handoff_67.md`, section 2)
+
+All optional records. 67.1 d42 to d49 confirmed by the owner as recorded. 67.2 the owner's d50 "Something else" (message of 2026-10-16): Pro ends, Chat
+(free) continues, drafts land by decision d7's path. 67.3 d51: the queued s6 and s7 are dropped. 67.4 d38 stays paused; the listing for the owner is
+`NEEC_CCO_Paused_Readings_s67.md`.
 
 ## Decided (Session 65, under the delegation; `NEEC_Rescoring_s65.md`)
 
@@ -223,20 +232,12 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 The owner answered every earlier item in the ledger (decisions 57.1, 58.1, 58.2). Under decision 57.2 only
 CCO-PTF-CIP-SZH's score changes wait on the owner; other entries' changes are decided under the delegation. One item is
-open, paused at the owner's request (S57-3.3); it must be settled before stage 3, and nothing else waits on it. The two
-items of Session 64 (d42, d43) are the scorer's own delegated decisions, put in the ledger for the owner to confirm or reverse; none blocks.
+open, paused at the owner's request (S57-3.3); it must be settled before stage 3, and nothing else waits on it. The items
+of Sessions 64 and 65 (d42 to d49) were confirmed by the owner in the ledger (decision 67.1); none is open.
 
 | ID | Item | Recorded in | Ledger |
 |---|---|---|---|
 | S57-3.3 | CCO-PTF-CIP-SZH's other eight simulation units hold on v5.6.0 (C1.2a and C3.4 flagged toward 1.0; C3.4's clause 4 now short). **Paused by the owner** (decision 58.2) until all of the design's readings are in; Next work, item 5 | `NEEC_Rescoring_s57.md` 3.3 to 3.12 | d38 |
-| S64-3.1 | How C4.2's clauses are read: the carbon rate on three windows, the Red List Index at its two decimals, 0.0 against 0.5 by protocol 2.1 (decisions 64.1, 64.2; delegated, may be reversed) | NEEC_Rescoring_s64.md, 3.1, 3.2 | d42 |
-| S65-3.1 | Participatory Economics C4.5 0.0 to 0.5; first place now shared by CCO and PE at 14.5 | NEEC_Rescoring_s65.md, C4.5 | d44 |
-| S65-3.2 | Integral C3.4 1.0 to 0.5 | NEEC_Rescoring_s65.md, C3.4 | d45 |
-| S65-3.3 | Qatar C4.1 0.5 to 1.0; Status Quo C4.1, C4.4 0.0 to 0.5 | NEEC_Rescoring_s65.md, C4.1, C4.4 | d46 |
-| S65-3.4 | C2.1, C2.4, C2.3 held without re-measuring | NEEC_Rescoring_s65.md, C2.1, C2.4, C2.3 | d47 |
-| S65-3.5 | How the 69 new units were scored | NEEC_Rescoring_s65.md, C2.6, C3.6, C4.6 | d48 |
-| S65-3.6 | Publish the v2.0 scores on the live site | NEEC_Project_Handoff_65.md, section 4 | d49 |
-| S64-3.5 | All 16 C4.2 units hold; Market Socialism flagged toward 0.0 and Sovereign Wealth Fund Statism toward 0.5, each able to change a tier (decisions 64.3 to 64.6) | NEEC_Rescoring_s64.md, 3.3 to 3.7 | d43 |
 
 S57-3.9 (ledger d37) was answered: the owner kept C3.2 at 1.0 (decision 58.1). S63-3.1, S63-3.2 and S63-3.4 (d39 to d41)
 were answered: accepted as recorded (decision 64.7).
