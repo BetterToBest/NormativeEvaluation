@@ -1,0 +1,10 @@
+  PASS C4.4/wb_self_employment_pct.json: md5 3a06ba5c
+  PASS C4.4/fred_us_government_payrolls.csv: md5 8a8b2390
+  PASS C4.4/owid_vdem_regimes_russia_1917_1992.csv: md5 4b0f1e02
+  PASS C4.2/un_sdg_red_list_index.json: md5 eda7fd16
+  PASS C4.2/fanning_2022_biophysical_historical.csv: md5 6acabeb5
+  PASS C4.2/fanning_2022_biophysical_bau.csv: md5 5f29df90
+  PASS C4.2/oneill_2018_biophysical.csv: md5 712e0bff
+  PASS C4.2/owid_gcb_ussr_territorial_co2.csv: md5 e37cbb11
+  PASS C4.2/lp_platform_environment_extract.txt: md5 bf66e6e6
+SUMMARY: ALL PASS

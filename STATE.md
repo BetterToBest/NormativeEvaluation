@@ -1,12 +1,13 @@
 # NEEC state
 
-**Next session (73): Opus 5.5 at high** (ledger S56; judgment: two flagged units could change a tier). Blind re-read:
-C4.4 (17 units, Session 65) and C4.2 (16 units, Session 64), on v2.0's clauses.
+**Next session (74): Opus 5.5 at high** (ledger S57; judgment: Qatar's and Doughnut Economics' C3.1 flags toward 0.0
+and the Nordic poverty finding could each move a tier). Blind re-read: C1.1 (14 units, Session 65) and C3.1 (16 units,
+Session 63), on v2.0's clauses.
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 72 (the blind re-read of C4.1, ledger S55: `blind_s72.py`,
-`NEEC_BlindReview_s72.md`; two verdict changes recorded for S61 to apply, no tier change; the owner's confirmation of
-D55 recorded as decision 72.1) (2026-10-18). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 73 (the blind re-read of C4.4 and C4.2, ledger S56: `blind_s73.py`,
+`NEEC_BlindReview_s73.md`; eight verdict changes recorded for S61 to apply, one tier change, ledger D56 added for the
+owner) (2026-10-18). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -69,7 +70,7 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
-- **Harness:** v42, 120 checks (`evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
+- **Harness:** v43, 122 checks (`evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
   byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, v2.0 scores published with a provisional notice (decision 66.1; `site/config.json` `scores.publish` true,
@@ -88,7 +89,11 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   FALC 10.0, Libertarian Minarchism 9.0; no tier changes (`NEEC_BlindReview_s71.md`, section 7); the owner confirmed
   them (ledger D55, decision 72.1). **With Session 72's two as well** (decisions 72.3, 72.4): Libertarian Minarchism
   9.5 (11 failures), Stakeholder Capitalism 10.5 (8); first place unchanged; no tier changes
-  (`NEEC_BlindReview_s72.md`, section 7).
+  (`NEEC_BlindReview_s72.md`, section 7). **With Session 73's eight as well** (decisions 73.2, 73.3; ledger D56,
+  default yes): **Sovereign Wealth Fund Statism 15.0 with 2 failures, Partially to Potentially Adequate**, the one tier
+  change; Islamic Finance 14.0 (3), Universal Basic Income 12.5 (6), China 11.0 (8), Stakeholder Capitalism 11.0 (7),
+  FALC 10.5 (10), Centrally Planned Socialism 7.0 (16); first place unchanged; 8 entries Potentially Adequate, 6
+  Partially, 9 Structurally Inadequate (`NEEC_BlindReview_s73.md`, section 7).
 - **Stage 3b inserted, before stage 4 (decisions 69.1, 69.2; ledger D52 to D54).** Sessions 63 to 65 ran on Sonnet 5.5, not
   the Opus 5.5 "Model routing" (below) routes judgment groups to; every unit they read (parts (2.9) C3.1, (2.10) C4.2,
   (2.11) the accelerated groups: C4.1, C4.4, C3.4, C4.5, C2.5, C1.1, C2.6, C3.6, C4.6) is re-read in an Opus 5.5 session,
@@ -120,6 +125,17 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   rests on the debt's path with no fiscal rule (24.9% of GDP in 2014 to 72.6% in 2020), since adjusted net savings
   answers the prior's depletion ground. Singapore's flag toward 1.0 lapses (gross debt governs). No flag of the group
   changes a tier or first place. Readings 4.1.1 to 4.1.4 are in the record, section 4.
+- **Stage 3b's third group done (Session 73, ledger S56): C4.4 and C4.2**, 33 units (part (2.11)'s 17 on C4.4, part
+  (2.10)'s 16 on C4.2). Checkpoint `7a6e0df` holds the blind readings before the priors were opened. Blind against
+  prior: C4.4 4 agree, 13 revise; C4.2 1 agree, 15 revise; mostly mechanisms out of reach rather than not shown
+  (D28(c)) and C4.2's clauses 3 and 4, which Session 64 could not read and this session read on Fanning et al. (2022)
+  and O'Neill et al. (2018), cached. Eleven verdicts differed; the reconciliation returned three to the prior's
+  (Doughnut Economics' C4.4, Singapore's C4.4 and C4.2, each flagged toward 0.5). **Final: eight verdicts change**:
+  C4.4 FALC, Islamic Finance, Stakeholder Capitalism and UBI 0.0 to 0.5; C4.2 China, Islamic Finance and Sovereign
+  Wealth Fund Statism 0.0 to 0.5, Centrally Planned Socialism 0.5 to 0.0. No CCO-PTF-CIP-SZH unit in the group. One
+  tier changes (Sovereign Wealth Fund Statism to Potentially Adequate), so ledger D56 asks the owner to confirm. Four
+  flags would change a tier: Market Socialism's and Sovereign Wealth Fund Statism's C4.2 toward 0.0, Singapore's C4.4
+  and C4.2 toward 0.5. Readings 4.4.1 to 4.4.4 and 4.2.1 to 4.2.6 are in the record, section 4.
 
 ## Next work, in order
 
@@ -168,14 +184,21 @@ scoring document's or the Report's headings sees the criterion's published score
 with the criterion's lines and sections filtered out (this session saw two such lines by accident and disclosed them,
 record section 2).
 
-1. **Session 73: Opus 5.5 at high** (ledger S56). Reason: a judgment group, routed at high; its two flagged units
-   (C4.2: Market Socialism toward 0.0, Sovereign Wealth Fund Statism toward 0.5) could each change a tier, but they are
-   two single calls on one criterion, so xhigh is not needed. Blind re-read: C4.4 (17 units, Session 65) and C4.2 (16
-   units, Session 64).
-2. (Session 72, done above.)
-3. **Session 74: Opus 5.5 at high** (ledger S57). Blind re-read: C1.1 (14 units, Session 65) and C3.1 (16 units, Session
-   63; Qatar and Doughnut Economics flagged toward 0.0). Fold in the Nordic finding: the Societal Poverty Line headcount
-   has risen since 2000 (Sweden 7.3% to 12.4%), bearing on Nordic Social Democracy's C1.1 reading.
+**Done: Session 73** (Opus 5.5 at high; ledger S56 archived; I8's third item ticked). The blind re-read of C4.4 and C4.2
+(Position above; `NEEC_BlindReview_s73.md`). Two things for the sessions that follow: the prior twice placed a
+mechanism at 0.0 on protocol 2.1's first condition while holding the others at 0.5 on the same pattern (Islamic Finance
+and UBI on C4.4, Islamic Finance and Sovereign Wealth Fund Statism on C4.2), so check the class reading in the groups
+left; and Session 64's C4.2 clauses 3 and 4 were left unshown for want of data that the White Rose and Springer copies
+of Fanning et al. (2022) and O'Neill et al. (2018) supply (`evidence_cache/C4.2/`).
+
+1. **Session 74: Opus 5.5 at high** (ledger S57). Reason: a judgment group, routed at high; Qatar's and Doughnut
+   Economics' C3.1 flags toward 0.0 and the Nordic poverty finding could each move a tier, but they are single calls,
+   so xhigh is not needed. Blind re-read: C1.1 (14 units, Session 65) and C3.1 (16 units, Session 63; Qatar and
+   Doughnut Economics flagged toward 0.0). Fold in the Nordic finding: the Societal Poverty Line headcount has risen
+   since 2000 (Sweden 7.3% to 12.4%), bearing on Nordic Social Democracy's C1.1 reading. Check mechanisms held at 0.0
+   on protocol 2.1's first condition against the class (Session 73's observation).
+2. (Sessions 72 and 73, done above.)
+3. (Session 74: item 1.)
 4. **Session 75: Opus 5.5 at high** (ledger S58; decision 69.2/D54). Blind re-read: C2.1, C2.4, C2.3's configured-economy
    units (18; clause 1 on session 70's cache — their first reading, an ordinary one, not a comparison) and C2.5 — the 13
    units Session 65 read, plus the 10 read on the pre-v2.0 four-clause list, all on v2.0's clauses.
@@ -190,7 +213,8 @@ record section 2).
    provisional standing and the Report and Paper inputs. The blind groups' final readings go in as parts of the pass
    (`pass_common.PARTS`), one per group, after part (2.11): Session 71's is `blind_s71.FINAL` (24 units; the
    owner confirmed ledger D55, so all five are applied, decision 72.1) and Session 72's is `blind_s72.FINAL` (23 units, two
-   verdict changes; the 8 part (b6) designs' clause lists move to v2.0's two), and the pass's `UNITS` form
+   verdict changes; the 8 part (b6) designs' clause lists move to v2.0's two) and Session 73's is `blind_s73.FINAL` (33
+   units, eight verdict changes, one tier change; ledger D56, default yes), and the pass's `UNITS` form
    carries each unit's `flag` and `zero`. Then rerun `apply_pass_s65.py`'s logic as a new generator for the v2 files.
 8. **Session 79: Opus 5.5 at high** (ledger S41; judgment prose, now on settled scores). Report v2.0 Part I, one domain
    per group, from `neec_scores_v2.csv` and the domain's criteria sections of the rescoring records (decision 52.8);
@@ -221,6 +245,20 @@ not its C4.5, so (e) is unchanged (`NEEC_BlindReview_s72.md`, section 9).
     would flag it down are held, for the site's push-back feature once that is ready. `NEEC_CCO_Paused_Readings_s67.md`
     (Session 67) lists the eight; sessions 74, 76 and 77 read them under this rule.
 14. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change needed.
+
+## Decided (Session 73; `NEEC_BlindReview_s73.md`, section 8)
+
+73.1 (optional, method) readings 4.4.1 to 4.4.4 and 4.2.1 to 4.2.6: C4.4's clause 1 on V-Dem's Regimes of the World
+(whether the public sector counts) and the most generous employment count, its clause 2 on V-Dem or the design's own
+or unmodified host's institutions; C4.2's clause 1 over 2013 to 2023 and since 2019, its clause 2 on the unrounded Red
+List Index over 2016 to 2025, its clauses 3 and 4 on Fanning et al. (2022) and O'Neill et al. (2018); a mechanism that
+governs none of a criterion's quantities holds at 0.5. 73.2 (corrections) C4.4: FALC, Islamic Finance, Stakeholder
+Capitalism and UBI 0.0 to 0.5, each flagged toward 0.0. 73.3 (corrections) C4.2: China, Islamic Finance and Sovereign
+Wealth Fund Statism 0.0 to 0.5, each flagged toward 0.0; Centrally Planned Socialism 0.5 to 0.0, flagged toward 0.5;
+Sovereign Wealth Fund Statism's tier rises to Potentially Adequate once applied (ledger D56 for the owner, default
+apply). 73.4 (corrections, no verdict effect) the clause statuses the record's section 5 lists, and three blind
+verdicts reconciled to the prior's (Doughnut Economics' C4.4, Singapore's C4.4 and C4.2), each flagged toward 0.5.
+73.5 (optional, tooling) `evidence_cache_s73.py`, `blind_s73.py`, harness v43 (122 checks), `README.md` regenerated.
 
 ## Decided (Session 72; `NEEC_BlindReview_s72.md`, section 8)
 
@@ -413,8 +451,9 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 ## Awaiting the owner
 
 Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
-items outside stage 3b's scope (Next work, open item (e)). Session 72 adds nothing for the owner: its two verdict
-changes are corrections under the delegation and neither touches CCO-PTF-CIP-SZH. Before this, the owner had answered every item recorded here, most recently in the
+items outside stage 3b's scope (Next work, open item (e)). Session 72 added nothing for the owner. **Open since
+Session 73: ledger D56**, whether S61 applies Session 73's eight verdict changes as read, including Sovereign Wealth
+Fund Statism's tier change (default yes; work goes ahead on it). Before this, the owner had answered every item recorded here, most recently in the
 ledger directly (decisions 57.1, 58.1, 58.2, 67.1, 69.1 to 69.4, 72.1). Under decision 57.2 only CCO-PTF-CIP-SZH's score changes wait on the owner, now under decision
 69.4/D38's rule (a rise is applied, a fall is held); other entries' changes are decided under the delegation. Nothing
 is open: S57-3.3 (ledger D38, formerly paused, decision 58.2) was answered (decision 69.4); the question of whether the
@@ -427,6 +466,7 @@ eight C4.1 design units should be re-read on v2.0's clauses (Handoff 68, section
 | — | Re-read the 8 C4.1 and 10 C2.5 pre-v2.0-clause units on v2.0's clauses? | Handoff 68, section 3, item 1 | D54 | 69.2: yes, in the blind-review pass (sessions 72, 75) |
 | S71-6 | Apply Session 71's five verdict changes at S61 (Participatory Economics alone first)? | `NEEC_BlindReview_s71.md` 6 to 8 | D55 | 72.1: apply all five as read |
 | S71-9 | Libertarian Minarchism and Centrally Planned Socialism on C4.5; C3.4's clause 3 for 16 units | `NEEC_BlindReview_s71.md` 9 | I9 | open |
+| S73-6 | Apply Session 73's eight verdict changes at S61 (Sovereign Wealth Fund Statism to Potentially Adequate)? | `NEEC_BlindReview_s73.md` 6 to 8 | D56 | open (default yes) |
 
 S57-3.9 (ledger d37 of the superseded artifact) was answered: the owner kept C3.2 at 1.0 (decision 58.1). S63-3.1,
 S63-3.2 and S63-3.4 (d39 to d41) were answered: accepted as recorded (decision 64.7).
@@ -439,9 +479,9 @@ linking to the extended description in the record. Ledger rule for sessions: `CL
 and a `pick`/`confirmed`/glossary scheme; a `d<n>` cited above in an older record is that artifact's, not the current
 one's `D<n>`.
 
-Method choices Sessions 52 to 72 made that the criteria record does not yet carry (optional, not corrections; carried
+Method choices Sessions 52 to 73 made that the criteria record does not yet carry (optional, not corrections; carried
 into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5, 57.6, 57.8, 58.3, 58.8, 60.1, 60.3
-to 60.5, 61.1, 61.3 to 61.5, 63.1, 63.3 to 63.5, 64.1 to 64.6, 71.1, 72.2 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2, 61.2 and 63.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
+to 60.5, 61.1, 61.3 to 61.5, 63.1, 63.3 to 63.5, 64.1 to 64.6, 71.1, 72.2, 73.1 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2, 61.2 and 63.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
 key (Handoff 52, section 4).
 
 ## Model routing (decision 52.4)
@@ -525,7 +565,7 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
   model.
 - **Ties.** On the published provisional scores first place is shared by CCO-PTF-CIP-SZH and Participatory Economics
   (16.0 on the 29); once S61 applies Session 71's readings (confirmed, decision 72.1), Participatory Economics is alone
-  first (16.5), its C4.5 flag toward 0.5 the one call that would restore the tie; Session 72's changes do not move it. Earlier: first place was shared after group 2.9, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
+  first (16.5), its C4.5 flag toward 0.5 the one call that would restore the tie; Sessions 72's and 73's changes do not move it. Earlier: first place was shared after group 2.9, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
   `triage_s52.py` name a shared first place as shared (57.10). The triage's "could change none" screen reads an entry's
   own rank, so with a tie it can list a unit that decides who is first (Next work, item 4).
 - **The shared pass module and the triage.** `python3 pass_common.py --selftest` reproduces group 2.1's tables from the
