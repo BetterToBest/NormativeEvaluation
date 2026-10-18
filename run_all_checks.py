@@ -295,7 +295,11 @@ NEEC_BlindReview_s75.md's tables): 126 checks. No published file changed. Versio
 evidence_cache_s76.py (the 16 passages the blind re-read of C2.6, C3.6 and C4.6 cached from the designs' own texts, by
 digest) and blind_s76.py (the 51 blind readings of the 17 designs and mechanisms on C2.6, C3.6 and C4.6, their
 comparison with part (2.11), the consequences on the 29 criteria with Sessions 71's to 75's and
-NEEC_BlindReview_s76.md's tables): 128 checks. No published file changed.
+NEEC_BlindReview_s76.md's tables): 128 checks. No published file changed. Version 47 (Session 77) adds
+evidence_cache_s77.py (the 21 files the blind re-read of C2.6, C3.6 and C4.6 for the configured economies cached, by
+digest) and blind_s77.py (the 18 blind readings of the six configured economies on C2.6, C3.6 and C4.6, their
+comparison with part (2.11), the consequences on the 29 criteria with Sessions 71's to 76's and
+NEEC_BlindReview_s77.md's tables): 130 checks. No published file changed.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1676,13 +1680,47 @@ S76_CHECKS = [
          stdout="blind_s76_output.txt", stderr=EMPTY),
 ]
 
+# Session 77: the blind re-read of C2.6, C3.6 and C4.6 for the six configured economies (part (2.11)'s 18 units)
+# (ledger S60; decisions 69.1, 69.2). evidence_cache_s77.py verifies by digest the 21 files the group cached: Freedom
+# House's and V-Dem's series and Freedom in the World 2026's pages, the law in force, Penn World Table 11.0, the
+# Poverty and Inequality Platform, the transcription of Easterly and Fischer's tables, the OECD's GBD 2019 mortality
+# dataset and the WHO's poisoning series. blind_s77.py checks the 18 readings (complete, D28), recomputes the figures
+# they quote, compares them with part (2.11) (rescoring_s65.NEW_UNITS), checks the four C3.6 verdict differences and
+# every revision's stated reason, computes the consequences on the 29 criteria with blind_s71.FINAL to blind_s76.FINAL
+# and each flag's, and confirms NEEC_BlindReview_s77.md carries every table it generates. Nothing is applied: ledger
+# S61 applies the final readings.
+S77_CACHE = ("C2.6/cn_law_c26_extract.txt", "C2.6/dk_law_c26_extract.txt", "C2.6/fh_fiw2026_cl_f1_extract.txt",
+             "C2.6/fi_law_c26_extract.txt", "C2.6/no_law_c26_extract.txt",
+             "C2.6/owid_fh_civil_liberties_rating_su_s77.csv", "C2.6/owid_fh_civil_liberties_score_s77.csv",
+             "C2.6/owid_vdem_civil_liberties_s77.csv", "C2.6/se_law_c26_extract.txt", "C2.6/sg_law_c26_extract.txt",
+             "C2.6/su_law_c26_extract.txt", "C2.6/us_law_c26_extract.txt", "C3.6/easterly_fischer_1995_tables_s77.csv",
+             "C3.6/pip_spl_selected_economies.csv", "C3.6/pwt110_selected_economies.csv", "C4.6/cn_law_c46_extract.txt",
+             "C4.6/nordic_law_c46_extract.txt", "C4.6/oecd_exp_morsc_gbd2019_s77.csv",
+             "C4.6/su_environment_c46_extract.txt", "C4.6/us_law_c46_extract.txt", "C4.6/who_gho_sdgpoison_s77.csv",
+             "C2.6/sources_s77.md", "C3.6/sources_s77.md", "C4.6/sources_s77.md")
+S77_FILES = {**S76_FILES, "evidence_cache_s77.py": "evidence_cache_s77.py", "blind_s77.py": "blind_s77.py",
+             "NEEC_BlindReview_s77.md": "NEEC_BlindReview_s77.md",
+             **{"evidence_cache/" + k: "evidence_cache/" + k for k in S77_CACHE}}
+S77_CHECKS = [
+    dict(name="evidence_cache_s77.py: the 21 files Session 77 cached for the blind re-read of C2.6, C3.6 and C4.6 for "
+              "the configured economies (ledger S60) verify by digest",
+         cmd=["python", "evidence_cache_s77.py"], files=S77_FILES,
+         stdout="evidence_cache_s77_output.txt", stderr=EMPTY),
+    dict(name="blind_s77.py: the blind re-read of C2.6, C3.6 and C4.6 for the six configured economies (18 units) "
+              "against part (2.11): readings complete and on D28, figures recomputed from the cache, the comparison "
+              "(four C3.6 verdicts differ; each revision's reason), consequences with Sessions 71's to 76's and flag "
+              "effects, and NEEC_BlindReview_s77.md carrying every generated table",
+         cmd=["python", "blind_s77.py"], files=S77_FILES,
+         stdout="blind_s77_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
           + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS + S74_CHECKS
-          + S75_CHECKS + S76_CHECKS)
+          + S75_CHECKS + S76_CHECKS + S77_CHECKS)
 
 
 def md5(data):

@@ -1,0 +1,22 @@
+  PASS C2.6/owid_fh_civil_liberties_score_s77.csv: md5 d84871db
+  PASS C2.6/owid_fh_civil_liberties_rating_su_s77.csv: md5 a61d3ab3
+  PASS C2.6/owid_vdem_civil_liberties_s77.csv: md5 453186c3
+  PASS C2.6/fh_fiw2026_cl_f1_extract.txt: md5 226863fc
+  PASS C2.6/us_law_c26_extract.txt: md5 3be8591d
+  PASS C2.6/dk_law_c26_extract.txt: md5 a00ccb5d
+  PASS C2.6/fi_law_c26_extract.txt: md5 61453a44
+  PASS C2.6/se_law_c26_extract.txt: md5 6fa24b51
+  PASS C2.6/no_law_c26_extract.txt: md5 7e64991c
+  PASS C2.6/su_law_c26_extract.txt: md5 cf44d4d6
+  PASS C2.6/cn_law_c26_extract.txt: md5 4013a1ee
+  PASS C2.6/sg_law_c26_extract.txt: md5 20a708ca
+  PASS C3.6/pwt110_selected_economies.csv: md5 681cb995
+  PASS C3.6/pip_spl_selected_economies.csv: md5 53922527
+  PASS C3.6/easterly_fischer_1995_tables_s77.csv: md5 38a20fe2
+  PASS C4.6/oecd_exp_morsc_gbd2019_s77.csv: md5 29a8bdab
+  PASS C4.6/who_gho_sdgpoison_s77.csv: md5 5234238a
+  PASS C4.6/us_law_c46_extract.txt: md5 2f0af564
+  PASS C4.6/nordic_law_c46_extract.txt: md5 57df9afa
+  PASS C4.6/cn_law_c46_extract.txt: md5 2f39195b
+  PASS C4.6/su_environment_c46_extract.txt: md5 25194c10
+SUMMARY: ALL PASS

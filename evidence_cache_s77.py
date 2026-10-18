@@ -63,7 +63,7 @@ MORSC = ("https://sdmx.oecd.org/public/rest/data/OECD.ENV.EPI,DSD_EXP_MORSC@DF_E
          "USA+DNK+FIN+NOR+SWE+CHN+SGP+QAT.A.MOR.10P6HB.PM_2_5_OUT+AIRPOL_IN+UWATS+USAN+NHANDW._T._T?startPeriod=1990")
 GHO = "https://ghoapi.azureedge.net/api/{}?$filter=SpatialDim%20in%20('USA','DNK','FIN','NOR','SWE','CHN','SGP','QAT')"
 PWT_COLS = ["countrycode", "year", "rgdpna", "rgdpe", "pop", "emp", "avh", "rtfpna"]
-PIP_COLS = ["country_code", "reporting_year", "reporting_level", "welfare_type", "mean", "median", "spl"]
+PIP_COLS = ["country_code", "reporting_year", "reporting_level", "welfare_type", "mean", "median", "spl", "spr"]
 # Easterly and Fischer (1995), NBER working paper 4735, a scanned PDF with no text layer (Session 70's cache), read as
 # page images in Session 77 and transcribed here: Table 1 (PDF page 40), output per worker, total economy, Western
 # estimates, and Table 4 (page 43), TFP growth, Western-estimate GNP, by period; Table 5 (page 44), the CES estimates'
@@ -204,7 +204,7 @@ FILES = {
     "C2.6/cn_law_c26_extract.txt": "4013a1eef4ea64f56e8c057f0a9e89f9",
     "C2.6/sg_law_c26_extract.txt": "20a708cabba979224ac7d2a52f9e0a32",
     "C3.6/pwt110_selected_economies.csv": "681cb995284ecc8bb636c45a0fa27fd0",
-    "C3.6/pip_spl_selected_economies.csv": "f743a717c4796bc93b37e2ac33fa5d6f",
+    "C3.6/pip_spl_selected_economies.csv": "53922527d6c62da7345236ae70f36726",
     "C3.6/easterly_fischer_1995_tables_s77.csv": "38a20fe24475a92fdd367124676a201f",
     "C4.6/oecd_exp_morsc_gbd2019_s77.csv": "29a8bdab034c2353e6031232d3dddc7c",
     "C4.6/who_gho_sdgpoison_s77.csv": "5234238af2b68acd01986b0f96e8ee4d",
