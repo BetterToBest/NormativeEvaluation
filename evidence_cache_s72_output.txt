@@ -1,0 +1,9 @@
+  PASS C4.1/fred_us_net_saving_gni.csv: md5 3f7fb3a1
+  PASS C4.1/wb_adjusted_net_savings_pct_gni.json: md5 c4d87efd
+  PASS C4.1/ofer_1990_extract.txt: md5 462ef883
+  PASS C4.1/programme_400_days_1990_extract.txt: md5 bae63800
+  PASS C4.1/lp_platform_extract.txt: md5 98ef5060
+  PASS C4.1/hahnel_wright_2016_c41_extract.txt: md5 3ee5ead9
+  PASS C4.1/integral_wp_v01_c41_extract.txt: md5 a3cd38c4
+  PASS C4.1/research_hub_8e8a6ba_c41_extract.txt: md5 bfa5ca51
+SUMMARY: ALL PASS

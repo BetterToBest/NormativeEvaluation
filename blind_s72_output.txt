@@ -1,0 +1,121 @@
+blind_s72.py -- the blind re-read of C4.1 (ledger S55; decisions 69.1, 69.2)
+inputs: blind_review.py, pass_common.py and its parts, evidence_cache/C4.1/fred_us_net_saving_gni.csv, evidence_cache/C4.1/hahnel_wright_2016_c41_extract.txt, evidence_cache/C4.1/imf_weo_gross_debt_pct_gdp.json, evidence_cache/C4.1/integral_wp_v01_c41_extract.txt, evidence_cache/C4.1/lp_platform_extract.txt, evidence_cache/C4.1/ofer_1990_extract.txt, evidence_cache/C4.1/programme_400_days_1990_extract.txt, evidence_cache/C4.1/research_hub_8e8a6ba_c41_extract.txt, evidence_cache/C4.1/sources_s72.md, evidence_cache/C4.1/wb_adjusted_net_savings_pct_gni.json, evidence_cache/C4.1/wb_consumption_fixed_capital_pct_gni.json, evidence_cache/C4.1/wb_gross_savings_pct_gni.json
+
+[1] the blind readings are complete and follow the rules
+  PASS one blind reading for each of the 23 C4.1 units of parts (2.11) and (b6), no more
+  PASS every unit has one status per v2.0 clause, each with its estimate and its source
+  PASS every verdict follows D28 (1.0 only if every clause is cleared or moot), and none is 0.0
+  PASS each flag names an alternative score other than the verdict
+  PASS each reading has one status per clause blind_view shows
+  PASS every file blind_view lists for C4.1 is one this script reads or names
+
+[2] the figures the readings quote, recomputed from the cache
+    US gross debt 2025 / range 2016-2025 / 2031 (WEO): 124.4 / 106.5-132.6 / 145.0
+    US net national saving 2012-2021 (WDI), range: 1.4-3.8
+    US net saving 2016-2025 (BEA), lowest: 0.9
+    US years of negative net saving 2000-2025 (BEA): 2008, 2009, 2010
+    China gross debt 2025 / first year above 80 / 2031: 98.6 / 2023 / 122.1
+    China net national saving 2012-2021, range: 17.1-26.7
+    Singapore gross debt 2025 / range 2016-2025: 165.7 / 105.9-170.4
+    Singapore net national saving 2012-2021, range: 25.7-34.9
+    Qatar gross debt 2025 / range 2016-2025 / highest 2026-2031: 42.5 / 41.4-72.6 / 46.4
+    Qatar gross debt 2014 and 2020: 24.9 and 72.6
+    Qatar net national saving / adjusted net savings 2012-2021, ranges: 24.5-47.9 / 17.9-33.5
+    Finland gross debt 2025 / first year above 80 / 2031: 88.4 / 2024 / 101.2
+    Denmark, Norway, Sweden gross debt, highest 2016-2025: 45.2, 54.0, 43.2
+    Nordic net national saving 2012-2021, lowest (DNK, FIN, NOR, SWE): 7.6, 1.2, 6.6, 9.1
+    Norway adjusted net savings 2012-2021, range: 13.6-22.7
+
+[3] the blind readings (verdicts, clause statuses, flags)
+| Unit | Clause statuses | Verdict | Flag |
+|---|---|---|---|
+| CCO-PTF-CIP-SZH | S C | 0.5 | — |
+| Centrally Planned Socialism | S C | 0.5 | toward 1.0 |
+| Degrowth Economics | U S | 0.5 | — |
+| Doughnut Economics | U U | 0.5 | — |
+| Fully Automated Luxury Communism | U U | 0.5 | — |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | R R | 0.5 | — |
+| Integral | C S | 0.5 | — |
+| Islamic Finance / Profit-Sharing Banking | R R | 0.5 | — |
+| Libertarian Minarchism | C U | 0.5 | — |
+| MMT + Job Guarantee | S U | 0.5 | toward 0.0 |
+| Market Socialism | U C | 0.5 | — |
+| Mutual Credit / LETS | R R | 0.5 | — |
+| Nordic Social Democracy | S C | 0.5 | toward 1.0 |
+| Ostrom-Style Commons Governance | R R | 0.5 | — |
+| Participatory Economics | U U | 0.5 | — |
+| Sovereign Wealth Fund Statism | R S | 0.5 | — |
+| Stakeholder Capitalism | S C | 0.5 | toward 0.0 |
+| State Capitalism / China (Party-State-Directed Market Economy) | S C | 0.5 | — |
+| State Capitalism / Qatar (Gulf Rentier-Distributive Statism) | C C | 1.0 | toward 0.5 |
+| State Capitalism / Singapore (GLC Developmental Capitalism) | S C | 0.5 | — |
+| Status Quo Market Capitalism | S C | 0.5 | toward 0.0 |
+| Universal Basic Income | R R | 0.5 | — |
+| Universal Basic Services | R R | 0.5 | — |
+
+C4.1: 1 at 1.0, 22 at 0.5, 0 at 0.0; 6 flagged
+
+[4] the comparison with parts (2.11) and (b6) (compare_group on the readings as recorded at the checkpoint)
+| Unit | Prior part | Prior | Blind (Session 72) | Result | Differences |
+|---|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | (b6) | C U U C / 0.5 | S C / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Centrally Planned Socialism | (2.11) | U U / 0.5 | S C / 0.5 | revise (clauses) | clause 1: U (prior) vs S (new); clause 2: U (prior) vs C (new) |
+| Degrowth Economics | (b6) | C C S C / 0.5 | U S / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Doughnut Economics | (b6) | U C U U / 0.5 | U U / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Fully Automated Luxury Communism | (b6) | U C U C / 0.5 | U U / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | (2.11) | U U / 0.5 | R R / 0.5 | revise (clauses) | clause 1: U (prior) vs R (new); clause 2: U (prior) vs R (new) |
+| Integral | (b6) | U C U C / 0.5 | C S / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Islamic Finance / Profit-Sharing Banking | (2.11) | U U / 0.5 | R R / 0.5 | revise (clauses) | clause 1: U (prior) vs R (new); clause 2: U (prior) vs R (new) |
+| Libertarian Minarchism | (2.11) | U U / 0.0 | C U / 0.5 | revise (verdict) | clause 1: U (prior) vs C (new); verdict: 0.0 (prior) vs 0.5 (new) |
+| MMT + Job Guarantee | (2.11) | U U / 0.5 | S U / 0.5 | revise (clauses) | clause 1: U (prior) vs S (new) |
+| Market Socialism | (2.11) | U U / 0.5 | U C / 0.5 | revise (clauses) | clause 2: U (prior) vs C (new) |
+| Mutual Credit / LETS | (2.11) | U U / 0.5 | R R / 0.5 | revise (clauses) | clause 1: U (prior) vs R (new); clause 2: U (prior) vs R (new) |
+| Nordic Social Democracy | (2.11) | S C / 0.5 | S C / 0.5 | agree | — |
+| Ostrom-Style Commons Governance | (b6) | R C R C / 0.5 | R R / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Participatory Economics | (b6) | U C U U / 0.5 | U U / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Sovereign Wealth Fund Statism | (b6) | R R U C / 0.5 | R S / 0.5 | revise (clauses) | clause count 4 (prior) vs 2 (new) |
+| Stakeholder Capitalism | (2.11) | U U / 0.0 | S C / 0.5 | revise (verdict) | clause 1: U (prior) vs S (new); clause 2: U (prior) vs C (new); verdict: 0.0 (prior) vs 0.5 (new) |
+| State Capitalism / China (Party-State-Directed Market Economy) | (2.11) | S C / 0.5 | S C / 0.5 | agree | — |
+| State Capitalism / Qatar (Gulf Rentier-Distributive Statism) | (2.11) | C C / 1.0 | C C / 1.0 | agree | — |
+| State Capitalism / Singapore (GLC Developmental Capitalism) | (2.11) | S C / 0.5 | S C / 0.5 | agree | — |
+| Status Quo Market Capitalism | (2.11) | S C / 0.5 | S C / 0.5 | agree | — |
+| Universal Basic Income | (2.11) | U U / 0.5 | R R / 0.5 | revise (clauses) | clause 1: U (prior) vs R (new); clause 2: U (prior) vs R (new) |
+| Universal Basic Services | (2.11) | U U / 0.5 | R R / 0.5 | revise (clauses) | clause 1: U (prior) vs R (new); clause 2: U (prior) vs R (new) |
+
+blind: 5 agree, 18 revise; 8 on the pre-v2.0 clause list (clause count 4 vs 2); 2 verdicts differ: Libertarian Minarchism 0.0 to 0.5, Stakeholder Capitalism 0.0 to 0.5
+  PASS the clause-count differences are exactly part (b6)'s 8 designs (decision 69.2)
+
+[5] the reconciliation (protocol 5.3) and the final readings
+  PASS every reconciled unit is one whose blind verdict differs from the prior's
+  PASS no verdict or clause status is reconciled to the prior's: both differences stand, and FINAL differs from the blind reading only by the prior's verdict kept as a flag on a standing unit without one
+  PASS every verdict follows D28 (1.0 only if every clause is cleared or moot), and none is 0.0
+  PASS no CCO-PTF-CIP-SZH verdict changes (decisions 57.2, 69.4: a rise is applied, a fall held)
+
+[6] consequences once applied (by generator in ledger S61, not here), alone and with Session 71's
+  PASS neec_corpus_v2.json carries the prior's verdict for each of the 23 units (the published provisional scores are the prior's)
+| Entry | Total on 29 | After this group | After Sessions 71 and 72 | Failures | After both | Tier after both |
+|---|---:|---:|---:|---:|---:|---|
+| Libertarian Minarchism | 8.5 | 9.0 | 9.5 | 13 | 11 | Structurally Inadequate |
+| Stakeholder Capitalism | 10.5 | 11.0 | 10.5 | 8 | 8 | Structurally Inadequate |
+| Fully Automated Luxury Communism | 10.5 | 10.5 | 10.0 | 10 | 11 | Structurally Inadequate |
+| Participatory Economics | 16.0 | 16.0 | 16.5 | 0 | 0 | Potentially Adequate |
+| State Capitalism / Singapore (GLC Developmental Capitalism) | 13.0 | 13.0 | 13.5 | 4 | 3 | Partially Adequate |
+
+first place on the 29 after this group alone: CCO-PTF-CIP-SZH and Participatory Economics at 16.0; after Sessions 71 and 72: Participatory Economics at 16.5; tier changes: none
+
+the final readings' 7 flags, each taken alone (on both groups' final verdicts):
+| Unit | Final | Flag toward | Total on 29 then | Failures then | Tier then | Changes |
+|---|---:|---:|---:|---:|---|---|
+| Centrally Planned Socialism | 0.5 | 1.0 | 8.0 | 15 | Structurally Inadequate | — |
+| Libertarian Minarchism | 0.5 | 0.0 | 9.0 | 12 | Structurally Inadequate | — |
+| MMT + Job Guarantee | 0.5 | 0.0 | 12.0 | 5 | Partially Adequate | — |
+| Nordic Social Democracy | 0.5 | 1.0 | 15.5 | 1 | Potentially Adequate | — |
+| Stakeholder Capitalism | 0.5 | 0.0 | 10.0 | 9 | Structurally Inadequate | — |
+| State Capitalism / Qatar (Gulf Rentier-Distributive Statism) | 1.0 | 0.5 | 10.0 | 9 | Structurally Inadequate | — |
+| Status Quo Market Capitalism | 0.5 | 0.0 | 11.5 | 8 | Structurally Inadequate | — |
+flags that would change a tier or first place: none
+
+[7] the record
+  PASS NEEC_BlindReview_s72.md carries every generated table verbatim (blind readings, comparison, consequences, flag effects)
+
+BLIND RE-READ OF C4.1 CHECKED.
