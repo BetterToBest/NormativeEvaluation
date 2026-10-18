@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 45 (Session 75). Runs every verification and analysis script on file
+Version 46 (Session 76). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -291,7 +291,11 @@ tables): 124 checks. No published file changed. Version 45 (Session 75) adds evi
 the blind re-read of C2.1, C2.4, C2.3 and C2.5 cached, by digest) and blind_s75.py (the 18 first readings of C2.1,
 C2.4 and C2.3 for the configured economies and the 23 blind readings of C2.5, their comparison with parts (2.11),
 (b5) and (a), the reconciliation, the consequences on the 29 criteria with Sessions 71's to 74's and
-NEEC_BlindReview_s75.md's tables): 126 checks. No published file changed.
+NEEC_BlindReview_s75.md's tables): 126 checks. No published file changed. Version 46 (Session 76) adds
+evidence_cache_s76.py (the 16 passages the blind re-read of C2.6, C3.6 and C4.6 cached from the designs' own texts, by
+digest) and blind_s76.py (the 51 blind readings of the 17 designs and mechanisms on C2.6, C3.6 and C4.6, their
+comparison with part (2.11), the consequences on the 29 criteria with Sessions 71's to 75's and
+NEEC_BlindReview_s76.md's tables): 128 checks. No published file changed.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1634,13 +1638,51 @@ S75_CHECKS = [
          stdout="blind_s75_output.txt", stderr=EMPTY),
 ]
 
+# Session 76: the blind re-read of C2.6, C3.6 and C4.6 for the 17 designs and mechanisms (part (2.11)'s 51 units, which
+# Session 65 scored on a stated rule) (ledger S59; decisions 69.1, 69.2). evidence_cache_s76.py verifies by digest the 16
+# passages the group cached from the designs' own freely published texts. blind_s76.py checks the 51 readings
+# (complete, D28, no mechanism at 0.0, no clause out of reach for a design), recomputes the market economies'
+# productivity record they calibrate against, compares them with part (2.11) (rescoring_s65.NEW_UNITS), checks that no
+# verdict differs and every clause revision has its stated reason, that no CCO-PTF-CIP-SZH verdict changes, computes
+# the consequences on the 29 criteria with blind_s71.FINAL to blind_s75.FINAL and each flag's, and confirms
+# NEEC_BlindReview_s76.md carries every table it generates. Nothing is applied: ledger S61 applies the final readings.
+S76_CACHE = ("C2.6/lp_platform_c26_extract.txt", "C2.6/cco_research_hub_c26_extract.txt",
+             "C2.6/integral_wp_v01_c26_extract.txt", "C2.6/pe_model_c26_extract.txt",
+             "C2.6/ostrom_nobel_c26_extract.txt", "C2.6/levy_jg_wp902_c26_extract.txt",
+             "C2.6/bien_definition_c26_extract.txt", "C2.6/george_progress_poverty_c26_extract.txt",
+             "C2.6/sources_s76.md", "C2.6/owid_freedom_house_civil_liberties_rating.csv",
+             "C2.6/law_in_force_notes_s70.md", "C2.6/us_cfr_42_70.14.html", "C2.6/us_cfr_42_71.37.html",
+             "C3.6/cco_research_hub_c36_extract.txt", "C3.6/integral_wp_v01_c36_extract.txt",
+             "C3.6/pe_model_c36_extract.txt", "C3.6/pwt1001_selected_economies.csv", "C3.6/sources_s76.md",
+             "C3.6/easterly_fischer_1995_nber_w4735.pdf",
+             "C4.6/lp_platform_c46_extract.txt", "C4.6/pe_model_c46_extract.txt",
+             "C4.6/integral_wp_v01_c46_extract.txt", "C4.6/wef_metrics_c46_extract.txt",
+             "C4.6/cco_research_hub_c46_extract.txt", "C4.6/sources_s76.md", "C4.6/SDGAIRBOD.json",
+             "C4.6/SDGPOISON.json", "C4.6/SDGWSHBOD.json", "C4.6/air42.json", "C4.6/notes_s70.md")
+S76_FILES = {**S75_FILES, "evidence_cache_s76.py": "evidence_cache_s76.py", "blind_s76.py": "blind_s76.py",
+             "NEEC_BlindReview_s76.md": "NEEC_BlindReview_s76.md",
+             **{"evidence_cache/" + k: "evidence_cache/" + k for k in S76_CACHE}}
+S76_CHECKS = [
+    dict(name="evidence_cache_s76.py: the 16 passages Session 76 cached from the designs' own texts for the blind "
+              "re-read of C2.6, C3.6 and C4.6 (ledger S59) verify by digest",
+         cmd=["python", "evidence_cache_s76.py"], files=S76_FILES,
+         stdout="evidence_cache_s76_output.txt", stderr=EMPTY),
+    dict(name="blind_s76.py: the blind re-read of C2.6, C3.6 and C4.6 for the 17 designs and mechanisms (51 units) "
+              "against part (2.11): readings complete and on D28, the market economies' record recomputed from the "
+              "cache, the comparison (no verdict differs; each clause revision's reason), no CCO-PTF-CIP-SZH verdict "
+              "change, consequences with Sessions 71's to 75's and flag effects, and NEEC_BlindReview_s76.md carrying "
+              "every generated table",
+         cmd=["python", "blind_s76.py"], files=S76_FILES,
+         stdout="blind_s76_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
           + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS + S74_CHECKS
-          + S75_CHECKS)
+          + S75_CHECKS + S76_CHECKS)
 
 
 def md5(data):

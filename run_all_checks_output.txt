@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 126 reproducibility checks
+run_all_checks.py -- 128 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 126 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 a6da5636)
+          README.md == README.md (md5 17bfdf92)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -492,7 +492,15 @@ run_all_checks.py -- 126 reproducibility checks
           stdout == blind_s75_output.txt (md5 7487e8e7)
           stderr == (empty) (md5 d41d8cd9)
 
+[127] PASS  evidence_cache_s76.py: the 16 passages Session 76 cached from the designs' own texts for the blind re-read of C2.6, C3.6 and C4.6 (ledger S59) verify by digest
+          stdout == evidence_cache_s76_output.txt (md5 44ff240f)
+          stderr == (empty) (md5 d41d8cd9)
+
+[128] PASS  blind_s76.py: the blind re-read of C2.6, C3.6 and C4.6 for the 17 designs and mechanisms (51 units) against part (2.11): readings complete and on D28, the market economies' record recomputed from the cache, the comparison (no verdict differs; each clause revision's reason), no CCO-PTF-CIP-SZH verdict change, consequences with Sessions 71's to 75's and flag effects, and NEEC_BlindReview_s76.md carrying every generated table
+          stdout == blind_s76_output.txt (md5 88543c0b)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 126 passed, 0 failed, 0 skipped (of 126).
+SUMMARY: 128 passed, 0 failed, 0 skipped (of 128).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.
