@@ -299,9 +299,11 @@ regulation clean, with the PREP Act's immunity). None is proposed here.
   C4.6's clause 1, where the WHO's SDG series do not span the window.
 - **77.3** (corrections, for S61) the four C3.6 verdict changes of section 6 (Status Quo, China and Singapore 0.5 to
   1.0; Centrally Planned Socialism 0.0 to 0.5) and the clause revisions of all 18 units; FINAL is the blind readings
-  with one flag added (Singapore's C3.6) and one flag stated after the comparison (Status Quo's C3.6). No tier or first
+  with two flags added after the comparison (FLAGS: Singapore's and Status Quo's C3.6). No tier or first
   place changes.
-- **77.4** (optional, tooling) `evidence_cache_s77.py`, `blind_s77.py` and harness v47 (130 checks).
+- **77.4** (optional, tooling) `evidence_cache_s77.py`, `blind_s77.py` and harness v47 (130 checks); `blind_s76.py`'s
+  check that blind_view lists only files it reads now sets aside the files this session added to the same
+  directories (its `LATER`), since the harness copies the whole cache; its output is unchanged.
 
 Nothing is added for the owner: no tier, first-place or CCO-PTF-CIP-SZH change.
 
