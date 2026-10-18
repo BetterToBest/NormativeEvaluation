@@ -76,7 +76,7 @@ applies: no verdict changes. No CCO-PTF-CIP-SZH verdict changes (decisions 57.2,
 
 Usage: python3 blind_s76.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, the scripts pass_common.PARTS
                                names and the files they read, blind_review.py, blind_s71.py to blind_s75.py, the
-                               evidence_cache/C2.6/, C3.6/ and C4.6/ files, neec_corpus_v2.json, neec_scores_v2.csv
+                               evidence_cache/C2.6/, C3.6/ and C4.6/ files, neec_corpus_v2_s65_snapshot.json, neec_scores_v2_s65_snapshot.csv
                                and NEEC_BlindReview_s76.md; writes nothing)
 Prints file names and summaries only. Deterministic.
 """
@@ -740,10 +740,10 @@ def main():
     print("blind_s76.py -- the blind re-read of C2.6, C3.6 and C4.6 for the 17 designs and mechanisms (ledger S59)")
     with redirect_stdout(io.StringIO()):
         p = pc.Pass()
-    print("inputs: blind_review.py, pass_common.py and its parts, neec_corpus_v2.json, " + ", ".join(sorted(READ)) + "\n")
+    print("inputs: blind_review.py, pass_common.py and its parts, neec_corpus_v2_s65_snapshot.json, " + ", ".join(sorted(READ)) + "\n")
 
     print("[1] the readings are complete and follow the rules")
-    corpus = {e["code"]: e["scope_class"] for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
+    corpus = {e["code"]: e["scope_class"] for e in json.load(open(path("neec_corpus_v2_s65_snapshot.json"), encoding="utf-8"))["entries"]}
     ok_print({c for c, s in corpus.items() if s == "comprehensive_system"} == set(DESIGNS),
              "the nine designs are the corpus's comprehensive systems")
     ok_print({c for c, s in corpus.items() if s == "mechanism"} == set(MECHS), "the eight mechanisms are the corpus's mechanisms")
@@ -817,7 +817,7 @@ def main():
 
     print("\n[6] consequences once applied (by generator in ledger S61, not here), with Sessions 71 to 75")
     t_cons, held, (fn, ft), tiers, mine, both = consequence_table(p, prior, FINAL)
-    ok_print(held, "neec_corpus_v2.json carries the prior's verdict for each of the 51 units (the published "
+    ok_print(held, "neec_corpus_v2_s65_snapshot.json carries the prior's verdict for each of the 51 units (the published "
              "provisional scores are the prior's)")
     ok_print(not mine, "this group changes no verdict")
     print(t_cons)

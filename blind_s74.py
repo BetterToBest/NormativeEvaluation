@@ -70,8 +70,8 @@ in this group (decisions 57.2, 69.4).
 
 Usage: python3 blind_s74.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, the scripts pass_common.PARTS
                                names and the files they read, blind_review.py, blind_s71.py, blind_s72.py,
-                               blind_s73.py, the evidence_cache/C1.1/ and C3.1/ files, neec_corpus_v2.json,
-                               neec_scores_v2.csv and NEEC_BlindReview_s74.md; writes nothing)
+                               blind_s73.py, the evidence_cache/C1.1/ and C3.1/ files, neec_corpus_v2_s65_snapshot.json,
+                               neec_scores_v2_s65_snapshot.csv and NEEC_BlindReview_s74.md; writes nothing)
 Prints file names and summaries only. Deterministic.
 """
 import csv
@@ -608,10 +608,10 @@ def earlier_changes(p):
 
 
 def standings(changes):
-    """Totals on the 29 criteria (neec_scores_v2.csv) and failures, with the verdict changes in `changes`
+    """Totals on the 29 criteria (neec_scores_v2_s65_snapshot.csv) and failures, with the verdict changes in `changes`
     ({(code, cid): (prior verdict, final verdict)}) applied on top; nothing is written."""
-    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
-    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2.csv"), encoding="utf-8"))}
+    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2_s65_snapshot.json"), encoding="utf-8"))["entries"]}
+    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2_s65_snapshot.csv"), encoding="utf-8"))}
     out = {}
     for code, e in v2.items():
         r = rows29[e["display_name"]]
@@ -773,7 +773,7 @@ def main():
     cco = [k for k in vd if k[0] == "CCO"]
     ok_print(not cco, "no CCO-PTF-CIP-SZH verdict changes (decisions 57.2, 69.4: a rise is applied, a fall held)",
              str(cco))
-    mech = {c for c, e in ((e["code"], e) for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))
+    mech = {c for c, e in ((e["code"], e) for e in json.load(open(path("neec_corpus_v2_s65_snapshot.json"), encoding="utf-8"))
                            ["entries"]) if e["scope_class"] == "mechanism"}
     zero_mech = sorted(f"{k[0]} {k[1]}" for k, u in {**prior, **FINAL}.items() if k[0] in mech and u["verdict"] == 0.0)
     ok_print(not zero_mech, "no mechanism is at 0.0 in this group on either reading (Session 73's observation: "
@@ -785,7 +785,7 @@ def main():
 
     print("\n[6] consequences once applied (by generator in ledger S61, not here), alone and with Sessions 71 to 73")
     t_cons, held, (f1n, f1t), (f2n, f2t), tiers, tiers_alone, mine = consequence_table(p, prior, FINAL)
-    ok_print(held, "neec_corpus_v2.json carries the prior's verdict for each of the 30 units (the published "
+    ok_print(held, "neec_corpus_v2_s65_snapshot.json carries the prior's verdict for each of the 30 units (the published "
              "provisional scores are the prior's)")
     print(t_cons)
     print(f"\nfirst place on the 29 after this group alone: {f1n} at {f1t:.1f}; after Sessions 71 to 74: {f2n} at "

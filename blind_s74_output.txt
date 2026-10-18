@@ -170,7 +170,7 @@ final readings, C3.1:
 | Universal Basic Services | R R R | 0.5 | — | the prior's verdict |
 
 [6] consequences once applied (by generator in ledger S61, not here), alone and with Sessions 71 to 73
-  PASS neec_corpus_v2.json carries the prior's verdict for each of the 30 units (the published provisional scores are the prior's)
+  PASS neec_corpus_v2_s65_snapshot.json carries the prior's verdict for each of the 30 units (the published provisional scores are the prior's)
 | Entry | Total on 29 | After this group | After Sessions 71 to 74 | Failures | After all four | Tier after all four |
 |---|---:|---:|---:|---:|---:|---|
 | Centrally Planned Socialism | 7.5 | 7.5 | 7.0 | 15 | 16 | Structurally Inadequate |
