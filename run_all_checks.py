@@ -272,7 +272,11 @@ evidence/, which the site's system pages link. Version 39 (Session 69) adds blin
 the blind re-read's shared module, proved on synthetic fixtures (compare_unit's agree/revise rule: a changed clause status
 or verdict is a revision, a reworded estimate or source alone is not) and on one real unit of each of the three Sonnet-read
 parts ((2.9) C3.1, (2.10) C4.2, (2.11) C1.1), whose blind_view() the check proves discloses no verdict, clause status,
-estimate or source: 115 checks. No score or published file changed; the module applies nothing on its own.
+estimate or source: 115 checks. No score or published file changed; the module applies nothing on its own. Version 40
+(Session 70) adds evidence_cache_s70.py: the ten files cached for the shortcuts, by digest: 116 checks. Version 41
+(Session 71) adds evidence_cache_s71.py (the nine files the blind re-read of C4.5 and C3.4 cached, by digest) and
+blind_s71.py (the 24 blind readings, their comparison with part (2.11), the record's reconciliations, the
+consequences on the 29 criteria and NEEC_BlindReview_s71.md's tables): 118 checks. No published file changed.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1454,12 +1458,42 @@ S70_CHECKS = [
          stdout="evidence_cache_s70_output.txt", stderr=EMPTY),
 ]
 
+# Session 71: the blind re-read of C4.5 and C3.4 (ledger S54; decisions 69.1, 69.2), the first group of stage 3b.
+# evidence_cache_s71.py verifies by digest the nine files the group cached (Penn World Table labour shares, the US
+# national-income components, natural-resource rents, the SDG labour shares, Sweden's 43 b, Hahnel and Wright, the
+# Research Hub at 8e8a6ba, Integral's white paper, CPI-U and the federal funds rate). blind_s71.py checks the 24 blind
+# readings (complete, D28 and decision 53.2's 0.0 rule), recomputes every figure they quote from the cache, compares
+# them with part (2.11)'s readings (blind_review.compare_group), applies the record's three reconciliations, checks
+# that no CCO-PTF-CIP-SZH verdict changes, computes the consequences on the 29 criteria and each flag's, and confirms
+# NEEC_BlindReview_s71.md carries every table it generates. Nothing is applied: ledger S61 applies the final readings.
+S71_CACHE = ("C4.5/pwt1001_labsh_selected_economies.csv", "C4.5/fred_us_national_income_components.csv",
+             "C4.5/wb_natural_resource_rents_pct_gdp.json", "C4.5/un_sdg_10_4_1_labour_share.json",
+             "C4.5/se_lag_1997_238_43b.txt", "C4.5/hahnel_wright_2016_extract.txt",
+             "C4.5/research_hub_8e8a6ba_cco_extract.txt", "C4.5/sources_s71.md",
+             "C3.4/integral_wp_v01_c34_extract.txt", "C3.4/fred_cpi_fedfunds_2019_2023.csv", "C3.4/sources_s71.md")
+S71_FILES = {**S70_FILES, "evidence_cache_s71.py": "evidence_cache_s71.py", "blind_s71.py": "blind_s71.py",
+             "NEEC_BlindReview_s71.md": "NEEC_BlindReview_s71.md", "neec_corpus_v2.json": "neec_corpus_v2.json",
+             "neec_scores_v2.csv": "neec_scores_v2.csv",
+             **{"evidence_cache/" + k: "evidence_cache/" + k for k in S71_CACHE}}
+S71_CHECKS = [
+    dict(name="evidence_cache_s71.py: the nine files Session 71 cached for the blind re-read of C4.5 and C3.4 "
+              "(ledger S54) verify by digest",
+         cmd=["python", "evidence_cache_s71.py"], files=S71_FILES,
+         stdout="evidence_cache_s71_output.txt", stderr=EMPTY),
+    dict(name="blind_s71.py: the blind re-read of C4.5 (17 units) and C3.4 (7 units) against part (2.11): readings "
+              "complete and on D28 and decision 53.2, figures recomputed from the cache, the comparison, the three "
+              "reconciliations, no CCO-PTF-CIP-SZH verdict change, consequences and flag effects, and "
+              "NEEC_BlindReview_s71.md carrying every generated table",
+         cmd=["python", "blind_s71.py"], files=S71_FILES,
+         stdout="blind_s71_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
-          + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS)
+          + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS)
 
 
 def md5(data):
