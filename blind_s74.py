@@ -59,9 +59,19 @@ READINGS, C3.1
         the population), or a framework that adopts no instrument; never with a clause cleared.
   3.1.6 the anchors' band texts describe v1.4's threshold and do not govern (protocol 2.3(g)).
 
+THE COMPARISON (written after the checkpoint, 8962db7). compare_group() sets each blind reading against the prior's --
+part (2.11)'s for C1.1, part (2.9)'s for C3.1 -- agree only if every clause status and the verdict match; the extra
+reading is set against part (b3)'s (Session 40). The record then reconciles each verdict difference (protocol 5.3,
+under Session 71's rule: a blind verdict stands unless the prior shows evidence it did not weigh, or the blind reading
+departs from its own stated reading). One moves to the prior's (RECONCILE), three stand, each already flagged toward
+the prior's verdict; FINAL is what the generator session (ledger S61) applies, with EXTRA_FINAL, Nordic Social
+Democracy's C1.1 (its clause 1 short, its flag toward 1.0 withdrawn; the verdict unchanged). No CCO-PTF-CIP-SZH unit is
+in this group (decisions 57.2, 69.4).
+
 Usage: python3 blind_s74.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, the scripts pass_common.PARTS
-                               names and the files they read, blind_review.py and the evidence_cache/C1.1/ and C3.1/
-                               files; writes nothing)
+                               names and the files they read, blind_review.py, blind_s71.py, blind_s72.py,
+                               blind_s73.py, the evidence_cache/C1.1/ and C3.1/ files, neec_corpus_v2.json,
+                               neec_scores_v2.csv and NEEC_BlindReview_s74.md; writes nothing)
 Prints file names and summaries only. Deterministic.
 """
 import csv
@@ -493,6 +503,187 @@ def blind_table(p, cid, units=None):
     return "\n".join(rows_)
 
 
+def blind_table_final(p, cid):
+    rows_ = ["| Unit | Clause statuses | Final verdict | Flag | Against the prior |", "|---|---|---|---|---|"]
+    prior = prior_units(p)
+    for (code, c) in sorted((k for k in FINAL if k[1] == cid), key=lambda k: p.names[k[0]]):
+        r, pr = FINAL[(code, c)], prior[(code, c)]
+        sts = " ".join(st for st, _, _ in r["clauses"])
+        flag = f"toward {r['flag'][0].split(':')[0]}" if r["flag"] else "—"
+        how = ("reconciled to the prior's" if (code, c) in RECONCILE else
+               f"changes, {pc.f1(pr['verdict'])} to {pc.f1(r['verdict'])}" if pr["verdict"] != r["verdict"] else
+               "the prior's verdict")
+        rows_.append(f"| {p.names[code]} | {sts} | {pc.f1(r['verdict'])} | {flag} | {how} |")
+    return "\n".join(rows_)
+
+
+# ---- the reconciliation, after the comparison (protocol 5.3; written after the checkpoint, 8962db7) -------------
+# One blind verdict changes on reconciliation, toward the prior's, with the blind verdict kept as the flag; the reason
+# says what the blind reading did not weigh.
+RECONCILE = {
+    ("CPS", C31): dict(
+        verdict=0.5, clauses=None,
+        flag=("0.0: reading the configuration's response to its major shocks as one that waits on political decision "
+              "with months' delay, or denial, as the famines of 1932-33 and 1946-47 record it (protocol 2.1), as the "
+              "blind reading did", "3.1.5"),
+        zero=None,
+        note="0.5: a system-wide capacity to mobilise by decision without delay (1941), with relief to households "
+             "delayed or denied in the famines; a mixed record",
+        reason="the prior cites the command economy's rapid mobilisation in war and disaster (the Report's own "
+               "account), which the blind reading did not weigh: in 1941 the evacuation of industry was decided within "
+               "days of the invasion. Reading 3.1.5's 0.0 condition is a response that waits on political action with "
+               "characteristic multi-month delay; a record in which decisions came within days in one major shock and "
+               "relief was delayed or denied in others is mixed, not characteristic, so the 0.0 condition is not shown "
+               "and the criterion is held at 0.5 (2.1's 'genuinely ambiguous' case), flagged toward 0.0"),
+}
+# Each standing difference's blind reading already carries the prior's verdict as its flag.
+FLAGS = {}
+# Why each standing difference stands (the record, section 6, states them in full).
+STAND = {
+    ("DE", C11): "the prior's 0.5 rests on the City Portrait diagnostic and the programmes cities chose after it "
+                 "(Portland's 'From Excess to Access'), which the blind reading did not weigh; but those programmes are "
+                 "the jurisdictions' own remedies, which D29(c) does not credit to a comprehensive system, and the "
+                 "scoring document itself finds 'no committed provision mechanism', so the blind reading's premise "
+                 "(a target without an adopted instrument) holds; Sessions 71 and 73 read the same framework so on "
+                 "C4.5 and C4.4",
+    ("DE", C31): "the prior's 0.5 rests on Amsterdam's adoption of the model as a recovery strategy in April 2020, which "
+                 "it calls 'a response in policy framing and not a payment' and flags toward 0.0 on 2.1's first "
+                 "condition; the adoption is the city's remedy (D29(c)), so the blind 0.0 stands, on the prior's own "
+                 "flag",
+    ("QA", C31): "the prior's 0.5 rests on the speed and size of the March 2020 decree, which the blind reading weighed "
+                 "(its flag), and flags toward 0.0 on coverage of 4% by nationality; no evidence is unweighed and the "
+                 "blind 0.0 stands, on the prior's own flag",
+}
+
+
+def final_units():
+    out = {k: dict(v) for k, v in NEW.items()}
+    for k, r in RECONCILE.items():
+        u = out[k]
+        u.update(verdict=r["verdict"], flag=r["flag"], zero=r["zero"], note=r["note"])
+        if r["clauses"] is not None:
+            u["clauses"] = list(r["clauses"])
+    for k, fl in FLAGS.items():
+        out[k]["flag"] = fl
+    return out
+
+
+FINAL = final_units()
+EXTRA_FINAL = {k: dict(v) for k, v in EXTRA.items()}
+
+
+def prior_units(p):
+    return {k: v for cid in (C11, C31) for k, v in p.mods[p.tags.index(br.PRIOR[cid])].UNITS.items() if k[1] == cid}
+
+
+def extra_prior(p):
+    return {("NSD", C11): p.mods[p.tags.index("(b3)")].UNITS[("NSD", C11)]}
+
+
+def comparison_table(p, prior, units, cid, label):
+    pk = {k: v for k, v in prior.items() if k[1] == cid}
+    uk = {k: v for k, v in units.items() if k[1] == cid}
+    res, tally = br.compare_group(pk, uk)
+    rows_ = [f"| Unit | Prior | {label} | Result | Differences |", "|---|---|---|---|---|"]
+    for (code, c) in sorted(res, key=lambda k: p.names[k[0]]):
+        agree, diffs = res[(code, c)]
+        pr, nw = pk[(code, c)], uk[(code, c)]
+        ps = " ".join(st for st, _, _ in pr["clauses"]) + " / " + pc.f1(pr["verdict"])
+        ns = " ".join(st for st, _, _ in nw["clauses"]) + " / " + pc.f1(nw["verdict"])
+        kind = "agree" if agree else ("revise (verdict)" if pr["verdict"] != nw["verdict"] else "revise (clauses)")
+        rows_.append(f"| {p.names[code]} | {ps} | {ns} | {kind} | {'; '.join(diffs) if diffs else '—'} |")
+    return "\n".join(rows_), res, tally
+
+
+def earlier_changes(p):
+    """Sessions 71's to 73's final verdict changes (blind_s71.FINAL to blind_s73.FINAL) against their priors."""
+    import blind_s71 as b71
+    import blind_s72 as b72
+    import blind_s73 as b73
+    out = {}
+    for mod in (b71, b72, b73):
+        pr = mod.prior_units(p)
+        out.update({k: (pr[k]["verdict"], u["verdict"]) for k, u in mod.FINAL.items() if pr[k]["verdict"] != u["verdict"]})
+    return out
+
+
+def standings(changes):
+    """Totals on the 29 criteria (neec_scores_v2.csv) and failures, with the verdict changes in `changes`
+    ({(code, cid): (prior verdict, final verdict)}) applied on top; nothing is written."""
+    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
+    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2.csv"), encoding="utf-8"))}
+    out = {}
+    for code, e in v2.items():
+        r = rows29[e["display_name"]]
+        t, f = float(r["total_score"]), int(r["failures"])
+        for (c, _), (pv, nv) in changes.items():
+            if c == code:
+                t += nv - pv
+                f += (nv == 0.0) - (pv == 0.0)
+        out[code] = (t, f, r["adequacy_tier"])
+    return v2, out
+
+
+def consequence_table(p, prior, units):
+    """This group's verdict changes, alone and on top of Sessions 71's to 73's final ones, on the 29."""
+    mine = {k: (prior[k]["verdict"], u["verdict"]) for k, u in units.items() if prior[k]["verdict"] != u["verdict"]}
+    v2, alone = standings(mine)
+    _, both = standings({**earlier_changes(p), **mine})
+    held = all(v2[k[0]]["vector"][k[1]] == prior[k]["verdict"] for k in prior)
+    base = standings({})[1]
+    lines = ["| Entry | Total on 29 | After this group | After Sessions 71 to 74 | Failures | After all four | "
+             "Tier after all four |", "|---|---:|---:|---:|---:|---:|---|"]
+    for code in v2:
+        if alone[code] != base[code] or both[code] != base[code]:
+            lines.append(f"| {v2[code]['display_name']} | {base[code][0]:.1f} | {alone[code][0]:.1f} | "
+                         f"{both[code][0]:.1f} | {base[code][1]} | {both[code][1]} | {pc.tier(both[code][1])} |")
+
+    def first(st):
+        top = max(t for t, _, _ in st.values())
+        return " and ".join(sorted(v2[c]["display_name"] for c, (t, _, _) in st.items() if t == top)), top
+    tiers = [(v2[c]["display_name"], tr, pc.tier(f)) for c, (t, f, tr) in both.items() if pc.tier(f) != tr]
+    tiers_alone = [(v2[c]["display_name"], tr, pc.tier(f)) for c, (t, f, tr) in alone.items() if pc.tier(f) != tr]
+    return "\n".join(lines), held, first(alone), first(both), tiers, tiers_alone, mine
+
+
+def flag_effects(p, prior, units):
+    """Each flagged final reading's alternative taken alone, on top of all four groups' final verdicts: total,
+    failures, tier, and whether first place or the tier would change."""
+    changes = earlier_changes(p)
+    changes.update({k: (prior[k]["verdict"], u["verdict"]) for k, u in units.items()
+                    if prior[k]["verdict"] != u["verdict"]})
+    _, base = standings(changes)
+    lines = ["| Unit | Criterion | Final | Flag toward | Total on 29 then | Failures then | Tier then | Changes |",
+             "|---|---|---:|---:|---:|---:|---|---|"]
+    movers = []
+    for (code, cid) in sorted((k for k in units if units[k]["flag"]), key=lambda k: (k[1], p.names[k[0]])):
+        u = units[(code, cid)]
+        alt = float(u["flag"][0][:3])
+        t, f, _ = base[code]
+        t2, f2_ = t + alt - u["verdict"], f + (alt == 0.0) - (u["verdict"] == 0.0)
+        others = max(tt for c, (tt, _, _) in base.items() if c != code)
+        changes_ = []
+        if pc.tier(f2_) != pc.tier(f):
+            changes_.append(f"tier: {pc.tier(f)} to {pc.tier(f2_)}")
+        if (t >= others) != (t2 >= others) or (t == others) != (t2 == others):
+            changes_.append("first place: " + ("shared" if t2 == others else "alone" if t2 > others else "lost"))
+        if changes_:
+            movers.append((code, cid))
+        lines.append(f"| {p.names[code]} | {cid} | {pc.f1(u['verdict'])} | {alt:.1f} | {t2:.1f} | {f2_} | "
+                     f"{pc.tier(f2_)} | {'; '.join(changes_) if changes_ else '—'} |")
+    return "\n".join(lines), movers
+
+
+def record_check(tables, ok_print):
+    rec = os.path.join(HERE, "NEEC_BlindReview_s74.md")
+    if not os.path.isfile(rec):
+        return ok_print(False, "NEEC_BlindReview_s74.md exists", "missing")
+    text = open(rec, encoding="utf-8").read()
+    missing = [name for name, t in tables if t not in text]
+    return ok_print(not missing, "NEEC_BlindReview_s74.md carries every generated table verbatim (" +
+                    ", ".join(name for name, _ in tables) + ")", ", ".join(missing))
+
+
 def main():
     ok = True
 
@@ -543,7 +734,79 @@ def main():
     print("\nNordic Social Democracy, C1.1 (the Nordic finding; outside the comparison):")
     print(blind_table(p, C11, EXTRA))
 
-    print("\nBLIND READINGS OF C1.1 AND C3.1 CHECKED (before the comparison)." if ok else "\nBLIND RE-READ: CHECKS FAILED.")
+    btables = [blind_table(p, C11), blind_table(p, C31), blind_table(p, C11, EXTRA)]
+
+    print("\n[4] the comparison with parts (2.11) and (2.9) (compare_group on the readings as recorded at the "
+          "checkpoint), and Nordic Social Democracy's C1.1 with part (b3)")
+    prior = prior_units(p)
+    cmp_tables, vd = [], []
+    for cid in (C11, C31):
+        t_cmp, res, tally = comparison_table(p, prior, NEW, cid, "Blind (Session 74)")
+        cmp_tables.append(t_cmp)
+        print(f"\n{cid}, against part {br.PRIOR[cid]}:")
+        print(t_cmp)
+        d = sorted((k for k in res if prior[k]["verdict"] != NEW[k]["verdict"]), key=lambda k: k[0])
+        vd += d
+        print(f"\n{cid}: {tally['agree']} agree, {tally['revise']} revise; {len(d)} verdicts differ: " + ", ".join(
+            f"{p.names[k[0]]} {pc.f1(prior[k]['verdict'])} to {pc.f1(NEW[k]['verdict'])}" for k in d))
+    xp = extra_prior(p)
+    t_x, res_x, _ = comparison_table(p, xp, EXTRA, C11, "Session 74")
+    cmp_tables.append(t_x)
+    print("\nNordic Social Democracy, C1.1, against part (b3):")
+    print(t_x)
+    ok_print(all(xp[k]["verdict"] == EXTRA[k]["verdict"] for k in EXTRA),
+             "Nordic Social Democracy's C1.1 verdict is unchanged by the Nordic finding (clause 1 revised only)")
+
+    print("\n[5] the reconciliation (protocol 5.3) and the final readings")
+    ok_print(set(RECONCILE) <= set(vd), "every reconciled unit is one whose blind verdict differs from the prior's")
+    ok_print(all(FINAL[k]["verdict"] == prior[k]["verdict"] for k in RECONCILE),
+             "each reconciliation moves the verdict to the prior's, and only there")
+    stand = [k for k in vd if k not in RECONCILE]
+    ok_print(set(STAND) == set(stand), "every standing verdict difference has its stated reason")
+    ok_print(all(NEW[k]["flag"] and NEW[k]["flag"][0][:3] == pc.f1(prior[k]["verdict"]) for k in stand),
+             "each standing difference's blind reading is flagged toward the prior's verdict")
+    ok_print(all(FINAL[k]["flag"] and FINAL[k]["flag"][0][:3] == pc.f1(NEW[k]["verdict"]) for k in RECONCILE),
+             "each reconciled unit keeps its blind verdict as its flag")
+    pc.check_rule(FINAL, ok_print)
+    print("standing verdict changes: " + ", ".join(
+        f"{p.names[k[0]]} {k[1]} {pc.f1(prior[k]['verdict'])} to {pc.f1(FINAL[k]['verdict'])}" for k in stand))
+    cco = [k for k in vd if k[0] == "CCO"]
+    ok_print(not cco, "no CCO-PTF-CIP-SZH verdict changes (decisions 57.2, 69.4: a rise is applied, a fall held)",
+             str(cco))
+    mech = {c for c, e in ((e["code"], e) for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))
+                           ["entries"]) if e["scope_class"] == "mechanism"}
+    zero_mech = sorted(f"{k[0]} {k[1]}" for k, u in {**prior, **FINAL}.items() if k[0] in mech and u["verdict"] == 0.0)
+    ok_print(not zero_mech, "no mechanism is at 0.0 in this group on either reading (Session 73's observation: "
+             "the class reading holds a mechanism that governs no clause's quantity at 0.5)", ", ".join(zero_mech))
+    final_tables = [blind_table_final(p, cid) for cid in (C11, C31)]
+    for cid, t in zip((C11, C31), final_tables):
+        print(f"\nfinal readings, {cid}:")
+        print(t)
+
+    print("\n[6] consequences once applied (by generator in ledger S61, not here), alone and with Sessions 71 to 73")
+    t_cons, held, (f1n, f1t), (f2n, f2t), tiers, tiers_alone, mine = consequence_table(p, prior, FINAL)
+    ok_print(held, "neec_corpus_v2.json carries the prior's verdict for each of the 30 units (the published "
+             "provisional scores are the prior's)")
+    print(t_cons)
+    print(f"\nfirst place on the 29 after this group alone: {f1n} at {f1t:.1f}; after Sessions 71 to 74: {f2n} at "
+          f"{f2t:.1f}")
+    print("tier changes, this group alone: " + ("; ".join(f"{n} {a} to {b}" for n, a, b in tiers_alone) or "none"))
+    print("tier changes, after Sessions 71 to 74: " + ("; ".join(f"{n} {a} to {b}" for n, a, b in tiers) or "none"))
+    t_flags, movers = flag_effects(p, prior, FINAL)
+    print(f"\nthe final readings' {sum(1 for u in FINAL.values() if u['flag'])} flags, each taken alone (on all four "
+          "groups' final verdicts):")
+    print(t_flags)
+    print("flags that would change a tier or first place: " + (", ".join(f"{p.names[c]} {cid}" for c, cid in movers)
+                                                                or "none"))
+
+    print("\n[7] the record")
+    record_check([("blind readings, C1.1", btables[0]), ("blind readings, C3.1", btables[1]),
+                  ("blind reading, Nordic Social Democracy", btables[2]),
+                  ("comparison, C1.1", cmp_tables[0]), ("comparison, C3.1", cmp_tables[1]),
+                  ("comparison, Nordic Social Democracy", cmp_tables[2]),
+                  ("final readings, C1.1", final_tables[0]), ("final readings, C3.1", final_tables[1]),
+                  ("consequences", t_cons), ("flag effects", t_flags)], ok_print)
+    print("\nBLIND RE-READ OF C1.1 AND C3.1 CHECKED." if ok else "\nBLIND RE-READ: CHECKS FAILED.")
     return 0 if ok else 1
 
 

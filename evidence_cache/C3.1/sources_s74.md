@@ -24,3 +24,10 @@ Prose, not digest-checked (`evidence_cache_s74.py` caches the rest).
   above the 3% path (Ministry of Finance); the Alaska PFD formula (the average of five years' realised earnings).
 - Raworth (2017); Bastani, A. (2019), *Fully Automated Luxury Communism*; Roemer, J. (1994), *A Future for Socialism*;
   Schweickart, D. (2011), *After Capitalism*; Schwab (2021); the Institute for Global Prosperity (2017).
+
+Added after the checkpoint (`8962db7`), for the reconciliation of Centrally Planned Socialism's C3.1 only:
+
+- The Council for Evacuation (Sovet po evakuatsii), formed by decision of the Party's Central Committee and the
+  Council of People's Commissars on 24 June 1941, two days after the invasion, which directed the relocation of
+  industry eastward in the following months (Harrison, M. (1985), *Soviet Planning in Peace and War, 1938-1945*,
+  Cambridge University Press).
