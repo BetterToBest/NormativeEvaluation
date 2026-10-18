@@ -276,7 +276,11 @@ estimate or source: 115 checks. No score or published file changed; the module a
 (Session 70) adds evidence_cache_s70.py: the ten files cached for the shortcuts, by digest: 116 checks. Version 41
 (Session 71) adds evidence_cache_s71.py (the nine files the blind re-read of C4.5 and C3.4 cached, by digest) and
 blind_s71.py (the 24 blind readings, their comparison with part (2.11), the record's reconciliations, the
-consequences on the 29 criteria and NEEC_BlindReview_s71.md's tables): 118 checks. No published file changed.
+consequences on the 29 criteria and NEEC_BlindReview_s71.md's tables): 118 checks. No published file changed. Version
+42 (Session 72) adds evidence_cache_s72.py (the eight files the blind re-read of C4.1 cached, by digest) and
+blind_s72.py (the 23 blind readings of C4.1, their comparison with parts (2.11) and (b6), the reconciliation, the
+consequences on the 29 criteria with Session 71's and NEEC_BlindReview_s72.md's tables): 120 checks. No published
+file changed.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1488,12 +1492,42 @@ S71_CHECKS = [
          stdout="blind_s71_output.txt", stderr=EMPTY),
 ]
 
+# Session 72: the blind re-read of C4.1 (ledger S55; decisions 69.1, 69.2), on v2.0's two clauses: part (2.11)'s 15
+# units and part (b6)'s 8 designs. evidence_cache_s72.py verifies by digest the eight files the group cached (US net
+# saving and GNI, adjusted net savings, Ofer (1990), the "400 days" programme, the Libertarian Party platform, Hahnel
+# and Wright, Integral's white paper, the Research Hub at 8e8a6ba). blind_s72.py checks the 23 blind readings
+# (complete, D28 and decision 53.2's 0.0 rule), recomputes every figure they quote from the cache, compares them with
+# the prior parts (blind_review.compare_group), checks that no CCO-PTF-CIP-SZH verdict changes, computes the
+# consequences on the 29 criteria alone and with blind_s71.FINAL, and each flag's, and confirms
+# NEEC_BlindReview_s72.md carries every table it generates. Nothing is applied: ledger S61 applies the final readings.
+S72_CACHE = ("C4.1/imf_weo_gross_debt_pct_gdp.json", "C4.1/wb_gross_savings_pct_gni.json",
+             "C4.1/wb_consumption_fixed_capital_pct_gni.json", "C4.1/fred_us_net_saving_gni.csv",
+             "C4.1/wb_adjusted_net_savings_pct_gni.json", "C4.1/ofer_1990_extract.txt",
+             "C4.1/programme_400_days_1990_extract.txt", "C4.1/lp_platform_extract.txt",
+             "C4.1/hahnel_wright_2016_c41_extract.txt", "C4.1/integral_wp_v01_c41_extract.txt",
+             "C4.1/research_hub_8e8a6ba_c41_extract.txt", "C4.1/sources_s72.md")
+S72_FILES = {**S71_FILES, "evidence_cache_s72.py": "evidence_cache_s72.py", "blind_s72.py": "blind_s72.py",
+             "NEEC_BlindReview_s72.md": "NEEC_BlindReview_s72.md",
+             **{"evidence_cache/" + k: "evidence_cache/" + k for k in S72_CACHE}}
+S72_CHECKS = [
+    dict(name="evidence_cache_s72.py: the eight files Session 72 cached for the blind re-read of C4.1 (ledger S55) "
+              "verify by digest",
+         cmd=["python", "evidence_cache_s72.py"], files=S72_FILES,
+         stdout="evidence_cache_s72_output.txt", stderr=EMPTY),
+    dict(name="blind_s72.py: the blind re-read of C4.1 (23 units) against parts (2.11) and (b6), on v2.0's two "
+              "clauses: readings complete and on D28 and decision 53.2, figures recomputed from the cache, the "
+              "comparison, the reconciliation, no CCO-PTF-CIP-SZH verdict change, consequences with Session 71's and "
+              "flag effects, and NEEC_BlindReview_s72.md carrying every generated table",
+         cmd=["python", "blind_s72.py"], files=S72_FILES,
+         stdout="blind_s72_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
-          + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS)
+          + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS)
 
 
 def md5(data):
