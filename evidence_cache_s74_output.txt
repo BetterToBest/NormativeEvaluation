@@ -1,0 +1,4 @@
+  PASS C1.1/pip_societal_poverty_line.json: md5 0c55a1b6
+  PASS C1.1/integral_wp_v01_c11_extract.txt: md5 ed5a3859
+  PASS C3.1/lp_platform_c11_c31_extract.txt: md5 ef70eaf0
+SUMMARY: ALL PASS

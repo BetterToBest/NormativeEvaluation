@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 43 (Session 73). Runs every verification and analysis script on file
+Version 44 (Session 74). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -283,7 +283,11 @@ consequences on the 29 criteria with Session 71's and NEEC_BlindReview_s72.md's 
 file changed. Version 43 (Session 73) adds evidence_cache_s73.py (the ten files the blind re-read of C4.4 and C4.2
 cached, by digest) and blind_s73.py (the 33 blind readings of C4.4 and C4.2, their comparison with parts (2.11) and
 (2.10), the three reconciliations, the consequences on the 29 criteria with Sessions 71's and 72's and
-NEEC_BlindReview_s73.md's tables): 122 checks. No published file changed.
+NEEC_BlindReview_s73.md's tables): 122 checks. No published file changed. Version 44 (Session 74) adds
+evidence_cache_s74.py (the three files the blind re-read of C1.1 and C3.1 cached, by digest) and blind_s74.py (the 30
+blind readings of C1.1 and C3.1 and Nordic Social Democracy's C1.1, their comparison with parts (2.11), (2.9) and
+(b3), the reconciliation, the consequences on the 29 criteria with Sessions 71's to 73's and NEEC_BlindReview_s74.md's
+tables): 124 checks. No published file changed.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1558,12 +1562,46 @@ S73_CHECKS = [
          stdout="blind_s73_output.txt", stderr=EMPTY),
 ]
 
+# Session 74: the blind re-read of C1.1 and C3.1 (ledger S57; decisions 69.1, 69.2): part (2.11)'s 14 C1.1 units and
+# part (2.9)'s 16 C3.1 units, on v2.0's clauses, and Nordic Social Democracy's C1.1 (part (b3)) on the Nordic poverty
+# finding. evidence_cache_s74.py verifies by digest the three files the group cached (the Societal Poverty Line from
+# the PIP API, Integral's white paper on access to essentials, the Libertarian Party platform's income-security and
+# bailout passages). blind_s74.py checks the 31 readings (complete, D28 and decision 53.2's 0.0 rule), recomputes
+# every figure they quote from the cache, compares them with the prior parts (blind_review.compare_group), applies the
+# record's reconciliation, checks that no CCO-PTF-CIP-SZH verdict changes and that no mechanism is at 0.0, computes
+# the consequences on the 29 criteria alone and with blind_s71.FINAL to blind_s73.FINAL, and each flag's, and confirms
+# NEEC_BlindReview_s74.md carries every table it generates. Nothing is applied: ledger S61 applies the final readings.
+S74_CACHE = ("C1.1/wb_societal_poverty_rate.json", "C1.1/pip_societal_poverty_line.json",
+             "C1.1/integral_wp_v01_c11_extract.txt", "C1.1/sources_s74.md",
+             "C3.1/cares_act_wikipedia_lead.txt", "C3.1/eurostat_gov_esms.txt", "C3.1/fred_benefits_annual.csv",
+             "C3.1/fred_benefits_monthly.csv", "C3.1/fred_claims_weekly.csv", "C3.1/fred_realgdp_annual.csv",
+             "C3.1/imf_fiscal_db.txt", "C3.1/index.json", "C3.1/sdg131_156.json", "C3.1/sdg131_578.json",
+             "C3.1/sdg131_634.json", "C3.1/sdg131_702.json", "C3.1/sdg131_840.json",
+             "C3.1/un_sdg_131_metadata.txt", "C3.1/un_sna2008.txt", "C3.1/wb_final_consumption.txt",
+             "C3.1/wb_sp_coverage.txt", "C3.1/lp_platform_c11_c31_extract.txt", "C3.1/sources_s74.md")
+S74_FILES = {**S73_FILES, "evidence_cache_s74.py": "evidence_cache_s74.py", "blind_s74.py": "blind_s74.py",
+             "NEEC_BlindReview_s74.md": "NEEC_BlindReview_s74.md",
+             **{"evidence_cache/" + k: "evidence_cache/" + k for k in S74_CACHE}}
+S74_CHECKS = [
+    dict(name="evidence_cache_s74.py: the three files Session 74 cached for the blind re-read of C1.1 and C3.1 "
+              "(ledger S57) verify by digest",
+         cmd=["python", "evidence_cache_s74.py"], files=S74_FILES,
+         stdout="evidence_cache_s74_output.txt", stderr=EMPTY),
+    dict(name="blind_s74.py: the blind re-read of C1.1 (14 units) against part (2.11) and C3.1 (16 units) against "
+              "part (2.9), on v2.0's clauses, and Nordic Social Democracy's C1.1 against part (b3): readings complete "
+              "and on D28 and decision 53.2, figures recomputed from the cache, the comparison, the reconciliation, no "
+              "CCO-PTF-CIP-SZH verdict change, consequences with Sessions 71's to 73's and flag effects, and "
+              "NEEC_BlindReview_s74.md carrying every generated table",
+         cmd=["python", "blind_s74.py"], files=S74_FILES,
+         stdout="blind_s74_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
-          + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS)
+          + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS + S74_CHECKS)
 
 
 def md5(data):
