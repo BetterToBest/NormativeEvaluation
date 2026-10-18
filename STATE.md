@@ -1,13 +1,13 @@
 # NEEC state
 
-**Next session (75): Opus 5.5 at high** (ledger S58; judgment: four criteria, and C2.1, C2.4 and C2.3's clause 1 read
-for the first time on session 70's thin caches). Blind re-read: C2.1, C2.4 and C2.3's configured-economy units (18)
-and C2.5 (23 units), on v2.0's clauses; checkpoint after each criterion, and stop at one if the group runs long.
+**Next session (76): Opus 5.5 at high** (ledger S59; judgment: the 17 designs and mechanisms on C2.6, C3.6 and C4.6,
+51 readings, from their own papers on Session 70's citation index; checkpoint after each criterion, and stop at one if
+the group runs long, renumbering what follows).
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 74 (the blind re-read of C1.1 and C3.1, ledger S57: `blind_s74.py`,
-`NEEC_BlindReview_s74.md`; three verdict changes recorded for S61 to apply, no tier change; the Nordic finding read;
-the owner's D56 recorded as decision 74.1) (2026-10-18). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 75 (the first readings of C2.1, C2.4 and C2.3 for the configured economies and the blind
+re-read of C2.5, ledger S58: `blind_s75.py`, `NEEC_BlindReview_s75.md`; six C2.5 verdict changes recorded for S61 to
+apply, one tier change with the earlier groups, ledger D57 for the owner) (2026-10-18). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -70,7 +70,7 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
-- **Harness:** v43, 122 checks (`evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
+- **Harness:** v45, 126 checks (`evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
   byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, v2.0 scores published with a provisional notice (decision 66.1; `site/config.json` `scores.publish` true,
@@ -95,7 +95,11 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   FALC 10.5 (10), Centrally Planned Socialism 7.0 (16); first place unchanged; 8 entries Potentially Adequate, 6
   Partially, 9 Structurally Inadequate (`NEEC_BlindReview_s73.md`, section 7). **With Session 74's three as well**
   (decision 74.3): Doughnut Economics 9.5 (10 failures), Qatar 10.0 (10); first place unchanged (Participatory
-  Economics alone at 16.5); no tier changes; still 8, 6 and 9 (`NEEC_BlindReview_s74.md`, section 8).
+  Economics alone at 16.5); no tier changes; still 8, 6 and 9 (`NEEC_BlindReview_s74.md`, section 8). **With Session
+  75's six as well** (decision 75.3; ledger D57, awaiting the owner): **Universal Basic Income 13.5 with 5 failures,
+  Structurally to Partially Adequate**; Nordic Social Democracy 15.5 (0 failures), Market Socialism and Degrowth 15.0
+  (1), FALC 11.0 (9), Centrally Planned Socialism 6.5 (17); first place unchanged (Participatory Economics alone at
+  16.5); 8 entries Potentially Adequate, 7 Partially, 8 Structurally Inadequate (`NEEC_BlindReview_s75.md`, section 7).
 - **Stage 3b inserted, before stage 4 (decisions 69.1, 69.2; ledger D52 to D54).** Sessions 63 to 65 ran on Sonnet 5.5, not
   the Opus 5.5 "Model routing" (below) routes judgment groups to; every unit they read (parts (2.9) C3.1, (2.10) C4.2,
   (2.11) the accelerated groups: C4.1, C4.4, C3.4, C4.5, C2.5, C1.1, C2.6, C3.6, C4.6) is re-read in an Opus 5.5 session,
@@ -152,6 +156,22 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Nordic economies (Sweden 9.8% in 2005 to 12.4% in 2023), so Nordic Social Democracy's C1.1 clause 1 is short (part
   (b3) cleared it on the unit's unsourced "94-96%") and part (b3)'s flag toward 1.0 is withdrawn; the verdict holds at
   0.5 (decision 74.5). Readings 1.1.1 to 1.1.5 and 3.1.1 to 3.1.6 are in the record, section 4.
+- **Stage 3b's fifth group done (Session 75, ledger S58): C2.1, C2.4, C2.3 for the configured economies (18 first
+  readings) and C2.5 (23 blind readings**, part (2.11)'s 13 and part (b5)'s 10 on v2.0's three clauses). Checkpoint
+  `6fbcfed` holds the readings before the priors were opened. **First readings:** clause 1 measured for the first
+  time (Gallup freedom share; IDEA voting-age turnout; EU-SILC and the OECD Time Use Database), every clause status
+  recorded; two first readings (China's and Qatar's C2.1, 0.5) reconciled to the held 0.0 on the prior's evidence
+  (state-directed labour transfers; no safety net for non-citizens), so **no verdict moves** on C2.1, C2.4 or C2.3.
+  Session 70's two gaps are settled: the OECD Trust Survey covers none of the four economies outside Europe (C2.4's
+  clause 3 structurally unmeasurable for them), and the OECD's current Time Use dataflow covers six of the eight
+  economies. **C2.5:** 1 agree, 22 revise, seven verdicts differ; MMT + Job Guarantee reconciled to the prior's 0.5 (a
+  dispute within its own literature). **Final: six C2.5 verdicts change**, each flagged toward the prior's: Centrally
+  Planned Socialism 0.5 to 0.0 (exit and non-work criminalised); Degrowth, FALC, Market Socialism and Nordic Social
+  Democracy 0.0 to 0.5 (the prior's v1.4 "near-universal participation" reading, which no source shows as a bar to
+  exit); Universal Basic Income 0.0 to 1.0. No CCO-PTF-CIP-SZH verdict changes; no mechanism at 0.0. **One tier change
+  with the earlier groups (UBI to Partially Adequate), so ledger D57 asks the owner.** Three flags would change a tier
+  or first place (UBI's toward 0.0; CCO's toward 1.0 and PE's toward 0.0, each sharing first place). C2.5's two 0.0
+  anchor examples (NSD, Degrowth) move to 0.5. Readings 2.1.1 to 2.5.5 are in the record, section 4.
 
 ## Next work, in order
 
@@ -213,19 +233,24 @@ C3.1, and the Nordic finding (Position above; `NEEC_BlindReview_s74.md`). Two th
 list a cache with `blind_view()` and open an index only after the checkpoint; and a scoring document's headings carry
 its v1 scores (Session 74 saw Sovereign Wealth Fund Statism's), so list them with the criterion's lines filtered out.
 
-1. **Session 75: Opus 5.5 at high** (ledger S58; decision 69.2/D54). Reason: a judgment group, routed at high; 41
-   units across four criteria is larger than Sessions 71 to 74's groups, and C2.1, C2.4 and C2.3's clause 1 are first
-   readings on session 70's caches (the OECD Trust Survey's coverage and the time-use data were left open), so
-   checkpoint after each criterion and stop at one if the group runs long, renumbering what follows; xhigh is not
-   needed unless the readings prove contested. Blind re-read: C2.1, C2.4, C2.3's configured-economy units (18; clause 1
-   on session 70's cache — their first reading, an ordinary one, not a comparison) and C2.5 — the 13 units Session 65
-   read, plus the 10 read on the pre-v2.0 four-clause list, all on v2.0's clauses.
-2. (Sessions 72 to 74, done above.)
+**Done: Session 75** (Opus 5.5 at high; ledger S58 archived; I8's fifth item and I6's item (b) ticked). The first
+readings of C2.1, C2.4 and C2.3 for the configured economies and the blind re-read of C2.5 (Position above;
+`NEEC_BlindReview_s75.md`). Three things for the sessions that follow: the prior held six C2.5 units at 0.0 on the
+v1.4 band text alone, so in the groups left check whether a 0.0 rests on a source or only on a band's wording; a
+filtered search should drop a scoring document's sections for every criterion of the group, and even then can show a
+prose line naming another criterion's score (record, section 2); and the World Happiness Report's data application is
+reachable from the container's headless Chromium (`evidence_cache_s75.py`).
+
+1. **Session 76: Opus 5.5 at high** (ledger S59). Reason: a judgment group, routed at high; 51 readings across three
+   criteria, from the designs' own papers (most are commercially published books; `designs_index_s70.json` is a
+   citation index, not full text), so checkpoint after each criterion and stop at one if the group runs long,
+   renumbering what follows; xhigh is not needed unless the readings prove contested. Blind re-read: the 17 designs
+   and mechanisms on C2.6, C3.6 and C4.6, which Session 65 scored 0.5 by a stated rule. CCO-PTF-CIP-SZH's units among
+   them are read under decision 69.4/D38's rule (a rise applied, a fall held).
+2. (Sessions 72 to 75, done above.)
 3. (Session 74, done above.)
-4. (Session 75: item 1.)
-5. **Session 76: Opus 5.5 at high** (ledger S59). Blind re-read: the 17 designs and mechanisms on C2.6, C3.6 and C4.6 (51
-   readings), from their papers on session 70's index. If too large for one session, stop at a checkpoint and name the
-   next criterion for session 77 (renumbering what follows).
+4. (Session 75, done above.)
+5. (Session 76: item 1.)
 6. **Session 77: Opus 5.5 at high** (ledger S60). Blind re-read: C2.6, C3.6, C4.6's configured-economy units (18): the
    law-in-force clauses, C4.6's mortality clause, Centrally Planned Socialism's C3.6 on Easterly and Fischer (1995).
 7. **Session 78: Sonnet 5.5 at medium** (ledger S61; mechanical). Apply every "revise" through the generator (never by
@@ -237,7 +262,10 @@ its v1 scores (Session 74 saw Sovereign Wealth Fund Statism's), so list them wit
    verdict changes; the 8 part (b6) designs' clause lists move to v2.0's two) and Session 73's is `blind_s73.FINAL` (33
    units, eight verdict changes, one tier change; ledger D56, confirmed by the owner, decision 74.1) and Session 74's
    is `blind_s74.FINAL` (30 units, three verdict changes, no tier change) with `blind_s74.EXTRA_FINAL` (Nordic Social
-   Democracy's C1.1, part (b3)'s unit: clause statuses and flag only, decision 74.5), and the pass's `UNITS` form
+   Democracy's C1.1, part (b3)'s unit: clause statuses and flag only, decision 74.5), and Session 75's is
+   `blind_s75.FINAL` (23 C2.5 units, six verdict changes, one tier change with the earlier groups; ledger D57) with
+   `blind_s75.FIRST_FINAL` (18 configured-economy units of C2.1, C2.4 and C2.3: clause statuses and flags, no verdict
+   change, decision 75.2), and the pass's `UNITS` form
    carries each unit's `flag` and `zero`. Then rerun `apply_pass_s65.py`'s logic as a new generator for the v2 files.
 8. **Session 79: Opus 5.5 at high** (ledger S41; judgment prose, now on settled scores). Report v2.0 Part I, one domain
    per group, from `neec_scores_v2.csv` and the domain's criteria sections of the rescoring records (decision 52.8);
@@ -256,8 +284,9 @@ session that finishes early, runs long, or finds a group needs splitting updates
 
 **Open items, each folded into a session above (none changes a verdict as recorded; each is a challenge route until
 then):** (a) the 17 designs and mechanisms on C2.6, C3.6 and C4.6, 0.5 by a stated rule — read from their papers in
-session 76; (b) clause 1 of C2.1, C2.4 and C2.3 for the configured economies — read for the first time in session 75,
-on session 70's cache; (c) the law-in-force clauses of C2.6 and C4.6, and C4.6's mortality clause — read in session 77;
+session 76; (b) clause 1 of C2.1, C2.4 and C2.3 for the configured economies — read in session 75 (decision 75.2: measured, no
+verdict moves; C2.4's clause 3 is structurally unmeasurable for the four economies outside Europe, which the limits
+page should state); (c) the law-in-force clauses of C2.6 and C4.6, and C4.6's mortality clause — read in session 77;
 (d) the Nordic poverty finding — resolved in session 74 (decision 74.5: Nordic Social Democracy's C1.1 clause 1
 short, its flag toward 1.0 withdrawn, the verdict 0.5 unchanged; the limits page should state that C1.1's 1.0 anchor
 text cites the "94-96%" that v2.0's measure does not bear out, `NEEC_BlindReview_s74.md`, sections 7 and 10); (e) ledger I9 (Session 71): Libertarian
@@ -268,8 +297,23 @@ not its C4.5, so (e) is unchanged (`NEEC_BlindReview_s72.md`, section 9).
 13. **CCO-PTF-CIP-SZH's other eight simulation units:** the owner answered the paused item directly in the ledger
     (decision 69.4/D38): scores that would move CCO up are applied when the blind re-read confirms them; scores that
     would flag it down are held, for the site's push-back feature once that is ready. `NEEC_CCO_Paused_Readings_s67.md`
-    (Session 67) lists the eight; sessions 76 and 77 read them under this rule (session 74's group held no CCO unit).
+    (Session 67) lists the eight; sessions 76 and 77 read them under this rule (session 75's CCO unit, C2.5, agreed at
+    0.5).
 14. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change needed.
+
+## Decided (Session 75; `NEEC_BlindReview_s75.md`, section 9)
+
+75.1 (optional, method) readings 2.1.1 to 2.1.3, 2.4.1 to 2.4.4, 2.3.1 to 2.3.4 and 2.5.1 to 2.5.5: C2.1's clause 1 as
+the Gallup freedom share; C2.4's as voting-age turnout counting non-citizens, clause 2 short where no national
+citizen-initiative process exists; C2.3's on EU-SILC and the OECD Time Use Database; C2.5 as the costs the system's own
+rules put on leaving, on non-participation and on moving, a silent design whose coherence does not depend on
+participation held at 0.5. 75.2 (corrections, no verdict effect) the 18 first readings: clause 1 measured, every clause
+status recorded; China's and Qatar's C2.1 reconciled to the held 0.0. 75.3 (corrections) six C2.5 verdict changes,
+each flagged toward the prior's: Centrally Planned Socialism 0.5 to 0.0; Degrowth, FALC, Market Socialism and Nordic
+Social Democracy 0.0 to 0.5; Universal Basic Income 0.0 to 1.0 (with the earlier groups, a tier change: ledger D57).
+75.4 (corrections, no verdict effect) C2.5's clause statuses, the ten part (b5) units on v2.0's three clauses, MMT +
+Job Guarantee reconciled to the prior's 0.5, Participatory Economics' clause 2 cleared on Session 71's record. 75.5
+(optional, tooling) `evidence_cache_s75.py`, `blind_s75.py`, harness v45 (126 checks), `README.md` regenerated.
 
 ## Decided (Session 74; `NEEC_BlindReview_s74.md`, section 9)
 
@@ -490,7 +534,8 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 ## Awaiting the owner
 
 Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
-items outside stage 3b's scope (Next work, open item (e)). Sessions 72 and 74 added nothing for the owner; Session 73's ledger D56 was confirmed (decision 74.1). Ledger I7's
+items outside stage 3b's scope (Next work, open item (e)). Open since Session 75 (default yes): **ledger D57**, apply
+the six C2.5 changes at S61 as read, including Universal Basic Income's tier change. Sessions 72 and 74 added nothing for the owner; Session 73's ledger D56 was confirmed (decision 74.1). Ledger I7's
 second item ("You review it", the Nordic finding) is the owner's; Session 74 read the finding (decision 74.5). Before
 this, the owner had answered every item recorded here, most recently in the ledger directly (decisions 57.1, 58.1,
 58.2, 67.1, 69.1 to 69.4, 72.1, 74.1). Under decision 57.2 only CCO-PTF-CIP-SZH's score changes wait on the owner, now under decision
@@ -506,6 +551,7 @@ eight C4.1 design units should be re-read on v2.0's clauses (Handoff 68, section
 | S71-6 | Apply Session 71's five verdict changes at S61 (Participatory Economics alone first)? | `NEEC_BlindReview_s71.md` 6 to 8 | D55 | 72.1: apply all five as read |
 | S71-9 | Libertarian Minarchism and Centrally Planned Socialism on C4.5; C3.4's clause 3 for 16 units | `NEEC_BlindReview_s71.md` 9 | I9 | open |
 | S73-6 | Apply Session 73's eight verdict changes at S61 (Sovereign Wealth Fund Statism to Potentially Adequate)? | `NEEC_BlindReview_s73.md` 6 to 8 | D56 | 74.1: apply all eight as read |
+| S75-9 | Apply Session 75's six C2.5 verdict changes at S61 (Universal Basic Income to Partially Adequate)? | `NEEC_BlindReview_s75.md` 6 to 9 | D57 | open (default yes) |
 | S74-7 | The Nordic finding: Nordic Social Democracy's C1.1 (clause 1 short, verdict 0.5 unchanged) | `NEEC_BlindReview_s74.md` 7 | I7 | the owner's review (item 2) |
 
 S57-3.9 (ledger d37 of the superseded artifact) was answered: the owner kept C3.2 at 1.0 (decision 58.1). S63-3.1,
@@ -519,9 +565,9 @@ linking to the extended description in the record. Ledger rule for sessions: `CL
 and a `pick`/`confirmed`/glossary scheme; a `d<n>` cited above in an older record is that artifact's, not the current
 one's `D<n>`.
 
-Method choices Sessions 52 to 74 made that the criteria record does not yet carry (optional, not corrections; carried
+Method choices Sessions 52 to 75 made that the criteria record does not yet carry (optional, not corrections; carried
 into the record at its next amendment): 53.1, 53.2, 54.1 to 54.3, 56.1, 56.3, 56.5, 57.6, 57.8, 58.3, 58.8, 60.1, 60.3
-to 60.5, 61.1, 61.3 to 61.5, 63.1, 63.3 to 63.5, 64.1 to 64.6, 71.1, 72.2, 73.1, 74.2 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2, 61.2 and 63.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
+to 60.5, 61.1, 61.3 to 61.5, 63.1, 63.3 to 63.5, 64.1 to 64.6, 71.1, 72.2, 73.1, 74.2, 75.1 (decisions 53.3, 56.2, 56.4, 57.7, 58.4, 58.5, 60.2, 61.2 and 63.2 are corrections), 52.11, the design of `pass_common.py`; 52.12, the triage's reach assumptions and ordering
 key (Handoff 52, section 4).
 
 ## Model routing (decision 52.4)

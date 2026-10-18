@@ -1,0 +1,11 @@
+  PASS C2.1/whr_freedom_s75.json: md5 667d54cb
+  PASS C2.4/idea_turnout_s75.json: md5 8e57af15
+  PASS C2.4/oecd_trust_pe_ext_s75.json: md5 316cf73c
+  PASS C2.4/idea_dt_qatar_2024_11_extract.txt: md5 6274f9b7
+  PASS C2.3/eurostat_artistic_practice_s75.json: md5 f62928e6
+  PASS C2.3/oecd_time_use_s75.json: md5 73b32bb6
+  PASS C2.3/eurostat_meaning_of_life_s75.json: md5 1318fe97
+  PASS C2.5/cco_research_hub_c25_extract.txt: md5 88a9aff6
+  PASS C2.5/integral_wp_v01_c25_extract.txt: md5 37521fb9
+  PASS C2.5/lp_platform_c25_extract.txt: md5 3e007acd
+SUMMARY: ALL PASS
