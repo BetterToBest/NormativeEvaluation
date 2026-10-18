@@ -109,6 +109,18 @@ OTHER = [E26 + "owid_freedom_house_civil_liberties_rating.csv", E26 + "law_in_fo
          E26 + "us_cfr_42_70.14.html", E26 + "us_cfr_42_71.37.html", E36 + "easterly_fischer_1995_nber_w4735.pdf",
          E46 + "SDGAIRBOD.json", E46 + "SDGPOISON.json", E46 + "SDGWSHBOD.json", E46 + "air42.json",
          E46 + "notes_s70.md"]
+# Files a later session added to these directories (Session 77, ledger S60: the configured economies' sources), which
+# blind_view lists but which were not there when this group read: outside this group's view, so not required in READ.
+LATER = {"evidence_cache/" + f for f in (
+         "C2.6/cn_law_c26_extract.txt", "C2.6/dk_law_c26_extract.txt", "C2.6/fh_fiw2026_cl_f1_extract.txt",
+         "C2.6/fi_law_c26_extract.txt", "C2.6/no_law_c26_extract.txt",
+         "C2.6/owid_fh_civil_liberties_rating_su_s77.csv", "C2.6/owid_fh_civil_liberties_score_s77.csv",
+         "C2.6/owid_vdem_civil_liberties_s77.csv", "C2.6/se_law_c26_extract.txt", "C2.6/sg_law_c26_extract.txt",
+         "C2.6/su_law_c26_extract.txt", "C2.6/us_law_c26_extract.txt", "C3.6/easterly_fischer_1995_tables_s77.csv",
+         "C3.6/pip_spl_selected_economies.csv", "C3.6/pwt110_selected_economies.csv", "C4.6/cn_law_c46_extract.txt",
+         "C4.6/nordic_law_c46_extract.txt", "C4.6/oecd_exp_morsc_gbd2019_s77.csv",
+         "C4.6/su_environment_c46_extract.txt", "C4.6/us_law_c46_extract.txt", "C4.6/who_gho_sdgpoison_s77.csv",
+         "C2.6/sources_s77.md", "C3.6/sources_s77.md", "C4.6/sources_s77.md")}
 READ = (LP26, CCO26, INT26, PE26, OST, JG, BIEN, GEO26, N26, CCO36, INT36, PE36, PWT, N36, LP46, PE46, INT46, WEF,
         CCO46, N46, *OTHER)
 DESIGNS = ("MS", "LM", "DG", "SC", "FALC", "PE", "CCO", "INT", "DE")
@@ -745,7 +757,7 @@ def main():
     bad = [k for k in sorted(NEW) if len(br.blind_view(p, k)["clauses_v2"]) != len(NEW[k]["clauses"])]
     ok_print(not bad, "each reading has one status per clause blind_view shows", str(bad))
     for cid, ec in ((C26, E26), (C36, E36), (C46, E46)):
-        listed = {ec + f for f in br.blind_view(p, ("MS", cid))["cache_files"]}
+        listed = {ec + f for f in br.blind_view(p, ("MS", cid))["cache_files"]} - LATER
         ok_print(listed <= set(READ), f"every file blind_view lists for {cid} is one this script reads or names",
                  str(sorted(listed - set(READ))))
     ok_print(all(os.path.isfile(path(f)) for f in READ), "every file in READ exists")
