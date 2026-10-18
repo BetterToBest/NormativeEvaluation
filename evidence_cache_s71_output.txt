@@ -1,0 +1,10 @@
+  PASS C4.5/pwt1001_labsh_selected_economies.csv: md5 981fd5a6
+  PASS C4.5/fred_us_national_income_components.csv: md5 197df64c
+  PASS C4.5/wb_natural_resource_rents_pct_gdp.json: md5 197f5478
+  PASS C4.5/un_sdg_10_4_1_labour_share.json: md5 cb91ec12
+  PASS C4.5/se_lag_1997_238_43b.txt: md5 bd34bff7
+  PASS C4.5/hahnel_wright_2016_extract.txt: md5 8acef478
+  PASS C4.5/research_hub_8e8a6ba_cco_extract.txt: md5 5ceb2816
+  PASS C3.4/integral_wp_v01_c34_extract.txt: md5 9ce79d2a
+  PASS C3.4/fred_cpi_fedfunds_2019_2023.csv: md5 44124599
+SUMMARY: ALL PASS
