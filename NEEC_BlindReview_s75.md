@@ -48,7 +48,8 @@ criteria's measurement text, the sources below, and committed and pushed as chec
 s75: blind readings of C2.1, C2.4, C2.3 (configured economies) and C2.5 recorded, before the prior readings are
 opened") before part (2.11)'s, part (b5)'s or part (a)'s readings of these units, Sessions 65's or 42's records, or the
 units' published scores and rationales on these criteria were opened. `blind_s75.py` at that commit holds them
-exactly: every reading, FIRST and NEW, is unchanged at the session's last commit. After it were added the comparison,
+exactly: every reading, FIRST and NEW, is unchanged at the session's last commit (`git diff 6fbcfed -- blind_s75.py`
+removes only the usage lines of the docstring and the checkpoint's closing print lines). After it were added the comparison,
 the reconciliation (RECONCILE), one clause correction (CLAUSE_FIX), four flags toward the prior's verdict on standing
 differences whose blind reading carried none (FLAGS), the reasons the standing differences stand (STAND) and the
 consequences.
