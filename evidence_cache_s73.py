@@ -23,7 +23,8 @@ reading of these units on C4.4 or C4.2 was opened:
     White Rose eprints 180834), the historical biophysical sheet, 1992 to 2015, each indicator normalised to its
     per-capita boundary (1 = the boundary); and of O'Neill, Fanning, Lamb and Steinberger (2018), Nature
     Sustainability 1, 88-95 (supplementary data 2), which carries blue water, the one of clause 4's four boundaries
-    Fanning et al. (2022) do not (most indicators for 2011).
+    Fanning et al. (2022) do not (most indicators for 2011). Added after the checkpoint, for the reconciliation of
+    China's C4.2: Fanning et al.'s business-as-usual projections, 2016 to 2030 (middle and upper bound).
   C4.2, Centrally Planned Socialism: territorial CO2 emissions of the fifteen Soviet republics' territories, 1960 to
     1991 (Global Carbon Budget, OWID co2-data, which allocates the Soviet years to the successor states); consumption-
     based accounts begin in 1990.
@@ -77,6 +78,7 @@ FILES = {
     "C4.4/owid_vdem_regimes_russia_1917_1992.csv": "4b0f1e02da0cdc1809fdb39524eff9a7",
     "C4.2/un_sdg_red_list_index.json": "eda7fd16235e1354d82763e7e5ca3700",
     "C4.2/fanning_2022_biophysical_historical.csv": "6acabeb5afe7031d877c4227c950e22c",
+    "C4.2/fanning_2022_biophysical_bau.csv": "5f29df900a1b5f2e1ddf5fb9ea6c87e5",
     "C4.2/oneill_2018_biophysical.csv": "712e0bffd71b3dcedc8b63d0c2a5561d",
     "C4.2/owid_gcb_ussr_territorial_co2.csv": "e37cbb115c91ac733eef78c5a216985b",
     "C4.2/lp_platform_environment_extract.txt": "bf66e6e6e95ce646597593ef27afece8",
@@ -142,6 +144,12 @@ def fetch_files():
     rs = xlsx_rows(raw, "Biophysical_Historical")
     out["C4.2/fanning_2022_biophysical_historical.csv"] = csv_bytes(
         list(rs[0]) + ["source_md5"], [list(r) + [e71.md5(raw)] for r in rs[1:] if r[1] in ISO8])
+    # C4.2 clause 4, after the checkpoint (the reconciliation of China's C4.2): the same file's business-as-usual
+    # projections, middle and upper 66% bound, 2016 to 2030, the eight economies.
+    out["C4.2/fanning_2022_biophysical_bau.csv"] = csv_bytes(
+        ["sheet"] + list(rs[0]) + ["source_md5"],
+        [[sh] + list(r) + [e71.md5(raw)] for sh in ("Biophysical_BAU_middle", "Biophysical_BAU_upperCI")
+         for r in xlsx_rows(raw, sh)[1:] if r[1] in ISO8 and 2016 <= int(r[2]) <= 2030])
     # C4.2 clause 4 (blue water): O'Neill et al. (2018), biophysical sheet, the eight economies.
     raw = get(ONEILL)
     rs = xlsx_rows(raw, "Biophysical")
@@ -156,7 +164,9 @@ def fetch_files():
         ["country", "year", "co2_mt", "population"],
         [[r["country"], r["year"], r["co2"], r["population"]] for r in rs
          if r["country"] in USSR15 and 1960 <= int(r["year"]) <= 1991])
-    # C4.2, Libertarian Minarchism: the Libertarian Party platform, sections 2.2 and 2.3 (html_text).
+    # C4.2, Libertarian Minarchism: the Libertarian Party platform, sections 2.2 and 2.3 (html_text). The page is
+    # served dynamically: its own md5 in the header changes between fetches (it did within this session), the
+    # passages do not, so a re-fetch is compared on the passages, not on the file's md5.
     raw = get(LP, ua=True)
     lines = [f"Source: {LP} (Libertarian Party platform, as served 2026-10-18; page md5 {e71.md5(raw)}); text by "
              "evidence_cache_s71.html_text(); passages headed by line range.", ""]
