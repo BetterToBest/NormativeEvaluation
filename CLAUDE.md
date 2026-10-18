@@ -67,23 +67,37 @@ request. Ask nothing the repository answers. Where the opening message carries d
 
 ## The ledger
 
-The owner reads and answers open decisions in the Project ledger, an artifact
-(https://claude.ai/artifact/KMdxWQ5KAefQVFxQA236pV, project doc `projects/neec`, glossary `meta/glossary`). Every
-decision or flag that waits on the owner, and every issue that needs attention, goes in it, in the same session that
-records it. Per item:
+NEEC is one of several projects in a shared Project ledger, an artifact (https://claude.ai/artifact/F1hceP6XEfPQ1pf6Sw1Ki8,
+`ArtifactData` collection `projects`, doc `neec`; this replaced the project's own ledger at
+`claude.ai/artifact/KMdxWQ5KAefQVFxQA236pV`, decision 69.3). Read only this one document (about 20 KB): never the
+`archive/neec/items/` collection whole, and never another project's doc. Items carry three kinds of ID, each with its
+own counter in the doc's `seq` field: `S<n>` a step, `D<n>` a decision, `I<n>` an issue (something broken or at risk,
+not a choice). A step, decision or issue that needs the owner's attention goes in the doc in the same session that
+finds it.
 
-1. A decision `{id: next d<n>, q: "<ID>: <plain question>", options: [default first, then alternatives], def: 0, pick: null,
-   confirmed: false, why: "<one plain sentence> Full reasoning: <file>, section <n>."}` appended to `decisions`; an
-   issue (something broken or at risk, not a choice) goes in `issues` with a `sev` and a note.
-2. A glossary entry whose `code` is the ID (for example `S57-3.2`), `desc` a short plain explanation ending with the
-   record's file, section and its GitHub URL, `refs` `["neec:d:<id>"]`, so the ID in the question opens the extended
-   description.
-3. The ID in `STATE.md`'s table with its ledger id in the Ledger column; the `next` field and `log` updated.
+- **A step** (`steps`): `{id, phase, t: "<short title>", d: "<model and effort, then what to do, then why>", s: "todo"
+  | "doing" | "blocked" | "done" | "dropped", links: [{r: "after"|"alters"|"addresses"|"resolves"|"blocks", to: "<ID>"}]}`.
+  Set `s` as the session's work moves; `doing`→`done` or `dropped` moves it to the archive (below) with `doneAt` set.
+- **A decision** (`decisions`): `{id, q: "<plain question>", opts: [default first, then alternatives], def: "<default
+  option>", sel: "<selected option>", conf: false, why: "<one plain sentence> Full reasoning: <file>, section <n>."}`.
+  Until the owner confirms it (`conf: true`, which the owner sets from the ledger's page; a session never sets `conf`),
+  work goes ahead on `sel` (the default unless the owner changed it), except a decision the owner has paused.
+- **An issue** (`issues`): `{id, title, items: [{t: "<sub-item>", d: false}], gh: "<GitHub issue number, if any>"}`.
+  A session ticks an item's `d` as it is addressed; the issue is ready to confirm resolved once every item is.
 
-Write with `ArtifactData` (action `batch`, `if_version` pinned to the versions just read). Where the artifact tools
-are unavailable, put the ready-to-apply entries in the handoff under "Ledger entries" and say so in the pull request;
-the next session with the tools applies them first. The owner's answers are read back from the ledger at the start of
-each session (`pick`, `confirmed`) and recorded as numbered decisions (Start, step 5).
+Per item added or changed: write it into the doc (`steps`, `decisions` or `issues`), link it (`links`, the `r`
+relations above) to the step or issue it bears on, and add one line to `log` (`{t: <ms epoch>, m: "<what changed>"}`,
+kept to 15 lines, oldest dropped). Update `next` (the ids the next session should read first) and `left` (what holds
+now, under 700 characters) before ending the session. A decision or issue a session resolves or confirms is never
+marked so by the session itself (`conf` is the owner's field); a finished step (`done` or `dropped`) does move to the
+archive, in the same write.
+
+Write with `ArtifactData` (action `batch`, `if_version` pinned to the version just read from `get`); a step, decision
+or issue that is finished moves from the project doc's array into `archive/neec/items/<id>` (its own document) in the
+same batch. Where the artifact tools are unavailable, put the ready-to-apply entries in the handoff under "Ledger
+entries" and say so in the pull request; the next session with the tools applies them first. The owner's answers are
+read back from the ledger at the start of each session (`sel`, `conf` on open decisions; ticked items on open issues)
+and recorded as numbered decisions (Start, step 5).
 
 ## Standards
 
