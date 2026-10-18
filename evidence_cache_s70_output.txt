@@ -1,0 +1,11 @@
+  PASS whr26_statistical_appendix.pdf: md5 e9347cf9
+  PASS idea_voter_turnout_codebook.pdf: md5 e6f1570c
+  PASS us_cfr_42_70.14.html: md5 2101bbf9
+  PASS us_cfr_42_71.37.html: md5 79c8db36
+  PASS easterly_fischer_1995_nber_w4735.pdf: md5 bee07536
+  PASS SDGAIRBOD.json: md5 091ced51
+  PASS SDGWSHBOD.json: md5 8b63bfb0
+  PASS SDGPOISON.json: md5 7b6842c4
+  PASS air42.json: md5 1621b4d1
+  PASS designs_index_s70.json: md5 b89a2c45
+SUMMARY: ALL PASS

@@ -1434,12 +1434,32 @@ S69_CHECKS = [
          stdout="blind_review_selftest_output.txt", stderr=EMPTY),
 ]
 
+# Session 70: evidence caches for the shortcuts (ledger S53), before the blind re-read proper (Sessions 71-77).
+# evidence_cache_s70.py (default, no args) verifies by digest the ten files this session cached: the WHR 2026
+# statistical appendix (C2.1), the IDEA turnout codebook (C2.4), two US CFR sections on quarantine/judicial review
+# and the Easterly and Fischer (1995) NBER working paper (C2.6, C3.6), four WHO GHO mortality queries (C4.6), and
+# the 17 designs' and mechanisms' source index. It makes no reading and changes no score; each gap left for a later
+# session is named in evidence_cache/C2.1/notes_s70.md, C2.3/notes_s70.md, C2.4/notes_s70.md,
+# C2.6/law_in_force_notes_s70.md and C4.6/notes_s70.md (prose, not digest-checked).
+S70_FILES = {**S69_FILES, "evidence_cache_s70.py": "evidence_cache_s70.py",
+             **{"evidence_cache/" + k: "evidence_cache/" + k
+                for k in ("designs_index_s70.json", "C2.1/whr26_statistical_appendix.pdf",
+                          "C2.4/idea_voter_turnout_codebook.pdf", "C2.6/us_cfr_42_70.14.html",
+                          "C2.6/us_cfr_42_71.37.html", "C3.6/easterly_fischer_1995_nber_w4735.pdf",
+                          "C4.6/SDGAIRBOD.json", "C4.6/SDGWSHBOD.json", "C4.6/SDGPOISON.json", "C4.6/air42.json")}}
+S70_CHECKS = [
+    dict(name="evidence_cache_s70.py: the ten files Session 70 cached for the shortcuts (STATE.md, 'Next work' item "
+              "0; ledger S53) verify by digest against their live sources",
+         cmd=["python", "evidence_cache_s70.py"], files=S70_FILES,
+         stdout="evidence_cache_s70_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
-          + S65_CHECKS + S68_CHECKS + S69_CHECKS)
+          + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS)
 
 
 def md5(data):
