@@ -1,6 +1,6 @@
 Source: Freedom House, Freedom in the World 2026, country pages (as served 2026-10-18); text by evidence_cache_s71.html_text(); per page, the score header and question F1.
 
-=== https://freedomhouse.org/country/united-states/freedom-world/2026 (md5 b2f87650cb4063716e790e0b27136ee2)
+=== https://freedomhouse.org/country/united-states/freedom-world/2026 (md5 fc947576c6344396566cdff747cf5cf8)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 United States
@@ -21,7 +21,7 @@ Is there an independent judiciary?
 3.00 3
 4.00 4
 
-=== https://freedomhouse.org/country/denmark/freedom-world/2026 (md5 9cea69213ebf3079f8346a2499f7bcb3)
+=== https://freedomhouse.org/country/denmark/freedom-world/2026 (md5 de517c07e80918e1a1eb86ba4635d60b)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 Denmark
@@ -42,7 +42,7 @@ Is there an independent judiciary?
 4.00 4
 4.00 4
 
-=== https://freedomhouse.org/country/finland/freedom-world/2026 (md5 345d8bece208008e0d76f156db1ca194)
+=== https://freedomhouse.org/country/finland/freedom-world/2026 (md5 6db37521aaa88c278bd01ac95caa9fc7)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 Finland
@@ -63,7 +63,7 @@ Is there an independent judiciary?
 4.00 4
 4.00 4
 
-=== https://freedomhouse.org/country/norway/freedom-world/2026 (md5 10543309944dd38c2335d517ab0e1fc7)
+=== https://freedomhouse.org/country/norway/freedom-world/2026 (md5 b0a2260420c6f670b8d6996cf1b37aec)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 Norway
@@ -84,7 +84,7 @@ Is there an independent judiciary?
 4.00 4
 4.00 4
 
-=== https://freedomhouse.org/country/sweden/freedom-world/2026 (md5 96bca50bffe801d7a71f8289a1a24192)
+=== https://freedomhouse.org/country/sweden/freedom-world/2026 (md5 e2ab6ce98068f97a453c69d73d473ccd)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 Sweden
@@ -105,7 +105,7 @@ Is there an independent judiciary?
 4.00 4
 4.00 4
 
-=== https://freedomhouse.org/country/china/freedom-world/2026 (md5 eaa075facf305c7389e3d40664b2c22b)
+=== https://freedomhouse.org/country/china/freedom-world/2026 (md5 35478f7ee78e3d981b2ee4fbef65a79a)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 China
@@ -126,7 +126,7 @@ Is there an independent judiciary?
 1.00 1
 4.00 4
 
-=== https://freedomhouse.org/country/singapore/freedom-world/2026 (md5 aa928f54fc39bb23506b8a6e3dff047a)
+=== https://freedomhouse.org/country/singapore/freedom-world/2026 (md5 b023b372971e92789f37ed664af00509)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 Singapore
@@ -147,7 +147,7 @@ Is there an independent judiciary?
 1.00 1
 4.00 4
 
-=== https://freedomhouse.org/country/qatar/freedom-world/2026 (md5 426043ccedd57c356af6f32a8f944a6b)
+=== https://freedomhouse.org/country/qatar/freedom-world/2026 (md5 226a51f658a080520fbbaaf9386c751b)
 --- from line 101 (anchor /^Freedom in the World 2026$/)
 Freedom in the World 2026
 Qatar

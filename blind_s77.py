@@ -61,6 +61,28 @@ READINGS, C3.6 (output per hour and TFP non-declining over 20 years; basic-needs
         system's own logic; never with a clause cleared (D28(f)), so a decline with a clause cleared is 0.5, flagged
         toward 0.0.
 
+READINGS, C4.6 (pollution mortality non-increasing; liability enforceable by those harmed; regulators free of improper
+influence, WJP sub-factor 6.2 >= 0.77)
+  4.6.1 clause 1: the WHO's SDG series do not span the window (the cache's air-pollution series hold 2021 alone, WASH
+        2019 alone), so the GBD's risk-attributable rates, as the OECD's GBD 2019 dataset gives them: deaths per
+        million attributed to ambient PM2.5 and household solid fuels (SDG 3.9.1) and to unsafe water, unsafe
+        sanitation and no handwashing (3.9.2), plus the WHO's unintentional-poisoning rate (3.9.3), at 1999 and 2019,
+        the 20 years to the dataset's last year (poisoning from 2000, its first year). The dataset's rates are crude,
+        not age-standardized; ageing raises a crude rate, so a fall in it is a fall in the standardized rate, and a
+        rise would be not shown. No cross-check with the SDG series is possible over the window. A configuration
+        clears only if each economy does; the historical configuration predates the GBD (1990).
+  4.6.2 clause 2: cleared where the law makes those who cause harm liable, those harmed can claim before an
+        independent court, collectively where the harm is dispersed, no immunity leaves a class of harm uncompensated
+        or compensated from public funds alone, and a claim decided against those who caused the harm and paid within
+        the window is named; short where an immunity shifts a class of harm to public funds, or Freedom House scores
+        the judiciary's independence (F1) at 0 or 1 of 4 (reading 2.6.3's test); not shown where liability law stands
+        but no such claim is named in the cache, or the law was not reached.
+  4.6.3 clause 3: the World Justice Project's sub-factor 6.2 in its 2025 edition (Session 65's file), at the two
+        decimals it publishes, against the bar of 0.77; the Index does not cover the Soviet Union (not shown).
+  4.6.4 0.0 (the band's case): no structural mechanism makes harm a cost to whoever causes it -- those who cause it
+        shielded from liability with no compensation they fund, and its regulation controlled by those it regulates --
+        or pollution mortality rising with no pathway to reverse it; never with a clause cleared (D28(f)).
+
 Usage: python3 blind_s77.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, the scripts pass_common.PARTS
                                names and the files they read, blind_review.py, the evidence_cache/C2.6/, C3.6/ and
                                C4.6/ files, neec_corpus_v2.json; writes nothing)
@@ -89,6 +111,11 @@ US26, DK26, FI26, SE26, NO26, SU26, CN26, SG26, N26 = (
 PWT, PIPF, EF, EFPDF, N36 = (E36 + "pwt110_selected_economies.csv", E36 + "pip_spl_selected_economies.csv",
                              E36 + "easterly_fischer_1995_tables_s77.csv", E36 + "easterly_fischer_1995_nber_w4735.pdf",
                              E36 + "sources_s77.md")
+MORS, POIS, US46, NOR46, CN46, SU46, N46 = (
+    E46 + "oecd_exp_morsc_gbd2019_s77.csv", E46 + "who_gho_sdgpoison_s77.csv", E46 + "us_law_c46_extract.txt",
+    E46 + "nordic_law_c46_extract.txt", E46 + "cn_law_c46_extract.txt", E46 + "su_environment_c46_extract.txt",
+    E46 + "sources_s77.md")
+WJP = "wjp_rol_sf62_2012_2025.csv"
 ECON = ("SQ", "NSD", "CPS", "CN", "SG", "QA")
 ISO = {"SQ": ("USA",), "NSD": ("DNK", "FIN", "NOR", "SWE"), "CN": ("CHN",), "SG": ("SGP",), "QA": ("QAT",)}
 FH_PAGE = {"USA": "united-states", "DNK": "denmark", "FIN": "finland", "NOR": "norway", "SWE": "sweden",
@@ -409,3 +436,194 @@ U("QA", C36, 0.5,
   flag=("0.0: the band's case (output per hour and TFP both declining over 20 years, as employment grew "
         "fivefold), held at 0.5 only by D28(f) because the basket is provisioned", "3.6.3"),
   note="0.5: productivity and TFP declining; the basket provisioned by rent")
+
+
+# =================================================================================================================
+# C4.6 Harm Internalization
+# =================================================================================================================
+MORT = {}
+for r in rows(MORS):
+    MORT[(r["ref_area"], int(r["year"]))] = MORT.get((r["ref_area"], int(r["year"])), 0.0) + float(r["deaths_per_million"]) / 10
+POISON = {(r["iso"], int(r["year"])): float(r["rate_per_100000"]) for r in rows(POIS)}
+SUM46 = {iso: (MORT[(iso, 1999)] + POISON[(iso, 2000)], MORT[(iso, 2019)] + POISON[(iso, 2019)])
+         for iso in sum(ISO.values(), ())}
+WJP25 = {r["code"]: float(r["sf62"]) for r in rows(WJP) if r["edition"] == "2025"}
+
+
+def m_str(code):
+    return ", ".join(f"{iso} {SUM46[iso][0]:.1f} to {SUM46[iso][1]:.1f}" for iso in ISO[code])
+
+
+def w_str(code):
+    return ", ".join(f"{iso} {WJP25[iso]:.2f}" for iso in ISO[code])
+
+
+SRC461 = f"OECD, GBD 2019 risk-attributable deaths ({MORS}); WHO GHO SDGPOISON ({POIS})"
+SRC463 = f"World Justice Project, sub-factor 6.2, 2025 edition ({WJP})"
+FIG_PRINT.update({
+    "Pollution mortality per 100,000 (crude; air, WASH, poisoning), 1999 to 2019": "; ".join(
+        f"{iso} {a:.1f} to {b:.1f}" for iso, (a, b) in SUM46.items()),
+    "WJP sub-factor 6.2, 2025": "; ".join(f"{iso} {WJP25[iso]:.2f}" for iso in sum(ISO.values(), ())),
+})
+
+U("SQ", C46, 0.5,
+  [("C", f"cleared: {m_str('SQ')} per 100,000 (reading 4.6.1)", SRC461),
+   ("S", "short: liability for releases is strict under CERCLA ('notwithstanding any other provision or rule of law') "
+         "and claims run before courts Freedom House scores 3 of 4 on F1, but the PREP Act makes a covered person "
+         "'immune from suit and liability under Federal and State law' for loss from a declared countermeasure, the "
+         "only remedy being a fund of 'emergency appropriations' that is 'exclusive of any other civil action': a "
+         "class of harm compensated from public funds alone (reading 4.6.2)", f"{US46}; {FHP}"),
+   ("C", f"cleared: {w_str('SQ')}, above 0.77 (reading 4.6.3)", SRC463)],
+  note="0.5: mortality falling and regulation clean; the PREP Act's immunity puts a class of harm on public funds")
+
+U("NSD", C46, 0.5,
+  [("C", f"cleared in each of the four: {m_str('NSD')} per 100,000 (reading 4.6.1)", SRC461),
+   ("U", "not shown: the law in force makes polluters liable -- Denmark's Environmental Damage Compensation Act ('shall "
+         "compensate the damage the pollution causes', section 3, save damage due to compliance with an authority's "
+         "mandatory rules, a defence the clause may read as an immunity), Sweden's Environmental Code (chapter 32), Finland's "
+         "Environmental Damage Compensation Act (liability 'even when the damage was not caused intentionally or "
+         "negligently', section 7); Norway's act was not reached -- before courts Freedom House scores 4 of 4, but no "
+         "claim decided against those who caused the harm and paid within the window is named in the cache for any "
+         "of the four (reading 4.6.2)", f"{NOR46}; {FHP}; {N46}"),
+   ("C", f"cleared in each of the four: {w_str('NSD')}, above 0.77 (reading 4.6.3)", SRC463)],
+  flag=("1.0: if the record of each of the four holds a claim decided against a polluter and paid in 2005-2025, which "
+        "the cached sources do not name; strict liability and independent courts are in place", "4.6.2"),
+  note="0.5: mortality falling, regulation clean, strict liability in force; no claim record named")
+
+U("CPS", C46, 0.0,
+  [("U", "not shown: the GBD's series begin in 1990, after the configuration's years (reading 4.6.1)", SRC461),
+   ("U", "not shown: no Soviet liability law or record of claims is in the cache; the state that owned the polluting "
+         "enterprises 'was most often the agent of this pollution' (reading 4.6.2)", SU46),
+   ("U", "not shown: the Index does not cover the Soviet Union (reading 4.6.3)", SRC463)],
+  zero=("no structural mechanism made harm a cost to whoever caused it: the state owned the polluting enterprises and "
+        "there was no 'established regulatory agency' until the State Committee for the Protection of Nature in "
+        "1988, enforcement of the 1970s laws 'largely ignored' (reading 4.6.4)"),
+  flag=("0.5: reading the 1970s environmental laws and the 1980 air-protection norms as a mechanism the system "
+        "provided, unenforced rather than absent", "4.6.4"),
+  note="0.0: the polluter and the regulator one state, with no agency until 1988")
+
+U("CN", C46, 0.5,
+  [("C", f"cleared: {m_str('CN')} per 100,000 (reading 4.6.1)", SRC461),
+   ("S", "short: the Civil Code makes those who cause damage by pollution liable (article 1229) and lets organs of the "
+         "state and organisations named by law claim restoration and compensation (articles 1234, 1235), but Freedom "
+         f"House scores the judiciary's independence {f1('CHN')} of 4 (F1), so the claims run before no independent "
+         "court (reading 4.6.2)", f"{CN46}; {FHP}"),
+   ("S", f"short: {w_str('CN')}, below 0.77 (reading 4.6.3)", SRC463)],
+  note="0.5: mortality falling; liability without an independent court; regulation below the bar")
+
+U("SG", C46, 0.5,
+  [("C", f"cleared: {m_str('SG')} per 100,000 (reading 4.6.1)", SRC461),
+   ("S", f"short: Freedom House scores the judiciary's independence {f1('SGP')} of 4 (F1); no liability statute or "
+         "claim record was read (reading 4.6.2)", f"{FHP}; {N46}"),
+   ("C", f"cleared: {w_str('SG')}, above 0.77 (reading 4.6.3)", SRC463)],
+  note="0.5: mortality falling and regulation clean; no independent court on Freedom House's reading")
+
+U("QA", C46, 0.5,
+  [("C", f"cleared: {m_str('QA')} per 100,000 (reading 4.6.1)", SRC461),
+   ("S", f"short: Freedom House scores the judiciary's independence {f1('QAT')} of 4 (F1); the law in force was not "
+         "reached (reading 4.6.2)", f"{FHP}; {N46}"),
+   ("S", f"short: {w_str('QA')}, below 0.77 (reading 4.6.3)", SRC463)],
+  note="0.5: mortality falling; no independent court; regulation below the bar")
+
+
+# ---- the files the readings read, and those blind_view lists that bear on other units -----------------------------
+READ = (FHS, FHR, VDEM, FHP, US26, DK26, FI26, SE26, NO26, SU26, CN26, SG26, N26, E26 + "us_cfr_42_70.14.html",
+        E26 + "us_cfr_42_71.37.html", E26 + "law_in_force_notes_s70.md", PWT, PIPF, EF, EFPDF, N36, MORS, POIS, US46,
+        NOR46, CN46, SU46, N46, E46 + "notes_s70.md", E46 + "SDGAIRBOD.json", E46 + "SDGPOISON.json",
+        E46 + "SDGWSHBOD.json", E46 + "air42.json", WJP)
+# Listed by blind_view for these criteria but bearing on the 17 designs and mechanisms (Session 76's units), or
+# superseded here (Session 65's Freedom House rating file by the score file; PWT 10.01 by PWT 11.0): not read for these
+# readings.
+OTHER = ([E26 + f for f in ("bien_definition_c26_extract.txt", "cco_research_hub_c26_extract.txt",
+                            "george_progress_poverty_c26_extract.txt", "integral_wp_v01_c26_extract.txt",
+                            "levy_jg_wp902_c26_extract.txt", "lp_platform_c26_extract.txt",
+                            "ostrom_nobel_c26_extract.txt", "pe_model_c26_extract.txt", "sources_s76.md",
+                            "owid_freedom_house_civil_liberties_rating.csv")] +
+         [E36 + f for f in ("cco_research_hub_c36_extract.txt", "integral_wp_v01_c36_extract.txt",
+                            "pe_model_c36_extract.txt", "pwt1001_selected_economies.csv", "sources_s76.md")] +
+         [E46 + f for f in ("cco_research_hub_c46_extract.txt", "integral_wp_v01_c46_extract.txt",
+                            "lp_platform_c46_extract.txt", "pe_model_c46_extract.txt", "wef_metrics_c46_extract.txt",
+                            "sources_s76.md")])
+
+
+# ---- the blind record ----------------------------------------------------------------------------------------------
+def blind_table(p, cid, units):
+    rows_ = ["| Unit | Clause statuses | Verdict | Flag |", "|---|---|---|---|"]
+    for (code, c) in sorted((k for k in units if k[1] == cid), key=lambda k: ECON.index(k[0])):
+        r = units[(code, c)]
+        sts = " ".join(st for st, _, _ in r["clauses"])
+        flag = f"toward {r['flag'][0].split(':')[0]}" if r["flag"] else "—"
+        rows_.append(f"| {p.names[code]} | {sts} | {pc.f1(r['verdict'])}"
+                     f"{' (0.0 reason stated)' if r['zero'] else ''} | {flag} |")
+    return "\n".join(rows_)
+
+
+def main():
+    ok = True
+
+    def ok_print(cond, text, detail=""):
+        nonlocal ok
+        print(f"  {'PASS' if cond else 'FAIL'} {text}" + ("" if cond or not detail else f": {detail}"))
+        ok = ok and bool(cond)
+        return cond
+
+    print("blind_s77.py -- the blind re-read of C2.6, C3.6 and C4.6 for the six configured economies (ledger S60)")
+    with redirect_stdout(io.StringIO()):
+        p = pc.Pass()
+    print("inputs: blind_review.py, pass_common.py and its parts, neec_corpus_v2.json, " + ", ".join(sorted(READ)) + "\n")
+
+    print("[1] the readings are complete and follow the rules")
+    corpus = {e["code"]: e["scope_class"] for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
+    ok_print({c for c, s in corpus.items() if s == "configured_national_economy"} == set(ECON),
+             "the six are the corpus's configured national economies")
+    want = {(c, cid) for c in ECON for cid in (C26, C36, C46)}
+    ok_print(set(NEW) == want and len(want) == 18, "one blind reading for each of the 18 units (six economies, three "
+             "criteria), no more", str(sorted(set(NEW) ^ want)))
+    pc.check_records(p, NEW, ok_print)
+    pc.check_rule(NEW, ok_print)
+    ok_print(all(r["flag"] is None or r["flag"][0][:3] in ("0.0", "0.5", "1.0") and r["flag"][0][:3] !=
+                 pc.f1(r["verdict"]) for r in NEW.values()), "each flag names an alternative score other than the verdict")
+    bad = [k for k in sorted(NEW) if len(br.blind_view(p, k)["clauses_v2"]) != len(NEW[k]["clauses"])]
+    ok_print(not bad, "each reading has one status per clause blind_view shows", str(bad))
+    for cid, ec in ((C26, E26), (C36, E36), (C46, E46)):
+        listed = {ec + f for f in br.blind_view(p, ("SQ", cid))["cache_files"]}
+        ok_print(listed <= set(READ) | set(OTHER), f"every file blind_view lists for {cid} is one this script reads "
+                 "or names", str(sorted(listed - set(READ) - set(OTHER))))
+    ok_print(all(os.path.isfile(path(f)) for f in READ + tuple(OTHER)), "every file in READ and OTHER exists")
+    ok_print(all(st != "R" for u in NEW.values() for st, _, _ in u["clauses"]),
+             "no configured economy's clause is out of reach (reach is a mechanism's rule, protocol 3.2)")
+
+    print("\n[2] the figures the readings quote, recomputed from the cache")
+    for k, v in FIG_PRINT.items():
+        print(f"    {k}: {v}")
+    ok_print(all(cl(i) >= 53 for i in ISO["NSD"]) and all(cl(i) < 53 for c in ("SQ", "CN", "SG", "QA") for i in ISO[c])
+             and cl("CHN") <= 16 and all(FH_SU[y] >= 6 for y in range(1972, 1988) if y in FH_SU),
+             "C2.6 clause 1 as read: the Nordic four at 53 or more, the others below, China and the Soviet years to "
+             "1987 in the 0.0 band")
+    ok_print([i for i in TFP if TFP[i] < 0] == ["FIN", "NOR", "QAT"] and LPW["QAT"][1] < 0 and
+             all(v >= 0 for i, (_, v) in LPW.items() if i != "QAT") and EF_TFP[1] < 0 and EF_TFP[2] < 0 and
+             min(EF_LP) > 0, "C3.6 as read: TFP declining in Finland, Norway and Qatar only, output per hour declining "
+             "only in Qatar; Soviet TFP declining and output per worker rising, 1970-87")
+    ok_print(all(b <= a for a, b in SUM46.values()) and all(ratio(i) > 1 for i in PIPR) and SG_BOUND > 1,
+             "C4.6 clause 1 and C3.6 clause 3 as read: pollution mortality lower in 2019 than in 1999 in each of the "
+             "eight, and every economy's mean above its Societal Poverty Line")
+    ok_print({i for i, v in WJP25.items() if i in sum(ISO.values(), ()) and round(v, 2) < 0.77} == {"CHN", "QAT"},
+             "C4.6 clause 3 as read: China and Qatar below 0.77, the other six above")
+
+    print("\n[3] the readings (verdicts, clause statuses, flags)")
+    btables = []
+    for cid in (C26, C36, C46):
+        print(f"\n{cid} (blind reading):")
+        t = blind_table(p, cid, NEW)
+        btables.append(t)
+        print(t)
+        v = [r["verdict"] for k, r in NEW.items() if k[1] == cid]
+        print(f"\n{cid}: {v.count(1.0)} at 1.0, {v.count(0.5)} at 0.5, {v.count(0.0)} at 0.0; "
+              f"{sum(1 for k, r in NEW.items() if k[1] == cid and r['flag'])} flagged")
+    print("\nBLIND READINGS OF C2.6, C3.6 AND C4.6 (SIX CONFIGURED ECONOMIES) CHECKED." if ok
+          else "\nBLIND RE-READ: CHECKS FAILED.")
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

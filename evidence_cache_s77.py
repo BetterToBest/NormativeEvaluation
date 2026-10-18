@@ -59,6 +59,9 @@ PWT110 = "https://dataverse.nl/api/access/datafile/554030"
 PIP = ("https://api.worldbank.org/pip/v1/pip?country=USA,DNK,FIN,NOR,SWE,CHN,QAT&year=all&povline=3&fill_gaps=false"
        "&format=json")
 EF_PDF = "evidence_cache/C3.6/easterly_fischer_1995_nber_w4735.pdf"
+MORSC = ("https://sdmx.oecd.org/public/rest/data/OECD.ENV.EPI,DSD_EXP_MORSC@DF_EXP_MORSC,1.0/"
+         "USA+DNK+FIN+NOR+SWE+CHN+SGP+QAT.A.MOR.10P6HB.PM_2_5_OUT+AIRPOL_IN+UWATS+USAN+NHANDW._T._T?startPeriod=1990")
+GHO = "https://ghoapi.azureedge.net/api/{}?$filter=SpatialDim%20in%20('USA','DNK','FIN','NOR','SWE','CHN','SGP','QAT')"
 PWT_COLS = ["countrycode", "year", "rgdpna", "rgdpe", "pop", "emp", "avh", "rtfpna"]
 PIP_COLS = ["country_code", "reporting_year", "reporting_level", "welfare_type", "mean", "median", "spl"]
 # Easterly and Fischer (1995), NBER working paper 4735, a scanned PDF with no text layer (Session 70's cache), read as
@@ -156,9 +159,59 @@ EXTRACTS = [
       ("Infectious Diseases Act 1976, section 47", "html", SSO.format("pr47-"), [(r"^47\. —\(1\)", 1)])]),    ("C3.6/pwt110_selected_economies.csv", "pwt", PWT110, None),
     ("C3.6/pip_spl_selected_economies.csv", "pip", PIP, None),
     ("C3.6/easterly_fischer_1995_tables_s77.csv", "ef", EF_PDF, None),
+    ("C4.6/oecd_exp_morsc_gbd2019_s77.csv", "oecd", MORSC, None),
+    ("C4.6/who_gho_sdgpoison_s77.csv", "gho", GHO.format("SDGPOISON"), None),
+    ("C4.6/us_law_c46_extract.txt", "multi",
+     [("42 U.S.C. 247d-6d (the PREP Act), Cornell LII", "html", "https://www.law.cornell.edu/uscode/text/42/247d-6d",
+       [(r"a covered person shall be immune from suit and liability under Federal and State law", 1)]),
+      ("42 U.S.C. 247d-6e (the Covered Countermeasure Process Fund), Cornell LII", "html",
+       "https://www.law.cornell.edu/uscode/text/42/247d-6e",
+       [(r"there is hereby established in the Treasury an emergency fund", 1),
+        (r"shall be exclusive of any other civil action or proceeding", 1)]),
+      ("42 U.S.C. 9607 (CERCLA liability), Cornell LII", "html", "https://www.law.cornell.edu/uscode/text/42/9607",
+       [(r"Notwithstanding any other provision or rule of law, and subject only to the defenses", 3)])]),
+    ("C4.6/nordic_law_c46_extract.txt", "multi",
+     [("Lov om erstatning for miljøskader, LBK nr 994 af 09/09/2014", "xml", RETSINFO.format("2014/994"),
+       [(r"^Loven gælder for skade, der forvoldes ved forurening", 1),
+        (r"^Den, der som led i erhvervsmæssig eller offentlig aktivitet", 1),
+        (r"^Ansvar efter stk\. 1 indtræder ikke", 1)]),
+      ("Miljöbalk (1998:808), 32 kap.", "txt", RIKSDAG.format("sfs-1998-808"),
+       [(r"^1 § Skadestånd enligt detta kapitel ska betalas för", 14), (r"^3 § Skadestånd enligt detta kapitel betalas", 11)]),
+      ("Laki ympäristövahinkojen korvaamisesta 737/1994", "akn", FINLEX.format("1994/737"),
+       [(r"^Tässä laissa tarkoitettuna ympäristövahinkona korvataan", 1),
+        (r"^Tämän lain mukainen korvausvelvollisuus on, silloinkin kun", 1)])]),
+    ("C4.6/cn_law_c46_extract.txt", "multi",
+     [("中华人民共和国民法典, zh.wikisource.org", "html", ZHWS.format("中华人民共和国民法典"),
+       [(r"^第一千二百二十九条", 1), (r"^第一千二百三十四条", 1), (r"^第一千二百三十五条", 1)])]),
+    ("C4.6/su_environment_c46_extract.txt", "multi",
+     [("Environmental issues in the Soviet Union, en.wikipedia.org (text from the Library of Congress Country Study)",
+       "html", "https://en.wikipedia.org/wiki/Environmental_issues_in_the_Soviet_Union",
+       [(r"^In spite of a series of environmental laws and regulations passed in the 1970s", 1),
+        (r"^As part of the process of restructuring", 1)])]),
 ]
 
 FILES = {
+    "C2.6/owid_fh_civil_liberties_score_s77.csv": "d84871dbebf3b278e44ee6792c11351e",
+    "C2.6/owid_fh_civil_liberties_rating_su_s77.csv": "a61d3ab35c27601e4956d437929ef459",
+    "C2.6/owid_vdem_civil_liberties_s77.csv": "453186c30d89aff354843cf252922f22",
+    "C2.6/fh_fiw2026_cl_f1_extract.txt": "226863fccf038771d94597e5dab35c27",
+    "C2.6/us_law_c26_extract.txt": "3be8591d98de7a90e8cac26e81961735",
+    "C2.6/dk_law_c26_extract.txt": "a00ccb5df32518f6ad8aa2b42b8ada0e",
+    "C2.6/fi_law_c26_extract.txt": "61453a44bf32d5d6dc771382ab656cbe",
+    "C2.6/se_law_c26_extract.txt": "6fa24b518843b3714d44f6dcd63d3523",
+    "C2.6/no_law_c26_extract.txt": "7e64991ce089ddc906ffaffacaad3e25",
+    "C2.6/su_law_c26_extract.txt": "cf44d4d6e055ea2471a33962f42c7b3d",
+    "C2.6/cn_law_c26_extract.txt": "4013a1eef4ea64f56e8c057f0a9e89f9",
+    "C2.6/sg_law_c26_extract.txt": "20a708cabba979224ac7d2a52f9e0a32",
+    "C3.6/pwt110_selected_economies.csv": "681cb995284ecc8bb636c45a0fa27fd0",
+    "C3.6/pip_spl_selected_economies.csv": "f743a717c4796bc93b37e2ac33fa5d6f",
+    "C3.6/easterly_fischer_1995_tables_s77.csv": "38a20fe24475a92fdd367124676a201f",
+    "C4.6/oecd_exp_morsc_gbd2019_s77.csv": "29a8bdab034c2353e6031232d3dddc7c",
+    "C4.6/who_gho_sdgpoison_s77.csv": "5234238af2b68acd01986b0f96e8ee4d",
+    "C4.6/us_law_c46_extract.txt": "2f0af564d0cae66d3c590c7514ca0462",
+    "C4.6/nordic_law_c46_extract.txt": "57df9afa0ccd04e6dab71c6ea520c70f",
+    "C4.6/cn_law_c46_extract.txt": "2f39195b8d06dc4756740c4b0554d859",
+    "C4.6/su_environment_c46_extract.txt": "25194c10c2568a17d8be16b271490e11",
 }
 
 
@@ -224,6 +277,23 @@ def fetch_files():
             w = csv.writer(buf, lineterminator="\n")
             w.writerow(["series", "period", "growth_pct_a_year"])
             w.writerows(EF_TABLES)
+            out[name] = buf.getvalue().encode("utf-8")
+        elif kind == "oecd":
+            rs = list(csv.DictReader(io.StringIO(e73.get(src + "&format=csvfilewithlabels", ua=True).decode("utf-8-sig"))))
+            keep = sorted(((r["REF_AREA"], r["RISK"], r["TIME_PERIOD"], r["OBS_VALUE"]) for r in rs))
+            buf = io.StringIO()
+            w = csv.writer(buf, lineterminator="\n")
+            w.writerow(["ref_area", "risk", "year", "deaths_per_million"])
+            w.writerows(keep)
+            out[name] = buf.getvalue().encode("utf-8")
+        elif kind == "gho":
+            import json
+            vs = json.loads(raw(src))["value"]
+            keep = sorted((v["SpatialDim"], v["TimeDim"], v["NumericValue"]) for v in vs if v["Dim1"] == "SEX_BTSX")
+            buf = io.StringIO()
+            w = csv.writer(buf, lineterminator="\n")
+            w.writerow(["iso", "year", "rate_per_100000"])
+            w.writerows(keep)
             out[name] = buf.getvalue().encode("utf-8")
         elif kind == "owid":
             isos, y0, y1 = spec
