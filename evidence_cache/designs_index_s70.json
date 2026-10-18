@@ -1,0 +1,151 @@
+{
+  "_purpose": "S53 (Session 70): an index of the 17 designs' and mechanisms' own primary sources, for the blind re-read of C2.6, C3.6 and C4.6 in Session 76 (S59). Session 65 scored all 17 at 0.5 on a stated rule without reading these sources (NEEC_Rescoring_s65.md, line 1492: 'the least-read units in the pass'). This file names, for each unit, the authoritative text(s) describing its own governance/consent provisions (C2.6), its productivity and investment-allocation mechanism (C3.6), and its harm-liability and regulatory provisions (C4.6), plus any existing in-repo passage already touching one of these three. It does not read or score any unit; a citation marked 'cached' is in evidence_cache/ by file name, one marked 'cite only' is not fetched this session (see note).",
+  "note": "Ten of the 17 (MS, LM, MMT, UBI, DG, SC, FALC, PE, CCO, INT) predate the scratch-file format and are either one-line entries in NEEC_Report_v1_6.md or (INT only) have an external white paper already cached. Seven (GEO, MC, DE, UBS, SWF, IF, OS) have a dedicated scoring scratch file in the repository, written before v2.0 added C2.6/C3.6/C4.6; grepping each for governance/consent/liability/productivity keywords found only 0-12 hits apiece (recorded below), confirming these files do not substantively cover the three new criteria either. For 16 of the 17 the primary design literature is commercially published (books) or, for CCO, a separate repository (BetterToBest/compassionism-simulation); this session cites each by author/title/year/edition rather than bulk-downloading copyrighted text, consistent with the scratch files' own practice of quoting short passages rather than storing whole works. Session 76 should fetch the specific pages a library, archive.org borrowing, or the design's own excerpt permits, and quote under the same short-passage practice the existing scratch files use.",
+  "units": {
+    "MS": {
+      "display_name": "Market Socialism",
+      "home_document": "NEEC_Report_v1_6.md (one-line entries only; no scratch file)",
+      "primary_sources": [
+        "John E. Roemer, A Future for Socialism (Harvard University Press, 1994) -- ch. 1-5 on worker/public ownership and market allocation bear on C3.6's investment mechanism; ch. 6-7 on the coupon economy's institutions bear on C2.6's governance/due-process questions.",
+        "David Schweickart, After Capitalism, 2nd ed. (Rowman & Littlefield, 2011) -- pt. II on 'Economic Democracy' describes the worker-council governance structure (C2.6) and the public investment bank mechanism (C3.6)."
+      ],
+      "status": "cite only"
+    },
+    "LM": {
+      "display_name": "Libertarian Minarchism",
+      "home_document": "NEEC_Report_v1_6.md",
+      "primary_sources": [
+        "Robert Nozick, Anarchy, State, and Utopia (Basic Books, 1974) -- pt. I (ch. 3-5) on the minimal state's protective function and due process bears on C2.6; the book has no developed productivity or harm-liability mechanism beyond tort law under common law, so C3.6 and C4.6 clause 2 may be 'not shown' on this source alone."
+      ],
+      "status": "cite only"
+    },
+    "MMT": {
+      "display_name": "MMT + Job Guarantee",
+      "home_document": "NEEC_Report_v1_6.md",
+      "primary_sources": [
+        "L. Randall Wray, Modern Money Theory, 2nd ed. (Palgrave Macmillan, 2015) -- ch. 1-2 on sovereign currency issuance bear on C3.6 (demand management, not an investment-allocation mechanism as such).",
+        "Pavlina R. Tcherneva, The Case for a Job Guarantee (Polity, 2020) -- freely summarized in her Levy Institute working papers (levyinstitute.org, reachable this session); the job guarantee's administration (local hiring boards, wage floor) bears on C2.6's due-process question and C4.6's regulatory-capture question (public employment, not a private regulator)."
+      ],
+      "status": "cite only"
+    },
+    "UBI": {
+      "display_name": "Universal Basic Income",
+      "home_document": "NEEC_Report_v1_6.md",
+      "primary_sources": [
+        "Philippe Van Parijs and Yannick Vanderborght, Basic Income: A Radical Proposal for a Free Society and a Sane Economy (Harvard University Press, 2017) -- ch. 1 and 9 on UBI as an unconditional transfer bear on C2.6 (no conditionality to police) but the book proposes no productivity or harm-liability mechanism of its own; C3.6 and C4.6 read on the host economy (protocol 3.2), as C1.4 and C4.5 already do for this unit."
+      ],
+      "status": "cite only"
+    },
+    "DG": {
+      "display_name": "Degrowth Economics",
+      "home_document": "NEEC_Report_v1_6.md",
+      "primary_sources": [
+        "Jason Hickel, Less Is More: How Degrowth Will Save the World (Windmill Books, 2020) -- ch. 6 ('Post-Capitalism') on worker cooperatives and public ownership bears on C2.6 and C3.6.",
+        "Giorgos Kallis et al., The Case for Degrowth (Polity, 2020) -- ch. 3 on redistribution and democratic planning bears on C2.6; the book explicitly rejects productivity growth as a goal (C3.6's clauses 1-2 may be 'out of reach' by the design's own statement, as C4.2 already found for growth)."
+      ],
+      "status": "cite only"
+    },
+    "SC": {
+      "display_name": "Stakeholder Capitalism",
+      "home_document": "NEEC_Report_v1_6.md",
+      "primary_sources": [
+        "Klaus Schwab with Peter Vanham, Stakeholder Capitalism: A Global Economy that Works for Progress, People and Planet (Wiley, 2021) -- ch. 8 ('A New Social Contract') and the World Economic Forum's 'Davos Manifesto 2020' (weforum.org, freely published) bear on C2.6 (stated governance commitments) and C4.6 (stated harm-disclosure commitments); the design states no liability-enforcement mechanism of its own, only voluntary ESG reporting."
+      ],
+      "status": "cite only"
+    },
+    "FALC": {
+      "display_name": "Fully Automated Luxury Communism",
+      "home_document": "NEEC_Report_v1_6.md",
+      "primary_sources": [
+        "Aaron Bastani, Fully Automated Luxury Communism (Verso, 2019) -- ch. 8 ('Four Futures, or Communism') describes common ownership of automated production (C3.6's investment-allocation question) but states no court, regulator or due-process institution (C2.6, C4.6 clause 2 likely 'not shown')."
+      ],
+      "status": "cite only"
+    },
+    "PE": {
+      "display_name": "Participatory Economics",
+      "home_document": "NEEC_Report_v1_6.md",
+      "primary_sources": [
+        "Michael Albert and Robin Hahnel, Looking Forward: Participatory Economics for the Twenty First Century (South End Press, 1991; a later restatement is Albert, Parecon: Life After Capitalism, Verso, 2003) -- the 'participatory planning' procedure (ch. 4-5 of Looking Forward) is parecon's investment-allocation mechanism (C3.6); the workers'- and consumers'-council structure and its grievance procedure bear on C2.6. participatoryeconomics.info (reachable this session) hosts summaries and may host excerpts; full chapters were not located as free full text this session."
+      ],
+      "status": "cite only"
+    },
+    "CCO": {
+      "display_name": "CCO-PTF-CIP-SZH",
+      "home_document": "NEEC_Report_v1_6.md and the compassionism-simulation repository's own design documentation",
+      "primary_sources": [
+        "The design's own documentation in BetterToBest/compassionism-simulation (the simulation repository already pinned at d10ed6e for C3.2/C1.2a/C3.4/C5.2; readable this session via add_repo/anonymous git clone, not yet cloned for this index). Session 76 should check that repository's README and design docs for governance (C2.6), the Production Trust Fund's investment rule (C3.6), and any liability or regulatory provision (C4.6) before falling back to 'not shown'."
+      ],
+      "status": "cite only; repository confirmed reachable (add_repo), not cloned this session"
+    },
+    "INT": {
+      "display_name": "Integral",
+      "home_document": "evidence_cache/C1.4/integral_wp_v01_extract.txt and evidence_cache/C4.3/integral_wp_v01_c43_extract.txt (extracts already cached); full source: integralcollective.io's Technical White Paper v0.1 (PDF md5 a6defc9a, December 2025, 345 pages)",
+      "primary_sources": [
+        "Integral Technical White Paper v0.1 (integralcollective.io, reachable this session; already fetched and cached in Sessions 59-61 for other criteria). Session 76 should pull further extracts from this same cached PDF for governance/consent (likely section 11, already used for C5.2's municipal-pilot reading), its resource-allocation rule (C3.6), and any stated harm/liability provision (C4.6); no new fetch needed, the PDF is already in the container's evidence trail by digest."
+      ],
+      "status": "already cached (prior sessions); no action needed this session"
+    },
+    "DE": {
+      "display_name": "Doughnut Economics",
+      "home_document": "NEEC_DoughnutEconomics_scoring_scratch.md (grep: 3 hits on governance/regulation/productivity keywords, none on the C2.6/C4.6 clauses as v2.0 states them)",
+      "primary_sources": [
+        "Kate Raworth, Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist, rev. ed. (Chelsea Green, 2017/2022) -- 'Way 5: Design to Distribute' and 'Way 7: Be Agnostic about Growth' bear on C3.6 (the design states no specific productivity mechanism, treating it as agnostic); the book names no due-process or liability institution of its own (C2.6, C4.6 clause 2 read on the host economy, protocol 3.2, as the scratch file already does for several other criteria).",
+        "Kate Raworth, 'A Safe and Just Space for Humanity' (Oxfam Discussion Paper, 2012; free PDF at oxfam.org, not fetched this session) -- the original sketch, cited by the scratch file's Overview."
+      ],
+      "status": "cite only"
+    },
+    "GEO": {
+      "display_name": "Georgism / Land Value Tax",
+      "home_document": "NEEC_Georgism_LVT_scoring_scratch.md (grep: 3 hits; C5.2's ACT Treasury material, already cached via STATE.md's Session 64 sources, is the design's one real deployment and is the closest thing to a governance/liability record)",
+      "primary_sources": [
+        "Henry George, Progress and Poverty (1879; public domain, full text at gutenberg.org/ebooks/558, reachable this session) -- bk. VIII-IX on the single tax's administration bear on C2.6's governance question but predate any modern due-process or environmental-liability framework (C4.6 likely reads on the host jurisdiction, protocol 3.2, as the ACT's own tax law already does for C5.2).",
+        "ACT Treasury (Australian Capital Territory) tax reform materials and The Canberra Times, 3 July 2026 (Pegasus Economics review) -- already cited in STATE.md's Session 64 sources for C5.2; the same record may bear on C3.6 (the ACT's 20-year transition's revenue and investment effects) and should be re-read for that, not re-fetched."
+      ],
+      "status": "Progress and Poverty reachable (gutenberg.org, HTTP 200), not fetched this session (predates the clauses it would inform); ACT materials already in the record"
+    },
+    "MC": {
+      "display_name": "Mutual Credit / LETS",
+      "home_document": "NEEC_MutualCredit_LETS_scoring_scratch.md (grep: 2 hits)",
+      "primary_sources": [
+        "Thomas H. Greco Jr., The End of Money and the Future of Civilization (Chelsea Green, 2009) -- ch. 10-13 on mutual-credit clearing networks' own governance (member agreements, dispute resolution) bear on C2.6; the design has no production/investment mechanism of its own (C3.6 likely reads on the host economy, protocol 3.2) and no stated liability or regulatory provision (C4.6 likely 'not shown').",
+        "Michael Linton and Angus Soutar, 'The LETSystem Design Manual' (1994; historically free online, not confirmed reachable this session) -- the original LETS design document."
+      ],
+      "status": "cite only"
+    },
+    "UBS": {
+      "display_name": "Universal Basic Services",
+      "home_document": "NEEC_UniversalBasicServices_scoring_scratch.md (grep: 0 hits -- no passage in the existing scratch file touches governance, liability or productivity at all)",
+      "primary_sources": [
+        "UCL Institute for Global Prosperity, Social Prosperity for the Future: A Proposal for Universal Basic Services (2017) -- the design's founding report; its service-delivery model (ch. 3-4) bears on C2.6 (no conditionality to police, similar to UBI) and states no productivity mechanism or liability provision of its own (C3.6, C4.6 likely read on the host economy, protocol 3.2). ucl.ac.uk returned HTTP 403 to this session's container; the report is also mirrored by the IGP under a Creative Commons licence and should be fetched from a mirror in session 76."
+      ],
+      "status": "primary source's own site (ucl.ac.uk) refused the container (HTTP 403) this session; not fetched"
+    },
+    "SWF": {
+      "display_name": "Sovereign Wealth Fund Statism",
+      "home_document": "NEEC_SovereignWealthFundStatism_scoring_scratch.md (grep: 2 hits; Norway's NBIM and Timor-Leste's Petroleum Fund Law, already cached per STATE.md's Session 58 sources, are the design's real-world governance and liability record)",
+      "primary_sources": [
+        "NBIM (Norges Bank Investment Management), 'The History' and the Norwegian Ministry of Finance's fiscal policy framework page -- already cited (Session 58); Norway's fund governance (an independent ethics council, parliamentary oversight) bears on C2.6 and C4.6 clause 3 (regulatory independence); its investment mandate bears on C3.6.",
+        "Timor-Leste's Petroleum Fund Law No. 9/2005 and Norad's 2007 review -- already cited (Session 58) for the design's weaker-governance comparator."
+      ],
+      "status": "already cached (prior sessions, Session 58 sources); re-read, no new fetch needed"
+    },
+    "IF": {
+      "display_name": "Islamic Finance / Profit-Sharing Banking",
+      "home_document": "NEEC_IslamicFinance_scoring_scratch.md (grep: 12 hits -- the richest of the seven scratch files on these themes, mostly on Shari'ah governance boards and regulatory bodies)",
+      "primary_sources": [
+        "AAOIFI (Accounting and Auditing Organization for Islamic Financial Institutions), Shari'ah Standards (accessible via aaoifi.com, not confirmed reachable this session) -- the Shari'ah Supervisory Board's independence and dispute-resolution role bears directly on C2.6 and C4.6 clause 3.",
+        "M. Umer Chapra, Towards a Just Monetary System (Islamic Foundation, 1985) -- ch. 3-4 on profit-and-loss sharing as the allocation mechanism bear on C3.6."
+      ],
+      "status": "cite only; the scratch file's existing 12 hits should be re-read first in session 76 before any new fetch"
+    },
+    "OS": {
+      "display_name": "Ostrom-Style Commons Governance",
+      "home_document": "NEEC_Ostrom_Commons_scoring_scratch.md (grep: 6 hits)",
+      "primary_sources": [
+        "Elinor Ostrom, Governing the Commons: The Evolution of Institutions for Collective Action (Cambridge University Press, 1990) -- ch. 3's eight 'design principles' (graduated sanctions, conflict-resolution mechanisms, recognized rights to organize) are precisely C2.6's governance question; ch. 3-5's monitoring and sanctioning systems bear on C4.6 clause 2 (who enforces harm rules and how); the book is not public domain and was not fetched this session.",
+        "Elinor Ostrom, 'Collective Action and the Evolution of Social Norms', Journal of Economic Perspectives 14(3) (2000) -- freely available via JSTOR/the author's university page in some instances; not confirmed reachable this session."
+      ],
+      "status": "cite only"
+    }
+  }
+}
