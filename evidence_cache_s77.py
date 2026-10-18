@@ -38,6 +38,7 @@ import io
 import os
 import re
 import sys
+import tempfile
 
 import evidence_cache_s71 as e71
 import evidence_cache_s73 as e73
@@ -54,6 +55,37 @@ FINLEX = "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-cons
 RIKSDAG = "https://data.riksdagen.se/dokument/{}.text"
 SSO = "https://sso.agc.gov.sg/Act/IDA1976?ProvIds={}"
 ZHWS = "https://zh.wikisource.org/zh-hans/{}"
+PWT110 = "https://dataverse.nl/api/access/datafile/554030"
+PIP = ("https://api.worldbank.org/pip/v1/pip?country=USA,DNK,FIN,NOR,SWE,CHN,QAT&year=all&povline=3&fill_gaps=false"
+       "&format=json")
+EF_PDF = "evidence_cache/C3.6/easterly_fischer_1995_nber_w4735.pdf"
+PWT_COLS = ["countrycode", "year", "rgdpna", "rgdpe", "pop", "emp", "avh", "rtfpna"]
+PIP_COLS = ["country_code", "reporting_year", "reporting_level", "welfare_type", "mean", "median", "spl"]
+# Easterly and Fischer (1995), NBER working paper 4735, a scanned PDF with no text layer (Session 70's cache), read as
+# page images in Session 77 and transcribed here: Table 1 (PDF page 40), output per worker, total economy, Western
+# estimates, and Table 4 (page 43), TFP growth, Western-estimate GNP, by period; Table 5 (page 44), the CES estimates'
+# TFP growth on the Western GNP series (1950-87 sample, elasticity of substitution 0.37). Logarithmic growth rates, %
+# a year.
+EF_TABLES = [
+    ("table1_output_per_worker_total_economy_western", "1950-59", "5.8"),
+    ("table1_output_per_worker_total_economy_western", "1960-69", "3.0"),
+    ("table1_output_per_worker_total_economy_western", "1970-79", "2.1"),
+    ("table1_output_per_worker_total_economy_western", "1980-87", "1.4"),
+    ("table1_capital_per_worker_total_economy_western", "1960-69", "5.4"),
+    ("table1_capital_per_worker_total_economy_western", "1970-79", "5.0"),
+    ("table1_capital_per_worker_total_economy_western", "1980-87", "4.0"),
+    ("table4_tfp_western_gnp", "1950-60", "1.3"),
+    ("table4_tfp_western_gnp", "1960-70", "-0.1"),
+    ("table4_tfp_western_gnp", "1970-80", "-0.8"),
+    ("table4_tfp_western_gnp", "1980-87", "-1.2"),
+    ("table4_tfp_khanin_material_sectors", "1970-80", "0.4"),
+    ("table4_tfp_khanin_material_sectors", "1980-87", "0.4"),
+    ("table4_tfp_official_material_sectors", "1970-80", "1.4"),
+    ("table4_tfp_official_material_sectors", "1980-87", "0.7"),
+    ("table5_ces_tfp_western_gnp_1950_87_sample", "1960-69", "1.10"),
+    ("table5_ces_tfp_western_gnp_1950_87_sample", "1970-79", "1.16"),
+    ("table5_ces_tfp_western_gnp_1950_87_sample", "1980-87", "1.09"),
+]
 
 # (file, kind, source, spec). kind: "owid" (spec: (iso codes, first year, last year)); "html", "xml" (the page's text by
 # evidence_cache_s71.html_text()), "akn" (the first Akoma Ntoso act of a Finlex consolidated-statute response),
@@ -121,7 +153,9 @@ EXTRACTS = [
      [("Infectious Diseases Act 1976, section 15 (sso.agc.gov.sg)", "html", SSO.format("pr15-"),
        [(r"^15\. —\(1\)", 1), (r"^\(2\)\s+The Director-General of Health may order the following persons to remain", 1)]),
       ("Infectious Diseases Act 1976, section 21K", "html", SSO.format("pr21K-"), [(r"^21K\.", 1)]),
-      ("Infectious Diseases Act 1976, section 47", "html", SSO.format("pr47-"), [(r"^47\. —\(1\)", 1)])]),
+      ("Infectious Diseases Act 1976, section 47", "html", SSO.format("pr47-"), [(r"^47\. —\(1\)", 1)])]),    ("C3.6/pwt110_selected_economies.csv", "pwt", PWT110, None),
+    ("C3.6/pip_spl_selected_economies.csv", "pip", PIP, None),
+    ("C3.6/easterly_fischer_1995_tables_s77.csv", "ef", EF_PDF, None),
 ]
 
 FILES = {
@@ -168,7 +202,30 @@ def fetch_files():
 
     for name, kind, src, *spec in EXTRACTS:
         spec = spec[0] if spec else None
-        if kind == "owid":
+        if kind == "pwt":
+            import pandas as pd
+            with tempfile.TemporaryDirectory() as tmp:
+                p = os.path.join(tmp, "pwt.dta")
+                open(p, "wb").write(raw(src))
+                df = pd.read_stata(p)
+            df = df[df.countrycode.isin(ECON_ISO) & (df.year >= 1999)][PWT_COLS].sort_values(["countrycode", "year"])
+            out[name] = df.to_csv(index=False, lineterminator="\n", float_format="%.6f").encode("utf-8")
+        elif kind == "pip":
+            import json
+            recs = sorted((r for r in json.loads(raw(src)) if r["reporting_year"] >= 2003),
+                          key=lambda r: (r["country_code"], r["reporting_year"], r["reporting_level"]))
+            buf = io.StringIO()
+            w = csv.writer(buf, lineterminator="\n")
+            w.writerow(PIP_COLS)
+            w.writerows([r[c] for c in PIP_COLS] for r in recs)
+            out[name] = buf.getvalue().encode("utf-8")
+        elif kind == "ef":
+            buf = io.StringIO()
+            w = csv.writer(buf, lineterminator="\n")
+            w.writerow(["series", "period", "growth_pct_a_year"])
+            w.writerows(EF_TABLES)
+            out[name] = buf.getvalue().encode("utf-8")
+        elif kind == "owid":
             isos, y0, y1 = spec
             r = raw(src)
             buf = io.StringIO()

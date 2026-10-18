@@ -40,6 +40,27 @@ prescribed by law, time-limited and open to an independent court)
         economy's clause turns on them once the law in force is read.
   2.6.4 0.0 (the band's case): clause 1 at 16 or less, with no clause cleared (D28(f)).
 
+READINGS, C3.6 (output per hour and TFP non-declining over 20 years; basic-needs output at the system's own hours)
+  3.6.1 clauses 1 and 2: Penn World Table 11.0, compound annual change over 2003-2023, the 20 years to its last year
+        (the nearest to the stated date): clause 1 real GDP at constant national prices (rgdpna) per hour worked
+        (emp x avh), clause 2 TFP at constant national prices (rtfpna); where PWT's hours begin later, the longest
+        window they give; a configuration of several economies clears only if each does. The historical
+        configuration: Easterly and Fischer (1995), the Western estimates for the total economy over the two decades
+        to 1987 -- output per worker (their Table 1) for clause 1, no hours series being at hand (sources_s77.md), and
+        growth-accounting TFP for GNP (Table 4) for clause 2, the measure PWT's rtfpna corresponds to; their CES
+        estimates (Table 5), which attribute the slowdown to diminishing returns to capital, are the alternative.
+  3.6.2 clause 3: the poverty basket's measure is C1.1's Societal Poverty Line; cleared where the economy's mean income
+        or consumption per person (the World Bank's Poverty and Inequality Platform, latest survey) exceeds the line,
+        so that output, as the households receive it, would provision the basket for the whole population at the
+        economy's actual hours (PWT's avh); where the Platform has no survey, output per person (PWT rgdpe / pop)
+        against the highest line the economy's median could set (the line is 1.30 plus half the median, 2021 PPP
+        dollars a day, and the median is below output per person). The test is met by any economy whose median is
+        not far below its mean; it binds designs with short stated hours. Not shown where no survey or output
+        record is at hand (the historical configuration).
+  3.6.3 0.0 (the band's case): productivity or TFP declining over 20 years with no credible pathway under the
+        system's own logic; never with a clause cleared (D28(f)), so a decline with a clause cleared is 0.5, flagged
+        toward 0.0.
+
 Usage: python3 blind_s77.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, the scripts pass_common.PARTS
                                names and the files they read, blind_review.py, the evidence_cache/C2.6/, C3.6/ and
                                C4.6/ files, neec_corpus_v2.json; writes nothing)
@@ -65,6 +86,9 @@ US26, DK26, FI26, SE26, NO26, SU26, CN26, SG26, N26 = (
     E26 + "us_law_c26_extract.txt", E26 + "dk_law_c26_extract.txt", E26 + "fi_law_c26_extract.txt",
     E26 + "se_law_c26_extract.txt", E26 + "no_law_c26_extract.txt", E26 + "su_law_c26_extract.txt",
     E26 + "cn_law_c26_extract.txt", E26 + "sg_law_c26_extract.txt", E26 + "sources_s77.md")
+PWT, PIPF, EF, EFPDF, N36 = (E36 + "pwt110_selected_economies.csv", E36 + "pip_spl_selected_economies.csv",
+                             E36 + "easterly_fischer_1995_tables_s77.csv", E36 + "easterly_fischer_1995_nber_w4735.pdf",
+                             E36 + "sources_s77.md")
 ECON = ("SQ", "NSD", "CPS", "CN", "SG", "QA")
 ISO = {"SQ": ("USA",), "NSD": ("DNK", "FIN", "NOR", "SWE"), "CN": ("CHN",), "SG": ("SGP",), "QA": ("QAT",)}
 FH_PAGE = {"USA": "united-states", "DNK": "denmark", "FIN": "finland", "NOR": "norway", "SWE": "sweden",
@@ -248,3 +272,140 @@ U("QA", C26, 0.5,
    ("S", f"short: Freedom House scores the judiciary's independence {f1('QAT')} of 4 (F1), so no compulsion is open to an independent court, whatever the communicable-"
          "disease law provides (not reached) (reading 2.6.3)", f"{FHP}; {N26}")],
   note="0.5: civil liberties in the middle band, near its foot; no independent court")
+
+
+# =================================================================================================================
+# C3.6 Productive and Innovative Capacity
+# =================================================================================================================
+PWT_ROWS = {(r["countrycode"], int(r["year"])): r for r in rows(PWT)}
+
+
+def pwt(iso, y, col):
+    v = PWT_ROWS[(iso, y)][col]
+    return float(v) if v else None
+
+
+def cagr(a, b, years):
+    return 100 * ((b / a) ** (1 / years) - 1)
+
+
+def lp(iso, y):
+    h = pwt(iso, y, "avh")
+    return None if h is None else pwt(iso, y, "rgdpna") / (pwt(iso, y, "emp") * h)
+
+
+def lp_window(iso, y1=2023):
+    y0 = next(y for y in range(y1 - 20, y1) if lp(iso, y) is not None)
+    return y0, cagr(lp(iso, y0), lp(iso, y1), y1 - y0)
+
+
+TFP = {iso: cagr(pwt(iso, 2003, "rtfpna"), pwt(iso, 2023, "rtfpna"), 20) for iso in sum(ISO.values(), ())}
+LPW = {iso: lp_window(iso) for iso in sum(ISO.values(), ())}
+AVH = {iso: pwt(iso, 2023, "avh") for iso in sum(ISO.values(), ())}
+PIPR = {}
+for r in rows(PIPF):
+    if r["reporting_level"] == "national":
+        PIPR[r["country_code"]] = r  # the latest national survey (rows are in year order)
+SPL_K = {round(float(r["spl"]) - float(r["median"]) / 2, 2) for r in PIPR.values()}
+assert SPL_K == {1.3}, SPL_K
+
+
+def ratio(iso):
+    r = PIPR[iso]
+    return float(r["mean"]) / float(r["spl"])
+
+
+SG_OUT = pwt("SGP", 2023, "rgdpe") / pwt("SGP", 2023, "pop") / 365
+SG_BOUND = SG_OUT / (1.30 + SG_OUT / 2)
+EFT = {(r["series"], r["period"]): float(r["growth_pct_a_year"]) for r in rows(EF)}
+EF_LP = [EFT[("table1_output_per_worker_total_economy_western", p)] for p in ("1960-69", "1970-79", "1980-87")]
+EF_TFP = [EFT[("table4_tfp_western_gnp", p)] for p in ("1960-70", "1970-80", "1980-87")]
+EF_CES = [EFT[("table5_ces_tfp_western_gnp_1950_87_sample", p)] for p in ("1960-69", "1970-79", "1980-87")]
+
+
+def pct(x):
+    return f"{x:+.2f}"
+
+
+def lp_str(code):
+    return ", ".join(f"{iso} {pct(LPW[iso][1])}" + (f" ({LPW[iso][0]}-2023)" if LPW[iso][0] != 2003 else "")
+                     for iso in ISO[code])
+
+
+def tfp_str(code):
+    return ", ".join(f"{iso} {pct(TFP[iso])}" for iso in ISO[code])
+
+
+def r3_str(code):
+    return ", ".join(f"{iso} {ratio(iso):.2f} times ({PIPR[iso]['welfare_type']}, {PIPR[iso]['reporting_year']}; "
+                     f"{AVH[iso]:.0f} hours a year)" for iso in ISO[code])
+
+
+SRC36 = f"Penn World Table 11.0 ({PWT})"
+SRC363 = f"World Bank PIP ({PIPF}); {PWT}"
+FIG_PRINT.update({
+    "PWT 11.0, output per hour, compound % a year, 2003-2023": "; ".join(
+        f"{iso} {pct(v)}" + (f" ({y0}-2023)" if y0 != 2003 else "") for iso, (y0, v) in LPW.items()),
+    "PWT 11.0, TFP (rtfpna), compound % a year, 2003-2023": "; ".join(f"{iso} {pct(v)}" for iso, v in TFP.items()),
+    "PIP, mean per person over the Societal Poverty Line, latest national survey": "; ".join(
+        f"{iso} {ratio(iso):.2f}" for iso in PIPR),
+    "Singapore, PWT output per person a day (2023) and its ratio to the highest line its median could set":
+        f"{SG_OUT:.1f}; {SG_BOUND:.2f}",
+    "Easterly and Fischer, USSR, output per worker / growth-accounting TFP / CES TFP, 1960s, 1970s, 1980-87":
+        f"{EF_LP} / {EF_TFP} / {EF_CES}",
+})
+
+U("SQ", C36, 1.0,
+  [("C", f"cleared: {lp_str('SQ')} % a year (reading 3.6.1)", SRC36),
+   ("C", f"cleared: {tfp_str('SQ')} % a year (reading 3.6.1)", SRC36),
+   ("C", f"cleared: mean income {r3_str('SQ')} the Societal Poverty Line (reading 3.6.2)", SRC363)],
+  note="1.0: productivity and TFP rising over 2003-2023; output well above the basket at actual hours")
+
+U("NSD", C36, 0.5,
+  [("C", f"cleared in each of the four: {lp_str('NSD')} % a year (reading 3.6.1)", SRC36),
+   ("S", f"short in two of the four, so for the configuration: {tfp_str('NSD')} % a year; Finland's and Norway's TFP "
+         "fell over the 20 years (reading 3.6.1)", SRC36),
+   ("C", f"cleared in each of the four: mean income {r3_str('NSD')} the Societal Poverty Line (reading 3.6.2)", SRC363)],
+  note="0.5: TFP declining in Finland and Norway; output per hour rising in all four")
+
+U("CPS", C36, 0.5,
+  [("C", "cleared: output per worker in the total economy (Western estimates) grew "
+         f"{EF_LP[0]}%, {EF_LP[1]}% and {EF_LP[2]}% a year in 1960-69, 1970-79 and 1980-87, slowing but not declining "
+         "(reading 3.6.1)", f"Easterly and Fischer (1995), table 1 ({EF}; {EFPDF}, PDF page 40)"),
+   ("S", f"short: growth-accounting TFP for Western-estimate GNP was {EF_TFP[0]}, {EF_TFP[1]} and {EF_TFP[2]}% a year "
+         "in 1960-70, 1970-80 and 1980-87, declining over the two decades to 1987 while capital per worker grew 4 to 5% "
+         "a year: the extensive growth the criterion's second clause is written to catch (reading 3.6.1)",
+    f"Easterly and Fischer (1995), tables 1 and 4 ({EF}; {EFPDF}, PDF pages 40 and 43)"),
+   ("U", "not shown: no survey of incomes or consumption against a basket exists for the Soviet economy in the cache, "
+         "and Easterly and Fischer's record is of growth, not provisioning (reading 3.6.2)", N36)],
+  flag=("0.0: the band's case (TFP declining over 20 years, the system's own logic offering no pathway, Easterly and "
+        "Fischer's 'worst in the world after we control for investment and human capital'), held at 0.5 only by "
+        "D28(f) because output per worker rose; the alternative reading of Easterly and Fischer's CES estimates "
+        f"(TFP {EF_CES[0]}, {EF_CES[1]} and {EF_CES[2]}% a year, constant, with an elasticity of substitution of "
+        "0.37) would clear clause 2 instead", "3.6.3"),
+  note="0.5: output per worker rising, TFP declining on growth accounting; held from 0.0 by D28(f)")
+
+U("CN", C36, 1.0,
+  [("C", f"cleared: {lp_str('CN')} % a year (reading 3.6.1)", SRC36),
+   ("C", f"cleared: {tfp_str('CN')} % a year (reading 3.6.1)", SRC36),
+   ("C", f"cleared: mean consumption {r3_str('CN')} the Societal Poverty Line (reading 3.6.2)", SRC363)],
+  flag=("0.5: PWT's TFP rests on China's official national accounts, which alternative series (Wu's, used by the "
+        "Conference Board's Total Economy Database, cited, not cached) revise down, putting TFP growth near or below "
+        "zero after 2008", "3.6.1"),
+  note="1.0: on the named source, productivity and TFP rising fast; the official accounts' reliability flagged")
+
+U("SG", C36, 1.0,
+  [("C", f"cleared: {lp_str('SG')} % a year (reading 3.6.1)", SRC36),
+   ("C", f"cleared: {tfp_str('SG')} % a year (reading 3.6.1)", SRC36),
+   ("C", f"cleared: no survey in the Platform; output per person {SG_OUT:.0f} dollars a day (2021 PPP, 2023) at "
+         f"{AVH['SGP']:.0f} hours a year, at least {SG_BOUND:.2f} times the highest Societal Poverty Line its median "
+         "could set (reading 3.6.2)", SRC363)],
+  note="1.0: productivity and TFP rising over 2003-2023")
+
+U("QA", C36, 0.5,
+  [("S", f"short: {lp_str('QA')} % a year, PWT's hours for Qatar beginning in 2005 (reading 3.6.1)", SRC36),
+   ("S", f"short: {tfp_str('QA')} % a year (reading 3.6.1)", SRC36),
+   ("C", f"cleared: mean income {r3_str('QA')} the Societal Poverty Line (reading 3.6.2)", SRC363)],
+  flag=("0.0: the band's case (output per hour and TFP both declining over 20 years, as employment grew "
+        "fivefold), held at 0.5 only by D28(f) because the basket is provisioned", "3.6.3"),
+  note="0.5: productivity and TFP declining; the basket provisioned by rent")
