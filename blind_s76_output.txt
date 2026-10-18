@@ -1,0 +1,213 @@
+blind_s76.py -- the blind re-read of C2.6, C3.6 and C4.6 for the 17 designs and mechanisms (ledger S59)
+inputs: blind_review.py, pass_common.py and its parts, neec_corpus_v2.json, evidence_cache/C2.6/bien_definition_c26_extract.txt, evidence_cache/C2.6/cco_research_hub_c26_extract.txt, evidence_cache/C2.6/george_progress_poverty_c26_extract.txt, evidence_cache/C2.6/integral_wp_v01_c26_extract.txt, evidence_cache/C2.6/law_in_force_notes_s70.md, evidence_cache/C2.6/levy_jg_wp902_c26_extract.txt, evidence_cache/C2.6/lp_platform_c26_extract.txt, evidence_cache/C2.6/ostrom_nobel_c26_extract.txt, evidence_cache/C2.6/owid_freedom_house_civil_liberties_rating.csv, evidence_cache/C2.6/pe_model_c26_extract.txt, evidence_cache/C2.6/sources_s76.md, evidence_cache/C2.6/us_cfr_42_70.14.html, evidence_cache/C2.6/us_cfr_42_71.37.html, evidence_cache/C3.6/cco_research_hub_c36_extract.txt, evidence_cache/C3.6/easterly_fischer_1995_nber_w4735.pdf, evidence_cache/C3.6/integral_wp_v01_c36_extract.txt, evidence_cache/C3.6/pe_model_c36_extract.txt, evidence_cache/C3.6/pwt1001_selected_economies.csv, evidence_cache/C3.6/sources_s76.md, evidence_cache/C4.6/SDGAIRBOD.json, evidence_cache/C4.6/SDGPOISON.json, evidence_cache/C4.6/SDGWSHBOD.json, evidence_cache/C4.6/air42.json, evidence_cache/C4.6/cco_research_hub_c46_extract.txt, evidence_cache/C4.6/integral_wp_v01_c46_extract.txt, evidence_cache/C4.6/lp_platform_c46_extract.txt, evidence_cache/C4.6/notes_s70.md, evidence_cache/C4.6/pe_model_c46_extract.txt, evidence_cache/C4.6/sources_s76.md, evidence_cache/C4.6/wef_metrics_c46_extract.txt
+
+[1] the readings are complete and follow the rules
+  PASS the nine designs are the corpus's comprehensive systems
+  PASS the eight mechanisms are the corpus's mechanisms
+  PASS one blind reading for each of the 51 units (17 entries, three criteria), no more
+  PASS every unit has one status per v2.0 clause, each with its estimate and its source
+  PASS every verdict follows D28 (1.0 only if every clause is cleared or moot), and none is 0.0
+  PASS each flag names an alternative score other than the verdict
+  PASS each reading has one status per clause blind_view shows
+  PASS every file blind_view lists for C2.6 is one this script reads or names
+  PASS every file blind_view lists for C3.6 is one this script reads or names
+  PASS every file blind_view lists for C4.6 is one this script reads or names
+  PASS every file in READ exists
+  PASS no mechanism is at 0.0 (Session 73's class observation: a mechanism that governs no clause's quantity is held at 0.5)
+  PASS no reading with a clause out of reach is above 0.5 (D28(c))
+  PASS no design's clause is out of reach (reach is a mechanism's rule, protocol 3.2)
+
+[2] the figures the readings quote, recomputed from the cache
+    PWT 10.01, 1999-2019, output per hour and TFP, compound % a year (USA, DNK, FIN, SWE): USA 1.59 and 0.61; DNK 2.39 and 0.23; FIN 1.20 and 0.12; SWE 1.64 and 0.60
+  PASS output per hour and TFP non-declining over 1999-2019 in each of the four market economies reading 3.6.1 calibrates against
+
+[3] the readings (verdicts, clause statuses, flags)
+
+C2.6 (blind reading):
+| Unit | Class | Clause statuses | Verdict | Flag |
+|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | design | U U U | 0.5 | — |
+| Degrowth Economics | design | U U U | 0.5 | — |
+| Doughnut Economics | design | U U U | 0.5 | — |
+| Fully Automated Luxury Communism | design | U U U | 0.5 | — |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | mechanism | R R R | 0.5 | — |
+| Integral | design | U U U | 0.5 | toward 0.0 |
+| Islamic Finance / Profit-Sharing Banking | mechanism | R R R | 0.5 | — |
+| Libertarian Minarchism | design | U C C | 0.5 | toward 1.0 |
+| MMT + Job Guarantee | mechanism | R R U | 0.5 | — |
+| Market Socialism | design | U U U | 0.5 | — |
+| Mutual Credit / LETS | mechanism | R R R | 0.5 | — |
+| Ostrom-Style Commons Governance | mechanism | R R R | 0.5 | — |
+| Participatory Economics | design | U U U | 0.5 | toward 0.0 |
+| Sovereign Wealth Fund Statism | mechanism | R R R | 0.5 | — |
+| Stakeholder Capitalism | design | U U U | 0.5 | — |
+| Universal Basic Income | mechanism | R R R | 0.5 | — |
+| Universal Basic Services | mechanism | R U U | 0.5 | — |
+
+C2.6: 0 at 1.0, 17 at 0.5, 0 at 0.0; 3 flagged
+
+C3.6 (blind reading):
+| Unit | Class | Clause statuses | Verdict | Flag |
+|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | design | U U U | 0.5 | — |
+| Degrowth Economics | design | U U U | 0.5 | toward 0.0 |
+| Doughnut Economics | design | U U U | 0.5 | — |
+| Fully Automated Luxury Communism | design | U U U | 0.5 | toward 0.0 |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | mechanism | R R R | 0.5 | — |
+| Integral | design | U U U | 0.5 | — |
+| Islamic Finance / Profit-Sharing Banking | mechanism | U U R | 0.5 | — |
+| Libertarian Minarchism | design | U U U | 0.5 | — |
+| MMT + Job Guarantee | mechanism | R R R | 0.5 | — |
+| Market Socialism | design | U U U | 0.5 | — |
+| Mutual Credit / LETS | mechanism | R R R | 0.5 | — |
+| Ostrom-Style Commons Governance | mechanism | R R R | 0.5 | — |
+| Participatory Economics | design | U U U | 0.5 | — |
+| Sovereign Wealth Fund Statism | mechanism | R R R | 0.5 | — |
+| Stakeholder Capitalism | design | C C U | 0.5 | — |
+| Universal Basic Income | mechanism | R R R | 0.5 | — |
+| Universal Basic Services | mechanism | R R R | 0.5 | — |
+
+C3.6: 0 at 1.0, 17 at 0.5, 0 at 0.0; 2 flagged
+
+C4.6 (blind reading):
+| Unit | Class | Clause statuses | Verdict | Flag |
+|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | design | U U U | 0.5 | — |
+| Degrowth Economics | design | U U U | 0.5 | — |
+| Doughnut Economics | design | U U U | 0.5 | — |
+| Fully Automated Luxury Communism | design | U U U | 0.5 | — |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | mechanism | R R R | 0.5 | — |
+| Integral | design | U U U | 0.5 | — |
+| Islamic Finance / Profit-Sharing Banking | mechanism | R R R | 0.5 | — |
+| Libertarian Minarchism | design | U U S | 0.5 | — |
+| MMT + Job Guarantee | mechanism | R R R | 0.5 | — |
+| Market Socialism | design | U U U | 0.5 | — |
+| Mutual Credit / LETS | mechanism | R R R | 0.5 | — |
+| Ostrom-Style Commons Governance | mechanism | U U U | 0.5 | — |
+| Participatory Economics | design | U C U | 0.5 | — |
+| Sovereign Wealth Fund Statism | mechanism | R R R | 0.5 | — |
+| Stakeholder Capitalism | design | U U U | 0.5 | — |
+| Universal Basic Income | mechanism | R R R | 0.5 | — |
+| Universal Basic Services | mechanism | R R R | 0.5 | — |
+
+C4.6: 0 at 1.0, 17 at 0.5, 0 at 0.0; 0 flagged
+
+[4] the comparison with part (2.11)'s readings (compare_group on the readings as recorded at the checkpoint, 600c994)
+  PASS part (2.11) holds a reading of each of the 51 units
+
+C2.6:
+| Unit | Prior | Blind (Session 76) | Result | Differences |
+|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Degrowth Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Doughnut Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Fully Automated Luxury Communism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Integral | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Islamic Finance / Profit-Sharing Banking | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Libertarian Minarchism | U U U / 0.5 | U C C / 0.5 | revise (clauses) | clause 2: U (prior) vs C (new); clause 3: U (prior) vs C (new) |
+| MMT + Job Guarantee | R R R / 0.5 | R R U / 0.5 | revise (clauses) | clause 3: R (prior) vs U (new) |
+| Market Socialism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Mutual Credit / LETS | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Ostrom-Style Commons Governance | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Participatory Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Sovereign Wealth Fund Statism | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Stakeholder Capitalism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Universal Basic Income | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Universal Basic Services | R R R / 0.5 | R U U / 0.5 | revise (clauses) | clause 2: R (prior) vs U (new); clause 3: R (prior) vs U (new) |
+
+C2.6: 14 agree, 3 revise; 0 verdicts differ
+
+C3.6:
+| Unit | Prior | Blind (Session 76) | Result | Differences |
+|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Degrowth Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Doughnut Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Fully Automated Luxury Communism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Integral | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Islamic Finance / Profit-Sharing Banking | R R R / 0.5 | U U R / 0.5 | revise (clauses) | clause 1: R (prior) vs U (new); clause 2: R (prior) vs U (new) |
+| Libertarian Minarchism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| MMT + Job Guarantee | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Market Socialism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Mutual Credit / LETS | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Ostrom-Style Commons Governance | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Participatory Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Sovereign Wealth Fund Statism | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Stakeholder Capitalism | U U U / 0.5 | C C U / 0.5 | revise (clauses) | clause 1: U (prior) vs C (new); clause 2: U (prior) vs C (new) |
+| Universal Basic Income | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Universal Basic Services | R R R / 0.5 | R R R / 0.5 | agree | — |
+
+C3.6: 15 agree, 2 revise; 0 verdicts differ
+
+C4.6:
+| Unit | Prior | Blind (Session 76) | Result | Differences |
+|---|---|---|---|---|
+| CCO-PTF-CIP-SZH | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Degrowth Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Doughnut Economics | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Fully Automated Luxury Communism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Georgism / Land Value Tax (LVT + Citizen's Dividend) | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Integral | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Islamic Finance / Profit-Sharing Banking | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Libertarian Minarchism | U U U / 0.5 | U U S / 0.5 | revise (clauses) | clause 3: U (prior) vs S (new) |
+| MMT + Job Guarantee | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Market Socialism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Mutual Credit / LETS | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Ostrom-Style Commons Governance | R R R / 0.5 | U U U / 0.5 | revise (clauses) | clause 1: R (prior) vs U (new); clause 2: R (prior) vs U (new); clause 3: R (prior) vs U (new) |
+| Participatory Economics | U U U / 0.5 | U C U / 0.5 | revise (clauses) | clause 2: U (prior) vs C (new) |
+| Sovereign Wealth Fund Statism | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Stakeholder Capitalism | U U U / 0.5 | U U U / 0.5 | agree | — |
+| Universal Basic Income | R R R / 0.5 | R R R / 0.5 | agree | — |
+| Universal Basic Services | R R R / 0.5 | R R R / 0.5 | agree | — |
+
+C4.6: 14 agree, 3 revise; 0 verdicts differ
+  PASS no verdict differs: nothing to reconcile (protocol 5.3)
+  PASS every clause revision has its stated reason for standing (Session 71's rule)
+  PASS the prior is Session 65's stated rule throughout: every design not shown on each clause, every mechanism out of reach on each
+
+[5] the final readings (FINAL: the blind readings, unchanged)
+  PASS FINAL is the blind readings as recorded at the checkpoint
+  PASS every unit has one status per v2.0 clause, each with its estimate and its source
+  PASS every verdict follows D28 (1.0 only if every clause is cleared or moot), and none is 0.0
+  PASS no CCO-PTF-CIP-SZH verdict changes (decisions 57.2, 69.4: a rise is applied, a fall held)
+
+[6] consequences once applied (by generator in ledger S61, not here), with Sessions 71 to 75
+  PASS neec_corpus_v2.json carries the prior's verdict for each of the 51 units (the published provisional scores are the prior's)
+  PASS this group changes no verdict
+| Entry | Total on 29 | After Sessions 71 to 76 | Failures | After | Tier after |
+|---|---:|---:|---:|---:|---|
+| Nordic Social Democracy | 15.0 | 15.5 | 1 | 0 | Potentially Adequate |
+| Centrally Planned Socialism | 7.5 | 6.5 | 15 | 17 | Structurally Inadequate |
+| Market Socialism | 14.5 | 15.0 | 2 | 1 | Potentially Adequate |
+| Libertarian Minarchism | 8.5 | 9.5 | 13 | 11 | Structurally Inadequate |
+| Universal Basic Income | 12.0 | 13.5 | 7 | 5 | Partially Adequate |
+| Degrowth Economics | 14.5 | 15.0 | 2 | 1 | Potentially Adequate |
+| Stakeholder Capitalism | 10.5 | 11.0 | 8 | 7 | Structurally Inadequate |
+| Fully Automated Luxury Communism | 10.5 | 11.0 | 10 | 9 | Structurally Inadequate |
+| Participatory Economics | 16.0 | 16.5 | 0 | 0 | Potentially Adequate |
+| Doughnut Economics | 10.5 | 9.5 | 8 | 10 | Structurally Inadequate |
+| Sovereign Wealth Fund Statism | 14.5 | 15.0 | 3 | 2 | Potentially Adequate |
+| State Capitalism / China (Party-State-Directed Market Economy) | 10.5 | 11.0 | 9 | 8 | Structurally Inadequate |
+| State Capitalism / Singapore (GLC Developmental Capitalism) | 13.0 | 13.5 | 4 | 3 | Partially Adequate |
+| State Capitalism / Qatar (Gulf Rentier-Distributive Statism) | 10.5 | 10.0 | 9 | 10 | Structurally Inadequate |
+| Islamic Finance / Profit-Sharing Banking | 13.0 | 14.0 | 5 | 3 | Partially Adequate |
+
+first place on the 29 after Sessions 71 to 76: Participatory Economics at 16.5
+tier changes after Sessions 71 to 76: Universal Basic Income Structurally Inadequate to Partially Adequate; Sovereign Wealth Fund Statism Partially Adequate to Potentially Adequate
+
+the final readings' 5 flags, each taken alone (on all six groups' final verdicts):
+| Unit | Criterion | Final | Flag toward | Total on 29 then | Failures then | Tier then | Changes |
+|---|---|---:|---:|---:|---:|---|---|
+| Integral | C2.6 | 0.5 | 0.0 | 15.0 | 3 | Partially Adequate | tier: Potentially Adequate to Partially Adequate |
+| Libertarian Minarchism | C2.6 | 0.5 | 1.0 | 10.0 | 11 | Structurally Inadequate | — |
+| Participatory Economics | C2.6 | 0.5 | 0.0 | 16.0 | 1 | Potentially Adequate | first place: shared |
+| Degrowth Economics | C3.6 | 0.5 | 0.0 | 14.5 | 2 | Potentially Adequate | — |
+| Fully Automated Luxury Communism | C3.6 | 0.5 | 0.0 | 10.5 | 10 | Structurally Inadequate | — |
+flags that would change a tier or first place: Integral C2.6, Participatory Economics C2.6
+
+[7] the record
+  PASS NEEC_BlindReview_s76.md carries every generated table verbatim (readings, C2.6, readings, C3.6, readings, C4.6, comparison, C2.6, comparison, C3.6, comparison, C4.6, consequences, flag effects)
+
+BLIND RE-READ OF C2.6, C3.6 AND C4.6 (17 DESIGNS AND MECHANISMS) CHECKED.

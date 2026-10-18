@@ -1,0 +1,17 @@
+  PASS C2.6/lp_platform_c26_extract.txt: md5 34ca5fb6
+  PASS C2.6/cco_research_hub_c26_extract.txt: md5 13c55881
+  PASS C2.6/integral_wp_v01_c26_extract.txt: md5 36275341
+  PASS C2.6/pe_model_c26_extract.txt: md5 209e204a
+  PASS C2.6/ostrom_nobel_c26_extract.txt: md5 69bc0324
+  PASS C2.6/levy_jg_wp902_c26_extract.txt: md5 345680f8
+  PASS C2.6/bien_definition_c26_extract.txt: md5 9b991997
+  PASS C2.6/george_progress_poverty_c26_extract.txt: md5 bd3f3ed8
+  PASS C3.6/cco_research_hub_c36_extract.txt: md5 a6b8c91b
+  PASS C3.6/integral_wp_v01_c36_extract.txt: md5 ca8dbf0b
+  PASS C3.6/pe_model_c36_extract.txt: md5 4d127e56
+  PASS C4.6/lp_platform_c46_extract.txt: md5 b54a3a82
+  PASS C4.6/pe_model_c46_extract.txt: md5 0d098fa8
+  PASS C4.6/integral_wp_v01_c46_extract.txt: md5 3dcfaa52
+  PASS C4.6/wef_metrics_c46_extract.txt: md5 34771592
+  PASS C4.6/cco_research_hub_c46_extract.txt: md5 d138918a
+SUMMARY: ALL PASS
