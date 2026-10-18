@@ -12,7 +12,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Two links at the foot of a section go straight to the line: the pass record that read the unit, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
 
 ## Contents
 
@@ -20,52 +20,52 @@ Each criterion has one section, linked from the table below. A section gives the
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.11 |
-| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 |
+| [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 74 |
+| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 (Session 53) |
 | [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.5 | held at the published score |
-| [C1.3 Housing Security](#c1-3) | 0.5 | read in group 2.3 |
-| [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.7 |
+| [C1.3 Housing Security](#c1-3) | 0.5 | read in group 2.3 (Session 54) |
+| [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.7 (Session 60) |
 | [C1.5 Universal Wealth Access](#c1-5) | 0.0 | held at the published score |
 
 **2. Human Autonomy: 3.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in group 2.11 |
+| [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.2 Labor Non-Necessity](#c2-2) | 0.5 | held at the published score |
-| [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 |
-| [C2.4 Democratic Participation](#c2-4) | 0.5 | read in group 2.11 |
-| [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in part (b5), changed from 1.0 |
-| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 |
+| [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 (Session 65) |
+| [C2.4 Democratic Participation](#c2-4) | 0.5 | read in group 2.11 (Session 65) |
+| [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in part (b5) (Session 42) and re-read blind in Session 75, changed from 1.0 |
+| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **3. System Resilience: 3.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C3.1 Crisis Response Capacity](#c3-1) | 0.5 | read in group 2.9 |
+| [C3.1 Crisis Response Capacity](#c3-1) | 0.5 | read in group 2.9 (Session 63) and re-read blind in Session 74 |
 | [C3.2 Inflation Control Mechanisms](#c3-2) | 0.5 | held at the published score |
 | [C3.3 Multi-Failure Resistance](#c3-3) | 0.5 | held at the published score |
-| [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in part (a), changed from 1.0 |
-| [C3.5 Failure-Mode Transparency](#c3-5) | 0.5 | read in group 2.4 |
-| [C3.6 Productive and Innovative Capacity](#c3-6) | 0.5 | new in v2.0, scored in group 2.11 |
+| [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
+| [C3.5 Failure-Mode Transparency](#c3-5) | 0.5 | read in group 2.4 (Session 56) |
+| [C3.6 Productive and Innovative Capacity](#c3-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **4. Ethical Integrity: 3.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in group 2.11 |
-| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 |
-| [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8; close call |
-| [C4.4 Power Distribution](#c4-4) | 0.5 | read in group 2.11 |
-| [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in group 2.11 |
-| [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 |
+| [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 72 |
+| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 (Session 64) and re-read blind in Session 73 |
+| [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8 (Session 61); close call |
+| [C4.4 Power Distribution](#c4-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 73 |
+| [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71 |
+| [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **5. Implementation Viability: 3.0 of 5.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
 | [C5.1 Proven Component Foundation](#c5-1) | 0.5 | held at the published score |
-| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6 |
+| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6 (Session 58) |
 | [C5.3 Partial and Parallel Deployability](#c5-3) | 1.0 | held at the published score |
 | [C5.4 Political Coalition Potential](#c5-4) | 0.5 | held at the published score |
 | [C5.5 Cultural Adaptability](#c5-5) | 0.5 | held at the published score |
@@ -75,18 +75,19 @@ Each criterion has one section, linked from the table below. A section gives the
 <a id="c1-1"></a>
 ### C1.1 Poverty Elimination Capacity: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 74 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pass Threshold: ≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | ≥90% poverty reduction within 20 years under base scenario | not shown | no projected rate at the Societal Poverty Line is stated for the economy the design is proposed for | [NEEC_Report_v1_6.md, line 1462](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1462) (GEO C1.1) |
-| 2 | ≥85% under stress testing | not shown | no stress-test record or projection at the Societal Poverty Line is stated | [NEEC_Report_v1_6.md, line 1462](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1462) (GEO C1.1) |
+| 1 | ≥90% poverty reduction within 20 years under base scenario | short | short: the citizen's dividend governs part of household income; distributing the whole of US land rent (on the order of 5 to 10% of GDP, Larson 2015) would pay roughly $3,000 to $6,000 a person a year, against a line of $37.33 a day ($13,627 a year) that itself rises by half the median's gain; a floor that low lifts part of the poor over the line, far from nine in ten (reading 1.1.1) | [`pip_societal_poverty_line.json`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C1.1/pip_societal_poverty_line.json); [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C1.1/sources_s74.md) |
+| 2 | ≥85% under stress testing | short | short: land rent falls in a downturn, and the dividend with it (reading 1.1.2) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C1.1/sources_s74.md) |
 
-**Note.** Held at the published 0.5: a citizen's dividend is the UBI-type mechanism, and whether it reaches a sufficient level is unresolved
+**Note.** 0.5: a universal cash dividend, too small to clear a line at half the median
 
-Pass record: [NEEC_Rescoring_s65.md, line 906](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L906)
+Pass record: [NEEC_Rescoring_s65.md, line 906](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L906)  
+Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
 
 **Published (v1) rationale**, under the heading "C1.1 Poverty Elimination Capacity: 0.5" at [NEEC_Report_v1_6.md, line 1462](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1462):
 
@@ -247,20 +248,20 @@ Pass record: [NEEC_Rescoring_s65.md, line 1212](https://github.com/BetterToBest/
 <a id="c2-5"></a>
 ### C2.5 Exit Rights and Mobility: 0.5 (partial)
 
-*Read by the rescoring pass in part (b5) (Session 42). Published (v1) score 1.0; v2.0 score 0.5: changed.*
+*Read by the rescoring pass in part (b5) (Session 42) and re-read blind in Session 75 (the final reading is shown). Published (v1) score 1.0; v2.0 score 0.5: changed.*
 
 Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained.
 
-*The unit was read in part (b5) on its 4 clauses then in force; v2.0 states 3: Exit feasible within 3 months without material penalty; no differential treatment; geographic mobility maintained.*
+| # | Clause (v2.0) | Status | Reading | Source |
+|---|---|---|---|---|
+| 1 | Exit feasible within 3 months without material penalty | out of reach | out of reach: a land value tax is not an arrangement one enters or leaves, and the dividend is too small to fund leaving other arrangements (reading 2.5.1; D28(c)) | [`sources_s75.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.5/sources_s75.md) |
+| 2 | no differential treatment | cleared | cleared: the tax falls on land whoever holds it and the citizen's dividend is paid to all alike (reading 2.5.2) | [`sources_s75.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.5/sources_s75.md) |
+| 3 | geographic mobility maintained | cleared | cleared: the dividend is national, and replacing transaction taxes lowers the cost of moving (reading 2.5.3) | [`sources_s75.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.5/sources_s75.md) |
 
-| # | Status | Reading | Source |
-|---|---|---|---|
-| 1 | cleared | relocate freely without penalty | as audited (the unit's own text) |
-| 2 | not shown | not estimated in this pass; the verdict is fixed by clause 4; who counts as a non-participant under a mechanism that applies to everyone in its jurisdiction is left to Report v2.0 (reading 3.1) |  |
-| 3 | cleared | an individual can relocate freely | as audited (the unit's own text) |
-| 4 | out of reach | freedom of association is not governed by a land tax; the audit's code is confirmed, since George's association in equality names social cooperation as the engine of progress, not a protection of voluntary associations, and no source located in the Georgist literature pairs such a protection with the tax (reading 3.4) | r4_audit_s35.py, REACH; reading 3.4; George, Progress and Poverty (1879), Book X, chapter 3 |
+**Note.** 0.5: a tax and dividend that impose no participation; exit itself is the host's quantity
 
-Pass record: [NEEC_Rescoring_s42.md, line 197](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s42.md?plain=1#L197)
+Pass record: [NEEC_Rescoring_s42.md, line 197](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s42.md?plain=1#L197)  
+Blind re-read record: [NEEC_BlindReview_s75.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s75.md)
 
 **Published (v1) rationale**, under the heading "C2.5 Exit Rights and Mobility: 1.0" at [NEEC_Report_v1_6.md, line 1484](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1484):
 
@@ -269,38 +270,40 @@ Pass record: [NEEC_Rescoring_s42.md, line 197](https://github.com/BetterToBest/N
 <a id="c2-6"></a>
 ### C2.6 Civil Liberties and Rule of Law: 0.5 (partial)
 
-*New in v2.0: scored for the first time in group 2.11 (Session 65), on a unit of the three new criteria.*
+*New in v2.0: scored for the first time in group 2.11 (Session 65) and re-read blind in Session 76, on a unit of the three new criteria. The final reading is shown.*
 
 Criterion in v2.0: class N (new criterion). Pass Threshold: Civil-liberties score ≥53 of 60 on the Freedom House checklist; informed consent to medical treatment protected in law; any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Civil-liberties score ≥53 of 60 on the Freedom House checklist | out of reach | the mechanism does not govern the civil liberties of the economy it operates in (protocol 3.2, reach); it adds or takes nothing | the system's own sources |
-| 2 | informed consent to medical treatment protected in law | out of reach | out of reach | the system's own sources |
-| 3 | any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review | out of reach | out of reach | the system's own sources |
+| 1 | Civil-liberties score ≥53 of 60 on the Freedom House checklist | out of reach | out of reach: a mechanism does not govern the host's 0-60 civil-liberties total (reading 2.6.2); it adds a public register of land values and takes nothing: titles stay where they are ('It is not necessary to confiscate land; it is only necessary to confiscate rent', book VIII, ch. 2) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
+| 2 | informed consent to medical treatment protected in law | out of reach | out of reach: the mechanism delivers no medical care and governs no consent law (reading 2.6.3) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
+| 3 | any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review | out of reach | out of reach: the mechanism governs no health compulsion and no employment or service whose loss could penalise refusal (reading 2.6.4) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
 
-**Note.** A mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))
+**Note.** 0.5: a tax mechanism; the clauses are the host's
 
-Pass record: [NEEC_Rescoring_s65.md, line 1698](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1698)
+Pass record: [NEEC_Rescoring_s65.md, line 1698](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1698)  
+Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
 ## Domain 3: System Resilience
 
 <a id="c3-1"></a>
 ### C3.1 Crisis Response Capacity: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.9 (Session 63). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.9 (Session 63) and re-read blind in Session 74 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pass Threshold: Response within 72 hours, scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase), ≥90% population coverage.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Response within 72 hours | not shown | the Citizen's Dividend would be an automatic annual or more frequent payment that continues without a fresh legislative vote, as Alaska's does, so it needs no legislative delay; no payment rises with the shock, so no response time can be counted | NEEC_Georgism_LVT_scoring_scratch.md, C3.1 |
-| 2 | scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase) | short | nothing in the design raises the dividend in a downturn; land-value revenue is prized for its stability across the cycle, so the payment does not scale with the fall in output | NEEC_Georgism_LVT_scoring_scratch.md, C3.1 |
-| 3 | ≥90% population coverage | not shown | a universal flat payment reaches every resident in form, but no source states a share of the population covered | NEEC_Georgism_LVT_scoring_scratch.md, C3.1 |
+| 1 | Response within 72 hours | short | short: the citizen's dividend is paid on a schedule and does not rise in a shock (reading 3.1.1) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.1/sources_s74.md) |
+| 2 | scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase) | short | short: land rent and land values fall in a downturn, so a dividend paid from the tax falls with the shock rather than rising (reading 3.1.2) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.1/sources_s74.md) |
+| 3 | ≥90% population coverage | cleared | cleared: the dividend is paid to every resident, a universal cash benefit (reading 3.1.3) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.1/sources_s74.md) |
 
-**Note.** 0.5 holds: automatic continuity is real, automatic crisis-scaling is not part of the design (reading 3.4)
+**Note.** 0.5: a universal floor that continues through a crisis but does not scale
 
-Pass record: [NEEC_Rescoring_s63.md, line 226](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s63.md?plain=1#L226)
+Pass record: [NEEC_Rescoring_s63.md, line 226](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s63.md?plain=1#L226)  
+Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
 
 **Published (v1) rationale**, under the heading "C3.1 Crisis Response Capacity: 0.5" at [NEEC_Report_v1_6.md, line 1488](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1488):
 
@@ -371,37 +374,39 @@ Pass record: [NEEC_Rescoring_s56.md, line 297](https://github.com/BetterToBest/N
 <a id="c3-6"></a>
 ### C3.6 Productive and Innovative Capacity: 0.5 (partial)
 
-*New in v2.0: scored for the first time in group 2.11 (Session 65), on a unit of the three new criteria.*
+*New in v2.0: scored for the first time in group 2.11 (Session 65) and re-read blind in Session 76, on a unit of the three new criteria. The final reading is shown.*
 
 Criterion in v2.0: class N (new criterion). Pass Threshold: Real output per hour worked non-declining over 20 years, total factor productivity non-declining over 20 years, basic-needs output sustained at the system's own working time.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Real output per hour worked non-declining over 20 years | out of reach | the mechanism does not govern output per hour of the economy it operates in (reach) | the system's own sources |
-| 2 | total factor productivity non-declining over 20 years | out of reach | out of reach | the system's own sources |
-| 3 | basic-needs output sustained at the system's own working time | out of reach | out of reach | the system's own sources |
+| 1 | Real output per hour worked non-declining over 20 years | out of reach | out of reach: the mechanism allocates no investment and rewards no improvement economy-wide even when generalised (reading 3.6.2); the tax falls on land value and lifts taxes from labour and capital, which bears on incentives but allocates nothing | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
+| 2 | total factor productivity non-declining over 20 years | out of reach | out of reach: the mechanism allocates no investment and rewards no improvement economy-wide even when generalised (reading 3.6.2) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
+| 3 | basic-needs output sustained at the system's own working time | out of reach | out of reach: the mechanism sets no working time; the host's hours apply (reading 3.6.3) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
 
-**Note.** A mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))
+**Note.** 0.5: a tax; the clauses are the host's
 
-Pass record: [NEEC_Rescoring_s65.md, line 1966](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1966)
+Pass record: [NEEC_Rescoring_s65.md, line 1966](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1966)  
+Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
 ## Domain 4: Ethical Integrity
 
 <a id="c4-1"></a>
 ### C4.1 Intergenerational Justice: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 72 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Debt-to-GDP <80%, positive wealth transfer to next generation.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Debt-to-GDP <80% | not shown | the sources state no debt path, so clause 1 is not shown; land-value revenue is a durable base and the design frames land as shared across generations | [NEEC_Report_v1_6.md, line 1500](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1500) (GEO C4.1) |
-| 2 | positive wealth transfer to next generation | not shown | the sources state no net-saving path, so clause 2 is not shown | [NEEC_Report_v1_6.md, line 1500](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1500) (GEO C4.1) |
+| 1 | Debt-to-GDP <80% | out of reach | out of reach: the mechanism governs no public borrowing, so the debt ratio is the host economy's (reading 4.1.1); the dividend is paid only from revenue left after public goods, which bounds the dividend, not the debt | NEEC_Georgism_LVT_scoring_scratch.md, overview |
+| 2 | positive wealth transfer to next generation | out of reach | out of reach: the tax captures land rent and the dividend distributes it rather than investing it (the scoring document's own contrast with a held corpus); national saving is the host's (reading 4.1.2) | NEEC_Georgism_LVT_scoring_scratch.md, overview |
 
-**Note.** Held at the published 0.5
+**Note.** 0.5: a fiscal mechanism that governs neither quantity (D28(c))
 
-Pass record: [NEEC_Rescoring_s65.md, line 139](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L139)
+Pass record: [NEEC_Rescoring_s65.md, line 139](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L139)  
+Blind re-read record: [NEEC_BlindReview_s72.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s72.md)
 
 **Published (v1) rationale**, under the heading "C4.1 Intergenerational Justice: 0.5" at [NEEC_Report_v1_6.md, line 1500](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1500):
 
@@ -410,20 +415,21 @@ Pass record: [NEEC_Rescoring_s65.md, line 139](https://github.com/BetterToBest/N
 <a id="c4-2"></a>
 ### C4.2 Ecological Compliance: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.10 (Session 64). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.10 (Session 64) and re-read blind in Session 73 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Consumption-based carbon emissions falling ≥3.8% a year, biodiversity neutral or positive, resource extraction ≤ regeneration, no more than two of the four nationally downscaled planetary boundaries transgressed.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Consumption-based carbon emissions falling ≥3.8% a year | not shown | no projection of consumption-based CO2 under the system, from a model or calibrated components, is stated or located, so the rate is not shown (part (b7), reading 3.4) | Report v1.6, GEO C4.2 |
-| 2 | biodiversity neutral or positive | not shown | no projection of pressure on species and habitat under the system is stated or located (part (b7), reading 3.3) | Report v1.6, GEO C4.2 |
-| 3 | resource extraction ≤ regeneration | not shown | no projection of the system's footprint per person against biocapacity is stated or located | Report v1.6, GEO C4.2 |
-| 4 | no more than two of the four nationally downscaled planetary boundaries transgressed | not shown | land-use taxation is linked to construction-land carbon-emission efficiency in a 30-province study and densification is an abatement lever, a channel for the land-system boundary; no downscaled count follows; no projection of the system's pressure on phosphorus, nitrogen, freshwater or land system is stated or located | Report v1.6, GEO C4.2 |
+| 1 | Consumption-based carbon emissions falling ≥3.8% a year | out of reach | out of reach: the tax governs the use of land, encouraging compact use, and its dividend distributes rent; neither governs emissions, extraction or habitat, and pollution charges are not part of the design scored; consumption emissions are the host's (reading 4.2.1) | NEEC_Georgism_LVT_scoring_scratch.md, overview; [`sources_s73.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.2/sources_s73.md) |
+| 2 | biodiversity neutral or positive | out of reach | out of reach: the tax governs the use of land, encouraging compact use, and its dividend distributes rent; neither governs emissions, extraction or habitat, and pollution charges are not part of the design scored; species and habitat are the host's (reading 4.2.2) | NEEC_Georgism_LVT_scoring_scratch.md, overview; [`sources_s73.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.2/sources_s73.md) |
+| 3 | resource extraction ≤ regeneration | out of reach | out of reach: the tax governs the use of land, encouraging compact use, and its dividend distributes rent; neither governs emissions, extraction or habitat, and pollution charges are not part of the design scored; the footprint is the host's (reading 4.2.3) | NEEC_Georgism_LVT_scoring_scratch.md, overview; [`sources_s73.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.2/sources_s73.md) |
+| 4 | no more than two of the four nationally downscaled planetary boundaries transgressed | out of reach | out of reach: the tax governs the use of land, encouraging compact use, and its dividend distributes rent; neither governs emissions, extraction or habitat, and pollution charges are not part of the design scored; the boundaries are the host's (reading 4.2.4) | NEEC_Georgism_LVT_scoring_scratch.md, overview; [`sources_s73.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.2/sources_s73.md) |
 
-**Note.** 0.5 holds: an actively studied causal channel with no hard ecological ceiling, the 0.5 band (reading 3.5)
+**Note.** 0.5: a land-tax mechanism that governs none of the four quantities (D28(c))
 
-Pass record: [NEEC_Rescoring_s64.md, line 274](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s64.md?plain=1#L274)
+Pass record: [NEEC_Rescoring_s64.md, line 274](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s64.md?plain=1#L274)  
+Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s73.md)
 
 **Published (v1) rationale**, under the heading "C4.2 Ecological Compliance: 0.5" at [NEEC_Report_v1_6.md, line 1502](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1502):
 
@@ -452,18 +458,19 @@ Pass record: [NEEC_Rescoring_s61.md, line 258](https://github.com/BetterToBest/N
 <a id="c4-4"></a>
 ### C4.4 Power Distribution: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 73 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Democratic accountability for ≥80% of major decisions | not shown | the sources state no share of workers in accountable organizations | [NEEC_Report_v1_6.md, line 1506](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1506) (GEO C4.4) |
-| 2 | removal/replacement mechanisms functional | not shown | the sources state no mechanism for removing or replacing those who take decisions | [NEEC_Report_v1_6.md, line 1506](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1506) (GEO C4.4) |
+| 1 | Democratic accountability for ≥80% of major decisions | out of reach | out of reach: the tax captures land rent and the dividend distributes it; neither governs who takes the decisions of the organizations in which people work (reading 4.4.1) | NEEC_Georgism_LVT_scoring_scratch.md, overview |
+| 2 | removal/replacement mechanisms functional | out of reach | out of reach: the mechanism governs no removal of legislators, executives or managers (reading 4.4.2) | NEEC_Georgism_LVT_scoring_scratch.md, overview |
 
-**Note.** Held at the published 0.5: a narrow channel (rent capture) is addressed
+**Note.** 0.5: a fiscal mechanism that governs neither quantity (D28(c))
 
-Pass record: [NEEC_Rescoring_s65.md, line 305](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L305)
+Pass record: [NEEC_Rescoring_s65.md, line 305](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L305)  
+Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s73.md)
 
 **Published (v1) rationale**, under the heading "C4.4 Power Distribution: 0.5" at [NEEC_Report_v1_6.md, line 1506](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1506):
 
@@ -472,18 +479,19 @@ Pass record: [NEEC_Rescoring_s65.md, line 305](https://github.com/BetterToBest/N
 <a id="c4-5"></a>
 ### C4.5 Exploitation Elimination: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 71 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Extraction rates <10% GDP, genuine exit rights from exploitative relationships.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Extraction rates <10% GDP | short | land-rent capture addresses landlord-tenant extraction only, and partially | [NEEC_Report_v1_6.md, line 1508](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1508) (GEO C4.5) |
-| 2 | genuine exit rights from exploitative relationships | not shown | no exit-rights evidence is stated beyond the published rationale | [NEEC_Report_v1_6.md, line 1508](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1508) (GEO C4.5) |
+| 1 | Extraction rates <10% GDP | short | short: generalised, the land value tax captures land rent up to its full rental value, removing the landlord's share of the land flow, but rent on buildings, profit and interest, which George's design treats as earned returns, stay at the host economy's level, far above 10% of GDP (readings 4.5.1, 4.5.4) | Report v1.6, GEO overview |
+| 2 | genuine exit rights from exploitative relationships | short | short: the citizen's dividend is unconditional, but the transfers located are a small fraction of a basic-needs budget, so leaving an employer, landlord or lender is not made survivable by it (reading 4.5.2) | Report v1.6, GEO C2.2 |
 
-**Note.** Held at 0.5
+**Note.** 0.5: elimination in one relationship type, the landlord's land rent (reading 4.5.3)
 
-Pass record: [NEEC_Rescoring_s65.md, line 560](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L560)
+Pass record: [NEEC_Rescoring_s65.md, line 560](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L560)  
+Blind re-read record: [NEEC_BlindReview_s71.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s71.md)
 
 **Published (v1) rationale**, under the heading "C4.5 Exploitation Elimination: 0.5" at [NEEC_Report_v1_6.md, line 1508](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1508):
 
@@ -492,19 +500,20 @@ Pass record: [NEEC_Rescoring_s65.md, line 560](https://github.com/BetterToBest/N
 <a id="c4-6"></a>
 ### C4.6 Harm Internalization: 0.5 (partial)
 
-*New in v2.0: scored for the first time in group 2.11 (Session 65), on a unit of the three new criteria.*
+*New in v2.0: scored for the first time in group 2.11 (Session 65) and re-read blind in Session 76, on a unit of the three new criteria. The final reading is shown.*
 
 Criterion in v2.0: class N (new criterion). Pass Threshold: Mortality attributed to pollution non-increasing over 20 years; those who cause harm to health or the environment liable for it, enforceably by those harmed; regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more).
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Mortality attributed to pollution non-increasing over 20 years | out of reach | the mechanism does not govern pollution mortality of the economy it operates in (reach) | the system's own sources |
-| 2 | those who cause harm to health or the environment liable for it, enforceably by those harmed | out of reach | out of reach: liability is that of the host economy | the system's own sources |
-| 3 | regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more) | out of reach | out of reach | the system's own sources |
+| 1 | Mortality attributed to pollution non-increasing over 20 years | out of reach | out of reach: the mechanism governs no source of the pollution harms the clause counts (reading 4.6.1) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
+| 2 | those who cause harm to health or the environment liable for it, enforceably by those harmed | out of reach | out of reach: the mechanism governs no harm-causing activity's liability (reading 4.6.2); charges on pollution as rent for the commons are not paired with the tax in the design scored (extension test, decision D31) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
+| 3 | regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more) | out of reach | out of reach: the mechanism governs no regulator of food, water, air, chemicals or medicines (reading 4.6.3) | [`george_progress_poverty_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/george_progress_poverty_c26_extract.txt) |
 
-**Note.** A mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))
+**Note.** 0.5: a land tax; the clauses are the host's
 
-Pass record: [NEEC_Rescoring_s65.md, line 2226](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L2226)
+Pass record: [NEEC_Rescoring_s65.md, line 2226](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L2226)  
+Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
 ## Domain 5: Implementation Viability
 

@@ -37,6 +37,7 @@ from urllib.parse import quote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import final_pass as fp  # noqa: E402
 import pass_common as pc  # noqa: E402
 
 OUTDIR = "evidence"
@@ -64,6 +65,8 @@ def anchor(cid):
 
 
 def part_label(tag):
+    if tag.startswith("blind "):
+        return fp.tag_label(tag)
     return ("group " + tag.strip("()")) if re.fullmatch(r"\(2\.\d+\)", tag) else ("decision " + tag if tag in ("48.3", "58.1") else "part " + tag)
 
 
@@ -86,15 +89,17 @@ class Ctx:
         self.entries = {e["code"]: e for e in self.corpus["entries"]}
         with open(os.path.join(HERE, "neec_scores_v2.csv"), encoding="utf-8", newline="") as f:
             self.csv = {r["system"]: r for r in csv.DictReader(f)}
-        # every unit of the pass, with the part that read it last
-        self.units = dict(self.p.merged)
-        self.part = dict(self.p.part_of)
-        for k in self.last.NEW_UNITS:
-            self.units[k] = self.last.NEW_UNITS[k]
-            self.part[k] = self.last.TAG
+        # every unit of the pass with the blind groups' final readings laid over it (Session 78), and the part or group that
+        # read it last; `pass_part` is the pass's part (the blind groups re-read units the pass had read)
+        units, part, new_units, new_part = fp.final_state(self.p)
+        self.units = {**units, **new_units}
+        self.part = {**part, **new_part}
+        self.pass_part = {**self.p.part_of, **{k: self.last.TAG for k in self.last.NEW_UNITS}}
         self.parts = {tag: (mod, path, sess) for (tag, mod, path, sess), m in zip(pc.PARTS, self.p.mods)}
         self.mod_of = dict(zip([t for t, _, _, _ in pc.PARTS], self.p.mods))
         self.sess = {t: s for t, _, _, s in pc.PARTS}
+        self.blind_record = {t: r for t, _, _, r, _ in fp.GROUPS}
+        self.sess.update({t: s for t, s, _, _, _ in fp.GROUPS})
         # evidence_cache files: (directory, name) and the names that are unique across directories
         self.cache = {}
         for r, _, fs in os.walk(os.path.join(HERE, "evidence_cache")):
@@ -108,6 +113,13 @@ class Ctx:
         self.docs = {}
         self.dangling = []
         self.links = 0
+
+    def read_in(self, code, crit):
+        """'group 2.11 (Session 65)', or with the blind group: '... and re-read blind in Session 71'."""
+        pt = self.pass_part[(code, crit)]
+        txt = f"{part_label(pt)} (Session {self.sess[pt]})"
+        bt = self.part[(code, crit)]
+        return txt + (f" and re-read blind in Session {self.sess[bt]}" if bt != pt else "")
 
     def blob(self, path, line=None):
         u = f"{self.repo}/blob/main/{quote(path)}"
@@ -167,7 +179,8 @@ class Ctx:
         return fn, ln, head, re.sub(r"^\*\*Rationale[^*]*\*\*\s*", "", sec[k]) or None, k + 1 < len(sec)
 
 
-REF = re.compile(r"(?:evidence_cache/(?P<d>[\w.\-]+)/)?(?P<f>[\w\-]+\.(?:json|csv))\b"
+REF = re.compile(r"evidence_cache/(?P<d>[\w.\-]+)/(?P<f>[\w.\-]+\.(?:json|csv|md|txt|pdf|html))\b"
+                 r"|(?P<fb>[\w\-]+\.(?:json|csv))\b"
                  r"|(?P<doc>(?:NEEC_[\w]+|SCORING_PROTOCOL)\.md), line (?P<ln>\d+)")
 
 
@@ -193,7 +206,7 @@ def linked(ctx, s):
                 return m.group(0)
             ctx.links += 1
             return f"[{m.group(0)}]({ctx.blob(doc, ln)})"
-        d, f = m.group("d"), m.group("f")
+        d, f = m.group("d"), m.group("f") or m.group("fb")
         if d is None:
             d = ctx.cache_name.get(f)
             if d is None:
@@ -223,16 +236,16 @@ def cell(ctx, code, crit, stats):
     out = [f'<a id="{anchor(crit)}"></a>', f'### {crit} {c["name"]}: {fmt(v)} ({WORD[v]})', ""]
     if unit is not None:
         assert unit["verdict"] == v, f"{code} {crit}: the unit's verdict {unit['verdict']} is not the corpus score {v}"
-        tag = ctx.part[(code, crit)]
-        sess = ctx.sess[tag]
+        blind = ctx.part[(code, crit)] in ctx.blind_record
         if pub is None:
             stats["new"] += 1
-            prov = (f"New in v2.0: scored for the first time in {part_label(tag)} (Session {sess}), "
-                    f"on a unit of the three new criteria.")
+            prov = (f"New in v2.0: scored for the first time in {ctx.read_in(code, crit)}, "
+                    f"on a unit of the three new criteria." + (" The final reading is shown." if blind else ""))
         else:
             stats["read"] += 1
-            prov = (f"Read by the rescoring pass in {part_label(tag)} (Session {sess}). Published (v1) score {fmt(pub)}; "
-                    f"v2.0 score {fmt(v)}" + (": changed." if pub != v else ": unchanged."))
+            prov = (f"Read by the rescoring pass in {ctx.read_in(code, crit)}"
+                    + (" (the final reading is shown)" if blind else "")
+                    + f". Published (v1) score {fmt(pub)}; v2.0 score {fmt(v)}" + (": changed." if pub != v else ": unchanged."))
     else:
         assert pub is not None and pub == v, f"{code} {crit}: held cell's score differs from the published one"
         stats["held"] += 1
@@ -250,7 +263,7 @@ def cell(ctx, code, crit, stats):
                 out.append(f"| {i} | {esc(d)} | {pc.STATUS[st]} | {linked(ctx, txt)} | {linked(ctx, src)} |")
         else:
             stats["structure"] += 1
-            out += [f"*The unit was read in {part_label(ctx.part[(code, crit)])} on its {len(cl)} clauses then in force; "
+            out += [f"*The unit was read in {part_label(ctx.pass_part[(code, crit)])} on its {len(cl)} clauses then in force; "
                     f"v2.0 states {len(defs)}: " + "; ".join(esc(d) for d in defs) + ".*", "",
                     "| # | Status | Reading | Source |", "|---|---|---|---|"]
             for i, (st, txt, src) in enumerate(cl, 1):
@@ -271,7 +284,7 @@ def cell(ctx, code, crit, stats):
         out += [f"**Why 0.0 stands (protocol 2.1).** {cap(linked(ctx, unit['zero']))}", ""]
     refs = []
     if unit is not None:
-        tag = ctx.part[(code, crit)]
+        tag = ctx.pass_part[(code, crit)]
         rec = getattr(ctx.mod_of[tag], "RECORD", None)
         if rec:
             ln = ctx.record_line(rec, code, crit)
@@ -283,6 +296,9 @@ def cell(ctx, code, crit, stats):
         else:
             script = ctx.parts[tag][1]
             refs.append(f"Applied by decision {tag}: [{script}]({ctx.blob(script)})")
+        btag = ctx.part[(code, crit)]
+        if btag in ctx.blind_record:
+            refs.append(f"Blind re-read record: [{ctx.blind_record[btag]}]({ctx.blob(ctx.blind_record[btag])})")
     if refs:
         out += ["  \n".join(refs), ""]
     if pub is not None:
@@ -326,8 +342,9 @@ def report(ctx, code, rk, stats):
             "Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, "
             "0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status "
             "(cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in "
-            "`evidence_cache/` linked. Two links at the foot of a section go straight to the line: the pass record that "
-            "read the unit, and the published (v1) rationale in the long scoring document. A cell the pass did not read "
+            "`evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that "
+            "read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the "
+            "published (v1) rationale in the long scoring document. A cell the pass did not read "
             "says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.", "",
             "## Contents", ""]
     body = []
@@ -344,9 +361,9 @@ def report(ctx, code, rk, stats):
             if unit is None:
                 basis = "held at the published score"
             elif pub is None:
-                basis = f"new in v2.0, scored in {part_label(ctx.part[(code, crit)])}"
+                basis = f"new in v2.0, scored in {ctx.read_in(code, crit)}"
             else:
-                basis = (f"read in {part_label(ctx.part[(code, crit)])}"
+                basis = (f"read in {ctx.read_in(code, crit)}"
                          + (f", changed from {fmt(pub)}" if pub != v else ""))
             if any(f["criterion"] == crit for f in b["flags"]):
                 basis += "; close call"
