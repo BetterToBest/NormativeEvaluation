@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 38 (Session 68). Runs every verification and analysis script on file
+Version 39 (Session 69). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -268,7 +268,11 @@ and their index (evidence/), generated from the pass, the corpus, the blocks and
 every unit's verdict and every total checked against the corpus and the blocks, every link to a data file or to a document by
 line checked to exist, and every file compared byte for byte with what the script generates, and a negative control in which
 it must reject an evidence/ whose Status Quo report is another system's: 114 checks. build_site.py's inputs now include
-evidence/, which the site's system pages link.
+evidence/, which the site's system pages link. Version 39 (Session 69) adds blind_review.py --selftest (ledger D52 to D54):
+the blind re-read's shared module, proved on synthetic fixtures (compare_unit's agree/revise rule: a changed clause status
+or verdict is a revision, a reworded estimate or source alone is not) and on one real unit of each of the three Sonnet-read
+parts ((2.9) C3.1, (2.10) C4.2, (2.11) C1.1), whose blind_view() the check proves discloses no verdict, clause status,
+estimate or source: 115 checks. No score or published file changed; the module applies nothing on its own.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1417,11 +1421,25 @@ S68_CHECKS.append(dict(S68_CHECKS[0], files={**S68_FILES, "evidence/sq.md": "evi
                             "system's (negative control; exit 1 expected)",
                        stdout="build_evidence_check_negative_output.txt", expect_exit=1))
 
+# Session 69: the blind re-read's shared module (ledger D52 to D54), before the Report and Paper v2.0. blind_review.py
+# --selftest proves compare_unit's agree/revise rule on synthetic fixtures (clause-status and verdict changes only; a
+# reworded estimate or source alone is not a revision) and that blind_view(), what a blind-review session is shown before
+# it records its own reading, discloses no verdict, clause status, estimate or source of the prior, Sonnet-read unit.
+S69_FILES = {**S68_FILES, "blind_review.py": "blind_review.py"}
+S69_CHECKS = [
+    dict(name="blind_review.py --selftest: compare_unit agrees only when every clause status and the verdict match; "
+              "blind_view exposes no verdict, status, estimate or source for a real unit of each Sonnet-read part "
+              "((2.9) C3.1, (2.10) C4.2, (2.11) C1.1)",
+         cmd=["python", "blind_review.py", "--selftest"], files=S69_FILES,
+         stdout="blind_review_selftest_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS + S65_CHECKS + S68_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
+          + S65_CHECKS + S68_CHECKS + S69_CHECKS)
 
 
 def md5(data):

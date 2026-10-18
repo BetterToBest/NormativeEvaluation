@@ -1,0 +1,25 @@
+blind_review.py --selftest: the blind re-read's comparison rule, and blind_view's non-disclosure
+inputs: criteria.json, neec_corpus.json, neec_scores.csv, rescoring_s37.py, rescoring_s38.py, rescoring_s39.py, rescoring_s40.py, rescoring_s41.py, rescoring_s42.py, rescoring_s43.py, rescoring_s47.py, rescoring_s48.py, rescoring_s49.py, rescoring_s50.py, rescoring_s51.py, rescoring_s53.py, rescoring_s54.py, rescoring_s56.py, rescoring_s57.py, owner_s58.py, rescoring_s58.py, rescoring_s60.py, rescoring_s61.py, rescoring_s63.py, rescoring_s64.py, rescoring_s65.py
+
+  PASS every PRIOR criterion is one of the 29 v2.0 criteria
+  PASS every PRIOR tag is a loaded part of the pass
+  PASS blind_view(('SQ', 'C3.1')) returns only unit, clauses_v2 and cache_files
+  PASS blind_view(('SQ', 'C3.1')) carries every one of C3.1's v2.0 clauses, and at least one
+  PASS blind_view(('SQ', 'C3.1')) does not print the prior verdict
+  PASS blind_view(('SQ', 'C3.1')) does not print a prior clause's estimate text
+  PASS blind_view(('SQ', 'C4.2')) returns only unit, clauses_v2 and cache_files
+  PASS blind_view(('SQ', 'C4.2')) carries every one of C4.2's v2.0 clauses, and at least one
+  PASS blind_view(('SQ', 'C4.2')) does not print the prior verdict
+  PASS blind_view(('SQ', 'C4.2')) does not print a prior clause's estimate text
+  PASS blind_view(('SQ', 'C1.1')) returns only unit, clauses_v2 and cache_files
+  PASS blind_view(('SQ', 'C1.1')) carries every one of C1.1's v2.0 clauses, and at least one
+  PASS blind_view(('SQ', 'C1.1')) does not print the prior verdict
+  PASS blind_view(('SQ', 'C1.1')) does not print a prior clause's estimate text
+  PASS compare_unit agrees when every clause status and the verdict match, reworded text aside
+  PASS compare_unit revises on a changed clause status and a changed verdict, one difference each
+  PASS the differences name the clause index and the verdict
+  PASS compare_group tallies one agree and one revise among the shared keys
+  PASS compare_group reports a key with no prior reading, rather than skipping it
+  PASS record_table's markdown names every unit and its result
+
+BLIND REVIEW MODULE SELFTEST: ALL CHECKS PASSED.

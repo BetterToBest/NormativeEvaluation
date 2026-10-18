@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 114 reproducibility checks
+run_all_checks.py -- 115 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 114 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 debf3ebb)
+          README.md == README.md (md5 d05b287a)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -444,7 +444,11 @@ run_all_checks.py -- 114 reproducibility checks
           stdout == build_evidence_check_negative_output.txt (md5 2a2935ea)
           stderr == (empty) (md5 d41d8cd9)
 
+[115] PASS  blind_review.py --selftest: compare_unit agrees only when every clause status and the verdict match; blind_view exposes no verdict, status, estimate or source for a real unit of each Sonnet-read part ((2.9) C3.1, (2.10) C4.2, (2.11) C1.1)
+          stdout == blind_review_selftest_output.txt (md5 350cabb0)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 114 passed, 0 failed, 0 skipped (of 114).
+SUMMARY: 115 passed, 0 failed, 0 skipped (of 115).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.
