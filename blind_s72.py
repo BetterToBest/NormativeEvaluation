@@ -52,7 +52,7 @@ CCO-PTF-CIP-SZH's units waits for the owner (decisions 57.2, 69.4); this group c
 
 Usage: python3 blind_s72.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, the scripts pass_common.PARTS
                                names and the files they read, blind_review.py, blind_s71.py, the evidence_cache/C4.1/
-                               files, neec_corpus_v2.json, neec_scores_v2.csv and NEEC_BlindReview_s72.md; writes
+                               files, neec_corpus_v2_s65_snapshot.json, neec_scores_v2_s65_snapshot.csv and NEEC_BlindReview_s72.md; writes
                                nothing)
 Prints file names and summaries only. Deterministic.
 """
@@ -440,10 +440,10 @@ def comparison_table(p, prior, units, label):
 
 
 def standings(changes):
-    """Totals on the 29 criteria (neec_scores_v2.csv) and failures, with the verdict changes in `changes`
+    """Totals on the 29 criteria (neec_scores_v2_s65_snapshot.csv) and failures, with the verdict changes in `changes`
     ({(code, cid): (prior verdict, final verdict)}) applied on top; nothing is written."""
-    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
-    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2.csv"), encoding="utf-8"))}
+    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2_s65_snapshot.json"), encoding="utf-8"))["entries"]}
+    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2_s65_snapshot.csv"), encoding="utf-8"))}
     out = {}
     for code, e in v2.items():
         r = rows29[e["display_name"]]
@@ -586,7 +586,7 @@ def main():
 
     print("\n[6] consequences once applied (by generator in ledger S61, not here), alone and with Session 71's")
     t_cons, held, (f1n, f1t), (f2n, f2t), tiers, mine = consequence_table(p, prior, FINAL)
-    ok_print(held, "neec_corpus_v2.json carries the prior's verdict for each of the 23 units (the published "
+    ok_print(held, "neec_corpus_v2_s65_snapshot.json carries the prior's verdict for each of the 23 units (the published "
              "provisional scores are the prior's)")
     print(t_cons)
     print(f"\nfirst place on the 29 after this group alone: {f1n} at {f1t:.1f}; after Sessions 71 and 72: {f2n} at "

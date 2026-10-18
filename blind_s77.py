@@ -93,7 +93,7 @@ session (ledger S61) applies. The group holds no CCO-PTF-CIP-SZH unit (decisions
 Usage: python3 blind_s77.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, the scripts pass_common.PARTS
                                names and the files they read, blind_review.py, blind_s71.py to blind_s76.py,
                                rescoring_s65.py, the evidence_cache/C2.6/, C3.6/ and C4.6/ files,
-                               wjp_rol_sf62_2012_2025.csv, neec_corpus_v2.json, neec_scores_v2.csv and
+                               wjp_rol_sf62_2012_2025.csv, neec_corpus_v2_s65_snapshot.json, neec_scores_v2_s65_snapshot.csv and
                                NEEC_BlindReview_s77.md; writes nothing)
 Prints file names and summaries only. Deterministic.
 """
@@ -743,10 +743,10 @@ def main():
     print("blind_s77.py -- the blind re-read of C2.6, C3.6 and C4.6 for the six configured economies (ledger S60)")
     with redirect_stdout(io.StringIO()):
         p = pc.Pass()
-    print("inputs: blind_review.py, pass_common.py and its parts, neec_corpus_v2.json, " + ", ".join(sorted(READ)) + "\n")
+    print("inputs: blind_review.py, pass_common.py and its parts, neec_corpus_v2_s65_snapshot.json, " + ", ".join(sorted(READ)) + "\n")
 
     print("[1] the readings are complete and follow the rules")
-    corpus = {e["code"]: e["scope_class"] for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
+    corpus = {e["code"]: e["scope_class"] for e in json.load(open(path("neec_corpus_v2_s65_snapshot.json"), encoding="utf-8"))["entries"]}
     ok_print({c for c, s in corpus.items() if s == "configured_national_economy"} == set(ECON),
              "the six are the corpus's configured national economies")
     want = {(c, cid) for c in ECON for cid in (C26, C36, C46)}
@@ -826,7 +826,7 @@ def main():
 
     print("\n[6] consequences once applied (by generator in ledger S61, not here), with Sessions 71 to 76")
     t_cons, held, (fa, ta), (fb, tb), tiers, tiers_alone, mine, both = consequence_table(p, prior, FINAL)
-    ok_print(held, "neec_corpus_v2.json carries the prior's verdict for each of the 18 units (the published "
+    ok_print(held, "neec_corpus_v2_s65_snapshot.json carries the prior's verdict for each of the 18 units (the published "
              "provisional scores are the prior's)")
     print(t_cons)
     print(f"\nfirst place on the 29, this group alone: {fa} at {ta:.1f}; after Sessions 71 to 77: {fb} at {tb:.1f}")

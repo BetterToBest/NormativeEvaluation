@@ -235,7 +235,7 @@ final readings, C2.5:
 | Universal Basic Services | C C U | 0.5 | toward 1.0 |
 
 [6] consequences once applied (by generator in ledger S61, not here), alone and with Sessions 71 to 74
-  PASS neec_corpus_v2.json carries the prior's verdict for each of the 41 units (the published provisional scores are the prior's)
+  PASS neec_corpus_v2_s65_snapshot.json carries the prior's verdict for each of the 41 units (the published provisional scores are the prior's)
 | Entry | Total on 29 | After this group | After Sessions 71 to 75 | Failures | After all five | Tier after all five |
 |---|---:|---:|---:|---:|---:|---|
 | Nordic Social Democracy | 15.0 | 15.5 | 15.5 | 1 | 0 | Potentially Adequate |

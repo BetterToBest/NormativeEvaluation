@@ -12,7 +12,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Two links at the foot of a section go straight to the line: the pass record that read the unit, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
 
 ## Contents
 
@@ -20,73 +20,74 @@ Each criterion has one section, linked from the table below. A section gives the
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.11 |
-| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 |
+| [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 74 |
+| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 (Session 53) |
 | [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 1.0 | held at the published score |
-| [C1.3 Housing Security](#c1-3) | 0.0 | read in group 2.3 |
-| [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.7 |
+| [C1.3 Housing Security](#c1-3) | 0.0 | read in group 2.3 (Session 54) |
+| [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.7 (Session 60) |
 | [C1.5 Universal Wealth Access](#c1-5) | 0.0 | held at the published score |
 
 **2. Human Autonomy: 3.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in group 2.11 |
+| [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.2 Labor Non-Necessity](#c2-2) | 0.5 | held at the published score |
-| [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 |
-| [C2.4 Democratic Participation](#c2-4) | 0.5 | read in group 2.11 |
-| [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in part (b5), changed from 1.0 |
-| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 |
+| [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 (Session 65) |
+| [C2.4 Democratic Participation](#c2-4) | 0.5 | read in group 2.11 (Session 65) |
+| [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in part (b5) (Session 42) and re-read blind in Session 75, changed from 1.0 |
+| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **3. System Resilience: 3.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C3.1 Crisis Response Capacity](#c3-1) | 0.5 | read in group 2.9 |
+| [C3.1 Crisis Response Capacity](#c3-1) | 0.5 | read in group 2.9 (Session 63) and re-read blind in Session 74 |
 | [C3.2 Inflation Control Mechanisms](#c3-2) | 0.5 | held at the published score |
 | [C3.3 Multi-Failure Resistance](#c3-3) | 0.5 | held at the published score |
-| [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in part (b1), changed from 1.0 |
-| [C3.5 Failure-Mode Transparency](#c3-5) | 0.5 | read in group 2.4 |
-| [C3.6 Productive and Innovative Capacity](#c3-6) | 0.5 | new in v2.0, scored in group 2.11 |
+| [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in part (b1) (Session 38), changed from 1.0 |
+| [C3.5 Failure-Mode Transparency](#c3-5) | 0.5 | read in group 2.4 (Session 56) |
+| [C3.6 Productive and Innovative Capacity](#c3-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **4. Ethical Integrity: 3.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in group 2.11 |
-| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 |
-| [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8; close call |
-| [C4.4 Power Distribution](#c4-4) | 0.5 | read in group 2.11 |
-| [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in group 2.11 |
-| [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 |
+| [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 72 |
+| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 (Session 64) and re-read blind in Session 73 |
+| [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8 (Session 61); close call |
+| [C4.4 Power Distribution](#c4-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 73 |
+| [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71 |
+| [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **5. Implementation Viability: 3.0 of 5.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C5.1 Proven Component Foundation](#c5-1) | 0.5 | read in part (b2), changed from 1.0; close call |
-| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6; close call |
-| [C5.3 Partial and Parallel Deployability](#c5-3) | 0.5 | read in part (b1), changed from 1.0 |
+| [C5.1 Proven Component Foundation](#c5-1) | 0.5 | read in part (b2) (Session 39), changed from 1.0; close call |
+| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6 (Session 58); close call |
+| [C5.3 Partial and Parallel Deployability](#c5-3) | 0.5 | read in part (b1) (Session 38), changed from 1.0 |
 | [C5.4 Political Coalition Potential](#c5-4) | 0.5 | held at the published score |
-| [C5.5 Cultural Adaptability](#c5-5) | 1.0 | read in part (b9); close call |
+| [C5.5 Cultural Adaptability](#c5-5) | 1.0 | read in part (b9) (Session 50); close call |
 
 ## Domain 1: Material Security
 
 <a id="c1-1"></a>
 ### C1.1 Poverty Elimination Capacity: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 74 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pass Threshold: ≥90% poverty reduction within 20 years under base scenario, ≥85% under stress testing.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | ≥90% poverty reduction within 20 years under base scenario | not shown | no projected rate at the Societal Poverty Line is stated for the economy the design is proposed for | [NEEC_Report_v1_6.md, line 1552](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1552) (MC C1.1) |
-| 2 | ≥85% under stress testing | not shown | no stress-test record or projection at the Societal Poverty Line is stated | [NEEC_Report_v1_6.md, line 1552](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1552) (MC C1.1) |
+| 1 | ≥90% poverty reduction within 20 years under base scenario | not shown | not shown: mutual credit lets members with skills but no money trade through interest-free credit lines; the schemes' studies report gains to participants (the UK's LETS, the Bangla-Pesa) and no headcount at a national line, and a credit line transfers no income to those who cannot supply (reading 1.1.1) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C1.1/sources_s74.md) |
+| 2 | ≥85% under stress testing | not shown | not shown: no stress scenario (reading 1.1.2) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C1.1/sources_s74.md) |
 
-**Note.** Held at the published 0.5: the evidence runs both ways by context
+**Note.** 0.5: a genuine but small channel, unprojected
 
-Pass record: [NEEC_Rescoring_s65.md, line 915](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L915)
+Pass record: [NEEC_Rescoring_s65.md, line 915](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L915)  
+Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
 
 **Published (v1) rationale**, under the heading "C1.1 Poverty Elimination Capacity: 0.5" at [NEEC_Report_v1_6.md, line 1552](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1552):
 
@@ -249,20 +250,20 @@ Pass record: [NEEC_Rescoring_s65.md, line 1222](https://github.com/BetterToBest/
 <a id="c2-5"></a>
 ### C2.5 Exit Rights and Mobility: 0.5 (partial)
 
-*Read by the rescoring pass in part (b5) (Session 42). Published (v1) score 1.0; v2.0 score 0.5: changed.*
+*Read by the rescoring pass in part (b5) (Session 42) and re-read blind in Session 75 (the final reading is shown). Published (v1) score 1.0; v2.0 score 0.5: changed.*
 
 Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Exit feasible within 3 months without material penalty, no differential treatment, geographic mobility maintained.
 
-*The unit was read in part (b5) on its 4 clauses then in force; v2.0 states 3: Exit feasible within 3 months without material penalty; no differential treatment; geographic mobility maintained.*
+| # | Clause (v2.0) | Status | Reading | Source |
+|---|---|---|---|---|
+| 1 | Exit feasible within 3 months without material penalty | short | short: balances are in a unit not convertible to national currency, so a member leaving with a credit balance forfeits it, and one in debit must settle (reading 2.5.1) | [`sources_s75.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.5/sources_s75.md) |
+| 2 | no differential treatment | cleared | cleared: non-members are not penalised (reading 2.5.2) | [`sources_s75.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.5/sources_s75.md) |
+| 3 | geographic mobility maintained | short | short: networks are local, so a member who relocates loses the network and its balance (reading 2.5.3) | [`sources_s75.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.5/sources_s75.md) |
 
-| # | Status | Reading | Source |
-|---|---|---|---|
-| 1 | cleared | carries no formal penalty beyond settling | as audited (the unit's own text) |
-| 2 | cleared | the mechanism's credit is issued by members for members, its costs are met from within the community, trading is by consent, and a default is absorbed by the members; it levies nothing on non-members and has no authority over them, and it is designed as an adjunct to the national currency, so a non-member keeps the ordinary market and forgoes only the network (reading 3.1) | Linton's LETSystem design criteria (cost of service, consent, disclosure, equivalence, no interest); NEEC_MutualCredit_LETS_scoring_scratch.md, C2.5 |
-| 3 | not shown | a member's balance and credit line are held in one node; linked networks such as the Community Exchange System let some members trade across communities, but portability is not part of the mechanism as scored, and the entry's own text says leaving a node means settling or writing off the balance; no source shows a member keeping credit and trading standing on relocating (reading 3.2) | NEEC_MutualCredit_LETS_scoring_scratch.md, C2.5; Community Exchange System and Community Forge, as described in the LETS literature |
-| 4 | cleared | Participation is voluntary at every level examined | as audited (the unit's own text) |
+**Note.** 0.5: voluntary membership, with non-portable, non-convertible balances
 
-Pass record: [NEEC_Rescoring_s42.md, line 206](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s42.md?plain=1#L206)
+Pass record: [NEEC_Rescoring_s42.md, line 206](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s42.md?plain=1#L206)  
+Blind re-read record: [NEEC_BlindReview_s75.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s75.md)
 
 **Published (v1) rationale**, under the heading "C2.5 Exit Rights and Mobility: 1.0" at [NEEC_Report_v1_6.md, line 1574](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1574):
 
@@ -271,38 +272,40 @@ Pass record: [NEEC_Rescoring_s42.md, line 206](https://github.com/BetterToBest/N
 <a id="c2-6"></a>
 ### C2.6 Civil Liberties and Rule of Law: 0.5 (partial)
 
-*New in v2.0: scored for the first time in group 2.11 (Session 65), on a unit of the three new criteria.*
+*New in v2.0: scored for the first time in group 2.11 (Session 65) and re-read blind in Session 76, on a unit of the three new criteria. The final reading is shown.*
 
 Criterion in v2.0: class N (new criterion). Pass Threshold: Civil-liberties score ≥53 of 60 on the Freedom House checklist; informed consent to medical treatment protected in law; any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Civil-liberties score ≥53 of 60 on the Freedom House checklist | out of reach | the mechanism does not govern the civil liberties of the economy it operates in (protocol 3.2, reach); it adds or takes nothing | the system's own sources |
-| 2 | informed consent to medical treatment protected in law | out of reach | out of reach | the system's own sources |
-| 3 | any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review | out of reach | out of reach | the system's own sources |
+| 1 | Civil-liberties score ≥53 of 60 on the Freedom House checklist | out of reach | out of reach: a mechanism does not govern the host's 0-60 civil-liberties total (reading 2.6.2); membership is voluntary and each scheme's committee sets credit limits and resolves disputes, with the host's courts behind it; nothing is taken | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/sources_s76.md) |
+| 2 | informed consent to medical treatment protected in law | out of reach | out of reach: the mechanism delivers no medical care and governs no consent law (reading 2.6.3) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/sources_s76.md) |
+| 3 | any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review | out of reach | out of reach: the mechanism governs no health compulsion and no employment or service whose loss could penalise refusal (reading 2.6.4) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/sources_s76.md) |
 
-**Note.** A mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))
+**Note.** 0.5: a voluntary exchange network; the clauses are the host's
 
-Pass record: [NEEC_Rescoring_s65.md, line 1708](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1708)
+Pass record: [NEEC_Rescoring_s65.md, line 1708](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1708)  
+Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
 ## Domain 3: System Resilience
 
 <a id="c3-1"></a>
 ### C3.1 Crisis Response Capacity: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.9 (Session 63). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.9 (Session 63) and re-read blind in Session 74 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pass Threshold: Response within 72 hours, scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase), ≥90% population coverage.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Response within 72 hours | not shown | WIR credit circulation moves countercyclically (a 2009 study), Sardex was founded in response to the credit crunch, and Argentina's Redes de Trueque grew to several million participants in 2001 and 2002; no day count between a shock and a response is located | NEEC_MutualCredit_LETS_scoring_scratch.md, C3.1 |
-| 2 | scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase) | out of reach | mutual credit is not a social benefit; the countercyclical credit is a liquidity buffer for member firms | NEEC_MutualCredit_LETS_scoring_scratch.md, C3.1 |
-| 3 | ≥90% population coverage | short | self-selected networks of businesses, and a mobilisation that was 'neither universal nor centrally triggered'; far below 90% of the population | NEEC_MutualCredit_LETS_scoring_scratch.md, C3.1 |
+| 1 | Response within 72 hours | out of reach | out of reach: mutual credit extends credit lines among members and pays no benefit (reading 3.1.4) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.1/sources_s74.md) |
+| 2 | scaling 1:1 with crisis severity (30% GDP decline = 30% benefit increase) | out of reach | out of reach: no benefit to scale; the WIR network's turnover rises in downturns (Stodder, 2009), a counter-cyclical credit channel, not D.62 (reading 3.1.4) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.1/sources_s74.md) |
+| 3 | ≥90% population coverage | out of reach | out of reach: no cash benefit (reading 3.1.4) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.1/sources_s74.md) |
 
-**Note.** 0.5 holds: the strongest peer-reviewed evidence in the corpus for a firm-level stabilizer, the 0.5 band's description (reading 3.4)
+**Note.** 0.5 held: a documented counter-cyclical credit channel, outside the clauses' quantities
 
-Pass record: [NEEC_Rescoring_s63.md, line 236](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s63.md?plain=1#L236)
+Pass record: [NEEC_Rescoring_s63.md, line 236](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s63.md?plain=1#L236)  
+Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
 
 **Published (v1) rationale**, under the heading "C3.1 Crisis Response Capacity: 0.5" at [NEEC_Report_v1_6.md, line 1578](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1578):
 
@@ -373,37 +376,39 @@ Pass record: [NEEC_Rescoring_s56.md, line 306](https://github.com/BetterToBest/N
 <a id="c3-6"></a>
 ### C3.6 Productive and Innovative Capacity: 0.5 (partial)
 
-*New in v2.0: scored for the first time in group 2.11 (Session 65), on a unit of the three new criteria.*
+*New in v2.0: scored for the first time in group 2.11 (Session 65) and re-read blind in Session 76, on a unit of the three new criteria. The final reading is shown.*
 
 Criterion in v2.0: class N (new criterion). Pass Threshold: Real output per hour worked non-declining over 20 years, total factor productivity non-declining over 20 years, basic-needs output sustained at the system's own working time.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Real output per hour worked non-declining over 20 years | out of reach | the mechanism does not govern output per hour of the economy it operates in (reach) | the system's own sources |
-| 2 | total factor productivity non-declining over 20 years | out of reach | out of reach | the system's own sources |
-| 3 | basic-needs output sustained at the system's own working time | out of reach | out of reach | the system's own sources |
+| 1 | Real output per hour worked non-declining over 20 years | out of reach | out of reach: the mechanism allocates no investment and rewards no improvement economy-wide even when generalised (reading 3.6.2); mutual credit finances exchange between members, not investment | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.6/sources_s76.md) |
+| 2 | total factor productivity non-declining over 20 years | out of reach | out of reach: the mechanism allocates no investment and rewards no improvement economy-wide even when generalised (reading 3.6.2) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.6/sources_s76.md) |
+| 3 | basic-needs output sustained at the system's own working time | out of reach | out of reach: the mechanism sets no working time; the host's hours apply (reading 3.6.3) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.6/sources_s76.md) |
 
-**Note.** A mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))
+**Note.** 0.5: an exchange network; the clauses are the host's
 
-Pass record: [NEEC_Rescoring_s65.md, line 1976](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1976)
+Pass record: [NEEC_Rescoring_s65.md, line 1976](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1976)  
+Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
 ## Domain 4: Ethical Integrity
 
 <a id="c4-1"></a>
 ### C4.1 Intergenerational Justice: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 72 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Debt-to-GDP <80%, positive wealth transfer to next generation.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Debt-to-GDP <80% | not shown | the sources state no debt path, so clause 1 is not shown; no equivalent to a sovereign fund or land trust was located (published rationale) | [NEEC_Report_v1_6.md, line 1590](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1590) (MC C4.1) |
-| 2 | positive wealth transfer to next generation | not shown | the sources state no net-saving path, so clause 2 is not shown | [NEEC_Report_v1_6.md, line 1590](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1590) (MC C4.1) |
+| 1 | Debt-to-GDP <80% | out of reach | out of reach: the mechanism governs no public borrowing, so the debt ratio is the host economy's (reading 4.1.1) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
+| 2 | positive wealth transfer to next generation | out of reach | out of reach: balances sum to exactly zero by construction, so the mechanism creates no net financial saving and does not govern real saving (reading 4.1.2) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
 
-**Note.** Held at the published 0.5; the published wording sits close to 0.0 and is left as published
+**Note.** 0.5: a clearing mechanism that governs neither quantity (D28(c))
 
-Pass record: [NEEC_Rescoring_s65.md, line 148](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L148)
+Pass record: [NEEC_Rescoring_s65.md, line 148](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L148)  
+Blind re-read record: [NEEC_BlindReview_s72.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s72.md)
 
 **Published (v1) rationale**, under the heading "C4.1 Intergenerational Justice: 0.5" at [NEEC_Report_v1_6.md, line 1590](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1590):
 
@@ -412,20 +417,21 @@ Pass record: [NEEC_Rescoring_s65.md, line 148](https://github.com/BetterToBest/N
 <a id="c4-2"></a>
 ### C4.2 Ecological Compliance: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.10 (Session 64). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.10 (Session 64) and re-read blind in Session 73 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Consumption-based carbon emissions falling ≥3.8% a year, biodiversity neutral or positive, resource extraction ≤ regeneration, no more than two of the four nationally downscaled planetary boundaries transgressed.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Consumption-based carbon emissions falling ≥3.8% a year | not shown | no projection of consumption-based CO2 under the system, from a model or calibrated components, is stated or located, so the rate is not shown (part (b7), reading 3.4) | Report v1.6, MC C4.2 |
-| 2 | biodiversity neutral or positive | not shown | no projection of pressure on species and habitat under the system is stated or located (part (b7), reading 3.3) | Report v1.6, MC C4.2 |
-| 3 | resource extraction ≤ regeneration | not shown | no projection of the system's footprint per person against biocapacity is stated or located | Report v1.6, MC C4.2 |
-| 4 | no more than two of the four nationally downscaled planetary boundaries transgressed | not shown | no projection of the system's pressure on phosphorus, nitrogen, freshwater or land system is stated or located | Report v1.6, MC C4.2 |
+| 1 | Consumption-based carbon emissions falling ≥3.8% a year | out of reach | out of reach: a zero-sum credit network governs the medium of local exchange, not what is produced or extracted; consumption emissions are the host's (reading 4.2.1) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
+| 2 | biodiversity neutral or positive | out of reach | out of reach: a zero-sum credit network governs the medium of local exchange, not what is produced or extracted; species and habitat are the host's (reading 4.2.2) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
+| 3 | resource extraction ≤ regeneration | out of reach | out of reach: a zero-sum credit network governs the medium of local exchange, not what is produced or extracted; the footprint is the host's (reading 4.2.3) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
+| 4 | no more than two of the four nationally downscaled planetary boundaries transgressed | out of reach | out of reach: a zero-sum credit network governs the medium of local exchange, not what is produced or extracted; the boundaries are the host's (reading 4.2.4) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
 
-**Note.** 0.5 holds: a consistent value for local exchange that structurally cannot fund long-distance supply chains, with no quantified effect and no ceiling (reading 3.5)
+**Note.** 0.5: a monetary mechanism that governs none of the four quantities (D28(c))
 
-Pass record: [NEEC_Rescoring_s64.md, line 285](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s64.md?plain=1#L285)
+Pass record: [NEEC_Rescoring_s64.md, line 285](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s64.md?plain=1#L285)  
+Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s73.md)
 
 **Published (v1) rationale**, under the heading "C4.2 Ecological Compliance: 0.5" at [NEEC_Report_v1_6.md, line 1592](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1592):
 
@@ -454,18 +460,19 @@ Pass record: [NEEC_Rescoring_s61.md, line 269](https://github.com/BetterToBest/N
 <a id="c4-4"></a>
 ### C4.4 Power Distribution: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 73 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Democratic accountability for ≥80% of major decisions, removal/replacement mechanisms functional.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Democratic accountability for ≥80% of major decisions | not shown | the sources state no share of workers in accountable organizations | [NEEC_Report_v1_6.md, line 1596](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1596) (MC C4.4) |
-| 2 | removal/replacement mechanisms functional | not shown | the sources state no mechanism for removing or replacing those who take decisions | [NEEC_Report_v1_6.md, line 1596](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1596) (MC C4.4) |
+| 1 | Democratic accountability for ≥80% of major decisions | out of reach | out of reach: the network's members govern the network and its credit limits, but it places no organization's investment, production or employment decisions (reading 4.4.1) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
+| 2 | removal/replacement mechanisms functional | out of reach | out of reach: the mechanism governs no removal of legislators, executives or managers (reading 4.4.2) | NEEC_MutualCredit_LETS_scoring_scratch.md, overview |
 
-**Note.** Held at the published 0.5: a real anti-concentration mechanism, weakened by the centralisation of the largest example
+**Note.** 0.5: a monetary mechanism that governs neither quantity (D28(c))
 
-Pass record: [NEEC_Rescoring_s65.md, line 314](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L314)
+Pass record: [NEEC_Rescoring_s65.md, line 314](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L314)  
+Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s73.md)
 
 **Published (v1) rationale**, under the heading "C4.4 Power Distribution: 0.5" at [NEEC_Report_v1_6.md, line 1596](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1596):
 
@@ -474,18 +481,19 @@ Pass record: [NEEC_Rescoring_s65.md, line 314](https://github.com/BetterToBest/N
 <a id="c4-5"></a>
 ### C4.5 Exploitation Elimination: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.11 (Session 65). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.11 (Session 65) and re-read blind in Session 71 (the final reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Extraction rates <10% GDP, genuine exit rights from exploitative relationships.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Extraction rates <10% GDP | short | interest-based extraction is removed within the mechanism's transactions, not outside them | [NEEC_Report_v1_6.md, line 1598](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1598) (MC C4.5) |
-| 2 | genuine exit rights from exploitative relationships | not shown | no exit-rights evidence is stated beyond the published rationale | [NEEC_Report_v1_6.md, line 1598](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1598) (MC C4.5) |
+| 1 | Extraction rates <10% GDP | short | short: generalised, credit created at zero balance and zero interest between members removes the lender's interest on the credit it replaces; the transfer to employers and landlords is not governed by the mechanism and stays the host's (readings 4.5.1, 4.5.4) | Report v1.6, MC overview |
+| 2 | genuine exit rights from exploitative relationships | short | short: an interest-free credit line is an assured alternative to borrowing from a lender, within its limit, but it gives no exit from employment or tenancy (reading 4.5.2) | Report v1.6, MC overview |
 
-**Note.** Held at 0.5
+**Note.** 0.5: elimination in one relationship type, creditor-debtor (reading 4.5.3)
 
-Pass record: [NEEC_Rescoring_s65.md, line 569](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L569)
+Pass record: [NEEC_Rescoring_s65.md, line 569](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L569)  
+Blind re-read record: [NEEC_BlindReview_s71.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s71.md)
 
 **Published (v1) rationale**, under the heading "C4.5 Exploitation Elimination: 0.5" at [NEEC_Report_v1_6.md, line 1598](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1598):
 
@@ -494,19 +502,20 @@ Pass record: [NEEC_Rescoring_s65.md, line 569](https://github.com/BetterToBest/N
 <a id="c4-6"></a>
 ### C4.6 Harm Internalization: 0.5 (partial)
 
-*New in v2.0: scored for the first time in group 2.11 (Session 65), on a unit of the three new criteria.*
+*New in v2.0: scored for the first time in group 2.11 (Session 65) and re-read blind in Session 76, on a unit of the three new criteria. The final reading is shown.*
 
 Criterion in v2.0: class N (new criterion). Pass Threshold: Mortality attributed to pollution non-increasing over 20 years; those who cause harm to health or the environment liable for it, enforceably by those harmed; regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more).
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Mortality attributed to pollution non-increasing over 20 years | out of reach | the mechanism does not govern pollution mortality of the economy it operates in (reach) | the system's own sources |
-| 2 | those who cause harm to health or the environment liable for it, enforceably by those harmed | out of reach | out of reach: liability is that of the host economy | the system's own sources |
-| 3 | regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more) | out of reach | out of reach | the system's own sources |
+| 1 | Mortality attributed to pollution non-increasing over 20 years | out of reach | out of reach: the mechanism governs no source of the pollution harms the clause counts (reading 4.6.1) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.6/sources_s76.md) |
+| 2 | those who cause harm to health or the environment liable for it, enforceably by those harmed | out of reach | out of reach: the mechanism governs no harm-causing activity's liability (reading 4.6.2) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.6/sources_s76.md) |
+| 3 | regulation of food, water, air, chemicals and medicines applied and enforced without improper influence (for a configured national economy, a World Justice Project sub-factor 6.2 score of 0.77 or more) | out of reach | out of reach: the mechanism governs no regulator of food, water, air, chemicals or medicines (reading 4.6.3) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.6/sources_s76.md) |
 
-**Note.** A mechanism's clause outside its reach holds the criterion at 0.5 at most (D28(c))
+**Note.** 0.5: an exchange network; the clauses are the host's
 
-Pass record: [NEEC_Rescoring_s65.md, line 2236](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L2236)
+Pass record: [NEEC_Rescoring_s65.md, line 2236](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L2236)  
+Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
 ## Domain 5: Implementation Viability
 

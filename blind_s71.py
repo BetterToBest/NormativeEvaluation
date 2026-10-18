@@ -52,8 +52,8 @@ the generator session (ledger S61) applies; both comparisons, blind and final, a
 A change to CCO-PTF-CIP-SZH's units waits for the owner (decisions 57.2, 69.4); this group changes none of its
 verdicts.
 
-Usage: python3 blind_s71.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, neec_corpus_v2.json,
-                               neec_scores_v2.csv, the scripts pass_common.PARTS names and the files they read,
+Usage: python3 blind_s71.py   (reads criteria.json, neec_corpus.json, neec_scores.csv, neec_corpus_v2_s65_snapshot.json,
+                               neec_scores_v2_s65_snapshot.csv, the scripts pass_common.PARTS names and the files they read,
                                blind_review.py, the evidence_cache/ files below and NEEC_BlindReview_s71.md; writes
                                nothing)
 Prints file names and summaries only. Deterministic.
@@ -576,10 +576,10 @@ def comparison_table(p, prior, units, label):
 
 
 def consequence_table(p, prior, units):
-    """Totals, failures and tiers on the 29 criteria (neec_scores_v2.csv), and on the 26, if FINAL's verdicts replace
+    """Totals, failures and tiers on the 29 criteria (neec_scores_v2_s65_snapshot.csv), and on the 26, if FINAL's verdicts replace
     part (2.11)'s for these units; nothing is applied here (ledger S61 applies it by generator)."""
-    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
-    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2.csv"), encoding="utf-8"))}
+    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2_s65_snapshot.json"), encoding="utf-8"))["entries"]}
+    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2_s65_snapshot.csv"), encoding="utf-8"))}
     delta, dfail = {}, {}
     for k, nw in units.items():
         pv, nv = prior[k]["verdict"], nw["verdict"]
@@ -610,8 +610,8 @@ def consequence_table(p, prior, units):
 def flag_effects(p, prior, units):
     """For each flagged final reading, the entry's total, failures and tier if its alternative alone were taken
     (on top of the other final verdicts), and whether first place or the tier would change."""
-    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2.json"), encoding="utf-8"))["entries"]}
-    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2.csv"), encoding="utf-8"))}
+    v2 = {e["code"]: e for e in json.load(open(path("neec_corpus_v2_s65_snapshot.json"), encoding="utf-8"))["entries"]}
+    rows29 = {r["system"]: r for r in csv.DictReader(open(path("neec_scores_v2_s65_snapshot.csv"), encoding="utf-8"))}
     base = {}
     for code, e in v2.items():
         r = rows29[e["display_name"]]
@@ -743,7 +743,7 @@ def main():
 
     print("\n[6] consequences if the final verdicts replace part (2.11)'s (applied by generator in ledger S61, not here)")
     t_cons, held, first, top, tiers = consequence_table(p, prior, FINAL)
-    ok_print(held, "neec_corpus_v2.json carries part (2.11)'s verdict for each of the 24 units (the published "
+    ok_print(held, "neec_corpus_v2_s65_snapshot.json carries part (2.11)'s verdict for each of the 24 units (the published "
              "provisional scores are the prior's)")
     print(t_cons)
     print(f"\nfirst place on the 29 after: {' and '.join(first)} at {top:.1f}; tier changes: "

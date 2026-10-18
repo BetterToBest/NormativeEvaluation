@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 46 (Session 76). Runs every verification and analysis script on file
+Version 48 (Session 78). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -299,7 +299,11 @@ NEEC_BlindReview_s76.md's tables): 128 checks. No published file changed. Versio
 evidence_cache_s77.py (the 21 files the blind re-read of C2.6, C3.6 and C4.6 for the configured economies cached, by
 digest) and blind_s77.py (the 18 blind readings of the six configured economies on C2.6, C3.6 and C4.6, their
 comparison with part (2.11), the consequences on the 29 criteria with Sessions 71's to 76's and
-NEEC_BlindReview_s77.md's tables): 130 checks. No published file changed.
+NEEC_BlindReview_s77.md's tables): 130 checks. No published file changed. Version 48 (Session 78) adds
+final_pass.py --selftest (the seven blind groups' final readings laid over the pass) and apply_final_s78.py --check, which
+writes the v2 files from them (ledger S61), with a negative control; the Session 65 files are kept as
+neec_corpus_v2_s65_snapshot.json and its two companions, which apply_pass_s65.py and the blind scripts now read, so their
+captured outputs change only in the file names; build_evidence.py and build_site.py check the regenerated files: 133 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1417,12 +1421,14 @@ S65_CHECKS = [
 
 # Session 65, stage 3: the generator that applies the pass. It reads neec_corpus.json (the published vectors the pass was computed
 # against), the pass's parts through pass_common.py, summary_blocks_s28.json and the record, and checks the three v2 files it wrote.
-S65B_FILES = {**S65_FILES, **{k: k for k in ("apply_pass_s65.py", "neec_corpus_v2.json", "neec_scores_v2.csv",
-                                             "summary_blocks_v2.json", "summary_blocks_s28.json")}}
+S65B_FILES = {**S65_FILES, **{k: k for k in ("apply_pass_s65.py", "neec_corpus_v2_s65_snapshot.json",
+                                             "neec_scores_v2_s65_snapshot.csv", "summary_blocks_v2_s65_snapshot.json",
+                                             "summary_blocks_s28.json")}}
 S65_CHECKS.append(
     dict(name="apply_pass_s65.py --check: stage 3, the generator that applies the rescoring pass: the 23 entries on the 29 "
-              "criteria (neec_corpus_v2.json), their totals, domain sums, failures and tiers (neec_scores_v2.csv) and the "
-              "site's blocks (summary_blocks_v2.json) equal what the pass produces from the published vectors; the 26 "
+              "criteria (neec_corpus_v2_s65_snapshot.json), their totals, domain sums, failures and tiers "
+              "(neec_scores_v2_s65_snapshot.csv) and the site's blocks (summary_blocks_v2_s65_snapshot.json), kept as the "
+              "Session 65 files, equal what the pass produces from the published vectors; the 26 "
               "criteria's final scores are the pass's final state; each total on the 29 is the pass's total on the 26 plus "
               "the three new units; the record's table on the 29 shows the same totals and ranks; no published file changed",
          cmd=["python", "apply_pass_s65.py", "--check"], files=S65B_FILES,
@@ -1714,13 +1720,42 @@ S77_CHECKS = [
          stdout="blind_s77_output.txt", stderr=EMPTY),
 ]
 
+# Session 78 (ledger S61): the blind re-read's final readings applied. final_pass.py lays the seven groups' FINAL dictionaries over the
+# pass; apply_final_s78.py writes the v2 files and the record from them. build_evidence.py and build_site.py (the checks of Sessions
+# 68 and 49) now read these files, so their inputs are the real v2 files; the blind scripts and apply_pass_s65.py keep the Session 65
+# snapshots (S65B_FILES).
+S78_V2 = ("neec_corpus_v2.json", "neec_scores_v2.csv", "summary_blocks_v2.json")
+S78_FILES = {**S77_FILES, **{k: k for k in ("final_pass.py", "apply_final_s78.py", "build_evidence.py", "NEEC_FinalApplication_s78.md",
+                                            "site/config.json") + S78_V2}}
+S78_CHECKS = [
+    dict(name="final_pass.py --selftest: the seven blind groups' FINAL dictionaries (221 units: 24, 23, 33, 31, 41, 51, 18) load, "
+              "overlap nowhere, replace the pass's reading of the same cell (the 26 published criteria's merged units and the 69 "
+              "class N units), and each has one status per v2.0 clause and follows D28",
+         cmd=["python", "final_pass.py", "--selftest"], files=S78_FILES,
+         stdout="final_pass_selftest_output.txt", stderr=EMPTY),
+    dict(name="apply_final_s78.py --check: stage 3b, the generator that applies the blind re-read: the 23 entries on the 29 "
+              "criteria (neec_corpus_v2.json), their totals, failures and tiers (neec_scores_v2.csv), the site's blocks "
+              "(summary_blocks_v2.json) and the record (NEEC_FinalApplication_s78.md) equal what it produces; the corpus carries "
+              "each unit's final verdict and differs from the Session 65 snapshot in exactly the 28 cells the groups changed "
+              "(5, 2, 8, 3, 6, 0 and 4 by group); the tier changes are Universal Basic Income's and Sovereign Wealth Fund "
+              "Statism's; Participatory Economics is first alone at 16.5; CCO-PTF-CIP-SZH's vector is unchanged",
+         cmd=["python", "apply_final_s78.py", "--check"], files=S78_FILES,
+         stdout="apply_final_s78_output.txt", stderr=EMPTY),
+]
+S78_CHECKS.append(dict(S78_CHECKS[1], files={**S78_FILES, "neec_corpus_v2.json": "neec_corpus_v2_s65_snapshot.json"},
+                       name="apply_final_s78.py --check rejects a neec_corpus_v2.json that is the Session 65 snapshot "
+                            "(negative control; exit 1 expected)",
+                       stdout="apply_final_s78_check_negative_output.txt", expect_exit=1))
+for _c in S68_CHECKS:    # build_evidence.py --check reads the regenerated v2 files and the blind groups' final readings
+    _c["files"] = {**S78_FILES, **{k: v for k, v in _c["files"].items() if k.startswith("evidence/")}}
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
           + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS + S74_CHECKS
-          + S75_CHECKS + S76_CHECKS + S77_CHECKS)
+          + S75_CHECKS + S76_CHECKS + S77_CHECKS + S78_CHECKS)
 
 
 def md5(data):

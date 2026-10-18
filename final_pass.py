@@ -1,0 +1,114 @@
+#!/usr/bin/env python3
+"""
+final_pass.py -- NEEC stage 3b: the final readings of the seven blind groups, laid over the rescoring pass (Session 78, ledger S61)
+================================================================================================================================
+The rescoring pass (pass_common.PARTS, parts (a) to (2.11)) read every unit in play once; Sessions 71 to 77 then re-read the units
+of seven groups blind (blind_review.py), each script ending in a FINAL dictionary of the readings that stand (the blind reading,
+or the prior where the comparison restored it, decision 71.x to 77.3). This module holds the one list of those dictionaries, in
+the order of the sessions, and lays them over the pass. It changes no file. It is used by apply_final_s78.py (which writes the
+v2 files from it) and by build_evidence.py (which reports each unit's final reading and where it was read).
+
+  GROUPS          (tag, session, script, record, attributes): one line per blind group, in the order the sessions read them.
+  load_groups()   the groups' FINAL dictionaries, loaded from the scripts (not run).
+  final_state(p)  from a pass_common.Pass: (units, part_of, new_units, new_part_of), where `units` is p.merged with every
+                  blind unit of the 26 published criteria replaced, `new_units` is rescoring_s65.NEW_UNITS (C2.6, C3.6,
+                  C4.6) with theirs replaced, and the part_of maps hold the tag of the part or group that read each unit last.
+
+The three class N criteria (C2.6, C3.6, C4.6) are not in the pass's merged units, which hold the 26 published criteria, so the
+groups of Sessions 76 and 77 land in new_units and the others in units. Later groups replace earlier ones where they overlap;
+none does (final_state checks it).
+
+Usage: python3 final_pass.py --selftest   (loads the groups; checks every unit, the overlap, the counts; writes nothing)
+Prints file names and summaries only. Deterministic.
+"""
+import io
+import os
+import sys
+from contextlib import redirect_stdout
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import pass_common as pc  # noqa: E402
+
+GROUPS = (("blind s71", 71, "blind_s71.py", "NEEC_BlindReview_s71.md", ("FINAL",)),
+          ("blind s72", 72, "blind_s72.py", "NEEC_BlindReview_s72.md", ("FINAL",)),
+          ("blind s73", 73, "blind_s73.py", "NEEC_BlindReview_s73.md", ("FINAL",)),
+          ("blind s74", 74, "blind_s74.py", "NEEC_BlindReview_s74.md", ("FINAL", "EXTRA_FINAL")),
+          ("blind s75", 75, "blind_s75.py", "NEEC_BlindReview_s75.md", ("FINAL", "FIRST_FINAL")),
+          ("blind s76", 76, "blind_s76.py", "NEEC_BlindReview_s76.md", ("FINAL",)),
+          ("blind s77", 77, "blind_s77.py", "NEEC_BlindReview_s77.md", ("FINAL",)))
+# units each group is expected to carry (decisions 71.1 to 77.3, the sessions' handoffs)
+COUNTS = {"blind s71": 24, "blind s72": 23, "blind s73": 33, "blind s74": 31, "blind s75": 41, "blind s76": 51,
+          "blind s77": 18}
+
+
+def tag_label(tag):
+    return f"the blind re-read of Session {tag.split()[1][1:]}"
+
+
+def load_groups():
+    """[(tag, session, record, units)], units the union of the group's FINAL dictionaries."""
+    out = []
+    for tag, sess, script, record, attrs in GROUPS:
+        with redirect_stdout(io.StringIO()):
+            mod = pc.load("final_" + script[:-3], script)
+        units = {}
+        for a in attrs:
+            part = getattr(mod, a)
+            assert not set(part) & set(units), f"{script}: {a} overlaps another dictionary of the group"
+            units.update(part)
+        out.append((tag, sess, record, units))
+    return out
+
+
+def final_state(p):
+    """(units, part_of, new_units, new_part_of): the pass's units with the blind groups' final readings laid over them."""
+    with redirect_stdout(io.StringIO()):
+        new0 = dict(p.mods[-1].NEW_UNITS)
+    units, part_of = dict(p.merged), dict(p.part_of)
+    new_units, new_part_of = new0, {k: p.mods[-1].TAG for k in new0}
+    seen = {}
+    for tag, sess, record, fin in load_groups():
+        for k, u in fin.items():
+            assert k not in seen, f"{k} is read blind in {seen[k]} and in {tag}"
+            seen[k] = tag
+            if k in new_units:
+                new_units[k], new_part_of[k] = dict(u), tag
+            else:
+                assert k in units, f"{k}: a blind reading of a unit the pass did not read"
+                units[k], part_of[k] = dict(u), tag
+    return units, part_of, new_units, new_part_of
+
+
+def selftest():
+    ok = True
+
+    def check(cond, text, detail=""):
+        nonlocal ok
+        print(f"  {'PASS' if cond else 'FAIL'} {text}" + ("" if cond or not detail else f": {detail}"))
+        ok = ok and bool(cond)
+    print("final_pass.py --selftest: the seven blind groups' final readings laid over the rescoring pass\n")
+    with redirect_stdout(io.StringIO()):
+        p = pc.Pass()
+    groups = load_groups()
+    check([t for t, _, _, _ in groups] == list(COUNTS) and all(len(u) == COUNTS[t] for t, _, _, u in groups),
+          "each of the seven groups carries its units: " + ", ".join(f"{t.split()[1]} {len(u)}" for t, _, _, u in groups))
+    units, part_of, new_units, new_part_of = final_state(p)
+    allf = {k: u for _, _, _, fin in groups for k, u in fin.items()}
+    check(len(allf) == sum(COUNTS.values()) and len(new_units) == 69 and len(units) == len(p.merged),
+          f"{len(allf)} blind units, no overlap; the pass's {len(p.merged)} merged units and 69 class N units keep their keys")
+    check(all(units[k] == allf[k] for k in allf if k in units) and all(new_units[k] == allf[k] for k in allf if k in new_units),
+          "every blind unit replaces the pass's reading of the same cell")
+    lines = []
+    ok1 = pc.check_records(p, allf, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    ok2 = pc.check_rule(allf, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    check(ok1 and ok2, "every blind unit has one status per v2.0 clause with estimate and source, and follows D28 (0.0 only on "
+                       "a stated whole-criterion reason)", "; ".join(l for l in lines if l.startswith("FAIL"))[:200])
+    print("\nFINAL PASS MODULE SELFTEST: ALL CHECKS PASSED." if ok else "\nFINAL PASS MODULE SELFTEST: CHECKS FAILED.")
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    if "--selftest" in sys.argv[1:]:
+        sys.exit(selftest())
+    sys.exit("usage: python3 final_pass.py --selftest")

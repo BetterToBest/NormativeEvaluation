@@ -1,6 +1,6 @@
-  PASS neec_corpus_v2.json equals what the pass produces
-  PASS neec_scores_v2.csv equals what the pass produces
-  PASS summary_blocks_v2.json equals what the pass produces
+  PASS neec_corpus_v2_s65_snapshot.json equals what the pass produces
+  PASS neec_scores_v2_s65_snapshot.csv equals what the pass produces
+  PASS summary_blocks_v2_s65_snapshot.json equals what the pass produces
   PASS the 26 published criteria's final scores are the pass's final state
   PASS each total on the 29 is the pass's total on the 26 plus the entry's three new units
   PASS NEEC_Rescoring_s65.md's table on the 29 shows these totals and ranks

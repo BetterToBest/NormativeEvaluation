@@ -1,0 +1,15 @@
+  PASS neec_corpus_v2.json equals what the generator produces
+  PASS neec_scores_v2.csv equals what the generator produces
+  PASS summary_blocks_v2.json equals what the generator produces
+  PASS NEEC_FinalApplication_s78.md equals what the generator produces
+  PASS the corpus carries the final verdict of each of the 496 units
+  PASS the corpus differs from the Session 65 snapshot in exactly the 28 cells the groups changed
+  PASS each group changed the verdicts it recorded: s71 5, s72 2, s73 8, s74 3, s75 6, s76 0, s77 4
+  PASS each total and failure count in the CSV is the sum of the corpus vector
+  PASS each block's vector and total equal the corpus's
+  PASS the tier changes are Universal Basic Income's (Structurally to Partially Adequate) and Sovereign Wealth Fund Statism's (Partially to Potentially Adequate), as Sessions 73 and 75 recorded
+  PASS Participatory Economics is first alone at 16.5, ahead of 16.0, as Sessions 71 and 77 recorded
+  PASS CCO-PTF-CIP-SZH's vector is unchanged: no blind group changed one of its verdicts (decisions 57.2, 69.4)
+  PASS 23 entries on the 29 criteria
+
+STAGE 3B APPLICATION CHECKED.

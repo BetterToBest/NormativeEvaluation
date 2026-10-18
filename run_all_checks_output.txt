@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 130 reproducibility checks
+run_all_checks.py -- 133 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 e4fb0f44)
+          README.md == README.md (md5 4b0caff4)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -431,17 +431,17 @@ run_all_checks.py -- 130 reproducibility checks
           stdout == rescoring_s65_output.txt (md5 e1850c2a)
           stderr == (empty) (md5 d41d8cd9)
 
-[112] PASS  apply_pass_s65.py --check: stage 3, the generator that applies the rescoring pass: the 23 entries on the 29 criteria (neec_corpus_v2.json), their totals, domain sums, failures and tiers (neec_scores_v2.csv) and the site's blocks (summary_blocks_v2.json) equal what the pass produces from the published vectors; the 26 criteria's final scores are the pass's final state; each total on the 29 is the pass's total on the 26 plus the three new units; the record's table on the 29 shows the same totals and ranks; no published file changed
-          stdout == apply_pass_s65_output.txt (md5 d04fdcc5)
+[112] PASS  apply_pass_s65.py --check: stage 3, the generator that applies the rescoring pass: the 23 entries on the 29 criteria (neec_corpus_v2_s65_snapshot.json), their totals, domain sums, failures and tiers (neec_scores_v2_s65_snapshot.csv) and the site's blocks (summary_blocks_v2_s65_snapshot.json), kept as the Session 65 files, equal what the pass produces from the published vectors; the 26 criteria's final scores are the pass's final state; each total on the 29 is the pass's total on the 26 plus the three new units; the record's table on the 29 shows the same totals and ranks; no published file changed
+          stdout == apply_pass_s65_output.txt (md5 fc8c4e89)
           stderr == (empty) (md5 d41d8cd9)
 
 [113] PASS  build_evidence.py --check: the 23 per-system evidence reports and their index (evidence/) equal what the script generates from the rescoring pass, the v2 corpus, scores and blocks and the scoring documents: 667 criterion sections (the pass's units with their clause readings and sources, the held cells with their published rationale), each score and each unit's verdict equal to the corpus, each total equal to the blocks', every link to a data file in evidence_cache/ or to a document by line pointing at a file that exists; no score changed
-          stdout == build_evidence_output.txt (md5 77a906d1)
+          stdout == build_evidence_output.txt (md5 13573eff)
           stderr == (empty) (md5 d41d8cd9)
 
 [114] PASS  build_evidence.py --check rejects an evidence/ whose Status Quo report is replaced by another system's (negative control; exit 1 expected)
           exit status 1, as expected
-          stdout == build_evidence_check_negative_output.txt (md5 2a2935ea)
+          stdout == build_evidence_check_negative_output.txt (md5 df3a7025)
           stderr == (empty) (md5 d41d8cd9)
 
 [115] PASS  blind_review.py --selftest: compare_unit agrees only when every clause status and the verdict match; blind_view exposes no verdict, status, estimate or source for a real unit of each Sonnet-read part ((2.9) C3.1, (2.10) C4.2, (2.11) C1.1)
@@ -457,7 +457,7 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [118] PASS  blind_s71.py: the blind re-read of C4.5 (17 units) and C3.4 (7 units) against part (2.11): readings complete and on D28 and decision 53.2, figures recomputed from the cache, the comparison, the three reconciliations, no CCO-PTF-CIP-SZH verdict change, consequences and flag effects, and NEEC_BlindReview_s71.md carrying every generated table
-          stdout == blind_s71_output.txt (md5 f114fd6a)
+          stdout == blind_s71_output.txt (md5 950f1fc5)
           stderr == (empty) (md5 d41d8cd9)
 
 [119] PASS  evidence_cache_s72.py: the eight files Session 72 cached for the blind re-read of C4.1 (ledger S55) verify by digest
@@ -465,7 +465,7 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [120] PASS  blind_s72.py: the blind re-read of C4.1 (23 units) against parts (2.11) and (b6), on v2.0's two clauses: readings complete and on D28 and decision 53.2, figures recomputed from the cache, the comparison, the reconciliation, no CCO-PTF-CIP-SZH verdict change, consequences with Session 71's and flag effects, and NEEC_BlindReview_s72.md carrying every generated table
-          stdout == blind_s72_output.txt (md5 78c90271)
+          stdout == blind_s72_output.txt (md5 1a336f81)
           stderr == (empty) (md5 d41d8cd9)
 
 [121] PASS  evidence_cache_s73.py: the ten files Session 73 cached for the blind re-read of C4.4 and C4.2 (ledger S56) verify by digest
@@ -473,7 +473,7 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [122] PASS  blind_s73.py: the blind re-read of C4.4 (17 units) against part (2.11) and C4.2 (16 units) against part (2.10), on v2.0's clauses: readings complete and on D28 and decision 53.2, figures recomputed from the cache, the comparison, the three reconciliations, no CCO-PTF-CIP-SZH verdict change, consequences with Sessions 71's and 72's and flag effects, and NEEC_BlindReview_s73.md carrying every generated table
-          stdout == blind_s73_output.txt (md5 f687c3a6)
+          stdout == blind_s73_output.txt (md5 d359a9af)
           stderr == (empty) (md5 d41d8cd9)
 
 [123] PASS  evidence_cache_s74.py: the three files Session 74 cached for the blind re-read of C1.1 and C3.1 (ledger S57) verify by digest
@@ -481,7 +481,7 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [124] PASS  blind_s74.py: the blind re-read of C1.1 (14 units) against part (2.11) and C3.1 (16 units) against part (2.9), on v2.0's clauses, and Nordic Social Democracy's C1.1 against part (b3): readings complete and on D28 and decision 53.2, figures recomputed from the cache, the comparison, the reconciliation, no CCO-PTF-CIP-SZH verdict change, consequences with Sessions 71's to 73's and flag effects, and NEEC_BlindReview_s74.md carrying every generated table
-          stdout == blind_s74_output.txt (md5 c972ffdf)
+          stdout == blind_s74_output.txt (md5 bf8b36ac)
           stderr == (empty) (md5 d41d8cd9)
 
 [125] PASS  evidence_cache_s75.py: the ten files Session 75 cached for the blind re-read of C2.1, C2.4, C2.3 and C2.5 (ledger S58) verify by digest
@@ -489,7 +489,7 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [126] PASS  blind_s75.py: the first readings of C2.1, C2.4 and C2.3 for the six configured economies (18 units) and the blind re-read of C2.5 (23 units) against parts (2.11), (b5) and (a), on v2.0's clauses: readings complete and on D28 and decision 53.2, figures recomputed from the cache, the comparison, the reconciliation, no CCO-PTF-CIP-SZH verdict change, consequences with Sessions 71's to 74's and flag effects, and NEEC_BlindReview_s75.md carrying every generated table
-          stdout == blind_s75_output.txt (md5 7487e8e7)
+          stdout == blind_s75_output.txt (md5 59a109e5)
           stderr == (empty) (md5 d41d8cd9)
 
 [127] PASS  evidence_cache_s76.py: the 16 passages Session 76 cached from the designs' own texts for the blind re-read of C2.6, C3.6 and C4.6 (ledger S59) verify by digest
@@ -497,7 +497,7 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [128] PASS  blind_s76.py: the blind re-read of C2.6, C3.6 and C4.6 for the 17 designs and mechanisms (51 units) against part (2.11): readings complete and on D28, the market economies' record recomputed from the cache, the comparison (no verdict differs; each clause revision's reason), no CCO-PTF-CIP-SZH verdict change, consequences with Sessions 71's to 75's and flag effects, and NEEC_BlindReview_s76.md carrying every generated table
-          stdout == blind_s76_output.txt (md5 88543c0b)
+          stdout == blind_s76_output.txt (md5 7e3b934b)
           stderr == (empty) (md5 d41d8cd9)
 
 [129] PASS  evidence_cache_s77.py: the 21 files Session 77 cached for the blind re-read of C2.6, C3.6 and C4.6 for the configured economies (ledger S60) verify by digest
@@ -505,10 +505,23 @@ run_all_checks.py -- 130 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [130] PASS  blind_s77.py: the blind re-read of C2.6, C3.6 and C4.6 for the six configured economies (18 units) against part (2.11): readings complete and on D28, figures recomputed from the cache, the comparison (four C3.6 verdicts differ; each revision's reason), consequences with Sessions 71's to 76's and flag effects, and NEEC_BlindReview_s77.md carrying every generated table
-          stdout == blind_s77_output.txt (md5 97bc361c)
+          stdout == blind_s77_output.txt (md5 10a7b073)
+          stderr == (empty) (md5 d41d8cd9)
+
+[131] PASS  final_pass.py --selftest: the seven blind groups' FINAL dictionaries (221 units: 24, 23, 33, 31, 41, 51, 18) load, overlap nowhere, replace the pass's reading of the same cell (the 26 published criteria's merged units and the 69 class N units), and each has one status per v2.0 clause and follows D28
+          stdout == final_pass_selftest_output.txt (md5 57bab716)
+          stderr == (empty) (md5 d41d8cd9)
+
+[132] PASS  apply_final_s78.py --check: stage 3b, the generator that applies the blind re-read: the 23 entries on the 29 criteria (neec_corpus_v2.json), their totals, failures and tiers (neec_scores_v2.csv), the site's blocks (summary_blocks_v2.json) and the record (NEEC_FinalApplication_s78.md) equal what it produces; the corpus carries each unit's final verdict and differs from the Session 65 snapshot in exactly the 28 cells the groups changed (5, 2, 8, 3, 6, 0 and 4 by group); the tier changes are Universal Basic Income's and Sovereign Wealth Fund Statism's; Participatory Economics is first alone at 16.5; CCO-PTF-CIP-SZH's vector is unchanged
+          stdout == apply_final_s78_output.txt (md5 be00bb0f)
+          stderr == (empty) (md5 d41d8cd9)
+
+[133] PASS  apply_final_s78.py --check rejects a neec_corpus_v2.json that is the Session 65 snapshot (negative control; exit 1 expected)
+          exit status 1, as expected
+          stdout == apply_final_s78_check_negative_output.txt (md5 32679e2d)
           stderr == (empty) (md5 d41d8cd9)
 
 ============================================================================================
-SUMMARY: 130 passed, 0 failed, 0 skipped (of 130).
+SUMMARY: 133 passed, 0 failed, 0 skipped (of 133).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

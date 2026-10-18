@@ -1,14 +1,14 @@
 # NEEC state
 
-**Next session (78): Sonnet 5.5 at high** (ledger S61; mechanical: apply every blind group's final readings by
-generator, rebuild the v2 files, the evidence reports and the site; the routing's model, at high rather than medium
-because the generator must merge seven groups' readings in two forms, `pass_common`'s merged units and
-`rescoring_s65.NEW_UNITS`, and rebuild three published files).
+**Next session (79): Opus 5.5 at high** (ledger S41; judgment prose on settled scores: Report v2.0 Part I, one domain per
+group, from `neec_scores_v2.csv` and `evidence/`). Reason: the scores are now final under stage 3b, so the prose is the
+judgment work the routing sends to Opus; high rather than xhigh, because no reading is contested. Sonnet 5.5 would write
+the tables but not the argument. Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 77 (the blind re-read of C2.6, C3.6 and C4.6 for the six configured economies, ledger S60:
-`blind_s77.py`, `NEEC_BlindReview_s77.md`; four C3.6 verdict changes for S61, no tier or first-place change, eight
-flags) (2026-10-18). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 78 (ledger S61: the blind re-read's final readings of Sessions 71 to 77 applied by
+`apply_final_s78.py`; 28 verdict changes, `NEEC_FinalApplication_s78.md`; two tier changes, Participatory Economics alone
+first) (2026-10-18). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -81,26 +81,20 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   score, each clause's status, reading and source with the `evidence_cache/` files linked, the close call, the pass's note, and links by line to the
   pass record and the published (v1) rationale (quoted). 667 sections: 427 re-read, 69 new in v2.0, 171 held (no unit reads them; the published
   rationale is shown). Never edited by hand (check 113).
-- **Provisional standing after the pass** (published provisionally, decision 66.1). On the 26 criteria: CCO-PTF-CIP-SZH
-  and Participatory Economics share first at 14.5; Integral 14.0; Nordic Social Democracy 13.5. On the 29 (with the 69 new
-  units): CCO and PE 16.0, Integral 15.5, Nordic Social Democracy 15.0, Degrowth and Market Socialism 14.5; 7 entries Potentially
-  Adequate, 7 Partially, 9 Structurally Inadequate. The full table is in `NEEC_Rescoring_s65.md`. **Once S61 applies
-  Session 71's final readings** (decision 71.2 to 71.6; ledger D55): Participatory Economics alone first at 16.5 on
-  the 29 (15.0 on the 26), CCO-PTF-CIP-SZH 16.0 (14.5); Singapore 13.5 (3 failures), Stakeholder Capitalism 10.0,
-  FALC 10.0, Libertarian Minarchism 9.0; no tier changes (`NEEC_BlindReview_s71.md`, section 7); the owner confirmed
-  them (ledger D55, decision 72.1). **With Session 72's two as well** (decisions 72.3, 72.4): Libertarian Minarchism
-  9.5 (11 failures), Stakeholder Capitalism 10.5 (8); first place unchanged; no tier changes
-  (`NEEC_BlindReview_s72.md`, section 7). **With Session 73's eight as well** (decisions 73.2, 73.3; ledger D56,
-  confirmed by the owner, decision 74.1): **Sovereign Wealth Fund Statism 15.0 with 2 failures, Partially to Potentially Adequate**, the one tier
-  change; Islamic Finance 14.0 (3), Universal Basic Income 12.5 (6), China 11.0 (8), Stakeholder Capitalism 11.0 (7),
-  FALC 10.5 (10), Centrally Planned Socialism 7.0 (16); first place unchanged; 8 entries Potentially Adequate, 6
-  Partially, 9 Structurally Inadequate (`NEEC_BlindReview_s73.md`, section 7). **With Session 74's three as well**
-  (decision 74.3): Doughnut Economics 9.5 (10 failures), Qatar 10.0 (10); first place unchanged (Participatory
-  Economics alone at 16.5); no tier changes; still 8, 6 and 9 (`NEEC_BlindReview_s74.md`, section 8). **With Session
-  75's six as well** (decision 75.3; ledger D57, awaiting the owner): **Universal Basic Income 13.5 with 5 failures,
-  Structurally to Partially Adequate**; Nordic Social Democracy 15.5 (0 failures), Market Socialism and Degrowth 15.0
-  (1), FALC 11.0 (9), Centrally Planned Socialism 6.5 (17); first place unchanged (Participatory Economics alone at
-  16.5); 8 entries Potentially Adequate, 7 Partially, 8 Structurally Inadequate (`NEEC_BlindReview_s75.md`, section 7).
+- **Standing now** (Session 78, ledger S61; published provisionally on the site, `NEEC_FinalApplication_s78.md`, section 3).
+  The 23 entries on the 29 criteria after the blind re-read's final readings (Sessions 71 to 77) were applied by
+  `apply_final_s78.py`: **Participatory Economics 16.5 alone first**, CCO-PTF-CIP-SZH 16.0 (0 failures), Nordic Social
+  Democracy and Integral 15.5, Market Socialism, Degrowth and Sovereign Wealth Fund Statism 15.0, Ostrom Commons 14.5,
+  Georgism, Mutual Credit, Singapore and Islamic Finance 14.0, Universal Basic Income 13.5, Universal Basic Services 13.0,
+  Status Quo and Modern Monetary Theory 12.5, China 11.5, Stakeholder Capitalism and FALC 11.0, Qatar 10.0, Libertarian
+  Minarchism and Doughnut Economics 9.5, Centrally Planned Socialism 7.0. **8 entries Potentially Adequate, 7 Partially, 8
+  Structurally Inadequate.** Against the pass's own result (Session 65): 28 verdicts changed (by group: Sessions 71 to 77
+  5, 2, 8, 3, 6, 0, 4), and **two tiers**: Sovereign Wealth Fund Statism Partially to Potentially Adequate (3 to 2 failures)
+  and Universal Basic Income Structurally to Partially Adequate (7 to 5); Participatory Economics alone first where it shared
+  first with CCO-PTF-CIP-SZH at 16.0. No CCO-PTF-CIP-SZH verdict changed (nothing for the owner under decisions 57.2 and
+  69.4). After the pass alone (Session 65) the standing was CCO-PTF-CIP-SZH and Participatory Economics sharing first at
+  16.0 on the 29, 7 Potentially, 7 Partially and 9 Structurally Inadequate (`NEEC_Rescoring_s65.md`); the per-group
+  consequences as each blind session computed them are in `NEEC_BlindReview_s71.md` to `s77.md`, section 7 or 8.
 - **Stage 3b inserted, before stage 4 (decisions 69.1, 69.2; ledger D52 to D54).** Sessions 63 to 65 ran on Sonnet 5.5, not
   the Opus 5.5 "Model routing" (below) routes judgment groups to; every unit they read (parts (2.9) C3.1, (2.10) C4.2,
   (2.11) the accelerated groups: C4.1, C4.4, C3.4, C4.5, C2.5, C1.1, C2.6, C3.6, C4.6) is re-read in an Opus 5.5 session,
@@ -205,8 +199,8 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
 
 ## Next work, in order
 
-Stage 3b, the blind re-read (decisions 69.1, 69.2), runs Sessions 70 to 78; stage 4 (the Report and Paper prose) and
-landing then run Sessions 79 to 83. Every blind-review session works the same way, on `blind_review.py` (built Session
+Stage 3b, the blind re-read (decisions 69.1, 69.2), ran Sessions 70 to 78 (complete); stage 4 (the Report and Paper prose) and
+landing now run Sessions 79 to 83. Every blind-review session works the same way, on `blind_review.py` (built Session
 69) and `pass_common.py`: read the unit blind first (`blind_view()`: the v2.0 clauses and the cached sources, never the
 prior verdict or reading), record the new reading, only then reveal the Sonnet reading and record agree or revise
 (`compare_unit()`). Push a checkpoint after each criterion if the group is long. Each session's ids are the ledger's
@@ -288,17 +282,26 @@ so `evidence_cache_s77.py --fetch` reproduces the passages, not the extracts' he
 economy at 0.5 on C3.6 whenever one clause clears, though the band's text reads "productivity *or* TFP declining"
 (Centrally Planned Socialism, Qatar: the limits page should say so).
 
-1. **Session 78: Sonnet 5.5 at high** (ledger S61; mechanical). Reason: the routing sends the generator to Sonnet; at
-   high rather than the planned medium because it must merge seven groups' final readings held in two forms and rebuild
-   `neec_corpus_v2.json`, `neec_scores_v2.csv`, `summary_blocks_v2.json`, `evidence/` and the site, with the harness
-   extended to check it. See item 7 for the parts, now with Session 77's: `blind_s77.FINAL` (18 units of C2.6, C3.6
-   and C4.6, four C3.6 verdict changes, decision 77.3), held like Session 76's in `rescoring_s65.NEW_UNITS`'s form.
-2. (Sessions 72 to 77, done above.)
+**Done: Session 78** (Sonnet 5.5 at high; ledger S61 archived; I8's last item ticked). The blind re-read's final readings
+applied (Position above; `NEEC_FinalApplication_s78.md`). `final_pass.py` lays the seven groups' `FINAL` dictionaries
+(221 units; Session 74's `EXTRA_FINAL`, Session 75's `FIRST_FINAL`) over the pass: the 26 published criteria's units into
+`pass_common`'s merged units, the 69 class N units into `rescoring_s65.NEW_UNITS`'s form; `apply_final_s78.py` writes
+`neec_corpus_v2.json`, `neec_scores_v2.csv`, `summary_blocks_v2.json` and the record by `apply_pass_s65.build()`'s logic with
+that state, and `build_evidence.py` and `build_site.py` were rerun. The Session 65 versions of the three files are kept as
+`*_s65_snapshot.*`, which `apply_pass_s65.py` and the blind scripts now read. Three things for the sessions that follow: the
+site's `provisional_note` stays until Session 82; the Report and Paper prose (Sessions 79 to 81) must describe the standing
+above, not the pass's; and the evidence reports now carry each blind-read unit's final reading with a link to its blind record
+(`NEEC_BlindReview_s7x.md`, no per-unit line: the records are tables).
+
+1. **Session 79: Opus 5.5 at high** (ledger S41; judgment prose on settled scores). Reason: stage 3b is complete and the
+   scores are final, so Report v2.0 Part I is the judgment work the routing sends to Opus; high rather than xhigh, as no
+   reading is contested. See item 8.
+2. (Sessions 72 to 78, done above.)
 3. (Session 74, done above.)
 4. (Session 75, done above.)
 5. (Session 76, done above.)
 6. (Session 77, done above.)
-7. **Session 78: Sonnet 5.5 at high** (ledger S61; mechanical; item 1). Apply every "revise" through the generator (never by
+7. **Done: Session 78** (ledger S61, below). The plan that Session 78 followed, for the record: apply every "revise" through the generator (never by
    hand), rerun `build_evidence.py` then `build_site.py`, run the harness, write the standing table. List any
    CCO-PTF-CIP-SZH change for the owner (decision 57.2; it waits, per decision 69.4/D38's rule below). Update this file's
    provisional standing and the Report and Paper inputs. The blind groups' final readings go in as parts of the pass
@@ -345,8 +348,8 @@ and Qatar's C3.6 at 0.5, `NEEC_BlindReview_s77.md`, section 10);
 short, its flag toward 1.0 withdrawn, the verdict 0.5 unchanged; the limits page should state that C1.1's 1.0 anchor
 text cites the "94-96%" that v2.0's measure does not bear out, `NEEC_BlindReview_s74.md`, sections 7 and 10); (e) ledger I9 (Session 71): Libertarian
 Minarchism's and Centrally Planned Socialism's C4.5 held at 0.5 by D28 while Status Quo, Stakeholder Capitalism and
-Qatar are 0.0 on the same pattern, and C3.4's 16 earlier-read units carrying clause 3 on v1.4's wording -- for S61
-or a later session to decide (`NEEC_BlindReview_s71.md`, section 9); Session 72 raised Libertarian Minarchism's C4.1,
+Qatar are 0.0 on the same pattern, and C3.4's 16 earlier-read units carrying clause 3 on v1.4's wording -- for the
+owner or a later session to decide (Session 78 did not) (`NEEC_BlindReview_s71.md`, section 9); Session 72 raised Libertarian Minarchism's C4.1,
 not its C4.5, so (e) is unchanged (`NEEC_BlindReview_s72.md`, section 9).
 13. **CCO-PTF-CIP-SZH's other eight simulation units:** the owner answered the paused item directly in the ledger
     (decision 69.4/D38): scores that would move CCO up are applied when the blind re-read confirms them; scores that
@@ -354,6 +357,21 @@ not its C4.5, so (e) is unchanged (`NEEC_BlindReview_s72.md`, section 9).
     (Session 67) lists the eight. The blind groups read CCO's units on their criteria under this rule (Session 75's
     C2.5 and Session 76's C2.6, C3.6 and C4.6 agreed at 0.5); Session 77's group held no CCO unit.
 14. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change needed.
+
+## Decided (Session 78; `NEEC_FinalApplication_s78.md`)
+
+78.1 (optional, tooling) the blind groups' final readings are applied by `final_pass.py` and `apply_final_s78.py`, not by
+a part added to `pass_common.PARTS` (which would change the state every earlier blind script computes against); the
+Session 65 files are kept as `neec_corpus_v2_s65_snapshot.json`, `neec_scores_v2_s65_snapshot.csv` and
+`summary_blocks_v2_s65_snapshot.json`, which `apply_pass_s65.py --check` and `blind_s71.py` to `blind_s77.py` read (their
+outputs change only in the file names). 78.2 (corrections, applied as recorded by Sessions 71 to 77; ledger D55 to D57
+confirmed, decisions 72.1, 74.1, 76.1) the 28 verdict changes, the clause revisions and the flags of the 221 blind units
+now stand in the published v2 files; the two tier changes (Universal Basic Income, Sovereign Wealth Fund Statism) and
+Participatory Economics alone first at 16.5 follow; no CCO-PTF-CIP-SZH verdict changes. 78.3 (optional, tooling)
+`build_evidence.py` shows a blind-read unit's final reading, names the pass's part and the blind session, links the blind
+record, and links every `evidence_cache/<dir>/<file>` named in full (`.md`, `.txt`, `.pdf` and `.html` as well as
+`.json` and `.csv`: 776 links, 0 dangling); harness v48, 133 checks (`final_pass.py --selftest`, `apply_final_s78.py
+--check` and its negative control). Ledger I9 is not decided here: it stays open for the owner.
 
 ## Decided (Session 77; `NEEC_BlindReview_s77.md`, section 9)
 
@@ -616,7 +634,7 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 ## Awaiting the owner
 
 Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
-items outside stage 3b's scope (Next work, open item (e)). Sessions 72, 74, 76 and 77 added nothing for the owner; Session 73's ledger D56 was confirmed (decision 74.1) and Session 75's
+items outside stage 3b's scope (Next work, open item (e)). Sessions 72, 74, 76, 77 and 78 added nothing for the owner; Session 73's ledger D56 was confirmed (decision 74.1) and Session 75's
 ledger D57 (decision 76.1). Ledger I7's
 second item ("You review it", the Nordic finding) is the owner's; Session 74 read the finding (decision 74.5). Before
 this, the owner had answered every item recorded here, most recently in the ledger directly (decisions 57.1, 58.1,
@@ -732,8 +750,8 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
   the owner maintains both the design and the model. The record's section 8 lists what the units would need from the
   model.
 - **Ties.** On the published provisional scores first place is shared by CCO-PTF-CIP-SZH and Participatory Economics
-  (16.0 on the 29); once S61 applies Session 71's readings (confirmed, decision 72.1), Participatory Economics is alone
-  first (16.5), its C4.5 flag toward 0.5 the one call that would restore the tie; Sessions 72's and 73's changes do not move it. Earlier: first place was shared after group 2.9, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
+  (16.0 on the 29); since S61's generator applied Session 71's readings (confirmed, decision 72.1; Session 78), Participatory
+  Economics is alone first (16.5), its C4.5 flag toward 0.5 the one call that would restore the tie; Sessions 72's to 77's changes do not move it. Earlier: first place was shared after group 2.9, by CCO-PTF-CIP-SZH and Integral at 14.5; `pass_common.py` and
   `triage_s52.py` name a shared first place as shared (57.10). The triage's "could change none" screen reads an entry's
   own rank, so with a tie it can list a unit that decides who is first (Next work, item 4).
 - **The shared pass module and the triage.** `python3 pass_common.py --selftest` reproduces group 2.1's tables from the

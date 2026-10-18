@@ -134,7 +134,7 @@ final: 2 agree, 22 revise; 5 verdicts change: Participatory Economics C4.5 0.5 t
   PASS no CCO-PTF-CIP-SZH verdict changes (decisions 57.2, 69.4: a rise is applied, a fall held)
 
 [6] consequences if the final verdicts replace part (2.11)'s (applied by generator in ledger S61, not here)
-  PASS neec_corpus_v2.json carries part (2.11)'s verdict for each of the 24 units (the published provisional scores are the prior's)
+  PASS neec_corpus_v2_s65_snapshot.json carries part (2.11)'s verdict for each of the 24 units (the published provisional scores are the prior's)
 | Entry | Total on 29 | After | Total on 26 | After | Failures | After | Tier after |
 |---|---:|---:|---:|---:|---:|---:|---|
 | Libertarian Minarchism | 8.5 | 9.0 | 7.0 | 7.5 | 13 | 12 | Structurally Inadequate |

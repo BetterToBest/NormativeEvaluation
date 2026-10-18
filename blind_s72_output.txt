@@ -92,7 +92,7 @@ blind: 5 agree, 18 revise; 8 on the pre-v2.0 clause list (clause count 4 vs 2); 
   PASS no CCO-PTF-CIP-SZH verdict changes (decisions 57.2, 69.4: a rise is applied, a fall held)
 
 [6] consequences once applied (by generator in ledger S61, not here), alone and with Session 71's
-  PASS neec_corpus_v2.json carries the prior's verdict for each of the 23 units (the published provisional scores are the prior's)
+  PASS neec_corpus_v2_s65_snapshot.json carries the prior's verdict for each of the 23 units (the published provisional scores are the prior's)
 | Entry | Total on 29 | After this group | After Sessions 71 and 72 | Failures | After both | Tier after both |
 |---|---:|---:|---:|---:|---:|---|
 | Libertarian Minarchism | 8.5 | 9.0 | 9.5 | 13 | 11 | Structurally Inadequate |
