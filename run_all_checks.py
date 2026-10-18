@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 37 (Session 65). Runs every verification and analysis script on file
+Version 38 (Session 68). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -263,7 +263,12 @@ data files the groups added to the evidence cache checked by digest, every figur
 each published rationale located, the consequences cumulatively with every part before it, and NEEC_Rescoring_s65.md compared
 byte for byte with the record the script generates; the Session 52 checks now load it as a part of the pass; and apply_pass_s65.py,
 stage 3's generator, checked against the three v2 files it writes (the corpus on the 29 criteria, the scores CSV and the site's
-blocks): 112 checks.
+blocks): 112 checks. Version 38 (Session 68) adds build_evidence.py --check (decision 68.1): the 23 per-system evidence reports
+and their index (evidence/), generated from the pass, the corpus, the blocks and the scoring documents, with every score,
+every unit's verdict and every total checked against the corpus and the blocks, every link to a data file or to a document by
+line checked to exist, and every file compared byte for byte with what the script generates, and a negative control in which
+it must reject an evidence/ whose Status Quo report is another system's: 114 checks. build_site.py's inputs now include
+evidence/, which the site's system pages link.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1099,7 +1104,7 @@ S49_CHECKS = [
          files={**{k: k for k in ("build_site.py", "criteria.json", "neec_corpus_v2.json", "neec_scores_v2.csv",
                                   "summary_blocks_v2.json", "NEEC_Criteria_v2_s45.md", "NEEC_Paper_v1_4.md",
                                   "wjp_rol_sf62_2012_2025.csv", "neec_weighting_robustness_analysis_v2.py")},
-                **tree("site", "docs", os.path.join(".github", "ISSUE_TEMPLATE"))},
+                **tree("site", "docs", "evidence", os.path.join(".github", "ISSUE_TEMPLATE"))},
          stdout="build_site_check_output.txt", stderr=EMPTY, show_stdout=True),
 ]
 S49_CHECKS.append(dict(S49_CHECKS[0], files={**S49_CHECKS[0]["files"], "docs/index.html": "docs/404.html"},
@@ -1392,11 +1397,31 @@ S65_CHECKS.append(
          cmd=["python", "apply_pass_s65.py", "--check"], files=S65B_FILES,
          stdout="apply_pass_s65_output.txt", stderr=EMPTY))
 
+# Session 68: the per-system evidence reports (decision 68.1). build_evidence.py --check rebuilds the 24 files of evidence/ in
+# memory from the pass (through pass_common.py), the v2 corpus, scores and blocks, criteria.json, the scoring documents and records
+# and the evidence cache, and compares them with evidence/, which is copied in whole.
+S68_FILES = {**S65B_FILES, **{k: k for k in ("build_evidence.py", "site/config.json")},
+             **{f: f for f in sorted(os.listdir(HERE)) if f.startswith("NEEC_Rescoring_s") and f.endswith(".md")},
+             **tree("evidence_cache", "evidence")}
+S68_CHECKS = [
+    dict(name="build_evidence.py --check: the 23 per-system evidence reports and their index (evidence/) equal what the script "
+              "generates from the rescoring pass, the v2 corpus, scores and blocks and the scoring documents: 667 criterion "
+              "sections (the pass's units with their clause readings and sources, the held cells with their published "
+              "rationale), each score and each unit's verdict equal to the corpus, each total equal to the blocks', every link "
+              "to a data file in evidence_cache/ or to a document by line pointing at a file that exists; no score changed",
+         cmd=["python", "build_evidence.py", "--check"], files=S68_FILES,
+         stdout="build_evidence_output.txt", stderr=EMPTY),
+]
+S68_CHECKS.append(dict(S68_CHECKS[0], files={**S68_FILES, "evidence/sq.md": "evidence/cn.md"},
+                       name="build_evidence.py --check rejects an evidence/ whose Status Quo report is replaced by another "
+                            "system's (negative control; exit 1 expected)",
+                       stdout="build_evidence_check_negative_output.txt", expect_exit=1))
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
-          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS + S65_CHECKS)
+          + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS + S65_CHECKS + S68_CHECKS)
 
 
 def md5(data):

@@ -707,7 +707,8 @@ def page_systems_index(S):
                  if M["publish"] else "") + '<th scope="col">Evidence</th></tr>')
         body = []
         for s in ss:
-            docs = " ".join(f'<a href="{S.blob(d)}">{esc(d)}</a>' for d in s["docs"])
+            docs = " ".join([f'<a href="{S.blob("evidence/" + s["slug"] + ".md")}">Evidence report</a>']
+                            + [f'<a href="{S.blob(d)}">{esc(d)}</a>' for d in s["docs"]])
             sc_cells = ""
             if M["publish"]:
                 sc_cells = (f'<td class="num">{fmt(s["total"])}</td><td class="num">{s["failures"]}</td>'
@@ -735,7 +736,7 @@ def page_systems_index(S):
     lede = (f"NEEC scores {n} economic systems of three kinds: " + ", ".join(
         f'{k} {esc(M["cfg"]["scope_classes"][sc]["plural"].lower() if k != 1 else M["cfg"]["scope_classes"][sc]["label"].lower())}'
         for sc, k in kinds.items()) + ". The kind decides how a threshold written for a whole population is read. "
-        "Each system's evidence is in its scoring documents, linked below.")
+        "Each system has an evidence report, criterion by criterion, and its full scoring documents, linked below.")
     main = (f'<h1>Systems</h1><p class="lede">{lede}</p>{compare}{"".join(rows)}'
             f'{buttons(btn(S.issue("system"), "Propose a system to score", quiet=True))}')
     S.page("systems/index.html", "systems", "Systems", f"The {n} economic systems NEEC scores, with their evidence.",
@@ -770,8 +771,10 @@ def system_page(S, s):
             v = s["vector"][cid] if M["publish"] else None
             c = M["cmap"][cid]
             txt = score_text(v) if (not M["publish"] or v is not None) else "not scored in this data"
+            evl = (f' · <a href="{S.blob("evidence/" + s["slug"] + ".md")}#{cslug(cid)}">evidence</a>'
+                   if M["publish"] else "")
             items.append(f'<li id="{cslug(cid)}">{mark(v)}<a href="{{root}}criteria/{cslug(cid)}.html"><code>{cid}</code> '
-                         f'{esc(c["name"])}</a><span class="sc">{txt}</span></li>')
+                         f'{esc(c["name"])}</a><span class="sc">{txt}{evl}</span></li>')
         sub = ""
         if M["publish"]:
             dd = s["domains"][d["id"]]
@@ -797,8 +800,13 @@ def system_page(S, s):
         else:
             parts.append('<h2 id="close-calls">Close calls</h2><p>The scoring document registers no close calls.</p>')
     docs = "".join(f'<li><a href="{S.blob(d)}">{esc(d)}</a> <a class="alt" href="{S.raw}{quote(d)}">plain text</a></li>' for d in s["docs"])
-    parts.append(f'<h2>Evidence</h2><p>{esc(s["scored"])}.</p><ul class="docs-list">{docs}</ul>' if s["scored"]
-                 else f'<h2>Evidence</h2><ul class="docs-list">{docs}</ul>')
+    ev_file = f'evidence/{s["slug"]}.md'
+    assert os.path.exists(P(ev_file)), f"the evidence report {ev_file} does not exist; run python3 build_evidence.py"
+    ev = (f'<p>The <a href="{S.blob(ev_file)}">evidence report for this system</a> has one section for each criterion: the '
+          f'score, the reading of each clause with its source, the close call if there is one, and links to the exact line of '
+          f'the published rationale and of the rescoring record that read it.</p><p>The full text is in the scoring documents:</p>')
+    parts.append(f'<h2>Evidence</h2><p>{esc(s["scored"])}.</p>{ev}<ul class="docs-list">{docs}</ul>' if s["scored"]
+                 else f'<h2>Evidence</h2>{ev}<ul class="docs-list">{docs}</ul>')
     parts.append(buttons(
         btn(f'{{root}}replicate.html?system={s["code"]}#prompt', "Check this system with an AI"),
         btn(S.issue("score", system=s["name"], title=f"Score challenge: {s['short']}, [criterion]"), "Challenge a score", quiet=True),

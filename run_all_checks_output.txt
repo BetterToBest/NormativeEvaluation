@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 112 reproducibility checks
+run_all_checks.py -- 114 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 112 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 70ee1f15)
+          README.md == README.md (md5 debf3ebb)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -435,7 +435,16 @@ run_all_checks.py -- 112 reproducibility checks
           stdout == apply_pass_s65_output.txt (md5 d04fdcc5)
           stderr == (empty) (md5 d41d8cd9)
 
+[113] PASS  build_evidence.py --check: the 23 per-system evidence reports and their index (evidence/) equal what the script generates from the rescoring pass, the v2 corpus, scores and blocks and the scoring documents: 667 criterion sections (the pass's units with their clause readings and sources, the held cells with their published rationale), each score and each unit's verdict equal to the corpus, each total equal to the blocks', every link to a data file in evidence_cache/ or to a document by line pointing at a file that exists; no score changed
+          stdout == build_evidence_output.txt (md5 77a906d1)
+          stderr == (empty) (md5 d41d8cd9)
+
+[114] PASS  build_evidence.py --check rejects an evidence/ whose Status Quo report is replaced by another system's (negative control; exit 1 expected)
+          exit status 1, as expected
+          stdout == build_evidence_check_negative_output.txt (md5 2a2935ea)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 112 passed, 0 failed, 0 skipped (of 112).
+SUMMARY: 114 passed, 0 failed, 0 skipped (of 114).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.
