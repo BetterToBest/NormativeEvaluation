@@ -1,0 +1,169 @@
+Source: Freedom House, Freedom in the World 2026, country pages (as served 2026-10-18); text by evidence_cache_s71.html_text(); per page, the score header and question F1.
+
+=== https://freedomhouse.org/country/united-states/freedom-world/2026 (md5 b2f87650cb4063716e790e0b27136ee2)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+United States
+Free
+81
+100
+PR Political Rights
+32
+40
+CL Civil Liberties
+49
+60
+
+--- from line 466 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+3.00 3
+4.00 4
+
+=== https://freedomhouse.org/country/denmark/freedom-world/2026 (md5 9cea69213ebf3079f8346a2499f7bcb3)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+Denmark
+Free
+97
+100
+PR Political Rights
+40
+40
+CL Civil Liberties
+57
+60
+
+--- from line 342 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+4.00 4
+4.00 4
+
+=== https://freedomhouse.org/country/finland/freedom-world/2026 (md5 345d8bece208008e0d76f156db1ca194)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+Finland
+Free
+100
+100
+PR Political Rights
+40
+40
+CL Civil Liberties
+60
+60
+
+--- from line 342 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+4.00 4
+4.00 4
+
+=== https://freedomhouse.org/country/norway/freedom-world/2026 (md5 10543309944dd38c2335d517ab0e1fc7)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+Norway
+Free
+99
+100
+PR Political Rights
+39
+40
+CL Civil Liberties
+60
+60
+
+--- from line 342 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+4.00 4
+4.00 4
+
+=== https://freedomhouse.org/country/sweden/freedom-world/2026 (md5 96bca50bffe801d7a71f8289a1a24192)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+Sweden
+Free
+99
+100
+PR Political Rights
+40
+40
+CL Civil Liberties
+59
+60
+
+--- from line 342 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+4.00 4
+4.00 4
+
+=== https://freedomhouse.org/country/china/freedom-world/2026 (md5 eaa075facf305c7389e3d40664b2c22b)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+China
+Not Free
+9
+100
+PR Political Rights
+-2
+40
+CL Civil Liberties
+11
+60
+
+--- from line 459 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+1.00 1
+4.00 4
+
+=== https://freedomhouse.org/country/singapore/freedom-world/2026 (md5 aa928f54fc39bb23506b8a6e3dff047a)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+Singapore
+Partly Free
+48
+100
+PR Political Rights
+19
+40
+CL Civil Liberties
+29
+60
+
+--- from line 342 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+1.00 1
+4.00 4
+
+=== https://freedomhouse.org/country/qatar/freedom-world/2026 (md5 426043ccedd57c356af6f32a8f944a6b)
+--- from line 101 (anchor /^Freedom in the World 2026$/)
+Freedom in the World 2026
+Qatar
+Not Free
+25
+100
+PR Political Rights
+7
+40
+CL Civil Liberties
+18
+60
+
+--- from line 342 (anchor /^F1$/)
+F1
+1.00-4.00 pts 0-4 pts
+Is there an independent judiciary?
+1.00 1
+4.00 4

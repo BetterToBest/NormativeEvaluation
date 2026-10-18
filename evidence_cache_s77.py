@@ -1,0 +1,221 @@
+#!/usr/bin/env python3
+"""
+evidence_cache_s77.py -- NEEC stage 3b (S60): the sources the blind re-read of C2.6, C3.6 and C4.6 for the six
+configured economies reads
+=================================================================================================================
+Session 77. The blind re-read of C2.6 Civil Liberties and Rule of Law, C3.6 Productive and Innovative Capacity and C4.6
+Harm Internalization for the six configured national economies (ledger S60; decisions 69.1, 69.2): Status Quo Market
+Capitalism (the United States), Nordic Social Democracy (Denmark, Finland, Norway, Sweden), Centrally Planned
+Socialism (the Soviet Union), and State Capitalism in China, Singapore and Qatar. Session 70 left the law-in-force
+clauses as leads (evidence_cache/C2.6/law_in_force_notes_s70.md, C4.6/notes_s70.md); this script caches the measures
+and the law in force the readings rest on, before any prior reading of these units on these criteria was opened:
+
+  C2.6 clause 1: Freedom House's civil-liberties score (0-60) and its 1-7 rating for the Soviet years, V-Dem's Civil
+    Liberties Index (the cross-check), both as Our World in Data serves them, and Freedom in the World 2026's country
+    pages (the score and question F1, "Is there an independent judiciary?").
+  C2.6 clauses 2 and 3, the law in force: the United States (42 CFR 482.13(b)(2); Cruzan v. Director (1990); Virginia
+    Code 22.1-271.2, a school-entry vaccination requirement); Denmark (the Health Act's section 15, the Epidemics Act
+    of 2021, the Psychiatry Act); Finland (the Patients' Rights Act's section 6, the Communicable Diseases Act's
+    sections 48, 60, 63 and its appeal provisions); Sweden (the Patient Act's chapter 4, section 2, the Communicable
+    Diseases Act's chapters 3, 5 and 8); Norway (the Patient and User Rights Act's section 4-1, from the Directorate
+    of Health's annotated text: lovdata.no refused the container); the Soviet Union (the Fundamentals of Health
+    Legislation of 1969, articles 34 to 36, and Wikipedia's article on Soviet punitive psychiatry for the practice);
+    China (the Basic Medical and Health Care Promotion Law's article 32, the Civil Code's articles 1219 and 1220, the
+    Mental Health Law's articles 28 to 35 and 82, the Law on the Prevention and Treatment of Infectious Diseases as
+    revised in 2025); Singapore (the Infectious Diseases Act 1976, sections 15, 21K and 47). Qatar's statutes are
+    served by almeezan.qa as a client-rendered application this container could not read (evidence_cache/C2.6/
+    sources_s77.md).
+
+The script makes no reading and changes no score.
+
+Modes
+  python3 evidence_cache_s77.py            offline: verify every cached file's md5 against FILES
+  python3 evidence_cache_s77.py --fetch    re-fetch every source (network) and print md5s
+Prints file names and summaries only.
+"""
+import csv
+import io
+import os
+import re
+import sys
+
+import evidence_cache_s71 as e71
+import evidence_cache_s73 as e73
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+CACHE = os.path.join(HERE, "evidence_cache")
+OWID = "https://ourworldindata.org/grapher/{}.csv?v=1&csvType=full&useColumnShortNames=true"
+FH = "https://freedomhouse.org/country/{}/freedom-world/2026"
+FH_PAGES = ("united-states", "denmark", "finland", "norway", "sweden", "china", "singapore", "qatar")
+ECON_ISO = ("USA", "DNK", "FIN", "NOR", "SWE", "CHN", "SGP", "QAT")
+SU_ISO = ("OWID_USS", "RUS")
+RETSINFO = "https://www.retsinformation.dk/eli/lta/{}/xml"
+FINLEX = "https://opendata.finlex.fi/finlex/avoindata/v1/akn/fi/act/statute-consolidated/{}"
+RIKSDAG = "https://data.riksdagen.se/dokument/{}.text"
+SSO = "https://sso.agc.gov.sg/Act/IDA1976?ProvIds={}"
+ZHWS = "https://zh.wikisource.org/zh-hans/{}"
+
+# (file, kind, source, spec). kind: "owid" (spec: (iso codes, first year, last year)); "html", "xml" (the page's text by
+# evidence_cache_s71.html_text()), "akn" (the first Akoma Ntoso act of a Finlex consolidated-statute response),
+# "txt" (the text as served), each with spec a list of (anchor regex, lines): the passage is the `lines` lines from
+# the first line the anchor matches, headed by its line number in that text. "fh": the Freedom in the World 2026
+# country pages, the score header and question F1.
+EXTRACTS = [
+    ("C2.6/owid_fh_civil_liberties_score_s77.csv", "owid", OWID.format("civil-liberties-score-fh"),
+     (ECON_ISO, 2015, 2025)),
+    ("C2.6/owid_fh_civil_liberties_rating_su_s77.csv", "owid", OWID.format("civil-liberties-rating-fh"),
+     (SU_ISO, 1972, 1991)),
+    ("C2.6/owid_vdem_civil_liberties_s77.csv", "owid", OWID.format("civil-liberties-index-vdem"),
+     (ECON_ISO + SU_ISO, 1960, 2025)),
+    ("C2.6/fh_fiw2026_cl_f1_extract.txt", "fh", FH, None),
+    ("C2.6/us_law_c26_extract.txt", "multi",
+     [("42 CFR 482.13 (Cornell LII)", "html", "https://www.law.cornell.edu/cfr/text/42/482.13",
+       [(r"^\(2\) The patient or his or her representative", 1)]),
+      ("Cruzan v. Director, Missouri Dept. of Health, 497 U.S. 261 (1990) (Cornell LII)", "html",
+       "https://www.law.cornell.edu/supremecourt/text/497/261",
+       [(r"constitutionally protected liberty interest in refusing unwanted medical treatment may be inferred", 1)]),
+      ("Code of Virginia 22.1-271.2", "html",
+       "https://law.lis.virginia.gov/vacode/title22.1/chapter14/section22.1-271.2/",
+       [(r"^A\. No student shall be admitted by a school unless", 6)])]),
+    ("C2.6/dk_law_c26_extract.txt", "multi",
+     [("Sundhedsloven, LBK nr 275 af 12/03/2025", "xml", RETSINFO.format("2025/275"), [(r"^§ 15\.$", 11)]),
+      ("Epidemiloven, LOV nr 285 af 27/02/2021", "xml", RETSINFO.format("2021/285"),
+       [(r"^§ 12\.$", 25), (r"^§ 14\.$", 9), (r"^§ 15\.$", 9), (r"^§ 18\.$", 9), (r"^§ 23\.$", 27),
+        (r"inden 5 søgnedage efter at der er truffet en afgørelse", 5)]),
+      ("Psykiatriloven, LBK nr 1045 af 18/09/2024", "xml", RETSINFO.format("2024/1045"),
+       [(r"henholdsvis 3, 10, 20 og 30 dage, efter at frihedsberøvelsen", 1),
+        (r"skal efter anmodning fra patienten eller patientrådgiveren indbringe", 1)])]),
+    ("C2.6/fi_law_c26_extract.txt", "multi",
+     [("Laki potilaan asemasta ja oikeuksista 785/1992", "akn", FINLEX.format("1992/785"), [(r"^6 §$", 7)]),
+      ("Tartuntatautilaki 1227/2016", "akn", FINLEX.format("2016/1227"),
+       [(r"^48 §$", 7), (r"^60 §$", 4), (r"^63 §$", 4), (r"^Muutoksenhaku$", 12)])]),
+    ("C2.6/se_law_c26_extract.txt", "multi",
+     [("Patientlag (2014:821)", "txt", RIKSDAG.format("sfs-2014-821"), [(r"^2 § Hälso- och sjukvård får inte ges", 13)]),
+      ("Smittskyddslag (2004:168)", "txt", RIKSDAG.format("sfs-2004-168"),
+       [(r"^9 § Om det finns risk för spridning", 35), (r"^3 § Om någon bär på eller misstänks bära", 25),
+        (r"^8 kap\. Överklagande", 38)])]),
+    ("C2.6/no_law_c26_extract.txt", "multi",
+     [("Pasient- og brukerrettighetsloven 4-1, from Helsedirektoratet's annotated text", "html",
+       "https://www.helsedirektoratet.no/rundskriv/pasient-og-brukerrettighetsloven-med-kommentarer/"
+       "samtykke-til-helsehjelp", [(r"^§ 4-1 \. Hovedregel om samtykke", 2), (r"^I enkelte tilfeller er det gitt unntak", 1)])]),
+    ("C2.6/su_law_c26_extract.txt", "multi",
+     [("Основы законодательства Союза ССР и союзных республик о здравоохранении (1969), ru.wikisource.org", "html",
+       "https://ru.wikisource.org/wiki/Основы_законодательства_Союза_ССР_и_союзных_республик_о_здравоохранении",
+       [(r"^В интересах излечения больного и с его согласия", 1), (r"^Хирургические операции производятся и", 3),
+        (r"^В целях охраны здоровья населения органы здравоохранения обязаны", 5)]),
+      ("Punitive psychiatry in the Soviet Union, en.wikipedia.org", "html",
+       "https://en.wikipedia.org/wiki/Punitive_psychiatry_in_the_Soviet_Union",
+       [(r"^The USSR did not have legislative acts regulating psychiatry until 1988", 1),
+        (r"^On 15 May 1969, a Soviet Government decree", 1),
+        (r"extrajudicial procedure of admission to psychiatric hospitals", 1)])]),
+    ("C2.6/cn_law_c26_extract.txt", "multi",
+     [("中华人民共和国基本医疗卫生与健康促进法, zh.wikisource.org", "html", ZHWS.format("中华人民共和国基本医疗卫生与健康促进法"),
+       [(r"^第三十二条", 3)]),
+      ("中华人民共和国民法典, zh.wikisource.org", "html", ZHWS.format("中华人民共和国民法典"),
+       [(r"^第一千二百一十九条", 1), (r"^第一千二百二十条", 1)]),
+      ("中华人民共和国精神卫生法, zh.wikisource.org", "html", ZHWS.format("中华人民共和国精神卫生法"),
+       [(r"^第三十条", 7), (r"^第三十一条", 1), (r"^第三十二条", 1), (r"^第三十五条", 1), (r"^第八十二条", 1)]),
+      ("中华人民共和国传染病防治法 (2025 revision), zh.wikisource.org", "html", ZHWS.format("中华人民共和国传染病防治法"),
+       [(r"2025年4月30日", 1), (r"^（一）对甲类传染病患者、病原携带者，予以隔离治疗", 13), (r"^第六十四条", 3)])]),
+    ("C2.6/sg_law_c26_extract.txt", "multi",
+     [("Infectious Diseases Act 1976, section 15 (sso.agc.gov.sg)", "html", SSO.format("pr15-"),
+       [(r"^15\. —\(1\)", 1), (r"^\(2\)\s+The Director-General of Health may order the following persons to remain", 1)]),
+      ("Infectious Diseases Act 1976, section 21K", "html", SSO.format("pr21K-"), [(r"^21K\.", 1)]),
+      ("Infectious Diseases Act 1976, section 47", "html", SSO.format("pr47-"), [(r"^47\. —\(1\)", 1)])]),
+]
+
+FILES = {
+}
+
+
+def owid_rows(raw, isos, y0, y1):
+    rows = list(csv.reader(io.StringIO(raw.decode("utf-8"))))
+    return [rows[0]] + [r for r in rows[1:] if r[1] in isos and y0 <= int(r[2]) <= y1]
+
+
+def text_of(raw, kind):
+    if kind in ("html", "xml"):
+        return e71.html_text(raw)
+    if kind == "akn":
+        return e71.html_text(raw.split(b"</akomaNtoso>")[0])
+    return raw.decode("utf-8", "replace").replace("\r\n", "\n")
+
+
+def grab(text, anchors):
+    """Each anchor's passage: `n` non-empty lines from the first line the regex matches, headed by its line number."""
+    lines = text.splitlines()
+    out = []
+    for rx, n in anchors:
+        hit = next((i for i, ln in enumerate(lines) if re.search(rx, ln)), None)
+        if hit is None:
+            raise RuntimeError(f"anchor not found: {rx}")
+        got, j = [], hit
+        while len(got) < n and j < len(lines):
+            if lines[j].strip():
+                got.append(lines[j].rstrip())
+            j += 1
+        out += [f"--- from line {hit + 1} (anchor /{rx}/)"] + got + [""]
+    return out
+
+
+def fetch_files():
+    out, raw_of = {}, {}
+
+    def raw(url):
+        if url not in raw_of:
+            raw_of[url] = e73.get(url, ua=True)
+        return raw_of[url]
+
+    for name, kind, src, *spec in EXTRACTS:
+        spec = spec[0] if spec else None
+        if kind == "owid":
+            isos, y0, y1 = spec
+            r = raw(src)
+            buf = io.StringIO()
+            csv.writer(buf, lineterminator="\n").writerows(owid_rows(r, isos, y0, y1))
+            out[name] = buf.getvalue().encode("utf-8")
+        elif kind == "fh":
+            lines = ["Source: Freedom House, Freedom in the World 2026, country pages (as served 2026-10-18); text by "
+                     "evidence_cache_s71.html_text(); per page, the score header and question F1.", ""]
+            for page in FH_PAGES:
+                r = raw(src.format(page))
+                lines += [f"=== {src.format(page)} (md5 {e71.md5(r)})"]
+                lines += grab(e71.html_text(r), [(r"^Freedom in the World 2026$", 11), (r"^F1$", 5)])
+            out[name] = "\n".join(lines).encode()
+        else:
+            lines = ["Sources as served 2026-10-18; text by evidence_cache_s71.html_text() (an Akoma Ntoso response: "
+                     "its first act; a riksdagen.se .text file: as served); passages headed by line number and anchor.",
+                     ""]
+            for title, k, url, anchors in src:
+                r = raw(url)
+                lines += [f"=== {title}: {url} (md5 {e71.md5(r)})"] + grab(text_of(r, k), anchors)
+            out[name] = "\n".join(lines).encode()
+    return out
+
+
+def fetch():
+    for name, data in fetch_files().items():
+        path = os.path.join(CACHE, name)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "wb") as f:
+            f.write(data)
+        print(f'    "{name}": "{e71.md5(data)}",')
+
+
+def check():
+    ok = True
+    for name, want in FILES.items():
+        path = os.path.join(CACHE, name)
+        good = os.path.isfile(path) and e71.md5(open(path, "rb").read()) == want
+        ok &= good
+        print(f"  {'PASS' if good else 'FAIL'} {name}: md5 {want[:8]}")
+    ok &= set(FILES) == {e[0] for e in EXTRACTS}
+    print("SUMMARY: " + ("ALL PASS" if ok and FILES else "SOME FAILED"))
+    return ok and bool(FILES)
+
+
+if __name__ == "__main__":
+    if "--fetch" in sys.argv:
+        fetch()
+    else:
+        sys.exit(0 if check() else 1)
