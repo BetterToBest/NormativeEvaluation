@@ -1,0 +1,6 @@
+CHECK 24 files in evidence/: the index and 23 system reports
+  667 criterion sections: 427 read by the pass, 69 new in v2.0, 171 held at the published score
+  104 close calls shown; 598 published rationales linked by line, 598 quoted; 495 of 496 pass units linked to their record's line
+  18 units shown on the clause structure they were read on (it differs from v2.0's)
+  373 links to data files and to documents by line; 0 dangling
+EVIDENCE REPORTS CHECKED.
