@@ -4,5 +4,8 @@ final_pass.py --selftest: the seven blind groups' final readings laid over the r
   PASS 221 blind units, no overlap; the pass's 427 merged units and 69 class N units keep their keys
   PASS every blind unit replaces the pass's reading of the same cell
   PASS every blind unit has one status per v2.0 clause with estimate and source, and follows D28 (0.0 only on a stated whole-criterion reason)
+  PASS the owner's layer (owner_s79.py, decisions 79.1 to 79.4) revises 7 final units, one clause each, carrying every other clause
+  PASS each revised unit moves from 0.5 to 1.0 by D28 and keeps the prior reading as its flag
+  PASS every revised unit has one status per v2.0 clause with estimate and source, and follows D28
 
 FINAL PASS MODULE SELFTEST: ALL CHECKS PASSED.

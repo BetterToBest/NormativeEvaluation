@@ -1,6 +1,6 @@
-  FAIL neec_corpus_v2.json equals what the generator produces
-  PASS neec_scores_v2.csv equals what the generator produces
-  PASS summary_blocks_v2.json equals what the generator produces
+  FAIL neec_corpus_v2_s78_snapshot.json equals what the generator produces
+  PASS neec_scores_v2_s78_snapshot.csv equals what the generator produces
+  PASS summary_blocks_v2_s78_snapshot.json equals what the generator produces
   PASS NEEC_FinalApplication_s78.md equals what the generator produces
   PASS the corpus carries the final verdict of each of the 496 units
   PASS the corpus differs from the Session 65 snapshot in exactly the 28 cells the groups changed

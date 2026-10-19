@@ -91,9 +91,14 @@ class Ctx:
             self.csv = {r["system"]: r for r in csv.DictReader(f)}
         # every unit of the pass with the blind groups' final readings laid over it (Session 78), and the part or group that
         # read it last; `pass_part` is the pass's part (the blind groups re-read units the pass had read)
-        units, part, new_units, new_part = fp.final_state(self.p)
+        # Session 79: the owner's decisions 79.1 to 79.4 laid over them (final_pass.owner_state); `final_part` is the part or
+        # blind group that read each unit before the owner's layer
+        units, part, new_units, new_part, final_part = fp.owner_state(self.p)
         self.units = {**units, **new_units}
         self.part = {**part, **new_part}
+        self.final_part = final_part
+        with redirect_stdout(io.StringIO()):
+            self.owner = pc.load("owner_s79", "owner_s79.py")
         self.pass_part = {**self.p.part_of, **{k: self.last.TAG for k in self.last.NEW_UNITS}}
         self.parts = {tag: (mod, path, sess) for (tag, mod, path, sess), m in zip(pc.PARTS, self.p.mods)}
         self.mod_of = dict(zip([t for t, _, _, _ in pc.PARTS], self.p.mods))
@@ -118,8 +123,11 @@ class Ctx:
         """'group 2.11 (Session 65)', or with the blind group: '... and re-read blind in Session 71'."""
         pt = self.pass_part[(code, crit)]
         txt = f"{part_label(pt)} (Session {self.sess[pt]})"
-        bt = self.part[(code, crit)]
-        return txt + (f" and re-read blind in Session {self.sess[bt]}" if bt != pt else "")
+        bt = self.final_part[(code, crit)]
+        txt += f" and re-read blind in Session {self.sess[bt]}" if bt != pt else ""
+        if self.part[(code, crit)] == self.owner.TAG:
+            txt += f", then raised by the owner's decision {self.owner.CHANGES[(code, crit)]['decision']} (Session {self.owner.SESSION})"
+        return txt
 
     def blob(self, path, line=None):
         u = f"{self.repo}/blob/main/{quote(path)}"
@@ -236,7 +244,7 @@ def cell(ctx, code, crit, stats):
     out = [f'<a id="{anchor(crit)}"></a>', f'### {crit} {c["name"]}: {fmt(v)} ({WORD[v]})', ""]
     if unit is not None:
         assert unit["verdict"] == v, f"{code} {crit}: the unit's verdict {unit['verdict']} is not the corpus score {v}"
-        blind = ctx.part[(code, crit)] in ctx.blind_record
+        blind = ctx.part[(code, crit)] in ctx.blind_record or ctx.part[(code, crit)] == ctx.owner.TAG
         if pub is None:
             stats["new"] += 1
             prov = (f"New in v2.0: scored for the first time in {ctx.read_in(code, crit)}, "
@@ -296,9 +304,13 @@ def cell(ctx, code, crit, stats):
         else:
             script = ctx.parts[tag][1]
             refs.append(f"Applied by decision {tag}: [{script}]({ctx.blob(script)})")
-        btag = ctx.part[(code, crit)]
+        btag = ctx.final_part[(code, crit)]
         if btag in ctx.blind_record:
             refs.append(f"Blind re-read record: [{ctx.blind_record[btag]}]({ctx.blob(ctx.blind_record[btag])})")
+        if ctx.part[(code, crit)] == ctx.owner.TAG:
+            d = ctx.owner.CHANGES[(code, crit)]["decision"]
+            refs.append(f"Applied by the owner's decision {d}: [{ctx.owner.RECORD}]({ctx.blob(ctx.owner.RECORD)}), "
+                        f"[owner_s79.py]({ctx.blob('owner_s79.py')})")
     if refs:
         out += ["  \n".join(refs), ""]
     if pub is not None:

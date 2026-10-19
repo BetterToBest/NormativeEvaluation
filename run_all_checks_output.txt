@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 133 reproducibility checks
+run_all_checks.py -- 135 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 133 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 4b0caff4)
+          README.md == README.md (md5 6891667a)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -436,12 +436,12 @@ run_all_checks.py -- 133 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [113] PASS  build_evidence.py --check: the 23 per-system evidence reports and their index (evidence/) equal what the script generates from the rescoring pass, the v2 corpus, scores and blocks and the scoring documents: 667 criterion sections (the pass's units with their clause readings and sources, the held cells with their published rationale), each score and each unit's verdict equal to the corpus, each total equal to the blocks', every link to a data file in evidence_cache/ or to a document by line pointing at a file that exists; no score changed
-          stdout == build_evidence_output.txt (md5 13573eff)
+          stdout == build_evidence_output.txt (md5 f471e892)
           stderr == (empty) (md5 d41d8cd9)
 
 [114] PASS  build_evidence.py --check rejects an evidence/ whose Status Quo report is replaced by another system's (negative control; exit 1 expected)
           exit status 1, as expected
-          stdout == build_evidence_check_negative_output.txt (md5 df3a7025)
+          stdout == build_evidence_check_negative_output.txt (md5 b9d0203c)
           stderr == (empty) (md5 d41d8cd9)
 
 [115] PASS  blind_review.py --selftest: compare_unit agrees only when every clause status and the verdict match; blind_view exposes no verdict, status, estimate or source for a real unit of each Sonnet-read part ((2.9) C3.1, (2.10) C4.2, (2.11) C1.1)
@@ -508,20 +508,29 @@ run_all_checks.py -- 133 reproducibility checks
           stdout == blind_s77_output.txt (md5 10a7b073)
           stderr == (empty) (md5 d41d8cd9)
 
-[131] PASS  final_pass.py --selftest: the seven blind groups' FINAL dictionaries (221 units: 24, 23, 33, 31, 41, 51, 18) load, overlap nowhere, replace the pass's reading of the same cell (the 26 published criteria's merged units and the 69 class N units), and each has one status per v2.0 clause and follows D28
-          stdout == final_pass_selftest_output.txt (md5 57bab716)
+[131] PASS  final_pass.py --selftest: the seven blind groups' FINAL dictionaries (221 units: 24, 23, 33, 31, 41, 51, 18) load, overlap nowhere, replace the pass's reading of the same cell (the 26 published criteria's merged units and the 69 class N units), and each has one status per v2.0 clause and follows D28; the owner's layer of Session 79 (owner_s79.py) revises seven final units, one clause each, 0.5 to 1.0 by D28, each keeping its prior reading as its flag
+          stdout == final_pass_selftest_output.txt (md5 7ca80b6f)
           stderr == (empty) (md5 d41d8cd9)
 
-[132] PASS  apply_final_s78.py --check: stage 3b, the generator that applies the blind re-read: the 23 entries on the 29 criteria (neec_corpus_v2.json), their totals, failures and tiers (neec_scores_v2.csv), the site's blocks (summary_blocks_v2.json) and the record (NEEC_FinalApplication_s78.md) equal what it produces; the corpus carries each unit's final verdict and differs from the Session 65 snapshot in exactly the 28 cells the groups changed (5, 2, 8, 3, 6, 0 and 4 by group); the tier changes are Universal Basic Income's and Sovereign Wealth Fund Statism's; Participatory Economics is first alone at 16.5; CCO-PTF-CIP-SZH's vector is unchanged
-          stdout == apply_final_s78_output.txt (md5 be00bb0f)
+[132] PASS  apply_final_s78.py --check: stage 3b, the generator that applies the blind re-read: the 23 entries on the 29 criteria, their totals, failures and tiers and the site's blocks, kept from Session 79 as the Session 78 snapshots (neec_corpus_v2_s78_snapshot.json and its two companions), and the record (NEEC_FinalApplication_s78.md) equal what it produces; the corpus carries each unit's final verdict and differs from the Session 65 snapshot in exactly the 28 cells the groups changed (5, 2, 8, 3, 6, 0 and 4 by group); the tier changes are Universal Basic Income's and Sovereign Wealth Fund Statism's; Participatory Economics is first alone at 16.5; CCO-PTF-CIP-SZH's vector is unchanged
+          stdout == apply_final_s78_output.txt (md5 cf3be5f3)
           stderr == (empty) (md5 d41d8cd9)
 
-[133] PASS  apply_final_s78.py --check rejects a neec_corpus_v2.json that is the Session 65 snapshot (negative control; exit 1 expected)
+[133] PASS  apply_final_s78.py --check rejects a Session 78 corpus that is the Session 65 snapshot (negative control; exit 1 expected)
           exit status 1, as expected
-          stdout == apply_final_s78_check_negative_output.txt (md5 32679e2d)
+          stdout == apply_final_s78_check_negative_output.txt (md5 1a2459d5)
+          stderr == (empty) (md5 d41d8cd9)
+
+[134] PASS  apply_owner_s79.py --check: the owner's decisions 79.1 to 79.4 applied: the v2 corpus, scores, blocks and NEEC_OwnerDecisions_s79.md equal what it produces; the corpus differs from the Session 78 snapshot in exactly seven cells, each 0.5 to 1.0 (CCO-PTF-CIP-SZH C1.2a, C2.5 and C3.4; Integral, Participatory Economics, Degrowth Economics and Ostrom-Style Commons Governance C3.4), each a close call toward 0.5; no tier changes; CCO-PTF-CIP-SZH first alone at 17.5, Participatory Economics 17.0; without the decisions, Participatory Economics first at 16.5
+          stdout == apply_owner_s79_output.txt (md5 26c3b7b2)
+          stderr == (empty) (md5 d41d8cd9)
+
+[135] PASS  apply_owner_s79.py --check rejects a neec_corpus_v2.json that is the Session 78 snapshot (negative control; exit 1 expected)
+          exit status 1, as expected
+          stdout == apply_owner_s79_check_negative_output.txt (md5 03161430)
           stderr == (empty) (md5 d41d8cd9)
 
 ============================================================================================
-SUMMARY: 133 passed, 0 failed, 0 skipped (of 133).
+SUMMARY: 135 passed, 0 failed, 0 skipped (of 135).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

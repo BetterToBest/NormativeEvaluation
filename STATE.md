@@ -1,14 +1,14 @@
 # NEEC state
 
-**Next session (79): Opus 5.5 at high** (ledger S41; judgment prose on settled scores: Report v2.0 Part I, one domain per
-group, from `neec_scores_v2.csv` and `evidence/`). Reason: the scores are now final under stage 3b, so the prose is the
-judgment work the routing sends to Opus; high rather than xhigh, because no reading is contested. Sonnet 5.5 would write
-the tables but not the argument. Send `Continue NEEC.`
+**Next session (80): Opus 5.5 at high** (ledger S63; build the outside blind review: the kit and source packs, the leak
+check, the runner with its 20-minute push, the pre-registered comparison; launch on Runpod). Reason: whether the kit is
+truly blind is judgment work, and the Ostrom pilot leaked through a marker; high rather than xhigh, as nothing is scored
+in that session. Before it: the owner's setup (ledger S66). Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 78 (ledger S61: the blind re-read's final readings of Sessions 71 to 77 applied by
-`apply_final_s78.py`; 28 verdict changes, `NEEC_FinalApplication_s78.md`; two tier changes, Participatory Economics alone
-first) (2026-10-18). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 79 (the owner's decisions 79.1 to 79.4 applied by `apply_owner_s79.py`,
+`NEEC_OwnerDecisions_s79.md`: seven cells 0.5 to 1.0, CCO-PTF-CIP-SZH first at 17.5; the outside blind review planned,
+`NEEC_OutsideReview_Plan_s79.md`) (2026-10-19). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -81,7 +81,15 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   score, each clause's status, reading and source with the `evidence_cache/` files linked, the close call, the pass's note, and links by line to the
   pass record and the published (v1) rationale (quoted). 667 sections: 427 re-read, 69 new in v2.0, 171 held (no unit reads them; the published
   rationale is shown). Never edited by hand (check 113).
-- **Standing now** (Session 78, ledger S61; published provisionally on the site, `NEEC_FinalApplication_s78.md`, section 3).
+- **Standing now** (Session 79; published provisionally on the site, `NEEC_OwnerDecisions_s79.md`, section 3). The
+  Session 78 state with the owner's decisions 79.1 to 79.4 laid over it (`final_pass.owner_state()`, `apply_owner_s79.py`):
+  seven cells 0.5 to 1.0, CCO-PTF-CIP-SZH C1.2a, C2.5 and C3.4, and C3.4 for Integral, Participatory Economics, Degrowth
+  Economics and Ostrom-Style Commons Governance. **CCO-PTF-CIP-SZH 17.5 alone first**, Participatory Economics 17.0,
+  Integral 16.0, Nordic Social Democracy and Degrowth 15.5, Market Socialism, Sovereign Wealth Fund Statism and Ostrom
+  Commons 15.0; the rest as below. No tier changes (8, 7, 8). CCO-PTF-CIP-SZH's 17.5 includes 2.0 from four owner
+  decisions (58.1, 79.1 to 79.3); on the readings alone it would stand at 15.5. Every revised cell keeps its prior reading
+  as a close call (160 close calls in all). The Session 78 files are kept as `*_s78_snapshot.*`.
+- **Standing before the owner's decisions of Session 79** (Session 78, ledger S61; `NEEC_FinalApplication_s78.md`, section 3).
   The 23 entries on the 29 criteria after the blind re-read's final readings (Sessions 71 to 77) were applied by
   `apply_final_s78.py`: **Participatory Economics 16.5 alone first**, CCO-PTF-CIP-SZH 16.0 (0 failures), Nordic Social
   Democracy and Integral 15.5, Market Socialism, Degrowth and Sovereign Wealth Fund Statism 15.0, Ostrom Commons 14.5,
@@ -293,9 +301,17 @@ site's `provisional_note` stays until Session 82; the Report and Paper prose (Se
 above, not the pass's; and the evidence reports now carry each blind-read unit's final reading with a link to its blind record
 (`NEEC_BlindReview_s7x.md`, no per-unit line: the records are tables).
 
-1. **Session 79: Opus 5.5 at high** (ledger S41; judgment prose on settled scores). Reason: stage 3b is complete and the
-   scores are final, so Report v2.0 Part I is the judgment work the routing sends to Opus; high rather than xhigh, as no
-   reading is contested. See item 8.
+**Done: Session 79** (Opus 5.5 at high, at the owner's request in place of S41). The owner took up the CCO-PTF-CIP-SZH
+scores below 1.0 and asked that three be reconsidered; after the reconsideration he decided to apply them now and to adopt
+a rule for C3.4's clause 4 that reaches four other entries (decisions 79.1 to 79.4, `NEEC_OwnerDecisions_s79.md`). Applied
+by generator: `owner_s79.py` holds the seven revised units (one clause each, the others carried), `final_pass.owner_state()`
+lays them over the final readings, `apply_owner_s79.py` writes the v2 files and the record; `apply_final_s78.py` now writes
+the Session 78 snapshots; `build_evidence.py` names the owner's decision and links its record; `evidence/`, `docs/` and
+`README.md` regenerated; harness v49, 135 checks. The owner then set the next step: an outside blind review before any
+prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second instrument. Decided: below.
+
+1. **Session 80: Opus 5.5 at high** (ledger S63; the outside review's kit, runner and launch). Reason: the blindness of the
+   kit is judgment work; nothing is scored. See item 8. The owner's setup first (ledger S66).
 2. (Sessions 72 to 78, done above.)
 3. (Session 74, done above.)
 4. (Session 75, done above.)
@@ -319,19 +335,28 @@ above, not the pass's; and the evidence reports now carry each blind-read unit's
    changes: Status Quo, China and Singapore 0.5 to 1.0, Centrally Planned Socialism 0.0 to 0.5; decision 77.3; the same
    form as Session 76's), and the pass's `UNITS` form
    carries each unit's `flag` and `zero`. Then rerun `apply_pass_s65.py`'s logic as a new generator for the v2 files.
-8. **Session 79: Opus 5.5 at high** (ledger S41; judgment prose, now on settled scores). Report v2.0 Part I, one domain
-   per group, from `neec_scores_v2.csv` and the domain's criteria sections of the rescoring records (decision 52.8);
-   `evidence/` carries the same units per system and may serve as the source tables. Checkpoint after each domain.
-9. **Session 80: Opus 5.5 at high** (ledger S42). Paper v2.0 disclosures: the simulation overhaul (52.9); that Integral
-    was read on its white paper of December 2025; the accelerated groups' limits as the re-read leaves them; that some
-    judgments were first made on Sonnet 5.5 and re-read blind on Opus 5.5 (decision 69.1/D52, D53).
-10. **Session 81: Opus 5.5 at high** (ledger S44). The limits page, from the open items below (a) to (d): write only what
-    the re-read leaves open; an item it resolves is stated as resolved, with the record.
-11. **Session 82: Sonnet 5.5 at medium** (ledger S43). Land the drafts: remove `provisional_note` from `site/config.json`,
-    `python3 build_site.py`, the harness, open the pull request.
-12. **Session 83: Sonnet 5.5** (ledger S49; stage 5). The PDF from a committed build script.
+8. **Session 80: Opus 5.5 at high** (ledger S63). The outside blind review, built and launched
+   (`NEEC_OutsideReview_Plan_s79.md`, sections 3 to 6): the kit and per-unit source packs (primary sources only; no
+   score, reading, rationale, flag or record), `outside_kit_check.py` in the harness (fails on any leak), the runner
+   (Kimi K2.6 on a Runpod public endpoint, 4 at a time, resumable, budget guard, pushing `results/` and a heartbeat to
+   `BetterToBest/compassionism-sim-results`, `neec-outside-review/<run id>/`, every 20 minutes, stopping its own pod), the
+   Jev pass over every clause, the JSON schema, and the pre-registered comparison rules, committed before the run. Dry
+   run on three non-CCO units. Needs the owner's setup (S66).
+9. **Session 81: Sonnet 5.5 at medium** (ledger S64). Pull the results; `compare_outside.py`: agreement by unit and
+   clause, the reader's lean on the calibration set, Kimi against Jev against NEEC, stage B; the record.
+10. **Session 82: Opus 5.5 at xhigh** for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
+    each disagreement on the sources, by one rule for every entry; changes by generator; CCO-PTF-CIP-SZH's to the owner
+    (57.2); every outside result on an owner-decided unit is published either way (plan, section 6).
+11. **Before the prose** (Session 82, or the owner): settle ledger I9 (open item (e) below; its C3.4 clause 3 question
+    bears on decision 79.4's rule, which requires clauses 1 to 3 cleared) and the owner's half of I7; rerun the
+    weighting robustness analysis (`neec_weighting_robustness_analysis_v2.py`) on the final scores, since first place
+    rests on a 0.5 margin; then freeze the scores (a tag the prose cites).
+12. **Sessions 83 to 87, the prose and landing**, in the ledger's order: S41 Report v2.0 Part I (Opus 5.5 at high), S42
+    Paper v2.0 disclosures (Opus 5.5 at high; now also the owner's decisions, the standing with and without them, and
+    the outside review's result), S44 the limits page (Opus 5.5 at high), S43 land the drafts (Sonnet 5.5 at medium:
+    remove `provisional_note`, rebuild, harness, pull request), S49 the PDF (Sonnet 5.5).
 
-This order is also in the ledger (`steps` S53 to S61, S41 to S44, S49, each with its own model and effort; `next`); a
+This order is also in the ledger (`steps` S63 to S66, S41 to S44, S49, each with its own model and effort; `next`); a
 session that finishes early, runs long, or finds a group needs splitting updates both there and here.
 
 **Open items, each folded into a session above (none changes a verdict as recorded; each is a challenge route until
@@ -357,6 +382,24 @@ not its C4.5, so (e) is unchanged (`NEEC_BlindReview_s72.md`, section 9).
     (Session 67) lists the eight. The blind groups read CCO's units on their criteria under this rule (Session 75's
     C2.5 and Session 76's C2.6, C3.6 and C4.6 agreed at 0.5); Session 77's group held no CCO unit.
 14. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change needed.
+
+## Decided (Session 79; `NEEC_OwnerDecisions_s79.md`)
+
+From the owner (2026-10-19; ledger D58 to D60): **79.1** CCO-PTF-CIP-SZH C1.2a 0.5 to 1.0, read as decision 58.1 reads
+C3.2 (full backing: 91.1% at $60,000, every seed; BLEI Flourishing 76.2%); lifts no other CCO unit. **79.2** C2.5 0.5 to
+1.0: exit is leaving the system entirely; the early-exit equity haircut is a stability provision on an asset a non-member
+never accrues; changes no other verdict (Mutual Credit's forfeited credit balance stays short). **79.3** C3.4 0.5 to 1.0:
+a collapse is a breakdown an adjustment causes, not a smaller allowance's direct effect; the test fixed before the run is
+read afterwards, which the record discloses; changes no other entry. **79.4** C3.4 clause 4 is cleared where clauses 1 to
+3 are cleared and no record or model shows a collapse caused by an adjustment (as Georgism's): Integral, Participatory
+Economics, Degrowth Economics, Ostrom-Style Commons Governance 0.5 to 1.0; departs from protocol 2.3(b) for this clause.
+Each revised cell keeps its prior reading as a close call; reopening conditions below. **79.6** the next step is an
+outside blind review before any Report or Paper prose, on Runpod with auto-push, with Jev (`NEEC_OutsideReview_Plan_s79.md`).
+By this session: **79.5** (optional, tooling) the owner's layer is applied by `final_pass.owner_state()` and
+`apply_owner_s79.py`, not by a part of `pass_common.PARTS`; `apply_final_s78.py` keeps writing the Session 78 state as
+`neec_corpus_v2_s78_snapshot.json` and its two companions; harness v49, 135 checks. **79.7** (correction) Session 79's
+first reply to the owner said a raise of CCO-PTF-CIP-SZH's C3.4 meant Integral's "would need to be considered" too; the
+two rest on different clause statuses (short against not shown), and Integral's needs a rule of its own (79.4).
 
 ## Decided (Session 78; `NEEC_FinalApplication_s78.md`)
 
@@ -633,7 +676,10 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
-Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
+Session 79 added: ledger **D58** and **D59** (the owner's decisions 79.1 to 79.4, answered in the session; confirm in the
+ledger), **D60** (the outside review's scope and whether it may search; default: all 667 units in priority order, closed to
+the source packs), and step **S66**, the owner's setup before Session 80 (Runpod connector or key, the pod's secrets,
+network access). Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
 items outside stage 3b's scope (Next work, open item (e)). Sessions 72, 74, 76, 77 and 78 added nothing for the owner; Session 73's ledger D56 was confirmed (decision 74.1) and Session 75's
 ledger D57 (decision 76.1). Ledger I7's
 second item ("You review it", the Nordic finding) is the owner's; Session 74 read the finding (decision 74.5). Before
@@ -689,11 +735,14 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
 - **C3.3:** compound scenarios: degradation under 20% on every core function in at least three of four.
 - **C3.2** (1.0 by the owner's decision 58.1, flagged toward 0.5): an empirical study showing that the backing of the
   currency by creative output does not hold in real-world data. A simulation version does not reopen it.
-- **C3.4** (0.5, flagged toward 1.0): met on v5.6.0 and re-read (group 2.5, reading 3.11). Reopens if a version shows
-  no seed collapsing on reading 3.11's test, or if the owner adopts the flag's reading of a collapse.
-- **C1.2a** (0.5, flagged toward 1.0): v5.6.0 has a sourced consumption rule and shows 13.9% of participants at the bar
-  in the reference run (91.1% at full backing); reopens if the reference run shows 70%; the owner's d37 reasoning on
-  the backing may bear on it, under decision 58.2.
+- **C3.4** (1.0 by the owner's decision 79.3, flagged toward 0.5): reopens toward 0.5 on a run in which an adjustment
+  causes a breakdown (runaway prices, a run that fails).
+- **C1.2a** (1.0 by the owner's decision 79.1, flagged toward 0.5): as C3.2, an empirical study showing that the backing
+  by creative output does not hold in real-world data. A simulation version does not reopen it.
+- **C2.5** (1.0 by the owner's decision 79.2, flagged toward 0.5): the design's sources making a leaver worse off than a
+  non-member, or attaching a condition to leaving the Basic Unit system.
+- **C3.4 for Integral, Participatory Economics, Degrowth and Ostrom Commons** (1.0 by decision 79.4): an implementation
+  record or a model of the design's own adjustments showing a collapse an adjustment caused.
 - **C1.3** (0.5, S54-3.3; the owner's tenure note, 57.4): a version of the model with housing tenure and a housing-cost line that
   shows 88% of all agents stable over 5-year windows and housing costs at or under 30% of disposable income at 80% of
   the median, in the reference run.
