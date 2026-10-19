@@ -1,0 +1,10 @@
+outside kit: 696 blind reader prompts and 294 Jev states built by the runner's own functions; longest prompt 315054 characters
+  tier      0
+  record    0
+  owner     0
+  marker    0
+  stageb    0
+  system    0
+  verdict   0
+  structure 0
+SUMMARY: PASS, no leak found (0 hits)

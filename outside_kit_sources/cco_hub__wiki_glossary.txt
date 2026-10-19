@@ -1,0 +1,311 @@
+Research Glossary — Better To Best Research Hub 
+
+ Skip to main content 
+
+ Research Glossary
+
+ Comprehensive definitions for Creative Currency Octaves, Public Trust Foundations, Public Trust Housing, Social Zone Harmonization, Citizens Internet Portal, and the Compassionism framework
+
+ All content is open-access under CC BY 4.0 — authored by the author with contributions from Claude (Anthropic) — Version 1.1 — Last updated May 2026
+
+ All 
+ CCO 
+ PTF 
+ PTH 
+ SZH 
+ CIP 
+ Economics 
+ Governance 
+
+ Basic Units
+
+ BAY-sik YOO-nits
+
+ CCO 
+
+ The foundational supplementary currency in the CCO system, distributed universally to all residents regardless of work status. Basic units are pegged 1:1 to the primary currency (USD in a US implementation) but are restricted to essential expenditures — housing, food, healthcare, education, and transportation. They expire 35 days after distribution unless converted through productive activities via the conversion system. No means testing or work requirement applies to their distribution.
+
+ Example
+
+ Maria receives 1,200 basic units monthly. She uses them to pay rent at PTH housing, buy groceries at a PTF grocer, and cover her transit pass. Any unused units expire at the end of the cycle, incentivizing active participation in the local economy rather than hoarding.
+
+ Creative Currency Octaves (CCO)
+
+ kree-AY-tiv KUR-uhn-see OK-tavs
+
+ CCO 
+
+ A dual-currency economic system that provides universal basic income through restricted basic units while maintaining strong work incentives through a merit-based productive conversion system. Named for the octave-like doubling pattern of conversion capacities across advancement tiers — analogous to how each musical octave doubles the frequency of the previous one. CCO is designed to eliminate welfare cliffs, recognize diverse forms of value creation, and support a transition toward post-scarcity economic conditions.
+
+ Example
+
+ A city implementing CCO distributes basic units to every resident for essential needs, while community musicians, teachers, healthcare workers, and entrepreneurs can convert additional units into unrestricted primary currency based on the quality and volume of their contributions.
+
+ Octave Levels
+
+ OK-tav LEV-uhls
+
+ CCO 
+
+ Progressive advancement tiers in the CCO system that determine an individual's or business's conversion capacity — how much they can convert per cycle. Each octave level doubles the previous level's capacity (Base_Capacity × 2 n ). For individuals, advancement reflects sustained contribution, community engagement, skill development, and long-term commitment. For PTF businesses, octave capacity tracks market throughput — how much productive exchange is being facilitated. For individual creators and performers, octave advancement also functions as a public recognition system , recording achievement and community standing.
+
+ Example
+
+ Octave 1 allows 1,000 basic unit conversions monthly; Octave 2 allows 2,000; Octave 3 allows 4,000. A dedicated community educator who consistently teaches, mentors, and collaborates over several years may reach Octave 5 or 6, with conversion capacities of 16,000–32,000 basic units monthly.
+
+ Personal Multiplier Rates
+
+ PUR-suh-nuhl MUL-tuh-ply-ur RAYTS
+
+ CCO 
+
+ Quality-based conversion multipliers ranging from 1× to 14×+ that determine the value of each converted basic unit. Rates are not centrally assigned — they emerge from transparent market signals and structured community evaluation, with graduated scrutiny at each tier: 1× (productive, automatic approval), 1.618× (the Phi-Rate, for beautiful and productive work), 2×–4× (efficient, inventive, committee-assessed), 5×–6× (high quality, expert panel), 7×–9×+ (exquisite, multi-stakeholder evaluation). Combined with octave levels, multiplier rates form the dual-tier incentive system that rewards both sustained participation and exceptional quality .
+
+ Example
+
+ Lisa has a 6× multiplier for her innovative teaching methods and recognized community leadership. When she converts 1,000 basic units through educational work, she receives 6,000 primary currency units — while a new community contributor at 1× receives 1,000 for the same volume of productive work.
+
+ Phi-Rate (1.618×)
+
+ FY-rayt
+
+ CCO 
+
+ A special multiplier tier at 1.618× — the golden ratio — applied when a contribution is assessed as both functionally effective and aesthetically beautiful. The Phi-Rate reflects the philosophical position that beauty and utility are both genuine, measurable dimensions of value that conventional economic systems systematically undercount. It sits between the baseline 1× (productive) and 2× (efficient/inventive) tiers, and requires peer review for the aesthetic quality dimension. The golden ratio was chosen because it appears throughout natural systems, architectural proportion, and artistic composition, symbolizing the harmony between function and form that Compassionism seeks to reward.
+
+ Example
+
+ A craftsperson who produces furniture that is both structurally sound and widely recognized for its aesthetic design qualifies for the Phi-Rate. A municipal engineer whose bridge is both structurally optimized and architecturally celebrated would similarly qualify — whereas only one of those dimensions would yield 1×.
+
+ Conversion System
+
+ kuhn-VUR-zhuhn SIS-tuhm
+
+ CCO 
+
+ The mechanism by which community members convert basic units into unrestricted primary currency through productive activities. Conversion rates depend on both octave level (capacity ceiling) and personal multiplier rate (quality premium). Eligible activities include essential services, creative work, skill development, community building, cultural contribution, and PTF business operations. The conversion system is administered through the CIP platform and governed democratically by the community of Creative Collective members.
+
+ Example
+
+ Marcus, at Octave 3 with a 4× multiplier, can convert up to 4,000 basic units monthly. He earns conversion credit through guitar lessons, participation in a community garden, and mentoring youth — receiving 4 primary currency units for every basic unit converted, up to his capacity ceiling.
+
+ Dual-Tier Incentive System
+
+ DOO-uhl-TEER in-SEN-tiv SIS-tuhm
+
+ CCO 
+
+ The two-dimensional recognition framework at the core of CCO that combines octave levels (the capacity dimension, based on consistency and sustained contribution) with personal multiplier rates (the quality dimension, based on excellence and community impact). This architecture eliminates welfare cliffs while creating strong incentives for both sustained participation over time and exceptional performance in individual contributions. Neither dimension alone fully describes a participant's standing — both must be considered together.
+
+ Example
+
+ Ahmed advances consistently through octave levels via regular community service and mentoring (the capacity dimension), while simultaneously earning higher multipliers through innovative urban farming techniques recognized by an expert panel (the quality dimension), maximizing both axes of the system.
+
+ Creative Collectives
+
+ kree-AY-tiv kuh-LEK-tivs
+
+ CCO 
+
+ Formally registered community groups within the CCO system composed of a minimum of 50 members engaged in productive, creative, or essential activities. Creative Collectives serve as the primary organizational unit through which CCO conversion rates are assessed and governed — the community of Creative Collective members collectively determines conversion rates for their sectors. Collectives may encompass artists, educators, healthcare workers, technologists, agricultural producers, and other contributors. The 50-member minimum prevents gaming and ensures meaningful community accountability.
+
+ Example
+
+ The Northside Creative Collective includes 73 members: musicians, visual artists, writers, and craftspeople who collaborate on community festivals, public art installations, and cultural education programs. As a registered Collective, they participate in setting conversion rate standards for cultural contributions in their region.
+
+ Cultural Value Integration
+
+ KUL-chuhr-uhl VAL-yoo in-tuh-GRAY-shuhn
+
+ CCO 
+
+ The explicit recognition and economic incorporation of artistic, creative, and cultural contributions within the CCO system. Unlike traditional market economies that systematically undervalue cultural work — treating it as a consumer preference rather than productive output — CCO formally recognizes artistic creation, cultural preservation, community storytelling, and creative innovation as economically valuable community contributions eligible for high multiplier rates and octave advancement.
+
+ Example
+
+ Maya's murals, poetry workshops, and cultural festivals earn her recognition as essential community infrastructure — qualifying for advanced octave levels and high multiplier rates comparable to technical professions, reflecting the genuine social and economic value her work generates.
+
+ Public Trust Foundations (PTF)
+
+ PUB-lik TRUST fown-DAY-shuhns
+
+ PTF 
+
+ Community-owned business entities that generate employment opportunities and pathways for collective wealth building while providing foundational goods and services. PTF businesses — grocers, counter-service restaurants, utility providers, transportation services, childcare centers, healthcare clinics, and educational facilities — accept basic units as payment and operate as not-for-profit, for-community-benefit enterprises. They are governed democratically by stakeholders (employees, customers, and community representatives) and complement rather than displace private market operations. PTF also refers to the broader institutional framework underlying both PTF businesses and PTH communities, providing democratic governance structures and community asset stewardship.
+
+ Example
+
+ The Central Valley PTF manages three community-owned grocery stores, two counter-service restaurants, and a renewable energy cooperative — all accepting basic units for payment, all governed by resident members, and all reinvesting surplus into community development rather than shareholder returns.
+
+ Acre Equity
+
+ AY-kur EK-wi-tee
+
+ PTF 
+
+ A concept within the PTF system that measures and distributes value based on land stewardship and productive use . Acre Equity recognizes environmental care, sustainability practices, ecosystem preservation, and community benefit generation from land-based activities. Each resident receives an equal initial allocation from non-housing PTFs; housing PTF acres are allocated only to opted-in residents. Acre Equity is tradeable within the community and generates dividends from all PTF revenues proportional to holdings. The term originated from AI analysis of PTF concepts; implementation metrics remain open to refinement by adopting communities.
+
+ Example
+
+ The Mountain View PTF calculates Acre Equity based on soil health improvements, carbon sequestration, biodiversity enhancement, and food production metrics, distributing quarterly dividends to steward families proportional to their verified land stewardship contributions.
+
+ Public Trust Housing (PTH)
+
+ PUB-lik TRUST HOW-zing
+
+ PTH 
+
+ A community-owned, opt-in housing model that creates pathways for collective wealth building while providing stable, affordable housing. Properties are held in public trust and owned collectively by residents through democratic governance structures. PTH accepts basic units for housing costs and offers integrated services — childcare, healthcare, education, and skill development — on-site or nearby. Participation is voluntary; private real estate markets remain robust and complementary. Residents build equity in collective assets rather than individual property, reducing personal financial exposure while accumulating community-shared wealth.
+
+ Example
+
+ Greendale Commons is a 150-unit PTH community where residents pay housing costs with basic units, participate in monthly democratic governance assemblies, and build collective equity through shared ownership of the building, a community kitchen, and a rooftop solar cooperative.
+
+ Collective Wealth Building
+
+ kuh-LEK-tiv WELTH BIL-ding
+
+ PTH 
+
+ The process by which PTH and PTF communities create shared prosperity through collective ownership, democratic decision-making, and community enterprise development. Unlike individual wealth accumulation — which is vulnerable to market volatility and concentrated in housing equity — collective wealth building benefits all community members simultaneously while providing individual security and opportunity for advancement through the success of shared assets.
+
+ Example
+
+ Sunset Gardens PTH operates a community kitchen, solar energy cooperative, and organic farm, with surplus distributed to residents while the collective asset base reduces per-capita living costs for every household in the community.
+
+ Social Zone Harmonization (SZH)
+
+ SOH-shuhl ZOHN har-muh-nuh-ZAY-shuhn
+
+ SZH 
+
+ A comprehensive framework for organizing communities and regions to optimize social, economic, and environmental outcomes through voluntary, coordinated planning and resource allocation. SZH balances diverse community needs while maintaining local autonomy and democratic governance through inter-municipal cooperation. Zone types are voluntarily self-selected by communities, and participation at all levels is opt-in. SZH also stabilizes PTF and PTH deployment by ensuring that community businesses and housing are spatially coherent with the surrounding social zone structure.
+
+ Example
+
+ The Portland Metro SZH coordinates 15 municipalities for shared transit, renewable energy, affordable housing development, and regional food systems — each community retaining full local governance while accessing the shared infrastructure and resource pools that regional coordination enables.
+
+ Zone Classifications
+
+ ZOHN klas-uh-fuh-KAY-shuhns
+
+ SZH 
+
+ The voluntary zone types in SZH based on community characteristics, preferences, and development priorities. Primary classifications include: Urban Innovation Zones (high-density, technology and culture focus), Suburban Transition Zones (mixed-density, balanced development), Rural Stewardship Zones (low-density, agriculture and conservation), and Special Purpose Zones (unique functions such as education, healthcare, recreation, senior living, artistic communities, or cultural preservation). Classifications are community-determined and revisable through democratic process.
+
+ Example
+
+ Silicon Valley functions as an Urban Innovation Zone specializing in technology and arts infrastructure, while Sonoma County self-designates as a Rural Stewardship Zone emphasizing sustainable agriculture and conservation — each accessing SZH coordination benefits while maintaining their distinct character.
+
+ Citizens Internet Portal (CIP)
+
+ SIT-uh-zuhn IN-tur-net POR-tuhl
+
+ CIP 
+
+ A comprehensive digital infrastructure platform designed to enable democratic participation, transparent governance, and community-controlled economic systems. CIP serves as the democratic layer that governs CCO conversion rates, merit assessment, and basic unit distribution — it is the governance backbone connecting all five framework architectures. Core functions include secure blockchain-verified voting, policy proposal systems, real-time approval ratings, AI-summarized policy impact assessment, and integration with CCO and PTH transaction systems. Distinguished from government websites by enabling genuine interactive governance rather than information distribution.
+
+ Example
+
+ Citizens use CIP to vote on community budget allocations, manage their CCO basic unit balances and conversions, apply for PTH housing, submit policy proposals, and access complete transparency on government expenditures — all through a single authenticated platform with end-to-end encryption and zero-knowledge proofs.
+
+ Digital Democracy
+
+ DIJ-uh-tuhl dih-MOK-ruh-see
+
+ CIP 
+
+ The use of digital technologies to enable genuine democratic participation — including secure online voting, digital assemblies, transparent government data access, and citizen-controlled civic engagement. In the CIP context, digital democracy refers specifically to participatory governance where citizens have direct influence over policy, resource allocation, and system parameters, rather than the passive consumption of government information that characterizes most existing e-government platforms.
+
+ Example
+
+ Through CIP's digital democracy tools, residents participate in real-time budget allocation decisions, submit and debate policy proposals with structured deliberation, and access complete transparency on all government expenditures — with all votes cryptographically verifiable and publicly auditable.
+
+ Welfare Cliffs
+
+ WEL-fair KLIFS
+
+ Economics 
+
+ A structural defect in means-tested welfare systems where earning additional income results in a net loss of total resources due to the sudden, cliff-like reduction of government benefits. This creates effective marginal tax rates exceeding 100% over certain income ranges — meaning an extra hour of work leaves the worker worse off financially — discouraging employment and trapping recipients in poverty. CCO eliminates welfare cliffs by providing basic units universally without means testing or benefit reduction, ensuring every productive activity always increases total income.
+
+ Example
+
+ In a traditional means-tested system, Sarah earning an extra $100 might lose $150 in housing and food benefits — a net loss of $50. In CCO, Sarah retains her full basic unit allocation regardless of additional earnings, while also gaining conversion opportunities from her increased productive activity.
+
+ Post-Scarcity Economics
+
+ POHST-SKAIR-suh-tee ek-uh-NOM-iks
+
+ Economics 
+
+ Economic frameworks designed for conditions where basic necessities are sufficiently abundant to provide for everyone's fundamental needs. The focus in post-scarcity frameworks is on eliminating artificial scarcity — the coexistence of vacant homes with homelessness, surplus food with hunger, and unused productive capacity with unemployment — while acknowledging that genuine scarcity (unique expertise, irreplaceable experiences, finite natural resources) will always exist. CCO and PTH create transition mechanisms toward post-scarcity conditions by ensuring universal access to essential goods while maintaining incentive structures for continued innovation.
+
+ Example
+
+ As AI and automation reduce production costs in manufacturing and logistics, CCO captures efficiency gains through basic unit distribution — ensuring productivity improvements translate to reduced scarcity for all rather than concentrated returns for capital owners — while maintaining conversion incentives for creative and interpersonal work that resists automation.
+
+ Dual Currency System
+
+ DOO-uhl KUR-uhn-see SIS-tuhm
+
+ Economics 
+
+ An economic framework using two complementary currencies operating simultaneously: restricted basic units for essential needs (housing, food, healthcare, education, transportation) and unrestricted primary currency for all other expenditures. The dual structure is designed to ensure universal access to essentials while mitigating inflationary pressure in non-essential markets — because basic units cannot be spent on luxury goods, their distribution does not inflate those markets. Basic units expiring after 35 days prevents accumulation and encourages local economic circulation.
+
+ Example
+
+ Citizens receive basic units for essentials automatically each month, while earning primary currency through work, entrepreneurship, and creative activities. A restaurant offering meals for basic units participates in the essential economy; a fine-dining establishment serving primary currency only operates in the standard market — both coexist without one distorting the other.
+
+ Merit-Based Systems
+
+ MARE-it-BAYST SIS-tuhmz
+
+ Economics 
+
+ Economic or social frameworks that reward individuals based on their contributions, achievements, and positive impact rather than need alone. In CCO, merit recognition occurs through octave advancement (sustained contribution over time) and multiplier rates (quality of individual contributions) while maintaining universal basic support for all. This design creates incentives for excellence without eliminating basic security , addressing the traditional equity-efficiency tradeoff by decoupling basic needs provision from performance rewards.
+
+ Example
+
+ Dr. Kim's groundbreaking medical research earns her a 12× multiplier and Octave 7 status, significantly increasing her conversion capacity. Meanwhile, all community members — including those unable to work — still receive their full basic unit allocation, separating merit rewards from survival security.
+
+ Compassionism
+
+ kuhm-PASH-uh-niz-uhm
+
+ Governance 
+
+ The integrated economic and governance philosophy developed by the author that combines the five framework architectures — CCO, PTF, PTH, SZH, and CIP — into a unified system. Compassionism holds that compassionate universal support and merit-based advancement are not in opposition : everyone's basic needs are met unconditionally, while those who contribute exceptional value receive proportionally greater recognition and economic reward. The name reflects the dual commitment to universal compassion (no one left behind) and systemic rigor (incentive-compatible design grounded in mechanism design and empirical modeling). Also referred to as "Compassionate Meritocracy" in earlier literature.
+
+ Example
+
+ In a Compassionism implementation, a civil engineer and a resident with severe disabilities both receive full basic unit support for their essential needs. The engineer additionally receives enhanced conversion opportunities reflecting their specialized contributions — the two outcomes are complementary, not competing.
+
+ Democratic Governance
+
+ dem-uh-KRAT-ik GUV-ur-nuhns
+
+ Governance 
+
+ Participatory decision-making processes within PTH, PTF, and CIP systems where residents and stakeholders have direct control over community policies, resource allocation, and development priorities. Democratic governance in the Compassionism framework operates at multiple scales simultaneously: PTH community assemblies govern local housing decisions; PTF stakeholder boards govern business operations; CIP provides the digital platform for regional and national democratic participation. All governance structures are designed to be structurally incorruptible through distributed architecture, transparency requirements, and cryptographic auditability.
+
+ Example
+
+ Riverside PTH holds monthly assemblies where residents vote on budgets, new development proposals, and community enterprise investments. Major decisions require supermajority approval, all votes are recorded on the CIP blockchain, and complete financial records are publicly accessible in real time.
+
+ Community Assessment
+
+ kuh-MYOO-nuh-tee uh-SES-muhnt
+
+ Governance 
+
+ The systematic evaluation process by which CCO communities determine octave levels and multiplier rates for members. Multiple mechanisms operate in parallel to prevent any single point of failure or gaming: peer review panels (expertise-matched, diversity-required, conflict-screened), community juries (democratically selected, deliberative), algorithmic metrics (quantifiable signals used as inputs to human evaluation, not replacements for it), and market signals (pricing and transaction volume for capacity tiers). The working standard for rates is "fair, reasonable, and not egregious," with rates adjustable through structured community feedback loops. Full quarterly reviews and transparent appeals processes apply.
+
+ Example
+
+ The Oakdale CCO community uses rotating assessment panels with sector-matched expertise, anonymous structured feedback from peers and community members, and a standardized rubric with published criteria — with all assessment decisions recorded publicly and subject to formal appeal within 30 days.
+
+ No terms found 
+ Try different keywords, or select "All" to reset the category filter.
+
+ ↑

@@ -1,0 +1,254 @@
+Wiki & Documentation — Better To Best Research Hub 
+
+ Skip to main content 
+
+ Research Documentation & Resources
+
+ Comprehensive wiki, glossary, FAQ, and academic tools for Creative Currency Octaves, Public Trust Foundations, and the Compassionism governance framework.
+
+ 18+ 
+ Key Terms Defined 
+
+ 50+ 
+ FAQ Answers 
+
+ 16+ 
+ Research Papers 
+
+ 5 
+ Framework Architectures 
+
+ All content is open-access under CC BY 4.0 — authored by the author with contributions from Claude (Anthropic) — Version 1.1 — Last updated May 2026
+
+ Results
+
+ No results found. Try a different term.
+
+ Core Documentation
+
+ Essential resources for understanding the theoretical foundations and practical applications of the Compassionism research frameworks.
+
+ Reference 
+ Live 
+
+ Complete Glossary
+
+ Comprehensive definitions and explanations of key terms across Creative Currency Octaves, Public Trust Housing, Social Zone Harmonization, and related frameworks. Includes formal definitions, usage examples, and cross-references.
+
+ View Glossary 
+
+ Reference 
+ Live 
+
+ Frequently Asked Questions
+
+ Detailed answers to common questions about implementation sequencing, theoretical basis, economic impacts, and practical applications of the Compassionism frameworks. Structured for academic and policy audiences.
+
+ Read FAQ 
+
+ Research Tool 
+ Live 
+
+ CCO-PTF Simulation Framework
+
+ Complete replication package for post-scarcity economic system modeling. Based on 10,000+ Monte Carlo iterations demonstrating 98% poverty elimination probability. Includes full simulation code, optimal parameters, and validation benchmarks.
+
+ Access Simulation Framework 
+
+ Implementation 
+ Live 
+
+ Implementation Guide
+
+ Step-by-step framework for implementing CCO and PTH systems, including pilot program design, community engagement strategies, and sequencing recommendations for policymakers and researchers.
+
+ View Guide 
+
+ Implementation 
+ New 
+
+ Integrated Implementation Roadmap (USA)
+
+ Comprehensive 7-phase, 7-year pathway for implementing the full CCO-PTF-CIP-SZH framework. Includes legislative package, technology architecture, transition planning, crisis response protocols, and evaluation KPIs.
+
+ View Roadmap 
+
+ Implementation 
+ Live 
+
+ International Adaptation Guide
+
+ Framework for adapting the Compassionism system to diverse national contexts, legal systems, and existing welfare infrastructure. Covers bilateral cooperation templates and the Global CCO Standards Organization.
+
+ View Guide 
+
+ Quick Reference — Key Concepts
+
+ [CCO] Basic Units
+
+ [CCO] Octave Levels
+
+ [CCO] Multiplier Rates
+
+ [CCO] Conversion System
+
+ [PTH] Public Trust Housing
+
+ [CCO] Welfare Cliffs
+
+ [FAQ] Implementation
+
+ [FAQ] Economic Theory
+
+ System Interaction Model
+
+ How the five framework architectures depend on, govern, and reinforce one another — the structural logic of Compassionism as a unified system.
+
+ Each framework occupies a distinct functional layer. Understanding their relationships is essential for implementation sequencing — dependencies must be in place before dependent systems can operate effectively. The table below formalizes these relationships for research and policy analysis.
+
+ Economic Layer
+
+ CCO
+
+ Creative Currency Octaves — generates value signals and circulation incentives through the dual-currency system
+
+ Asset Layer
+
+ PTF
+
+ Public Trust Foundations — builds collective ownership and community wealth through community-operated businesses
+
+ Asset Layer
+
+ PTH
+
+ Public Trust Housing — creates collective housing equity through resident-owned community properties
+
+ Spatial Layer
+
+ SZH
+
+ Social Zone Harmonization — organizes physical and social structure through coordinated community planning
+
+ Democratic Layer
+
+ CIP
+
+ Citizens Internet Portal — governs currency operations and democratic participation across all systems
+
+ Framework Dependencies & Relationships
+
+ Relationship 
+ Description 
+
+ PTF depends_on CCO 
+ PTF accepts basic units as payment; CCO funds PTF operations and provides the currency infrastructure PTF businesses require 
+
+ PTH depends_on CCO 
+ Housing costs settled in basic units; CCO provides the economic security that makes collective housing participation viable 
+
+ CIP governs CCO 
+ CIP manages conversion rates, merit assessment, and basic unit distribution — the democratic layer controls the economic engine 
+
+ CIP governs PTF + PTH 
+ Democratic oversight of all collective assets; residents and members vote on key decisions through the CIP platform 
+
+ SZH stabilizes PTF + PTH 
+ Zoning shapes service and housing deployment; SZH ensures PTF businesses and PTH communities are spatially coherent 
+
+ CCO feeds_into SZH 
+ Creative Collectives anchor zone formation; preference and economic activity patterns inform how social zones are structured and evolve 
+
+ PTF enhances CCO 
+ PTF venues reduce Creative Collective overhead by 40–60%; PTF workers receive a conversion bonus, and essential-market incentives benefit CCO participants 
+
+ Research Tools & Community
+
+ Interactive tools and community resources for researchers, policymakers, and practitioners working with the Compassionism frameworks.
+
+ Media 
+ Live 
+
+ Video Explanations
+
+ the author's YouTube channel features video explanations, Socratic debate formats, and research updates on Creative Currency Octaves, Public Trust Housing, and economic innovation.
+
+ Watch Videos 
+
+ Publications 
+ Live 
+
+ Articles & Commentary
+
+ Extended commentary, analysis, and public-facing writing on Compassionism published via Medium. Includes governance reform essays and economic policy analysis.
+
+ Read Articles 
+
+ Repository 
+ Live 
+
+ Academia.edu Papers
+
+ The full corpus of 22+ research papers on Academia.edu, including titles not hosted in this hub. Free download, citation tracking, and reader analytics available.
+
+ View on Academia.edu 
+
+ ▶ Interactive Tool · Live
+
+ Compassionism Framework Simulation
+
+ Agent-based simulation of all five Compassionism architectures. Adjust BU allocation,
+ octave levels, PTF market share, zone coherence (SZH), and democratic participation (CIP)
+ to model poverty elimination, inequality, and BLEI temporal stability across 5–30 year
+ horizons. BLEI-calibrated against 2023 US Consumer Expenditure Survey data.
+
+ CCO · PTF · PTH 
+ SZH · CIP 
+ BLEI-calibrated 
+ US welfare baseline 
+
+ Open Simulation ↗ 
+ Runs in any browser · No install 
+
+ Research Discussion Forum — GitHub Discussions
+
+ All research discussion has moved to GitHub Discussions, hosted directly on the project repository. Ask questions, propose modifications to theoretical frameworks, share implementation ideas, and engage with other researchers. Discussions are fully searchable, version-linked, and archival.
+
+ Open GitHub Discussions 
+
+ Citation Generator
+
+ Generate properly formatted academic citations for any of the 17 hosted research papers.
+
+ Select Paper 
+
+ Choose a paper… 
+ Optimal Transfer Design in Post-Scarcity Economies 
+ Dual Currency Systems and Inflation: CCO’s Price Stability Mechanisms 
+ Economic Modeling and Simulation Analysis of Creative Currency Octaves 
+ Creative Currency Octaves and Public Trust Foundations: Integrated Framework 
+ Integrated Digital Governance and Economic Innovation: CIP-CCO-PTH-SZH Framework 
+ Citizens Internet Portal: Structural Incorruptibility Through Distributed Democratic Architecture 
+ Drug Policy Reform and Integrated Community Support Systems 
+ Democratic Governance in Economic Systems: Lessons from Public Trust Housing 
+ Risk Mitigation Framework for CCO-PTH-CIP-SZH Implementation 
+ Transforming the US Real Estate Market Through Public Trust Housing 
+ Cultural Value Integration in Economic Systems: The CCO Framework 
+ Community-Based Monetary Innovation for Development 
+ PTH Independent Financing Models: From Grassroots Cooperation to Philanthropic Scale 
+ PTH Government Integration: Scaling Through Public Investment 
+ Universal Implementation Framework for Human Thriving: CCO-PTF-CIP-SZH 
+ Corporate Transformation Under CCO-PTF Integration 
+ Basic Living Economic Index 
+
+ Citation Format 
+
+ APA 7th Edition 
+ MLA 9th Edition 
+ Chicago 17th Edition 
+ BibTeX 
+
+ Please select a paper and format above to generate a citation.
+
+ Copy Citation 
+ Browse All Papers
