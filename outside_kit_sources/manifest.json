@@ -1,0 +1,276 @@
+{
+ "about": "Design texts and PDF text layers for outside_kit.py, written by outside_kit.py --fetch",
+ "pins": {
+  "research-hub": "8e8a6ba",
+  "compassionism-simulation": "d10ed6e",
+  "integral_wp_md5": "a6defc9a0ec7c4ace56509dffd680307"
+ },
+ "files": [
+  {
+   "path": "cco_hub__basic-living-economic-index.txt",
+   "design": "CCO",
+   "title": "Research Hub: basic-living-economic-index.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/basic-living-economic-index.html",
+   "md5": "3f1c6a2c8a55426d7d3bf34a816c7d70"
+  },
+  {
+   "path": "cco_hub__cco-ptf-integrated-framework.txt",
+   "design": "CCO",
+   "title": "Research Hub: cco-ptf-integrated-framework.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/cco-ptf-integrated-framework.html",
+   "md5": "17545a91caadac68246d5f171ef9bef4"
+  },
+  {
+   "path": "cco_hub__cco-ptf-simulation-replication.txt",
+   "design": "CCO",
+   "title": "Research Hub: cco-ptf-simulation-replication.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/cco-ptf-simulation-replication.html",
+   "md5": "9fb513111cd18b6bfe8431533d5174d6"
+  },
+  {
+   "path": "cco_hub__citizens-internet-portal.txt",
+   "design": "CCO",
+   "title": "Research Hub: citizens-internet-portal.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/citizens-internet-portal.html",
+   "md5": "1389a493ee26e4dff31cb0848ad1526c"
+  },
+  {
+   "path": "cco_hub__community-monetary-development.txt",
+   "design": "CCO",
+   "title": "Research Hub: community-monetary-development.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/community-monetary-development.html",
+   "md5": "76736a88ca76cc0db1eeded2055a9523"
+  },
+  {
+   "path": "cco_hub__corporate-transformation.txt",
+   "design": "CCO",
+   "title": "Research Hub: corporate-transformation.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/corporate-transformation.html",
+   "md5": "4e167faf452156dbf9907cc9eeb22479"
+  },
+  {
+   "path": "cco_hub__cultural-value-integration.txt",
+   "design": "CCO",
+   "title": "Research Hub: cultural-value-integration.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/cultural-value-integration.html",
+   "md5": "4f17f8858bec1e718057772b2610feb6"
+  },
+  {
+   "path": "cco_hub__democratic-governance-pth.txt",
+   "design": "CCO",
+   "title": "Research Hub: democratic-governance-pth.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/democratic-governance-pth.html",
+   "md5": "db57a47e1678e2c9995a27730196d3ad"
+  },
+  {
+   "path": "cco_hub__drug-policy-reform.txt",
+   "design": "CCO",
+   "title": "Research Hub: drug-policy-reform.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/drug-policy-reform.html",
+   "md5": "4a0a5cdca2f2ad5e942ccd39ea96b8ad"
+  },
+  {
+   "path": "cco_hub__dual-currency-inflation.txt",
+   "design": "CCO",
+   "title": "Research Hub: dual-currency-inflation.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/dual-currency-inflation.html",
+   "md5": "6af2275651f3adf5aa590b47c753726b"
+  },
+  {
+   "path": "cco_hub__economic-modeling-simulation.txt",
+   "design": "CCO",
+   "title": "Research Hub: economic-modeling-simulation.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/economic-modeling-simulation.html",
+   "md5": "46f11642a2d9d5604e36dc9016a19364"
+  },
+  {
+   "path": "cco_hub__index.txt",
+   "design": "CCO",
+   "title": "Research Hub: index.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/index.html",
+   "md5": "35c47c524feebf09da3b0212e8ba62af"
+  },
+  {
+   "path": "cco_hub__integrated-digital-governance.txt",
+   "design": "CCO",
+   "title": "Research Hub: integrated-digital-governance.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/integrated-digital-governance.html",
+   "md5": "528c3213bb99f359120980819ce76d11"
+  },
+  {
+   "path": "cco_hub__integrated-implementation-roadmap.txt",
+   "design": "CCO",
+   "title": "Research Hub: integrated-implementation-roadmap.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/integrated-implementation-roadmap.html",
+   "md5": "a9f18ad0d6616c3e104229486d1e87c0"
+  },
+  {
+   "path": "cco_hub__new-frame-and-lens.txt",
+   "design": "CCO",
+   "title": "Research Hub: new-frame-and-lens.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/new-frame-and-lens.html",
+   "md5": "1376158795ccbde23ff1653acacefba2"
+  },
+  {
+   "path": "cco_hub__optimal-transfer-design.txt",
+   "design": "CCO",
+   "title": "Research Hub: optimal-transfer-design.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/optimal-transfer-design.html",
+   "md5": "d3a61ac54dfe6799fbb64472d1e85cac"
+  },
+  {
+   "path": "cco_hub__pth-government-integration.txt",
+   "design": "CCO",
+   "title": "Research Hub: pth-government-integration.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/pth-government-integration.html",
+   "md5": "e4f5bd3c3226e4958ef3458ce2a1d0f0"
+  },
+  {
+   "path": "cco_hub__pth-independent-financing.txt",
+   "design": "CCO",
+   "title": "Research Hub: pth-independent-financing.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/pth-independent-financing.html",
+   "md5": "7d6fb945e31ed1c29a41b045cd00dd2e"
+  },
+  {
+   "path": "cco_hub__public-trust-financial.txt",
+   "design": "CCO",
+   "title": "Research Hub: public-trust-financial.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/public-trust-financial.html",
+   "md5": "23a54ce34b2ee9f3fb4af9d14ac37c99"
+  },
+  {
+   "path": "cco_hub__referendum.txt",
+   "design": "CCO",
+   "title": "Research Hub: referendum.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/referendum.html",
+   "md5": "520f0d0da309fff6a9bacdd38fc2e807"
+  },
+  {
+   "path": "cco_hub__research-summary.txt",
+   "design": "CCO",
+   "title": "Research Hub: research-summary.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/research-summary.html",
+   "md5": "c40b527fe1f61f28b56fa0c7ae3d7d00"
+  },
+  {
+   "path": "cco_hub__risk-mitigation-framework.txt",
+   "design": "CCO",
+   "title": "Research Hub: risk-mitigation-framework.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/risk-mitigation-framework.html",
+   "md5": "6afaadd1f00dd0983c5203eabf9dbf3a"
+  },
+  {
+   "path": "cco_hub__universal-implementation-framework.txt",
+   "design": "CCO",
+   "title": "Research Hub: universal-implementation-framework.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/universal-implementation-framework.html",
+   "md5": "ca5782c7fe7cf146e6de93a6ee0f1e05"
+  },
+  {
+   "path": "cco_hub__us-real-estate-transformation.txt",
+   "design": "CCO",
+   "title": "Research Hub: us-real-estate-transformation.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/us-real-estate-transformation.html",
+   "md5": "f83181b2d0a3b8dcd3ed9006abeb6244"
+  },
+  {
+   "path": "cco_hub__wiki_faq.txt",
+   "design": "CCO",
+   "title": "Research Hub: wiki/faq.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/wiki/faq.html",
+   "md5": "9b4ebbc1de1f9adbe6125a85d222cda1"
+  },
+  {
+   "path": "cco_hub__wiki_glossary.txt",
+   "design": "CCO",
+   "title": "Research Hub: wiki/glossary.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/wiki/glossary.html",
+   "md5": "71a04862835be7e98bd576a6f3614b2c"
+  },
+  {
+   "path": "cco_hub__wiki_implementation-roadmap.txt",
+   "design": "CCO",
+   "title": "Research Hub: wiki/implementation-roadmap.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/wiki/implementation-roadmap.html",
+   "md5": "4c4fc3034a4da299b1840a75b20a731a"
+  },
+  {
+   "path": "cco_hub__wiki_index.txt",
+   "design": "CCO",
+   "title": "Research Hub: wiki/index.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/wiki/index.html",
+   "md5": "6d118f241b6bdeffd28d0b6a5026dfb5"
+  },
+  {
+   "path": "cco_hub__wiki_international-adaptation-guide.txt",
+   "design": "CCO",
+   "title": "Research Hub: wiki/international-adaptation-guide.html",
+   "origin": "github.com/BetterToBest/research-hub@8e8a6ba/wiki/international-adaptation-guide.html",
+   "md5": "b9a3892b60ba16f1bec83c65b3361a70"
+  },
+  {
+   "path": "cco_sim__findings.txt",
+   "design": "CCO",
+   "title": "Simulation v5.6: findings.html",
+   "origin": "github.com/BetterToBest/compassionism-simulation@d10ed6e/findings.html (rendered by render_pages.js)",
+   "md5": "10f3cf02d1280324969cfe6741fb3a14"
+  },
+  {
+   "path": "cco_sim__study.txt",
+   "design": "CCO",
+   "title": "Simulation v5.6: study.html",
+   "origin": "github.com/BetterToBest/compassionism-simulation@d10ed6e/study.html (rendered by render_pages.js)",
+   "md5": "08d643fec8f97eefc3d3b10a171e55a5"
+  },
+  {
+   "path": "cco_sim__README.txt",
+   "design": "CCO",
+   "title": "Simulation v5.6: README.md",
+   "origin": "github.com/BetterToBest/compassionism-simulation@d10ed6e/README.md",
+   "md5": "ec6d54ce17f0a98f376bfab03a68b84d"
+  },
+  {
+   "path": "cco_sim__MODEL_SPEC.txt",
+   "design": "CCO",
+   "title": "Simulation v5.6: MODEL_SPEC.md",
+   "origin": "github.com/BetterToBest/compassionism-simulation@d10ed6e/MODEL_SPEC.md",
+   "md5": "7b51985f703b7f177dafc8e0755fdc31"
+  },
+  {
+   "path": "cco_sim__ODD.txt",
+   "design": "CCO",
+   "title": "Simulation v5.6: ODD.md",
+   "origin": "github.com/BetterToBest/compassionism-simulation@d10ed6e/ODD.md",
+   "md5": "f4e013a41c8599dec42bac8ef9d0a13f"
+  },
+  {
+   "path": "cco_sim__TESTBED_SPEC.txt",
+   "design": "CCO",
+   "title": "Simulation v5.6: TESTBED_SPEC.md",
+   "origin": "github.com/BetterToBest/compassionism-simulation@d10ed6e/TESTBED_SPEC.md",
+   "md5": "a01d2188025e2cdd9f66ddccbc15f5a2"
+  },
+  {
+   "path": "integral_wp_v01.txt",
+   "design": "INT",
+   "title": "Integral white paper v0.1 (December 2025)",
+   "origin": "https://integralcollective.io/documents/INTEGRAL-Paper-V0.1.pdf",
+   "md5": "614b8a38024984a127a54636f7bebb8e"
+  },
+  {
+   "path": "cache_pdf/C2.1__whr26_statistical_appendix.pdf.txt",
+   "design": null,
+   "title": "text layer of evidence_cache/C2.1/whr26_statistical_appendix.pdf",
+   "origin": "pdftotext -layout",
+   "md5": "1afaaf2b836d973c5f59307321939898"
+  },
+  {
+   "path": "cache_pdf/C2.4__idea_voter_turnout_codebook.pdf.txt",
+   "design": null,
+   "title": "text layer of evidence_cache/C2.4/idea_voter_turnout_codebook.pdf",
+   "origin": "pdftotext -layout",
+   "md5": "cfa68691baab23fd71e542146900ff93"
+  }
+ ]
+}

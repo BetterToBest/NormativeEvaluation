@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 48 (Session 78). Runs every verification and analysis script on file
+Version 50 (Session 80). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -308,6 +308,11 @@ Version 49 (Session 79) adds apply_owner_s79.py --check, which writes the v2 fil
 (owner_s79.py, laid over the final readings by final_pass.owner_state()), with a negative control; apply_final_s78.py's
 files are kept as neec_corpus_v2_s78_snapshot.json and its two companions; final_pass.py --selftest also checks the owner's
 layer; build_evidence.py and build_site.py check the regenerated files: 135 checks.
+Version 50 (Session 80) adds the outside blind review's kit (decisions 79.6, 79.8, 80.2 to 80.6): outside_kit.py --check
+(outside_kit/ is exactly what the generator builds from the criteria, the protocol, the corpus's names and kinds, the
+screened evidence cache and the cached design texts in outside_kit_sources/, each verified by md5), with a negative
+control; outside_kit_check.py, which builds every prompt the runner would send and finds no leak, with a negative control
+that plants one leak of each of seven kinds and shows each caught; and outside_review_runner.py --selftest: 140 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1777,13 +1782,45 @@ S79_CHECKS.append(dict(S79_CHECKS[0], files={**S79_FILES, "neec_corpus_v2.json":
 for _c in S68_CHECKS:    # build_evidence.py --check shows the owner's layer and links its record
     _c["files"] = {**_c["files"], **{k: k for k in ("NEEC_OwnerDecisions_s79.md", "apply_owner_s79.py")}}
 
+# Session 80: the outside blind review's kit (outside_kit.py), its leak check (outside_kit_check.py) and the runner
+# (outside_review_runner.py, which the leak check imports to build every prompt as the run will).
+S80_FILES = {**tree("outside_kit", "outside_kit_sources", "evidence_cache"),
+             **{k: k for k in ("outside_kit.py", "outside_kit_check.py", "outside_review_runner.py", "criteria.json",
+                               "neec_corpus_v2.json", "summary_blocks_v2.json", "SCORING_PROTOCOL.md")}}
+S80_CHECKS = [
+    dict(name="outside_kit.py --check: the outside review's kit (outside_kit/: the instructions, the blind rules, 29 "
+              "criteria with their worked examples removed, 23 system files, the source packs, the order of 696 calls, "
+              "the eight stage B arguments, the schema and the manifest) is exactly what the generator builds; the "
+              "cached design texts match their md5s",
+         cmd=["python", "outside_kit.py", "--check"], files=S80_FILES,
+         stdout="outside_kit_output.txt", stderr=EMPTY),
+    dict(name="outside_kit.py --check rejects a kit with one criterion file swapped for another (negative control; "
+              "exit 1 expected)",
+         cmd=["python", "outside_kit.py", "--check"],
+         files={**S80_FILES, "outside_kit/criteria/C1.1.md": "outside_kit/criteria/C1.2a.md"},
+         stdout="outside_kit_negative_output.txt", stderr=EMPTY, expect_exit=1),
+    dict(name="outside_kit_check.py: every blind prompt (696) and Jev state (294), built by the runner's own functions, "
+              "holds no tier, record, session, owner, withheld marker, stage B text, other system's name, or verdict "
+              "next to a criterion; each prompt carries its own criterion, system and pack",
+         cmd=["python", "outside_kit_check.py"], files=S80_FILES,
+         stdout="outside_kit_check_output.txt", stderr=EMPTY),
+    dict(name="outside_kit_check.py --negative: one leak of each of seven kinds planted in a copy of the kit is caught, "
+              "and only that kind",
+         cmd=["python", "outside_kit_check.py", "--negative"], files=S80_FILES,
+         stdout="outside_kit_check_negative_output.txt", stderr=EMPTY),
+    dict(name="outside_review_runner.py --selftest: prompt assembly, the FINAL parser, the clause-rule validator, "
+              "resume, the heartbeat, the stage B gate and the Jev request, offline",
+         cmd=["python", "outside_review_runner.py", "--selftest"], files=S80_FILES,
+         stdout="outside_review_runner_selftest_output.txt", stderr=EMPTY),
+]
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
           + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS + S74_CHECKS
-          + S75_CHECKS + S76_CHECKS + S77_CHECKS + S78_CHECKS + S79_CHECKS)
+          + S75_CHECKS + S76_CHECKS + S77_CHECKS + S78_CHECKS + S79_CHECKS + S80_CHECKS)
 
 
 def md5(data):

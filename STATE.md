@@ -1,14 +1,14 @@
 # NEEC state
 
-**Next session (80): Opus 5.5 at high** (ledger S63; build the outside blind review: the kit and source packs, the leak
-check, the runner with its 20-minute push, the pre-registered comparison; launch on Runpod). Reason: whether the kit is
-truly blind is judgment work, and the Ostrom pilot leaked through a marker; high rather than xhigh, as nothing is scored
-in that session. Before it: the owner's setup (ledger S66). Send `Continue NEEC.`
+**Next session (80b, the launch): Sonnet 5.5 at medium** (ledger S63, its last part), once the owner has done ledger S66
+(the Claude GitHub App on `compassionism-sim-results`, and an `OPENROUTER_API_KEY` secret there). Reason: what is left is
+mechanical: copy the kit, runner and workflow into the results repository, push, read the three-unit dry run, launch.
+If the dry run shows a fault in the kit or the prompt, stop: a change to what the reader sees is judgment work for Opus
+5.5 at high, and changes the pre-registration's pins. Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 79 (the owner's decisions 79.1 to 79.4 applied by `apply_owner_s79.py`,
-`NEEC_OwnerDecisions_s79.md`: seven cells 0.5 to 1.0, CCO-PTF-CIP-SZH first at 17.5; the outside blind review planned,
-`NEEC_OutsideReview_Plan_s79.md`) (2026-10-19). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 80 (the outside blind review built: the kit, its leak check, the runner, the
+workflow and the pre-registration; launch blocked on the owner's setup, decisions 80.1 to 80.8) (2026-10-19). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -71,7 +71,21 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
-- **Harness:** v47, 130 checks (`evidence_cache_s77.py` and `blind_s77.py`, since Session 77; `evidence_cache_s76.py` and `blind_s76.py`, since Session 76; `evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
+- **Outside blind review (Session 80, decisions 79.6, 79.8, 80.1 to 80.8; ledger S63, S66, D61).** Built, not launched.
+  `outside_kit.py` writes `outside_kit/` (what the reader sees: the instructions, the protocol's rules with every sentence
+  naming a system, record or session dropped, the 29 criteria without their worked examples, 23 system files, the source
+  packs, the order of 696 calls, eight stage B arguments, the schema, a manifest) from the repository and
+  `outside_kit_sources/` (the design texts: Research Hub `8e8a6ba`, simulation `d10ed6e` with two pages rendered by
+  `render_pages.js`, Integral's white paper v0.1; the author's name redacted). 667 units: 294 with a source pack, 373
+  closed-book (the reader's own knowledge, labelled). `outside_kit_check.py` builds every prompt with the runner's own
+  functions: no leak; seven planted leaks caught. `outside_review_runner.py` (standard library) reads with a free model on
+  OpenRouter (default `nvidia/nemotron-3-ultra-550b-a55b:free`, decision 80.4; GitHub Models was retired on 2026-07-30,
+  decision 80.2) and Jev (`jev-1.13.0`, 294 units, 800 clauses, twice); resumable; pushes every 20 minutes.
+  `NEEC_OutsideReview_Prereg_s80.md` fixes the comparison before any call. The results repository's files (workflow,
+  README, dry-run list) are in `outside_review_r1/`; the push to `compassionism-sim-results` was refused (the Claude GitHub
+  App is not installed there), so nothing has run (decision 80.8).
+- **Harness:** v50, 140 checks (`outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
+  `outside_review_runner.py --selftest`, since Session 80; `evidence_cache_s77.py` and `blind_s77.py`, since Session 77; `evidence_cache_s76.py` and `blind_s76.py`, since Session 76; `evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
   byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and checked by `harness.yml` on 3.12.
 - **Site:** live at https://bettertobest.github.io/NormativeEvaluation/, v2.0 scores published with a provisional notice (decision 66.1; `site/config.json` `scores.publish` true,
@@ -310,8 +324,15 @@ the Session 78 snapshots; `build_evidence.py` names the owner's decision and lin
 `README.md` regenerated; harness v49, 135 checks. The owner then set the next step: an outside blind review before any
 prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second instrument. Decided: below.
 
-1. **Session 80: Opus 5.5 at high** (ledger S63; the outside review's kit, runner and launch). Reason: the blindness of the
-   kit is judgment work; nothing is scored. See item 8. The owner's setup first (ledger S66).
+1. **Session 80b: Sonnet 5.5 at medium** (ledger S63's launch), after the owner's setup (ledger S66). In
+   `compassionism-sim-results`, on the session's branch: copy `outside_kit/` to `neec-outside-review/r1/kit/`,
+   `outside_review_runner.py` and `NEEC_OutsideReview_Prereg_s80.md` (as `PREREG.md`) to `neec-outside-review/r1/`, and
+   `outside_review_r1/`'s three files (the workflow to `.github/workflows/`; README.md and DRYRUN to `neec-outside-review/r1/`);
+   push. The push of DRYRUN runs the three-unit dry run (results in `neec-outside-review/r1/dryrun/`): check each answer
+   validated, Jev answered, and nothing in an answer suggests a leak; then open a pull request there for the owner to merge,
+   which starts the schedule (every 4 hours, 330 minutes a run, until `DONE`). If the Claude app cannot push the workflow
+   file, the owner adds it from `outside_review_r1/neec-outside-review.yml` on the GitHub web page. Session 81 starts when
+   the heartbeat shows the run done (several days at 50 free calls a day; about one at 1,000).
 2. (Sessions 72 to 78, done above.)
 3. (Session 74, done above.)
 4. (Session 75, done above.)
@@ -335,15 +356,17 @@ prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second in
    changes: Status Quo, China and Singapore 0.5 to 1.0, Centrally Planned Socialism 0.0 to 0.5; decision 77.3; the same
    form as Session 76's), and the pass's `UNITS` form
    carries each unit's `flag` and `zero`. Then rerun `apply_pass_s65.py`'s logic as a new generator for the v2 files.
-8. **Session 80: Opus 5.5 at high** (ledger S63). The outside blind review, built and launched
+8. **Done in part: Session 80** (Opus 5.5 at high; ledger S63; decisions 80.1 to 80.8). Built: the kit, the leak check
+   in the harness, the runner, the workflow, the pre-registration; not launched (decision 80.8; item 1). The plan as it
+   stood: the outside blind review, built and launched
    (`NEEC_OutsideReview_Plan_s79.md`, sections 3 to 6): the kit and per-unit source packs (primary sources only; no
    score, reading, rationale, flag or record), `outside_kit_check.py` in the harness (fails on any leak), the runner
-   (Kimi K2.6 on a Runpod public endpoint, 4 at a time, resumable, budget guard, pushing `results/` and a heartbeat to
-   `BetterToBest/compassionism-sim-results`, `neec-outside-review/<run id>/`, every 20 minutes, stopping its own pod), the
+   (a free-tier model, decision 79.8, as a scheduled GitHub Actions job in `BetterToBest/compassionism-sim-results`,
+   `neec-outside-review/<run id>/`: resumable, within the tier's daily limits, pushing `results/` and a heartbeat every run), the
    Jev pass over every clause, the JSON schema, and the pre-registered comparison rules, committed before the run. Dry
    run on three non-CCO units. Needs the owner's setup (S66).
 9. **Session 81: Sonnet 5.5 at medium** (ledger S64). Pull the results; `compare_outside.py`: agreement by unit and
-   clause, the reader's lean on the calibration set, Kimi against Jev against NEEC, stage B; the record.
+   clause, the reader's lean on the calibration set, the reader against Jev against NEEC, stage B; the record.
 10. **Session 82: Opus 5.5 at xhigh** for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
     each disagreement on the sources, by one rule for every entry; changes by generator; CCO-PTF-CIP-SZH's to the owner
     (57.2); every outside result on an owner-decided unit is published either way (plan, section 6).
@@ -383,6 +406,32 @@ not its C4.5, so (e) is unchanged (`NEEC_BlindReview_s72.md`, section 9).
     C2.5 and Session 76's C2.6, C3.6 and C4.6 agreed at 0.5); Session 77's group held no CCO unit.
 14. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change needed.
 
+## Decided (Session 80; `NEEC_Project_Handoff_80.md`, section 2)
+
+**80.1** (owner, in the ledger, 2026-10-19) D58, D59 and D60 confirmed: the decisions 79.1 to 79.4 stand as applied; the
+outside review reads all 667 units in priority order, closed to the source packs (no web search); I6 and I8 confirmed
+resolved. Session 79's late commit (decision 79.8, free tiers) was merged into this branch. **80.2** (correction) GitHub
+Models, which the owner's setup tested, was retired on 2026-07-30 (GitHub changelog); its endpoint still answers HTTP 200
+but returns no completion, as the owner's `test-keys` run shows. The reader moves to OpenRouter's free models (20 calls a
+minute; 50 a day, or 1,000 a day once $10 of credit has ever been bought). **80.3** (optional, method) the source packs:
+a cache file quoting one design's own documents goes to that design's units only, every other screened cache file to
+every unit of its criterion; CCO-PTF-CIP-SZH and Integral, the two designs with full public texts, also get up to 40,000
+characters of their documents' passages, chosen by BM25 against the criterion's text; the criteria's worked examples
+(which cite systems with their v1 scores) and every protocol or criterion sentence naming a system, record, script or
+session are dropped without a marker (R8); the author's name is redacted to "the author"; where a pack is silent the
+reader may use its own knowledge, labelled "closed-book:". **80.4** (optional; ledger D61, the owner may change it) the
+reader is `nvidia/nemotron-3-ultra-550b-a55b:free` (open weights, NVIDIA, 1M context), at temperature 0.6, seed 80,
+reasoning effort high; `thinkingmachines/inkling:free` is the alternative; set by the repository variable
+`READER_MODEL`. **80.5** (optional, method) one call per unit with the whole pack in the prompt, in place of the plan's
+`READ:` turns; there is no `SEARCH:` (80.1). **80.6** (optional, method) Jev reads the 294 units that have a pack (800
+clauses), twice; the 373 closed-book units give Jev no evidence to judge. **80.7** (optional, tooling) the workflow runs
+every 4 hours for up to 330 minutes, pushes every 20 minutes, keeps the dry run in its own folder, and disables its
+schedule at `DONE`; harness v50, 140 checks. **80.8** (blocker, for the owner) the Claude GitHub App has no access to
+`compassionism-sim-results` (git push and the API both refused, 403), so the kit, runner and workflow are not there yet
+and nothing has run; ledger S66 rewritten with the steps. A known asymmetry for Session 81's report: CCO-PTF-CIP-SZH and
+Integral are read on their own documents on every criterion, while most book-published designs are closed-book; the
+pre-registration reports closed-book units apart.
+
 ## Decided (Session 79; `NEEC_OwnerDecisions_s79.md`)
 
 From the owner (2026-10-19; ledger D58 to D60): **79.1** CCO-PTF-CIP-SZH C1.2a 0.5 to 1.0, read as decision 58.1 reads
@@ -394,10 +443,12 @@ read afterwards, which the record discloses; changes no other entry. **79.4** C3
 3 are cleared and no record or model shows a collapse caused by an adjustment (as Georgism's): Integral, Participatory
 Economics, Degrowth Economics, Ostrom-Style Commons Governance 0.5 to 1.0; departs from protocol 2.3(b) for this clause.
 Each revised cell keeps its prior reading as a close call; reopening conditions below. **79.6** the next step is an
-outside blind review before any Report or Paper prose, on Runpod with auto-push, with Jev (`NEEC_OutsideReview_Plan_s79.md`).
+outside blind review before any Report or Paper prose, with auto-push and Jev (on free tiers, 79.8) (`NEEC_OutsideReview_Plan_s79.md`).
 By this session: **79.5** (optional, tooling) the owner's layer is applied by `final_pass.owner_state()` and
 `apply_owner_s79.py`, not by a part of `pass_common.PARTS`; `apply_final_s78.py` keeps writing the Session 78 state as
-`neec_corpus_v2_s78_snapshot.json` and its two companions; harness v49, 135 checks. **79.7** (correction) Session 79's
+`neec_corpus_v2_s78_snapshot.json` and its two companions; harness v49, 135 checks. **79.8** (owner, same day) the outside review runs on free tiers, not paid Runpod inference: a free-tier model reads all
+667 units in priority order through a scheduled GitHub Actions job in `compassionism-sim-results`, over several days,
+and Jev checks every clause (about $1); plan sections 2 and 5 revised. **79.7** (correction) Session 79's
 first reply to the owner said a raise of CCO-PTF-CIP-SZH's C3.4 meant Integral's "would need to be considered" too; the
 two rest on different clause statuses (short against not shown), and Integral's needs a rule of its own (79.4).
 
@@ -676,10 +727,14 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
+Session 80 added: **ledger S66 rewritten** (the owner's setup, now: give the Claude GitHub App access to
+`compassionism-sim-results`; add an `OPENROUTER_API_KEY` secret there; optionally buy $10 of OpenRouter credit, which
+lifts the free models' cap from 50 to 1,000 calls a day; `TYPESAFE_API_KEY` is already set and works) and **D61** (the
+reader model; default `nvidia/nemotron-3-ultra-550b-a55b:free`). The owner confirmed D58 to D60 (decision 80.1).
 Session 79 added: ledger **D58** and **D59** (the owner's decisions 79.1 to 79.4, answered in the session; confirm in the
 ledger), **D60** (the outside review's scope and whether it may search; default: all 667 units in priority order, closed to
-the source packs), and step **S66**, the owner's setup before Session 80 (Runpod connector or key, the pod's secrets,
-network access). Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
+the source packs), and step **S66**, the owner's setup before Session 80 (a free-tier API key and the TypeSafe key as secrets in the
+results repository, network access). Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
 items outside stage 3b's scope (Next work, open item (e)). Sessions 72, 74, 76, 77 and 78 added nothing for the owner; Session 73's ledger D56 was confirmed (decision 74.1) and Session 75's
 ledger D57 (decision 76.1). Ledger I7's
 second item ("You review it", the Nordic finding) is the owner's; Session 74 read the finding (decision 74.5). Before

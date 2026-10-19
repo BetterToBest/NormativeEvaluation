@@ -1,0 +1,5 @@
+outside_kit_sources/: 38 files match their md5s (pins compassionism-simulation d10ed6e, integral_wp_md5 a6defc9a0ec7c4ace56509dffd680307, research-hub 8e8a6ba)
+kit: 250 files, 3831811 bytes; manifest md5 7174064e8c592ab4e6a33a124a1fca21
+calls planned: 696 (groups 1: 29, 2: 116, repeat: 29, 3: 135, 4: 387)
+units: 667 (sources 294, closed-book 373); stage B units: 8
+FAIL: outside_kit/ differs from what outside_kit.py builds: 1 files (first: criteria/C1.1.md)

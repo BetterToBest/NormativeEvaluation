@@ -1,0 +1,532 @@
+Skip to the findings
+Compassionism Simulation
+Findings explorer
+Simulation
+Health Study
+Visual suite
+Replication
+GitHub
+Research Hub
+What the simulation finds
+
+The math and code of this simulation were engineered by Claude, an AI model made by Anthropic, from the concepts in Duke Johnson's book Better To Best and his related vision for eradicating extreme poverty while enriching cultures and supporting human flourishing. The model has not yet been reviewed by an independent economist; the full code is open for anyone to check, and expert collaborators are welcome.
+
+The headline results come first. Then comes a guided read of each, with a chart, and then every table behind them, with downloads. Pick a release, an environment and 20 or 40 years. The address carries your choice, so you can share any view.
+
+Release
+v5.6 · 2026-10-14 (current figures)
+v5.5 · 2026-10-13 (figures from v5.4)
+v5.4 · 2026-10-12
+v5.3 · 2026-10-07
+v5.2 · 2026-10-06
+v5.1 · 2026-10-03
+v5.0.1 · 2026-10-03
+v5.0 · 2026-10-02
+current
+
+v5.6 (2026-10-14): Today’s safety net in every run: SNAP (with its work rule for adults without children under 14), the earned income tax credit and the refundable Child Tax Credit are paid in the no-program run and beside Compassionism, so the program is measured against today’s US policy; SNAP’s income limit is no longer read as a tax on all earnings.
+
+What changed for the figures in v5.4. People can now lose their job and find another, as US workers do (flows and spell lengths from the Current Population Survey), with unemployment insurance in both runs. After a permanent job loss, pay on return is lower, by 10% on average. That is a design parameter, because no single source fixes it for every permanent loss. In Adverse and Stress, the automation wave now works through job loss in high-risk occupations, instead of slower pay for everyone. Community housing (PTH) keeps the trust’s books for every home. Acre Equity grows at most at the price rise plus 2% (Duke’s cap, d175), and members who move away take 40% of their Acre Equity in cash (d174). Community businesses (PTF) now cut prices sector by sector instead of a flat 12%: food and utilities at the figures in the Basic Living Economic Index (BLEI) paper, and no cut where the Hub gives none. Members who move away leave. Job loss changes the no-program run as well as the program, so v5.4’s figures cannot be compared with earlier releases’: compare within a release. v5.3’s main row, run on the v5.4 engine with its own no-program run, is shown beside the main result as the reading “v5.3’s main row”. In Reference over 20 years, too little wealth changes by +6.1 points against no program there, and by +11.7 in the main result.
+
+The answer
+By environment
+Children
+Jobs and risk
+Hub targets
+Fixed lines
+Backing
+How far it moves
+Each part
+Against US data
+All tables
+Environment
+Reference
+Adverse
+Stress Test
+Years
+20 years
+40 years
+Terms used on this page (glossary)
+
+LAYER 1 · THE ANSWER
+
+The answer in numbers #
+
+Below 30 days of basic living
+
+11.7%
+
+with Compassionism, against 26.5% with no program
+
+Change:
+−14.8
+points
+
+In a typical year, the share of adults whose savings, pay and support would cover fewer than 30 days of basic living (the BLEI paper’s measure; in a household, its savings, pay and costs).
+
+Below the cost of living
+
+19.5%
+
+with Compassionism, against 49.3% with no program
+
+Change:
+−29.7
+points
+
+In a typical year, the share of adults whose household’s income falls short of the household’s cost of a basic living (the MIT living-wage basket for its adults and children).
+
+Too little wealth
+
+44.4%
+
+with Compassionism, against 32.7% with no program
+
+Worse:
++11.7
+points
+
+At the end of the run, the share of adults with less than $25,000 of net wealth (what someone owns minus what they owe; in a couple, half of what the two own) in today’s money.
+
+Children below the cost of living
+
+32.2%
+
+with Compassionism, against 76.4% with no program
+
+Change:
+−44.2
+points
+
+In a typical year, the share of children whose household’s income falls short of the household’s cost of a basic living (the MIT living-wage basket for its adults and children).
+
+The program raises prices by 50.8% a year (the cautious reading); by the last year the typical run is at 2,441× today’s prices. Cost: $29,874 per adult a year. If every dollar the Source pays were backed by new output (H1), 8.7% would end with too little wealth.
+
+Reference: the model’s main settings, with no recessions and no outside inflation. 20 years; averages over 500 paired runs of 500 simulated adults and their children, in households.
+
+Reading the measures
+
+LAYER 2 · A GUIDED READ OF EACH RESULT
+
+GUIDED READ
+
+Results by environment and horizon #
+
+This is Compassionism as the Research Hub specifies it, with every mechanism in, set against no program. A Source that issues the Basic Units (BU) pays for it. In the cautious main reading, what the Source pays out is new money, except the part that new output backs. Each environment is a different world the same adults live in: Reference (the model’s main settings, with no recessions and no outside inflation), Adverse (recessions, 2% outside inflation and an automation wave) and Stress Test (the Adverse environment with weaker settings (40% take part, a smaller allowance)). In this release both runs also have today’s safety net: SNAP (food stamps, with its work rule for adults aged 18 to 64 with no child under 14), the earned income tax credit and the refundable Child Tax Credit, paid on last year’s income. “No program” therefore means today’s US policy, and each change is what Compassionism adds to it.
+
+Showing: 20 years
+0%
+20%
+40%
+60%
+80%
+100%
+Share below the line (20 years): adults, and children for the last row
+Reference
+Below 30 days of basic living
+Below the cost of living
+Too little wealth
+Children below the cost of living
+Adverse
+Below 30 days of basic living
+Below the cost of living
+Too little wealth
+Children below the cost of living
+Stress Test
+Below 30 days of basic living
+Below the cost of living
+Too little wealth
+Children below the cost of living
+No program
+Compassionism
+How to read this
+What it does not show
+About the price levels
+What a month still buys
+Where these figures come from
+View as table
+View as table (Reference, 20 years)
+
+GUIDED READ
+
+Households and children #
+
+Children, and everyone in the household, with Compassionism against no program. A household is poor when its pooled income falls short of its own cost of living: the MIT living-wage basket for its adults and children, childcare included. Each child brings a quarter of the adult BU, shared between the household’s adults (Duke’s choice, d167).
+
+Showing: Reference, 20 years
+0%
+20%
+40%
+60%
+80%
+100%
+Share of people below the line (20 years)
+Children
+Below the cost of living
+Below 30 days of basic living
+Too little household wealth, last year
+Everyone (adults and children)
+Below the cost of living
+Too little household wealth, last year
+Below the cost of living, by household
+Single adults
+Single parents and their children
+Couples without children
+Couples with children, and children
+No program
+Compassionism
+How to read this
+What it does not show
+View as table (Reference, 20 years)
+
+GUIDED READ
+
+Jobs, homes and shops, and how risky life is #
+
+What v5.4 adds, for the environment and horizon chosen. Work: each year an adult at work can lose or leave their job (8.5% a year in normal years, 14.2% in recessions; flows from the Bureau of Labor Statistics Current Population Survey). They are out of work for a spell of the measured length, then come back. After a permanent loss (41% of spells), pay is lower by 10% on average. That cut is a design parameter: the readings show no cut and a 20% cut. Unemployment insurance is paid as in the US, in both runs. Community housing: each PTH (Public Trust Housing) home has the trust’s books: value, debt, upkeep, tax, the member’s Acre Equity and the community’s equity. The identity “homes minus debt equals members’ equity plus community equity” is checked for every home every year. Community businesses: a member’s price cut is built from sectors. Food gets the BLEI paper’s figure (62% off, less while under 40% of adults are members) and utilities 44% off. Transport, health care and childcare get no cut, because the Hub gives no figure. Risk: how far savings and days of basic living fall from their peak, how fast income recovers after a shock, and how often people fall back below the cost of living.
+
+Showing: Reference, 20 years
+0%
+20%
+40%
+60%
+80%
+100%
+Share of adults, of adult-years or of spells (20 years)
+Work
+Out of work (adult-years)
+Spells longer than 26 weeks
+Risk
+Savings fell 6+ months of costs
+Basic-living days fell 30+
+Income back within 3 years
+Back below cost of living (5 yrs)
+No program
+Compassionism
+How to read this
+What it does not show
+View as table (Reference, 20 years)
+
+GUIDED READ
+
+Against the Hub’s own targets #
+
+The Research Hub sets two targets for Year 7 of a program: a poverty rate under 2% (from about 12%) and a Gini coefficient of 0.25 to 0.30 (from 0.48). A Gini coefficient measures inequality, from perfect equality to one person owning everything. Both targets are in the Integrated Implementation Roadmap (Success Metrics by Year 7; Appendix I). The Basic Living Economic Index (BLEI) paper adds 0.25 as its design target for the spread of wealth.
+
+Showing: Reference, 20 years
+Hub target: under 2%
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+Share of adults below the line that year
+Year 7 (the Hub’s date)
+Official poverty line
+Poverty line, Supplemental-style
+Below 30 days (BLEI paper)
+Below 30 days (same-rules reading)
+Below the cost of living
+Too little wealth
+Unhoused
+Year 20 (last year)
+Official poverty line
+Poverty line, Supplemental-style
+Below 30 days (BLEI paper)
+Below 30 days (same-rules reading)
+Below the cost of living
+Too little wealth
+Unhoused
+No program
+Compassionism
+
+The spread of income and wealth (Gini), against the Hub’s target band for income (shaded):
+
+0.25–0.30
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Gini coefficient (0 = equal, 1 = one person has everything)
+Year 7
+Income
+Income counting price cuts
+Wealth (debts as zero)
+Year 20
+Income
+Income counting price cuts
+Wealth (debts as zero)
+No program
+Compassionism
+How to read this
+What it does not show
+View as table (Reference, 20 years)
+
+GUIDED READ
+
+Poverty lines fixed in dollars #
+
+The main readings move every line with the price level (the wealth line of $25,000, the 30-day BLEI line and the poverty threshold), so a line means the same living standard every year. Held fixed in dollars instead, the lines fall behind prices and the shares read lower.
+
+Showing: Reference, 20 years
+0%
+10%
+20%
+30%
+40%
+50%
+Share of adults below the line
+Compassionism
+Too little wealth, last year
+Below 30 days, over the run
+Official poverty line, last year
+No program
+Too little wealth, last year
+Below 30 days, over the run
+Official poverty line, last year
+Line moved with prices (the main reading)
+Line fixed in dollars
+How to read this
+What it does not show
+View as table (Reference, 20 years)
+
+GUIDED READ
+
+The decisive unknown: how much of the payout new output backs #
+
+The decisive unknown is how much of the Source’s payout new output backs. Call that share a. The main row assumes none of the net payout is backed by new output (a = 0). The H1 reading assumes all of it is (a = 1). This sweep tries a at 0, 0.25, 0.5, 0.75 and 1 on the same 500 paired runs of 500 adults over 20 years, with every other mechanism as in the main row. The two ends are the main row and H1, matching to the last digit.
+
+Showing: 20 years
+−40
+−20
+0
++20
++40
+a = 0
+a = 0.25
+a = 0.5
+a = 0.75
+a = 1
+Share of the Source’s payout backed by new output (a)
+Stress Test
+Adverse
+Reference
+Reference
+Adverse
+Stress Test
+Middle reading (the Kenya-anchored band)
+
+The price rise the program itself causes, at each share:
+
+0%
+20%
+40%
+60%
+80%
+a = 0
+a = 0.25
+a = 0.5
+a = 0.75
+a = 1
+How to read this
+What it does not show
+View as table
+
+GUIDED READ
+
+How far the answer moves: the readings beside the main row #
+
+Each reading changes one assumption beside the main row, over the same paired runs. None of them is in the main row. The first group is v5.4’s: v5.3’s main row (no job loss, and community housing (PTH) and community businesses (PTF) as before), no pay cut on return to work, a 20% cut, automation as a lasting pay drag, the earlier Acre Equity rule (3–5% a year), PTF cutting 25% in the sectors the Hub gives no figure for, and a disaster in Year 7 (a scenario, not a part of the model). The second group undoes, one at a time, each choice v5.3 added: households, pooling, the child allowance, the wider list of what BU buy, starting wealth from the survey, and spending that follows income. A reading that changes the population or something outside the design (job loss and its pay rule, the disaster, households, savings, aging, the US-data readings) applies to the no-program run too. Its change is then measured against no program under the same rule.
+
+Showing: Reference, 20 years; measure: too little wealth
+Measure
+Too little wealth
+Cost of living
+30 days (BLEI)
+Children
+−40
+−20
+0
++20
++40
++60
+Too little wealth: change against no program, points (left is better)
+main row +11.7
+no program
+v5.4’s choices, and a disaster
+v5.3’s main row (no job loss; communit…
+No pay cut on return to work
+A pay cut of a fifth on return to work
+Automation as a lasting pay drag (the e…
+Acre Equity by the earlier rule (three to…
+Community businesses (PTF) cut a qu…
+A disaster in Year 7 (a scenario)
+v5.3’s new choices, each undone in turn
+v5.2’s main row (adults alone, v5.2’s ch…
+Adults living alone (no households)
+BU buy only food, housing and medical …
+Each adult keeps their own money (no …
+No child allowance
+A child allowance of half the adult BU
+Starting savings from the model’s own …
+Everyone pays their full cost (no grad…
+Partners’ income swings strongly linked
+Surplus for an even chance of advanci…
+The two ends and the middle backing band
+H1: every Source dollar backed
+Middle backing reading (Kenya-anchored)
+Middle band, low end (US idle labor)
+Middle band, high end (Kenya peak year)
+Savings and the BU
+Savings keep up with prices (plus a rea…
+Savings keep only their value
+BU indexed every year
+H1 with the BU indexed every year
+Aging
+Aging: children grow up and are born; e…
+Aging, retirees leave the program
+Aging, benefit from own wage
+Aging, every estate leaves the model
+Aging, wages follow US earnings by age
+Closer to US data
+Automation risk linked to wages
+Wages spread as in the survey
+Wages centered on the survey median
+All three wage and risk readings
+Idle workers in normal years
+Idle labor in normal years
+Robustness risks
+Rent capture, BU tenants (voucher evi…
+Rent capture, every renter (upper end)
+Review errors, middle
+Review errors, high, no audits
+Launch gift paid over the run
+Other ways to pay (not specified by the Hub)
+Flat contribution on wages
+Progressive income tax
+Land-value tax
+Other readings of the design
+BU essentials counted as backed
+Creative work at the cost of its hours
+Capacity only as reinvestment pays
+Taking part costs nothing
+Price cuts free
+The two former stand-ins on
+Reading (95% interval)
+Vertical line: the main row
+How to read this
+What it does not show
+View as table (Reference, 20 years)
+
+GUIDED READ
+
+What each part of the design does #
+
+What each part of the design does: the main row against the main row without that part, on 500 paired runs over 20 years. These runs are v5.3’s (made before job loss, PTH’s books and PTF by sector joined the main row); rerunning them on the v5.4 main row is listed as follow-up work. The top row is the whole program against no program. Parts work together, so the parts need not add up to the whole; the gap is the interaction, in the table. They have no safety net in either run (v5.6 added it).
+
+Showing: Reference, 20 years; measure: too little wealth
+Measure
+Too little wealth
+Cost of living
+30 days (BLEI)
+Children
+−7.5
+−5
+−2.5
+0
++2.5
++5
++7.5
+Too little wealth: change, points (left is better)
+no effect
+The whole program
+Every part together
+What each part adds (the main row against the main row without it)
+the BU allowance
+conversion
+project hiring
+the essential businesses' payroll
+the premium split
+community businesses
+community housing
+zone coordination and the civic portal
+joining and leaving
+the spending layer
+the production side
+octave advancement
+The whole program against no program (95% interval)
+What the part adds (95% interval)
+How to read this
+What it does not show
+View as table (Reference, 20 years)
+
+GUIDED READ
+
+The no-program run against US data #
+
+The no-program run is the yardstick for every result, so it is checked against published US figures: poverty (Census Bureau, Poverty in the United States: 2025), income inequality (Census Bureau, Income in the United States: 2025), wealth (Federal Reserve, 2022 Survey of Consumer Finances: families with a head aged 25–66 and wages, by type, in 2025 dollars) and how poverty spells end (Panel Study of Income Dynamics, Stevens 1994). Households start with the survey’s wealth for their type, so the first year matches it by construction; the check is how the yardstick holds up over the years. No setting was changed to bring a later figure closer. This check is v5.3’s no-program run (before job loss joined it); job loss changes the no-program run, so rerunning the check is listed as follow-up work. It has no safety net (v5.6 added it to both runs); rerunning it with the safety net is listed as follow-up work.
+
+0%
+20%
+40%
+60%
+80%
+Share of households (debt) or of people (poverty)
+Households in debt (net worth below zero)
+All households
+Couples with children
+Couples without children
+Single parents
+Single adults
+Below the official poverty line
+Everyone (household thresholds)
+US figure
+Model, no program, Year 7 (Reference)
+How to read this
+What it does not show
+View as table: The no-program run against US data
+View as table: Households’ wealth against the survey, by type: share in debt (median net worth)
+View as table: The readings that change a known choice, no program only (adults)
+
+LAYER 3 · EVERY TABLE, WITH DOWNLOADS
+
+All tables of this release #
+
+Every table behind the charts, for all environments and both horizons. Each table opens on demand and downloads as CSV or JSON. The JSON gives every number with its path in the release file. The whole release is one file: data/releases/v5.6.json.
+
+Main result, 20 years (Compassionism vs no program)
+(3 rows)
+Main result, 40 years (Compassionism vs no program)
+(3 rows)
+Run by run: how often the program does better than no program on the same draws
+(36 rows)
+Against the Hub’s own targets: Year 7 and the last year
+(60 rows)
+Poverty lines moved with prices against lines fixed in dollars
+(6 rows)
+Households and children: Compassionism against no program
+(66 rows)
+Jobs, homes, shops and risk: no program against Compassionism
+(102 rows)
+The main row and every reading beside it
+(306 rows)
+What each part of the design does (the main row against the main row without that part, paired, 20 years)
+(42 rows)
+The backing-share sweep: change in too little wealth and program inflation, by the share a of the Source’s payout backed by new output
+(5 rows)
+The no-program run against US data
+(5 rows)
+Households’ wealth against the survey, by type: share in debt (median net worth)
+(5 rows)
+The readings that change a known choice, no program only (adults)
+(7 rows)
+
+Compassionism Simulation v5.6.0 · Better To Best Research Hub · Code: Apache License 2.0 · Content: CC BY 4.0
+
+Simulation · Visual suite · Replication framework · GitHub · DOI: 10.17605/OSF.IO/QWTE2
+
+Suggested citation: Johnson, D. & Claude (Anthropic). (2026). Compassionism Framework Simulation. Better To Best Research Hub. https://doi.org/10.17605/OSF.IO/QWTE2

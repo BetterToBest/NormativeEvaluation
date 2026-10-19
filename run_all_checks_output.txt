@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 135 reproducibility checks
+run_all_checks.py -- 140 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 135 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 6891667a)
+          README.md == README.md (md5 fb251827)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -530,7 +530,28 @@ run_all_checks.py -- 135 reproducibility checks
           stdout == apply_owner_s79_check_negative_output.txt (md5 03161430)
           stderr == (empty) (md5 d41d8cd9)
 
+[136] PASS  outside_kit.py --check: the outside review's kit (outside_kit/: the instructions, the blind rules, 29 criteria with their worked examples removed, 23 system files, the source packs, the order of 696 calls, the eight stage B arguments, the schema and the manifest) is exactly what the generator builds; the cached design texts match their md5s
+          stdout == outside_kit_output.txt (md5 978779ef)
+          stderr == (empty) (md5 d41d8cd9)
+
+[137] PASS  outside_kit.py --check rejects a kit with one criterion file swapped for another (negative control; exit 1 expected)
+          exit status 1, as expected
+          stdout == outside_kit_negative_output.txt (md5 fbd9c27b)
+          stderr == (empty) (md5 d41d8cd9)
+
+[138] PASS  outside_kit_check.py: every blind prompt (696) and Jev state (294), built by the runner's own functions, holds no tier, record, session, owner, withheld marker, stage B text, other system's name, or verdict next to a criterion; each prompt carries its own criterion, system and pack
+          stdout == outside_kit_check_output.txt (md5 ab63d6ff)
+          stderr == (empty) (md5 d41d8cd9)
+
+[139] PASS  outside_kit_check.py --negative: one leak of each of seven kinds planted in a copy of the kit is caught, and only that kind
+          stdout == outside_kit_check_negative_output.txt (md5 702ca802)
+          stderr == (empty) (md5 d41d8cd9)
+
+[140] PASS  outside_review_runner.py --selftest: prompt assembly, the FINAL parser, the clause-rule validator, resume, the heartbeat, the stage B gate and the Jev request, offline
+          stdout == outside_review_runner_selftest_output.txt (md5 571fdfa7)
+          stderr == (empty) (md5 d41d8cd9)
+
 ============================================================================================
-SUMMARY: 135 passed, 0 failed, 0 skipped (of 135).
+SUMMARY: 140 passed, 0 failed, 0 skipped (of 140).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.

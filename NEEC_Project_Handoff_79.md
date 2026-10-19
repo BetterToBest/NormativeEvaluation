@@ -46,6 +46,10 @@ reconsidered (C1.2a, C2.5, C3.4) and that Integral's C3.4 be raised with CCO-PTF
   - The runner works unattended on a Runpod CPU pod and pushes to `compassionism-sim-results` every 20 minutes.
   - The comparison rules are committed before the run, and the outside result on every owner-decided unit is published
     either way.
+- **Revised the same day (decision 79.8, owner).** Paid Runpod inference (about $30 to $55) is too costly. The reader
+  becomes a free-tier model (GitHub Models, Gemini, Groq or OpenRouter, confirmed in Session 80), run as a scheduled
+  GitHub Actions job in `compassionism-sim-results` over several days, priority units first, pushing every run. Jev still
+  checks every clause (about $1). Plan sections 2 and 5 revised; ledger S63 and S66 updated.
 - **Tooling.** Harness v49, 135 checks: `apply_owner_s79.py --check` with a negative control; `final_pass.py --selftest`
   also checks the owner's layer. The Session 78 checks read their snapshots, and their captured outputs changed only in
   file names. The evidence reports' close-call count rose from 158 to 160.
@@ -66,6 +70,7 @@ Recorded in `STATE.md`, "Decided (Session 79)".
 - **79.5** (optional, tooling) the owner's layer as `final_pass.owner_state()` and `apply_owner_s79.py`; the Session 78 files
   kept as snapshots; harness v49.
 - **79.6** (owner) the outside blind review before the prose, with Jev, on Runpod with auto-push.
+- **79.8** (owner) the outside review on free tiers, as a scheduled GitHub Actions job.
 - **79.7** (correction) the session's first reply tied Integral's C3.4 to CCO-PTF-CIP-SZH's too loosely.
 
 ## 3. Ledger entries
@@ -83,8 +88,9 @@ Nothing is queued for a later session to apply.
 1. Start-of-session check: `python3 run_all_checks.py > /tmp/out.txt; cmp /tmp/out.txt run_all_checks_output.txt` expect no
    difference (135 checks).
 2. Read the ledger (`ArtifactData get`, `projects/neec`): `sel` on D58 to D60 and S66's state. Record any change as a
-   numbered decision first. If S66 is not done (no Runpod connector or key in the session, no network access to
-   `api.runpod.ai` and `bettertobest.github.io`), build everything and stop before the launch, saying so.
+   numbered decision first. Confirm the free tiers' current limits and models
+   and pick one (plan, section 2). If S66 is not done (no API key secret, no network access to the provider and
+   `bettertobest.github.io`), build everything and stop before the launch, saying so.
 3. Build per `NEEC_OutsideReview_Plan_s79.md`, sections 3 to 6:
    - the kit and its source packs (primary sources only);
    - `outside_kit_check.py`, added to the harness with a negative control that plants a leak;

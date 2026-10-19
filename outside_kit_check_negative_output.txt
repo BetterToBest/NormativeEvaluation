@@ -1,0 +1,8 @@
+PASS  planted verdict  in files/...                    caught: True; other kinds hit: none
+PASS  planted tier     in criteria/...                 caught: True; other kinds hit: none
+PASS  planted record   in prompt/...                   caught: True; other kinds hit: none
+PASS  planted owner    in files/...                    caught: True; other kinds hit: none
+PASS  planted stageb   in files/...                    caught: True; other kinds hit: none
+PASS  planted marker   in systems/...                  caught: True; other kinds hit: none
+PASS  planted system   in criteria/...                 caught: True; other kinds hit: none
+SUMMARY: 7 of 7 planted leaks caught alone; 0 failed

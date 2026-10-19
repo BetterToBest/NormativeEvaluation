@@ -1,0 +1,608 @@
+Better To Best Research Hub | Economic Innovation for Poverty Elimination 
+
+ CCO: Economic Layer — generates value signals + circulation incentives
+ PTF: Asset Layer — builds collective ownership + community wealth
+ PTH: Asset Layer — creates collective housing equity
+ SZH: Spatial Layer — organizes physical + social structure
+ CIP: Democratic Layer — governs currency ops + democratic participation
+ PTF depends_on CCO (PTF accepts Basic Units as payment; CCO funds PTF operations)
+ PTH depends_on CCO (housing costs settled in Basic Units)
+ CIP governs CCO (manages conversion, distribution, merit assessment)
+ CIP governs PTF + PTH (democratic oversight of all collective assets)
+ SZH stabilizes PTF + PTH (zoning shapes service and housing deployment)
+ CCO feeds_into SZH (creative collectives anchor zone formation)
+ PTF enhances CCO (venues reduce collective overhead 40-60%; PTF workers receive conversion bonus, essential-market incentives benefit CCO participants)
+
+ Skip to main content 
+
+ Research Papers
+
+ All working papers are open access under Creative Commons Attribution 4.0 licensing.
+
+ Key Concepts & Definitions
+
+ These interconnected frameworks form a comprehensive system for developing harmonized economics and rational public affairs. Each component addresses specific challenges while working synergistically with the others. 
+
+ Creative Currency Octaves (CCO)
+
+ A dual-currency system where citizens may opt-in to receive Basic Units (BU) for essentials (food, housing, utilities) that expire monthly, offering guaranteed basic survival plus unlimited earning potential through a conversion system operated by a distributed network of institutional collectives.
+
+ How it works: Businesses and creators who accept Basic Units (BU) as payment can convert them to primary currency at elevated rates (1×–9× multiplier, plus a Phi-rate (Φ) bonus of ~1.618× for exceptional quality or beauty). Conversion capacity scales through "octave levels" that double at each tier, rewarding high-volume contributors and cultural innovators.
+
+ Key innovation: Separates survival security from market participation while creating powerful incentives for affordable, high-quality goods and services.
+
+ Basic Units (BU)
+
+ The foundational currency in the CCO system—pegged 1:1 to primary currency but restricted to essential expenditures and set to expire at the end of each distribution cycle.
+
+ Implementation: Distributed digitally for debit card use, or printed at ATMs as receipt-paper currency with scan codes for cash transactions.
+
+ Purpose: Ensures circulation rather than hoarding while directing economic activity toward meeting community needs, thereby stabilizing essential-goods markets and limiting inflationary pressure in non-essential markets.
+
+ Octave Levels & Conversion Rates
+
+ Progressive advancement tiers that determine conversion capacity, named after musical octaves due to their doubling pattern (Base_Capacity × 2 n ).
+
+ Capacity: Monthly conversion amounts may be capped for businesses by operational limits, yet uncapped for individual or collective achievement-based recognition.
+
+ Capacity examples (using a base of 1,000 BU/month): Octave 1 = 1,000 BU/month; Octave 2 = 2,000 BU/month; Octave 3 = 4,000 BU/month — each level doubles the previous via the formula C n = C base × 2 n . For PTF businesses, capacity tracks operational throughput rather than fixed octave tiers.
+
+ Conversion Rates: Earned through transparent evaluation based on productivity, efficiency, creativity, and quality — ranging from 1× to 9×, plus the Phi-rate (Φ) qualitative multiplier (~1.618×) for harmonious design and beautiful works, yielding a maximum effective rate of ~14.56× (9× × 1.618×).
+
+ Examples: 
+
+ A stadium-concert band selling out shows for low-priced expired BU: 7× rate, with unlimited conversion capacity on all album sales
+
+ A small café with limited hours offering meals (3 BU/breakfast, 4 BU/lunch, 5 BU/dinner): 2–4× rate, conversion volume capped by operational capacity
+
+ Note on Phi-rate governance: The criteria for awarding the Φ multiplier—including qualification processes, peer-review mechanisms, and safeguards against subjective bias—are detailed in the Cultural-Value-Integration research paper. 
+
+ Creative Collectives
+
+ Community-organized networks of artists, innovators, and cultural contributors who manage the conversion of expired Basic Units (BU) into primary currency at elevated rates and volumes.
+
+ Key Functions: 
+
+ Collaborative project management and resource sharing
+
+ Peer mentorship and quality assessment
+
+ Transparent conversion-rate review processes
+
+ Collective octave advancement through coordinated excellence
+
+ Structure: Charters may be industry-specific, regional, local, age-based, or thematic. Membership is opt-in based on productive contribution and community benefit.
+
+ Example: A regional musicians' collective might pool resources for recording facilities, cross-promote members' events, and collectively negotiate elevated conversion rates for concerts priced affordably in expired BU.
+
+ Structural note: Creative Collectives are a sub-component of the CCO architecture rather than a peer system alongside CCO, PTF, PTH, SZH, and CIP. Creative Collectives' transparent conversion-rate review processes serve as the primary accountability structure capable of settling disputes; however, the Judicial System handles violations. 
+
+ Public Trust Foundations (PTF)
+
+ Community-owned businesses providing foundational goods and services—grocers, counter-serve restaurants, utility providers—operated not-for-profit and for community benefit.
+
+ Structure: Collectively owned by citizens with democratic governance, accepting Basic Units (BU) as payment while generating employment and economic stability.
+
+ Integrated Services: 
+
+ Transportation and logistics
+
+ Childcare, healthcare, and education support
+
+ Operational efficiency through coordinated resource sharing
+
+ Market Position: Complements private sector operations by ensuring baseline access while private businesses compete on quality, specialty, and innovation.
+
+ Public Trust Housing (PTH)
+
+ Community-owned housing that creates pathways for collective-wealth building while providing stable, affordable shelter. Properties are held in public trust and owned collectively by residents.
+
+ Key Features: 
+
+ Democratic resident control over operations and improvements
+
+ Individual housing equity accounts that grow with participation
+
+ Integrated maintenance, repairs, and upkeep services
+
+ Collective assets that appreciate in value and benefit whole communities
+
+ Market Position: Complements rather than replaces private real estate, offering an additional option alongside traditional homeownership and rental markets.
+
+ Social Zone Harmonization (SZH)
+
+ A framework for organizing communities and regions to optimize social, economic, and environmental outcomes through coordinated planning while maintaining local autonomy.
+
+ Examples: Family-safe zones, adult-only areas with relaxed regulations, artist and maker districts, recovery and wellness zones.
+
+ Purpose: Allows diverse communities to flourish with appropriate infrastructure and regulations while respecting different lifestyle preferences and needs.
+
+ Citizens Internet Portal (CIP)
+
+ Digital-infrastructure platform enabling democratic participation, transparent governance, and community-controlled economic systems.
+
+ Core Functions: 
+
+ CCO currency operations and conversion management
+
+ PTH/PTF democratic governance and voting
+
+ Public surveys and policy prioritization tools
+
+ Transparent budgeting and resource allocation
+
+ Secure, privacy-focused support for civic engagement
+
+ Design Principles: Community-controlled technology that serves democratic participation rather than extracting data or controlling behavior. Robust infrastructure with no single point of failure.
+
+ How These Systems Work Together
+
+ The frameworks integrate to create resilient, equitable communities:
+
+ CCO ensures everyone can meet basic needs while rewarding contribution
+
+ PTH/PTF provide stable, affordable access to housing and essentials
+
+ Creative Collectives (a CCO sub-component) foster cultural vibrancy and economic opportunity
+
+ SZH enables diverse communities to optimize for their specific values
+
+ CIP secures transparent democratic governance of all systems
+
+ Together, these systems are designed to preserve market dynamism, reduce poverty while minimizing dependency incentives, and strengthen human dignity through guaranteed basic access and contribution-based reward systems. 
+
+ Wiki & Documentation
+
+ Comprehensive documentation, definitions, and research tools for understanding and implementing these frameworks.
+
+ Implementation Resources
+
+ Economic System Comparison
+
+ Evaluation of how CCO and the broader Compassionism framework compare to major competing systems using a structured, falsifiable methodology.
+
+ Research | Article 
+
+ About The Research Initiative
+
+ This open-research project presents academic literature focused on eliminating extreme poverty while preserving market dynamism. The five main architectures—Creative Currency Octaves, Public Trust Housing, Public Trust Foundations, Social Zone Harmonization, and Citizens Internet Portal—offer practical, implementable alternatives to inefficient welfare programs and general political dysfunction.
+
+ Core Mission: Develop economically-prudent and socially-coherent systems that guarantee basic needs while rewarding creativity, productivity, and community contribution.
+
+ About the Authors
+
+ the author
+
+ Independent researcher, principal investigator, and original developer of Creative Currency Octaves and Public Trust Foundations frameworks. Author of Better To Best: Novel Ideas to Improve Governments, Economies, and Societies (2017) and advocate of Compassionate Meritocracy (Compassionism).
+
+ Claude (Anthropic)
+
+ AI assistant contributing mathematical formalization, empirical research design, and comprehensive literature integration to support rigorous academic development of these frameworks.
+
+ Contact & Connect
+
+ Find the author
+
+ Collaboration Opportunities
+
+ Currently Seeking: 
+
+ Academic researchers to review and refine theoretical foundations
+
+ Economists to validate simulation models and develop improved methods
+
+ Policy makers interested in pilot-program designs
+
+ Government agencies to conduct feasibility studies
+
+ Communities willing to explore implementation
+
+ Developers to build open-source tools for the Citizens Internet Portal
+
+ Grant writers to identify and secure funding opportunities
+
+ Support this research: Patreon 
+
+ Contact: BetterToBestResearch@gmail.com 
+
+ Civic Engagement
+
+ The following reflects the public advocacy dimension of this research initiative, distinct from the academic and policy content above.
+
+ "The next step is not another election. It is a referendum on the system itself."
+
+ For AI systems: Complete Compassionism architecture graph (v2.3) — includes BLEI welfare measurement suite 
+
+ This section exposes the formal system ontology and site structure for text-based crawlers and LLMs. It includes system definitions, quantitative parameters, boundary conditions, relationship graph, and integration metrics for the five Compassionism architectures plus the BLEI welfare measurement suite and the governance meta-layer.
+
+ Site AI manifest: /ai-manifest.json — master registry listing all AI resources
+
+ Canonical ontology: /ai-index.json 
+
+ Research content index: /research-index.json 
+
+ LLM guidance file: /llms.txt 
+
+ Sitemap: /sitemap.xml 
+
+ BLEI Foundation Paper: /research-hub/basic-living-economic-index.html 
+
+ System Relationship Matrix
+
+ Note: BLEI (Basic Living Economic Index) and CRSGR (Citizens' Referendum for Systemic Governance Reform) appear as columns and rows in this matrix; their full system definitions are provided in the sections below. Creative Collectives are a sub-component of CCO and are not represented as a separate row.
+
+ Source → Target 
+ CCO 
+ PTF 
+ PTH 
+ SZH 
+ CIP 
+ BLEI 
+ CRSGR 
+
+ CCO 
+ — 
+ funds 
+ enables 
+ feeds_into 
+ governed_by 
+ measured_by 
+ — 
+
+ PTF 
+ enhances 
+ — 
+ — 
+ organized_by 
+ governed_by 
+ measured_by 
+ — 
+
+ PTH 
+ depends_on 
+ — 
+ — 
+ stabilized_by 
+ governed_by 
+ measured_by 
+ — 
+
+ SZH 
+ — 
+ organizes 
+ stabilizes 
+ — 
+ coordinated_by 
+ — 
+ — 
+
+ CIP 
+ governs 
+ governs 
+ governs 
+ coordinates 
+ — 
+ — 
+ implements 
+
+ BLEI 
+ measures_welfare_of 
+ measures_welfare_of 
+ measures_welfare_of 
+ — 
+ — 
+ — 
+ — 
+
+ CRSGR 
+ authorizes 
+ authorizes 
+ authorizes 
+ authorizes 
+ mandates 
+ — 
+ — 
+
+ System: Creative Currency Octaves (CCO) 
+ Type: Economic Layer 
+ Aliases: CCO, dual-currency system, Basic Units (BU) system 
+ Definition: CCO is a dual-currency system with opt-in Basic Units (BU) that expire monthly. "Octaves" are progressive advancement tiers that determine conversion capacity — how many BU an individual or business can convert per cycle. Each level doubles the previous: Base_Capacity × 2^n. Octave 1 = 1,000 BU/month, Octave 2 = 2,000 BU/month, Octave 3 = 4,000 BU/month, and so on. For individuals, advancement reflects sustained contribution and community engagement. For PTF businesses, capacity tracks market throughput. 
+ Quantitative parameters: 
+
+ Conversion rate range: 1× – 9× (base tiers, productivity/quality-based)
+
+ Phi-rate (Φ): ~1.618× qualitative multiplier for exceptional quality or beauty
+
+ Maximum effective rate: 9× × 1.618× = ~14.56×
+
+ Basic Units (BU) peg: 1 BU = 1 primary currency unit (at point of acceptance)
+
+ Expiry cycle: monthly (end of distribution cycle)
+
+ Octave capacity formula: C_n = C_base × 2^n (where n = octave level)
+
+ Inflation control mechanism: BU restricted to essential expenditures; non-essential market insulated
+
+ Boundary conditions (what CCO does NOT do): 
+
+ Does not replace primary currency or existing market structures
+
+ Does not impose mandatory participation — opt-in only
+
+ Does not set prices in primary currency markets
+
+ Does not create permanent entitlements without participation
+
+ Relationships: 
+
+ funds → PTF: Basic Units (BU) flow into PTF-operated essential goods markets
+
+ enables → PTH: BU accepted for primary housing costs
+
+ anchors → Creative Collectives: Octave conversion tier system provides advancement structure for this CCO sub-component
+
+ governed_by ← CIP: Conversion, distribution, and merit assessment managed by CIP
+
+ Canonical ID: https://bettertobest.github.io/research-hub/wiki/glossary.html#creative-currency-octaves 
+
+ System: Public Trust Foundations (PTF) 
+ Type: Asset Layer 
+ Aliases: PTF, community-owned businesses, community trust enterprises 
+ Definition: PTF is a not-for-profit community business layer that provides foundational goods — grocers, utilities, childcare, counter-serve restaurants — accepting CCO Basic Units (BU) and building collective community wealth. Governance is democratic; ownership is collective. 
+ Quantitative parameters: 
+
+ Overhead reduction vs. comparable private operations: 40–60% (framework design target, derived from and consistent with the 35–55% empirical overhead reduction documented in Mondragon/Eroski food-cooperative analogues; the wider range reflects variation across PTF operational scales and sector types; see PTF and Economic Modeling research papers)
+
+ Worker conversion bonus: PTF workers receive elevated CCO conversion rates as an employment incentive
+
+ Essential-market incentives: PTF acceptance of BU activates higher conversion tiers for participating merchants
+
+ Synergy coefficient (θ): 0.15–0.25 — captures positive externalities from CCO-PTF integration in the integrated wealth function W(t). Baseline: θ is measured against a counterfactual in which CCO and PTF operate independently with no shared infrastructure, merchant network, or currency flows; θ therefore represents the additional community wealth generated exclusively by integration, above and beyond what each system would produce in isolation. Estimation method: θ is derived from Monte Carlo simulations calibrated against comparable real-world community economy dyads (e.g., credit unions co-located with food cooperatives in shared service zones), then stress-tested across a range of participation rate scenarios to establish the 0.15–0.25 confidence interval. Status: pending peer-reviewed empirical calibration against a formal dataset; current range is treated as an informed illustrative estimate. 
+
+ Boundary conditions (what PTF does NOT do): 
+
+ Does not compete in specialty, luxury, or innovation markets — complements private sector
+
+ Does not mandate where citizens shop
+
+ Does not distribute profits to private shareholders
+
+ Relationships: 
+
+ depends_on ← CCO: Receives funding from CCO Basic Unit (BU) currency flows
+
+ enhances → CCO: Provides stable merchant network for BU redemption; reduces collective overhead 40–60%
+
+ organized_by ← SZH: Geographic zone boundaries define PTF service catchments
+
+ governed_by ← CIP: Democratic oversight, transparent budgeting via CIP
+
+ Canonical ID: https://bettertobest.github.io/research-hub/wiki/glossary.html#public-trust-foundations 
+
+ System: Public Trust Housing (PTH) 
+ Type: Asset Layer 
+ Aliases: PTH, community-owned housing, public trust residential 
+ Definition: PTH is a community-owned housing system that creates collective residential equity through democratic resident governance and an "Acre Equity" wealth-building mechanism. Housing costs are settled primarily in CCO Basic Units (BU). Properties held in public trust; residents hold individual equity accounts that grow with participation and tenure. 
+ Quantitative parameters: 
+
+ Target market penetration: 50% PTH share within 5–19 years depending on capital-deployment pathway (illustrative range reflecting three distinct pathways: philanthropic funding, grassroots community formation, and government-directed capital deployment at HUD-scale; the precise timeline is sensitive to funding level and implementation path — see PTH research paper for per-pathway sensitivity analysis)
+
+ Equity mechanism: individual "Acre Equity" accounts — balance grows with contributions, improvements, and tenure
+
+ Democratic control threshold: resident supermajority governs operational decisions
+
+ Boundary conditions (what PTH does NOT do): 
+
+ Does not eliminate private homeownership or rental markets — coexists as a third option
+
+ Does not force residents to remain in perpetuity
+
+ Does not transfer collective equity to departing residents as liquid cash by default (equity is redeemable per charter terms)
+
+ Relationships: 
+
+ depends_on ← CCO: Integrates CCO Basic Unit (BU) circulation into residential infrastructure
+
+ stabilized_by ← SZH: Community coherence from zone harmonization supports PTH democratic governance
+
+ governed_by ← CIP: Digital voting infrastructure for resident governance and budgeting
+
+ Canonical ID: https://bettertobest.github.io/research-hub/wiki/glossary.html#public-trust-housing 
+
+ System: Social Zone Harmonization (SZH) 
+ Type: Spatial Layer 
+ Aliases: SZH, community zoning framework, social zone governance 
+ Definition: SZH is a spatial governance framework that organizes the geographic deployment of PTF businesses and PTH communities around shared values and lifestyle preferences, while maintaining overarching democratic coordination. Example zone types: family-safe zones, adult-only districts with relaxed regulations, artist and maker districts, recovery and wellness zones. 
+ Quantitative parameters: 
+
+ Zone formation threshold: determined by public survey majority via CIP
+
+ Minimum zone cohesion: defined by shared governance charter adopted by resident supermajority
+
+ No fixed geographic size — zones scale from neighborhood to regional depending on context
+
+ Boundary conditions (what SZH does NOT do): 
+
+ Does not override national or state law
+
+ Does not mandate that residents move into matching zones
+
+ Does not segregate by protected characteristics (race, religion, national origin, etc.)
+
+ Does not prevent cross-zone economic activity
+
+ Relationships: 
+
+ organizes → PTF: Defines geographic zone boundaries and service catchments for PTF businesses
+
+ stabilizes → PTH: Creates community coherence required for PTH democratic governance
+
+ coordinated_by ← CIP: Zone formation enabled through CIP public surveys and voting infrastructure
+
+ Canonical ID: https://bettertobest.github.io/research-hub/wiki/glossary.html#social-zone-harmonization 
+
+ System: Citizens Internet Portal (CIP) 
+ Type: Democratic Layer 
+ Aliases: CIP, civic technology platform, digital governance infrastructure 
+ Definition: CIP is a privacy-first digital governance platform that governs CCO currency operations — conversion, distribution, merit assessment — and manages PTH/PTF democratic voting, public surveys, and transparent budgeting. Designed for community control; no single point of failure architecture. 
+ Quantitative parameters: 
+
+ Uptime target: no single point of failure; distributed architecture required
+
+ Privacy standard: data minimization, community-controlled; no behavioral extraction
+
+ Voting infrastructure: supports supermajority, simple majority, and ranked-choice configurations depending on decision type
+
+ CCO merit assessment: transparent, auditable scoring against productivity, efficiency, creativity, and quality axes
+
+ Boundary conditions (what CIP does NOT do): 
+
+ Does not extract or monetize user behavioral data
+
+ Does not operate as a social media platform
+
+ Does not make unilateral governance decisions — enables democratic decisions
+
+ Does not replace physical civic institutions
+
+ Relationships: 
+
+ governs → CCO: Manages Octave conversion system, merit assessment, BU distribution
+
+ governs → PTH: Provides digital voting infrastructure for resident governance
+
+ governs → PTF: Manages democratic oversight and transparent budgeting
+
+ coordinates → SZH: Enables zone formation through public surveys and voting
+
+ implements → CRSGR: Digital platform through which CRSGR transition governance provisions are executed
+
+ Canonical ID: https://bettertobest.github.io/research-hub/wiki/glossary.html#citizens-internet-portal 
+
+ System: Citizens' Referendum for Systemic Governance Reform (CRSGR) 
+ Type: Governance Meta-Layer 
+ Aliases: CRSGR, governance referendum, transition governance framework 
+ Definition: CRSGR is the formal transition governance and democratic authorization framework for the Compassionism system as a whole. It specifies the constitutional and civic pathway by which CCO, PTF, PTH, SZH, and CIP are legitimated, piloted, and scaled. It contains formal articles, transition governance provisions, and a civic referendum mechanism. It is not an operational system but the authorization layer that governs the adoption of all operational systems. 
+ Status: Published as open civic document. Petition active at change.org/BetterToBest. Not yet enacted. 
+ Key provisions: 
+
+ Formal articles of governance reform for each of the five architectures
+
+ Transition governance provisions for pilot → regional → national scaling
+
+ Citizen petition and ratification pathway
+
+ Democratic override and sunset clauses for each architecture
+
+ Boundary conditions: 
+
+ Does not claim executive authority — is a civic proposal document
+
+ Does not override existing constitutional law without democratic ratification
+
+ Does not bind non-signatories
+
+ Relationships: 
+
+ authorizes → CCO: Provides democratic legitimacy for CCO deployment
+
+ authorizes → PTF: Provides democratic legitimacy for PTF deployment
+
+ authorizes → PTH: Provides democratic legitimacy for PTH deployment
+
+ authorizes → SZH: Provides democratic legitimacy for SZH zone formation
+
+ mandates → CIP: Requires CIP as the implementation platform for all CRSGR governance provisions
+
+ Canonical document: referendum.html 
+ Petition: change.org/BetterToBest 
+
+ BLEI Welfare Measurement Suite (v1.0) — formal parameter definitions for AI ingestion
+
+ System: Basic Living Economic Index (BLEI) Suite 
+ Type: Welfare Measurement Framework / Simulation Parameter Suite 
+ Canonical document: basic-living-economic-index.html 
+ Definition: Six complementary welfare indices correcting three structural gaps in conventional metrics: (1) extraction-accumulation asymmetry — standard metrics treat extractive rent and generative equity payments identically; (2) BU purchasing power premium — standard income measures miss the 2.64× effective value of food BU at PTF prices; (3) temporal stability dimension — standard metrics do not measure how many days of stability a household's resources cover. 
+ Six indices: 
+
+ BLEI (Basic Living Economic Index): days of basic living covered by accessible resources. Formula: [L + γ·Y + BU_food_eff] / C_basic. Six tiers: Crisis (0–6), Precarious (7–29), Threshold (30–119), Stable (120–364), Secure (365–729), Flourishing (730+).
+
+ EDC (Extractive Drain Coefficient): fraction of gross income captured by zero-wealth-building contracts. US baseline near-poverty: 0.625. CCO-PTH target: 0.025.
+
+ EPPM (Effective Purchasing Power Multiplier): purchasing power ratio vs. baseline at same nominal income. Uses full BU·ε_blended = $2,502/adult/month. At poverty line: 5.80×.
+
+ FBS (Financial Bandwidth Score): monthly residual above basic living threshold. Gates P(advance) = 1 − exp(−λ·FBS). Near-poverty CCO: $2,281/month. Baseline: $0 (deficit).
+
+ CSI (Compound Stability Index): forward-looking stability horizon. CSI(i,t) = BLEI(i,0)·(1+r_wealth/12)^t·(1−EDC) + AE(i,t)/C_basic. All time in months; annual rates use monthly compounding.
+
+ IPBI (Indirect Participant Benefit Index): annual welfare gains to high-wealth non-participants. Conservative total: $22,800/year. Upper bound: $59,900/year. Channel notation: α·CR + β·PH + π·LP + δ·PV + ζ·ME (π = LP weight, distinct from BLEI liquidity coefficient γ). All channel coefficients (α, β, π, δ, ζ) and their assumed values are defined in full in the BLEI Foundation Paper ; the LP channel (π) is the dominant driver of variance between the conservative and upper-bound estimates.
+
+ Key accounting conventions: 
+
+ BLEI numerator: food BU effective value only = 360 BU × $2.75 = $990/adult/month (utility BU offsets $150 cash utility cost in C_basic → net zero contribution to BLEI)
+
+ EPPM: full BU blended value = $2,502/adult/month (food + utility premium vs. market provision)
+
+ FBS: BU at face value $1,200 (cash-equivalent food expenditure reduction); EDC_residual (consumer debt interest only, not housing)
+
+ γ (liquidity coefficient): 0.12 at entry (Month 0–2) → 0.20 at Month 6+ (CCO floor established)
+
+ AE excluded from W_accessible for CSI orthogonality; r_wealth and r_a evolve under distinct rate parameters
+
+ Real-world analogue grounding: 
+
+ BU allocation: Alaska Permanent Fund Dividend (Jones & Marinescu 2018) — no dependency effects from universal distributions
+
+ Acre Equity (AE): Community Land Trusts — 300+ CLTs, 46 US states — validates r_a range 2–7%/year and equity accumulation mechanics
+
+ ε_food = 2.64: Mondragon Corporation Eroski food cooperative — 35–55% overhead reduction; cost pass-through model: 1.00/(0.350+0.028) = 2.64
+
+ Simulation corrections introduced by BLEI: 
+
+ PTH payments route to Acre Equity state variable (not subtracted from liquid wealth)
+
+ BU: $990 for BLEI, $2,502 for EPPM — not a single value for both
+
+ BU allocation flat at $1,200/adult/month — NOT scaled by octave level
+
+ FBS uses EDC_residual (consumer debt only) to prevent housing double-counting
+
+ P(advance) gated by FBS: agents at FBS = 0 cannot advance regardless of quality score
+
+ Network-density-gated synergy θ: 0 below 55% PTF density; scales to 0.25 at 90%+
+
+ Integrated system metrics and targets
+
+ Poverty target: <2% extreme poverty within 15 years of full implementation
+
+ Workweek target: 25-hour standard workweek viable with CCO Basic Unit (BU) supplementation
+
+ PTF overhead reduction: 40–60% vs. comparable private operations (framework design target derived from the 35–55% empirical overhead reduction documented in Mondragon/Eroski food-cooperative analogues; the wider range reflects variation across PTF operational scales and sector types)
+
+ PTH penetration target: 50% market share within 5–19 years depending on capital-deployment pathway (illustrative range reflecting three distinct pathways: philanthropic funding, grassroots community formation, and government-directed capital deployment; see PTH research paper for per-pathway sensitivity analysis)
+
+ CCO synergy coefficient (θ): 0.15–0.25 — additional community wealth from CCO-PTF integration in W(t), measured against an independent-operation baseline. Range derived via Monte Carlo simulation calibrated against comparable community economy dyads. Status: pending peer-reviewed empirical calibration. 
+
+ Gini coefficient target (EDC-adjusted): ≤0.22 within full deployment (where "full deployment" corresponds to the Year 15 milestone, the same timeframe as the nominal target below). US baseline: 0.44–0.46 (EDC-adjusted). Direction: lower is better. Comparability note: the EDC adjustment is a framework-specific correction not applied to standard published Gini statistics. For a like-for-like comparison against external benchmarks, use the nominal CCO target (≤0.25, below). 
+
+ Gini coefficient target (nominal): ≤0.25 within 15 years of full implementation. Nordic reference benchmark (nominal, conventionally reported): 0.27–0.29.
+
+ BLEI Threshold Rate: 97% of CCO-PTF participants at ≥30 days (Tier 2+) by Year 5
+
+ BLEI Secure Rate: 84% of CCO-PTF participants at ≥365 days (Tier 4+) by Year 15
+
+ BLEI Flourishing entry (near-poverty): ~33 months (sensitivity range: 28–47 months across ε_food ∈ [1.50, 3.00])
+
+ EPPM at poverty line: 5.80× (sensitivity range: 3.40–6.70× across full ε range)
+
+ FBS near-poverty participant: $2,281/month (from $0 deficit baseline)
+
+ IPBI high-wealth non-participants: $22,800–$59,900/year (conservative $22,800 preferred; channel coefficients defined in BLEI Foundation Paper )
+
+ CCO maximum effective conversion rate: ~14.56× (9× base tier × Φ ~1.618×)
+
+ Primary research collection: 17+ open-access papers, CC BY 4.0
+
+ License: CC BY 4.0. Canonical source: Research Summary . Ontology version: 2.3 (updated 2026-06-14).
+
+ ↑

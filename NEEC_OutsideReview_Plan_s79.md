@@ -1,6 +1,6 @@
 # NEEC outside blind review: the plan (Session 79, decision 79.6)
 
-**Status.** Plan only; nothing has been built or run. Sessions 80 to 82 carry it out (STATE.md, "Next work"; ledger S63 to
+**Status.** Plan only (revised the same day for free tiers, decision 79.8); nothing has been built or run. Sessions 80 to 82 carry it out (STATE.md, "Next work"; ledger S63 to
 S64). It comes before the Report and Paper v2.0 prose, which now start at Session 83.
 
 ## 1. Why
@@ -11,21 +11,22 @@ co-authors NEEC, has made four decisions on its scores (58.1, 79.1 to 79.3) and 
 (79.4). With them CCO-PTF-CIP-SZH is first at 17.5. On the readings alone it would be 15.5. An outside reader with no
 stake, from outside the Claude family, reading blind, is the check a reader of the Paper will look for first.
 
-## 2. Two instruments
+## 2. Two instruments, at near-zero cost (decision 79.8)
 
-| | Kimi K2.6 on Runpod (the reader) | Jev, TypeSafe (the interpretation check) |
+The owner ruled out the cost on 2026-10-19: paid inference on Runpod (about $30 to $55) is too high. The review keeps
+both instruments and runs on free tiers, taking days instead of hours.
+
+| | A free-tier reasoning model (the reader) | Jev, TypeSafe (the interpretation check) |
 |---|---|---|
-| What it is | Open-weight reasoning LLM (Moonshot), Runpod public endpoint `moonshot-kimi`, validated Session 31 (`NEEC_Runpod_Replication_Harness.md`) | Fixed-option judge: returns an option, a probability per option and a confidence; piloted Session 50 (`NEEC_Jev_Pilot_Package_s50.md`), pinned `jev-1.13.0` |
+| What it is | An open or hosted model from outside the Claude family on a free API tier: GitHub Models (the owner's GitHub account), Google's Gemini API, Groq or OpenRouter's free models. Session 80 confirms each tier's current limits and model list, picks the strongest model whose daily limit can carry the run, and pins it | Fixed-option judge (option, probabilities, confidence); piloted Session 50, pinned `jev-1.13.0` |
 | What it does here | Reads each unit blind from the criterion and the source pack, states each clause's status with an estimate and source, and the verdict by D28 | For each clause, with the source pack held fixed: cleared, short or not shown |
-| Coverage | All 667 units, in priority order (section 4) | All 1,725 clauses of the 23 entries |
-| Cost (est.) | About $0.04 to $0.08 a unit: $30 to $55 for all 667 at the Session 31 prices ($0.95/M input, $4.00/M output) | About $1 for every clause, twice ($0.042/M input) |
-| Time (est.) | 1 to 3 minutes a unit; 4 at a time: about 2 hours for the priority set, 5 to 8 for all | Under an hour |
+| Coverage | All 667 units, in priority order (section 4); the order means an early stop still covers CCO-PTF-CIP-SZH and the top five | All 1,725 clauses of the 23 entries, twice |
+| Cost | Free (within the tier's limits) | About $1 |
+| Time | Set by the daily limits: likely several days for all 667, the priority units first | Under an hour |
 
-Two instruments that work differently guard against one model's quirks: Kimi tests the whole reading; Jev tests whether
-the clause statuses follow from the evidence. Where both disagree with NEEC, the case is strong. Where they split, the
-evidence is ambiguous, and that is a finding in its own right. If Runpod's public endpoints offer a stronger open-weight
-model from another lab when Session 80 checks, a second LLM reader on the priority set is worth its cost. Session 31's
-other model, Qwen3-32B, is weaker and costs more per token.
+Free tiers may use inputs for training; every input here is already public under CC BY 4.0. One model is used for the
+whole run, so the lean measured on the calibration set applies to its CCO readings. A second free model may read the 29
+CCO units as an inter-rater check if a tier allows it.
 
 ## 3. Blindness: what the reader sees and never sees
 
@@ -65,26 +66,26 @@ loop while it runs:** the runner answers `READ:` and `SEARCH:` mechanically, whi
 
 The 29 CCO-PTF-CIP-SZH units run twice, to measure the reader's own consistency.
 
-## 5. Running it (Runpod, auto-push every 20 minutes)
+## 5. Running it (a scheduled GitHub Actions job, pushing every run)
 
-As with the simulation's long studies, the work runs unattended on a Runpod **CPU pod** (the model is a public endpoint;
-the pod only runs the loop) and pushes its results to `BetterToBest/compassionism-sim-results`, folder
-`neec-outside-review/<run id>/`, so a lost pod loses at most 20 minutes.
+The run lives in `BetterToBest/compassionism-sim-results`, folder `neec-outside-review/<run id>/`, as a scheduled GitHub
+Actions workflow (free on a public repository; no pod to stop). Each run reads as many units as the day's limit allows,
+commits and pushes, and stops; the next picks up where it left off.
 
-- `outside_review_runner.py` (standard library only): reads `kit/units.jsonl` in priority order, runs 4 units at a time,
-  answers `READ:` from the kit, validates each `FINAL:` against a JSON schema (one status, estimate and source per
-  clause, the verdict, D28), retries an invalid answer twice, and appends to `results/kimi.jsonl`. It records model id,
-  sampling settings, tokens and cost per call. The Jev pass appends to `results/jev.jsonl`.
-- **Resumable:** a restart skips every unit already in the results.
-- **Pusher:** every 20 minutes and at the end it commits and pushes `results/` and a `heartbeat.json` (units done, cost,
-  last error), so progress shows on GitHub from the Chromebook.
-- **Budget guard:** stops at a ceiling the owner sets (suggested $60).
-- **Stops billing:** at the end it pushes, then stops its own pod (`runpodctl stop pod $RUNPOD_POD_ID`).
-- **Secrets, set by the owner as Runpod pod secrets, never committed:** `RUNPOD_API_KEY` (endpoint calls),
-  `TYPESAFE_API_KEY` (Jev; or the Composio route of the Session 50 pilot), `GITHUB_TOKEN` (write to the results repo
-  only; the simulation studies' token if it has that scope), optional `SEARCH_API_KEY`.
-- **Fallback:** the same script runs as a GitHub Actions job in the results repo (up to 6 hours a job, free on a public
-  repository), if a pod is inconvenient.
+- `outside_review_runner.py` (standard library only): reads `kit/units.jsonl` in priority order, skips every unit already
+  in the results, answers `READ:` from the kit, validates each `FINAL:` against a JSON schema (one status, estimate and
+  source per clause, the verdict, D28), retries an invalid answer twice, and appends to `results/reader.jsonl`. It records
+  model id, sampling settings and tokens per call. The Jev pass appends to `results/jev.jsonl`.
+- **Rate limits:** the runner reads the provider's limit headers and stops cleanly before the daily cap. Each run also
+  stops after about 50 minutes, committing what it has. Pushing every run (and every 20 minutes within a run) means a
+  failed run loses at most one batch.
+- **Progress:** `heartbeat.json` (units done, by priority group, last error) is visible on GitHub from the Chromebook.
+- **Schedule:** every few hours, set from the tier's limits; the job disables its own schedule when every unit is done.
+- **Secrets, set by the owner as repository secrets, never committed:** the free tier's key (`GITHUB_TOKEN`'s built-in
+  models permission for GitHub Models, or `GEMINI_API_KEY`, `GROQ_API_KEY`, `OPENROUTER_API_KEY`), and
+  `TYPESAFE_API_KEY` for Jev (or the Composio route of the Session 50 pilot).
+- **The workflow file** is in the results repository, not in NormativeEvaluation, so this repository's rule on workflow
+  files is not touched; the owner adds it there (or approves it in review) as with the simulation's study workflows.
 
 ## 6. Pre-registered comparison (committed in Session 80, before the run)
 
@@ -103,10 +104,10 @@ the pod only runs the loop) and pushes its results to `BetterToBest/compassionis
 | Session | Work | Model and effort | Why |
 |---|---|---|---|
 | 80 | Build the kit and source packs, `outside_kit_check.py` (in the harness), the runner, the schema and the pre-registered rules; dry run on 3 non-CCO units; launch, or hand the owner a one-line launch | **Opus 5.5 at high** | The blindness design is judgment work (the Ostrom pilot leaked); the runner is routine |
-| (run) | Unattended on Runpod, 2 to 8 hours | none | No Claude in the loop |
-| 81 | Pull the results; `compare_outside.py`: agreement tables, the reader's lean, Jev against Kimi against NEEC, stage B; the record | **Sonnet 5.5 at medium** | Mechanical |
+| (run) | Unattended on GitHub Actions over several days | none | No Claude in the loop |
+| 81 | Pull the results; `compare_outside.py`: agreement tables, the reader's lean, Jev against the reader against NEEC, stage B; the record | **Sonnet 5.5 at medium** | Mechanical |
 | 82 | Adjudicate the disagreements on the sources; generator for any change; owner items to the ledger | **Opus 5.5 at xhigh** for CCO-PTF-CIP-SZH and the top five, high for the rest | Contested readings that decide first place |
 
-Session 80 needs, from the owner: the Runpod connector attached to the session (this session had none) or a
-`RUNPOD_API_KEY` environment secret; network access to `api.runpod.ai` and `bettertobest.github.io` (checked here: the
-container reaches `api.runpod.ai`); and the secrets above set on the pod.
+Session 80 needs, from the owner (ledger S66): a free-tier API key set as a secret in `compassionism-sim-results` (or
+GitHub Models enabled for it), the TypeSafe key for Jev, and network access for the session to the chosen provider and
+`bettertobest.github.io` (to cache the Research Hub pages).

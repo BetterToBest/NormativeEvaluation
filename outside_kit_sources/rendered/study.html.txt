@@ -1,0 +1,400 @@
+Skip to the study
+Compassionism Simulation
+The 500-seed study
+Simulation
+Findings
+Health Study
+Replication
+GitHub
+Research Hub
+Health financing, prices and what the results depend on
+
+The math and code of this simulation were engineered by Claude, an AI model made by Anthropic, from the concepts in Duke Johnson's book Better To Best and his related vision for eradicating extreme poverty while enriching cultures and supporting human flourishing. The model has not yet been reviewed by an independent economist; the full code is open for anyone to check, and expert collaborators are welcome.
+
+The 500-seed study, run on a rented server, ran the same 500 simulated populations (500 adults each, 20 years) with and without Compassionism under three health systems and three economies, and then asked which inputs the answer depends on. Every comparison is paired: the same people and the same luck in both runs. Figures are the study's, copied from its results report.
+
+Study run on a rented server on 500 paired seeds; the follow-up Sobol ran in Stress only.
+
+Basket poverty under three…
+Other measures
+Government's costs, in a s…
+Single payer depends on th…
+The price channel
+What the results depend on
+What would have to be true…
+Tested against history: 20…
+Limits and what is still o…
+Basket poverty under three health systems #
+
+Compassionism lowers basket poverty in every combination of health system and economy. In Reference under today's health system it falls by 31.7 points (Adverse 38.4, Stress 14.3). Single payer lowers poverty before Compassionism starts, so Compassionism's own drop is 2.4 points smaller under it in Reference, and the level reached with both is the lowest of the three settings.
+
+Basket poverty, adult-years: no program to with Compassionism
+Health setting	Reference	Adverse	Stress
+Today's system (A)	49.6% to 17.9%
+effect −31.7 points (−31.9 to −31.6)
+	65.9% to 27.5%
+effect −38.4 points (−38.6 to −38.2)
+	65.9% to 51.6%
+effect −14.3 points (−14.5 to −14.2)
+
+Single payer (B)	45.0% to 15.7%
+effect −29.3 points (−29.5 to −29.1)
+	61.1% to 24.9%
+effect −36.2 points (−36.4 to −36.0)
+	61.1% to 47.2%
+effect −14.0 points (−14.1 to −13.8)
+
+Single payer with a private layer (C)	45.8% to 16.1%
+effect −29.8 points (−30.0 to −29.6)
+	62.1% to 25.4%
+effect −36.7 points (−36.9 to −36.5)
+	62.1% to 48.0%
+effect −14.1 points (−14.3 to −14.0)
+
+Reference line: no health setting, no safety net	49.2% to 19.6%
+effect −29.6 points
+	66.0% to 31.3%
+effect −34.6 points
+	66.0% to 52.3%
+effect −13.7 points
+Download CSV
+Download JSON
+
+Basket poverty counts the adult-years spent below the cost of living. Results for B (single payer) and C (single payer with a private layer) depend on single-payer savings taken from the Yale preprint (Galvani, Pandey, Wells and Ye, medRxiv 2026), which is not peer reviewed; their range is in the table on single payer. "With Compassionism" is the v5.4 release row. Today's safety net is on in both runs of rows A, B and C. Intervals are 95% intervals.
+
+Other measures #
+Other measures: no program to with Compassionism, and the paired effect
+Cell	Poverty depth (FGT2)	BLEI poverty, adult-years	Children below the cost of living, child-years	Too little wealth, adults, year 20
+Reference, A	7.2 to 1.6
+effect −5.6
+	26.5% to 11.3%
+effect −15.2
+	77.5% to 28.5%
+effect −49.0
+	32.9% to 44.9%
+effect +12.0
+
+Reference, B	5.6 to 1.0
+effect −4.6
+	24.7% to 10.5%
+effect −14.2
+	69.4% to 23.4%
+effect −46.0
+	30.1% to 39.2%
+effect +9.2
+
+Reference, C	5.8 to 1.1
+effect −4.7
+	25.0% to 10.6%
+effect −14.4
+	70.2% to 23.8%
+effect −46.4
+	30.5% to 39.9%
+effect +9.4
+
+Adverse, A	11.2 to 2.5
+effect −8.7
+	31.4% to 17.0%
+effect −14.4
+	89.4% to 39.3%
+effect −50.1
+	44.9% to 81.1%
+effect +36.3
+
+Adverse, B	9.3 to 1.8
+effect −7.5
+	29.3% to 16.0%
+effect −13.3
+	84.1% to 34.4%
+effect −49.7
+	41.8% to 78.1%
+effect +36.3
+
+Stress, A	11.2 to 6.9
+effect −4.3
+	31.4% to 34.6%
+effect +3.3
+	89.4% to 72.6%
+effect −16.8
+	44.9% to 76.3%
+effect +31.4
+
+Stress, B	9.3 to 5.7
+effect −3.7
+	29.3% to 32.5%
+effect +3.2
+	84.1% to 65.9%
+effect −18.3
+	41.8% to 73.4%
+effect +31.6
+Download CSV
+Download JSON
+
+Poverty depth (FGT2) weighs each person's shortfall by its square, so the deepest poverty counts most. "Too little wealth" rises with Compassionism in every combination of health system and economy, as in the v5.4 release: people in the program hold less cash once their basket is covered. The price-channel table shows this rise comes from the model's price response, not from health financing. In Stress, BLEI poverty (the days-of-basic-living measure) also rises slightly.
+
+Government's costs, in a separate table #
+Government's costs, beside the results: per adult-year
+Cell	Program cost, with Compassionism	Health tax, no program	Household health bill, no program / with	Today's safety-net outlays (not financed in the model), no program / with	Government's share of the plan	Paid to private plans above their enrollees' public cost
+Reference, A	$29,866	none	$4,220 / $4,177	$1,087 / $1,115		
+Reference, B	$29,901	$6,333
+rate 12.9%
+	$2,193 / $2,242	$1,095 / $1,110	$2,321	
+Reference, C	$29,902	$6,911
+rate 14.1%
+	$2,771 / $2,811	$1,094 / $1,110	$2,320	$419
+Adverse, A	$28,448	none	$3,688 / $3,658	$1,619 / $1,612		
+Adverse, B	$28,483	$5,503
+rate 14.1%
+	$1,687 / $1,749	$1,620 / $1,605	$3,176	
+Adverse, C	$28,484	$6,021
+rate 15.4%
+	$2,205 / $2,254	$1,620 / $1,604	$3,176	$376
+Stress, A	$11,691	none	$3,688 / $3,652	$1,619 / $1,639		
+Stress, B	$11,689	$5,503
+rate 14.1%
+	$1,687 / $1,735	$1,620 / $1,645	$3,176	
+Stress, C	$11,689	$6,021
+rate 15.4%
+	$2,205 / $2,244	$1,620 / $1,644	$3,176	$376
+Download CSV
+Download JSON
+
+The safety net's outlays are today's programs, paid in both runs; they are not program cost. The model does not reconcile tax revenue with these outlays: it reports them, it does not show that they are financed. Under A the household health bill is premiums and out-of-pocket costs. Under B and C it is the health tax less the employer's former premium share. Government's share of the plan is held at its level in the matching run (same seed) without the program.
+
+Single payer depends on the Yale preprint #
+
+The single-payer savings are inputs from the Yale preprint, not results of this model. The study ran the preprint's central case and two others. In the cautious case, savings are cut; in the high-cost case providers are paid near commercial rates, so the savings vanish and only the added care remains. Single payer still lowers poverty with the cautious savings. In the high-cost case the plan costs more per person than today's system, so any gain there comes from the financing rule, not from savings.
+
+Single payer's range (Reference): the Yale preprint's central, cautious and high-cost cases
+Cost case	Plan spending per person-year, no program	Health tax rate	Basket poverty, no program to with Compassionism	Change in Compassionism's effect against A
+Today's system (A, for comparison)		none	49.6% to 17.9%
+effect −31.7
+	
+B, central	$6,283	12.9%	45.0% to 15.7%
+effect −29.3
+	+2.44
++2.36 to +2.52
+
+B, cautious	$6,872	14.6%	46.2% to 16.2%
+effect −30.0
+	+1.75
++1.67 to +1.83
+
+B, high cost	$7,905	17.5%	48.3% to 17.0%
+effect −31.2
+	+0.51
++0.43 to +0.58
+
+C, central	$6,702	14.1%	45.8% to 16.1%
+effect −29.8
+	+1.95
++1.87 to +2.03
+
+C, cautious	$7,331	15.9%	47.1% to 16.6%
+effect −30.5
+	+1.20
++1.12 to +1.27
+
+C, high cost	$8,435	19.0%	49.4% to 17.5%
+effect −31.9
+	−0.15
+−0.23 to −0.08
+Download CSV
+Download JSON
+
+Reference environment, today's safety net on. Adverse and Stress are in the study's data files. Cost cases are labeled in the first column.
+
+The price channel #
+
+The model raises essentials' prices when more of them are bought, and the program's spending also raises the general price level. With prices as released, "too little wealth" rises with Compassionism (Reference: +12.0 points). With no price response at all it falls instead (26.1 points lower in Reference), and falls in every environment. So the rise comes through the price response: program inflation erodes cash savings, so more adults end with too little real wealth even though their basket is covered. Making the responses stronger changes little, so what matters is whether the program's inflation happens, not its strength. How strongly prices respond to benefit-funded demand is not settled.
+
+Compassionism's effect under today's system with the safety net, by price rule
+Measure	Prices flat	Prices as released	Price responses 1.5 times
+Basket poverty, Reference	−37.5	−31.7	−31.4
+Basket poverty, Adverse	−36.1	−38.4	−38.1
+Basket poverty, Stress	−14.3	−14.3	−14.2
+Too little wealth, Reference	−26.1	+12.0	+12.9
+Too little wealth, Adverse	−24.9	+36.3	+36.9
+Too little wealth, Stress	−9.6	+31.4	+31.5
+BLEI poverty, Stress	−8.3	+3.3	+3.4
+Price level at year 20 with Compassionism, Reference (year 0 = 1)	1.00×	2,509×	2,695×
+Program cost, Reference	$39,499	$29,866	$29,799
+B's change to the effect on basket poverty, Reference	+3.06	+2.44	+2.33
+Download CSV
+Download JSON
+
+The flat column switches off every price response, including the program's own inflation. It shows what prices do in the model; it is not a scenario anyone proposes. "As released" carries the program inflation the v5.4 release reports. In Adverse and Stress the flat runs keep the environments' background inflation.
+
+What the results depend on #
+
+Two methods ask which inputs the answer depends on. Screening (the Morris method, 1991) ranks how far each input moves an outcome over its range, on 20 random paths of 20 paired runs (seeds) each. The follow-up Sobol run (the Sobol method, Saltelli et al. 2010) splits the spread of each outcome among the inputs, with 128 base points and 32 paired runs (seeds) per point, in Stress. Participation and the amount of BU paid explain most of the spread in poverty, BLEI poverty, cost and inflation. These are design choices about the program's size, not uncertain facts about the world. For basket poverty, the income effect on earnings is the one uncertain behavioral constant that matters. "Too little wealth" depends most on the share of extra cash people spend.
+
+Each bar is the share of the spread in one outcome that an input explains, alone and together with the others (the Sobol total index, Stress). A longer bar means the answer depends more on that input. The line on each bar is its 95% interval. Pick an outcome to redraw the chart; every number is in the table below it.
+
+Basket poverty
+Too little wealth
+BLEI poverty
+Program cost
+Program inflation
+0.0
+0.2
+0.4
+0.6
+0.8
+Share of the spread in basket poverty that the input explains (Sobol total index, Stress)
+Participation
+0.62
+BU amount
+0.39
+Income effect on earnings
+0.10
+BLEI wage bonus
+0.05
+Conversion tax
+0.01
+Screening (Morris), Stress: the six inputs that move each outcome most, with the size of the move over the input's range
+Outcome	Leading inputs, with their effect over the input's range (points; dollars for cost; points a year for inflation)	Same leaders in both seed blocks?
+Basket poverty	Participation 19.6; BU amount 13.6; Income effect on earnings 9.2; BLEI wage bonus 5.5; Conversion tax 1.7; Wage elasticity 1.0	Yes
+Too little wealth	Share of extra cash spent 15.2; BU amount 6.3; Income effect on earnings 6.3; Participation 6.2; Pay cut after job loss 5.9; BLEI wage bonus 2.6	Yes
+BLEI poverty	Participation 19.5; BU amount 9.2; Income effect on earnings 2.3; Pay cut after job loss 1.8; PTH uptake 1.6; BLEI wage bonus 1.0	Yes
+Program cost	Participation $13,867; BU amount $10,673; Conversion tax $1,788; Top conversion rate $1,091; PTF cut outside food and housing $1,024; PTH uptake $852	Yes
+Program inflation	Participation 33.4; BU amount 14.7; Income effect on earnings 7.8; Pay cut after job loss 4.8; Wage elasticity 2.4; BLEI wage bonus 2.2	Yes
+Download CSV
+Download JSON
+Follow-up Sobol, Stress: share of the spread each input explains (total index; centered first-order index beneath)
+Input	Basket poverty	Too little wealth	BLEI poverty	Program cost	Program inflation
+Participation	0.62
+first-order 0.60
+	0.13
+first-order 0.10
+	0.85
+first-order 0.86
+	0.64
+first-order 0.64
+	0.85
+first-order 0.87
+
+BU amount	0.39
+first-order 0.31
+	0.12
+first-order 0.07
+	0.25
+first-order 0.17
+	0.50
+first-order 0.40
+	0.20
+first-order 0.13
+
+Income effect on earnings	0.10
+first-order 0.15
+	0.15
+first-order 0.12
+	0.01
+first-order 0.03
+	0.00
+first-order 0.01
+	0.03
+first-order 0.00
+
+Share of extra cash spent	0.00
+first-order 0.00
+	0.46
+first-order 0.30
+	0.00
+first-order 0.00
+	0.00
+first-order 0.00
+	0.00
+first-order 0.00
+
+Pay cut after job loss	0.00
+first-order −0.01
+	0.11
+first-order 0.00
+	0.01
+first-order −0.02
+	0.00
+first-order 0.00
+	0.02
+first-order 0.04
+
+BLEI wage bonus	0.05
+first-order 0.07
+	0.02
+first-order 0.03
+	0.00
+first-order 0.00
+	0.00
+first-order 0.00
+	0.00
+first-order 0.00
+
+Conversion tax	0.01
+first-order −0.01
+	0.01
+first-order 0.00
+	0.00
+first-order 0.00
+	0.01
+first-order −0.01
+	0.00
+first-order −0.01
+Download CSV
+Download JSON
+
+The total index counts an input alone and together with others; the first-order index counts it alone. Where the totals add to more than the first-order indices the inputs act together. The first Sobol run was too noisy for its first-order figures (several fell outside their range), so only this follow-up's are shown. Inputs with a total index of 0.01 or less on every outcome are left out: wage elasticity, uptake of community housing (PTH), top conversion rate and the community-business (PTF) cut outside food and housing.
+
+What would have to be true (Claude's reading) #
+
+Claude's reading of the results, not yet checked by an outside reader; it is a named item for the outside audits. A result holds only if some things are true. For each headline result this panel says what would have to be true, and what the study found when those inputs were varied. It does not say they are true. It says where an economist should look first. Two constants have no source at all; they are named after the table.
+
+What would have to be true for each headline result
+The result	What would have to be true	What the study found when it varied the inputs (Stress)
+Basket poverty falls with Compassionism, in every economy.	Enough adults take part, and the BU amount is as designed: both are choices about the program's size, and they move the answer most. The income effect on earnings (how far people cut paid work when given money) is inside its sourced range and no larger.	Over its range, participation moves it 19.6 points, the BU amount 13.6 and the income effect on earnings 9.2. Share of the spread explained: participation 0.62, BU amount 0.39, income effect 0.10.
+"Too little wealth" rises with Compassionism.	Program spending raises prices the way the model's price rule says, and people spend about the share of extra cash the model assumes. If prices did not respond, the result would reverse.	With no price response it falls instead (26.1 points lower in Reference). The share of extra cash spent explains 0.46 of the spread, the income effect 0.15, participation 0.13, the pay cut after job loss 0.11.
+BLEI poverty (the 30-days-of-basic-living measure) falls.	Take-up is high enough: almost all of the spread in this result is how many adults take part.	Share of the spread explained: participation 0.85, BU amount 0.25. Over its range participation moves it 19.5 points.
+The program costs what the study reports.	Take-up and the BU amount stay in the ranges swept. Cost is mostly their product; the conversion tax and the top conversion rate matter much less.	Over its range participation moves yearly cost by $13,867 and the BU amount by $10,673. Share of the spread explained: participation 0.64, BU amount 0.50.
+Program inflation is as reported.	The model's price rule, which links the program's spending to the price level, is right in kind. It is not calibrated to outside evidence on benefit-funded demand.	Participation moves it 33.4 points a year over its range and explains 0.85 of the spread; the BU amount explains 0.20.
+Single payer lowers poverty.	The Yale preprint's savings (not peer reviewed) are roughly right, or the financing rule alone does the work.	The study ran the preprint's central case, a cautious case and a high-cost case with no savings; see the single-payer table above. Poverty still falls in the cautious case; in the high-cost case any gain comes from the financing rule.
+Download CSV
+Download JSON
+Two constants with no source
+Constant	Value	Source	Do the released figures use it?
+CCO (Creative Currency Octaves) cost relief: how far CCO members' cost of living is cut at the reference BU, and the ceiling on that cut	20% of the basket (ceiling 50%)	None found. The decision log records the search; the value is a placeholder.	No. Raising it left every released row unchanged when tested. It belongs to the earlier engine.
+Inflation damping by community businesses (PTF, which cut prices) and community housing (PTH): how much of outside inflation they absorb, applied to the overall inflation rate	PTF 0.5, PTH 0.1 (times the share of people who joined)	None found. The decision log records the search; no source gives its size.	Only in one optional row, off by default and labeled "the two former stand-ins on"; no main row. Raising both changed that row and no other.
+Download CSV
+Download JSON
+
+The two constants with no source do not enter the released figures: the study could not vary them, because they are not in the model that produced those figures. They are listed so a reviewer can check the claim, and so that anyone who wants them to count knows a source is needed first. The check that raised each constant and compared every released row is dev/tools/unsourced_check.py, with its result in dev/runs/unsourced-constants-check.txt.
+
+Tested against history: 2008 and 2020 #
+
+A separate check, run on the same model: it was put through a scripted 2008 to 2012 recession and through 2020 and 2021, and compared with what happened. The seven comparisons below, and what would count as a match, were fixed before the model was run, and no constant was adjusted to fit the past. The check reads changes, not levels. The model's adults are built from 2022 data, so it asks how a population like today's would respond to a shock like 2008 or 2020, not whether it reproduces those years. The model's figure is the rise in basket poverty (adults below the cost of living) with today's safety net, the shock run minus the same run with no recession, over 500 paired seeds; the data's is the change from the year before the shock. In short: the direction is right (poverty rises in both shocks, as in the data), the size is too big (a rise of +6.86 points at the model's peak against +2.6 in the official rate) and the peak comes too late. Verdicts: matches 2; same direction, different size 2; does not match 1; reported with no verdict 2.
+
+Tested against history: the seven comparisons fixed in advance, as changes in points
+Comparison	Model: change in basket poverty	Data: change in the poverty rate	Verdict (as the file gives it)
+Poverty is higher in 2009 and 2010 than in 2007	+2.89 and +4.90	+1.8 and +2.6 (official rate)	matches
+The rise at the model's peak is between half and double the official rise at its peak	+6.86 (peak in 2012)	+2.6 (peak in 2010)	same direction, different size
+The model's peak falls within one year of the official rate's peak	2012	2010	does not match
+Share of the rise gone two years after the peak (no verdict was set)	not available: the model's peak is the last year of the window	3.85%	reported
+Share of the rise in poverty that the safety net absorbs, 2007 to 2012 (to be within 20 points of the data)	0.48%
+rise +6.90 without the safety net, +6.86 with it
+	72.96%
+rise +5.77 before taxes and transfers, +1.56 after
+	same direction, different size; in substance a miss (below)
+2020: poverty is higher than in 2019, on the official-style measure (the model without SNAP and tax credits, which the official measure leaves out)	+1.53	+1.0 (official rate)	matches
+2020, supplemental measure (no verdict was set: the data fell because of payments the model does not have)	+1.53	−2.6 (Census supplemental rate)	reported
+Download CSV
+Download JSON
+
+The clearest miss is the safety net. In the data the safety net absorbed about 73% of the recession's rise in poverty (a rise of +5.77 points before taxes and transfers, +1.56 after). In the model it absorbs about 0.5% (a rise of +6.90 points without the safety net, +6.86 with it). The file's label is "same direction, different size", because the model's share is just above zero and the rule fixed in advance gives that label to any positive share; the gap is far outside the band of 20 points, so in substance it is a miss. Three reasons, all in the model's design: (a) SNAP and the tax credits are paid on last year's income, so they arrive a year late; (b) the model's cost-of-living line is high, and benefits of a few thousand dollars seldom lift someone over it (they shrink the gap instead); (c) the data's "before transfers" removes far more than the model's three programs (SNAP, the Earned Income Tax Credit and the refundable Child Tax Credit): it also removes unemployment insurance, Social Security, housing aid and the tax system, while in the model unemployment insurance is in both runs and the others do not respond to the shock. So in a downturn the model's baseline safety net is weaker than the real one, and a comparison of Compassionism against today's safety net in a recession should be read with that in mind. The model has no stimulus payments or weekly unemployment top-up, which is why the 2020 supplemental rate (reported, no verdict) fell in the data and rose in the model. The data are outside figures, not verified against Census, BLS or the Federal Reserve by this repository. Plain-words report: dev/reports/v5-34-history-check.md; data: dev/runs/history/history-check.json.
+
+Limits and what is still open #
+
+All single-payer results rest on the Yale preprint's savings. The model does not reconcile tax revenue with today's safety-net outlays or with government's share of the plan. The price response drives the "too little wealth" result and is not calibrated to outside evidence. The cost-of-living line is the unweighted state average. The work rules of SNAP (food stamps) and a separate Child Tax Credit take-up are not modeled. The community businesses' (PTF) health-sector cut under single payer is an upper reading. The model has not yet been reviewed by an independent economist.
+
+Compassionism Simulation v5.6.0 · Better To Best Research Hub · Code: Apache License 2.0 · Content: CC BY 4.0
+
+Simulation · Replication framework · GitHub · DOI: 10.17605/OSF.IO/QWTE2
+
+Suggested citation: Johnson, D. & Claude (Anthropic). (2026). Compassionism Framework Simulation. Better To Best Research Hub. https://doi.org/10.17605/OSF.IO/QWTE2
