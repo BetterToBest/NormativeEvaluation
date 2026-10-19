@@ -9,6 +9,7 @@ PASS  an answer without FINAL: is refused
 PASS  an error is retried on the next run
 PASS  resume: a stored reading is skipped, and counts as pushed for stage B in the next run
 PASS  the heartbeat counts by unit
+PASS  the run is not done while calls remain
 PASS  stage B covers the eight owner-decided units
 PASS  stage B is labelled not blind
 PASS  Jev: one choice question per clause

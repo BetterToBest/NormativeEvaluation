@@ -23,7 +23,8 @@ Environment (secrets are set in the repository's settings, never committed):
   READER_API_KEY      the free tier's key (OpenRouter by default)             required for the reader
   READER_BASE_URL     default https://openrouter.ai/api/v1
   READER_MODEL        the pinned model id (decision 80.4)                    required for the reader
-  READER_MAX_TOKENS 32000   READER_TEMPERATURE 0.6   READER_RPM 15   READER_CONCURRENCY 2
+  READER_MAX_TOKENS 32000   READER_TEMPERATURE 0.6   READER_SEED 80   READER_REASONING_EFFORT high
+  READER_RPM 15   READER_CONCURRENCY 2
   TYPESAFE_API_KEY    Jev                                                     required for Jev
   JEV_MODEL jev-1.13.0   JEV_PASSES 2   JEV_BUDGET_USD 5   JEV_PRICE_IN 0.042   JEV_PRICE_OUT 0.20 ($ per M tokens)
   JEV_MAX_CHARS 200000 (a longer pack is cut at that length, and the cut recorded)
@@ -238,16 +239,18 @@ class Results:
 
 
 def git_push(out, message):
+    """Commit results/, the heartbeat and DONE, and push to the branch the job runs on (GITHUB_REF_NAME)."""
     def run(*a):
         return subprocess.run(["git", "-C", out] + list(a), capture_output=True, text=True)
-    run("add", "results", "heartbeat.json")
+    branch = os.environ.get("GITHUB_REF_NAME") or run("rev-parse", "--abbrev-ref", "HEAD").stdout.strip()
+    run("add", "results", "heartbeat.json", *(["DONE"] if os.path.exists(os.path.join(out, "DONE")) else []))
     if run("diff", "--cached", "--quiet").returncode == 0:
         return True
     run("commit", "-q", "-m", message)
     for attempt in range(4):
-        if run("push", "-q").returncode == 0:
+        if run("push", "-q", "origin", "HEAD:refs/heads/" + branch).returncode == 0:
             return True
-        run("pull", "-q", "--rebase")
+        run("pull", "-q", "--rebase", "origin", branch)
         time.sleep(2 ** (attempt + 1))
     return False
 
@@ -294,7 +297,10 @@ class Reader:
         self.base = env.get("READER_BASE_URL", "https://openrouter.ai/api/v1").rstrip("/")
         self.model, self.key = env.get("READER_MODEL"), env.get("READER_API_KEY")
         self.params = {"max_tokens": int(env.get("READER_MAX_TOKENS", 32000)),
-                       "temperature": float(env.get("READER_TEMPERATURE", 0.6))}
+                       "temperature": float(env.get("READER_TEMPERATURE", 0.6)),
+                       "seed": int(env.get("READER_SEED", 80))}
+        if env.get("READER_REASONING_EFFORT", "high"):
+            self.params["reasoning"] = {"effort": env.get("READER_REASONING_EFFORT", "high")}
         self.limiter = Limiter(int(env.get("READER_RPM", 15)))
         self.stopped = None
 
@@ -505,12 +511,27 @@ def main(argv):
                                     "model_requested": rd.model, "final": obj, "attempts": attempts})
     if time.time() > deadline:
         res.notes["stopped"]["time"] = "run time of %s minutes reached" % env.get("RUN_MINUTES", 330)
+    if "--units" not in args and is_done(kit, units, res, env):
+        with open(os.path.join(out, "DONE"), "w") as f:
+            f.write("every call answered (%s)\n" % time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
     maybe_push(final=True)
     hb = res.heartbeat(units, run_id)
     print("reader %d of %d; jev %d; stage B %d; stopped: %s" % (
         hb["reader"]["done"], hb["reader"]["of"], hb["jev"]["done"], hb["stage_b"]["done"],
         json.dumps(hb["stopped"]) or "-"))
     return 0
+
+
+def is_done(kit, units, res, env):
+    """Every reader call answered or invalid, both Jev passes over every pack, and stage B for the eight."""
+    passes = int(env.get("JEV_PASSES", 2))
+    reader = all(res.done("reader", u["unit"]) for u in units)
+    jev = all(res.done("jev", (u["unit"], p)) for u in units if u["mode"] == "sources" and not u["unit"].endswith("#2")
+              for p in range(1, passes + 1))
+    sb = all(res.done("stage_b", "%s|%s" % (u["code"], u["cid"])) for u in units
+             if os.path.exists(os.path.join(kit, "stage_b", "%s__%s.md" % (u["code"], u["cid"])))
+             and not u["unit"].endswith("#2"))
+    return reader and jev and sb
 
 
 def selftest(kit):
@@ -551,6 +572,7 @@ def selftest(kit):
               "resume: a stored reading is skipped, and counts as pushed for stage B in the next run")
         hb = r2.heartbeat(units, "t")
         check(hb["reader"]["done"] == 1 and hb["reader"]["of"] == len(units), "the heartbeat counts by unit")
+        check(not is_done(kit, units, r2, {}), "the run is not done while calls remain")
     sb = [x for x in units if os.path.exists(os.path.join(kit, "stage_b", "%s__%s.md" % (x["code"], x["cid"])))
           and not x["unit"].endswith("#2")]
     check(len(sb) == 8, "stage B covers the eight owner-decided units")
