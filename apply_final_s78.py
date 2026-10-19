@@ -6,9 +6,13 @@ Sessions 71 to 77 re-read the units of seven groups blind (decisions 69.1, 69.2;
 FINAL dictionary of the readings that stand, and each recorded its verdict changes for this session to apply (decisions 72.1, 74.1,
 76.1, 77.3; ledger D55 to D57). This script lays them over the rescoring pass (final_pass.py) and writes, never by hand:
 
-  neec_corpus_v2.json       the 23 entries on the 29 criteria of criteria.json, with the final readings
-  neec_scores_v2.csv        their totals, domain sums, failures and tiers
-  summary_blocks_v2.json    the site's per-entry blocks: the flagged calls (the final readings') and the joint readings
+  neec_corpus_v2_s78_snapshot.json     the 23 entries on the 29 criteria of criteria.json, with the final readings
+  neec_scores_v2_s78_snapshot.csv      their totals, domain sums, failures and tiers
+  summary_blocks_v2_s78_snapshot.json  the site's per-entry blocks: the flagged calls (the final readings') and the joint readings
+
+(Until Session 79 these three were written as neec_corpus_v2.json and its companions. Session 79 laid the owner's decisions
+79.1 to 79.4 over this state (final_pass.owner_state, apply_owner_s79.py), which now writes those names; this script's output
+is kept as the Session 78 snapshots, the state before the owner's layer.)
   NEEC_FinalApplication_s78.md   the record: the groups applied, every verdict change, the standing table, the tier changes, the
                             first place and the CCO-PTF-CIP-SZH units (none changes)
 
@@ -35,7 +39,8 @@ import apply_pass_s65 as ap  # noqa: E402
 import final_pass as fp  # noqa: E402
 import pass_common as pc  # noqa: E402
 
-OUT = {"corpus": "neec_corpus_v2.json", "csv": "neec_scores_v2.csv", "blocks": "summary_blocks_v2.json",
+OUT = {"corpus": "neec_corpus_v2_s78_snapshot.json", "csv": "neec_scores_v2_s78_snapshot.csv",
+       "blocks": "summary_blocks_v2_s78_snapshot.json",
        "record": "NEEC_FinalApplication_s78.md"}
 SNAP = {"corpus": ap.OUT["corpus"], "csv": ap.OUT["csv"], "blocks": ap.OUT["blocks"]}
 NOTE = ("NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), "

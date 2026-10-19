@@ -8,15 +8,15 @@ Site: [https://bettertobest.github.io/NormativeEvaluation/](https://bettertobest
 
 | System | Code | Total | Failures | Tier | Rank (equal weights) |
 |---|---|---|---|---|---|
-| [Participatory Economics](pe.md) | `PE` | 16.5 | 0 | Potentially Adequate | 1 |
-| [CCO-PTF-CIP-SZH](cco.md) | `CCO` | 16.0 | 0 | Potentially Adequate | 2 |
-| [Integral](int.md) | `INT` | 15.5 | 2 | Potentially Adequate | 3 (tied) |
-| [Nordic Social Democracy](nsd.md) | `NSD` | 15.5 | 0 | Potentially Adequate | 3 (tied) |
-| [Degrowth Economics](dg.md) | `DG` | 15.0 | 1 | Potentially Adequate | 5 (tied) |
-| [Market Socialism](ms.md) | `MS` | 15.0 | 1 | Potentially Adequate | 5 (tied) |
-| [Sovereign Wealth Fund Statism](swf.md) | `SWF` | 15.0 | 2 | Potentially Adequate | 5 (tied) |
+| [CCO-PTF-CIP-SZH](cco.md) | `CCO` | 17.5 | 0 | Potentially Adequate | 1 |
+| [Participatory Economics](pe.md) | `PE` | 17.0 | 0 | Potentially Adequate | 2 |
+| [Integral](int.md) | `INT` | 16.0 | 2 | Potentially Adequate | 3 |
+| [Degrowth Economics](dg.md) | `DG` | 15.5 | 1 | Potentially Adequate | 4 (tied) |
+| [Nordic Social Democracy](nsd.md) | `NSD` | 15.5 | 0 | Potentially Adequate | 4 (tied) |
+| [Market Socialism](ms.md) | `MS` | 15.0 | 1 | Potentially Adequate | 6 (tied) |
+| [Sovereign Wealth Fund Statism](swf.md) | `SWF` | 15.0 | 2 | Potentially Adequate | 6 (tied) |
 | [Georgism / Land Value Tax (LVT + Citizen's Dividend)](geo.md) | `GEO` | 14.0 | 2 | Potentially Adequate | 9 (tied) |
-| [Ostrom-Style Commons Governance](os.md) | `OS` | 14.5 | 3 | Partially Adequate | 8 |
+| [Ostrom-Style Commons Governance](os.md) | `OS` | 15.0 | 3 | Partially Adequate | 6 (tied) |
 | [Islamic Finance / Profit-Sharing Banking](if.md) | `IF` | 14.0 | 3 | Partially Adequate | 9 (tied) |
 | [Mutual Credit / LETS](mc.md) | `MC` | 14.0 | 3 | Partially Adequate | 9 (tied) |
 | [State Capitalism / Singapore (GLC Developmental Capitalism)](sg.md) | `SG` | 14.0 | 3 | Partially Adequate | 9 (tied) |

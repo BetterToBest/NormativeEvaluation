@@ -13,6 +13,9 @@ v2 files from it) and by build_evidence.py (which reports each unit's final read
   final_state(p)  from a pass_common.Pass: (units, part_of, new_units, new_part_of), where `units` is p.merged with every
                   blind unit of the 26 published criteria replaced, `new_units` is rescoring_s65.NEW_UNITS (C2.6, C3.6,
                   C4.6) with theirs replaced, and the part_of maps hold the tag of the part or group that read each unit last.
+  owner_state(p)  final_state(p) with the owner's decisions 79.1 to 79.4 (owner_s79.py, Session 79) laid over it: seven units,
+                  each re-reading one clause of its final reading; plus the part map before that layer. apply_owner_s79.py
+                  writes the v2 files from it; apply_final_s78.py keeps writing the Session 78 state, now as snapshots.
 
 The three class N criteria (C2.6, C3.6, C4.6) are not in the pass's merged units, which hold the 26 published criteria, so the
 groups of Sessions 76 and 77 land in new_units and the others in units. Later groups replace earlier ones where they overlap;
@@ -80,6 +83,35 @@ def final_state(p):
     return units, part_of, new_units, new_part_of
 
 
+def owner_units(units, new_units):
+    """The owner's revised units (owner_s79.CHANGES), each built from the final reading of the same cell: the clause the
+    decision re-reads is replaced, every other clause is carried, and the verdict follows D28."""
+    with redirect_stdout(io.StringIO()):
+        ow = pc.load("owner_s79", "owner_s79.py")
+    out = {}
+    for k, ch in ow.CHANGES.items():
+        prior = new_units[k] if k in new_units else units[k]
+        cl = [tuple(c) for c in prior["clauses"]]
+        cl[ch["clause"] - 1] = tuple(ch["new"])
+        out[k] = {"verdict": pc.verdict_of(cl), "clauses": cl, "flag": ch["flag"], "note": ch["note"], "zero": None}
+    return ow, out
+
+
+def owner_state(p):
+    """final_state(p) with the owner's decisions of Session 79 laid over it, and the part map of the final readings:
+    (units, part_of, new_units, new_part_of, final_part_of), where final_part_of is the part or blind group that read each
+    unit before the owner's layer."""
+    units, part_of, new_units, new_part_of = final_state(p)
+    final_part_of = {**part_of, **new_part_of}
+    ow, rev = owner_units(units, new_units)
+    for k, u in rev.items():
+        if k in new_units:
+            new_units[k], new_part_of[k] = u, ow.TAG
+        else:
+            units[k], part_of[k] = u, ow.TAG
+    return units, part_of, new_units, new_part_of, final_part_of
+
+
 def selftest():
     ok = True
 
@@ -104,6 +136,20 @@ def selftest():
     ok2 = pc.check_rule(allf, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
     check(ok1 and ok2, "every blind unit has one status per v2.0 clause with estimate and source, and follows D28 (0.0 only on "
                        "a stated whole-criterion reason)", "; ".join(l for l in lines if l.startswith("FAIL"))[:200])
+    # the owner's layer (Session 79): each revised unit replaces a final unit, re-reads one clause, carries the others
+    ow, rev = owner_units(units, new_units)
+    prior = {**units, **new_units}
+    check(len(rev) == 7 and all(k in prior for k in rev)
+          and all(sum(a != b for a, b in zip(prior[k]["clauses"], rev[k]["clauses"])) == 1 for k in rev),
+          f"the owner's layer (owner_s79.py, decisions 79.1 to 79.4) revises {len(rev)} final units, one clause each, "
+          "carrying every other clause")
+    check(all(prior[k]["verdict"] == 0.5 and rev[k]["verdict"] == 1.0 and rev[k]["flag"] for k in rev),
+          "each revised unit moves from 0.5 to 1.0 by D28 and keeps the prior reading as its flag")
+    lines = []
+    ok3 = pc.check_records(p, rev, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    ok4 = pc.check_rule(rev, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    check(ok3 and ok4, "every revised unit has one status per v2.0 clause with estimate and source, and follows D28",
+          "; ".join(l for l in lines if l.startswith("FAIL"))[:200])
     print("\nFINAL PASS MODULE SELFTEST: ALL CHECKS PASSED." if ok else "\nFINAL PASS MODULE SELFTEST: CHECKS FAILED.")
     return 0 if ok else 1
 
