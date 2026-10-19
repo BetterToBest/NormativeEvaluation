@@ -1,7 +1,7 @@
 # NEEC state
 
 **Next session (80): Opus 5.5 at high** (ledger S63; build the outside blind review: the kit and source packs, the leak
-check, the runner with its 20-minute push, the pre-registered comparison; launch on Runpod). Reason: whether the kit is
+check, the runner as a scheduled free-tier job, the pre-registered comparison; launch). Reason: whether the kit is
 truly blind is judgment work, and the Ostrom pilot leaked through a marker; high rather than xhigh, as nothing is scored
 in that session. Before it: the owner's setup (ledger S66). Send `Continue NEEC.`
 
@@ -338,12 +338,12 @@ prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second in
 8. **Session 80: Opus 5.5 at high** (ledger S63). The outside blind review, built and launched
    (`NEEC_OutsideReview_Plan_s79.md`, sections 3 to 6): the kit and per-unit source packs (primary sources only; no
    score, reading, rationale, flag or record), `outside_kit_check.py` in the harness (fails on any leak), the runner
-   (Kimi K2.6 on a Runpod public endpoint, 4 at a time, resumable, budget guard, pushing `results/` and a heartbeat to
-   `BetterToBest/compassionism-sim-results`, `neec-outside-review/<run id>/`, every 20 minutes, stopping its own pod), the
+   (a free-tier model, decision 79.8, as a scheduled GitHub Actions job in `BetterToBest/compassionism-sim-results`,
+   `neec-outside-review/<run id>/`: resumable, within the tier's daily limits, pushing `results/` and a heartbeat every run), the
    Jev pass over every clause, the JSON schema, and the pre-registered comparison rules, committed before the run. Dry
    run on three non-CCO units. Needs the owner's setup (S66).
 9. **Session 81: Sonnet 5.5 at medium** (ledger S64). Pull the results; `compare_outside.py`: agreement by unit and
-   clause, the reader's lean on the calibration set, Kimi against Jev against NEEC, stage B; the record.
+   clause, the reader's lean on the calibration set, the reader against Jev against NEEC, stage B; the record.
 10. **Session 82: Opus 5.5 at xhigh** for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
     each disagreement on the sources, by one rule for every entry; changes by generator; CCO-PTF-CIP-SZH's to the owner
     (57.2); every outside result on an owner-decided unit is published either way (plan, section 6).
@@ -394,10 +394,12 @@ read afterwards, which the record discloses; changes no other entry. **79.4** C3
 3 are cleared and no record or model shows a collapse caused by an adjustment (as Georgism's): Integral, Participatory
 Economics, Degrowth Economics, Ostrom-Style Commons Governance 0.5 to 1.0; departs from protocol 2.3(b) for this clause.
 Each revised cell keeps its prior reading as a close call; reopening conditions below. **79.6** the next step is an
-outside blind review before any Report or Paper prose, on Runpod with auto-push, with Jev (`NEEC_OutsideReview_Plan_s79.md`).
+outside blind review before any Report or Paper prose, with auto-push and Jev (on free tiers, 79.8) (`NEEC_OutsideReview_Plan_s79.md`).
 By this session: **79.5** (optional, tooling) the owner's layer is applied by `final_pass.owner_state()` and
 `apply_owner_s79.py`, not by a part of `pass_common.PARTS`; `apply_final_s78.py` keeps writing the Session 78 state as
-`neec_corpus_v2_s78_snapshot.json` and its two companions; harness v49, 135 checks. **79.7** (correction) Session 79's
+`neec_corpus_v2_s78_snapshot.json` and its two companions; harness v49, 135 checks. **79.8** (owner, same day) the outside review runs on free tiers, not paid Runpod inference: a free-tier model reads all
+667 units in priority order through a scheduled GitHub Actions job in `compassionism-sim-results`, over several days,
+and Jev checks every clause (about $1); plan sections 2 and 5 revised. **79.7** (correction) Session 79's
 first reply to the owner said a raise of CCO-PTF-CIP-SZH's C3.4 meant Integral's "would need to be considered" too; the
 two rest on different clause statuses (short against not shown), and Integral's needs a rule of its own (79.4).
 
@@ -678,8 +680,8 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 Session 79 added: ledger **D58** and **D59** (the owner's decisions 79.1 to 79.4, answered in the session; confirm in the
 ledger), **D60** (the outside review's scope and whether it may search; default: all 667 units in priority order, closed to
-the source packs), and step **S66**, the owner's setup before Session 80 (Runpod connector or key, the pod's secrets,
-network access). Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
+the source packs), and step **S66**, the owner's setup before Session 80 (a free-tier API key and the TypeSafe key as secrets in the
+results repository, network access). Open since Session 71 (work goes ahead on the default unless the owner changes it): **ledger I9**, two consistency
 items outside stage 3b's scope (Next work, open item (e)). Sessions 72, 74, 76, 77 and 78 added nothing for the owner; Session 73's ledger D56 was confirmed (decision 74.1) and Session 75's
 ledger D57 (decision 76.1). Ledger I7's
 second item ("You review it", the Nordic finding) is the owner's; Session 74 read the finding (decision 74.5). Before
