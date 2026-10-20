@@ -1,14 +1,14 @@
 # NEEC state
 
-**Next session (80b, the launch): Sonnet 5.5 at medium** (ledger S63, its last part), once the owner has done ledger S66
-(the Claude GitHub App on `compassionism-sim-results`, and an `OPENROUTER_API_KEY` secret there). Reason: what is left is
-mechanical: copy the kit, runner and workflow into the results repository, push, read the three-unit dry run, launch.
-If the dry run shows a fault in the kit or the prompt, stop: a change to what the reader sees is judgment work for Opus
-5.5 at high, and changes the pre-registration's pins. Send `Continue NEEC.`
+**Next session (82, the comparison): Sonnet 5.5 at medium** (ledger S64). Reason: the reader's 696 answers and stage B's eight
+are in; the comparison against NEEC is mechanical (`compare_outside.py` does not exist yet; the session writes it from the pre-registration). It does not need
+Jev, so it does not wait for it. Jev's gap (105 of 294 units rejected, decision 81.2, ledger I11) is the owner's: see
+"Awaiting the owner". If the comparison shows the reader's answers cannot be scored as the pre-registration says, stop:
+that is judgment work for Opus 5.5 at high. Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 80 (the outside blind review built: the kit, its leak check, the runner, the
-workflow and the pre-registration; launch blocked on the owner's setup, decisions 80.1 to 80.8) (2026-10-19). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 81 (the outside blind review launched by the owner on NVIDIA's API; the reader finished, Jev did not,
+decisions 81.1 to 81.4) (2026-10-20). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -71,19 +71,22 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
-- **Outside blind review (Session 80, decisions 79.6, 79.8, 80.1 to 80.8; ledger S63, S66, D61).** Built, not launched.
-  `outside_kit.py` writes `outside_kit/` (what the reader sees: the instructions, the protocol's rules with every sentence
-  naming a system, record or session dropped, the 29 criteria without their worked examples, 23 system files, the source
-  packs, the order of 696 calls, eight stage B arguments, the schema, a manifest) from the repository and
-  `outside_kit_sources/` (the design texts: Research Hub `8e8a6ba`, simulation `d10ed6e` with two pages rendered by
-  `render_pages.js`, Integral's white paper v0.1; the author's name redacted). 667 units: 294 with a source pack, 373
-  closed-book (the reader's own knowledge, labelled). `outside_kit_check.py` builds every prompt with the runner's own
-  functions: no leak; seven planted leaks caught. `outside_review_runner.py` (standard library) reads with a free model on
-  OpenRouter (default `nvidia/nemotron-3-ultra-550b-a55b:free`, decision 80.4; GitHub Models was retired on 2026-07-30,
-  decision 80.2) and Jev (`jev-1.13.0`, 294 units, 800 clauses, twice); resumable; pushes every 20 minutes.
-  `NEEC_OutsideReview_Prereg_s80.md` fixes the comparison before any call. The results repository's files (workflow,
-  README, dry-run list) are in `outside_review_r1/`; the push to `compassionism-sim-results` was refused (the Claude GitHub
-  App is not installed there), so nothing has run (decision 80.8).
+- **Outside blind review (Sessions 80 and 81, decisions 79.6, 79.8, 80.1 to 80.8, 81.1 to 81.4; ledger S63, S64, D61, D63, I11).**
+  Launched by the owner on 2026-10-19 (not by a session: the Claude app could not push there); results in
+  `compassionism-sim-results`, `neec-outside-review/r1/` (read there; Session 81 pulled nothing into this repository).
+  Kit, runner and pre-registration are as Session 80 built them (kit manifest md5 `7174064e`, runner md5 `7d952ac4`,
+  `PREREG.md`). **One change, the owner's (decision 81.1): the reader is called at NVIDIA's own API, not OpenRouter**
+  (`integrate.api.nvidia.com/v1`, secret `NVIDIA_API_KEY`), same model `nvidia/nemotron-3-ultra-550b-a55b`;
+  `PROVIDER_NOTE.md` there, written before any reader call, says what may differ. State on 2026-10-20 05:09 UTC (run
+  39372446024, the third): **reader 696 of 696 answered** (all `ok`; 19 transient errors without an HTTP answer retried
+  to `ok`; every served model id is `nvidia/nemotron-3-ultra-550b-a55b`, every finish `stop`); **stage B 8 of 8**; **Jev
+  378 of 588 passes**. Reader answers: 849 clauses `short`, 593 `not_shown`, 335 `cleared`, 23 `moot`; 572 of 696 mark
+  `closed_book` (the kit has 373 closed-book units, so the field is the reader's own flag, not the kit's mode: Session 82
+  must not equate them). No leak sign: no answer names NEEC, the owner or Jev. **Jev rejects 105 of the 294 units**, both
+  passes (210 of 588 unit-passes), with HTTP 400 `max_tokens_exceeded` and no usage: every unit of C2.1, C2.4, C2.6, C3.6, C4.2, C4.6 and two C4.4
+  units. It is not the pack's length alone (failures start at 60,676 characters; ok requests reach 104,048), and 35
+  requests had their pack cut at 200,000 characters. Cause unknown; no key here to test. The workflow keeps retrying them
+  every 4 hours at no cost, and no `DONE` is written while any is missing. Harness unchanged (v50, 140 checks).
 - **Harness:** v50, 140 checks (`outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
   `outside_review_runner.py --selftest`, since Session 80; `evidence_cache_s77.py` and `blind_s77.py`, since Session 77; `evidence_cache_s76.py` and `blind_s76.py`, since Session 76; `evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
@@ -324,15 +327,9 @@ the Session 78 snapshots; `build_evidence.py` names the owner's decision and lin
 `README.md` regenerated; harness v49, 135 checks. The owner then set the next step: an outside blind review before any
 prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second instrument. Decided: below.
 
-1. **Session 80b: Sonnet 5.5 at medium** (ledger S63's launch), after the owner's setup (ledger S66). In
-   `compassionism-sim-results`, on the session's branch: copy `outside_kit/` to `neec-outside-review/r1/kit/`,
-   `outside_review_runner.py` and `NEEC_OutsideReview_Prereg_s80.md` (as `PREREG.md`) to `neec-outside-review/r1/`, and
-   `outside_review_r1/`'s three files (the workflow to `.github/workflows/`; README.md and DRYRUN to `neec-outside-review/r1/`);
-   push. The push of DRYRUN runs the three-unit dry run (results in `neec-outside-review/r1/dryrun/`): check each answer
-   validated, Jev answered, and nothing in an answer suggests a leak; then open a pull request there for the owner to merge,
-   which starts the schedule (every 4 hours, 330 minutes a run, until `DONE`). If the Claude app cannot push the workflow
-   file, the owner adds it from `outside_review_r1/neec-outside-review.yml` on the GitHub web page. Session 81 starts when
-   the heartbeat shows the run done (several days at 50 free calls a day; about one at 1,000).
+1. **Done: Session 81 (called 80b)** (Sonnet 5.5 at medium; ledger S63 done, I11 and D63 opened). The owner launched the run; the
+   session read the results, found Jev's gap and recorded it (decisions 81.1 to 81.4). Nothing was copied or pushed to
+   `compassionism-sim-results`.
 2. (Sessions 72 to 78, done above.)
 3. (Session 74, done above.)
 4. (Session 75, done above.)
@@ -365,16 +362,17 @@ prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second in
    `neec-outside-review/<run id>/`: resumable, within the tier's daily limits, pushing `results/` and a heartbeat every run), the
    Jev pass over every clause, the JSON schema, and the pre-registered comparison rules, committed before the run. Dry
    run on three non-CCO units. Needs the owner's setup (S66).
-9. **Session 81: Sonnet 5.5 at medium** (ledger S64). Pull the results; `compare_outside.py`: agreement by unit and
+9. **Session 82: Sonnet 5.5 at medium** (ledger S64), on the reader's and stage B's results as they stand. Read the results from
+   `compassionism-sim-results`; `compare_outside.py`: agreement by unit and
    clause, the reader's lean on the calibration set, the reader against Jev against NEEC, stage B; the record.
-10. **Session 82: Opus 5.5 at xhigh** for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
+10. **Session 83: Opus 5.5 at xhigh** for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
     each disagreement on the sources, by one rule for every entry; changes by generator; CCO-PTF-CIP-SZH's to the owner
     (57.2); every outside result on an owner-decided unit is published either way (plan, section 6).
-11. **Before the prose** (Session 82, or the owner): settle ledger I9 (open item (e) below; its C3.4 clause 3 question
+11. **Before the prose** (Session 83, or the owner): settle ledger I9 (open item (e) below; its C3.4 clause 3 question
     bears on decision 79.4's rule, which requires clauses 1 to 3 cleared) and the owner's half of I7; rerun the
     weighting robustness analysis (`neec_weighting_robustness_analysis_v2.py`) on the final scores, since first place
     rests on a 0.5 margin; then freeze the scores (a tag the prose cites).
-12. **Sessions 83 to 87, the prose and landing**, in the ledger's order: S41 Report v2.0 Part I (Opus 5.5 at high), S42
+12. **Sessions 84 to 88, the prose and landing**, in the ledger's order: S41 Report v2.0 Part I (Opus 5.5 at high), S42
     Paper v2.0 disclosures (Opus 5.5 at high; now also the owner's decisions, the standing with and without them, and
     the outside review's result), S44 the limits page (Opus 5.5 at high), S43 land the drafts (Sonnet 5.5 at medium:
     remove `provisional_note`, rebuild, harness, pull request), S49 the PDF (Sonnet 5.5).
@@ -727,6 +725,11 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
+Session 81 added: **ledger I11 and D63** (Jev's gap). Jev rejects 105 of the 294 source-pack units with `max_tokens_exceeded`;
+D63 asks what to do (default: diagnose with one test call per failing criterion, then rerun those units as a reported
+deviation, since the pre-registration is silent on a rejected Jev request). Needed from the owner: a one-off Jev test, or the
+word that Jev is reported on the 189 units it answered. S66 is done (the owner launched the run on NVIDIA's API, decision 81.1).
+Until D63 is answered the workflow retries the 105 units every 4 hours at no cost; the owner may disable the schedule.
 Session 80 added: **ledger S66 rewritten** (the owner's setup, now: give the Claude GitHub App access to
 `compassionism-sim-results`; add an `OPENROUTER_API_KEY` secret there; optionally buy $10 of OpenRouter credit, which
 lifts the free models' cap from 50 to 1,000 calls a day; `TYPESAFE_API_KEY` is already set and works) and **D61** (the
