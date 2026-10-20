@@ -13,4 +13,7 @@ PASS  the run is not done while calls remain
 PASS  stage B covers the eight owner-decided units
 PASS  stage B is labelled not blind
 PASS  Jev: one choice question per clause
+PASS  Jev windows (D63): each within the window, and together the whole pack, in order
+PASS  D63 rule: a clause shown in any window takes the most probable showing; else not_shown
+PASS  Jev's too-long refusal is recognised, and nothing else is
 SUMMARY: 0 failed
