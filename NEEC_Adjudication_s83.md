@@ -73,7 +73,7 @@ is held to its published model's figures; a design without a model should not pa
 | C5.5 Cultural Adaptability | Universal Basic Income | adopt | 0.0 | 0.5 | 5 / 4 | toward 0.0 |
 <!-- /generated -->
 
-Nine of the eighteen raise a score, nine lower one. The three that lower the top five's designs:
+Eight of the eighteen raise a score and ten lower one (the corpus total falls by 1.0). The two criteria that lower the top five's designs:
 
 - **C1.2b (Prevention of Exploitative Accumulation): Degrowth, Integral and Mutual Credit, 1.0 to 0.5.** The criterion was
   class W in v2.0, so the pass never re-read its 1.0s; each rested on the 1.0 band's "hard cap" or "structural ceiling". The

@@ -1,11 +1,13 @@
 # NEEC state
 
-**Next session (83, adjudication): Opus 5.5, xhigh for CCO-PTF-CIP-SZH and the top five, high for the rest** (ledger S65). Reason:
-the comparison is done (`NEEC_OutsideReview_Result_s82.md`); 177 verdicts disagree and the readings are contested where first place
-is decided (the reader's totals put Nordic Social Democracy first; CCO-PTF-CIP-SZH's lean excludes 0). Send `Continue NEEC.`
+**Next session (84, the prose): Opus 5.5 at high** (ledger S41, Report v2.0 Part I). Reason: the adjudication is done
+(`NEEC_Adjudication_s83.md`) and the scores freeze at the `s83` tag except the four owner items (ledger D65, D66); the prose is
+judgment work on settled scores, not contested readings, so high, not xhigh. First step: apply your answers to D65 and D66 by
+generator if they change anything (`adjudicate_s83.OWNER` holds the units); if you have not answered, write the prose on the
+scores as they stand and state both readings. Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 82 (the outside review compared with NEEC; decisions 82.1 to 82.3) (2026-10-20). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 83 (the outside review's 177 disagreements adjudicated; decisions 83.1 to 83.13) (2026-10-20). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -68,12 +70,25 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
+- **Outside review adjudicated (Session 83, ledger S65 done; decisions 83.1 to 83.13; ledger D65, D66, I12; I9 settled).** Every one
+  of the 177 disagreements was adjudicated on the sources by one rule (`NEEC_Adjudication_s83.md`, section 2; `adjudicate_s83.py`):
+  150 hold NEEC's verdict, 17 adopt the reader's, 1 reaches a third reading, 4 go to the owner, 5 are owner-decided cells that
+  stand. **18 verdicts change** (applied by `apply_adjudication_s83.py`; 8 up, 10 down): C1.2b DG, INT, MC 1.0 to 0.5 and FALC 0.0
+  to 0.5; C1.5 LM 0.0 to 0.5; C2.2 UBI 1.0 to 0.5; C3.2 SG 1.0 to 0.5; C3.3 DG, PE, INT 1.0 to 0.5 and SQ 0.0 to 0.5; C3.5 CPS
+  0.5 to 0.0; C4.5 LM 0.5 to 0.0; C5.1 FALC 0.0 to 0.5; C5.3 UBI 0.5 to 1.0; C5.4 SC 0.0 to 0.5; C5.5 MS, UBI 0.0 to 0.5. Three
+  clause revisions (INT C3.2, INT C5.3, SWF C3.4), ten new close calls. **Standing:** CCO-PTF-CIP-SZH 17.5 first alone,
+  Participatory Economics 16.5, Nordic Social Democracy and Market Socialism 15.5, Integral, SWF and Ostrom 15.0, Degrowth 14.5;
+  no tier changes. **To the owner, not applied:** CCO-PTF-CIP-SZH's C2.2 and C5.3 read 0.5 (held at 1.0 under 69.4; D65);
+  Degrowth's and Participatory Economics' C3.4 read 0.5, decision 79.4's condition not shown (kept at 1.0; D66). With all four
+  applied CCO-PTF-CIP-SZH 16.5, PE 16.0. `weighting_s83.py`: first place holds under all four schemes and every single-criterion
+  drop; it turns only if every close call goes against the leader and for the runner-up. The Session 79 state is kept as
+  `neec_corpus_v2_s79_snapshot.json` and its two companions (read by `compare_outside.py` and `outside_kit.py`).
 - **Outside review compared (Session 82, ledger S64 done; decisions 82.1 to 82.3, D64).** The run finished 2026-10-20 13:41Z (reader
   696/696, stage B 8/8, Jev 294/294: 189 whole-pack, 105 windowed under D63; the hosts' deviations are in the record). `compare_outside.py`
   (harness, with a negative control; the results are committed as gzip in `outside_review_r1/results/`) applied the pre-registration.
   Verdict agreement 490 of 667 (73.5%); clause agreement 56.1%; calibration lean +0.012; CCO-PTF-CIP-SZH's lean -0.103 (excludes 0, from the
   owner-decided cells); first place under the reader's verdicts: Nordic Social Democracy 18.5 (CCO-PTF-CIP-SZH 14.5). No score changed.
-  Adjudication is Session 83. I11 (ready) and D63 are the owner's to confirm.
+  Adjudicated in Session 83 (bullet above). The owner confirmed D63, D64 and I11 (decisions 83.1 to 83.3).
 - **Outside blind review (Sessions 80 and 81, decisions 79.6, 79.8, 80.1 to 80.8, 81.1 to 81.4; ledger S63, S64, D61, D63, I11).**
   Launched by the owner on 2026-10-19 (not by a session: the Claude app could not push there); results in
   `compassionism-sim-results`, `neec-outside-review/r1/` (read there; Session 81 pulled nothing into this repository).
@@ -90,7 +105,8 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   units. It is not the pack's length alone (failures start at 60,676 characters; ok requests reach 104,048), and 35
   requests had their pack cut at 200,000 characters. Cause unknown; no key here to test. The workflow keeps retrying them
   every 4 hours at no cost, and no `DONE` is written while any is missing. Harness unchanged (v50, 140 checks). **Superseded on 2026-10-20 13:41Z:** the 105 units were rerun under D63 and `DONE` was written; see the bullet above.
-- **Harness:** v51, 142 checks (`compare_outside.py` and its negative control, since Session 82; `outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
+- **Harness:** v52, 145 checks (`apply_adjudication_s83.py --check` and its negative control, `weighting_s83.py`, since Session 83;
+  `compare_outside.py` and its negative control, since Session 82; `outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
   `outside_review_runner.py --selftest`, since Session 80; `evidence_cache_s77.py` and `blind_s77.py`, since Session 77; `evidence_cache_s76.py` and `blind_s76.py`, since Session 76; `evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
   byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and checked by `harness.yml` on 3.12.
@@ -366,17 +382,21 @@ prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second in
    Jev pass over every clause, the JSON schema, and the pre-registered comparison rules, committed before the run. Dry
    run on three non-CCO units. Needs the owner's setup (S66).
 9. **Done: Session 82** (Sonnet 5.5 at medium; ledger S64): `compare_outside.py` and `NEEC_OutsideReview_Result_s82.md`.
-10. **Session 83: Opus 5.5 at xhigh** (first item of the list; read `NEEC_OutsideReview_Result_s82.md`, tables 3e, 6c, 6d of `compare_outside_output.txt`) for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
-    each disagreement on the sources, by one rule for every entry; changes by generator; CCO-PTF-CIP-SZH's to the owner
-    (57.2); every outside result on an owner-decided unit is published either way (plan, section 6).
-11. **Before the prose** (Session 83, or the owner): settle ledger I9 (open item (e) below; its C3.4 clause 3 question
-    bears on decision 79.4's rule, which requires clauses 1 to 3 cleared) and the owner's half of I7; rerun the
-    weighting robustness analysis (`neec_weighting_robustness_analysis_v2.py`) on the final scores, since first place
-    rests on a 0.5 margin; then freeze the scores (a tag the prose cites).
+10. **Done: Session 83** (Opus 5.5; ledger S65 done; I9 settled, D65, D66 and I12 added). The 177 disagreements adjudicated
+    (`NEEC_Adjudication_s83.md`, `adjudicate_s83.py`, `apply_adjudication_s83.py`); 18 verdicts changed by generator; four
+    readings to the owner; the outside result on every CCO-PTF-CIP-SZH and owner-decided cell published (evidence reports and
+    the record, section 6); I9 settled (decision 83.10); the weighting robustness rerun on the v2 corpus (`weighting_s83.py`).
+11. **The scores freeze at the `s83` tag** (decision 83.13; `land-session.yml` creates it when this pull request is merged),
+    except the four owner items: CCO-PTF-CIP-SZH's C2.2 and C5.3 (ledger D65) and Degrowth's and Participatory Economics'
+    C3.4 (D66). The owner's half of I7 stays the owner's. Session 84's first step applies the owner's answers to D65 and D66
+    by generator (a layer like `adjudicate_s83.UNITS`, or `adjudicate_s83.OWNER`'s units moved into it), if they change
+    anything; Report and Paper v2.0 state the standing with and without the owner's decisions and items.
 12. **Sessions 84 to 88, the prose and landing**, in the ledger's order: S41 Report v2.0 Part I (Opus 5.5 at high), S42
-    Paper v2.0 disclosures (Opus 5.5 at high; now also the owner's decisions, the standing with and without them, and
-    the outside review's result), S44 the limits page (Opus 5.5 at high), S43 land the drafts (Sonnet 5.5 at medium:
-    remove `provisional_note`, rebuild, harness, pull request), S49 the PDF (Sonnet 5.5).
+    Paper v2.0 disclosures (Opus 5.5 at high; the owner's decisions, the standing with and without them, the outside
+    review's result and its adjudication, with the result on every CCO-PTF-CIP-SZH and owner-decided unit, up or down), S44
+    the limits page (Opus 5.5 at high; now also the class notes of `NEEC_Adjudication_s83.md`, sections 7 to 9, and ledger
+    I12), S43 land the drafts (Sonnet 5.5 at medium: remove `provisional_note`, rebuild, harness, pull request), S49 the
+    PDF (Sonnet 5.5).
 
 This order is also in the ledger (`steps` S63 to S66, S41 to S44, S49, each with its own model and effort; `next`); a
 session that finishes early, runs long, or finds a group needs splitting updates both there and here.
@@ -396,14 +416,35 @@ short, its flag toward 1.0 withdrawn, the verdict 0.5 unchanged; the limits page
 text cites the "94-96%" that v2.0's measure does not bear out, `NEEC_BlindReview_s74.md`, sections 7 and 10); (e) ledger I9 (Session 71): Libertarian
 Minarchism's and Centrally Planned Socialism's C4.5 held at 0.5 by D28 while Status Quo, Stakeholder Capitalism and
 Qatar are 0.0 on the same pattern, and C3.4's 16 earlier-read units carrying clause 3 on v1.4's wording -- for the
-owner or a later session to decide (Session 78 did not) (`NEEC_BlindReview_s71.md`, section 9); Session 72 raised Libertarian Minarchism's C4.1,
-not its C4.5, so (e) is unchanged (`NEEC_BlindReview_s72.md`, section 9).
+owner or a later session to decide (Session 78 did not) (`NEEC_BlindReview_s71.md`, section 9); **settled in Session 83 (decision
+83.10)**: Libertarian Minarchism's C4.5 is now 0.0 on reading 4.5.3, Centrally Planned Socialism's holds at 0.5 (4.5.3's 0.5
+condition), and clause 3 on v2.0's wording clears for every C3.4 1.0 while no other verdict turns on it.
 13. **CCO-PTF-CIP-SZH's other eight simulation units:** the owner answered the paused item directly in the ledger
     (decision 69.4/D38): scores that would move CCO up are applied when the blind re-read confirms them; scores that
     would flag it down are held, for the site's push-back feature once that is ready. `NEEC_CCO_Paused_Readings_s67.md`
     (Session 67) lists the eight. The blind groups read CCO's units on their criteria under this rule (Session 75's
     C2.5 and Session 76's C2.6, C3.6 and C4.6 agreed at 0.5); Session 77's group held no CCO unit.
 14. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change needed.
+
+## Decided (Session 83; `NEEC_Adjudication_s83.md`, section 10)
+
+**83.1 to 83.3** (owner, recorded) D63 (Jev's windows), D64 (the comparison's five readings; the owner added that a further
+study may be set up if wanted: none was needed) and I11 confirmed. **83.4** (method) the adjudication rule: the protocol
+governs; the sources in order (pack, NEEC's cited sources, the reader's named sources, checked where reachable; Jev a check,
+never a verdict); silence is not clearance on either side ("as audited" clearances do not stand against a reading that finds
+no source; a reader's clearance on a plan or claim does not stand where the threshold asks for a figure); one reading per
+class; hold where both readings are defensible, keeping the reader's as the close call; the owner's cells adjudicated alike
+but never changed. **83.5** (corrections) the 18 verdict changes (Position above). **83.6** (corrections, record) INT C3.2
+clause 2 (the white paper does specify a one-way monetary boundary, section 11.6; still not shown), INT C5.3 clause 4
+(cleared), SWF C3.4 clause 3 (v2.0's wording). **83.7** (optional) ten new close calls on held verdicts. **83.8** (for the
+owner, D65) CCO-PTF-CIP-SZH's C2.2 and C5.3 read 0.5; held at 1.0 under 69.4. **83.9** (for the owner, D66) Degrowth's and
+Participatory Economics' C3.4 read 0.5 (decision 79.4's condition, clauses 1 to 3 cleared, rests on the published rationale's
+words for clauses 1-2 and 2); kept at 1.0. **83.10** I9 settled (Next work, open item (e)). **83.11** (optional, tooling)
+`apply_owner_s79.py` writes the `*_s79_snapshot` files, which `compare_outside.py` and `outside_kit.py` read (same bytes);
+`final_pass.adjudicated_state()`; `build_evidence.py` gives the outside review's verdict and outcome on 198 sections; harness
+v52, 145 checks. **83.12** (optional, analysis) `weighting_s83.py`. **83.13** (correction to the plan) the scores freeze at the
+`s83` tag except the four owner items. Consistency notes outside the adjudication's scope (PE C1.2b's class W 1.0; C2.2's
+means-tested floors; C2.1's one-year or three-year measure) are ledger I12.
 
 ## Decided (Session 80; `NEEC_Project_Handoff_80.md`, section 2)
 
@@ -726,7 +767,11 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
-Session 82 added: **ledger D64** (how the comparison reads five points the pre-registration leaves open, decision 82.1; default as the script's header). I11 (ready) and D63 stay yours to confirm.
+Session 83 added: **ledger D65** (CCO-PTF-CIP-SZH's C2.2 and C5.3: the adjudication reads both 0.5; held at 1.0 under
+decision 69.4 unless you apply them), **D66** (Degrowth's and Participatory Economics' C3.4: decision 79.4's condition is not
+shown for them; kept at 1.0 unless you return them to 0.5), **I12** (three consistency items outside the adjudication's scope)
+and **I9 ready to confirm** (both items ticked, decision 83.10). The owner confirmed D63, D64 and I11 (decisions 83.1 to 83.3).
+Session 82 added: **ledger D64** (how the comparison reads five points the pre-registration leaves open, decision 82.1; default as the script's header); confirmed.
 Session 81 added: **ledger I11 and D63** (Jev's gap). Jev rejects 105 of the 294 source-pack units with `max_tokens_exceeded`;
 D63 asks what to do (default: diagnose with one test call per failing criterion, then rerun those units as a reported
 deviation, since the pre-registration is silent on a rejected Jev request). Needed from the owner: a one-off Jev test, or the
@@ -755,7 +800,10 @@ eight C4.1 design units should be re-read on v2.0's clauses (Handoff 68, section
 | S57-3.3 | CCO-PTF-CIP-SZH's other eight simulation units hold on v5.6.0 (C1.2a and C3.4 flagged toward 1.0; C3.4's clause 4 now short) | `NEEC_Rescoring_s57.md` 3.3 to 3.12 | D38 | 69.4: rises applied, falls held, for the site's push-back feature |
 | — | Re-read the 8 C4.1 and 10 C2.5 pre-v2.0-clause units on v2.0's clauses? | Handoff 68, section 3, item 1 | D54 | 69.2: yes, in the blind-review pass (sessions 72, 75) |
 | S71-6 | Apply Session 71's five verdict changes at S61 (Participatory Economics alone first)? | `NEEC_BlindReview_s71.md` 6 to 8 | D55 | 72.1: apply all five as read |
-| S71-9 | Libertarian Minarchism and Centrally Planned Socialism on C4.5; C3.4's clause 3 for 16 units | `NEEC_BlindReview_s71.md` 9 | I9 | open |
+| S71-9 | Libertarian Minarchism and Centrally Planned Socialism on C4.5; C3.4's clause 3 for 16 units | `NEEC_BlindReview_s71.md` 9 | I9 | 83.10: settled; confirm in the ledger |
+| S83-6a | CCO-PTF-CIP-SZH C2.2 and C5.3 read 0.5 (held at 1.0 under 69.4) | `NEEC_Adjudication_s83.md` 6 | D65 | open |
+| S83-6b | Degrowth and Participatory Economics C3.4: decision 79.4's condition not shown | `NEEC_Adjudication_s83.md` 6 | D66 | open |
+| S83-9 | PE C1.2b; C2.2's means-tested floors; C2.1's measure | `NEEC_Adjudication_s83.md` 9 | I12 | open |
 | S73-6 | Apply Session 73's eight verdict changes at S61 (Sovereign Wealth Fund Statism to Potentially Adequate)? | `NEEC_BlindReview_s73.md` 6 to 8 | D56 | 74.1: apply all eight as read |
 | S75-9 | Apply Session 75's six C2.5 verdict changes at S61 (Universal Basic Income to Partially Adequate)? | `NEEC_BlindReview_s75.md` 6 to 9 | D57 | 76.1: apply all six as read |
 | S74-7 | The Nordic finding: Nordic Social Democracy's C1.1 (clause 1 short, verdict 0.5 unchanged) | `NEEC_BlindReview_s74.md` 7 | I7 | the owner's review (item 2) |
@@ -803,6 +851,9 @@ evaluated them on v5.6.0: only C3.4's was met (`rescoring_s57.py`, check [3]).
   non-member, or attaching a condition to leaving the Basic Unit system.
 - **C3.4 for Integral, Participatory Economics, Degrowth and Ostrom Commons** (1.0 by decision 79.4): an implementation
   record or a model of the design's own adjustments showing a collapse an adjustment caused.
+- **C2.2 and C5.3** (1.0; read 0.5 by the adjudication of Session 83 and held under decision 69.4; ledger D65): C2.2 reopens
+  on the owner's answer or on the design's sources covering every resident's basic needs; C5.3 on a computation in the
+  design's sources showing viability at 30% participation that its modelling paper's 55% does not contradict.
 - **C1.3** (0.5, S54-3.3; the owner's tenure note, 57.4): a version of the model with housing tenure and a housing-cost line that
   shows 88% of all agents stable over 5-year windows and housing costs at or under 30% of disposable income at 80% of
   the median, in the reference run.

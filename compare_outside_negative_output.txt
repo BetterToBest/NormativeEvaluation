@@ -1,2 +1,2 @@
-  FAIL neec_corpus_v2.json md5 ab3dbc90 equals the registered 4a1a26af (section 1)
+  FAIL neec_corpus_v2_s79_snapshot.json md5 ab3dbc90 equals the registered 4a1a26af (section 1)
 exit: an input is not the one the pre-registration names
