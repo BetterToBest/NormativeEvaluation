@@ -1,0 +1,467 @@
+compare_outside.py: NEEC outside blind review, run r1 (PREREG.md sections 2 to 7 and 9)
+
+0. WHAT WAS READ
+  NEEC with the owner's decisions differs from NEEC without in 8 cells: DG C3.4, PE C3.4, CCO C1.2a, CCO C2.5, CCO C3.2, CCO C3.4, INT C3.4, OS C3.4
+  reader: 696 of 696 units answered and valid; missing 0 []; invalid 0; model {'nvidia/nemotron-3-ultra-550b-a55b': 696}; error lines (no answer, retried): 19
+
+3. PRIMARY OUTCOME: VERDICT AGREEMENT (the reader's first reading of each of the 667 units against NEEC's published verdict)
+
+3a. Against NEEC with the owner's decisions (neec_corpus_v2.json)
+                                        n  agree    rate   direction of the disagreements (reader relative to NEEC)
+  all answered units                  667   490   73.5%   up  93 (0.5: 92 1.0:  1)  down  84 (0.5: 84 1.0:  0)
+  by priority group
+  group 1                              29    21   72.4%   up   1 (0.5:  1 1.0:  0)  down   7 (0.5:  7 1.0:  0)
+  group 2                             116    86   74.1%   up  14 (0.5: 14 1.0:  0)  down  16 (0.5: 16 1.0:  0)
+  group 3                             135    72   53.3%   up  36 (0.5: 36 1.0:  0)  down  27 (0.5: 27 1.0:  0)
+  group 4                             387   311   80.4%   up  42 (0.5: 41 1.0:  1)  down  34 (0.5: 34 1.0:  0)
+  by kit mode / by the reader's own closed_book flag (R2)
+  kit mode: sources                   294   229   77.9%   up  25 (0.5: 25 1.0:  0)  down  40 (0.5: 40 1.0:  0)
+  kit mode: closed-book               373   261   70.0%   up  68 (0.5: 67 1.0:  1)  down  44 (0.5: 44 1.0:  0)
+  reader closed_book True             572   414   72.4%   up  87 (0.5: 86 1.0:  1)  down  71 (0.5: 71 1.0:  0)
+  reader closed_book False             95    76   80.0%   up   6 (0.5:  6 1.0:  0)  down  13 (0.5: 13 1.0:  0)
+  by system
+  SQ Status Quo Market Capitalism      29    24   82.8%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  NSD Nordic Social Democracy          29    21   72.4%   up   7 (0.5:  7 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  CPS Centrally Planned Socialism      29    20   69.0%   up   4 (0.5:  4 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  MS Market Socialism                  29    24   82.8%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  LM Libertarian Minarchism            29    21   72.4%   up   4 (0.5:  4 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  MMT MMT + Job Guarantee              29    23   79.3%   up   4 (0.5:  4 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  UBI Universal Basic Income           29    19   65.5%   up   5 (0.5:  5 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  DG Degrowth Economics                29    22   75.9%   up   2 (0.5:  2 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  SC Stakeholder Capitalism            29    20   69.0%   up   5 (0.5:  5 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  FALC Fully Automated Luxury Commun   29    22   75.9%   up   7 (0.5:  6 1.0:  1)  down   0 (0.5:  0 1.0:  0)
+  PE Participatory Economics           29    21   72.4%   up   2 (0.5:  2 1.0:  0)  down   6 (0.5:  6 1.0:  0)
+  CCO CCO-PTF-CIP-SZH                  29    21   72.4%   up   1 (0.5:  1 1.0:  0)  down   7 (0.5:  7 1.0:  0)
+  INT Integral                         29    22   75.9%   up   3 (0.5:  3 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  GEO Georgism / Land Value Tax (LVT   29    23   79.3%   up   1 (0.5:  1 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  MC Mutual Credit / LETS              29    20   69.0%   up   2 (0.5:  2 1.0:  0)  down   7 (0.5:  7 1.0:  0)
+  DE Doughnut Economics                29    17   58.6%   up  10 (0.5: 10 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  UBS Universal Basic Services         29    22   75.9%   up   6 (0.5:  6 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  SWF Sovereign Wealth Fund Statism    29    20   69.0%   up   4 (0.5:  4 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  CN State Capitalism / China (Party   29    20   69.0%   up   7 (0.5:  7 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  SG State Capitalism / Singapore (G   29    23   79.3%   up   4 (0.5:  4 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  QA State Capitalism / Qatar (Gulf    29    22   75.9%   up   5 (0.5:  5 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  IF Islamic Finance / Profit-Sharin   29    22   75.9%   up   3 (0.5:  3 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  OS Ostrom-Style Commons Governance   29    21   72.4%   up   3 (0.5:  3 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  by criterion
+  C1.1                                 23    20   87.0%   up   1 (0.5:  1 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C1.2a                                23    13   56.5%   up   8 (0.5:  8 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C1.2b                                23    13   56.5%   up   6 (0.5:  5 1.0:  1)  down   4 (0.5:  4 1.0:  0)
+  C1.3                                 23    18   78.3%   up   5 (0.5:  5 1.0:  0)  down   0 (0.5:  0 1.0:  0)
+  C1.4                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C1.5                                 23    16   69.6%   up   6 (0.5:  6 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.1                                 23    18   78.3%   up   4 (0.5:  4 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.2                                 23    12   52.2%   up   7 (0.5:  7 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  C2.3                                 23    21   91.3%   up   1 (0.5:  1 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.4                                 23    20   87.0%   up   2 (0.5:  2 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.5                                 23    14   60.9%   up   6 (0.5:  6 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C2.6                                 23    19   82.6%   up   2 (0.5:  2 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C3.1                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C3.2                                 23    20   87.0%   up   1 (0.5:  1 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C3.3                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C3.4                                 23    14   60.9%   up   1 (0.5:  1 1.0:  0)  down   8 (0.5:  8 1.0:  0)
+  C3.5                                 23    17   73.9%   up   4 (0.5:  4 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C3.6                                 23    21   91.3%   up   1 (0.5:  1 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C4.1                                 23    19   82.6%   up   3 (0.5:  3 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C4.2                                 23    14   60.9%   up   2 (0.5:  2 1.0:  0)  down   7 (0.5:  7 1.0:  0)
+  C4.3                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C4.4                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C4.5                                 23    17   73.9%   up   3 (0.5:  3 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C4.6                                 23    19   82.6%   up   1 (0.5:  1 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C5.1                                 23    15   65.2%   up   4 (0.5:  4 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  C5.2                                 23    13   56.5%   up   4 (0.5:  4 1.0:  0)  down   6 (0.5:  6 1.0:  0)
+  C5.3                                 23    11   47.8%   up   4 (0.5:  4 1.0:  0)  down   8 (0.5:  8 1.0:  0)
+  C5.4                                 23    20   87.0%   up   3 (0.5:  3 1.0:  0)  down   0 (0.5:  0 1.0:  0)
+  C5.5                                 23    16   69.6%   up   4 (0.5:  4 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+
+3b. Against NEEC without the owner's decisions (s78 snapshot, CCO C3.2 at 0.5)
+                                        n  agree    rate   direction of the disagreements (reader relative to NEEC)
+  all answered units                  667   496   74.4%   up  94 (0.5: 93 1.0:  1)  down  77 (0.5: 77 1.0:  0)
+  by priority group
+  group 1                              29    23   79.3%   up   2 (0.5:  2 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  group 2                             116    89   76.7%   up  14 (0.5: 14 1.0:  0)  down  13 (0.5: 13 1.0:  0)
+  group 3                             135    73   54.1%   up  36 (0.5: 36 1.0:  0)  down  26 (0.5: 26 1.0:  0)
+  group 4                             387   311   80.4%   up  42 (0.5: 41 1.0:  1)  down  34 (0.5: 34 1.0:  0)
+  by kit mode / by the reader's own closed_book flag (R2)
+  kit mode: sources                   294   233   79.3%   up  26 (0.5: 26 1.0:  0)  down  35 (0.5: 35 1.0:  0)
+  kit mode: closed-book               373   263   70.5%   up  68 (0.5: 67 1.0:  1)  down  42 (0.5: 42 1.0:  0)
+  reader closed_book True             572   417   72.9%   up  87 (0.5: 86 1.0:  1)  down  68 (0.5: 68 1.0:  0)
+  reader closed_book False             95    79   83.2%   up   7 (0.5:  7 1.0:  0)  down   9 (0.5:  9 1.0:  0)
+  by system
+  SQ Status Quo Market Capitalism      29    24   82.8%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  NSD Nordic Social Democracy          29    21   72.4%   up   7 (0.5:  7 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  CPS Centrally Planned Socialism      29    20   69.0%   up   4 (0.5:  4 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  MS Market Socialism                  29    24   82.8%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  LM Libertarian Minarchism            29    21   72.4%   up   4 (0.5:  4 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  MMT MMT + Job Guarantee              29    23   79.3%   up   4 (0.5:  4 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  UBI Universal Basic Income           29    19   65.5%   up   5 (0.5:  5 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  DG Degrowth Economics                29    23   79.3%   up   2 (0.5:  2 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  SC Stakeholder Capitalism            29    20   69.0%   up   5 (0.5:  5 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  FALC Fully Automated Luxury Commun   29    22   75.9%   up   7 (0.5:  6 1.0:  1)  down   0 (0.5:  0 1.0:  0)
+  PE Participatory Economics           29    22   75.9%   up   2 (0.5:  2 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  CCO CCO-PTF-CIP-SZH                  29    23   79.3%   up   2 (0.5:  2 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  INT Integral                         29    23   79.3%   up   3 (0.5:  3 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  GEO Georgism / Land Value Tax (LVT   29    23   79.3%   up   1 (0.5:  1 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  MC Mutual Credit / LETS              29    20   69.0%   up   2 (0.5:  2 1.0:  0)  down   7 (0.5:  7 1.0:  0)
+  DE Doughnut Economics                29    17   58.6%   up  10 (0.5: 10 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  UBS Universal Basic Services         29    22   75.9%   up   6 (0.5:  6 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  SWF Sovereign Wealth Fund Statism    29    20   69.0%   up   4 (0.5:  4 1.0:  0)  down   5 (0.5:  5 1.0:  0)
+  CN State Capitalism / China (Party   29    20   69.0%   up   7 (0.5:  7 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  SG State Capitalism / Singapore (G   29    23   79.3%   up   4 (0.5:  4 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  QA State Capitalism / Qatar (Gulf    29    22   75.9%   up   5 (0.5:  5 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  IF Islamic Finance / Profit-Sharin   29    22   75.9%   up   3 (0.5:  3 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  OS Ostrom-Style Commons Governance   29    22   75.9%   up   3 (0.5:  3 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  by criterion
+  C1.1                                 23    20   87.0%   up   1 (0.5:  1 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C1.2a                                23    14   60.9%   up   8 (0.5:  8 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C1.2b                                23    13   56.5%   up   6 (0.5:  5 1.0:  1)  down   4 (0.5:  4 1.0:  0)
+  C1.3                                 23    18   78.3%   up   5 (0.5:  5 1.0:  0)  down   0 (0.5:  0 1.0:  0)
+  C1.4                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C1.5                                 23    16   69.6%   up   6 (0.5:  6 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.1                                 23    18   78.3%   up   4 (0.5:  4 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.2                                 23    12   52.2%   up   7 (0.5:  7 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  C2.3                                 23    21   91.3%   up   1 (0.5:  1 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.4                                 23    20   87.0%   up   2 (0.5:  2 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C2.5                                 23    15   65.2%   up   6 (0.5:  6 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C2.6                                 23    19   82.6%   up   2 (0.5:  2 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C3.1                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C3.2                                 23    19   82.6%   up   2 (0.5:  2 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C3.3                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C3.4                                 23    19   82.6%   up   1 (0.5:  1 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C3.5                                 23    17   73.9%   up   4 (0.5:  4 1.0:  0)  down   2 (0.5:  2 1.0:  0)
+  C3.6                                 23    21   91.3%   up   1 (0.5:  1 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C4.1                                 23    19   82.6%   up   3 (0.5:  3 1.0:  0)  down   1 (0.5:  1 1.0:  0)
+  C4.2                                 23    14   60.9%   up   2 (0.5:  2 1.0:  0)  down   7 (0.5:  7 1.0:  0)
+  C4.3                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C4.4                                 23    18   78.3%   up   2 (0.5:  2 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C4.5                                 23    17   73.9%   up   3 (0.5:  3 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C4.6                                 23    19   82.6%   up   1 (0.5:  1 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+  C5.1                                 23    15   65.2%   up   4 (0.5:  4 1.0:  0)  down   4 (0.5:  4 1.0:  0)
+  C5.2                                 23    13   56.5%   up   4 (0.5:  4 1.0:  0)  down   6 (0.5:  6 1.0:  0)
+  C5.3                                 23    11   47.8%   up   4 (0.5:  4 1.0:  0)  down   8 (0.5:  8 1.0:  0)
+  C5.4                                 23    20   87.0%   up   3 (0.5:  3 1.0:  0)  down   0 (0.5:  0 1.0:  0)
+  C5.5                                 23    16   69.6%   up   4 (0.5:  4 1.0:  0)  down   3 (0.5:  3 1.0:  0)
+
+3c. The eight owner-decided units: the reader's blind verdict beside both NEEC readings
+  unit       reader   NEEC     NEEC w/o  group    
+  DG|C3.4    0.5      1.0      0.5       2        
+  PE|C3.4    0.5      1.0      0.5       2        
+  CCO|C1.2a  0.5      1.0      0.5       1        
+  CCO|C2.5   0.5      1.0      0.5       1        
+  CCO|C3.2   1.0      1.0      0.5       1        
+  CCO|C3.4   0.5      1.0      0.5       1        
+  INT|C3.4   0.5      1.0      0.5       2        
+  OS|C3.4    0.5      1.0      0.5       3        
+
+3e. Verdict disagreements in groups 1 and 2 (the top five), for adjudication; reader / NEEC (NEEC without the owner's decisions if different)
+  CCO   8: C1.2a 0.5/1.0 (w/o 0.5); C2.2 0.5/1.0; C2.5 0.5/1.0 (w/o 0.5); C3.4 0.5/1.0 (w/o 0.5); C4.3 0.0/0.5; C5.1 0.0/0.5; C5.2 1.0/0.5; C5.3 0.5/1.0
+  NSD   8: C2.5 1.0/0.5; C2.6 1.0/0.5; C3.3 1.0/0.5; C3.4 1.0/0.5; C4.1 1.0/0.5; C4.6 1.0/0.5; C5.1 1.0/0.5; C5.3 0.0/0.5
+  DG    7: C1.2a 0.0/0.5; C1.2b 0.5/1.0; C3.3 0.5/1.0; C3.4 0.5/1.0 (w/o 0.5); C4.2 1.0/0.5; C5.3 0.0/0.5; C5.4 0.5/0.0
+  PE    8: C1.3 1.0/0.5; C1.5 0.0/0.5; C2.5 0.0/0.5; C3.3 0.5/1.0; C3.4 0.5/1.0 (w/o 0.5); C4.1 1.0/0.5; C5.1 0.0/0.5; C5.3 0.0/0.5
+  INT   7: C1.2b 0.5/1.0; C1.5 0.5/0.0; C3.2 1.0/0.5; C3.3 0.5/1.0; C3.4 0.5/1.0 (w/o 0.5); C5.1 0.0/0.5; C5.3 1.0/0.5
+
+3d. Clause agreement (units whose NEEC record has one status per v2.0 clause; elsewhere 'not recorded')
+  units with a NEEC clause record: 496 of 667 (0 more have a record with another clause count: ); not recorded: 171
+  clauses compared: 1368 (of which NEEC R, out of reach: 160)
+  clause agreement, R excluded (primary):          678 of 1208   56.1%
+  clause agreement, R as short/not_shown (R1):      834 of 1368   61.0%
+  units with every clause agreeing, R excluded:     211 of 496   42.5%
+  units with every clause agreeing, R as above:     209 of 496   42.1%
+  NEEC status (rows) by reader status (columns)
+                cleared      short  not_shown       moot
+  cleared           153         57         77          3
+  short              16        197         27          1
+  not_shown          82        260        328          1
+  moot                0          6          0          0
+  R                   0        109         47          4
+  clause agreement by priority group (R excluded)
+    group 1    41 of   69   59.4%
+    group 2   149 of  242   61.6%
+    group 3   169 of  287   58.9%
+    group 4   319 of  610   52.3%
+
+4. THE READER'S LEAN: mean(reader verdict - NEEC verdict) over answered units; difference from the calibration set, 95% bootstrap
+   interval (10,000 resamples of units within each set, seed 80). A difference whose interval excludes 0 is a finding for Session 83.
+  calibration lean (group 4, 387 units): +0.012 against NEEC with the owner's decisions (identical without: none of the eight is in group 4: True)
+  set                                                     n      lean      diff  95% interval         excludes 0
+  CCO-PTF-CIP-SZH (group 1, 29 units)                    29    -0.103    -0.115  [-0.205, -0.027]  YES
+  CCO-PTF-CIP-SZH (group 1, 29 units) [without owner]    29    -0.034    -0.046  [-0.132, +0.038]  no
+  Nordic Social Democracy (29 units)                     29    +0.103    +0.092  [+0.000, +0.185]  YES
+  Degrowth Economics (29 units)                          29    -0.052    -0.063  [-0.155, +0.025]  no
+  Participatory Economics (29 units)                     29    -0.069    -0.081  [-0.176, +0.016]  no
+  Integral (29 units)                                    29    -0.017    -0.029  [-0.123, +0.060]  no
+  the eight owner-decided units                           8    -0.438    -0.449  [-0.527, -0.316]  YES
+  the eight owner-decided units [without owner]           8    +0.062    +0.051  [-0.027, +0.184]  no
+
+5. THE READER'S OWN CONSISTENCY: CCO-PTF-CIP-SZH's 29 units read twice (the repeat is '#2'; only the first reading enters 3, 4 and 7)
+  verdict agreement between the two readings: 27 of 29   93.1%
+  clause-status agreement: 60 of 75 clauses   80.0%; units with every clause equal: 18 of 29
+  units whose verdict differs: CCO|C2.2 0.5->1.0, CCO|C5.1 0.0->0.5
+
+6. JEV (jev-1.13.0): per clause, two passes; pass-to-pass agreement; agreement with the reader's status and with NEEC's
+   Reported apart: the 189 whole-pack units and the 105 units read in windows (D63; windows lean toward not_shown). Jev sets no verdict.
+
+  6a. Whole-pack units (189): 189 units, 486 clauses
+    Jev's choice, pass 1:  cleared 39  short 55  not_shown 392     pass 2:  cleared 41  short 52  not_shown 393
+    the two passes agree on 478 of 486 clauses   98.4%
+    Jev (pass 1) with the reader's status:  184 of 482   38.2%
+    Jev (pass 2) with the reader's status:  188 of 482   39.0%
+    Jev (stable) with the reader's status:  183 of 474   38.6%
+    Jev (pass 1) with NEEC's status (where recorded, R and moot out):  231 of 411   56.2%
+    Jev (pass 2) with NEEC's status (where recorded, R and moot out):  230 of 411   56.0%
+    Jev (stable) with NEEC's status (where recorded, R and moot out):  228 of 405   56.3%
+    reader / Jev / NEEC on 404 stable clauses with all three recorded:
+      all three agree                     120   29.7%
+      reader = Jev, against NEEC           37    9.2%
+      Jev = NEEC, against the reader      108   26.7%
+      reader = NEEC, against Jev          113   28.0%
+      all three differ                     26    6.4%
+      reader cleared on a closed-book source (expected to meet not_shown)  47 clauses; Jev pass 1: cleared 1, short 1, not_shown 45
+      reader cleared on the pack (R5)                                 55 clauses; Jev pass 1: cleared 32, short 5, not_shown 18
+      Jev pass 1 not_shown share: 392 of 486   80.7%
+
+  6b. Units read in windows, D63 (105): 105 units, 314 clauses
+    Jev's choice, pass 1:  cleared 21  short 49  not_shown 244     pass 2:  cleared 20  short 50  not_shown 244
+    the two passes agree on 313 of 314 clauses   99.7%
+    clauses with a recorded window conflict (clause-passes): 16
+    Jev (pass 1) with the reader's status:  155 of 313   49.5%
+    Jev (pass 2) with the reader's status:  154 of 313   49.2%
+    Jev (stable) with the reader's status:  154 of 312   49.4%
+    Jev (pass 1) with NEEC's status (where recorded, R and moot out):  165 of 222   74.3%
+    Jev (pass 2) with NEEC's status (where recorded, R and moot out):  164 of 222   73.9%
+    Jev (stable) with NEEC's status (where recorded, R and moot out):  164 of 221   74.2%
+    reader / Jev / NEEC on 221 stable clauses with all three recorded:
+      all three agree                     107   48.4%
+      reader = Jev, against NEEC           14    6.3%
+      Jev = NEEC, against the reader       57   25.8%
+      reader = NEEC, against Jev           40   18.1%
+      all three differ                      3    1.4%
+      reader cleared on a closed-book source (expected to meet not_shown)  11 clauses; Jev pass 1: cleared 1, short 1, not_shown 9
+      reader cleared on the pack (R5)                                 26 clauses; Jev pass 1: cleared 14, short 6, not_shown 6
+      Jev pass 1 not_shown share: 244 of 314   77.7%
+
+  6c. Clauses with a recorded window conflict (D63): unit, pass, clause, choice taken, per-window not listed (kept in jev.jsonl)
+    CN|C2.1      pass 1 clause 1  cleared
+    CN|C2.1      pass 2 clause 1  cleared
+    CN|C3.6      pass 1 clause 2  cleared
+    CN|C3.6      pass 2 clause 2  cleared
+    CN|C4.6      pass 1 clause 1  cleared
+    CN|C4.6      pass 2 clause 1  short
+    QA|C2.4      pass 1 clause 1  short
+    QA|C2.4      pass 2 clause 1  short
+    SG|C3.6      pass 1 clause 1  short
+    SG|C4.6      pass 1 clause 1  cleared
+    SG|C4.6      pass 2 clause 1  cleared
+    SQ|C2.6      pass 1 clause 3  short
+    SQ|C2.6      pass 2 clause 1  short
+    SQ|C2.6      pass 2 clause 3  short
+    SQ|C3.6      pass 1 clause 2  cleared
+    SQ|C4.6      pass 2 clause 1  short
+    total: 16 clause-passes in 9 units
+
+  6d. Clauses where Jev (stable) and the reader agree against NEEC: read first in adjudication (section 6)
+    whole-pack: 37 clauses
+      CCO|C2.3     clause 2  NEEC cleared   reader and Jev not_shown
+      CCO|C2.5     clause 1  NEEC cleared   reader and Jev short
+      CCO|C3.5     clause 1  NEEC cleared   reader and Jev not_shown
+      CCO|C3.5     clause 2  NEEC cleared   reader and Jev not_shown
+      CCO|C4.1     clause 1  NEEC short     reader and Jev not_shown
+      CCO|C4.1     clause 2  NEEC cleared   reader and Jev not_shown
+      CCO|C4.5     clause 1  NEEC short     reader and Jev not_shown
+      CCO|C5.1     clause 1  NEEC not_shown reader and Jev short
+      CCO|C5.1     clause 2  NEEC cleared   reader and Jev short
+      CCO|C5.2     clause 1  NEEC not_shown reader and Jev cleared
+      CCO|C5.2     clause 2  NEEC not_shown reader and Jev cleared
+      CCO|C5.2     clause 3  NEEC not_shown reader and Jev cleared
+      CCO|C5.2     clause 4  NEEC not_shown reader and Jev cleared
+      CCO|C5.3     clause 1  NEEC cleared   reader and Jev short
+      CCO|C5.4     clause 1  NEEC cleared   reader and Jev not_shown
+      CN|C3.5      clause 1  NEEC short     reader and Jev not_shown
+      CN|C3.5      clause 3  NEEC not_shown reader and Jev cleared
+      INT|C2.3     clause 1  NEEC cleared   reader and Jev not_shown
+      INT|C3.1     clause 3  NEEC cleared   reader and Jev not_shown
+      INT|C3.4     clause 1  NEEC cleared   reader and Jev not_shown
+      INT|C3.4     clause 4  NEEC cleared   reader and Jev not_shown
+      INT|C3.5     clause 4  NEEC cleared   reader and Jev not_shown
+      INT|C4.1     clause 1  NEEC cleared   reader and Jev not_shown
+      INT|C4.1     clause 2  NEEC short     reader and Jev not_shown
+      INT|C5.2     clause 1  NEEC not_shown reader and Jev short
+      INT|C5.2     clause 3  NEEC not_shown reader and Jev short
+      INT|C5.2     clause 5  NEEC cleared   reader and Jev short
+      INT|C5.3     clause 4  NEEC not_shown reader and Jev cleared
+      MMT|C3.4     clause 1  NEEC cleared   reader and Jev not_shown
+      NSD|C1.1     clause 2  NEEC short     reader and Jev not_shown
+      NSD|C2.3     clause 1  NEEC not_shown reader and Jev short
+      QA|C3.5      clause 1  NEEC short     reader and Jev not_shown
+      SQ|C3.1      clause 2  NEEC cleared   reader and Jev short
+      SWF|C4.1     clause 2  NEEC short     reader and Jev not_shown
+      UBI|C3.4     clause 3  NEEC cleared   reader and Jev not_shown
+      UBS|C3.4     clause 1  NEEC cleared   reader and Jev not_shown
+      UBS|C3.4     clause 2  NEEC short     reader and Jev not_shown
+    windowed: 14 clauses
+      CCO|C2.1     clause 1  NEEC cleared   reader and Jev not_shown
+      CCO|C4.2     clause 1  NEEC not_shown reader and Jev short
+      CCO|C4.4     clause 1  NEEC not_shown reader and Jev short
+      CN|C2.1      clause 1  NEEC short     reader and Jev cleared
+      CPS|C4.6     clause 2  NEEC not_shown reader and Jev short
+      CPS|C4.6     clause 3  NEEC not_shown reader and Jev short
+      INT|C2.1     clause 1  NEEC cleared   reader and Jev not_shown
+      INT|C2.4     clause 1  NEEC cleared   reader and Jev not_shown
+      INT|C4.2     clause 4  NEEC cleared   reader and Jev not_shown
+      LM|C4.6      clause 2  NEEC not_shown reader and Jev short
+      NSD|C2.4     clause 1  NEEC short     reader and Jev cleared
+      NSD|C2.6     clause 3  NEEC short     reader and Jev cleared
+      QA|C3.6      clause 3  NEEC cleared   reader and Jev not_shown
+      SG|C4.2      clause 4  NEEC not_shown reader and Jev short
+
+7. THE STANDING, THREE WAYS (totals over 29 criteria; failures = 0.0 verdicts; tier: <=2 Potentially, <=5 Partially Adequate)
+
+  7.1 NEEC's scores (Session 79 standing)
+    rank system                                    total  fail tier                  
+    1    CCO-PTF-CIP-SZH                            17.5     0 Potentially Adequate  
+    2    Participatory Economics                    17.0     0 Potentially Adequate  
+    3    Integral                                   16.0     2 Potentially Adequate  
+    4    Nordic Social Democracy                    15.5     0 Potentially Adequate  
+    4    Degrowth Economics                         15.5     1 Potentially Adequate  
+    6    Market Socialism                           15.0     1 Potentially Adequate  
+    6    Sovereign Wealth Fund Statism              15.0     2 Potentially Adequate  
+    6    Ostrom-Style Commons Governance            15.0     3 Partially Adequate    
+    9    Georgism / Land Value Tax (LVT + Citizen   14.0     2 Potentially Adequate  
+    9    Mutual Credit / LETS                       14.0     3 Partially Adequate    
+    9    State Capitalism / Singapore (GLC Develo   14.0     3 Partially Adequate    
+    9    Islamic Finance / Profit-Sharing Banking   14.0     3 Partially Adequate    
+    13   Universal Basic Income                     13.5     5 Partially Adequate    
+    14   Universal Basic Services                   13.0     4 Partially Adequate    
+    15   Status Quo Market Capitalism               12.5     7 Structurally Inadequate
+    15   MMT + Job Guarantee                        12.5     4 Partially Adequate    
+    17   State Capitalism / China (Party-State-Di   11.5     8 Structurally Inadequate
+    18   Stakeholder Capitalism                     11.0     7 Structurally Inadequate
+    18   Fully Automated Luxury Communism           11.0     9 Structurally Inadequate
+    20   State Capitalism / Qatar (Gulf Rentier-D   10.0    10 Structurally Inadequate
+    21   Libertarian Minarchism                      9.5    11 Structurally Inadequate
+    21   Doughnut Economics                          9.5    10 Structurally Inadequate
+    23   Centrally Planned Socialism                 7.0    16 Structurally Inadequate
+
+  7.2 NEEC's scores without the owner's decisions
+    rank system                                    total  fail tier                  
+    1    Participatory Economics                    16.5     0 Potentially Adequate  
+    2    Nordic Social Democracy                    15.5     0 Potentially Adequate  
+    2    CCO-PTF-CIP-SZH                            15.5     0 Potentially Adequate  
+    2    Integral                                   15.5     2 Potentially Adequate  
+    5    Market Socialism                           15.0     1 Potentially Adequate  
+    5    Degrowth Economics                         15.0     1 Potentially Adequate  
+    5    Sovereign Wealth Fund Statism              15.0     2 Potentially Adequate  
+    8    Ostrom-Style Commons Governance            14.5     3 Partially Adequate    
+    9    Georgism / Land Value Tax (LVT + Citizen   14.0     2 Potentially Adequate  
+    9    Mutual Credit / LETS                       14.0     3 Partially Adequate    
+    9    State Capitalism / Singapore (GLC Develo   14.0     3 Partially Adequate    
+    9    Islamic Finance / Profit-Sharing Banking   14.0     3 Partially Adequate    
+    13   Universal Basic Income                     13.5     5 Partially Adequate    
+    14   Universal Basic Services                   13.0     4 Partially Adequate    
+    15   Status Quo Market Capitalism               12.5     7 Structurally Inadequate
+    15   MMT + Job Guarantee                        12.5     4 Partially Adequate    
+    17   State Capitalism / China (Party-State-Di   11.5     8 Structurally Inadequate
+    18   Stakeholder Capitalism                     11.0     7 Structurally Inadequate
+    18   Fully Automated Luxury Communism           11.0     9 Structurally Inadequate
+    20   State Capitalism / Qatar (Gulf Rentier-D   10.0    10 Structurally Inadequate
+    21   Libertarian Minarchism                      9.5    11 Structurally Inadequate
+    21   Doughnut Economics                          9.5    10 Structurally Inadequate
+    23   Centrally Planned Socialism                 7.0    16 Structurally Inadequate
+
+  7.3a The reader's verdicts on the units it answered, NEEC's on the missing (missing per system: none)
+    rank system                                    total  fail tier                  
+    1    Nordic Social Democracy                    18.5     1 Potentially Adequate  
+    2    Integral                                   15.5     2 Potentially Adequate  
+    2    Universal Basic Services                   15.5     1 Potentially Adequate  
+    4    Fully Automated Luxury Communism           15.0     4 Partially Adequate    
+    4    Participatory Economics                    15.0     4 Partially Adequate    
+    4    State Capitalism / Singapore (GLC Develo   15.0     3 Partially Adequate    
+    7    Market Socialism                           14.5     1 Potentially Adequate  
+    7    CCO-PTF-CIP-SZH                            14.5     2 Potentially Adequate  
+    7    Sovereign Wealth Fund Statism              14.5     2 Potentially Adequate  
+    10   Degrowth Economics                         14.0     2 Potentially Adequate  
+    10   State Capitalism / China (Party-State-Di   14.0     4 Partially Adequate    
+    10   Ostrom-Style Commons Governance            14.0     4 Partially Adequate    
+    13   MMT + Job Guarantee                        13.5     3 Partially Adequate    
+    13   Universal Basic Income                     13.5     4 Partially Adequate    
+    13   Doughnut Economics                         13.5     2 Potentially Adequate  
+    13   Islamic Finance / Profit-Sharing Banking   13.5     3 Partially Adequate    
+    17   Status Quo Market Capitalism               12.0     6 Structurally Inadequate
+    17   Georgism / Land Value Tax (LVT + Citizen   12.0     5 Partially Adequate    
+    19   Stakeholder Capitalism                     11.5     6 Structurally Inadequate
+    19   Mutual Credit / LETS                       11.5     7 Structurally Inadequate
+    19   State Capitalism / Qatar (Gulf Rentier-D   11.5     8 Structurally Inadequate
+    22   Libertarian Minarchism                      9.5    13 Structurally Inadequate
+    23   Centrally Planned Socialism                 6.5    19 Structurally Inadequate
+
+  7.3b Totals over the 29 criteria every system has answered: the reader
+    rank system                                    total  fail tier                  
+    1    Nordic Social Democracy                    18.5     1 Potentially Adequate  
+    2    Integral                                   15.5     2 Potentially Adequate  
+    2    Universal Basic Services                   15.5     1 Potentially Adequate  
+    4    Fully Automated Luxury Communism           15.0     4 Partially Adequate    
+    4    Participatory Economics                    15.0     4 Partially Adequate    
+    4    State Capitalism / Singapore (GLC Develo   15.0     3 Partially Adequate    
+    7    Market Socialism                           14.5     1 Potentially Adequate  
+    7    CCO-PTF-CIP-SZH                            14.5     2 Potentially Adequate  
+    7    Sovereign Wealth Fund Statism              14.5     2 Potentially Adequate  
+    10   Degrowth Economics                         14.0     2 Potentially Adequate  
+    10   State Capitalism / China (Party-State-Di   14.0     4 Partially Adequate    
+    10   Ostrom-Style Commons Governance            14.0     4 Partially Adequate    
+    13   MMT + Job Guarantee                        13.5     3 Partially Adequate    
+    13   Universal Basic Income                     13.5     4 Partially Adequate    
+    13   Doughnut Economics                         13.5     2 Potentially Adequate  
+    13   Islamic Finance / Profit-Sharing Banking   13.5     3 Partially Adequate    
+    17   Status Quo Market Capitalism               12.0     6 Structurally Inadequate
+    17   Georgism / Land Value Tax (LVT + Citizen   12.0     5 Partially Adequate    
+    19   Stakeholder Capitalism                     11.5     6 Structurally Inadequate
+    19   Mutual Credit / LETS                       11.5     7 Structurally Inadequate
+    19   State Capitalism / Qatar (Gulf Rentier-D   11.5     8 Structurally Inadequate
+    22   Libertarian Minarchism                      9.5    13 Structurally Inadequate
+    23   Centrally Planned Socialism                 6.5    19 Structurally Inadequate
+
+  7.3c The same criteria: NEEC
+    rank system                                    total  fail tier                  
+    1    CCO-PTF-CIP-SZH                            17.5     0 Potentially Adequate  
+    2    Participatory Economics                    17.0     0 Potentially Adequate  
+    3    Integral                                   16.0     2 Potentially Adequate  
+    4    Nordic Social Democracy                    15.5     0 Potentially Adequate  
+    4    Degrowth Economics                         15.5     1 Potentially Adequate  
+    6    Market Socialism                           15.0     1 Potentially Adequate  
+    6    Sovereign Wealth Fund Statism              15.0     2 Potentially Adequate  
+    6    Ostrom-Style Commons Governance            15.0     3 Partially Adequate    
+    9    Georgism / Land Value Tax (LVT + Citizen   14.0     2 Potentially Adequate  
+    9    Mutual Credit / LETS                       14.0     3 Partially Adequate    
+    9    State Capitalism / Singapore (GLC Develo   14.0     3 Partially Adequate    
+    9    Islamic Finance / Profit-Sharing Banking   14.0     3 Partially Adequate    
+    13   Universal Basic Income                     13.5     5 Partially Adequate    
+    14   Universal Basic Services                   13.0     4 Partially Adequate    
+    15   Status Quo Market Capitalism               12.5     7 Structurally Inadequate
+    15   MMT + Job Guarantee                        12.5     4 Partially Adequate    
+    17   State Capitalism / China (Party-State-Di   11.5     8 Structurally Inadequate
+    18   Stakeholder Capitalism                     11.0     7 Structurally Inadequate
+    18   Fully Automated Luxury Communism           11.0     9 Structurally Inadequate
+    20   State Capitalism / Qatar (Gulf Rentier-D   10.0    10 Structurally Inadequate
+    21   Libertarian Minarchism                      9.5    11 Structurally Inadequate
+    21   Doughnut Economics                          9.5    10 Structurally Inadequate
+    23   Centrally Planned Socialism                 7.0    16 Structurally Inadequate
+  first place, NEEC: CCO
+  first place, NEEC without the owner's decisions: PE
+  first place, reader (7.3a): NSD
+  first place, reader, common criteria (7.3b): NSD
+  tier changes, reader against NEEC (7.3a vs 7.1): FALC Structurally Inadequate -> Partially Adequate, PE Potentially Adequate -> Partially Adequate, GEO Potentially Adequate -> Partially Adequate, MC Partially Adequate -> Structurally Inadequate, DE Structurally Inadequate -> Potentially Adequate, UBS Partially Adequate -> Potentially Adequate, CN Structurally Inadequate -> Partially Adequate
+  rank changes, reader against NEEC: SQ 15 -> 17, NSD 4 -> 1, MS 6 -> 7, LM 21 -> 22, MMT 15 -> 13, DG 4 -> 10, SC 18 -> 19, FALC 18 -> 4, PE 2 -> 4, CCO 1 -> 7, INT 3 -> 2, GEO 9 -> 17, MC 9 -> 19, DE 21 -> 13, UBS 14 -> 2, SWF 6 -> 7, CN 17 -> 10, SG 9 -> 4, QA 20 -> 19, IF 9 -> 13, OS 6 -> 10
+
+9. STAGE B (not blind): the argument for the owner's reading shown to the reader, for the eight owner-decided units; never in 3 to 7
+  unit       blind    stage B  NEEC     NEEC w/o   clause statuses blind -> stage B
+  DG|C3.4    0.5      0.5      1.0      0.5        not_shown,short,cleared,not_shown -> not_shown,short,cleared,not_shown
+  PE|C3.4    0.5      0.5      1.0      0.5        cleared,short,cleared,cleared -> cleared,short,cleared,cleared
+  CCO|C1.2a  0.5      0.5      1.0      0.5        not_shown -> not_shown
+  CCO|C2.5   0.5      0.5      1.0      0.5        short,cleared,cleared -> short,cleared,cleared
+  CCO|C3.2   1.0      1.0      1.0      0.5        cleared,cleared,cleared -> cleared,cleared,cleared
+  CCO|C3.4   0.5      0.5      1.0      0.5        cleared,cleared,cleared,short -> cleared,cleared,cleared,short
+  INT|C3.4   0.5      0.5      1.0      0.5        not_shown,cleared,not_shown,not_shown -> not_shown,cleared,not_shown,not_shown
+  OS|C3.4    0.5      1.0      1.0      0.5        cleared,cleared,cleared,short -> cleared,cleared,cleared,cleared
+  stage B changed the reader's verdict on 1 of 8: OS|C3.4
+
+SUMMARY: reader 696/696 valid, Jev 294 units (189 whole-pack, 105 windowed), stage B 8/8; verdict agreement 490 of 667 ( 73.5%); calibration lean +0.012; 0 check failures

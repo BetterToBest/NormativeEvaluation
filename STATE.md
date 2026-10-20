@@ -1,14 +1,11 @@
 # NEEC state
 
-**Next session (82, the comparison): Sonnet 5.5 at medium** (ledger S64). Reason: the reader's 696 answers and stage B's eight
-are in; the comparison against NEEC is mechanical (`compare_outside.py` does not exist yet; the session writes it from the pre-registration). It does not need
-Jev, so it does not wait for it. Jev's gap (105 of 294 units rejected, decision 81.2, ledger I11) is the owner's: see
-"Awaiting the owner". If the comparison shows the reader's answers cannot be scored as the pre-registration says, stop:
-that is judgment work for Opus 5.5 at high. Send `Continue NEEC.`
+**Next session (83, adjudication): Opus 5.5, xhigh for CCO-PTF-CIP-SZH and the top five, high for the rest** (ledger S65). Reason:
+the comparison is done (`NEEC_OutsideReview_Result_s82.md`); 177 verdicts disagree and the readings are contested where first place
+is decided (the reader's totals put Nordic Social Democracy first; CCO-PTF-CIP-SZH's lean excludes 0). Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 81 (the outside blind review launched by the owner on NVIDIA's API; the reader finished, Jev did not,
-decisions 81.1 to 81.4) (2026-10-20). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 82 (the outside review compared with NEEC; decisions 82.1 to 82.3) (2026-10-20). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -71,6 +68,12 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
+- **Outside review compared (Session 82, ledger S64 done; decisions 82.1 to 82.3, D64).** The run finished 2026-10-20 13:41Z (reader
+  696/696, stage B 8/8, Jev 294/294: 189 whole-pack, 105 windowed under D63; the hosts' deviations are in the record). `compare_outside.py`
+  (harness, with a negative control; the results are committed as gzip in `outside_review_r1/results/`) applied the pre-registration.
+  Verdict agreement 490 of 667 (73.5%); clause agreement 56.1%; calibration lean +0.012; CCO-PTF-CIP-SZH's lean -0.103 (excludes 0, from the
+  owner-decided cells); first place under the reader's verdicts: Nordic Social Democracy 18.5 (CCO-PTF-CIP-SZH 14.5). No score changed.
+  Adjudication is Session 83. I11 (ready) and D63 are the owner's to confirm.
 - **Outside blind review (Sessions 80 and 81, decisions 79.6, 79.8, 80.1 to 80.8, 81.1 to 81.4; ledger S63, S64, D61, D63, I11).**
   Launched by the owner on 2026-10-19 (not by a session: the Claude app could not push there); results in
   `compassionism-sim-results`, `neec-outside-review/r1/` (read there; Session 81 pulled nothing into this repository).
@@ -86,8 +89,8 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   passes (210 of 588 unit-passes), with HTTP 400 `max_tokens_exceeded` and no usage: every unit of C2.1, C2.4, C2.6, C3.6, C4.2, C4.6 and two C4.4
   units. It is not the pack's length alone (failures start at 60,676 characters; ok requests reach 104,048), and 35
   requests had their pack cut at 200,000 characters. Cause unknown; no key here to test. The workflow keeps retrying them
-  every 4 hours at no cost, and no `DONE` is written while any is missing. Harness unchanged (v50, 140 checks).
-- **Harness:** v50, 140 checks (`outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
+  every 4 hours at no cost, and no `DONE` is written while any is missing. Harness unchanged (v50, 140 checks). **Superseded on 2026-10-20 13:41Z:** the 105 units were rerun under D63 and `DONE` was written; see the bullet above.
+- **Harness:** v51, 142 checks (`compare_outside.py` and its negative control, since Session 82; `outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
   `outside_review_runner.py --selftest`, since Session 80; `evidence_cache_s77.py` and `blind_s77.py`, since Session 77; `evidence_cache_s76.py` and `blind_s76.py`, since Session 76; `evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
   byte-identical in the container (Python 3.13 in Sessions 56 to 64; 3.11 before) and checked by `harness.yml` on 3.12.
@@ -362,10 +365,8 @@ prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second in
    `neec-outside-review/<run id>/`: resumable, within the tier's daily limits, pushing `results/` and a heartbeat every run), the
    Jev pass over every clause, the JSON schema, and the pre-registered comparison rules, committed before the run. Dry
    run on three non-CCO units. Needs the owner's setup (S66).
-9. **Session 82: Sonnet 5.5 at medium** (ledger S64), on the reader's and stage B's results as they stand. Read the results from
-   `compassionism-sim-results`; `compare_outside.py`: agreement by unit and
-   clause, the reader's lean on the calibration set, the reader against Jev against NEEC, stage B; the record.
-10. **Session 83: Opus 5.5 at xhigh** for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
+9. **Done: Session 82** (Sonnet 5.5 at medium; ledger S64): `compare_outside.py` and `NEEC_OutsideReview_Result_s82.md`.
+10. **Session 83: Opus 5.5 at xhigh** (first item of the list; read `NEEC_OutsideReview_Result_s82.md`, tables 3e, 6c, 6d of `compare_outside_output.txt`) for CCO-PTF-CIP-SZH and the top five, high for the rest (ledger S65). Adjudicate
     each disagreement on the sources, by one rule for every entry; changes by generator; CCO-PTF-CIP-SZH's to the owner
     (57.2); every outside result on an owner-decided unit is published either way (plan, section 6).
 11. **Before the prose** (Session 83, or the owner): settle ledger I9 (open item (e) below; its C3.4 clause 3 question
@@ -725,6 +726,7 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
+Session 82 added: **ledger D64** (how the comparison reads five points the pre-registration leaves open, decision 82.1; default as the script's header). I11 (ready) and D63 stay yours to confirm.
 Session 81 added: **ledger I11 and D63** (Jev's gap). Jev rejects 105 of the 294 source-pack units with `max_tokens_exceeded`;
 D63 asks what to do (default: diagnose with one test call per failing criterion, then rerun those units as a reported
 deviation, since the pre-registration is silent on a rejected Jev request). Needed from the owner: a one-off Jev test, or the

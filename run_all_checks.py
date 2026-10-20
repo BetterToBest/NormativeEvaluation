@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 50 (Session 80). Runs every verification and analysis script on file
+Version 51 (Session 82). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -313,6 +313,9 @@ Version 50 (Session 80) adds the outside blind review's kit (decisions 79.6, 79.
 screened evidence cache and the cached design texts in outside_kit_sources/, each verified by md5), with a negative
 control; outside_kit_check.py, which builds every prompt the runner would send and finds no leak, with a negative control
 that plants one leak of each of seven kinds and shows each caught; and outside_review_runner.py --selftest: 140 checks.
+Version 51 (Session 82) adds compare_outside.py, the outside review's pre-registered comparison of the reader's, Jev's and stage B's
+results with NEEC's (ledger S64), run on the committed copies of the results, with a negative control in which it must refuse a
+corpus file that is not the one the pre-registration names: 142 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1814,13 +1817,33 @@ S80_CHECKS = [
          stdout="outside_review_runner_selftest_output.txt", stderr=EMPTY),
 ]
 
+# Session 82: the comparison of the outside review's readings with NEEC's (compare_outside.py, ledger S64). It reads the run's
+# three result files (gzipped copies in outside_review_r1/results/, byte-identical to the results repository's), the kit's unit
+# list and NEEC's clause records (final_pass.owner_state / final_state over the rescoring pass).
+S82_FILES = {**S79_FILES, **{k: k for k in ("compare_outside.py", "neec_corpus_v2_s78_snapshot.json", "summary_blocks_v2.json",
+                                            "outside_review_r1/kit_units.jsonl", "outside_review_r1/results/reader.jsonl.gz",
+                                            "outside_review_r1/results/jev.jsonl.gz", "outside_review_r1/results/stage_b.jsonl.gz")}}
+S82_CHECKS = [
+    dict(name="compare_outside.py: the outside review's pre-registered comparison (PREREG.md sections 2 to 7 and 9) of the reader's "
+              "696 answers, Jev's 294 units (189 whole-pack, 105 windowed under D63) and stage B's 8 with NEEC's verdicts and clause "
+              "records: agreement by group, system and criterion against NEEC with and without the owner's decisions, clause agreement, "
+              "the reader's lean with bootstrap intervals (seed 80), the CCO-PTF-CIP-SZH repeat, Jev's three-way tables, the standing "
+              "three ways; the registered md5s of the corpus files are checked; it changes no score",
+         cmd=["python", "compare_outside.py"], files=S82_FILES,
+         stdout="compare_outside_output.txt", stderr=EMPTY),
+]
+S82_CHECKS.append(dict(S82_CHECKS[0], files={**S82_FILES, "neec_corpus_v2.json": "neec_corpus_v2_s78_snapshot.json"},
+                       name="compare_outside.py rejects a neec_corpus_v2.json that is the Session 78 snapshot, not the file the "
+                            "pre-registration names (negative control; exit 1 expected)",
+                       stdout="compare_outside_negative_output.txt", expect_exit=1))
+
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
              + S42_CHECKS + S43_CHECKS + S44_CHECKS]
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
           + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS + S74_CHECKS
-          + S75_CHECKS + S76_CHECKS + S77_CHECKS + S78_CHECKS + S79_CHECKS + S80_CHECKS)
+          + S75_CHECKS + S76_CHECKS + S77_CHECKS + S78_CHECKS + S79_CHECKS + S80_CHECKS + S82_CHECKS)
 
 
 def md5(data):

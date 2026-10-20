@@ -1,5 +1,5 @@
 ============================================================================================
-run_all_checks.py -- 140 reproducibility checks
+run_all_checks.py -- 142 reproducibility checks
 ============================================================================================
 
 [ 1] PASS  insert_session33.py writes both canonical scripts from their Session 32 snapshots (decision D26)
@@ -273,7 +273,7 @@ run_all_checks.py -- 140 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [74] PASS  build_readme.py regenerates README.md from neec_scores.csv and this harness (the landing page cannot drift from the data)
-          README.md == README.md (md5 fb251827)
+          README.md == README.md (md5 83dd95cc)
 
 [75] PASS  r4_audit_s35.py (revision R4: every corpus 1.0 on a multi-clause Pass Threshold, audited clause by clause; decision D28 and its bound; the record's tables; changes no file) [Session 35 state]
           stdout == r4_audit_s35_output.txt (md5 d110a899)
@@ -548,10 +548,19 @@ run_all_checks.py -- 140 reproducibility checks
           stderr == (empty) (md5 d41d8cd9)
 
 [140] PASS  outside_review_runner.py --selftest: prompt assembly, the FINAL parser, the clause-rule validator, resume, the heartbeat, the stage B gate and the Jev request, offline
-          stdout == outside_review_runner_selftest_output.txt (md5 571fdfa7)
+          stdout == outside_review_runner_selftest_output.txt (md5 2961b8da)
+          stderr == (empty) (md5 d41d8cd9)
+
+[141] PASS  compare_outside.py: the outside review's pre-registered comparison (PREREG.md sections 2 to 7 and 9) of the reader's 696 answers, Jev's 294 units (189 whole-pack, 105 windowed under D63) and stage B's 8 with NEEC's verdicts and clause records: agreement by group, system and criterion against NEEC with and without the owner's decisions, clause agreement, the reader's lean with bootstrap intervals (seed 80), the CCO-PTF-CIP-SZH repeat, Jev's three-way tables, the standing three ways; the registered md5s of the corpus files are checked; it changes no score
+          stdout == compare_outside_output.txt (md5 3e6c7f89)
+          stderr == (empty) (md5 d41d8cd9)
+
+[142] PASS  compare_outside.py rejects a neec_corpus_v2.json that is the Session 78 snapshot, not the file the pre-registration names (negative control; exit 1 expected)
+          exit status 1, as expected
+          stdout == compare_outside_negative_output.txt (md5 ae27c0d9)
           stderr == (empty) (md5 d41d8cd9)
 
 ============================================================================================
-SUMMARY: 140 passed, 0 failed, 0 skipped (of 140).
+SUMMARY: 142 passed, 0 failed, 0 skipped (of 142).
 Not covered here: the realjs scripts' fidelity to index.html (the Compassionism
 Simulation source, which is not in this directory), and the Report and Paper prose.
