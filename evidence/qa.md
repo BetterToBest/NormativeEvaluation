@@ -10,7 +10,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).
 
 ## Contents
 
@@ -20,17 +20,17 @@ Each criterion has one section, linked from the table below. A section gives the
 |---|---|---|
 | [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 74; close call |
 | [C1.2a Wealth Building for Resilience](#c1-2a) | 0.5 | read in group 2.2 (Session 53); close call |
-| [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.5 | held at the published score; close call |
+| [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.5 | held at the published score; close call; outside review: hold |
 | [C1.3 Housing Security](#c1-3) | 0.5 | read in group 2.3 (Session 54) |
-| [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.7 (Session 60) |
+| [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.7 (Session 60), then adjudicated after the outside review (Session 83); close call; outside review: hold |
 | [C1.5 Universal Wealth Access](#c1-5) | 0.0 | held at the published score; close call |
 
 **2. Human Autonomy: 1.5 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C2.1 Freedom from Coercion](#c2-1) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 75; close call |
-| [C2.2 Labor Non-Necessity](#c2-2) | 0.0 | held at the published score |
+| [C2.1 Freedom from Coercion](#c2-1) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 75; close call; outside review: hold |
+| [C2.2 Labor Non-Necessity](#c2-2) | 0.0 | held at the published score; outside review: hold |
 | [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 75 |
 | [C2.4 Democratic Participation](#c2-4) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 75; close call |
 | [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 75; close call |
@@ -40,7 +40,7 @@ Each criterion has one section, linked from the table below. A section gives the
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C3.1 Crisis Response Capacity](#c3-1) | 0.0 | read in group 2.9 (Session 63) and re-read blind in Session 74, changed from 0.5; close call |
+| [C3.1 Crisis Response Capacity](#c3-1) | 0.0 | read in group 2.9 (Session 63) and re-read blind in Session 74, changed from 0.5; close call; outside review: hold |
 | [C3.2 Inflation Control Mechanisms](#c3-2) | 0.5 | held at the published score |
 | [C3.3 Multi-Failure Resistance](#c3-3) | 0.5 | held at the published score; close call |
 | [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71 |
@@ -64,9 +64,9 @@ Each criterion has one section, linked from the table below. A section gives the
 |---|---|---|
 | [C5.1 Proven Component Foundation](#c5-1) | 0.5 | read in part (b2) (Session 39), changed from 1.0; close call |
 | [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6 (Session 58) |
-| [C5.3 Partial and Parallel Deployability](#c5-3) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
+| [C5.3 Partial and Parallel Deployability](#c5-3) | 0.5 | read in part (a) (Session 37), changed from 1.0; outside review: hold |
 | [C5.4 Political Coalition Potential](#c5-4) | 0.5 | held at the published score; close call |
-| [C5.5 Cultural Adaptability](#c5-5) | 0.0 | held at the published score; close call |
+| [C5.5 Cultural Adaptability](#c5-5) | 0.0 | held at the published score; close call; outside review: hold |
 
 ## Domain 1: Material Security
 
@@ -119,6 +119,8 @@ Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Thresh
 
 **Close call.** Scored 0.5; a reasonable scorer could set 0.0. Citizenship divide, no limit at the top
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: commentary on UBS's figures puts Qatar's wealth Gini near 48 (2023), short but not far below; the citizens' allocation covers part of the population. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 **Published (v1) rationale**, under the heading "C1.2b Prevention of Exploitative Accumulation: 0.5 (Partial) — flagged as contestable" at [NEEC_StateCapitalism_Qatar_scoring_scratch.md, line 260](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_StateCapitalism_Qatar_scoring_scratch.md?plain=1#L260):
 
 > No official wealth-distribution figure for Qatar was found. Commentary on UBS's figures says Qatar has the second-best wealth Gini among the 25 countries with the highest median wealth (Yahoo Finance and lovemoney); the underlying number was not retrieved. The allocation described under C1.2a is a real deconcentrating channel: it spreads rent-derived land and housing wealth across the citizen body rather than leaving it to market allocation. *(The section continues at the link.)*
@@ -146,7 +148,7 @@ Pass record: [NEEC_Rescoring_s54.md, line 337](https://github.com/BetterToBest/N
 <a id="c1-4"></a>
 ### C1.4 Automation Resilience: 0.5 (partial)
 
-*Read by the rescoring pass in group 2.7 (Session 60). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
+*Read by the rescoring pass in group 2.7 (Session 60), then adjudicated after the outside review (Session 83) (the adjudicated reading is shown). Published (v1) score 0.5; v2.0 score 0.5: unchanged.*
 
 Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pass Threshold: Poverty <8% and aggregate demand >85% baseline in each of the 30%, 50% and 70% displacement scenarios.
 
@@ -155,9 +157,14 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 | 1 | Poverty <8% | not shown | citizens' incomes rest on a hydrocarbon rent automation would not touch, through state jobs; non-citizens, most of the population the protocol counts (3.2), have no mechanism beyond departure; no model or estimate of poverty on the Societal Poverty Line under a 30%, 50% or 70% displacement of paid hours is stated or cited, and none was located | NEEC_StateCapitalism_Qatar_scoring_scratch.md, C1.4; SCORING_PROTOCOL.md 3.2 |
 | 2 | aggregate demand >85% baseline | not shown | no model or estimate of real final consumption expenditure against a pre-displacement baseline in any of the three scenarios is stated or cited, and none was located | NEEC_StateCapitalism_Qatar_scoring_scratch.md, C1.4 |
 
+**Close call.** Scored 0.5; a reasonable scorer could set 0.0. The outside reader's reading: for the non-citizen majority, income and demand rest wholly on wage labour (the 0.0 band)
+
 **Note.** A buffer covering part of the relevant population is the 0.5 band (protocol 2.1)
 
-Pass record: [NEEC_Rescoring_s60.md, line 309](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s60.md?plain=1#L309)
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: rent-funded state jobs cover the citizens, about a tenth of residents: 2.1's partial population; now flagged toward 0.0. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
+Pass record: [NEEC_Rescoring_s60.md, line 309](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s60.md?plain=1#L309)  
+Adjudicated after the outside review (Session 83): [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md), [adjudicate_s83.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/adjudicate_s83.py)
 
 **Published (v1) rationale**, under the heading "C1.4 Automation Resilience: 0.5 (Partial)" at [NEEC_StateCapitalism_Qatar_scoring_scratch.md, line 321](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_StateCapitalism_Qatar_scoring_scratch.md?plain=1#L321):
 
@@ -194,6 +201,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Why 0.0 stands (protocol 2.1).** Protocol 2.1 (the 0.0 band's case): survival compulsion is maximised by design for the non-citizen majority -- no safety net, and losing a job usually means losing the right to stay -- with absconding still criminalised and passport confiscation common (Human Rights Watch, World Report 2026; US Trafficking in Persons Report 2025) (reading 2.1.3)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: survival compulsion maximised for the non-citizen majority by design; flag stands. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 1107](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1107)  
 Blind re-read record: [NEEC_BlindReview_s75.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s75.md)
 
@@ -207,6 +216,8 @@ Blind re-read record: [NEEC_BlindReview_s75.md](https://github.com/BetterToBest/
 *No unit of the rescoring pass reads this cell. The published score stands: 0.0. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the citizens' baseline is conditional and the non-citizen majority has none, as for Status Quo and Singapore. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C2.2 Labor Non-Necessity: 0.0 (Structural Failure)" at [NEEC_StateCapitalism_Qatar_scoring_scratch.md, line 455](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_StateCapitalism_Qatar_scoring_scratch.md?plain=1#L455):
 
@@ -316,6 +327,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 **Close call.** Scored 0.0; a reasonable scorer could set 0.5. 0.0: coverage of 4% by the configuration's design
 
 **Why 0.0 stands (protocol 2.1).** Protocol 2.1, read by reading 3.1.5: performance far below the threshold with no credible pathway under the configuration's own logic -- coverage of 4%, withheld by design from the non-citizen majority, and a crisis response directed to firms
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: cash-benefit coverage 4.1%, withheld by design; the reader's own clauses are all short. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s63.md, line 298](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s63.md?plain=1#L298)  
 Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
@@ -602,6 +615,8 @@ Criterion in v2.0: class U (unchanged). Pass Threshold: Viable at ≥30% partici
 | 3 | scaling pathway validated through modeling | short | no validated scaling pathway exists (the entry's own flag) | NEEC_StateCapitalism_Qatar_scoring_scratch.md, C5.3 |
 | 4 | coordination protocols established | not shown | not estimated in this pass |  |
 
+**Outside review.** The outside blind reader (run r1) read this unit 1.0, against NEEC's 0.5; the adjudication held NEEC's verdict: the reader moots every clause, against its own readings of the other configured economies. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s37.md, line 399](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s37.md?plain=1#L399)
 
 **Published (v1) rationale**, under the heading "C5.3 Partial and Parallel Deployability: 1.0 (Pass) — flagged as contestable" at [NEEC_StateCapitalism_Qatar_scoring_scratch.md, line 842](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_StateCapitalism_Qatar_scoring_scratch.md?plain=1#L842):
@@ -629,6 +644,8 @@ Criterion in v2.0: class U (unchanged). Pass Threshold: ≥60% support across po
 Criterion in v2.0: class U (unchanged). Pass Threshold: Viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, parameter flexibility ≥40% adjustment range, successful operation validated across diverse implementations.
 
 **Close call.** Scored 0.0; a reasonable scorer could set 0.5. SWF Statism precedent, GCC variation
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the 0.0 band's precondition: rents very large relative to the citizen body, which the configuration cannot produce. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C5.5 Cultural Adaptability: 0.0 (Structural Failure) — flagged as contestable" at [NEEC_StateCapitalism_Qatar_scoring_scratch.md, line 882](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_StateCapitalism_Qatar_scoring_scratch.md?plain=1#L882):
 

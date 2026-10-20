@@ -112,6 +112,25 @@ def owner_state(p):
     return units, part_of, new_units, new_part_of, final_part_of
 
 
+def adjudicated_state(p):
+    """owner_state(p) with Session 83's adjudication of the outside review laid over it (adjudicate_s83.UNITS: the verdict
+    changes, the clause revisions and the new close calls): (units, part_of, new_units, new_part_of, final_part_of,
+    owner_part_of), where owner_part_of is the part, blind group or owner's layer that read each unit before this layer. A
+    cell the pass held at its published score enters `units` here with the adjudication's reading. The four readings that
+    go to the owner (adjudicate_s83.OWNER) are not applied."""
+    units, part_of, new_units, new_part_of, final_part_of = owner_state(p)
+    owner_part_of = {**part_of, **new_part_of}
+    with redirect_stdout(io.StringIO()):
+        adj = pc.load("adjudicate_s83", "adjudicate_s83.py")
+    for k, u in adj.UNITS.items():
+        r = {x: u[x] for x in ("verdict", "clauses", "flag", "note", "zero")}
+        if k in new_units:
+            new_units[k], new_part_of[k] = r, adj.TAG
+        else:
+            units[k], part_of[k] = r, adj.TAG
+    return units, part_of, new_units, new_part_of, final_part_of, owner_part_of
+
+
 def selftest():
     ok = True
 
@@ -150,6 +169,22 @@ def selftest():
     ok4 = pc.check_rule(rev, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
     check(ok3 and ok4, "every revised unit has one status per v2.0 clause with estimate and source, and follows D28",
           "; ".join(l for l in lines if l.startswith("FAIL"))[:200])
+    # the adjudication's layer (Session 83): its units over the owner's state; the owner's cells and CCO-PTF-CIP-SZH untouched
+    with redirect_stdout(io.StringIO()):
+        adj = pc.load("adjudicate_s83", "adjudicate_s83.py")
+    o_units, _, o_new, _, _ = owner_state(p)
+    a_units, a_part, a_new, a_new_part, _, before = adjudicated_state(p)
+    o_all, a_all = {**o_units, **o_new}, {**a_units, **a_new}
+    lay = {k for k in a_all if a_all[k] != o_all.get(k)}
+    check(lay == set(adj.UNITS) and all({**a_part, **a_new_part}[k] == adj.TAG for k in lay)
+          and not any(k[0] == "CCO" or k in ow.CHANGES for k in lay),
+          f"the adjudication's layer (adjudicate_s83.py) writes exactly its {len(adj.UNITS)} units, none of them a "
+          "CCO-PTF-CIP-SZH unit or a cell of the owner's decisions; every other unit is the owner's state")
+    lines = []
+    ok5 = pc.check_records(p, {k: a_all[k] for k in lay}, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    ok6 = pc.check_rule({k: a_all[k] for k in lay}, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    check(ok5 and ok6, "every adjudicated unit has one status per v2.0 clause with estimate and source, and follows D28 (0.0 "
+                       "only on a stated whole-criterion reason)", "; ".join(l for l in lines if l.startswith("FAIL"))[:200])
     print("\nFINAL PASS MODULE SELFTEST: ALL CHECKS PASSED." if ok else "\nFINAL PASS MODULE SELFTEST: CHECKS FAILED.")
     return 0 if ok else 1
 

@@ -9,25 +9,25 @@ Site: [https://bettertobest.github.io/NormativeEvaluation/](https://bettertobest
 | System | Code | Total | Failures | Tier | Rank (equal weights) |
 |---|---|---|---|---|---|
 | [CCO-PTF-CIP-SZH](cco.md) | `CCO` | 17.5 | 0 | Potentially Adequate | 1 |
-| [Participatory Economics](pe.md) | `PE` | 17.0 | 0 | Potentially Adequate | 2 |
-| [Integral](int.md) | `INT` | 16.0 | 2 | Potentially Adequate | 3 |
-| [Degrowth Economics](dg.md) | `DG` | 15.5 | 1 | Potentially Adequate | 4 (tied) |
-| [Nordic Social Democracy](nsd.md) | `NSD` | 15.5 | 0 | Potentially Adequate | 4 (tied) |
-| [Market Socialism](ms.md) | `MS` | 15.0 | 1 | Potentially Adequate | 6 (tied) |
-| [Sovereign Wealth Fund Statism](swf.md) | `SWF` | 15.0 | 2 | Potentially Adequate | 6 (tied) |
+| [Participatory Economics](pe.md) | `PE` | 16.5 | 0 | Potentially Adequate | 2 |
+| [Market Socialism](ms.md) | `MS` | 15.5 | 0 | Potentially Adequate | 3 (tied) |
+| [Nordic Social Democracy](nsd.md) | `NSD` | 15.5 | 0 | Potentially Adequate | 3 (tied) |
+| [Integral](int.md) | `INT` | 15.0 | 2 | Potentially Adequate | 5 (tied) |
+| [Sovereign Wealth Fund Statism](swf.md) | `SWF` | 15.0 | 2 | Potentially Adequate | 5 (tied) |
+| [Degrowth Economics](dg.md) | `DG` | 14.5 | 1 | Potentially Adequate | 8 |
 | [Georgism / Land Value Tax (LVT + Citizen's Dividend)](geo.md) | `GEO` | 14.0 | 2 | Potentially Adequate | 9 (tied) |
-| [Ostrom-Style Commons Governance](os.md) | `OS` | 15.0 | 3 | Partially Adequate | 6 (tied) |
+| [Ostrom-Style Commons Governance](os.md) | `OS` | 15.0 | 3 | Partially Adequate | 5 (tied) |
 | [Islamic Finance / Profit-Sharing Banking](if.md) | `IF` | 14.0 | 3 | Partially Adequate | 9 (tied) |
-| [Mutual Credit / LETS](mc.md) | `MC` | 14.0 | 3 | Partially Adequate | 9 (tied) |
-| [State Capitalism / Singapore (GLC Developmental Capitalism)](sg.md) | `SG` | 14.0 | 3 | Partially Adequate | 9 (tied) |
-| [Universal Basic Income](ubi.md) | `UBI` | 13.5 | 5 | Partially Adequate | 13 |
-| [Universal Basic Services](ubs.md) | `UBS` | 13.0 | 4 | Partially Adequate | 14 |
-| [MMT + Job Guarantee](mmt.md) | `MMT` | 12.5 | 4 | Partially Adequate | 15 (tied) |
-| [Status Quo Market Capitalism](sq.md) | `SQ` | 12.5 | 7 | Structurally Inadequate | 15 (tied) |
-| [State Capitalism / China (Party-State-Directed Market Economy)](cn.md) | `CN` | 11.5 | 8 | Structurally Inadequate | 17 |
-| [Fully Automated Luxury Communism](falc.md) | `FALC` | 11.0 | 9 | Structurally Inadequate | 18 (tied) |
-| [Stakeholder Capitalism](sc.md) | `SC` | 11.0 | 7 | Structurally Inadequate | 18 (tied) |
+| [Universal Basic Income](ubi.md) | `UBI` | 14.0 | 4 | Partially Adequate | 9 (tied) |
+| [Mutual Credit / LETS](mc.md) | `MC` | 13.5 | 3 | Partially Adequate | 12 (tied) |
+| [State Capitalism / Singapore (GLC Developmental Capitalism)](sg.md) | `SG` | 13.5 | 3 | Partially Adequate | 12 (tied) |
+| [Universal Basic Services](ubs.md) | `UBS` | 13.0 | 4 | Partially Adequate | 14 (tied) |
+| [MMT + Job Guarantee](mmt.md) | `MMT` | 12.5 | 4 | Partially Adequate | 16 |
+| [Status Quo Market Capitalism](sq.md) | `SQ` | 13.0 | 6 | Structurally Inadequate | 14 (tied) |
+| [Fully Automated Luxury Communism](falc.md) | `FALC` | 12.0 | 7 | Structurally Inadequate | 17 |
+| [Stakeholder Capitalism](sc.md) | `SC` | 11.5 | 6 | Structurally Inadequate | 18 (tied) |
+| [State Capitalism / China (Party-State-Directed Market Economy)](cn.md) | `CN` | 11.5 | 8 | Structurally Inadequate | 18 (tied) |
 | [State Capitalism / Qatar (Gulf Rentier-Distributive Statism)](qa.md) | `QA` | 10.0 | 10 | Structurally Inadequate | 20 |
 | [Doughnut Economics](de.md) | `DE` | 9.5 | 10 | Structurally Inadequate | 21 (tied) |
 | [Libertarian Minarchism](lm.md) | `LM` | 9.5 | 11 | Structurally Inadequate | 21 (tied) |
-| [Centrally Planned Socialism](cps.md) | `CPS` | 7.0 | 16 | Structurally Inadequate | 23 |
+| [Centrally Planned Socialism](cps.md) | `CPS` | 6.5 | 17 | Structurally Inadequate | 23 |

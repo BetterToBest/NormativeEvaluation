@@ -10,7 +10,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).
 
 ## Contents
 
@@ -20,17 +20,17 @@ Each criterion has one section, linked from the table below. A section gives the
 |---|---|---|
 | [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 74 |
 | [C1.2a Wealth Building for Resilience](#c1-2a) | 0.5 | read in group 2.2 (Session 53) |
-| [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.0 | held at the published score; close call |
+| [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.0 | held at the published score; close call; outside review: hold |
 | [C1.3 Housing Security](#c1-3) | 0.5 | read in group 2.3 (Session 54) |
-| [C1.4 Automation Resilience](#c1-4) | 0.0 | read in group 2.7 (Session 60); close call |
+| [C1.4 Automation Resilience](#c1-4) | 0.0 | read in group 2.7 (Session 60); close call; outside review: hold |
 | [C1.5 Universal Wealth Access](#c1-5) | 0.5 | held at the published score; close call |
 
 **2. Human Autonomy: 2.5 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in group 2.11 (Session 65) |
-| [C2.2 Labor Non-Necessity](#c2-2) | 0.0 | held at the published score |
+| [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in group 2.11 (Session 65); outside review: hold |
+| [C2.2 Labor Non-Necessity](#c2-2) | 0.0 | held at the published score; outside review: hold |
 | [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.4 Democratic Participation](#c2-4) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in part (b5) (Session 42) and re-read blind in Session 75, changed from 1.0 |
@@ -52,7 +52,7 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 72 |
-| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 (Session 64) and re-read blind in Session 73, changed from 0.0; close call |
+| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 (Session 64) and re-read blind in Session 73, changed from 0.0; close call; outside review: hold |
 | [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8 (Session 61); close call |
 | [C4.4 Power Distribution](#c4-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 73, changed from 0.0; close call |
 | [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71; close call |
@@ -63,10 +63,10 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C5.1 Proven Component Foundation](#c5-1) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
-| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in part (b9) (Session 50), changed from 1.0; close call |
+| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in part (b9) (Session 50), changed from 1.0; close call; outside review: hold |
 | [C5.3 Partial and Parallel Deployability](#c5-3) | 1.0 | held at the published score |
 | [C5.4 Political Coalition Potential](#c5-4) | 0.5 | held at the published score; close call |
-| [C5.5 Cultural Adaptability](#c5-5) | 1.0 | held at the published score; close call |
+| [C5.5 Cultural Adaptability](#c5-5) | 1.0 | adjudicated after the outside review (Session 83); close call; outside review: hold |
 
 ## Domain 1: Material Security
 
@@ -119,6 +119,8 @@ Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Thresh
 
 **Close call.** Scored 0.0; a reasonable scorer could set 0.5. The reading that supports it is in the record linked below.
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: zakat is outside the mechanism on the scoring document's scope decision (D31); the reader's 0.5 is the flagged scope scenario. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 **Published (v1) rationale**, under the heading "C1.2b Prevention of Exploitative Accumulation: 0.0 (Structural Failure) — flagged as contestable" at [NEEC_IslamicFinance_scoring_scratch.md, line 203](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_IslamicFinance_scoring_scratch.md?plain=1#L203):
 
 > This is the first of the three criteria Handoff 21 predicted the practice-versus-design gap would bear on, and the prediction holds. The design argument is that risk sharing splits returns between capital and enterprise rather than guaranteeing the capital holder a claim. The practice is that the dominant contracts deliver a predetermined markup to the financier, the liability side pays a smoothed market return, and nothing in the mechanism caps or claws back concentration. Layered on an unmodified market economy, the wealth distribution is the market's. H.7v2's 0.0 band — "no structural prevention mechanism; concentration compounds without limit" — is met, as it is for Status Quo Market Capitalism and Universal Basic Services. *(The section continues at the link.)*
@@ -157,6 +159,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Why 0.0 stands (protocol 2.1).** No structural mechanism addresses the criterion: changing how credit is priced leaves distribution running through wage labour, as for Status Quo
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: NEEC's flag already names 0.5; the reader's own estimate finds no decoupling mechanism. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s60.md, line 318](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s60.md?plain=1#L318)
 
 **Published (v1) rationale**, under the heading "C1.4 Automation Resilience: 0.0 (Structural Failure) — flagged as contestable" at [NEEC_IslamicFinance_scoring_scratch.md, line 252](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_IslamicFinance_scoring_scratch.md?plain=1#L252):
@@ -192,6 +196,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Note.** Held at the published 0.5 (decision 65.2): clause 2 (revealed-preference evidence) is aspirational and no unit in play names a study that shows it, so none can be 1.0 whatever clause 1 (the Gallup share, 70%) gives; a 0.5 moves to 0.0 only on a whole-criterion reason, and none is stated
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: the bar on compounding a defaulted debt reduces one channel of coercion; reach caps at 0.5, never 0.0 alone. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 1118](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1118)
 
 **Published (v1) rationale**, under the heading "C2.1 Freedom from Coercion: 0.5 (Partial)" at [NEEC_IslamicFinance_scoring_scratch.md, line 305](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_IslamicFinance_scoring_scratch.md?plain=1#L305):
@@ -204,6 +210,8 @@ Pass record: [NEEC_Rescoring_s65.md, line 1118](https://github.com/BetterToBest/
 *No unit of the rescoring pass reads this cell. The published score stands: 0.0. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the reader's own estimate finds no provision. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C2.2 Labor Non-Necessity: 0.0 (Structural Failure)" at [NEEC_IslamicFinance_scoring_scratch.md, line 318](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_IslamicFinance_scoring_scratch.md?plain=1#L318):
 
@@ -436,6 +444,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Co
 
 **Close call.** Scored 0.5; a reasonable scorer could set 0.0. 0.5: a financing mechanism that governs none of the four quantities (D28(c))
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: out of reach (Session 73's class reading). Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s64.md, line 365](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s64.md?plain=1#L365)  
 Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s73.md)
 
@@ -562,6 +572,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: St
 
 **Note.** The audit coded four clauses A and resource requirements silent; the four are re-read against the scope and carried, and the silent clause decides; the register's flag toward 0.5 is resolved by the verdict and replaced by one toward 1.0
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: Malaysia's staged build and Iran's conversion are precedents; the reader's 0.0 misses them. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s50.md, line 273](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s50.md?plain=1#L273)
 
 **Published (v1) rationale**, under the heading "C5.2 Staged Transition Pathways: 1.0 (Pass) — flagged as contestable" at [NEEC_IslamicFinance_scoring_scratch.md, line 637](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_IslamicFinance_scoring_scratch.md?plain=1#L637):
@@ -595,11 +607,24 @@ Criterion in v2.0: class U (unchanged). Pass Threshold: ≥60% support across po
 <a id="c5-5"></a>
 ### C5.5 Cultural Adaptability: 1.0 (pass)
 
-*No unit of the rescoring pass reads this cell. The published score stands: 1.0. The reading behind it is the published rationale linked below.*
+*No unit of the rescoring pass read this cell; the adjudication of the outside review (Session 83) read it after the outside review disagreed (the adjudicated reading is shown). Published (v1) score 1.0; v2.0 score 1.0: unchanged.*
 
 Criterion in v2.0: class U (unchanged). Pass Threshold: Viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, parameter flexibility ≥40% adjustment range, successful operation validated across diverse implementations.
 
-**Close call.** Scored 1.0; a reasonable scorer could set 0.5. The reading that supports it is in the record linked below.
+| # | Clause (v2.0) | Status | Reading | Source |
+|---|---|---|---|---|
+| 1 | Viable across ≥3 economic contexts (high/middle/low income) | cleared | cleared: high income (the United Kingdom, Qatar), middle income (Malaysia, Turkiye) and low income (Bangladesh, Sudan, the Kyrgyz Republic) | NEEC_IslamicFinance_scoring_scratch.md, C5.5 |
+| 2 | ≥5 cultural contexts | cleared | cleared: Southeast Asia, South Asia, the Gulf and wider Middle East, Sub-Saharan Africa, Central Asia and Europe | NEEC_IslamicFinance_scoring_scratch.md, C5.5 |
+| 3 | parameter flexibility ≥40% adjustment range | cleared | cleared on the scoring document's reading: the schools of jurisprudence produce materially different permissible product sets, and jurisdictions choose among them | NEEC_IslamicFinance_scoring_scratch.md, C5.5 |
+| 4 | successful operation validated across diverse implementations | cleared | cleared: operation validated in Malaysia, the Gulf, Iran and the sukuk markets | NEEC_IslamicFinance_scoring_scratch.md, C5.5 |
+
+**Close call.** Scored 1.0; a reasonable scorer could set 0.5. Read as requiring a documented range of at least 40% in a named parameter, which the scoring document does not give (as Mutual Credit's flag reads its clause 3)
+
+**Note.** Held at the published 1.0 in Session 83's adjudication
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 1.0; the adjudication held NEEC's verdict: three income bands and six cultural settings; now flagged toward 0.5, as Mutual Credit is, for want of a documented range. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
+Adjudicated after the outside review (Session 83): [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md), [adjudicate_s83.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/adjudicate_s83.py)
 
 **Published (v1) rationale**, under the heading "C5.5 Cultural Adaptability: 1.0 (Pass) — flagged as contestable" at [NEEC_IslamicFinance_scoring_scratch.md, line 704](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_IslamicFinance_scoring_scratch.md?plain=1#L704):
 

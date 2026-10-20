@@ -12,7 +12,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).
 
 ## Contents
 
@@ -21,7 +21,7 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 74 |
-| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 (Session 53) |
+| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 (Session 53); outside review: hold |
 | [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.5 | held at the published score |
 | [C1.3 Housing Security](#c1-3) | 0.5 | read in group 2.3 (Session 54) |
 | [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.7 (Session 60) |
@@ -32,7 +32,7 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in group 2.11 (Session 65) |
-| [C2.2 Labor Non-Necessity](#c2-2) | 0.5 | held at the published score |
+| [C2.2 Labor Non-Necessity](#c2-2) | 0.5 | held at the published score; outside review: hold |
 | [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.4 Democratic Participation](#c2-4) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in part (b5) (Session 42) and re-read blind in Session 75, changed from 1.0 |
@@ -42,7 +42,7 @@ Each criterion has one section, linked from the table below. A section gives the
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C3.1 Crisis Response Capacity](#c3-1) | 0.5 | read in group 2.9 (Session 63) and re-read blind in Session 74 |
+| [C3.1 Crisis Response Capacity](#c3-1) | 0.5 | read in group 2.9 (Session 63) and re-read blind in Session 74; outside review: hold |
 | [C3.2 Inflation Control Mechanisms](#c3-2) | 0.5 | held at the published score |
 | [C3.3 Multi-Failure Resistance](#c3-3) | 0.5 | held at the published score |
 | [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
@@ -54,8 +54,8 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 72 |
-| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 (Session 64) and re-read blind in Session 73 |
-| [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8 (Session 61); close call |
+| [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in group 2.10 (Session 64) and re-read blind in Session 73; outside review: hold |
+| [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8 (Session 61); close call; outside review: hold |
 | [C4.4 Power Distribution](#c4-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 73 |
 | [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71 |
 | [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
@@ -66,7 +66,7 @@ Each criterion has one section, linked from the table below. A section gives the
 |---|---|---|
 | [C5.1 Proven Component Foundation](#c5-1) | 0.5 | held at the published score |
 | [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6 (Session 58) |
-| [C5.3 Partial and Parallel Deployability](#c5-3) | 1.0 | held at the published score |
+| [C5.3 Partial and Parallel Deployability](#c5-3) | 1.0 | held at the published score; outside review: hold |
 | [C5.4 Political Coalition Potential](#c5-4) | 0.5 | held at the published score |
 | [C5.5 Cultural Adaptability](#c5-5) | 0.5 | held at the published score |
 
@@ -105,6 +105,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: �
 | 1 | ≥$60,000 median net-wealth accumulation over 20 years for 70%+ of participants, in constant 2019 US dollars at purchasing-power parity | out of reach | the citizen's dividend is an annual pass-through of land rent, income rather than a held corpus; lower taxes on income and capital raise saving capacity in the host economy, which the reach rule does not credit | NEEC_Georgism_LVT_scoring_scratch.md, C1.2a; SCORING_PROTOCOL.md 3.2 |
 
 **Why 0.0 stands (protocol 2.1).** No structural mechanism addresses the criterion: the mechanism's payment is income only
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the dividend is income; lower taxes raise the host's saving, which reach does not credit. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s53.md, line 280](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s53.md?plain=1#L280)
 
@@ -198,6 +200,8 @@ Pass record: [NEEC_Rescoring_s65.md, line 1040](https://github.com/BetterToBest/
 *No unit of the rescoring pass reads this cell. The published score stands: 0.5. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: an unconditional dividend from land rent is a real, partial baseline (the 0.5 band). Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C2.2 Labor Non-Necessity: 0.5" at [NEEC_Report_v1_6.md, line 1478](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1478):
 
@@ -301,6 +305,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 | 3 | ≥90% population coverage | cleared | cleared: the dividend is paid to every resident, a universal cash benefit (reading 3.1.3) | [`sources_s74.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.1/sources_s74.md) |
 
 **Note.** 0.5: a universal floor that continues through a crisis but does not scale
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: the universal dividend clears clause 3, so 0.0 is barred. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s63.md, line 226](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s63.md?plain=1#L226)  
 Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
@@ -428,6 +434,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Co
 
 **Note.** 0.5: a land-tax mechanism that governs none of the four quantities (D28(c))
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: out of reach (Session 73's class reading). Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s64.md, line 274](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s64.md?plain=1#L274)  
 Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s73.md)
 
@@ -448,6 +456,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Di
 | 2 | convergence trajectory toward <20% disparities within 30 years | not shown | as for clause 1: no projection of the gap's path is stated or located (part (b8), reading 3.3) | Report v1.6, GEO C4.3 |
 
 **Close call.** Scored 0.5; a reasonable scorer could set 0.0. 0.5 holds (reading 3.2); the published flag's 0.0 side kept
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: a universal flat dividend, read as for Universal Basic Income and CCO-PTF-CIP-SZH; NEEC's flag already names 0.0. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s61.md, line 258](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s61.md?plain=1#L258)
 
@@ -557,6 +567,8 @@ Pass record: [NEEC_Rescoring_s58.md, line 321](https://github.com/BetterToBest/N
 *No unit of the rescoring pass reads this cell. The published score stands: 1.0. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class U (unchanged). Pass Threshold: Viable at ≥30% participation, coexistence with traditional markets maintaining ≥90% economic activity, scaling pathway validated through modeling, coordination protocols established.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 1.0; the adjudication held NEEC's verdict: single jurisdictions adopt alone (coordination moot, 2.3(e)) and operation is observed from city to nation. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C5.3 Partial and Parallel Deployability: 1.0" at [NEEC_Report_v1_6.md, line 1516](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1516):
 

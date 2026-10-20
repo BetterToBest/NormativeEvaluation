@@ -14,7 +14,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).
 
 ## Contents
 
@@ -23,7 +23,7 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C1.1 Poverty Elimination Capacity](#c1-1) | 0.5 | read in group 2.5 (Session 57), changed from 1.0 |
-| [C1.2a Wealth Building for Resilience](#c1-2a) | 1.0 | read in group 2.5 (Session 57), then raised by the owner's decision 79.1 (Session 79); close call |
+| [C1.2a Wealth Building for Resilience](#c1-2a) | 1.0 | read in group 2.5 (Session 57), then raised by the owner's decision 79.1 (Session 79); close call; outside review: stands |
 | [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.5 | read in group 2.5 (Session 57), changed from 1.0 |
 | [C1.3 Housing Security](#c1-3) | 0.5 | read in group 2.5 (Session 57), changed from 1.0 |
 | [C1.4 Automation Resilience](#c1-4) | 0.5 | read in group 2.5 (Session 57), changed from 1.0 |
@@ -34,10 +34,10 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C2.1 Freedom from Coercion](#c2-1) | 0.5 | read in part (b4) (Session 41), changed from 1.0 |
-| [C2.2 Labor Non-Necessity](#c2-2) | 1.0 | held at the published score |
+| [C2.2 Labor Non-Necessity](#c2-2) | 1.0 | held at the published score; outside review: owner |
 | [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in part (b1) (Session 38), changed from 1.0 |
 | [C2.4 Democratic Participation](#c2-4) | 0.5 | read in part (b1) (Session 38), changed from 1.0 |
-| [C2.5 Exit Rights and Mobility](#c2-5) | 1.0 | read in part (b5) (Session 42) and re-read blind in Session 75, then raised by the owner's decision 79.2 (Session 79); close call |
+| [C2.5 Exit Rights and Mobility](#c2-5) | 1.0 | read in part (b5) (Session 42) and re-read blind in Session 75, then raised by the owner's decision 79.2 (Session 79); close call; outside review: stands |
 | [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **3. System Resilience: 4.0 of 6.0**
@@ -47,7 +47,7 @@ Each criterion has one section, linked from the table below. A section gives the
 | [C3.1 Crisis Response Capacity](#c3-1) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
 | [C3.2 Inflation Control Mechanisms](#c3-2) | 1.0 | read in decision 58.1 (Session 58); close call |
 | [C3.3 Multi-Failure Resistance](#c3-3) | 0.5 | read in group 2.5 (Session 57), changed from 1.0 |
-| [C3.4 Epistemic Adaptability](#c3-4) | 1.0 | read in group 2.5 (Session 57), then raised by the owner's decision 79.3 (Session 79); close call |
+| [C3.4 Epistemic Adaptability](#c3-4) | 1.0 | read in group 2.5 (Session 57), then raised by the owner's decision 79.3 (Session 79); close call; outside review: stands |
 | [C3.5 Failure-Mode Transparency](#c3-5) | 0.5 | read in part (b6) (Session 43), changed from 1.0 |
 | [C3.6 Productive and Innovative Capacity](#c3-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
@@ -57,7 +57,7 @@ Each criterion has one section, linked from the table below. A section gives the
 |---|---|---|
 | [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in part (b6) (Session 43) and re-read blind in Session 72, changed from 1.0 |
 | [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in part (b7) (Session 47), changed from 1.0 |
-| [C4.3 Group Equity](#c4-3) | 0.5 | read in part (b8) (Session 49), changed from 1.0 |
+| [C4.3 Group Equity](#c4-3) | 0.5 | read in part (b8) (Session 49), changed from 1.0; outside review: hold |
 | [C4.4 Power Distribution](#c4-4) | 0.5 | read in decision 48.3 (Session 48), changed from 1.0 |
 | [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71 |
 | [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
@@ -66,9 +66,9 @@ Each criterion has one section, linked from the table below. A section gives the
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C5.1 Proven Component Foundation](#c5-1) | 0.5 | read in part (b2) (Session 39), changed from 1.0 |
-| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in part (b9) (Session 50), changed from 1.0; close call |
-| [C5.3 Partial and Parallel Deployability](#c5-3) | 1.0 | read in group 2.5 (Session 57) |
+| [C5.1 Proven Component Foundation](#c5-1) | 0.5 | read in part (b2) (Session 39), changed from 1.0; outside review: hold |
+| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in part (b9) (Session 50), changed from 1.0; close call; outside review: hold |
+| [C5.3 Partial and Parallel Deployability](#c5-3) | 1.0 | read in group 2.5 (Session 57); outside review: owner |
 | [C5.4 Political Coalition Potential](#c5-4) | 0.5 | read in part (b9) (Session 50), changed from 1.0 |
 | [C5.5 Cultural Adaptability](#c5-5) | 0.5 | held at the published score |
 
@@ -87,6 +87,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 | 2 | ≥85% under stress testing | short | in the Adverse environment (recessions, an automation wave and 2% outside inflation), poverty on the Societal Poverty Line is 8.3% at year 20 in the release row and 9.7% at full backing, against 7.3% with no programme, higher in both; the share below the cost of living falls 52.9% against no programme; no measure falls 85% (reading 3.4) | Compassionism Simulation at d10ed6e (v5.6.0), harness.js (md5 84be3bc9) and index.html (md5 2e1cc8c7), the v5.6 release's engine; cco_sim_v56_checks_s57_output.txt; the simulation's v5.6 release, data/releases/v5.6.json and dev/reports/v5-34-v56-release.md at d10ed6e; MODEL_SPEC.md at d10ed6e, sections 6.12 and 9; Foster, Jolliffe, Lara Ibarra, Lakner and Tetteh-Baah, Global Poverty Revisited Using 2021 PPPs and New Data on Consumption, World Bank Policy Research Working Paper 11137 (June 2025), section 3.4.1 (PDF md5 1128f547) |
 
 **Note.** Re-read on v5.6.0 (decision 57.3); both clauses stay short at either end of the backing sweep, and the unit stays 0.5. The reopening condition (90% in the reference run and 85% in the Adverse environment on the Societal Poverty Line) is not met
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s57.md, line 245](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L245)
 
@@ -109,6 +111,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: �
 
 **Note.** The owner's decision 79.1 raises the unit to 1.0 on decision 58.1's reading of the backing, which lifts no other CCO-PTF-CIP-SZH unit (C1.1, C1.2b, C1.3 and C3.3 stay short at full backing); it supersedes group 2.5's unit and reopens toward 0.5 on an empirical study showing that the backing by creative output does not hold in real-world data
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 1.0; the cell is the owner's decision, which stands: the reader's not shown repeats the reading before decision 79.1 (no backing) and adds no fact the decision did not weigh; stage B held 0.5. Shown the argument for the owner's reading (stage B), the reader read it 0.5. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s57.md, line 254](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L254)  
 Applied by the owner's decision 79.1: [NEEC_OwnerDecisions_s79.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_OwnerDecisions_s79.md), [owner_s79.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/owner_s79.py)
 
@@ -128,6 +132,8 @@ Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Thresh
 | 1 | Gini <0.35 for wealth distribution | short | on the design's published model at v5.6.0 (500 seeds, Reference), the wealth Gini at year 20, as the engine reports it (debts as zero), is 0.492 in the release row (0.477 with Acre Equity) and 0.602 at full backing, against 0.755 with no programme; no seed is below 0.35 in any run or environment; the design narrows the distribution, but not to the bar (reading 3.6) | Compassionism Simulation at d10ed6e (v5.6.0), harness.js (md5 84be3bc9) and index.html (md5 2e1cc8c7), the v5.6 release's engine; cco_sim_v56_checks_s57_output.txt; the simulation's v5.6 release, data/releases/v5.6.json and dev/reports/v5-34-v56-release.md at d10ed6e; MODEL_SPEC.md at d10ed6e, sections 6.12 and 9 |
 
 **Note.** Re-read on v5.6.0 (decision 57.3); short at either end of the backing sweep. The design's mechanisms lower the Gini against no programme, so the unit is 0.5, not 0.0
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s57.md, line 264](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L264)
 
@@ -149,6 +155,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: �
 
 **Note.** Re-read on v5.6.0 (decision 57.3); neither clause is shown and the nearest measure is under 88% at either end of the backing sweep. The reopening condition (housing tenure and a housing-cost line) is not met
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s57.md, line 272](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L272)
 
 **Published (v1) rationale**, under the heading "C1.3 Housing Security: 1.0" at [NEEC_Report_v1_6.md, line 1286](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1286):
@@ -169,6 +177,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Note.** Re-read on v5.6.0 (decision 57.3); the reopening condition (an hours-displacement lever) is not met
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s57.md, line 281](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L281)
 
 **Published (v1) rationale**, under the heading "C1.4 Automation Resilience: 1.0" at [NEEC_Report_v1_6.md, line 1288](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1288):
@@ -181,6 +191,8 @@ Pass record: [NEEC_Rescoring_s57.md, line 281](https://github.com/BetterToBest/N
 *No unit of the rescoring pass reads this cell. The published score stands: 0.5. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: ≥80% population with an active wealth-accumulation pathway.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C1.5 Universal Wealth Access: 0.5" at [NEEC_Report_v1_6.md, line 1290](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1290):
 
@@ -202,6 +214,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Note.** The pilot calibrates confidence in the unconditional component (protocol 4.1); it does not estimate the design. The rationale's 75% figure is stated neither by the design's published model, which computes no autonomy measure, nor by any research-hub document (section 6)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s41.md, line 198](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s41.md?plain=1#L198)
 
 **Published (v1) rationale**, under the heading "C2.1 Freedom from Coercion: 1.0" at [NEEC_Report_v1_6.md, line 1294](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1294):
@@ -214,6 +228,8 @@ Pass record: [NEEC_Rescoring_s41.md, line 198](https://github.com/BetterToBest/N
 *No unit of the rescoring pass reads this cell. The published score stands: 1.0. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 1.0; the adjudication reads it 0.5, which goes to the owner (decision 57.2 reserves CCO-PTF-CIP-SZH's changes to the owner, and decision 69.4 holds a fall); NEEC's 1.0 stands until the owner decides: the design's text pays citizens and legal residents aged 18 or more, and its own model leaves adults below their cost of living. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C2.2 Labor Non-Necessity: 1.0" at [NEEC_Report_v1_6.md, line 1296](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1296):
 
@@ -231,6 +247,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 | 1 | ≥50% regular creative engagement | not shown | the design projects relative increases for its case studies (60% more cultural-event participation; 32% more creative output), not a level of weekly engagement (reading 3.5) | research-hub at 8e8a6ba (2026-09-21), cultural-value-integration.html (section 6) |
 | 2 | average 10+ hours weekly on non-subsistence pursuits | cleared | time and resources for non-subsistence activities | as audited (the unit's own text) |
 | 3 | meaning/purpose satisfaction scores ≥70/100 | not shown | no meaning or purpose satisfaction estimate located in the design's documents |  |
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s38.md, line 295](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s38.md?plain=1#L295)
 
@@ -250,6 +268,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 | 1 | ≥70% participation in democratic processes | cleared | as audited; the design's documents give 15-25% as the portal's pilot success metric and model participation rising from 55% to 85% at maturity | research-hub at 8e8a6ba (2026-09-21), citizens-internet-portal.html; integrated-digital-governance.html |
 | 2 | ≥35% citizen proposals adopted | not shown | any citizen may submit proposals above a signature threshold, and binding changes need a 60-67% supermajority with a geographic distribution requirement; no estimate of the share adopted (reading 3.5) | research-hub at 8e8a6ba (2026-09-21), citizens-internet-portal.html |
 | 3 | ≥65% satisfaction with responsiveness | not shown | satisfaction with democratic processes is named as a metric, with no estimate | research-hub at 8e8a6ba (2026-09-21), risk-mitigation-framework.html |
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s38.md, line 303](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s38.md?plain=1#L303)
 
@@ -274,6 +294,8 @@ Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Exit feasible
 
 **Note.** The owner's decision 79.2 raises the unit to 1.0; the reading changes no other entry's verdict (Mutual Credit's clause 1 stays short: a leaver forfeits a credit balance earned by supplying goods or services, which leaves them worse off than a non-member paid in national currency; the other entries short on clause 1 restrict leaving a country); it reopens toward 0.5 if the design's sources make a leaver worse off than a non-member, or attach a condition to leaving the Basic Unit system
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 1.0; the cell is the owner's decision, which stands: the reader's short clause 1 (the Acre Equity haircut) is the question decision 79.2 decided. Shown the argument for the owner's reading (stage B), the reader read it 0.5. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s42.md, line 177](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s42.md?plain=1#L177)  
 Blind re-read record: [NEEC_BlindReview_s75.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s75.md)  
 Applied by the owner's decision 79.2: [NEEC_OwnerDecisions_s79.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_OwnerDecisions_s79.md), [owner_s79.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/owner_s79.py)
@@ -297,6 +319,8 @@ Criterion in v2.0: class N (new criterion). Pass Threshold: Civil-liberties scor
 
 **Note.** 0.5: a bill of rights and due process for its communities, with automated restrictions reviewed by courts only at the highest level
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 1648](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1648)  
 Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
@@ -316,6 +340,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 | 3 | ≥90% population coverage | not shown | re-read on the design's own sources: participation is opt-in and the rollout plan targets 60% opt-in; coverage of 90% of the affected population is not shown | compassionate-meritocracy-plan, index.html (3-Month Plan for the USA) |
 
 **Note.** Correction for Report v2.0: the design's figure is 20%, not 50%
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s37.md, line 323](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s37.md?plain=1#L323)
 
@@ -338,6 +364,8 @@ Criterion in v2.0: class U (unchanged). Pass Threshold: Long-term inflation ≤3
 
 **Close call.** Scored 1.0; a reasonable scorer could set 0.5. The owner's decision 58.1 restores the published 1.0 and supersedes group 2.5's unit (decision 57.7, S57-3.9); it reopens toward 0.5 on an empirical study showing that the backing by creative output does not hold in real-world data
 
+**Outside review.** The outside blind reader (run r1) read this unit 1.0, as NEEC does. Shown the argument for the owner's reading (stage B), the reader read it 1.0. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Applied by decision 58.1: [owner_s58.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/owner_s58.py)
 
 **Published (v1) rationale**, under the heading "C3.2 Inflation Control Mechanisms: 1.0" at [NEEC_Report_v1_6.md, line 1308](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1308):
@@ -356,6 +384,8 @@ Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Thresh
 | 1 | Maintain core functions across ≥3 of 4 compound scenarios with degradation <20% | not shown | the design's published model at v5.6.0 runs one compound scenario, the Adverse environment (recessions, an automation wave and 2% outside inflation at the reference settings), milder than C3.3's recession-and-automation scenario, and a weaker-settings variant of it, the Stress Test; against the Reference environment on the same seeds at year 20, the share of adults not below the cost of living degrades 28.6% (release row) and 40.0% (full backing), and the share not in housing distress 28.7% and 14.7%; the share above the Societal Poverty Line degrades under 1%; essential-service and democratic-function capacity are not modelled, and the other three compound scenarios are not modelled (reading 3.10) | Compassionism Simulation at d10ed6e (v5.6.0), harness.js (md5 84be3bc9) and index.html (md5 2e1cc8c7), the v5.6 release's engine; cco_sim_v56_checks_s57_output.txt; the simulation's v5.6 release, data/releases/v5.6.json and dev/reports/v5-34-v56-release.md at d10ed6e; MODEL_SPEC.md at d10ed6e, sections 6.12 and 9 |
 
 **Note.** Re-read on v5.6.0 (decision 57.3); one of four scenarios is modelled, and in it two measured functions degrade by more than 20% at either end of the backing sweep. The reopening condition (three of four compound scenarios under 20%) is not met
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s57.md, line 302](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L302)
 
@@ -381,6 +411,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: �
 
 **Note.** The owner's decision 79.3 raises the unit to 1.0 and reads the test fixed before the run as counting the cut's direct effect, which the record discloses; the reading changes no other entry (the four other entries short on clause 4 record banking crises, excess deaths or a regime's collapse, which are breakdowns on any reading); it reopens toward 0.5 on a run in which an adjustment causes a breakdown
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 1.0; the cell is the owner's decision, which stands: the reader's clause 4 rests on stability across participation levels and crisis scenarios, not on parameter adjustments, the reading decision 79.3 decided. Shown the argument for the owner's reading (stage B), the reader read it 0.5. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s57.md, line 310](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L310)  
 Applied by the owner's decision 79.3: [NEEC_OwnerDecisions_s79.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_OwnerDecisions_s79.md), [owner_s79.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/owner_s79.py)
 
@@ -404,6 +436,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Note.** Clauses 1 and 2 are carried as audited: the CIP paper's detection probability of 0.75 for corruption is neither a detection time nor a diagnosis share, and it covers one class of failure, so it does not contradict the rationale (section 7)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s43.md, line 197](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s43.md?plain=1#L197)
 
 **Published (v1) rationale**, under the heading "C3.5 Failure-Mode Transparency: 1.0" at [NEEC_Report_v1_6.md, line 1314](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1314):
@@ -425,6 +459,8 @@ Criterion in v2.0: class N (new criterion). Pass Threshold: Real output per hour
 
 **Note.** 0.5: market allocation kept; productivity and the 25-hour week projected
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 1916](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1916)  
 Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
@@ -443,6 +479,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: De
 | 2 | positive wealth transfer to next generation | cleared | cleared: Public Trust Housing and Foundations hold property in public trust and build Acre Equity, a collective stock carried forward, on top of the host's positive net saving (lowest 0.9% of GNI, 2016 to 2025) (reading 4.1.2) | [`research_hub_8e8a6ba_c41_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.1/research_hub_8e8a6ba_c41_extract.txt); [`fred_us_net_saving_gni.csv`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.1/fred_us_net_saving_gni.csv) |
 
 **Note.** 0.5: a structural collective holding for the transfer; the host's debt is unchanged
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s43.md, line 208](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s43.md?plain=1#L208)  
 Blind re-read record: [NEEC_BlindReview_s72.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s72.md)
@@ -465,6 +503,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Co
 | 3 | resource extraction ≤ regeneration | not shown | the roadmap's resource table projects cuts of 60-90% in the paper, energy and water use it lists without saying whose use they are, and no comparison of resource use with regeneration or biocapacity is stated; the published model represents no resource flows, as part (b6) found for C4.1's regeneration clause | research hub at 8e8a6ba: integrated-implementation-roadmap.html, Appendix D; NEEC_Rescoring_s43.md, CCO C4.1, clause 2 |
 | 4 | no more than two of the four nationally downscaled planetary boundaries transgressed | not shown | no planetary boundary is named in the design's sources, which list regeneration among the environmental metrics to monitor; no boundary is assessed for the design | research hub at 8e8a6ba: universal-implementation-framework.html, section 8.2 (all hub pages searched) |
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s47.md, line 247](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s47.md?plain=1#L247)
 
 **Published (v1) rationale**, under the heading "C4.2 Ecological Compliance: 1.0" at [NEEC_Report_v1_6.md, line 1320](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1320):
@@ -484,6 +524,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: Di
 | 2 | convergence trajectory toward <20% disparities within 30 years | not shown | the audited phrase, trafficking vulnerability eliminated through unconditional security, is an outcome on another measure, not the path of a household income gap, and aesthetic multipliers that value historically devalued creative work are a mechanism; no projection of the gap between groups' median household incomes on any declared axis is stated, modelled or located, so neither the rate nor the convergence is shown (reading 3.3) | Report v1.6, CCO C4.3; Compassionism Simulation at cd0ceec, harness.js (md5 035d1be8) and index.html (md5 1c8273b1), searched 2026-09-25; research hub at 8e8a6ba, searched 2026-09-25 |
 
 **Note.** The one C4.3 1.0 outside D28's population (the audit coded every clause A); C4.3 is class M, so it is re-checked here on readings 3.2 and 3.3 with the rest of C4.3 rather than left for stage 2 (reading 3.8)
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: a universal floor is a mechanism (the 0.5 band's formal equality); the reader reads Universal Basic Income at 0.5 on the same pattern. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s49.md, line 254](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s49.md?plain=1#L254)
 
@@ -505,6 +547,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: De
 
 **Note.** Part (b7)'s flag on clause 2 (alternative 0.5) no longer bears on the verdict, which clause 1 fixes at 0.5, and is dropped; under the alternative recorded in decision 48.3(e) the unit would return to 1.0 with that flag
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s48.md, line 126](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s48.md?plain=1#L126)
 
 **Published (v1) rationale**, under the heading "C4.4 Power Distribution: 1.0" at [NEEC_Report_v1_6.md, line 1324](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1324):
@@ -524,6 +568,8 @@ Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Extraction ra
 | 2 | genuine exit rights from exploitative relationships | short | short: Basic Units, about $1,200 an adult a month, opt-in and restricted to essentials, and the pay-in pathway out of renting with no deposit or credit check, are real exits where they reach; at the projected reach of the housing trusts and with a floor near the poverty line, leaving an employer, landlord or lender is not assured for the population the design serves (reading 4.5.2) | [`research_hub_8e8a6ba_cco_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C4.5/research_hub_8e8a6ba_cco_extract.txt) |
 
 **Note.** 0.5: elimination of the landlord and owner where the trusts operate, within a mixed economy (reading 4.5.3)
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s65.md, line 551](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L551)  
 Blind re-read record: [NEEC_BlindReview_s71.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s71.md)
@@ -547,6 +593,8 @@ Criterion in v2.0: class N (new criterion). Pass Threshold: Mortality attributed
 
 **Note.** 0.5: anti-capture design aimed at elected and judicial office, not at regulators
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 2176](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L2176)  
 Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
@@ -565,6 +613,8 @@ Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Thresh
 | 2 | with documented outcomes matching claimed benefits | cleared | the one benefit the rationale claims for a cited component is documented: at the end of 2010, 0.46% of community land trust mortgages were in foreclosure against 4.63% in the conventional market; Alaska's dividend's documented poverty reduction is recorded under UBI C5.1 above | Thaden, Stable Home Ownership in a Turbulent Economy, Lincoln Institute of Land Policy (2011) |
 
 **Note.** The digital-democracy precedents count at clause 1, where they fall short of twenty years, not at clause 2; the unit reopens if a scoring document cites twenty-year precedents for four of the five components
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: three of five components have twenty-year precedents (WIR, Alaska's dividend, land trusts): the 0.5 band, not 0.0's no comparable record. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s39.md, line 190](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s39.md?plain=1#L190)
 
@@ -591,6 +641,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: St
 
 **Note.** Part (a)'s unit re-read on v2.0's clauses: part (a) judged the plans' specification, as the Session 44 clause asked; v2.0 asks that each element be shown feasible by precedent or component evidence (R4), and C5.2 is class M, so the unit can fall; the documents are the owner's (section 7)
 
+**Outside review.** The outside blind reader (run r1) read this unit 1.0, against NEEC's 0.5; the adjudication held NEEC's verdict: the reader cleared every clause on the plans' existence without the scope the threshold sets: each shown feasible by precedent or component evidence. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s50.md, line 345](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s50.md?plain=1#L345)
 
 **Published (v1) rationale**, under the heading "C5.2 Staged Transition Pathways: 1.0" at [NEEC_Report_v1_6.md, line 1332](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1332):
@@ -613,6 +665,8 @@ Criterion in v2.0: class U (unchanged). Pass Threshold: Viable at ≥30% partici
 
 **Note.** Re-read on v5.6.0 and carried (reading 3.12): the model still reads no aggregate participation threshold (the 55% minimum is a run warning), computes no economic activity or scaling path, and its Stress Test, at 40% taking part (43.7% by year 19), still lowers the share below the cost of living against no programme, so it neither supports nor contradicts the rationale's figures; its labour response lowers paid hours by 8.3% to 11.3%, while the projects' output, which it values separately, is not an economic-activity measure
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 1.0; the adjudication reads it 0.5, which goes to the owner (decision 57.2 reserves CCO-PTF-CIP-SZH's changes to the owner, and decision 69.4 holds a fall); NEEC's 1.0 stands until the owner decides: the design's modelling paper (minimum viable participation 55%), its BLEI paper (self-funding at 60-65%) and its model's run warning outweigh the framework paper's 30%. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s57.md, line 323](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s57.md?plain=1#L323)
 
 **Published (v1) rationale**, under the heading "C5.3 Partial and Parallel Deployability: 1.0" at [NEEC_Report_v1_6.md, line 1334](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1334):
@@ -634,6 +688,8 @@ Criterion in v2.0: class U (unchanged). Pass Threshold: ≥60% support across po
 
 **Note.** Clause 1 is carried as audited on the unit's own text (section 2's rule), although the phrase is a component's approval; the interpretation check tests the carry (reading 3.8)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s50.md, line 299](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s50.md?plain=1#L299)
 
 **Published (v1) rationale**, under the heading "C5.4 Political Coalition Potential: 1.0" at [NEEC_Report_v1_6.md, line 1336](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1336):
@@ -646,6 +702,8 @@ Pass record: [NEEC_Rescoring_s50.md, line 299](https://github.com/BetterToBest/N
 *No unit of the rescoring pass reads this cell. The published score stands: 0.5. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class U (unchanged). Pass Threshold: Viable across ≥3 economic contexts (high/middle/low income), ≥5 cultural contexts, parameter flexibility ≥40% adjustment range, successful operation validated across diverse implementations.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, as NEEC does. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C5.5 Cultural Adaptability: 0.5" at [NEEC_Report_v1_6.md, line 1338](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L1338):
 

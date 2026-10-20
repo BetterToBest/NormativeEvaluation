@@ -7,9 +7,11 @@ as written. It reads the run's three result files, the kit's unit list, NEEC's c
 It changes no score and no file; Jev never sets a verdict (section 6). Adjudication is Session 83's.
 
 INPUTS (default outside_review_r1/): results/reader.jsonl[.gz], results/jev.jsonl[.gz], results/stage_b.jsonl[.gz], kit_units.jsonl
-  (the kit's units.jsonl, 696 reader calls in order). NEEC: neec_corpus_v2.json, neec_corpus_v2_s78_snapshot.json,
-  summary_blocks_v2.json (md5s checked against section 1; a mismatch exits 1), clause records from final_pass.owner_state /
-  final_state (the rescoring pass, the seven blind groups and the owner's decisions).
+  (the kit's units.jsonl, 696 reader calls in order). NEEC: neec_corpus_v2_s79_snapshot.json, neec_corpus_v2_s78_snapshot.json,
+  summary_blocks_v2_s79_snapshot.json (md5s checked against section 1; a mismatch exits 1), clause records from
+  final_pass.owner_state / final_state (the rescoring pass, the seven blind groups and the owner's decisions). Session 83 laid
+  its adjudication over that state and moved it to the *_s79_snapshot names (the v2 files now carry the adjudication); the
+  bytes, and so the registered md5s, are those of the files the pre-registration names.
 
 READINGS OF THE RULES WHERE THE PRE-REGISTRATION IS SILENT (each is reported, none changes a registered rule)
   R1  NEEC records the status R (out of reach, decision D28(c): the clause is not credited because the mechanism does not govern
@@ -38,9 +40,9 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
-REGISTERED = {"neec_corpus_v2.json": "4a1a26af0b01b6a561364e37a4a409b1",
+REGISTERED = {"neec_corpus_v2_s79_snapshot.json": "4a1a26af0b01b6a561364e37a4a409b1",
               "neec_corpus_v2_s78_snapshot.json": "ab3dbc90",
-              "summary_blocks_v2.json": "dfb3d89880d4fbba6b8e6c20389288a8"}
+              "summary_blocks_v2_s79_snapshot.json": "dfb3d89880d4fbba6b8e6c20389288a8"}
 MAP = {"C": "cleared", "S": "short", "U": "not_shown", "M": "moot", "R": "R"}
 CHOICES = ("cleared", "short", "not_shown")
 BOOT_N, BOOT_SEED = 10000, 80
@@ -99,7 +101,7 @@ def load_all(base):
         if not need(got.startswith(want), f"{n} md5 {got[:8]} equals the registered {want[:8]} (section 1)"):
             print("exit: an input is not the one the pre-registration names")
             sys.exit(1)
-    out["corpus"] = json.load(open(os.path.join(HERE, "neec_corpus_v2.json"), encoding="utf-8"))
+    out["corpus"] = json.load(open(os.path.join(HERE, "neec_corpus_v2_s79_snapshot.json"), encoding="utf-8"))
     out["snap"] = json.load(open(os.path.join(HERE, "neec_corpus_v2_s78_snapshot.json"), encoding="utf-8"))
     out["units"] = [json.loads(ln) for ln in open(os.path.join(base, "kit_units.jsonl"), encoding="utf-8") if ln.strip()]
     out["reader_raw"] = jsonl(base, "reader")
@@ -226,7 +228,7 @@ def main():
             print(agree_row(k, rows([u for u in first if u["cid"] == k], ref)))
 
     print("\n3. PRIMARY OUTCOME: VERDICT AGREEMENT (the reader's first reading of each of the 667 units against NEEC's published verdict)")
-    tables("3a. Against NEEC with the owner's decisions (neec_corpus_v2.json)", nv)
+    tables("3a. Against NEEC with the owner's decisions (neec_corpus_v2_s79_snapshot.json)", nv)
     tables("3b. Against NEEC without the owner's decisions (s78 snapshot, CCO C3.2 at 0.5)", nv0)
     print("\n3c. The eight owner-decided units: the reader's blind verdict beside both NEEC readings")
     print("  %-10s %-8s %-8s %-9s %-9s" % ("unit", "reader", "NEEC", "NEEC w/o", "group"))
