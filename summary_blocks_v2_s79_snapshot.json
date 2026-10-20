@@ -1,0 +1,4950 @@
+[
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Status Quo Market Capitalism",
+  "code": "SQ",
+  "display_name": "Status Quo Market Capitalism",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "configured_national_economy",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Configured national economy: Status Quo Market Capitalism, Nordic Social Democracy, Centrally Planned Socialism."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.0,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.0,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 1.0,
+   "C4.1": 0.5,
+   "C4.2": 0.0,
+   "C4.3": 0.0,
+   "C4.4": 0.5,
+   "C4.5": 0.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 1.0,
+   "C5.3": 1.0,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 2.0,
+   "D2": 2.5,
+   "D3": 3.0,
+   "D4": 1.5,
+   "D5": 3.5,
+   "total": 12.5,
+   "failures": 7,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: transfer programmes are a real mechanism (they cut the rate in 2021), but the headcount did not fall",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "SQ C1.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.2a",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the published rationale's bottom-half figure (~$3,200, from the Paper's calibration of 2019) is replaced by the 2025 survey's distribution, which v2.0's measure names; the verdict is unchanged",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SQ C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SQ C1.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: automatic insurance and a fast legislated response, not automatic, coverage below 90%",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "SQ C3.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.6",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "1.0: productivity and TFP rising over 2003-2023; output well above the basket at actual hours",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "SQ C3.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: debt is far above the bar; the positive transfer is small but positive in every year of the window",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s72.md",
+     "locator": "SQ C4.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: far below on all four, no national absolute-reduction mechanism",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "SQ C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.3",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "a correction (reading 3.3): the published 0.5 rests on 'some progress over decades', which the measure does not show; it resolves the inconsistency logged since Handoff 30, the 0.0 band's example published at 0.5",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SQ C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: political removal functions; economic decisions answer to owners for two thirds of employment",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "SQ C4.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "SQ C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "outcomes matched component by component against narrow claimed functions (price stability, growth) rather than the system's broad claims",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SQ C5.1",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 12.5,
+     "failures": 7,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2a": 1.0,
+     "C1.4": 0.5,
+     "C4.2": 0.5,
+     "C4.3": 0.5,
+     "C4.5": 0.5,
+     "C5.1": 1.0
+    },
+    "result": {
+     "total": 15.5,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.1": 0.0,
+     "C3.1": 0.0,
+     "C3.6": 0.5,
+     "C4.1": 0.0,
+     "C4.4": 0.0
+    },
+    "result": {
+     "total": 10.0,
+     "failures": 11,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Nordic Social Democracy",
+  "code": "NSD",
+  "display_name": "Nordic Social Democracy",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "configured_national_economy",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Configured national economy: Status Quo Market Capitalism, Nordic Social Democracy, Centrally Planned Socialism."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 1.0,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 1.0,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 3.5,
+   "D2": 3.0,
+   "D3": 3.0,
+   "D4": 3.0,
+   "D5": 3.0,
+   "total": 15.5,
+   "failures": 0,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2a",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "published 1.0 read in the D28 form: the clause is short on the one Nordic register that publishes the distribution, so the unit falls to 0.5; Sweden publishes no household wealth statistics, and no Nordic source located shows 70% of househo",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "NSD C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: free exit and portable benefits, with activation conditions on assistance; residents cannot opt out of the tax base short of emigrating",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "NSD C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: one of the four economies is above the bar at the stated date and projected to rise",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s72.md",
+     "locator": "NSD C4.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.6",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: mortality falling, regulation clean, strict liability in force; no claim record named",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "NSD C4.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "outcomes matched against the configuration's signature claims, low poverty and universal services, with the housing and initiative shortfalls read as outcomes on NEEC's thresholds rather than on the benefits the model claims",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "NSD C5.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "read as requiring a record for every institution the entry names as defining, strong labor unions and progressive taxation as well as the social programmes, clause 3 is not shown on the evidence located; the interpretation check read the re",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "NSD C5.4",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 15.5,
+     "failures": 0,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2a": 1.0,
+     "C4.1": 1.0,
+     "C4.6": 1.0,
+     "C5.1": 1.0
+    },
+    "result": {
+     "total": 17.5,
+     "failures": 0,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.5": 0.0,
+     "C5.4": 0.5
+    },
+    "result": {
+     "total": 14.5,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Centrally Planned Socialism",
+  "code": "CPS",
+  "display_name": "Centrally Planned Socialism",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "configured_national_economy",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Configured national economy: Status Quo Market Capitalism, Nordic Social Democracy, Centrally Planned Socialism."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 0.5,
+   "C1.3": 1.0,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.0,
+   "C2.2": 0.0,
+   "C2.3": 0.0,
+   "C2.4": 0.0,
+   "C2.5": 0.0,
+   "C2.6": 0.0,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.0,
+   "C3.4": 0.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.0,
+   "C4.3": 0.5,
+   "C4.4": 0.0,
+   "C4.5": 0.5,
+   "C4.6": 0.0,
+   "C5.1": 0.5,
+   "C5.2": 0.0,
+   "C5.3": 0.0,
+   "C5.4": 0.0,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 2.5,
+   "D2": 0.0,
+   "D3": 2.0,
+   "D4": 1.5,
+   "D5": 1.0,
+   "total": 7.0,
+   "failures": 16,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2b",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the formal wealth Gini, with no private capital markets",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
+     "locator": "document",
+     "phrase": "The case for 1.0."
+    }
+   },
+   {
+    "criterion": "C1.3",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the 1.0 band's anchor example; it holds",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "CPS C1.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.3",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: creative activity organised and censored by the state",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "CPS C2.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: exit, non-participation and relocation all criminalised or administratively barred",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "CPS C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.6",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the rating's two lowest bands, consent and compulsion outside law and court",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "CPS C2.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a system-wide capacity to mobilise by decision without delay (1941), with relief to households delayed or denied in the famines; a mixed record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "CPS C3.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "CPS C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.6",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: output per worker rising, TFP declining on growth accounting; held from 0.0 by D28(f)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "CPS C3.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: positive net accumulation, a debt below the bar in level but on a path through it",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s72.md",
+     "locator": "CPS C4.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: far below on the clauses read, the plan's own logic expanding throughput",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "CPS C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "state appropriation read as structural, load-bearing extraction, the 0.0 band's own test (part (a))",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Rescoring_s65.md",
+     "locator": "CPS C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.6",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the polluter and the regulator one state, with no agency until 1988",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "CPS C4.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the 0.0 band's anchor example; it holds",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "CPS C5.2",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 7.0,
+     "failures": 16,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2b": 1.0,
+     "C2.3": 0.5,
+     "C2.5": 0.5,
+     "C2.6": 0.5,
+     "C3.4": 0.5,
+     "C4.1": 1.0,
+     "C4.2": 0.5,
+     "C4.6": 0.5,
+     "C5.2": 0.5
+    },
+    "result": {
+     "total": 11.5,
+     "failures": 9,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.3": 0.5,
+     "C3.1": 0.0,
+     "C3.6": 0.0,
+     "C4.5": 0.0
+    },
+    "result": {
+     "total": 5.0,
+     "failures": 19,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Market Socialism",
+  "code": "MS",
+  "display_name": "Market Socialism",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 1.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 1.0,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.0
+  },
+  "summary": {
+   "D1": 3.0,
+   "D2": 3.0,
+   "D3": 3.5,
+   "D4": 3.5,
+   "D5": 2.0,
+   "total": 15.0,
+   "failures": 1,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: free exit from firms within a socialised economy that bars large private capital",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "MS C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a structural damper on the growth imperative, no limit stated",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "MS C4.2",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 15.0,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.5": 0.0,
+     "C4.2": 0.0
+    },
+    "result": {
+     "total": 14.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Libertarian Minarchism",
+  "code": "LM",
+  "display_name": "Libertarian Minarchism",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.0,
+   "C1.2a": 0.5,
+   "C1.2b": 0.0,
+   "C1.3": 0.0,
+   "C1.4": 0.0,
+   "C1.5": 0.0,
+   "C2.1": 0.0,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 1.0,
+   "C2.6": 0.5,
+   "C3.1": 0.0,
+   "C3.2": 0.5,
+   "C3.3": 0.0,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.0,
+   "C4.3": 0.0,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 0.5,
+   "D2": 2.5,
+   "D3": 2.0,
+   "D4": 2.0,
+   "D5": 2.5,
+   "total": 9.5,
+   "failures": 11,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2a",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "a correction (reading 3.6): a reach shortfall is a 0.5 under protocol 2.1, as for Status Quo, Stakeholder Capitalism and China; one failure fewer, no tier change",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "LM C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "1.0: no system-imposed exit cost, no compulsory participation, free movement",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "LM C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.6",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: the strongest stated guarantees of the 17, with clause 1 at the bar; consent and the limits of compulsion stated",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s76.md",
+     "locator": "LM C2.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: clause 3 is cleared, so 2.1's 0.0 cannot hold with it (decision 53.2)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "LM C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "published 0.0 (the 0.0 band's anchor) read under protocol 2.1: firm failures visible to owners and diffuse costs externalized is the 0.5 band's description, which Market Socialism's unit holds; a correction, as decision 53.3 raised the desi",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "LM C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a stated no-debt rule; the saving clause is not projected",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s72.md",
+     "locator": "LM C4.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: public limits rejected; the tort remedy cannot reach the criterion's quantities",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "LM C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the design treats voluntary exchange as non-exploitative by definition: the 0.0 condition of excluding the criterion's concern as illegitimate (protocol 2.1; part (a))",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Rescoring_s65.md",
+     "locator": "LM C4.5",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 9.5,
+     "failures": 11,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.6": 1.0,
+     "C4.2": 0.5
+    },
+    "result": {
+     "total": 10.5,
+     "failures": 10,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2a": 0.0,
+     "C2.5": 0.5,
+     "C3.4": 0.0,
+     "C3.5": 0.0,
+     "C4.1": 0.0,
+     "C4.5": 0.0
+    },
+    "result": {
+     "total": 6.5,
+     "failures": 16,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "MMT + Job Guarantee",
+  "code": "MMT",
+  "display_name": "MMT + Job Guarantee",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Mechanism: MMT + Job Guarantee, Universal Basic Income, Universal Basic Services."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.0,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 2.0,
+   "D2": 2.5,
+   "D3": 2.5,
+   "D4": 3.0,
+   "D5": 2.5,
+   "total": 12.5,
+   "failures": 4,
+   "tier": "Partially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2a",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "a correction (reading 3.6): income without an accumulation vehicle is the 0.0 band, as for Universal Basic Income and Georgism's dividend; one failure more, no tier change",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "MMT C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.2b",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "C4.4's reduction of capital power read as sufficient",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md",
+     "locator": "document",
+     "phrase": "override this call to 0.5"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a voluntary, universal and portable job offer; whether declining it costs income support is disputed within the mechanism's own literature",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "MMT C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: clause 1 rejected by the framework's logic, clause 2 not addressed; 4.1.3 asks both for 0.0",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s72.md",
+     "locator": "MMT C4.1",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 12.5,
+     "failures": 4,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2a": 0.5,
+     "C1.2b": 0.5,
+     "C2.5": 1.0
+    },
+    "result": {
+     "total": 14.0,
+     "failures": 2,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C4.1": 0.0
+    },
+    "result": {
+     "total": 12.0,
+     "failures": 5,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Universal Basic Income",
+  "code": "UBI",
+  "display_name": "Universal Basic Income",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Mechanism: MMT + Job Guarantee, Universal Basic Income, Universal Basic Services."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.5,
+   "C2.2": 1.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 1.0,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.0,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 1.0,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.0
+  },
+  "summary": {
+   "D1": 1.5,
+   "D2": 4.0,
+   "D3": 2.5,
+   "D4": 3.0,
+   "D5": 2.5,
+   "total": 13.5,
+   "failures": 5,
+   "tier": "Partially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C2.5",
+    "scored": 1.0,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "1.0: the paradigm exit-enabling mechanism: no participation, no condition, portable",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "UBI C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a transfer mechanism that governs neither quantity (D28(c))",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "UBI C4.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the documented outcomes are of a dividend of about $1,000-2,000 a year; no component precedent operates at the living-wage level at which the entry claims its benefits",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "UBI C5.1",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 13.5,
+     "failures": 5,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.5": 0.0,
+     "C4.4": 0.0,
+     "C5.1": 0.5
+    },
+    "result": {
+     "total": 11.5,
+     "failures": 7,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Degrowth Economics",
+  "code": "DG",
+  "display_name": "Degrowth Economics",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 1.0,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 1.0,
+   "C3.4": 1.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.0,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 3.5,
+   "D2": 3.0,
+   "D3": 4.0,
+   "D4": 3.0,
+   "D5": 2.0,
+   "total": 15.5,
+   "failures": 1,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: no exit terms stated; its caps are laws binding all, not a participation one could leave",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "DG C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "part (b1)'s reading (reading 3.1): no implementation record, and no modelling of adjustments to the design's parameters in operation located in its sources, so clause 4 is not shown",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_OwnerDecisions_s79.md",
+     "locator": "DG C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.6",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: no investment mechanism stated; shorter hours without a provisioning account",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s76.md",
+     "locator": "DG C3.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "read as the entry's C2.1 rationale reads its universal basic services, as eliminating survival coercion, exit from employment would be genuine; the services it names cover housing, healthcare, education and transport, not food or income, an",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Rescoring_s65.md",
+     "locator": "DG C4.5",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 15.5,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C4.5": 1.0
+    },
+    "result": {
+     "total": 16.0,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.5": 0.0,
+     "C3.4": 0.5,
+     "C3.6": 0.0
+    },
+    "result": {
+     "total": 14.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Stakeholder Capitalism",
+  "code": "SC",
+  "display_name": "Stakeholder Capitalism",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.0,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.0,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.0,
+   "C5.5": 0.0
+  },
+  "summary": {
+   "D1": 2.0,
+   "D2": 2.5,
+   "D3": 3.0,
+   "D4": 2.0,
+   "D5": 1.5,
+   "total": 11.0,
+   "failures": 7,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SC C1.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "published 0.0 (the 0.0 band's second anchor); with clauses 3 and 4 cleared on the host economy the reform keeps, 2.1's 0.0 conditions do not hold for the criterion as a whole, and the unit rises to 0.5, as Status Quo's holds (reading 3.4)",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SC C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: the host's readings, which the reform does not change",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s72.md",
+     "locator": "SC C4.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: voluntary, relative metrics on the host's record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "SC C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5 holds: a group-directed mechanism of partial reach (reading 3.2); flagged now",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SC C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: the host's political removal; boards still answer to owners",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "SC C4.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "SC C4.5",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 11.0,
+     "failures": 7,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.4": 0.5,
+     "C4.2": 0.5,
+     "C4.5": 0.5
+    },
+    "result": {
+     "total": 12.5,
+     "failures": 4,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C3.5": 0.0,
+     "C4.1": 0.0,
+     "C4.3": 0.0,
+     "C4.4": 0.0
+    },
+    "result": {
+     "total": 9.0,
+     "failures": 11,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Fully Automated Luxury Communism",
+  "code": "FALC",
+  "display_name": "Fully Automated Luxury Communism",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.5,
+   "C2.2": 1.0,
+   "C2.3": 0.5,
+   "C2.4": 0.0,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 1.0,
+   "C4.6": 0.5,
+   "C5.1": 0.0,
+   "C5.2": 0.0,
+   "C5.3": 0.0,
+   "C5.4": 0.0,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 1.5,
+   "D2": 3.0,
+   "D3": 2.5,
+   "D4": 3.5,
+   "D5": 0.5,
+   "total": 11.0,
+   "failures": 9,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: universal provision and public ownership; no exit terms stated (reading 2.5.4)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "FALC C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a universal service floor that holds in a downturn, without a crisis rule",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "FALC C3.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "FALC C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.6",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: abundance projected from automation; allocation of what stays scarce unstated",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s76.md",
+     "locator": "FALC C3.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: electoral removal kept; the ownership programme is not quantified",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "FALC C4.4",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 11.0,
+     "failures": 9,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C3.4": 0.5
+    },
+    "result": {
+     "total": 11.5,
+     "failures": 8,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.5": 0.0,
+     "C3.1": 0.0,
+     "C3.6": 0.0,
+     "C4.4": 0.0
+    },
+    "result": {
+     "total": 9.0,
+     "failures": 13,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Participatory Economics",
+  "code": "PE",
+  "display_name": "Participatory Economics",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 1.0,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 1.0,
+   "C3.4": 1.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 1.0,
+   "C4.5": 1.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 3.5,
+   "D2": 3.0,
+   "D3": 4.0,
+   "D4": 4.0,
+   "D5": 2.5,
+   "total": 17.0,
+   "failures": 0,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: membership of councils is the economy; no alternative arrangement exists within it",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "PE C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.6",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: self-management with internal grievance procedures; no guarantees stated",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s76.md",
+     "locator": "PE C2.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "part (b1)'s reading (reading 3.1): no implementation record, and no modelling of adjustments to the design's parameters in operation, so clause 4 is not shown",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_OwnerDecisions_s79.md",
+     "locator": "PE C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "PE C4.5",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 17.0,
+     "failures": 0,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.5": 0.0,
+     "C2.6": 0.0,
+     "C3.4": 0.5,
+     "C4.5": 0.5
+    },
+    "result": {
+     "total": 15.0,
+     "failures": 2,
+     "tier": "Potentially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "CCO-PTF-CIP-SZH",
+  "code": "CCO",
+  "display_name": "CCO-PTF-CIP-SZH",
+  "record": {
+   "documents": [
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 1.0,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 1.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 1.0,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 1.0,
+   "C3.3": 0.5,
+   "C3.4": 1.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 1.0,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 3.5,
+   "D2": 4.0,
+   "D3": 4.0,
+   "D4": 3.0,
+   "D5": 3.0,
+   "total": 17.5,
+   "failures": 0,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2a",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "group 2.5's reading (decision 57.3): the clause holds only if new output backs what the Source pays, a condition the design's sources do not state; the release row shows 13.9%",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_OwnerDecisions_s79.md",
+     "locator": "CCO C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the blind re-read's reading (Session 75, reading 2.5.1): Acre Equity is accessible at exit only in part in the early years, so an early leaver forfeits most of it, a material penalty",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_OwnerDecisions_s79.md",
+     "locator": "CCO C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.2",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the owner's decision 58.1 restores the published 1.0 and supersedes group 2.5's unit (decision 57.7, S57-3.9); it reopens toward 0.5 on an empirical study showing that the backing by creative output does not hold in real-world data",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "CCO C3.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "group 2.5's reading (reading 3.11): on the test fixed before the run, a 20-30% cut in the allowance raises the share below the cost of living by 10 points or more in 339 and 43 of 500 seeds",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_OwnerDecisions_s79.md",
+     "locator": "CCO C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "read as part (a) read the Session 44 clause, on the plans' specificity, with the precedents the entry cites for their timing (the New Deal, the Marshall Plan) and the modelling paper's success probabilities as evidence of feasibility, every",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "CCO C5.2",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 17.5,
+     "failures": 0,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C5.2": 1.0
+    },
+    "result": {
+     "total": 18.0,
+     "failures": 0,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2a": 0.5,
+     "C2.5": 0.5,
+     "C3.2": 0.5,
+     "C3.4": 0.5
+    },
+    "result": {
+     "total": 15.5,
+     "failures": 0,
+     "tier": "Potentially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Integral",
+  "code": "INT",
+  "display_name": "Integral",
+  "record": {
+   "documents": [
+    "NEEC_Paper_v1_4.md",
+    "NEEC_Report_v1_6.md",
+    "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 1.0,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 1.0,
+   "C3.4": 1.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 1.0,
+   "C4.5": 1.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 2.5,
+   "D2": 3.0,
+   "D3": 4.0,
+   "D4": 4.0,
+   "D5": 2.5,
+   "total": 16.0,
+   "failures": 2,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C2.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0,
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "essentials unconditional (1.0) or contribution-dependent (0.0)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Paper_v1_4.md",
+     "locator": "document",
+     "phrase": "Contribution-Dependent (would score 0.0)"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: voluntary, federated and portable; the treatment of non-participants after displacement is unstated",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "INT C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.6",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: data limits and a non-punitive rule; disputes stay with the node that assessed",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s76.md",
+     "locator": "INT C2.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the blind re-read's reading (Session 71, reading 3.4.4): no implementation record of a parameter adjustment and no modelling of the design's own adjustments in operation, so clause 4 is not shown",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_OwnerDecisions_s79.md",
+     "locator": "INT C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "read as requiring that a participant able to contribute who declines all contribution keep access to basic needs, the design does not show the clause: basic needs are accessible below standard contribution thresholds, which the design's sou",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Rescoring_s65.md",
+     "locator": "INT C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "re-read on the design's own white paper (v0.1, December 2025), as parts (b5) and (b8) read the design's own pages; the published 0.0's reason, that the source provides no phased pathway, no longer describes the design, and a clause is clear",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "INT C5.2",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 16.0,
+     "failures": 2,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.2": 1.0,
+     "C2.5": 1.0
+    },
+    "result": {
+     "total": 17.0,
+     "failures": 2,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.2": 0.0,
+     "C2.6": 0.0,
+     "C3.4": 0.5,
+     "C4.5": 0.5,
+     "C5.2": 0.0
+    },
+    "result": {
+     "total": 13.5,
+     "failures": 5,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Georgism / Land Value Tax",
+  "code": "GEO",
+  "display_name": "Georgism / Land Value Tax (LVT + Citizen's Dividend)",
+  "record": {
+   "documents": [
+    "NEEC_Georgism_LVT_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "stated",
+   "source": {
+    "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 1.0,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 2.0,
+   "D2": 3.0,
+   "D3": 3.0,
+   "D4": 3.0,
+   "D5": 3.0,
+   "total": 14.0,
+   "failures": 2,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C4.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5 holds (reading 3.2); the published flag's 0.0 side kept",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "GEO C4.3",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 14.0,
+     "failures": 2,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C4.3": 0.0
+    },
+    "result": {
+     "total": 13.5,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Mutual Credit / LETS",
+  "code": "MC",
+  "display_name": "Mutual Credit / LETS",
+  "record": {
+   "documents": [
+    "NEEC_MutualCredit_LETS_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "stated",
+   "source": {
+    "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 1.0,
+   "C1.3": 0.0,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 1.0
+  },
+  "summary": {
+   "D1": 2.0,
+   "D2": 3.0,
+   "D3": 3.0,
+   "D4": 3.0,
+   "D5": 3.0,
+   "total": 14.0,
+   "failures": 3,
+   "tier": "Partially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C4.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5 holds (reading 3.2); the published flag's 0.0 side kept",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "MC C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "WIR's documented record, nine decades of operation and countercyclical credit, taken as the proof of the mechanism's core component, with the LETS and barter-network outcomes read as weaker implementations",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "MC C5.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the mechanism has operated for decades in its networks (WIR since 1934), so the unit is not 0.0 (reading 3.2(f)); the register's flag toward 0.0 is kept",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "MC C5.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.5",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "read as requiring a documented range of at least 40% in a named parameter, the entry gives no figure, and clause 3 is not shown (reading 3.6)",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "MC C5.5",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 14.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C5.1": 1.0
+    },
+    "result": {
+     "total": 14.5,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C4.3": 0.0,
+     "C5.2": 0.0,
+     "C5.5": 0.5
+    },
+    "result": {
+     "total": 12.5,
+     "failures": 5,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Doughnut Economics",
+  "code": "DE",
+  "display_name": "Doughnut Economics",
+  "record": {
+   "documents": [
+    "NEEC_DoughnutEconomics_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "comprehensive_system",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Comprehensive system: Market Socialism, Libertarian Minarchism, Degrowth Economics, Stakeholder Capitalism, Fully Automated Luxury Communism, Participatory Economics, CCO-PTF-CIP-SZH, Integral, Doughnut Economics."
+   }
+  },
+  "vector": {
+   "C1.1": 0.0,
+   "C1.2a": 0.0,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.0,
+   "C1.5": 0.0,
+   "C2.1": 0.0,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.0,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.0,
+   "C4.5": 0.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 0.5,
+   "D2": 2.0,
+   "D3": 2.5,
+   "D4": 2.0,
+   "D5": 2.5,
+   "total": 9.5,
+   "failures": 10,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.1",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: a target without an adopted mechanism",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "DE C1.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.2b",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the 'harness the commons' language weighted more heavily",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_DoughnutEconomics_scoring_scratch.md",
+     "locator": "C1.2b",
+     "phrase": "could land at 0.5 instead"
+    }
+   },
+   {
+    "criterion": "C1.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "held at 0.5 on the published reading, which credits the diagnostic process and its one policy output; the reading that gave the framework's C1.2a 0.0 (no vehicle of its own) would give 0.0 here, and is flagged",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "DE C1.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.1",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: no stabilisation instrument adopted",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "DE C3.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the blind reading's own clause estimates found no mechanism adopted, which 2.1's first condition scores 0.0",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "DE C4.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the blind reading's own text found no mechanism, which reading 4.5.3 requires for 0.5",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "DE C4.5",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 9.5,
+     "failures": 10,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.1": 0.5,
+     "C1.2b": 0.5,
+     "C3.1": 0.5,
+     "C4.4": 0.5,
+     "C4.5": 0.5
+    },
+    "result": {
+     "total": 12.0,
+     "failures": 5,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.3": 0.0
+    },
+    "result": {
+     "total": 9.0,
+     "failures": 11,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Universal Basic Services",
+  "code": "UBS",
+  "display_name": "Universal Basic Services",
+  "record": {
+   "documents": [
+    "NEEC_UniversalBasicServices_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "assigned",
+   "source": {
+    "file": "SCORING_PROTOCOL.md",
+    "locator": "3.1",
+    "phrase": "Mechanism: MMT + Job Guarantee, Universal Basic Income, Universal Basic Services."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.0,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 1.0,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 1.5,
+   "D2": 3.0,
+   "D3": 2.5,
+   "D4": 3.0,
+   "D5": 3.0,
+   "total": 13.0,
+   "failures": 4,
+   "tier": "Partially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2b",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the housing plank's pressure on land and rental values",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_UniversalBasicServices_scoring_scratch.md",
+     "locator": "C1.2b",
+     "phrase": "could defensibly land at 0.5 instead"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: universal in-kind provision; portability of locally allocated housing is unstated",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "UBS C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "published 0.5 on the host economy's scrutiny; a correction (reading 3.5)",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "UBS C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.3",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "coordination protocols shown for one sector, childcare, and none for the seven-sector package",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "UBS C5.3",
+     "phrase": "Flag"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 13.0,
+     "failures": 4,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2b": 0.5,
+     "C2.5": 1.0,
+     "C3.5": 0.5
+    },
+    "result": {
+     "total": 14.5,
+     "failures": 2,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C5.3": 0.5
+    },
+    "result": {
+     "total": 12.5,
+     "failures": 4,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Sovereign Wealth Fund Statism",
+  "code": "SWF",
+  "display_name": "Sovereign Wealth Fund Statism",
+  "record": {
+   "documents": [
+    "NEEC_SovereignWealthFundStatism_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "stated",
+   "source": {
+    "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.5,
+   "C1.3": 0.0,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.5,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 1.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 1.0,
+   "C5.3": 1.0,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 2.5,
+   "D2": 3.0,
+   "D3": 3.5,
+   "D4": 2.5,
+   "D5": 3.5,
+   "total": 15.0,
+   "failures": 2,
+   "tier": "Potentially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "follows C1.2a",
+    "tracks": "C1.2a",
+    "source": {
+     "file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+     "locator": "C1.5",
+     "phrase": "if C1.2a resolves to 0.0, this criterion follows to 0.0"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "evidence dated from the market evidence of lower expected returns rather than from the formal assessment, which makes the expected-return revision slow",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Rescoring_s65.md",
+     "locator": "SWF C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: an investment mechanism that governs none of the four quantities (D28(c))",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "SWF C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5 holds (reading 3.2); the published flag's 0.0 side kept",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SWF C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the blind reading's own clause estimates found every relationship unmodified, which reading 4.5.3 scores 0.0",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "SWF C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "Timor-Leste weighed as a single implementation's shortfall (D29(a)), with Norway's and Alaska's funds preserved as the mechanism claims",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SWF C5.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "every clause is shown by deployments of the mechanism itself, which the published 0.5, judged on the absence of a phase-by-phase plan, did not credit; under v2.0's scope a precedent, not a plan, is the test (part (b9), reading 3.2)",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SWF C5.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the pre-existing anchor text read in isolation",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
+     "locator": "C5.4",
+     "phrase": "would point toward 1.0"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 15.0,
+     "failures": 2,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C4.5": 0.5,
+     "C5.1": 1.0,
+     "C5.4": 1.0
+    },
+    "result": {
+     "total": 16.5,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.5": 0.0,
+     "C3.4": 0.5,
+     "C4.2": 0.0,
+     "C4.3": 0.0,
+     "C5.2": 0.5
+    },
+    "result": {
+     "total": 12.5,
+     "failures": 5,
+     "tier": "Partially Adequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "State Capitalism / China",
+  "code": "CN",
+  "display_name": "State Capitalism / China (Party-State-Directed Market Economy)",
+  "record": {
+   "documents": [
+    "NEEC_StateCapitalism_China_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "configured_national_economy",
+   "basis": "stated",
+   "source": {
+    "file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Qatar is the third instance of the fourth Step 1b archetype, \"configured national political economy\" (confirmed in Session 20), after China and Singapore."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.0,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.0,
+   "C2.5": 0.5,
+   "C2.6": 0.0,
+   "C3.1": 0.5,
+   "C3.2": 1.0,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.0,
+   "C3.6": 1.0,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.0,
+   "C4.4": 0.0,
+   "C4.5": 0.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 3.0,
+   "D2": 1.0,
+   "D3": 3.5,
+   "D4": 1.5,
+   "D5": 2.5,
+   "total": 11.5,
+   "failures": 8,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C2.1",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: market coercion kept and state coercion added, including state-directed labour transfers",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "CN C2.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a large creative economy under state censorship of content",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "CN C2.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: a single-party state with consultative channels and no competitive national election",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "CN C2.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: emigration open to most; internal mobility constrained by registration, under gradual reform",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "CN C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.2",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": "symmetric price-stability (deflation) reading",
+    "tracks": null,
+    "source": {
+     "file": "verify_china.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C3.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the published 0.0 and its flag hold; v2.0's clause 4 figure confirms the externalization the rationale names",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "CN C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.6",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "1.0: on the named source, productivity and TFP rising fast; the official accounts' reliability flagged",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "CN C3.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: within two of the four downscaled boundaries (blue water and land-system change), short on the rest; the trading scheme is intensity-based",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "CN C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.3",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0 holds",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "CN C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the blind reading's 0.5 rested on public capture of land rent, which holds only for the lease premium; the published reading's evidence of state-organised coerced labour, which the blind reading did not weigh, is extraction the configu",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "CN C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "outcomes matched against the narrower benefit the configuration's own sources claim, eliminating extreme and national-line poverty, which the World Bank and State Council study documents",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "CN C5.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "register",
+    "reading": "structural-repulsion reading",
+    "tracks": null,
+    "source": {
+     "file": "verify_china.py",
+     "locator": "FLAGGED"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 11.5,
+     "failures": 8,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.1": 0.5,
+     "C2.4": 0.5,
+     "C3.5": 0.5,
+     "C4.3": 0.5,
+     "C4.5": 0.5,
+     "C5.1": 1.0
+    },
+    "result": {
+     "total": 14.5,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.3": 0.0,
+     "C2.5": 0.0,
+     "C3.2": 0.5,
+     "C3.6": 0.5,
+     "C4.2": 0.0,
+     "C5.4": 0.0
+    },
+    "result": {
+     "total": 8.5,
+     "failures": 12,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": []
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "State Capitalism / Singapore",
+  "code": "SG",
+  "display_name": "State Capitalism / Singapore (GLC Developmental Capitalism)",
+  "record": {
+   "documents": [
+    "NEEC_StateCapitalism_Singapore_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "configured_national_economy",
+   "basis": "stated",
+   "population": "This evaluation counts everyone who lives and works inside the system, non-residents included,",
+   "source": {
+    "file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Qatar is the third instance of the fourth Step 1b archetype, \"configured national political economy\" (confirmed in Session 20), after China and Singapore."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 1.0,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 1.0,
+   "C4.1": 0.5,
+   "C4.2": 0.0,
+   "C4.3": 0.5,
+   "C4.4": 0.0,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.5
+  },
+  "summary": {
+   "D1": 3.0,
+   "D2": 2.5,
+   "D3": 4.0,
+   "D4": 2.0,
+   "D5": 2.5,
+   "total": 14.0,
+   "failures": 3,
+   "tier": "Partially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2a",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "published 1.0 read in the D28 form: the median alone does not show the 70% clause, so the unit falls to 0.5",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SG C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SG C1.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.2",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": "headline-inflation stress-test reading (6.1% in 2022)",
+    "tracks": null,
+    "source": {
+     "file": "verify_singapore.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C3.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SG C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.6",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "1.0: productivity and TFP rising over 2003-2023",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "SG C3.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the configuration's own target path rises to 2030, evidence the blind reading did not weigh",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "SG C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5 holds: a group-directed, government-funded mechanism in force (the Tertiary Tuition Fee Subsidy for Malays, means-tested, since 1991), the 2025 Workplace Fairness Act, and a mixed record over 15 years (reading 3.4); the published flag t",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SG C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: the blind reading's own 4.4.3 conditions hold",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "SG C4.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: HDB removes the private landlord for most residents, a structural mechanism on one relationship type (reading 4.5.3)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "SG C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "outcomes matched against the narrow functions its sources claim for residents, home ownership and compulsory saving",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "SG C5.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "register",
+    "reading": "six decades of contested majorities as cross-spectrum support",
+    "tracks": null,
+    "source": {
+     "file": "verify_singapore.py",
+     "locator": "FLAGGED"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 14.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2a": 1.0,
+     "C4.2": 0.5,
+     "C4.4": 0.5,
+     "C5.1": 1.0,
+     "C5.4": 1.0
+    },
+    "result": {
+     "total": 16.5,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.4": 0.0,
+     "C3.2": 0.5,
+     "C3.5": 0.0,
+     "C3.6": 0.5,
+     "C4.3": 0.0,
+     "C4.5": 0.0
+    },
+    "result": {
+     "total": 11.0,
+     "failures": 7,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": [
+   {
+    "id": "citizens-and-PRs-only",
+    "label": "citizens and permanent residents only; the scored scope counts every resident",
+    "kind": "scope",
+    "changes": {
+     "C1.5": 1.0,
+     "C4.5": 0.5
+    },
+    "result": {
+     "total": 15.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   }
+  ]
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "State Capitalism / Qatar",
+  "code": "QA",
+  "display_name": "State Capitalism / Qatar (Gulf Rentier-Distributive Statism)",
+  "record": {
+   "documents": [
+    "NEEC_StateCapitalism_Qatar_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "configured_national_economy",
+   "basis": "stated",
+   "population": "Population scope: everyone who lives and works in Qatar, non-citizens included.",
+   "source": {
+    "file": "NEEC_StateCapitalism_Qatar_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Qatar is the third instance of the fourth Step 1b archetype, \"configured national political economy\" (confirmed in Session 20), after China and Singapore."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.0,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.0,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.0,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 1.0,
+   "C4.2": 0.0,
+   "C4.3": 0.0,
+   "C4.4": 0.0,
+   "C4.5": 0.0,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 0.5,
+   "C5.4": 0.5,
+   "C5.5": 0.0
+  },
+  "summary": {
+   "D1": 2.5,
+   "D2": 1.5,
+   "D3": 2.5,
+   "D4": 1.5,
+   "D5": 2.0,
+   "total": 10.0,
+   "failures": 10,
+   "tier": "Structurally Inadequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: the rentier state's transfers are a real mechanism for citizens; the migrant majority is outside them",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "QA C1.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.2a",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "QA C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.2b",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "register",
+    "reading": "citizenship divide, no limit at the top",
+    "tracks": null,
+    "source": {
+     "file": "verify_qatar.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C1.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": "citizenship read as a membership gate",
+    "tracks": null,
+    "source": {
+     "file": "verify_qatar.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C2.1",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: for most residents, no floor and residence tied to the job; reformed in law, not in effect",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "QA C2.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: an appointed legislature since the 2024 referendum; most residents are non-citizens without a vote",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "QA C2.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C2.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: legal exit reforms since 2018; residence still sponsor-bound for most residents",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s75.md",
+     "locator": "QA C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.1",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "0.0: coverage of 4% by the configuration's design",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s74.md",
+     "locator": "QA C3.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.3",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "register",
+    "reading": "three compound shocks absorbed",
+    "tracks": null,
+    "source": {
+     "file": "verify_qatar.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C3.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "published 0.0 on a continuous estimate of 0.2 to 0.35; with clause 4 cleared on the measure v2.0 names, 2.1's 0.0 conditions do not hold for the criterion as a whole (decision 53.2), and the unit rises to 0.5 (reading 3.6)",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "QA C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.6",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: productivity and TFP declining; the basket provisioned by rent",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s77.md",
+     "locator": "QA C3.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.1",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "1.0: both clauses are shown on the measures v2.0 names, net of resource depletion as well",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s72.md",
+     "locator": "QA C4.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "QA C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "outcomes matched against the narrow benefit claimed, welfare provision to the configuration's citizens, which the entry's document records",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "QA C5.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "register",
+    "reading": "90.6% referendum approval",
+    "tracks": null,
+    "source": {
+     "file": "verify_qatar.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C5.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": "SWF Statism precedent, GCC variation",
+    "tracks": null,
+    "source": {
+     "file": "verify_qatar.py",
+     "locator": "FLAGGED"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 10.0,
+     "failures": 10,
+     "tier": "Structurally Inadequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2a": 1.0,
+     "C1.5": 0.5,
+     "C2.1": 0.5,
+     "C2.4": 0.5,
+     "C3.1": 0.5,
+     "C3.3": 1.0,
+     "C4.5": 0.5,
+     "C5.1": 1.0,
+     "C5.4": 1.0,
+     "C5.5": 0.5
+    },
+    "result": {
+     "total": 15.0,
+     "failures": 4,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.1": 0.0,
+     "C1.2b": 0.0,
+     "C2.5": 0.0,
+     "C3.5": 0.0,
+     "C3.6": 0.0,
+     "C4.1": 0.5
+    },
+    "result": {
+     "total": 7.0,
+     "failures": 15,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": [
+   {
+    "id": "citizens-only",
+    "label": "citizens only; the scored scope counts every resident",
+    "kind": "scope",
+    "changes": {
+     "C1.1": 1.0,
+     "C1.2a": 1.0,
+     "C1.3": 1.0,
+     "C1.5": 1.0,
+     "C2.1": 0.5,
+     "C2.2": 0.5,
+     "C4.5": 0.5
+    },
+    "result": {
+     "total": 13.0,
+     "failures": 6,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ]
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Islamic Finance / Profit-Sharing Banking",
+  "code": "IF",
+  "display_name": "Islamic Finance / Profit-Sharing Banking",
+  "record": {
+   "documents": [
+    "NEEC_IslamicFinance_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "stated",
+   "population": "Score the mechanism, not a country.",
+   "source": {
+    "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.5,
+   "C1.2b": 0.0,
+   "C1.3": 0.5,
+   "C1.4": 0.0,
+   "C1.5": 0.5,
+   "C2.1": 0.5,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 0.5,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 0.5,
+   "C5.2": 0.5,
+   "C5.3": 1.0,
+   "C5.4": 0.5,
+   "C5.5": 1.0
+  },
+  "summary": {
+   "D1": 2.0,
+   "D2": 2.5,
+   "D3": 3.0,
+   "D4": 3.0,
+   "D5": 3.5,
+   "total": 14.0,
+   "failures": 3,
+   "tier": "Partially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2b",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_islamicfinance.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C1.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "IF C1.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_islamicfinance.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C3.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "IF C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a financing mechanism that governs none of the four quantities (D28(c))",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "IF C4.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5 holds on the owner-confirmed scope (Session 22, D5) and the 0.5 band's 'formal equality without reparative mechanisms' (reading 3.2); the published flag kept; it alone could change the entry's tier",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "IF C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: a financing mechanism that governs neither quantity (D28(c))",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s73.md",
+     "locator": "IF C4.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5: profit-and-loss sharing is a genuine mechanism on the creditor-debtor relationship (reading 4.5.3)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_BlindReview_s71.md",
+     "locator": "IF C4.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "read as satisfied wherever a precedent was completed, whatever resources it took, the national conversions of Iran (1983-1984) and Malaysia's build show that the resources were found, and the clause is cleared (reading 3.3)",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "IF C5.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_islamicfinance.py",
+     "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C5.5",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_islamicfinance.py",
+     "locator": "FLAGGED"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 14.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2b": 0.5,
+     "C1.4": 0.5,
+     "C5.2": 1.0,
+     "C5.4": 1.0
+    },
+    "result": {
+     "total": 16.0,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.5": 0.0,
+     "C3.5": 0.0,
+     "C4.2": 0.0,
+     "C4.3": 0.0,
+     "C4.4": 0.0,
+     "C4.5": 0.0,
+     "C5.5": 0.5
+    },
+    "result": {
+     "total": 10.5,
+     "failures": 9,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": [
+   {
+    "id": "social-finance-layer",
+    "label": "the Islamic social-finance layer (zakat, waqf, takaful) counted in",
+    "kind": "scope",
+    "changes": {
+     "C1.1": 1.0,
+     "C1.2b": 0.5
+    },
+    "result": {
+     "total": 14.5,
+     "failures": 4,
+     "tier": "Partially Adequate"
+    }
+   }
+  ]
+ },
+ {
+  "schema": "neec-summary-block/1.0",
+  "key": "Ostrom-Style Commons Governance",
+  "code": "OS",
+  "display_name": "Ostrom-Style Commons Governance",
+  "record": {
+   "documents": [
+    "NEEC_Ostrom_Commons_scoring_scratch.md"
+   ],
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "structure": "v2.0, 29 criteria"
+  },
+  "scope": {
+   "class": "mechanism",
+   "basis": "stated",
+   "population": "The convention applied throughout is generalisation, not best-casing: the mechanism is scored as though every common-pool resource in an economy were governed by an Ostrom-principled institution, and the population-scope thresholds are then applied to the resulting economy-wide",
+   "source": {
+    "file": "NEEC_Ostrom_Commons_scoring_scratch.md",
+    "locator": "document",
+    "phrase": "Commons governance joins archetype 1, narrow single-mechanism systems, as its fifth member after Georgism, Mutual Credit / LETS, Sovereign Wealth Fund Statism and Islamic finance."
+   }
+  },
+  "vector": {
+   "C1.1": 0.5,
+   "C1.2a": 0.0,
+   "C1.2b": 0.5,
+   "C1.3": 0.5,
+   "C1.4": 0.5,
+   "C1.5": 0.0,
+   "C2.1": 0.5,
+   "C2.2": 0.0,
+   "C2.3": 0.5,
+   "C2.4": 0.5,
+   "C2.5": 0.5,
+   "C2.6": 0.5,
+   "C3.1": 0.5,
+   "C3.2": 0.5,
+   "C3.3": 0.5,
+   "C3.4": 1.0,
+   "C3.5": 0.5,
+   "C3.6": 0.5,
+   "C4.1": 0.5,
+   "C4.2": 0.5,
+   "C4.3": 0.5,
+   "C4.4": 0.5,
+   "C4.5": 0.5,
+   "C4.6": 0.5,
+   "C5.1": 1.0,
+   "C5.2": 0.5,
+   "C5.3": 1.0,
+   "C5.4": 0.5,
+   "C5.5": 1.0
+  },
+  "summary": {
+   "D1": 2.0,
+   "D2": 2.5,
+   "D3": 3.5,
+   "D4": 3.0,
+   "D5": 4.0,
+   "total": 15.0,
+   "failures": 3,
+   "tier": "Partially Adequate"
+  },
+  "flags": [
+   {
+    "criterion": "C1.2b",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_ostrom.py",
+     "locator": "FLAGS"
+    }
+   },
+   {
+    "criterion": "C1.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "see the pass record",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "OS C1.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_ostrom.py",
+     "locator": "FLAGS"
+    }
+   },
+   {
+    "criterion": "C2.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_ostrom.py",
+     "locator": "FLAGS"
+    }
+   },
+   {
+    "criterion": "C3.3",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_ostrom.py",
+     "locator": "FLAGS"
+    }
+   },
+   {
+    "criterion": "C3.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "part (a)'s reading: the founding literature records outright failures and fragile appropriator-designed institutions, and no analysis located attributes them to, or clears them of, adjustments, so clause 4 is not shown",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_OwnerDecisions_s79.md",
+     "locator": "OS C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C4.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "0.5 holds (reading 3.2); the published flag kept",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "OS C4.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "national programmes deployed the mechanism in stages, so the unit is not 0.0 (reading 3.2(f)); clause 1, which those programmes bear on, is not estimated, since clause 2 fixes the verdict; the register's flag toward 0.0 is kept",
+    "tracks": null,
+    "source": {
+     "file": "the rescoring record of the part that read it",
+     "locator": "OS C5.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "register",
+    "reading": null,
+    "tracks": null,
+    "source": {
+     "file": "verify_ostrom.py",
+     "locator": "FLAGS"
+    }
+   }
+  ],
+  "joint_readings": [
+   {
+    "id": "scored",
+    "label": "as scored",
+    "basis": "scored",
+    "resolve": {},
+    "result": {
+     "total": 15.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.2b": 1.0,
+     "C1.5": 0.5,
+     "C2.2": 0.5,
+     "C3.3": 1.0,
+     "C5.4": 1.0
+    },
+    "result": {
+     "total": 17.5,
+     "failures": 1,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "down",
+    "label": "every flagged call resolved downward",
+    "basis": "extremes",
+    "resolve": {
+     "C1.4": 0.0,
+     "C3.4": 0.5,
+     "C4.3": 0.0,
+     "C5.2": 0.0
+    },
+    "result": {
+     "total": 13.0,
+     "failures": 6,
+     "tier": "Structurally Inadequate"
+    }
+   }
+  ],
+  "scenarios": [
+   {
+    "id": "knowledge-commons",
+    "label": "the knowledge and digital commons counted in",
+    "kind": "scope",
+    "changes": {
+     "C1.5": 0.5,
+     "C2.3": 1.0
+    },
+    "result": {
+     "total": 15.0,
+     "failures": 3,
+     "tier": "Partially Adequate"
+    }
+   }
+  ]
+ }
+]

@@ -10,11 +10,11 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).
 
 ## Contents
 
-**1. Material Security: 0.5 of 6.0**
+**1. Material Security: 1.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
@@ -23,18 +23,18 @@ Each criterion has one section, linked from the table below. A section gives the
 | [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.0 | held at the published score |
 | [C1.3 Housing Security](#c1-3) | 0.0 | read in group 2.3 (Session 54) |
 | [C1.4 Automation Resilience](#c1-4) | 0.0 | read in group 2.7 (Session 60) |
-| [C1.5 Universal Wealth Access](#c1-5) | 0.0 | held at the published score |
+| [C1.5 Universal Wealth Access](#c1-5) | 0.5 | adjudicated after the outside review (Session 83), changed from 0.0; close call; outside review: adopt |
 
 **2. Human Autonomy: 2.5 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C2.1 Freedom from Coercion](#c2-1) | 0.0 | read in group 2.11 (Session 65) |
+| [C2.1 Freedom from Coercion](#c2-1) | 0.0 | read in group 2.11 (Session 65); outside review: hold |
 | [C2.2 Labor Non-Necessity](#c2-2) | 0.0 | held at the published score |
 | [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
-| [C2.4 Democratic Participation](#c2-4) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
+| [C2.4 Democratic Participation](#c2-4) | 0.5 | read in part (a) (Session 37), changed from 1.0; outside review: hold |
 | [C2.5 Exit Rights and Mobility](#c2-5) | 1.0 | read in part (b5) (Session 42) and re-read blind in Session 75; close call |
-| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76; close call |
+| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76; close call; outside review: hold |
 
 **3. System Resilience: 2.0 of 6.0**
 
@@ -43,11 +43,11 @@ Each criterion has one section, linked from the table below. A section gives the
 | [C3.1 Crisis Response Capacity](#c3-1) | 0.0 | read in group 2.9 (Session 63) and re-read blind in Session 74 |
 | [C3.2 Inflation Control Mechanisms](#c3-2) | 0.5 | held at the published score |
 | [C3.3 Multi-Failure Resistance](#c3-3) | 0.0 | held at the published score |
-| [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71, changed from 0.0; close call |
-| [C3.5 Failure-Mode Transparency](#c3-5) | 0.5 | read in group 2.4 (Session 56), changed from 0.0; close call |
-| [C3.6 Productive and Innovative Capacity](#c3-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
+| [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 71, changed from 0.0; close call; outside review: hold |
+| [C3.5 Failure-Mode Transparency](#c3-5) | 0.5 | read in group 2.4 (Session 56), changed from 0.0; close call; outside review: hold |
+| [C3.6 Productive and Innovative Capacity](#c3-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76; outside review: hold |
 
-**4. Ethical Integrity: 2.0 of 6.0**
+**4. Ethical Integrity: 1.5 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
@@ -55,7 +55,7 @@ Each criterion has one section, linked from the table below. A section gives the
 | [C4.2 Ecological Compliance](#c4-2) | 0.0 | read in group 2.10 (Session 64) and re-read blind in Session 73; close call |
 | [C4.3 Group Equity](#c4-3) | 0.0 | read in group 2.8 (Session 61) |
 | [C4.4 Power Distribution](#c4-4) | 0.5 | read in group 2.11 (Session 65) and re-read blind in Session 73 |
-| [C4.5 Exploitation Elimination](#c4-5) | 0.5 | read in part (b8) (Session 49), changed from 1.0; close call |
+| [C4.5 Exploitation Elimination](#c4-5) | 0.0 | read in part (b8) (Session 49), then adjudicated after the outside review (Session 83), changed from 1.0; close call; outside review: adopt |
 | [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **5. Implementation Viability: 2.5 of 5.0**
@@ -164,11 +164,23 @@ Pass record: [NEEC_Rescoring_s60.md, line 202](https://github.com/BetterToBest/N
 > **STRUCTURAL FAILURE.** Even worse than status quo capitalism—eliminates what limited safety nets exist. Mass unemployment from automation would create catastrophic human suffering with no institutional response mechanism.
 
 <a id="c1-5"></a>
-### C1.5 Universal Wealth Access: 0.0 (structural failure)
+### C1.5 Universal Wealth Access: 0.5 (partial)
 
-*No unit of the rescoring pass reads this cell. The published score stands: 0.0. The reading behind it is the published rationale linked below.*
+*No unit of the rescoring pass read this cell; the adjudication of the outside review (Session 83) read it after the outside review disagreed (the adjudicated reading is shown). Published (v1) score 0.0; v2.0 score 0.5: changed.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: ≥80% population with an active wealth-accumulation pathway.
+
+| # | Clause (v2.0) | Status | Reading | Source |
+|---|---|---|---|---|
+| 1 | ≥80% population with an active wealth-accumulation pathway | not shown | not shown: the design leaves wage saving, home and share ownership open to anyone through markets, gated by income rather than by prior wealth; no figure for the share with an active pathway is stated or located (the outside reader's closed-book estimate is 60-70%) | Report v1.6, LM C1.5; the outside review r1, the reader's reading (outside_review_r1/results/reader.jsonl.gz) |
+
+**Close call.** Scored 0.5; a reasonable scorer could set 0.0. The published reading: without public education and a safety net, effective access narrows to those born with capital (the 0.0 band)
+
+**Note.** Adjudicated in Session 83 (adopt): the published 0.0 rested on no figure, and Status Quo, on the same market pathways with more public support, is 0.5
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication adopted the reader's verdict: the published 0.0 asserts that only those born with capital have access, with no figure; market pathways are open without prior wealth, gated by income, as for Status Quo. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
+Adjudicated after the outside review (Session 83): [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md), [adjudicate_s83.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/adjudicate_s83.py)
 
 **Published (v1) rationale**, under the heading "C1.5 Universal Wealth Access: 0.0" at [NEEC_Report_v1_6.md, line 660](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L660):
 
@@ -191,6 +203,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 **Note.** Held at the published 0.0 (decision 65.2): clause 2 (revealed-preference evidence) is aspirational and no unit in play names a study that shows it, so none can be 1.0 whatever clause 1 (the Gallup share, 70%) gives; a 0.5 moves to 0.0 only on a whole-criterion reason, and none is stated
 
 **Why 0.0 stands (protocol 2.1).** The published 0.0 stands on its published whole-criterion finding (protocol 2.1); the indicator cannot clear a clause the finding does not rest on
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the reader's own estimate (survival compulsion remains) is the 0.0 band's economic coercion by design. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s65.md, line 1011](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1011)
 
@@ -241,6 +255,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 | 2 | ≥35% citizen proposals adopted | not shown | not estimated in this pass |  |
 | 3 | ≥65% satisfaction with responsiveness | not shown | not estimated in this pass |  |
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: formal democratic rights exist: the 0.5 band. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s37.md, line 243](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s37.md?plain=1#L243)
 
 **Published (v1) rationale**, under the heading "C2.4 Democratic Participation: 1.0" at [NEEC_Report_v1_6.md, line 670](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L670):
@@ -283,6 +299,8 @@ Criterion in v2.0: class N (new criterion). Pass Threshold: Civil-liberties scor
 | 3 | any compulsory treatment, vaccination, quarantine or isolation prescribed by law, time-limited and open to independent judicial review | cleared | cleared: 'Individual rights shall not be curtailed, whether based on circumstances of war, epidemic, natural disaster or emergency' (3.2), and no treatment or vaccine may be mandated (2.13); restraint of a person who deliberately places others at significant risk is a crime tried with due process and a jury (1.7), so any compulsion runs through a court (reading 2.6.4) | [`lp_platform_c26_extract.txt`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C2.6/lp_platform_c26_extract.txt) |
 
 **Close call.** Scored 0.5; a reasonable scorer could set 1.0. 0.5: the strongest stated guarantees of the 17, with clause 1 at the bar; consent and the limits of compulsion stated
+
+**Outside review.** The outside blind reader (run r1) read this unit 1.0, against NEEC's 0.5; the adjudication held NEEC's verdict: NEEC's estimate of 50-56 straddles the bar of 53; the reader's 54 lies inside it; flag stands. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s65.md, line 1596](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1596)  
 Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
@@ -351,6 +369,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: �
 
 **Close call.** Scored 0.5; a reasonable scorer could set 0.0. 0.5: clause 3 is cleared, so 2.1's 0.0 cannot hold with it (decision 53.2)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: clause 3 is cleared on independent courts, so 0.0 is barred; NEEC's flag already names 0.0. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 410](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L410)  
 Blind re-read record: [NEEC_BlindReview_s71.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s71.md)
 
@@ -376,6 +396,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Note.** Published 0.0 (the 0.0 band's anchor) read under protocol 2.1: firm failures visible to owners and diffuse costs externalized is the 0.5 band's description, which Market Socialism's unit holds; a correction, as decision 53.3 raised the design's C1.2a (reading 3.3)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: NEEC's flag already names 0.0; the reader itself clears clause 4. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s56.md, line 222](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s56.md?plain=1#L222)
 
 **Published (v1) rationale**, under the heading "C3.5 Failure-Mode Transparency: 0.0" at [NEEC_Report_v1_6.md, line 684](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L684):
@@ -396,6 +418,8 @@ Criterion in v2.0: class N (new criterion). Pass Threshold: Real output per hour
 | 3 | basic-needs output sustained at the system's own working time | not shown | not shown: the sources state no working time and no account of basic-needs output at it (reading 3.6.3) | [`sources_s76.md`](https://github.com/BetterToBest/NormativeEvaluation/blob/main/evidence_cache/C3.6/sources_s76.md) |
 
 **Note.** 0.5: market allocation without the public research and education market economies have had
+
+**Outside review.** The outside blind reader (run r1) read this unit 1.0, against NEEC's 0.5; the adjudication held NEEC's verdict: no economy's record is of the design, which removes the state's part in education and research; working time not stated. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s65.md, line 1866](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1866)  
 Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
@@ -490,22 +514,27 @@ Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/
 > Distributes political power more widely by limiting state scope. However, economic power concentrates massively without checks. Plutocratic control of society replaces democratic governance.
 
 <a id="c4-5"></a>
-### C4.5 Exploitation Elimination: 0.5 (partial)
+### C4.5 Exploitation Elimination: 0.0 (structural failure)
 
-*Read by the rescoring pass in part (b8) (Session 49). Published (v1) score 1.0; v2.0 score 0.5: changed.*
+*Read by the rescoring pass in part (b8) (Session 49), then adjudicated after the outside review (Session 83) (the adjudicated reading is shown). Published (v1) score 1.0; v2.0 score 0.0: changed.*
 
 Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Extraction rates <10% GDP, genuine exit rights from exploitative relationships.
 
 | # | Clause (v2.0) | Status | Reading | Source |
 |---|---|---|---|---|
-| 1 | Extraction rates <10% GDP | not shown | no mechanism limits private extraction, as part (a) found: the entry treats voluntary exchange as non-exploitative by definition | Report v1.6, LM C4.5; rescoring_s37.py, LM C4.5 |
-| 2 | genuine exit rights from exploitative relationships | not shown | formal freedom of contract with no subsistence floor and no assured alternative: exit is not shown to be genuine (reading 3.6) | Report v1.6, LM C4.5; rescoring_s37.py, LM C4.5 |
+| 1 | Extraction rates <10% GDP | short | short: no mechanism limits extraction; the design treats voluntary exchange as non-exploitative by definition and keeps every relationship type (employer and employee, landlord and tenant, lender and borrower) | Report v1.6, LM C4.5; NEEC_BlindReview_s71.md, reading 4.5.3 |
+| 2 | genuine exit rights from exploitative relationships | short | short: exit is the formal right to quit, with no subsistence floor and no assured alternative | Report v1.6, LM C4.5; NEEC_BlindReview_s71.md, reading 4.5.3 |
 
-**Close call.** Scored 0.5; a reasonable scorer could set 0.0. The design treats voluntary exchange as non-exploitative by definition: the 0.0 condition of excluding the criterion's concern as illegitimate (protocol 2.1; part (a))
+**Close call.** Scored 0.0; a reasonable scorer could set 0.5. Parts (a) and (b8)'s reading: both clauses not shown, held at 0.5 under D28(f)
 
-**Note.** Part (a)'s unit re-read on v2.0's clauses: its short clause, residual coercion, is deleted, and neither kept clause is shown; it stays 0.5
+**Note.** Adjudicated in Session 83 (adopt); settles ledger I9's first item for this entry
 
-Pass record: [NEEC_Rescoring_s49.md, line 299](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s49.md?plain=1#L299)
+**Why 0.0 stands (protocol 2.1).** Reading 4.5.3's 0.0 line (protocol 2.1): far below on both clauses, every relationship type in place, exit no more than the formal right to quit, and no rule or instrument that removes one, as for Status Quo
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication adopted the reader's verdict: every relationship type in place, exit only the formal right to quit, no floor: reading 4.5.3's 0.0 line, as Status Quo. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
+Pass record: [NEEC_Rescoring_s49.md, line 299](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s49.md?plain=1#L299)  
+Adjudicated after the outside review (Session 83): [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md), [adjudicate_s83.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/adjudicate_s83.py)
 
 **Published (v1) rationale**, under the heading "C4.5 Exploitation Elimination: 1.0" at [NEEC_Report_v1_6.md, line 696](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Report_v1_6.md?plain=1#L696):
 

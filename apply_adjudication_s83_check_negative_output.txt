@@ -1,0 +1,16 @@
+  FAIL neec_corpus_v2.json equals what the generator produces
+  PASS neec_scores_v2.csv equals what the generator produces
+  PASS summary_blocks_v2.json equals what the generator produces
+  PASS NEEC_Adjudication_s83.md carries every generated table (changes, outcomes, revisions, standing, summary) as the generator produces it
+  FAIL the corpus carries the verdict of each of the 517 units
+  PASS the run's reader results (667 first readings) against the Session 79 corpus give 177 disagreements, each with its outcome and the verdicts the outcome names
+  FAIL the corpus differs from the Session 79 snapshot in exactly the 18 cells the adjudication changes, each to the verdict its outcome names
+  PASS no CCO-PTF-CIP-SZH cell and no owner-decided cell changes (decision 57.2); the four owner items are not applied
+  PASS every hold, owner item and standing owner cell keeps NEEC's verdict
+  FAIL each total and failure count in the CSV is the sum of the corpus vector
+  FAIL each block's vector and total equal the corpus's, and each adjudicated unit with a flag is a close call toward its alternative
+  FAIL CCO-PTF-CIP-SZH is first alone at 17.5, Participatory Economics second at 16.5
+  PASS no tier changes
+  FAIL with the four owner items applied as adjudicated, CCO-PTF-CIP-SZH stands at 16.5 and Participatory Economics at 16.0
+
+ADJUDICATION OF SESSION 83: CHECKS FAILED.

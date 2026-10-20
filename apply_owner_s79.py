@@ -6,13 +6,16 @@ Session 78 applied the blind re-read (apply_final_s78.py). The owner then decide
 CCO-PTF-CIP-SZH units, and a rule for C3.4's clause 4 that reaches Integral, Participatory Economics, Degrowth Economics and
 Ostrom-Style Commons Governance). final_pass.owner_state() lays them over the final readings; this script writes, never by hand:
 
-  neec_corpus_v2.json         the 23 entries on the 29 criteria, with the final readings and the owner's layer
-  neec_scores_v2.csv          their totals, domain sums, failures and tiers
-  summary_blocks_v2.json      the site's per-entry blocks (each revised unit's prior reading is its flag)
+  neec_corpus_v2_s79_snapshot.json     the 23 entries on the 29 criteria, with the final readings and the owner's layer
+  neec_scores_v2_s79_snapshot.csv      their totals, domain sums, failures and tiers
+  summary_blocks_v2_s79_snapshot.json  the site's per-entry blocks (each revised unit's prior reading is its flag)
   NEEC_OwnerDecisions_s79.md  the record: the decisions and their reasons, the consistency audit, the seven changes, the
                               standing with and without the owner's decisions, first place and tiers
 
 The Session 78 state is kept as neec_corpus_v2_s78_snapshot.json and its two companions (apply_final_s78.py writes them).
+Since Session 83 this script writes the Session 79 state as the three *_s79_snapshot files above (the files the outside
+review's pre-registration and kit name, read by compare_outside.py and outside_kit.py); apply_adjudication_s83.py writes the
+v2 files with the adjudication of the outside review laid over this state.
 
 Usage: python3 apply_owner_s79.py           write the four files
        python3 apply_owner_s79.py --check   recompute and compare with the files on disk (exit 1 on any difference); also checks
@@ -34,8 +37,8 @@ import apply_final_s78 as af  # noqa: E402
 import final_pass as fp  # noqa: E402
 import pass_common as pc  # noqa: E402
 
-OUT = {"corpus": "neec_corpus_v2.json", "csv": "neec_scores_v2.csv", "blocks": "summary_blocks_v2.json",
-       "record": "NEEC_OwnerDecisions_s79.md"}
+OUT = {"corpus": "neec_corpus_v2_s79_snapshot.json", "csv": "neec_scores_v2_s79_snapshot.csv",
+       "blocks": "summary_blocks_v2_s79_snapshot.json", "record": "NEEC_OwnerDecisions_s79.md"}
 SNAP = dict(af.OUT)  # the Session 78 state
 NOTE = ("NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), "
         "the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to "

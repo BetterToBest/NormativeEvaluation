@@ -36,7 +36,7 @@ import outside_review_runner as rr  # noqa: E402
 import outside_kit as ok  # noqa: E402
 
 CORPUS = {e["code"]: e["display_name"] for e in
-          json.load(open(os.path.join(HERE, "neec_corpus_v2.json")))["entries"]}
+          json.load(open(os.path.join(HERE, "neec_corpus_v2_s79_snapshot.json")))["entries"]}
 
 EVERYWHERE = {
     "tier": re.compile(r"Potentially Adequate|Partially Adequate|Structurally Inadequate"),

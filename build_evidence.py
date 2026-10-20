@@ -13,7 +13,10 @@ section per criterion (29 per system) that gives:
     reading and its source, each data file in evidence_cache/ linked;
   * the close call registered for the unit (summary_blocks_v2.json), the pass's note, and the reason for a 0.0;
   * direct links, to the line, to the published rationale in the long scoring document and to the unit's section of the
-    rescoring record that read it.
+    rescoring record that read it;
+  * since Session 83, the outside blind review's verdict wherever its reader disagreed with NEEC (177 cells) and on every
+    CCO-PTF-CIP-SZH and owner-decided cell, with the adjudication's outcome and a link to its record; a cell the pass held
+    at its published score but the adjudication read shows the adjudication's reading.
 
 Nothing in a report is typed by hand or newly judged. Every score, clause reading, source, flag and note is read from the
 files the pass already holds (criteria.json, neec_corpus_v2.json, summary_blocks_v2.json, neec_scores_v2.csv, the pass's
@@ -39,6 +42,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import final_pass as fp  # noqa: E402
 import pass_common as pc  # noqa: E402
+import gzip  # noqa: E402
 
 OUTDIR = "evidence"
 WORD = {1.0: "pass", 0.5: "partial", 0.0: "structural failure"}
@@ -93,12 +97,15 @@ class Ctx:
         # read it last; `pass_part` is the pass's part (the blind groups re-read units the pass had read)
         # Session 79: the owner's decisions 79.1 to 79.4 laid over them (final_pass.owner_state); `final_part` is the part or
         # blind group that read each unit before the owner's layer
-        units, part, new_units, new_part, final_part = fp.owner_state(self.p)
+        # Session 83: the adjudication of the outside review laid over the owner's state (final_pass.adjudicated_state)
+        units, part, new_units, new_part, final_part, _ = fp.adjudicated_state(self.p)
         self.units = {**units, **new_units}
         self.part = {**part, **new_part}
         self.final_part = final_part
         with redirect_stdout(io.StringIO()):
             self.owner = pc.load("owner_s79", "owner_s79.py")
+            self.adj = pc.load("adjudicate_s83", "adjudicate_s83.py")
+        self.outside, self.stage_b = outside_verdicts()
         self.pass_part = {**self.p.part_of, **{k: self.last.TAG for k in self.last.NEW_UNITS}}
         self.parts = {tag: (mod, path, sess) for (tag, mod, path, sess), m in zip(pc.PARTS, self.p.mods)}
         self.mod_of = dict(zip([t for t, _, _, _ in pc.PARTS], self.p.mods))
@@ -127,6 +134,8 @@ class Ctx:
         txt += f" and re-read blind in Session {self.sess[bt]}" if bt != pt else ""
         if self.part[(code, crit)] == self.owner.TAG:
             txt += f", then raised by the owner's decision {self.owner.CHANGES[(code, crit)]['decision']} (Session {self.owner.SESSION})"
+        if self.part[(code, crit)] == self.adj.TAG:
+            txt += f", then adjudicated after the outside review (Session {self.adj.SESSION})"
         return txt
 
     def blob(self, path, line=None):
@@ -192,6 +201,57 @@ REF = re.compile(r"evidence_cache/(?P<d>[\w.\-]+)/(?P<f>[\w.\-]+\.(?:json|csv|md
                  r"|(?P<doc>(?:NEEC_[\w]+|SCORING_PROTOCOL)\.md), line (?P<ln>\d+)")
 
 
+def outside_verdicts():
+    """The outside review's reader verdicts (run r1, first readings) and stage B's, by (code, criterion)."""
+    run = os.path.join(HERE, "outside_review_r1")
+    first = {}
+    with open(os.path.join(run, "kit_units.jsonl"), encoding="utf-8") as f:
+        for ln in f:
+            if ln.strip():
+                u = json.loads(ln)
+                if u["group"] != 2.5:
+                    first[u["unit"]] = (u["code"], u["cid"])
+    reader, stage = {}, {}
+    for name, into in (("reader", reader), ("stage_b", stage)):
+        with gzip.open(os.path.join(run, "results", name + ".jsonl.gz"), "rt", encoding="utf-8") as f:
+            for ln in f:
+                r = json.loads(ln)
+                if r.get("status") == "ok" and r["unit"] in first:
+                    into[first[r["unit"]]] = r["final"]["verdict"]
+    return reader, stage
+
+
+OUTCOME = {"hold": "the adjudication held NEEC's verdict",
+           "adopt": "the adjudication adopted the reader's verdict",
+           "third": "the adjudication reached a third reading, {stands}",
+           "owner": "the adjudication reads it {proposed}, which goes to the owner ({why_owner}); NEEC's {neec} stands until "
+                    "the owner decides",
+           "stands": "the cell is the owner's decision, which stands"}
+
+
+def outside_line(ctx, code, crit):
+    """The outside review's sentence for a cell it disagreed on, or for a CCO-PTF-CIP-SZH or owner-decided cell; else None."""
+    owner_cell = (code, crit) in ctx.owner.CHANGES or (code, crit) == ("CCO", "C3.2")
+    o = ctx.adj.OUTCOMES.get((code, crit))
+    r = ctx.outside.get((code, crit))
+    if o is None and not (code == "CCO" or owner_cell) or r is None:
+        return None
+    rec = f"[{ctx.adj.RECORD}]({ctx.blob(ctx.adj.RECORD)})"
+    if o is None:
+        txt = f"The outside blind reader (run r1) read this unit {fmt(r)}, as NEEC does."
+    else:
+        it = ctx.adj.OWNER.get((code, crit), {})
+        why_owner = ("decision 57.2 reserves CCO-PTF-CIP-SZH's changes to the owner, and decision 69.4 holds a fall"
+                     if code == "CCO" else "decision 79.4, whose rule raised the cell, is the owner's")
+        out = OUTCOME[o["outcome"]].format(stands=fmt(o["stands"]), neec=fmt(o["neec"]),
+                                           proposed=fmt(it.get("proposed", o["stands"])), why_owner=why_owner)
+        txt = (f"The outside blind reader (run r1) read this unit {fmt(r)}, against NEEC's {fmt(o['neec'])}; {out}: "
+               f"{linked(ctx, o['why'])}.")
+    if owner_cell and (code, crit) in ctx.stage_b:
+        txt += f" Shown the argument for the owner's reading (stage B), the reader read it {fmt(ctx.stage_b[(code, crit)])}."
+    return f"**Outside review.** {txt} Record: {rec}."
+
+
 def cap(s):
     s = str(s).strip()
     return s[:1].upper() + s[1:]
@@ -242,17 +302,24 @@ def cell(ctx, code, crit, stats):
     unit = ctx.units.get((code, crit))
     rev = c["revision"]["cls"]
     out = [f'<a id="{anchor(crit)}"></a>', f'### {crit} {c["name"]}: {fmt(v)} ({WORD[v]})', ""]
-    if unit is not None:
+    adjud = unit is not None and ctx.part[(code, crit)] == ctx.adj.TAG
+    if unit is not None and (code, crit) not in ctx.pass_part:
+        assert adjud and unit["verdict"] == v and pub is not None, f"{code} {crit}: a unit outside the pass that is not the adjudication's"
+        stats["adjudicated"] += 1
+        prov = (f"No unit of the rescoring pass read this cell; {ctx.adj.LABEL} read it after the outside review disagreed "
+                f"(the adjudicated reading is shown). Published (v1) score {fmt(pub)}; v2.0 score {fmt(v)}"
+                + (": changed." if pub != v else ": unchanged."))
+    elif unit is not None:
         assert unit["verdict"] == v, f"{code} {crit}: the unit's verdict {unit['verdict']} is not the corpus score {v}"
         blind = ctx.part[(code, crit)] in ctx.blind_record or ctx.part[(code, crit)] == ctx.owner.TAG
+        shown = " (the adjudicated reading is shown)" if adjud else (" (the final reading is shown)" if blind else "")
         if pub is None:
             stats["new"] += 1
             prov = (f"New in v2.0: scored for the first time in {ctx.read_in(code, crit)}, "
-                    f"on a unit of the three new criteria." + (" The final reading is shown." if blind else ""))
+                    f"on a unit of the three new criteria." + (f" The {shown[6:-1]}." if shown else ""))
         else:
             stats["read"] += 1
-            prov = (f"Read by the rescoring pass in {ctx.read_in(code, crit)}"
-                    + (" (the final reading is shown)" if blind else "")
+            prov = (f"Read by the rescoring pass in {ctx.read_in(code, crit)}" + shown
                     + f". Published (v1) score {fmt(pub)}; v2.0 score {fmt(v)}" + (": changed." if pub != v else ": unchanged."))
     else:
         assert pub is not None and pub == v, f"{code} {crit}: held cell's score differs from the published one"
@@ -290,8 +357,12 @@ def cell(ctx, code, crit, stats):
         out += [f"**Note.** {cap(linked(ctx, unit['note']))}", ""]
     if unit is not None and unit.get("zero"):
         out += [f"**Why 0.0 stands (protocol 2.1).** {cap(linked(ctx, unit['zero']))}", ""]
+    ol = outside_line(ctx, code, crit)
+    if ol:
+        stats["outside"] += 1
+        out += [ol, ""]
     refs = []
-    if unit is not None:
+    if unit is not None and (code, crit) in ctx.pass_part:
         tag = ctx.pass_part[(code, crit)]
         rec = getattr(ctx.mod_of[tag], "RECORD", None)
         if rec:
@@ -311,6 +382,9 @@ def cell(ctx, code, crit, stats):
             d = ctx.owner.CHANGES[(code, crit)]["decision"]
             refs.append(f"Applied by the owner's decision {d}: [{ctx.owner.RECORD}]({ctx.blob(ctx.owner.RECORD)}), "
                         f"[owner_s79.py]({ctx.blob('owner_s79.py')})")
+    if adjud:
+        refs.append(f"Adjudicated after the outside review (Session {ctx.adj.SESSION}): [{ctx.adj.RECORD}]"
+                    f"({ctx.blob(ctx.adj.RECORD)}), [adjudicate_s83.py]({ctx.blob('adjudicate_s83.py')})")
     if refs:
         out += ["  \n".join(refs), ""]
     if pub is not None:
@@ -357,7 +431,9 @@ def report(ctx, code, rk, stats):
             "`evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that "
             "read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the "
             "published (v1) rationale in the long scoring document. A cell the pass did not read "
-            "says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.", "",
+            "says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. "
+            "Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided "
+            "cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).", "",
             "## Contents", ""]
     body = []
     for d in ctx.domains:
@@ -372,6 +448,9 @@ def report(ctx, code, rk, stats):
             pub = ctx.p.vec[code].get(crit)
             if unit is None:
                 basis = "held at the published score"
+            elif (code, crit) not in ctx.pass_part:
+                basis = (f"adjudicated after the outside review (Session {ctx.adj.SESSION})"
+                         + (f", changed from {fmt(pub)}" if pub != v else ""))
             elif pub is None:
                 basis = f"new in v2.0, scored in {ctx.read_in(code, crit)}"
             else:
@@ -379,6 +458,8 @@ def report(ctx, code, rk, stats):
                          + (f", changed from {fmt(pub)}" if pub != v else ""))
             if any(f["criterion"] == crit for f in b["flags"]):
                 basis += "; close call"
+            if (code, crit) in ctx.adj.OUTCOMES:
+                basis += f"; outside review: {ctx.adj.OUTCOMES[(code, crit)]['outcome']}"
             out.append(f'| [{crit} {esc(ctx.cmap[crit]["name"])}](#{anchor(crit)}) | {fmt(v)} | {basis} |')
             body += cell(ctx, code, crit, stats)
         out.append("")
@@ -409,7 +490,7 @@ def index(ctx, rk):
 def build():
     ctx = Ctx()
     rk = ranks(ctx)
-    stats = dict(new=0, read=0, held=0, flag=0, structure=0, recline=0, rat=0, rattext=0)
+    stats = dict(new=0, read=0, held=0, adjudicated=0, flag=0, structure=0, recline=0, rat=0, rattext=0, outside=0)
     files = {}
     for code in ctx.entries:
         files[f"{OUTDIR}/{slug(code)}.md"] = report(ctx, code, rk, stats)
@@ -425,7 +506,7 @@ def main():
     check = "--check" in sys.argv[1:]
     ctx, files, stats = build()
     cells = len(ctx.entries) * len(ctx.order)
-    assert stats["new"] + stats["read"] + stats["held"] == cells, "every cell has a section"
+    assert stats["new"] + stats["read"] + stats["held"] + stats["adjudicated"] == cells, "every cell has a section"
     problems = []
     if ctx.dangling:
         problems.append("links to files that do not exist: " + ", ".join(sorted(set(ctx.dangling))))
@@ -445,7 +526,10 @@ def main():
             with open(os.path.join(HERE, k), "w", encoding="utf-8", newline="") as f:
                 f.write(text)
     print(f"{'CHECK' if check else 'WROTE'} {len(files)} files in {OUTDIR}/: the index and {len(files) - 1} system reports")
-    print(f"  {cells} criterion sections: {stats['read']} read by the pass, {stats['new']} new in v2.0, {stats['held']} held at the published score")
+    print(f"  {cells} criterion sections: {stats['read']} read by the pass, {stats['new']} new in v2.0, {stats['adjudicated']} read "
+          f"only by the adjudication of Session 83, {stats['held']} held at the published score")
+    print(f"  {stats['outside']} sections give the outside review's verdict (its disagreements, and every CCO-PTF-CIP-SZH and "
+          "owner-decided cell)")
     print(f"  {stats['flag']} close calls shown; {stats['rat']} published rationales linked by line, {stats['rattext']} quoted; "
           f"{stats['recline']} of {stats['read'] + stats['new']} pass units linked to their record's line")
     print(f"  {stats['structure']} units shown on the clause structure they were read on (it differs from v2.0's)")

@@ -33,7 +33,8 @@ file and no design passage is closed-book: the reader answers from its own knowl
 
 ORDER (plan, section 4; never in a prompt): group 1 the 29 CCO-PTF-CIP-SZH units; group 2 Participatory Economics,
   Integral, Nordic Social Democracy and Degrowth Economics (116); then CCO-PTF-CIP-SZH's 29 again (the consistency
-  repeat, "#2"); group 3 every other unit with a close call in summary_blocks_v2.json (135); group 4 the rest (387).
+  repeat, "#2"); group 3 every other unit with a close call in the Session 79 blocks (summary_blocks_v2_s79_snapshot.json)
+  (135); group 4 the rest (387).
   Stage B (not blind): the eight owner-decided units, after their blind reading is pushed (stage_b/).
 
 Usage:
@@ -441,8 +442,8 @@ for _code in ("INT", "PE", "DG", "OS"):
 def build():
     """{relative path: bytes} for the whole kit."""
     crit = json.loads(read(os.path.join(HERE, "criteria.json")))["criteria"]
-    corpus = json.loads(read(os.path.join(HERE, "neec_corpus_v2.json")))["entries"]
-    blocks = json.loads(read(os.path.join(HERE, "summary_blocks_v2.json")))
+    corpus = json.loads(read(os.path.join(HERE, "neec_corpus_v2_s79_snapshot.json")))["entries"]
+    blocks = json.loads(read(os.path.join(HERE, "summary_blocks_v2_s79_snapshot.json")))
     proto = read(os.path.join(HERE, "SCORING_PROTOCOL.md"))
     out = {}
 

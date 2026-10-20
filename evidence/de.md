@@ -10,7 +10,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently.
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).
 
 ## Contents
 
@@ -18,29 +18,29 @@ Each criterion has one section, linked from the table below. A section gives the
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C1.1 Poverty Elimination Capacity](#c1-1) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 74, changed from 0.5; close call |
-| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 (Session 53) |
-| [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.0 | held at the published score; close call |
+| [C1.1 Poverty Elimination Capacity](#c1-1) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 74, changed from 0.5; close call; outside review: hold |
+| [C1.2a Wealth Building for Resilience](#c1-2a) | 0.0 | read in group 2.2 (Session 53); outside review: hold |
+| [C1.2b Prevention of Exploitative Accumulation](#c1-2b) | 0.0 | held at the published score; close call; outside review: hold |
 | [C1.3 Housing Security](#c1-3) | 0.5 | read in group 2.3 (Session 54); close call |
-| [C1.4 Automation Resilience](#c1-4) | 0.0 | read in group 2.7 (Session 60) |
-| [C1.5 Universal Wealth Access](#c1-5) | 0.0 | held at the published score |
+| [C1.4 Automation Resilience](#c1-4) | 0.0 | read in group 2.7 (Session 60); outside review: hold |
+| [C1.5 Universal Wealth Access](#c1-5) | 0.0 | held at the published score; outside review: hold |
 
 **2. Human Autonomy: 2.0 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C2.1 Freedom from Coercion](#c2-1) | 0.0 | read in group 2.11 (Session 65) |
-| [C2.2 Labor Non-Necessity](#c2-2) | 0.0 | held at the published score |
+| [C2.1 Freedom from Coercion](#c2-1) | 0.0 | read in group 2.11 (Session 65); outside review: hold |
+| [C2.2 Labor Non-Necessity](#c2-2) | 0.0 | held at the published score; outside review: hold |
 | [C2.3 Creative Development Opportunities](#c2-3) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.4 Democratic Participation](#c2-4) | 0.5 | read in group 2.11 (Session 65) |
 | [C2.5 Exit Rights and Mobility](#c2-5) | 0.5 | read in part (b5) (Session 42) and re-read blind in Session 75, changed from 1.0 |
-| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
+| [C2.6 Civil Liberties and Rule of Law](#c2-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76; outside review: hold |
 
 **3. System Resilience: 2.5 of 6.0**
 
 | Criterion | Score | Basis |
 |---|---|---|
-| [C3.1 Crisis Response Capacity](#c3-1) | 0.0 | read in group 2.9 (Session 63) and re-read blind in Session 74, changed from 0.5; close call |
+| [C3.1 Crisis Response Capacity](#c3-1) | 0.0 | read in group 2.9 (Session 63) and re-read blind in Session 74, changed from 0.5; close call; outside review: hold |
 | [C3.2 Inflation Control Mechanisms](#c3-2) | 0.5 | held at the published score |
 | [C3.3 Multi-Failure Resistance](#c3-3) | 0.5 | held at the published score |
 | [C3.4 Epistemic Adaptability](#c3-4) | 0.5 | read in part (a) (Session 37), changed from 1.0 |
@@ -54,8 +54,8 @@ Each criterion has one section, linked from the table below. A section gives the
 | [C4.1 Intergenerational Justice](#c4-1) | 0.5 | read in part (b6) (Session 43) and re-read blind in Session 72, changed from 1.0 |
 | [C4.2 Ecological Compliance](#c4-2) | 0.5 | read in part (b7) (Session 47), changed from 1.0 |
 | [C4.3 Group Equity](#c4-3) | 0.5 | read in group 2.8 (Session 61) |
-| [C4.4 Power Distribution](#c4-4) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 73; close call |
-| [C4.5 Exploitation Elimination](#c4-5) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 71; close call |
+| [C4.4 Power Distribution](#c4-4) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 73; close call; outside review: hold |
+| [C4.5 Exploitation Elimination](#c4-5) | 0.0 | read in group 2.11 (Session 65) and re-read blind in Session 71; close call; outside review: hold |
 | [C4.6 Harm Internalization](#c4-6) | 0.5 | new in v2.0, scored in group 2.11 (Session 65) and re-read blind in Session 76 |
 
 **5. Implementation Viability: 2.5 of 5.0**
@@ -63,7 +63,7 @@ Each criterion has one section, linked from the table below. A section gives the
 | Criterion | Score | Basis |
 |---|---|---|
 | [C5.1 Proven Component Foundation](#c5-1) | 0.5 | held at the published score |
-| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6 (Session 58) |
+| [C5.2 Staged Transition Pathways](#c5-2) | 0.5 | read in group 2.6 (Session 58); outside review: hold |
 | [C5.3 Partial and Parallel Deployability](#c5-3) | 0.5 | read in part (b1) (Session 38), changed from 1.0 |
 | [C5.4 Political Coalition Potential](#c5-4) | 0.5 | held at the published score |
 | [C5.5 Cultural Adaptability](#c5-5) | 0.5 | held at the published score |
@@ -86,6 +86,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Why 0.0 stands (protocol 2.1).** Protocol 2.1, first condition: no structural mechanism addresses poverty -- the framework names the target and adopts no instrument to meet it (reading 1.1.4)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: NEEC's flag already names 0.5; the reader applies no 0.0 test. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 924](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L924)  
 Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
 
@@ -106,6 +108,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: �
 
 **Why 0.0 stands (protocol 2.1).** No structural mechanism of the system's own addresses the criterion (the published flag toward 0.5 stands)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the framework adopts no vehicle of its own. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s53.md, line 296](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s53.md?plain=1#L296)
 
 **Published (v1) rationale**, under the heading "C1.2a Wealth Building for Resilience: 0.0 (Structural Failure) — flagged as a contestable score" at [NEEC_DoughnutEconomics_scoring_scratch.md, line 131](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_DoughnutEconomics_scoring_scratch.md?plain=1#L131):
@@ -120,6 +124,8 @@ Pass record: [NEEC_Rescoring_s53.md, line 296](https://github.com/BetterToBest/N
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: Gini <0.35 for wealth distribution.
 
 **Close call.** Scored 0.0; a reasonable scorer could set 0.5. The 'harness the commons' language weighted more heavily
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the framework adopts no mechanism of its own, as on C1.2a. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C1.2b Prevention of Exploitative Accumulation: 0.0 (Structural Failure) — flagged as a contestable score" at [NEEC_DoughnutEconomics_scoring_scratch.md, line 165](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_DoughnutEconomics_scoring_scratch.md?plain=1#L165):
 
@@ -159,6 +165,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Why 0.0 stands (protocol 2.1).** No structural mechanism addresses the criterion: automation is named as a concern and met with no income-distribution, contribution-recognition or demand-maintenance mechanism in the framework or its implementations
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: automation named and met with no mechanism; the reader applies no 0.0 test. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s60.md, line 268](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s60.md?plain=1#L268)
 
 **Published (v1) rationale**, under the heading "C1.4 Automation Resilience: 0.0 (Structural Failure)" at [NEEC_DoughnutEconomics_scoring_scratch.md, line 217](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_DoughnutEconomics_scoring_scratch.md?plain=1#L217):
@@ -171,6 +179,8 @@ Pass record: [NEEC_Rescoring_s60.md, line 268](https://github.com/BetterToBest/N
 *No unit of the rescoring pass reads this cell. The published score stands: 0.0. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: ≥80% population with an active wealth-accumulation pathway.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: no asset mechanism, as on C1.2a. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C1.5 Universal Wealth Access (narrowed — access breadth only): 0.0 (Structural Failure)" at [NEEC_DoughnutEconomics_scoring_scratch.md, line 242](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_DoughnutEconomics_scoring_scratch.md?plain=1#L242):
 
@@ -194,6 +204,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 
 **Why 0.0 stands (protocol 2.1).** The published 0.0 stands on its published whole-criterion finding (protocol 2.1); the indicator cannot clear a clause the finding does not rest on
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: the published whole-criterion finding stands; the reader applies no 0.0 test. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 1058](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1058)
 
 **Published (v1) rationale**, under the heading "C2.1 Freedom from Coercion: 0.0 (Structural Failure)" at [NEEC_DoughnutEconomics_scoring_scratch.md, line 276](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_DoughnutEconomics_scoring_scratch.md?plain=1#L276):
@@ -206,6 +218,8 @@ Pass record: [NEEC_Rescoring_s65.md, line 1058](https://github.com/BetterToBest/
 *No unit of the rescoring pass reads this cell. The published score stands: 0.0. The reading behind it is the published rationale linked below.*
 
 Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Threshold: Unconditional provision covering 100% of basic needs (housing, food, healthcare, utilities) for all residents.
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: no baseline is provided in the framework or its applications. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 **Published (v1) rationale**, under the heading "C2.2 Labor Non-Necessity: 0.0 (Structural Failure)" at [NEEC_DoughnutEconomics_scoring_scratch.md, line 296](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_DoughnutEconomics_scoring_scratch.md?plain=1#L296):
 
@@ -290,6 +304,8 @@ Criterion in v2.0: class N (new criterion). Pass Threshold: Civil-liberties scor
 
 **Note.** 0.5: a framework for economic goals; rights left to the host
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: the reader scores silence as 0 of 60; the framework presupposes the host's democracy. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 1668](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L1668)  
 Blind re-read record: [NEEC_BlindReview_s76.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s76.md)
 
@@ -311,6 +327,8 @@ Criterion in v2.0: class I (indicator named for an unchanged clause and bar). Pa
 **Close call.** Scored 0.0; a reasonable scorer could set 0.5. 0.0: no stabilisation instrument adopted
 
 **Why 0.0 stands (protocol 2.1).** Protocol 2.1, first condition: no structural mechanism addresses crisis response -- the framework adopts no stabilisation instrument (reading 3.1.5)
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: no stabilisation instrument adopted; NEEC's flag already names 0.5. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s63.md, line 246](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s63.md?plain=1#L246)  
 Blind re-read record: [NEEC_BlindReview_s74.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s74.md)
@@ -478,6 +496,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: De
 
 **Why 0.0 stands (protocol 2.1).** Protocol 2.1, first condition: no structural mechanism addresses the criterion -- the framework adopts no ownership or governance design and specifies no institution of removal (the scoring document's scope decision)
 
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: no ownership or removal design adopted; NEEC's flag already names 0.5. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+
 Pass record: [NEEC_Rescoring_s65.md, line 323](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L323)  
 Blind re-read record: [NEEC_BlindReview_s73.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s73.md)
 
@@ -500,6 +520,8 @@ Criterion in v2.0: class D (clauses deleted only). Pass Threshold: Extraction ra
 **Close call.** Scored 0.0; a reasonable scorer could set 0.5. 0.0: the blind reading's own text found no mechanism, which reading 4.5.3 requires for 0.5
 
 **Why 0.0 stands (protocol 2.1).** Protocol 2.1, first condition: no structural mechanism addresses the criterion -- the framework names distributive directions but commits to none, and its implementations in over 50 jurisdictions operate as an overlay on the host's property, employment and credit relations (published reading)
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication held NEEC's verdict: names directions and commits to none; NEEC's flag already names 0.5. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s65.md, line 578](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s65.md?plain=1#L578)  
 Blind re-read record: [NEEC_BlindReview_s71.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_BlindReview_s71.md)
@@ -555,6 +577,8 @@ Criterion in v2.0: class M (bar, measure or clause restated). Pass Threshold: St
 | 5 | risk mitigation | not shown | not estimated in this pass; the verdict is fixed by clause 1 and 2 | this unit's clause 1 and 2 |
 
 **Note.** A first stage is deployed in many places, so the unit is not 0.0 (reading 3.2(f))
+
+**Outside review.** The outside blind reader (run r1) read this unit 0.0, against NEEC's 0.5; the adjudication held NEEC's verdict: the City Portrait method, a first stage followed in dozens of places: a sketched pathway. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Pass record: [NEEC_Rescoring_s58.md, line 347](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Rescoring_s58.md?plain=1#L347)
 

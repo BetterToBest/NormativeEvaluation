@@ -9,7 +9,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -36,7 +36,7 @@
    "C2.6": 0.5,
    "C3.1": 0.5,
    "C3.2": 0.5,
-   "C3.3": 0.0,
+   "C3.3": 0.5,
    "C3.4": 0.5,
    "C3.5": 0.5,
    "C3.6": 1.0,
@@ -55,11 +55,11 @@
   "summary": {
    "D1": 2.0,
    "D2": 2.5,
-   "D3": 3.0,
+   "D3": 3.5,
    "D4": 1.5,
    "D5": 3.5,
-   "total": 12.5,
-   "failures": 7,
+   "total": 13.0,
+   "failures": 6,
    "tier": "Structurally Inadequate"
   },
   "flags": [
@@ -120,6 +120,21 @@
     "source": {
      "file": "NEEC_BlindReview_s74.md",
      "locator": "SQ C3.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.3",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: optimised for normal conditions, with 2008 and 2020 requiring extraordinary policy action",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "SQ C3.3",
      "phrase": "Flag"
     }
    },
@@ -236,8 +251,8 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 12.5,
-     "failures": 7,
+     "total": 13.0,
+     "failures": 6,
      "tier": "Structurally Inadequate"
     }
    },
@@ -254,9 +269,9 @@
      "C5.1": 1.0
     },
     "result": {
-     "total": 15.5,
-     "failures": 3,
-     "tier": "Partially Adequate"
+     "total": 16.0,
+     "failures": 2,
+     "tier": "Potentially Adequate"
     }
    },
    {
@@ -266,6 +281,7 @@
     "resolve": {
      "C1.1": 0.0,
      "C3.1": 0.0,
+     "C3.3": 0.0,
      "C3.6": 0.5,
      "C4.1": 0.0,
      "C4.4": 0.0
@@ -289,7 +305,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -489,7 +505,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -518,7 +534,7 @@
    "C3.2": 0.5,
    "C3.3": 0.0,
    "C3.4": 0.0,
-   "C3.5": 0.5,
+   "C3.5": 0.0,
    "C3.6": 0.5,
    "C4.1": 0.5,
    "C4.2": 0.0,
@@ -535,11 +551,11 @@
   "summary": {
    "D1": 2.5,
    "D2": 0.0,
-   "D3": 2.0,
+   "D3": 1.5,
    "D4": 1.5,
    "D5": 1.0,
-   "total": 7.0,
-   "failures": 16,
+   "total": 6.5,
+   "failures": 17,
    "tier": "Structurally Inadequate"
   },
   "flags": [
@@ -649,6 +665,21 @@
     }
    },
    {
+    "criterion": "C3.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the published reading: failures such as shortages were visible, and correction came through reform",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "CPS C3.5",
+     "phrase": "Flag"
+    }
+   },
+   {
     "criterion": "C3.6",
     "scored": 0.5,
     "alternatives": [
@@ -737,6 +768,21 @@
      "locator": "CPS C5.2",
      "phrase": "Flag"
     }
+   },
+   {
+    "criterion": "C5.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "a failure replicated across independent implementations is evidence about the system's own logic (D29(a)), read as far below with no pathway",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "CPS C5.5",
+     "phrase": "Flag"
+    }
    }
   ],
   "joint_readings": [
@@ -746,8 +792,8 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 7.0,
-     "failures": 16,
+     "total": 6.5,
+     "failures": 17,
      "tier": "Structurally Inadequate"
     }
    },
@@ -761,6 +807,7 @@
      "C2.5": 0.5,
      "C2.6": 0.5,
      "C3.4": 0.5,
+     "C3.5": 0.5,
      "C4.1": 1.0,
      "C4.2": 0.5,
      "C4.6": 0.5,
@@ -780,11 +827,12 @@
      "C1.3": 0.5,
      "C3.1": 0.0,
      "C3.6": 0.0,
-     "C4.5": 0.0
+     "C4.5": 0.0,
+     "C5.5": 0.0
     },
     "result": {
-     "total": 5.0,
-     "failures": 19,
+     "total": 4.0,
+     "failures": 21,
      "tier": "Structurally Inadequate"
     }
    }
@@ -801,7 +849,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -842,16 +890,16 @@
    "C5.2": 0.5,
    "C5.3": 0.5,
    "C5.4": 0.5,
-   "C5.5": 0.0
+   "C5.5": 0.5
   },
   "summary": {
    "D1": 3.0,
    "D2": 3.0,
    "D3": 3.5,
    "D4": 3.5,
-   "D5": 2.0,
-   "total": 15.0,
-   "failures": 1,
+   "D5": 2.5,
+   "total": 15.5,
+   "failures": 0,
    "tier": "Potentially Adequate"
   },
   "flags": [
@@ -871,6 +919,21 @@
     }
    },
    {
+    "criterion": "C3.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: no source dates a policy update within six months of the evidence",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "MS C3.4",
+     "phrase": "Flag"
+    }
+   },
+   {
     "criterion": "C4.2",
     "scored": 0.5,
     "alternatives": [
@@ -884,6 +947,36 @@
      "locator": "MS C4.2",
      "phrase": "Flag"
     }
+   },
+   {
+    "criterion": "C4.4",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: the design's family includes variants (Lange and Lerner's state firms, Roemer's coupon boards) that place firm control elsewhere (protocol 4.2)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "MS C4.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: successful only in specific cultural contexts",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "MS C5.5",
+     "phrase": "Flag"
+    }
    }
   ],
   "joint_readings": [
@@ -893,8 +986,8 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 15.0,
-     "failures": 1,
+     "total": 15.5,
+     "failures": 0,
      "tier": "Potentially Adequate"
     }
    },
@@ -904,10 +997,13 @@
     "basis": "extremes",
     "resolve": {
      "C2.5": 0.0,
-     "C4.2": 0.0
+     "C3.4": 0.5,
+     "C4.2": 0.0,
+     "C4.4": 0.5,
+     "C5.5": 0.0
     },
     "result": {
-     "total": 14.0,
+     "total": 13.0,
      "failures": 3,
      "tier": "Partially Adequate"
     }
@@ -925,7 +1021,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -943,7 +1039,7 @@
    "C1.2b": 0.0,
    "C1.3": 0.0,
    "C1.4": 0.0,
-   "C1.5": 0.0,
+   "C1.5": 0.5,
    "C2.1": 0.0,
    "C2.2": 0.0,
    "C2.3": 0.5,
@@ -960,7 +1056,7 @@
    "C4.2": 0.0,
    "C4.3": 0.0,
    "C4.4": 0.5,
-   "C4.5": 0.5,
+   "C4.5": 0.0,
    "C4.6": 0.5,
    "C5.1": 0.5,
    "C5.2": 0.5,
@@ -969,10 +1065,10 @@
    "C5.5": 0.5
   },
   "summary": {
-   "D1": 0.5,
+   "D1": 1.0,
    "D2": 2.5,
    "D3": 2.0,
-   "D4": 2.0,
+   "D4": 1.5,
    "D5": 2.5,
    "total": 9.5,
    "failures": 11,
@@ -991,6 +1087,21 @@
     "source": {
      "file": "the rescoring record of the part that read it",
      "locator": "LM C1.2a",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C1.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: without public education and a safety net, effective access narrows to those born with capital (the 0.0 band)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "LM C1.5",
      "phrase": "Flag"
     }
    },
@@ -1086,15 +1197,15 @@
    },
    {
     "criterion": "C4.5",
-    "scored": 0.5,
+    "scored": 0.0,
     "alternatives": [
-     0.0
+     0.5
     ],
     "basis": "stated",
-    "reading": "the design treats voluntary exchange as non-exploitative by definition: the 0.0 condition of excluding the criterion's concern as illegitimate (protocol 2.1; part (a))",
+    "reading": "parts (a) and (b8)'s reading: both clauses not shown, held at 0.5 under D28(f)",
     "tracks": null,
     "source": {
-     "file": "NEEC_Rescoring_s65.md",
+     "file": "NEEC_Adjudication_s83.md",
      "locator": "LM C4.5",
      "phrase": "Flag"
     }
@@ -1118,11 +1229,12 @@
     "basis": "extremes",
     "resolve": {
      "C2.6": 1.0,
-     "C4.2": 0.5
+     "C4.2": 0.5,
+     "C4.5": 0.5
     },
     "result": {
-     "total": 10.5,
-     "failures": 10,
+     "total": 11.0,
+     "failures": 9,
      "tier": "Structurally Inadequate"
     }
    },
@@ -1132,11 +1244,11 @@
     "basis": "extremes",
     "resolve": {
      "C1.2a": 0.0,
+     "C1.5": 0.0,
      "C2.5": 0.5,
      "C3.4": 0.0,
      "C3.5": 0.0,
-     "C4.1": 0.0,
-     "C4.5": 0.0
+     "C4.1": 0.0
     },
     "result": {
      "total": 6.5,
@@ -1157,7 +1269,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -1325,7 +1437,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -1345,7 +1457,7 @@
    "C1.4": 0.5,
    "C1.5": 0.0,
    "C2.1": 0.5,
-   "C2.2": 1.0,
+   "C2.2": 0.5,
    "C2.3": 0.5,
    "C2.4": 0.5,
    "C2.5": 1.0,
@@ -1364,21 +1476,36 @@
    "C4.6": 0.5,
    "C5.1": 1.0,
    "C5.2": 0.5,
-   "C5.3": 0.5,
+   "C5.3": 1.0,
    "C5.4": 0.5,
-   "C5.5": 0.0
+   "C5.5": 0.5
   },
   "summary": {
    "D1": 1.5,
-   "D2": 4.0,
+   "D2": 3.5,
    "D3": 2.5,
    "D4": 3.0,
-   "D5": 2.5,
-   "total": 13.5,
-   "failures": 5,
+   "D5": 3.5,
+   "total": 14.0,
+   "failures": 4,
    "tier": "Partially Adequate"
   },
   "flags": [
+   {
+    "criterion": "C2.2",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the 1.0 band's reading: provision explicitly unconditional",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "UBI C2.2",
+     "phrase": "Flag"
+    }
+   },
    {
     "criterion": "C2.5",
     "scored": 1.0,
@@ -1423,6 +1550,36 @@
      "locator": "UBI C5.1",
      "phrase": "Flag"
     }
+   },
+   {
+    "criterion": "C5.3",
+    "scored": 1.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "Iran's transfer compensates for removed price subsidies rather than paying an income as of right (Tabatabai), and no adequate basic income has been scaled",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "UBI C5.3",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.5",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: acceptance of income without work is a cultural precondition the mechanism cannot itself produce",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "UBI C5.5",
+     "phrase": "Flag"
+    }
    }
   ],
   "joint_readings": [
@@ -1432,8 +1589,21 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 13.5,
-     "failures": 5,
+     "total": 14.0,
+     "failures": 4,
+     "tier": "Partially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C2.2": 1.0
+    },
+    "result": {
+     "total": 14.5,
+     "failures": 4,
      "tier": "Partially Adequate"
     }
    },
@@ -1444,10 +1614,12 @@
     "resolve": {
      "C2.5": 0.0,
      "C4.4": 0.0,
-     "C5.1": 0.5
+     "C5.1": 0.5,
+     "C5.3": 0.5,
+     "C5.5": 0.0
     },
     "result": {
-     "total": 11.5,
+     "total": 11.0,
      "failures": 7,
      "tier": "Structurally Inadequate"
     }
@@ -1465,7 +1637,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -1480,7 +1652,7 @@
   "vector": {
    "C1.1": 0.5,
    "C1.2a": 0.5,
-   "C1.2b": 1.0,
+   "C1.2b": 0.5,
    "C1.3": 0.5,
    "C1.4": 0.5,
    "C1.5": 0.5,
@@ -1492,7 +1664,7 @@
    "C2.6": 0.5,
    "C3.1": 0.5,
    "C3.2": 0.5,
-   "C3.3": 1.0,
+   "C3.3": 0.5,
    "C3.4": 1.0,
    "C3.5": 0.5,
    "C3.6": 0.5,
@@ -1509,16 +1681,31 @@
    "C5.5": 0.5
   },
   "summary": {
-   "D1": 3.5,
+   "D1": 3.0,
    "D2": 3.0,
-   "D3": 4.0,
+   "D3": 3.5,
    "D4": 3.0,
    "D5": 2.0,
-   "total": 15.5,
+   "total": 14.5,
    "failures": 1,
    "tier": "Potentially Adequate"
   },
   "flags": [
+   {
+    "criterion": "C1.2b",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: decentralisation, wealth caps and cooperative ownership as a named structural ceiling of the kind the 1.0 band describes",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "DG C1.2b",
+     "phrase": "Flag"
+    }
+   },
    {
     "criterion": "C2.5",
     "scored": 0.5,
@@ -1531,6 +1718,21 @@
     "source": {
      "file": "NEEC_BlindReview_s75.md",
      "locator": "DG C2.5",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.3",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the 1.0 band's reading: explicit design for compound shocks through decentralisation and redundancy",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "DG C3.3",
      "phrase": "Flag"
     }
    },
@@ -1578,6 +1780,21 @@
      "locator": "DG C4.5",
      "phrase": "Flag"
     }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: strong appeal to part of the spectrum against resistance from another (the 0.5 band)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "DG C5.4",
+     "phrase": "Flag"
+    }
    }
   ],
   "joint_readings": [
@@ -1587,7 +1804,7 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 15.5,
+     "total": 14.5,
      "failures": 1,
      "tier": "Potentially Adequate"
     }
@@ -1597,11 +1814,14 @@
     "label": "every flagged call resolved upward",
     "basis": "extremes",
     "resolve": {
-     "C4.5": 1.0
+     "C1.2b": 1.0,
+     "C3.3": 1.0,
+     "C4.5": 1.0,
+     "C5.4": 0.5
     },
     "result": {
-     "total": 16.0,
-     "failures": 1,
+     "total": 16.5,
+     "failures": 0,
      "tier": "Potentially Adequate"
     }
    },
@@ -1615,7 +1835,7 @@
      "C3.6": 0.0
     },
     "result": {
-     "total": 14.0,
+     "total": 13.0,
      "failures": 3,
      "tier": "Partially Adequate"
     }
@@ -1633,7 +1853,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -1673,7 +1893,7 @@
    "C5.1": 0.5,
    "C5.2": 0.5,
    "C5.3": 0.5,
-   "C5.4": 0.0,
+   "C5.4": 0.5,
    "C5.5": 0.0
   },
   "summary": {
@@ -1681,9 +1901,9 @@
    "D2": 2.5,
    "D3": 3.0,
    "D4": 2.0,
-   "D5": 1.5,
-   "total": 11.0,
-   "failures": 7,
+   "D5": 2.0,
+   "total": 11.5,
+   "failures": 6,
    "tier": "Structurally Inadequate"
   },
   "flags": [
@@ -1791,6 +2011,36 @@
      "locator": "SC C4.5",
      "phrase": "Flag"
     }
+   },
+   {
+    "criterion": "C5.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: it satisfies neither capital nor labour, a political homelessness",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "SC C5.4",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.5",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: stakeholder governance operates in several economies",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "SC C5.5",
+     "phrase": "Flag"
+    }
    }
   ],
   "joint_readings": [
@@ -1800,8 +2050,8 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 11.0,
-     "failures": 7,
+     "total": 11.5,
+     "failures": 6,
      "tier": "Structurally Inadequate"
     }
    },
@@ -1812,12 +2062,13 @@
     "resolve": {
      "C1.4": 0.5,
      "C4.2": 0.5,
-     "C4.5": 0.5
+     "C4.5": 0.5,
+     "C5.5": 0.5
     },
     "result": {
-     "total": 12.5,
-     "failures": 4,
-     "tier": "Partially Adequate"
+     "total": 13.5,
+     "failures": 2,
+     "tier": "Potentially Adequate"
     }
    },
    {
@@ -1828,7 +2079,8 @@
      "C3.5": 0.0,
      "C4.1": 0.0,
      "C4.3": 0.0,
-     "C4.4": 0.0
+     "C4.4": 0.0,
+     "C5.4": 0.0
     },
     "result": {
      "total": 9.0,
@@ -1849,7 +2101,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -1864,7 +2116,7 @@
   "vector": {
    "C1.1": 0.5,
    "C1.2a": 0.0,
-   "C1.2b": 0.0,
+   "C1.2b": 0.5,
    "C1.3": 0.5,
    "C1.4": 0.5,
    "C1.5": 0.0,
@@ -1886,23 +2138,38 @@
    "C4.4": 0.5,
    "C4.5": 1.0,
    "C4.6": 0.5,
-   "C5.1": 0.0,
+   "C5.1": 0.5,
    "C5.2": 0.0,
    "C5.3": 0.0,
    "C5.4": 0.0,
    "C5.5": 0.5
   },
   "summary": {
-   "D1": 1.5,
+   "D1": 2.0,
    "D2": 3.0,
    "D3": 2.5,
    "D4": 3.5,
-   "D5": 0.5,
-   "total": 11.0,
-   "failures": 9,
+   "D5": 1.0,
+   "total": 12.0,
+   "failures": 7,
    "tier": "Structurally Inadequate"
   },
   "flags": [
+   {
+    "criterion": "C1.2b",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: the unresolved control of the machines read as no structural prevention",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "FALC C1.2b",
+     "phrase": "Flag"
+    }
+   },
    {
     "criterion": "C2.5",
     "scored": 0.5,
@@ -1977,6 +2244,36 @@
      "locator": "FALC C4.4",
      "phrase": "Flag"
     }
+   },
+   {
+    "criterion": "C5.1",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the 0.0 band's reading: the distinctive components are a novel projection",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "FALC C5.1",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C5.2",
+    "scored": 0.0,
+    "alternatives": [
+     0.5
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: the literature sketches a political route (municipal ownership, public banks, universal basic services), the 0.5 band's pathway sketched but unspecific",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "FALC C5.2",
+     "phrase": "Flag"
+    }
    }
   ],
   "joint_readings": [
@@ -1986,8 +2283,8 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 11.0,
-     "failures": 9,
+     "total": 12.0,
+     "failures": 7,
      "tier": "Structurally Inadequate"
     }
    },
@@ -1996,12 +2293,13 @@
     "label": "every flagged call resolved upward",
     "basis": "extremes",
     "resolve": {
-     "C3.4": 0.5
+     "C3.4": 0.5,
+     "C5.2": 0.5
     },
     "result": {
-     "total": 11.5,
-     "failures": 8,
-     "tier": "Structurally Inadequate"
+     "total": 13.0,
+     "failures": 5,
+     "tier": "Partially Adequate"
     }
    },
    {
@@ -2009,10 +2307,12 @@
     "label": "every flagged call resolved downward",
     "basis": "extremes",
     "resolve": {
+     "C1.2b": 0.0,
      "C2.5": 0.0,
      "C3.1": 0.0,
      "C3.6": 0.0,
-     "C4.4": 0.0
+     "C4.4": 0.0,
+     "C5.1": 0.0
     },
     "result": {
      "total": 9.0,
@@ -2033,7 +2333,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -2060,7 +2360,7 @@
    "C2.6": 0.5,
    "C3.1": 0.5,
    "C3.2": 0.5,
-   "C3.3": 1.0,
+   "C3.3": 0.5,
    "C3.4": 1.0,
    "C3.5": 0.5,
    "C3.6": 0.5,
@@ -2079,10 +2379,10 @@
   "summary": {
    "D1": 3.5,
    "D2": 3.0,
-   "D3": 4.0,
+   "D3": 3.5,
    "D4": 4.0,
    "D5": 2.5,
-   "total": 17.0,
+   "total": 16.5,
    "failures": 0,
    "tier": "Potentially Adequate"
   },
@@ -2114,6 +2414,21 @@
     "source": {
      "file": "NEEC_BlindReview_s76.md",
      "locator": "PE C2.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.3",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the 1.0 band's reading: explicit design for compound shocks through decentralisation",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "PE C3.3",
      "phrase": "Flag"
     }
    },
@@ -2155,6 +2470,19 @@
     "basis": "scored",
     "resolve": {},
     "result": {
+     "total": 16.5,
+     "failures": 0,
+     "tier": "Potentially Adequate"
+    }
+   },
+   {
+    "id": "up",
+    "label": "every flagged call resolved upward",
+    "basis": "extremes",
+    "resolve": {
+     "C3.3": 1.0
+    },
+    "result": {
      "total": 17.0,
      "failures": 0,
      "tier": "Potentially Adequate"
@@ -2171,7 +2499,7 @@
      "C4.5": 0.5
     },
     "result": {
-     "total": 15.0,
+     "total": 14.5,
      "failures": 2,
      "tier": "Potentially Adequate"
     }
@@ -2189,7 +2517,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -2374,7 +2702,7 @@
     "NEEC_Report_v1_6.md",
     "NEEC_Step1c_Retrofit_C1_2ab_C1_5.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -2389,7 +2717,7 @@
   "vector": {
    "C1.1": 0.5,
    "C1.2a": 0.0,
-   "C1.2b": 1.0,
+   "C1.2b": 0.5,
    "C1.3": 0.5,
    "C1.4": 0.5,
    "C1.5": 0.0,
@@ -2401,7 +2729,7 @@
    "C2.6": 0.5,
    "C3.1": 0.5,
    "C3.2": 0.5,
-   "C3.3": 1.0,
+   "C3.3": 0.5,
    "C3.4": 1.0,
    "C3.5": 0.5,
    "C3.6": 0.5,
@@ -2418,16 +2746,31 @@
    "C5.5": 0.5
   },
   "summary": {
-   "D1": 2.5,
+   "D1": 2.0,
    "D2": 3.0,
-   "D3": 4.0,
+   "D3": 3.5,
    "D4": 4.0,
    "D5": 2.5,
-   "total": 16.0,
+   "total": 15.0,
    "failures": 2,
    "tier": "Potentially Adequate"
   },
   "flags": [
+   {
+    "criterion": "C1.2b",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the published reading: no stock of wealth exists anywhere in the network for any participant to convert into leverage over others",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "INT C1.2b",
+     "phrase": "Flag"
+    }
+   },
    {
     "criterion": "C2.2",
     "scored": 0.5,
@@ -2471,6 +2814,36 @@
     "source": {
      "file": "NEEC_BlindReview_s76.md",
      "locator": "INT C2.6",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.2",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: no internal prices and a one-way boundary keep internal inflation at zero, as clause 1 is read",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "INT C3.2",
+     "phrase": "Flag"
+    }
+   },
+   {
+    "criterion": "C3.3",
+    "scored": 0.5,
+    "alternatives": [
+     1.0
+    ],
+    "basis": "stated",
+    "reading": "the 1.0 band's reading: redundancy at every layer, so that node failures do not cascade",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "INT C3.3",
      "phrase": "Flag"
     }
    },
@@ -2527,7 +2900,7 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 16.0,
+     "total": 15.0,
      "failures": 2,
      "tier": "Potentially Adequate"
     }
@@ -2537,11 +2910,14 @@
     "label": "every flagged call resolved upward",
     "basis": "extremes",
     "resolve": {
+     "C1.2b": 1.0,
      "C2.2": 1.0,
-     "C2.5": 1.0
+     "C2.5": 1.0,
+     "C3.2": 1.0,
+     "C3.3": 1.0
     },
     "result": {
-     "total": 17.0,
+     "total": 17.5,
      "failures": 2,
      "tier": "Potentially Adequate"
     }
@@ -2558,7 +2934,7 @@
      "C5.2": 0.0
     },
     "result": {
-     "total": 13.5,
+     "total": 12.5,
      "failures": 5,
      "tier": "Partially Adequate"
     }
@@ -2575,7 +2951,7 @@
    "documents": [
     "NEEC_Georgism_LVT_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -2682,7 +3058,7 @@
    "documents": [
     "NEEC_MutualCredit_LETS_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -2697,7 +3073,7 @@
   "vector": {
    "C1.1": 0.5,
    "C1.2a": 0.0,
-   "C1.2b": 1.0,
+   "C1.2b": 0.5,
    "C1.3": 0.0,
    "C1.4": 0.5,
    "C1.5": 0.0,
@@ -2726,16 +3102,31 @@
    "C5.5": 1.0
   },
   "summary": {
-   "D1": 2.0,
+   "D1": 1.5,
    "D2": 3.0,
    "D3": 3.0,
    "D4": 3.0,
    "D5": 3.0,
-   "total": 14.0,
+   "total": 13.5,
    "failures": 3,
    "tier": "Partially Adequate"
   },
   "flags": [
+   {
+    "criterion": "C2.2",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: a capped, repayable credit line is no baseline independent of work",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "MC C2.2",
+     "phrase": "Flag"
+    }
+   },
    {
     "criterion": "C4.3",
     "scored": 0.5,
@@ -2804,7 +3195,7 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 14.0,
+     "total": 13.5,
      "failures": 3,
      "tier": "Partially Adequate"
     }
@@ -2817,7 +3208,7 @@
      "C5.1": 1.0
     },
     "result": {
-     "total": 14.5,
+     "total": 14.0,
      "failures": 3,
      "tier": "Partially Adequate"
     }
@@ -2827,14 +3218,15 @@
     "label": "every flagged call resolved downward",
     "basis": "extremes",
     "resolve": {
+     "C2.2": 0.0,
      "C4.3": 0.0,
      "C5.2": 0.0,
      "C5.5": 0.5
     },
     "result": {
-     "total": 12.5,
-     "failures": 5,
-     "tier": "Partially Adequate"
+     "total": 11.5,
+     "failures": 6,
+     "tier": "Structurally Inadequate"
     }
    }
   ],
@@ -2849,7 +3241,7 @@
    "documents": [
     "NEEC_DoughnutEconomics_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -3048,7 +3440,7 @@
    "documents": [
     "NEEC_UniversalBasicServices_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -3215,7 +3607,7 @@
    "documents": [
     "NEEC_SovereignWealthFundStatism_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -3294,7 +3686,7 @@
     "reading": "evidence dated from the market evidence of lower expected returns rather than from the formal assessment, which makes the expected-return revision slow",
     "tracks": null,
     "source": {
-     "file": "NEEC_Rescoring_s65.md",
+     "file": "NEEC_Adjudication_s83.md",
      "locator": "SWF C3.4",
      "phrase": "Flag"
     }
@@ -3381,12 +3773,12 @@
      1.0
     ],
     "basis": "stated",
-    "reading": "the pre-existing anchor text read in isolation",
+    "reading": "the outside reader's reading, and the published flag: the mechanism has survived every change of administration, in Alaska since 1982 and in Norway since 1990",
     "tracks": null,
     "source": {
-     "file": "NEEC_SovereignWealthFundStatism_scoring_scratch.md",
-     "locator": "C5.4",
-     "phrase": "would point toward 1.0"
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "SWF C5.4",
+     "phrase": "Flag"
     }
    }
   ],
@@ -3446,7 +3838,7 @@
    "documents": [
     "NEEC_StateCapitalism_China_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -3739,7 +4131,7 @@
    "documents": [
     "NEEC_StateCapitalism_Singapore_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -3766,7 +4158,7 @@
    "C2.5": 0.5,
    "C2.6": 0.5,
    "C3.1": 0.5,
-   "C3.2": 1.0,
+   "C3.2": 0.5,
    "C3.3": 0.5,
    "C3.4": 0.5,
    "C3.5": 0.5,
@@ -3786,10 +4178,10 @@
   "summary": {
    "D1": 3.0,
    "D2": 2.5,
-   "D3": 4.0,
+   "D3": 3.5,
    "D4": 2.0,
    "D5": 2.5,
-   "total": 14.0,
+   "total": 13.5,
    "failures": 3,
    "tier": "Partially Adequate"
   },
@@ -3826,16 +4218,17 @@
    },
    {
     "criterion": "C3.2",
-    "scored": 1.0,
+    "scored": 0.5,
     "alternatives": [
-     0.5
+     1.0
     ],
-    "basis": "register",
-    "reading": "headline-inflation stress-test reading (6.1% in 2022)",
+    "basis": "stated",
+    "reading": "the published reading: core inflation of 4.1% in 2022 below the stress bar",
     "tracks": null,
     "source": {
-     "file": "verify_singapore.py",
-     "locator": "FLAGGED"
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "SG C3.2",
+     "phrase": "Flag"
     }
    },
    {
@@ -3965,7 +4358,7 @@
     "basis": "scored",
     "resolve": {},
     "result": {
-     "total": 14.0,
+     "total": 13.5,
      "failures": 3,
      "tier": "Partially Adequate"
     }
@@ -3976,6 +4369,7 @@
     "basis": "extremes",
     "resolve": {
      "C1.2a": 1.0,
+     "C3.2": 1.0,
      "C4.2": 0.5,
      "C4.4": 0.5,
      "C5.1": 1.0,
@@ -3993,7 +4387,6 @@
     "basis": "extremes",
     "resolve": {
      "C1.4": 0.0,
-     "C3.2": 0.5,
      "C3.5": 0.0,
      "C3.6": 0.5,
      "C4.3": 0.0,
@@ -4032,7 +4425,7 @@
    "documents": [
     "NEEC_StateCapitalism_Qatar_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -4129,6 +4522,21 @@
     "source": {
      "file": "verify_qatar.py",
      "locator": "FLAGGED"
+    }
+   },
+   {
+    "criterion": "C1.4",
+    "scored": 0.5,
+    "alternatives": [
+     0.0
+    ],
+    "basis": "stated",
+    "reading": "the outside reader's reading: for the non-citizen majority, income and demand rest wholly on wage labour (the 0.0 band)",
+    "tracks": null,
+    "source": {
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "QA C1.4",
+     "phrase": "Flag"
     }
    },
    {
@@ -4364,14 +4772,15 @@
     "resolve": {
      "C1.1": 0.0,
      "C1.2b": 0.0,
+     "C1.4": 0.0,
      "C2.5": 0.0,
      "C3.5": 0.0,
      "C3.6": 0.0,
      "C4.1": 0.5
     },
     "result": {
-     "total": 7.0,
-     "failures": 15,
+     "total": 6.5,
+     "failures": 16,
      "tier": "Structurally Inadequate"
     }
    }
@@ -4407,7 +4816,7 @@
    "documents": [
     "NEEC_IslamicFinance_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {
@@ -4615,12 +5024,13 @@
     "alternatives": [
      0.5
     ],
-    "basis": "register",
-    "reading": null,
+    "basis": "stated",
+    "reading": "read as requiring a documented range of at least 40% in a named parameter, which the scoring document does not give (as Mutual Credit's flag reads its clause 3)",
     "tracks": null,
     "source": {
-     "file": "verify_islamicfinance.py",
-     "locator": "FLAGGED"
+     "file": "NEEC_Adjudication_s83.md",
+     "locator": "IF C5.5",
+     "phrase": "Flag"
     }
    }
   ],
@@ -4698,7 +5108,7 @@
    "documents": [
     "NEEC_Ostrom_Commons_scoring_scratch.md"
    ],
-   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md), applied by apply_owner_s79.py; provisional until the outside review and Report and Paper v2.0",
+   "scored": "NEEC v1 scores re-estimated on the v2.0 criteria by the rescoring pass (NEEC_Rescoring_s37.md to NEEC_Rescoring_s65.md), the three new criteria scored in Session 65, re-read blind in Sessions 71 to 77 (NEEC_BlindReview_s71.md to NEEC_BlindReview_s77.md), with the owner's decisions 79.1 to 79.4 (NEEC_OwnerDecisions_s79.md) and the adjudication of the outside review (NEEC_Adjudication_s83.md), applied by apply_adjudication_s83.py; provisional until Report and Paper v2.0",
    "structure": "v2.0, 29 criteria"
   },
   "scope": {

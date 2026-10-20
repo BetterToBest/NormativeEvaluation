@@ -2,7 +2,7 @@
 """
 run_all_checks.py -- NEEC single entry point for reproducibility checks
 =======================================================================
-Version 51 (Session 82). Runs every verification and analysis script on file
+Version 52 (Session 83). Runs every verification and analysis script on file
 and confirms that each still reproduces its captured output BYTE FOR BYTE.
 Three scripts written before Session 20 had no captured output; theirs was
 first captured in Session 20 (verify_ubs, verify_new_systems, step1c_retrofit).
@@ -316,6 +316,14 @@ that plants one leak of each of seven kinds and shows each caught; and outside_r
 Version 51 (Session 82) adds compare_outside.py, the outside review's pre-registered comparison of the reader's, Jev's and stage B's
 results with NEEC's (ledger S64), run on the committed copies of the results, with a negative control in which it must refuse a
 corpus file that is not the one the pre-registration names: 142 checks.
+Version 52 (Session 83) adds apply_adjudication_s83.py --check, which writes the v2 files with the adjudication of the outside
+review's 177 disagreements laid over the owner's decisions (adjudicate_s83.py, by final_pass.adjudicated_state()), recomputes
+the disagreements from the run's results and checks every outcome, with a negative control; and weighting_s83.py, the four
+weighting schemes, leave-one-out and close-call tests of first place on the v2 corpus. apply_owner_s79.py's files are kept as
+neec_corpus_v2_s79_snapshot.json and its two companions, which compare_outside.py and outside_kit.py now read (the bytes the
+pre-registration and the kit name); final_pass.py --selftest also checks the adjudication's layer; build_evidence.py shows
+the outside review's verdict and the adjudication's outcome; build_evidence.py and build_site.py check the regenerated files:
+145 checks.
 
 HOW EACH CHECK RUNS. A check copies exactly the files its script needs into
 a fresh temporary directory (under the names the script expects), runs the
@@ -1740,7 +1748,7 @@ S78_V2 = ("neec_corpus_v2.json", "neec_scores_v2.csv", "summary_blocks_v2.json")
 # Session 79: apply_final_s78.py's three files are kept as the Session 78 snapshots; final_pass.py loads owner_s79.py
 S78_SNAP = ("neec_corpus_v2_s78_snapshot.json", "neec_scores_v2_s78_snapshot.csv", "summary_blocks_v2_s78_snapshot.json")
 S78_FILES = {**S77_FILES, **{k: k for k in ("final_pass.py", "apply_final_s78.py", "build_evidence.py", "NEEC_FinalApplication_s78.md",
-                                            "site/config.json", "owner_s79.py") + S78_V2 + S78_SNAP}}
+                                            "site/config.json", "owner_s79.py", "adjudicate_s83.py") + S78_V2 + S78_SNAP}}
 S78_CHECKS = [
     dict(name="final_pass.py --selftest: the seven blind groups' FINAL dictionaries (221 units: 24, 23, 33, 31, 41, 51, 18) load, "
               "overlap nowhere, replace the pass's reading of the same cell (the 26 published criteria's merged units and the 69 "
@@ -1767,9 +1775,12 @@ for _c in S68_CHECKS:    # build_evidence.py --check reads the regenerated v2 fi
 
 # Session 79: the owner's decisions 79.1 to 79.4 (owner_s79.py), laid over the final readings by final_pass.owner_state() and
 # written by apply_owner_s79.py into the v2 files; build_evidence.py and build_site.py read them (their files above).
-S79_FILES = {**S78_FILES, **{k: k for k in ("apply_owner_s79.py", "NEEC_OwnerDecisions_s79.md")}}
+# Session 83: apply_owner_s79.py's three files are kept as the Session 79 snapshots (the v2 files carry the adjudication)
+S79_SNAP = ("neec_corpus_v2_s79_snapshot.json", "neec_scores_v2_s79_snapshot.csv", "summary_blocks_v2_s79_snapshot.json")
+S79_FILES = {**S78_FILES, **{k: k for k in ("apply_owner_s79.py", "NEEC_OwnerDecisions_s79.md") + S79_SNAP}}
 S79_CHECKS = [
-    dict(name="apply_owner_s79.py --check: the owner's decisions 79.1 to 79.4 applied: the v2 corpus, scores, blocks and "
+    dict(name="apply_owner_s79.py --check: the owner's decisions 79.1 to 79.4 applied: the corpus, scores and blocks, kept "
+              "from Session 83 as the Session 79 snapshots (neec_corpus_v2_s79_snapshot.json and its two companions), and "
               "NEEC_OwnerDecisions_s79.md equal what it produces; the corpus differs from the Session 78 snapshot in exactly "
               "seven cells, each 0.5 to 1.0 (CCO-PTF-CIP-SZH C1.2a, C2.5 and C3.4; Integral, Participatory Economics, Degrowth "
               "Economics and Ostrom-Style Commons Governance C3.4), each a close call toward 0.5; no tier changes; "
@@ -1778,8 +1789,8 @@ S79_CHECKS = [
          cmd=["python", "apply_owner_s79.py", "--check"], files=S79_FILES,
          stdout="apply_owner_s79_output.txt", stderr=EMPTY),
 ]
-S79_CHECKS.append(dict(S79_CHECKS[0], files={**S79_FILES, "neec_corpus_v2.json": "neec_corpus_v2_s78_snapshot.json"},
-                       name="apply_owner_s79.py --check rejects a neec_corpus_v2.json that is the Session 78 snapshot "
+S79_CHECKS.append(dict(S79_CHECKS[0], files={**S79_FILES, "neec_corpus_v2_s79_snapshot.json": "neec_corpus_v2_s78_snapshot.json"},
+                       name="apply_owner_s79.py --check rejects a Session 79 corpus that is the Session 78 snapshot "
                             "(negative control; exit 1 expected)",
                        stdout="apply_owner_s79_check_negative_output.txt", expect_exit=1))
 for _c in S68_CHECKS:    # build_evidence.py --check shows the owner's layer and links its record
@@ -1789,7 +1800,8 @@ for _c in S68_CHECKS:    # build_evidence.py --check shows the owner's layer and
 # (outside_review_runner.py, which the leak check imports to build every prompt as the run will).
 S80_FILES = {**tree("outside_kit", "outside_kit_sources", "evidence_cache"),
              **{k: k for k in ("outside_kit.py", "outside_kit_check.py", "outside_review_runner.py", "criteria.json",
-                               "neec_corpus_v2.json", "summary_blocks_v2.json", "SCORING_PROTOCOL.md")}}
+                               "neec_corpus_v2_s79_snapshot.json", "summary_blocks_v2_s79_snapshot.json",
+                               "SCORING_PROTOCOL.md")}}
 S80_CHECKS = [
     dict(name="outside_kit.py --check: the outside review's kit (outside_kit/: the instructions, the blind rules, 29 "
               "criteria with their worked examples removed, 23 system files, the source packs, the order of 696 calls, "
@@ -1820,7 +1832,7 @@ S80_CHECKS = [
 # Session 82: the comparison of the outside review's readings with NEEC's (compare_outside.py, ledger S64). It reads the run's
 # three result files (gzipped copies in outside_review_r1/results/, byte-identical to the results repository's), the kit's unit
 # list and NEEC's clause records (final_pass.owner_state / final_state over the rescoring pass).
-S82_FILES = {**S79_FILES, **{k: k for k in ("compare_outside.py", "neec_corpus_v2_s78_snapshot.json", "summary_blocks_v2.json",
+S82_FILES = {**S79_FILES, **{k: k for k in ("compare_outside.py", "neec_corpus_v2_s78_snapshot.json",
                                             "outside_review_r1/kit_units.jsonl", "outside_review_r1/results/reader.jsonl.gz",
                                             "outside_review_r1/results/jev.jsonl.gz", "outside_review_r1/results/stage_b.jsonl.gz")}}
 S82_CHECKS = [
@@ -1832,10 +1844,38 @@ S82_CHECKS = [
          cmd=["python", "compare_outside.py"], files=S82_FILES,
          stdout="compare_outside_output.txt", stderr=EMPTY),
 ]
-S82_CHECKS.append(dict(S82_CHECKS[0], files={**S82_FILES, "neec_corpus_v2.json": "neec_corpus_v2_s78_snapshot.json"},
-                       name="compare_outside.py rejects a neec_corpus_v2.json that is the Session 78 snapshot, not the file the "
+S82_CHECKS.append(dict(S82_CHECKS[0], files={**S82_FILES, "neec_corpus_v2_s79_snapshot.json": "neec_corpus_v2_s78_snapshot.json"},
+                       name="compare_outside.py rejects a Session 79 corpus that is the Session 78 snapshot, not the file the "
                             "pre-registration names (negative control; exit 1 expected)",
                        stdout="compare_outside_negative_output.txt", expect_exit=1))
+
+# Session 83: the adjudication of the outside review's 177 disagreements (adjudicate_s83.py, ledger S65), laid over the owner's
+# decisions by final_pass.adjudicated_state() and written by apply_adjudication_s83.py into the v2 files; build_evidence.py and
+# build_site.py read them, and build_evidence.py also reads the run's reader and stage B results.
+S83_RUN = ("outside_review_r1/kit_units.jsonl", "outside_review_r1/results/reader.jsonl.gz",
+           "outside_review_r1/results/stage_b.jsonl.gz")
+S83_FILES = {**S79_FILES, **{k: k for k in ("apply_adjudication_s83.py", "NEEC_Adjudication_s83.md") + S83_RUN}}
+S83_CHECKS = [
+    dict(name="apply_adjudication_s83.py --check: the adjudication of the outside review applied: the v2 corpus, scores and "
+              "blocks and the record's generated tables equal what it produces; the run's reader results against the Session "
+              "79 corpus give 177 disagreements, each with its outcome (150 hold, 17 adopt, 1 third reading, 4 to the owner, 5 "
+              "owner-decided cells that stand); the corpus differs from the Session 79 snapshot in exactly the 18 changed cells; "
+              "no CCO-PTF-CIP-SZH or owner-decided cell changes; no tier changes; CCO-PTF-CIP-SZH first alone at 17.5, "
+              "Participatory Economics 16.5",
+         cmd=["python", "apply_adjudication_s83.py", "--check"], files=S83_FILES,
+         stdout="apply_adjudication_s83_output.txt", stderr=EMPTY),
+    dict(name="weighting_s83.py: the four weighting schemes (equal; D1 x2; D5 x0.5; C1.4 and C4.2 x3) on the v2 corpus in three "
+              "states (Session 79, adjudicated, adjudicated with the four owner items), first place when each criterion is "
+              "dropped in turn, and when the leader's close calls all resolve down and the runner-up's up",
+         cmd=["python", "weighting_s83.py"], files={**S83_FILES, "weighting_s83.py": "weighting_s83.py"},
+         stdout="weighting_s83_output.txt", stderr=EMPTY),
+]
+S83_CHECKS.insert(1, dict(S83_CHECKS[0], files={**S83_FILES, "neec_corpus_v2.json": "neec_corpus_v2_s79_snapshot.json"},
+                          name="apply_adjudication_s83.py --check rejects a neec_corpus_v2.json that is the Session 79 snapshot "
+                               "(negative control; exit 1 expected)",
+                          stdout="apply_adjudication_s83_check_negative_output.txt", expect_exit=1))
+for _c in S68_CHECKS:    # build_evidence.py --check shows the adjudication's layer and the outside review's verdicts
+    _c["files"] = {**_c["files"], **{k: k for k in ("adjudicate_s83.py", "NEEC_Adjudication_s83.md") + S83_RUN}}
 
 CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + [pin44(c) for c in S36_CHECKS + S37_CHECKS + S38_CHECKS + S39_CHECKS + S40_CHECKS + S41_CHECKS
@@ -1843,7 +1883,7 @@ CHECKS = (S33_CHECKS + [pin32(c) for c in V7_CHECKS] + S34_CHECKS + S35_CHECKS
           + S45_CHECKS + S47_CHECKS + S48_CHECKS + S49_CHECKS + S50_CHECKS + S51_CHECKS + S52_CHECKS + S53_CHECKS
           + S54_CHECKS + S56_CHECKS + S57_CHECKS + S58_CHECKS + S60_CHECKS + S61_CHECKS + S63_CHECKS + S64_CHECKS
           + S65_CHECKS + S68_CHECKS + S69_CHECKS + S70_CHECKS + S71_CHECKS + S72_CHECKS + S73_CHECKS + S74_CHECKS
-          + S75_CHECKS + S76_CHECKS + S77_CHECKS + S78_CHECKS + S79_CHECKS + S80_CHECKS + S82_CHECKS)
+          + S75_CHECKS + S76_CHECKS + S77_CHECKS + S78_CHECKS + S79_CHECKS + S80_CHECKS + S82_CHECKS + S83_CHECKS)
 
 
 def md5(data):

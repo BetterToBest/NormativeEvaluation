@@ -6,7 +6,7 @@ compare_outside.py: NEEC outside blind review, run r1 (PREREG.md sections 2 to 7
 
 3. PRIMARY OUTCOME: VERDICT AGREEMENT (the reader's first reading of each of the 667 units against NEEC's published verdict)
 
-3a. Against NEEC with the owner's decisions (neec_corpus_v2.json)
+3a. Against NEEC with the owner's decisions (neec_corpus_v2_s79_snapshot.json)
                                         n  agree    rate   direction of the disagreements (reader relative to NEEC)
   all answered units                  667   490   73.5%   up  93 (0.5: 92 1.0:  1)  down  84 (0.5: 84 1.0:  0)
   by priority group

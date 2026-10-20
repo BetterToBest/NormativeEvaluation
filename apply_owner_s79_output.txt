@@ -1,6 +1,6 @@
-  PASS neec_corpus_v2.json equals what the generator produces
-  PASS neec_scores_v2.csv equals what the generator produces
-  PASS summary_blocks_v2.json equals what the generator produces
+  PASS neec_corpus_v2_s79_snapshot.json equals what the generator produces
+  PASS neec_scores_v2_s79_snapshot.csv equals what the generator produces
+  PASS summary_blocks_v2_s79_snapshot.json equals what the generator produces
   PASS NEEC_OwnerDecisions_s79.md equals what the generator produces
   PASS the corpus carries the verdict of each of the 496 units
   PASS the corpus differs from the Session 78 snapshot in exactly the seven cells of decisions 79.1 to 79.4, each 0.5 to 1.0
