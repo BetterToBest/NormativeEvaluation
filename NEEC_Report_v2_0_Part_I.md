@@ -88,7 +88,7 @@ poverty and demand under 30%, 50% and 70% displacement of paid hours), and almos
 economy, states them.
 
 **C1.1, poverty.** None of the nine v1 passes holds; 21 entries score 0.5 and two 0.0. The threshold asks for a 90%
-reduction within 20 years and 85% under stress. Seven designs clear the first clause on their own projections (Market
+reduction within 20 years and 85% under stress. Seven entries clear the first clause on their own projections (Market
 Socialism, Participatory Economics, Universal Basic Income, Degrowth, MMT + Job Guarantee, Fully Automated Luxury Communism,
 and Centrally Planned Socialism on its record of absolute poverty), but none states a figure under stress; where a stress
 episode is documented, as Cuba's Special Period is for Centrally Planned Socialism, it records a fall in food intake, not a
@@ -3720,9 +3720,10 @@ enterprises, and no regulatory agency existed until 1988). Nordic Social Democra
 to 0.99 against the bar of 0.77) and the second is not shown: the law in force makes polluters liable, but no claim decided
 and paid within the window is named for any of the four. Every other entry scores 0.5: none shows all three clauses.
 
-**What the domain does not show.** One clause reading in this domain carries an unfilled template field from Session 49
-(Nordic Social Democracy's C4.3, clause 2: "{LAST}" and "{DKTREND}" where the generator's figures belong); the score is
-unaffected, and the record is listed for correction (ledger I13).
+**What the domain does not show.** Three of Nordic Social Democracy's readings carry unfilled template fields from the
+pass's scripts of Sessions 48 to 50 (C4.3 and C4.4 here, C5.4 in Domain 5: braced names such as "{LAST}" or "{RATIO}" where the
+scripts' computed figures belong; the scripts fill them in their own records, but the stored units keep the template). The
+statuses and the scores are unaffected; the readings are listed for correction (ledger I13).
 
 <!-- generated:D4 -->
 ### C4.1 Intergenerational Justice
@@ -4939,7 +4940,58 @@ Read in group 2.11 (Session 65) and re-read blind in Session 77.
 Close call: a reasonable scorer could set 0.5. 0.0: the polluter and the regulator one state, with no agency until 1988
 <!-- /generated -->
 
-## Domain 5
+## Domain 5: Implementation Viability
+
+Five criteria: a proven foundation (C5.1), staged transition (C5.2), partial and parallel deployment (C5.3), political
+coalition (C5.4) and cultural adaptability (C5.5). It is the domain with the most held cells (56 of 115), because three of
+its thresholds were unchanged in v2.0 (class U) and one was reworded (class W). v1 scored 41 cells at 1.0; v2.0 scores 15,
+the most of any domain, and every one belongs to a mechanism or a configured economy, which have records; none belongs to
+one of the nine comprehensive designs, which have plans.
+
+**C5.1, a proven foundation.** Two pass: Ostrom-Style Commons Governance (Valencia's water tribunal for about a thousand
+years; Nepal's community forestry with about 2.9 million households; outcomes documented across three multi-case
+datasets) and Universal Basic Income (Alaska's dividend, universal for more than 40 years, with a documented reduction in
+poverty), the latter with a close call toward 0.5. Eleven of v1's thirteen passes fall, most on the second clause,
+documented outcomes matching the benefits claimed: Nordic Social Democracy's decades at national scale are proven, but its
+headline claims of near-universal material security are recorded short by the corpus's own amended scores. Seven of the
+falls carry close calls toward 1.0. CCO-PTF-PTH-SZH-CIP's cited precedents cover three of its five components. Fully
+Automated Luxury Communism rises from 0.0 to 0.5.
+
+**C5.2, staged transition.** Two pass. Sovereign Wealth Fund Statism rises from 0.5 on its own deployments: four dated
+stages in Norway from 1990 to 1998, Timor-Leste's fund after 2002 as a post-crisis precedent, dated targets set and met, and
+documented resources and mitigations. Status Quo passes because the existing system needs no transition (every clause
+moot). Six of v1's seven passes fall: the designs' phases, milestones and resources are their own plans, with no precedent
+of comparable deployment (CCO-PTF-PTH-SZH-CIP's roadmap launches its dual currency for all Americans in year 2, and only its
+risk mitigation clears). Fully Automated Luxury Communism ("a destination without a roadmap") and Centrally Planned Socialism
+fail.
+
+**C5.3, partial and parallel deployment.** Seven pass, the domain's most: five held at their published 1.0 (Sovereign Wealth
+Fund Statism, Ostrom, Georgism, Islamic Finance, Status Quo) and two re-read (Universal Basic Income; Universal Basic
+Services, whose sectors were adopted one at a time, as Quebec's low-fee childcare raised mothers' employment and scaled to
+all of Canada by 2022). The seven that fall from 1.0 fall on the third or fourth clause, a modelled scaling pathway or
+coordination protocols in operation (Market Socialism's largest federation, Mondragon, has about 70,000 workers). CCO-PTF-PTH-SZH-CIP's
+falls by the owner's decision 84.2: its own papers put minimum viable participation at 55% to 65%, against the threshold's
+30%. Fully Automated Luxury Communism and Centrally Planned Socialism are held at 0.0.
+
+**C5.4, political coalition.** One pass: Nordic Social Democracy (public satisfaction of 70% to 85%; its universal insurance
+and services kept through every change of government, centre-right governments included), with a close call toward 0.5.
+CCO-PTF-PTH-SZH-CIP falls from 1.0: Alaska's dividend shows broad approval of one component, but its documents project no
+opposition to repeal and no survival across administrations (its own modelling paper puts political resistance in 34% of
+scenarios). Degrowth fails on structural or rhetorical features that repel coalition-building (the name is chosen as a
+provocation; resistance among unions is recorded in its own literature), with Fully Automated Luxury Communism and Centrally
+Planned Socialism held at 0.0. Stakeholder Capitalism rises from 0.0 to 0.5.
+
+**C5.5, cultural adaptability.** Three pass: Mutual Credit (each network sets its own credit limits and rules; implementations
+in at least five cultural contexts and across income levels), Islamic Finance, and Ostrom-Style Commons Governance (held);
+the first two carry close calls toward 0.5. Participatory Economics falls from 1.0: no economy has been organised on the
+design, so nothing validates its operation across implementations. Market Socialism and Universal Basic Income rise from 0.0
+to 0.5 in the adjudication. Stakeholder Capitalism fails (it needs a cultural consensus that corporations serve the social
+good, which competitive pressure contradicts and the system cannot itself produce), and Qatar is held at 0.0.
+
+**What the domain does not show.** Its held cells (56) rest on v1 rationales; three of its criteria were unchanged in v2.0,
+so the pass did not re-read them unless another reading reached them, and the outside review and its adjudication are the
+only second reading most of them have had. The domain's verdicts on the designs measure what has been demonstrated, which
+for a design not yet built is little by construction; the limits page states this.
 
 <!-- generated:D5 -->
 ### C5.1 Proven Component Foundation
