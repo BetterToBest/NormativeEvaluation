@@ -3669,7 +3669,60 @@ Read in group 2.11 (Session 65) and re-read blind in Session 77.
 Close call: a reasonable scorer could set 0.0. 0.5: output per worker rising, TFP declining on growth accounting; held from 0.0 by D28(f)
 <!-- /generated -->
 
-## Domain 4
+## Domain 4: Ethical Integrity
+
+Six criteria: intergenerational justice (C4.1), ecological compliance (C4.2), group equity (C4.3), the distribution of power
+(C4.4), the elimination of exploitation (C4.5), and, new in v2.0, the internalisation of harm (C4.6). Every one of the
+domain's 138 cells was read in v2.0, and it moved most in both directions: 14 cells up and 32 down. v1 scored 34 of 115 at
+1.0; v2.0 scores seven of 138. The criteria where a design's structure decides the question (C4.4, C4.5) keep their passes;
+the criteria that ask for a measured trend (C4.2, C4.3) have none.
+
+**C4.1, intergenerational justice.** One pass, and it is new: Qatar (general government debt 42.5% of GDP in 2025, at most
+46.4% on the IMF's projection to 2031; net national saving positive in every year from 2012 to 2021 and positive net of gas
+and oil depletion), with a close call toward 0.5. All eight v1 passes fall, on one clause or both: a design that adds no public debt keeps its
+host's (CCO-PTF-PTH-SZH-CIP is far short on its host's figures, though it clears the transfer clause), several designs state
+neither figure, and two mechanisms are out of reach. Finland's debt, above 80% since 2024, makes Nordic Social Democracy
+short. Status Quo, Stakeholder Capitalism and Libertarian
+Minarchism rise from 0.0 to 0.5; no entry fails, against three in v1.
+
+**C4.2, ecological compliance.** No entry passes; v1's seven passes all fall, because no design states a trend in
+consumption-based emissions, biodiversity, extraction or the downscaled planetary boundaries. Six fail. Status Quo's
+consumption emissions fall 0.37% a year against the bar's 3.8%, its Red List Index declines and all four boundaries are
+transgressed; Singapore, Qatar, Stakeholder Capitalism and Libertarian Minarchism also fail; Centrally Planned
+Socialism falls to 0.0 (the Soviet territories' emissions rose 2.7 times between 1960 and 1988, and the plan itself destroyed
+the Aral Sea). China rises from 0.0 to 0.5: its emissions still rise, but only two of the four boundaries are transgressed.
+Sovereign Wealth Fund Statism and Islamic Finance rise from 0.0 to 0.5 as mechanisms out of reach of their hosts' ecology.
+
+**C4.3, group equity.** No entry passes; v1's seven passes fall. The designs state no disparity trend on any axis. Status Quo
+falls to 0.0 on the measure v2.0 names: the gap between Black and Asian households' medians is above 50% and widened by 7.7
+points from 2002 to 2025, and the Black-white gap has stayed between 34.8% and 44.7% in all 53 editions since 1972. Nordic
+Social Democracy is short on the immigrant axis its own text declares. Four fail: Status Quo, Libertarian Minarchism, China
+and Qatar.
+
+**C4.4, power distribution.** Three pass, all designs whose structure is the threshold's condition: Market Socialism
+(enterprises owned by those who work in them; administrators the general assembly can dismiss), Participatory Economics (no
+owners of capital or managerial hierarchy; recallable, rotated delegates) and Integral. CCO-PTF-PTH-SZH-CIP, Nordic Social
+Democracy and Degrowth fall from 1.0: Nordic Social Democracy's public sectors are accountable but most major decisions are
+taken in private firms. Five entries rise from 0.0 to 0.5, among them Status Quo and Stakeholder Capitalism (functioning
+removal of governments, the first clause short); five fail: Centrally Planned Socialism, Doughnut Economics, China, Singapore
+and Qatar.
+
+**C4.5, exploitation.** Three pass: Participatory Economics (up from 0.0; no private ownership of productive assets, so no
+profit, rent or interest accrues to owners, and an allowance for those who do not work), Integral and Fully Automated Luxury
+Communism; the first two carry close calls toward 0.5. Libertarian Minarchism falls from 1.0 to 0.0 (every extractive
+relationship kept, exit no more than the formal right to quit; the reading that settled ledger I9), and Stakeholder
+Capitalism from 0.5 to 0.0. Seven fail: Status Quo, China, Qatar, Stakeholder Capitalism, Sovereign Wealth Fund Statism,
+Libertarian Minarchism and Doughnut Economics.
+
+**C4.6, harm internalisation (new).** No entry passes; Centrally Planned Socialism fails (the state owned the polluting
+enterprises, and no regulatory agency existed until 1988). Nordic Social Democracy clears the first and third clauses
+(pollution mortality fell in each of the four, Denmark's from 51.3 to 23.5 per 100,000; World Justice Project scores of 0.92
+to 0.99 against the bar of 0.77) and the second is not shown: the law in force makes polluters liable, but no claim decided
+and paid within the window is named for any of the four. Every other entry scores 0.5: none shows all three clauses.
+
+**What the domain does not show.** One clause reading in this domain carries an unfilled template field from Session 49
+(Nordic Social Democracy's C4.3, clause 2: "{LAST}" and "{DKTREND}" where the generator's figures belong); the score is
+unaffected, and the record is listed for correction (ledger I13).
 
 <!-- generated:D4 -->
 ### C4.1 Intergenerational Justice
