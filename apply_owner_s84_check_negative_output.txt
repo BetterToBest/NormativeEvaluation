@@ -1,0 +1,14 @@
+  FAIL neec_corpus_v2.json equals what the generator produces
+  PASS summary_blocks_v2.json equals what the generator produces
+  PASS neec_scores_v2.csv equals what the generator produces
+  PASS NEEC_OwnerItems_s84.md carries every generated table (changes, standing, summary, withwithout) as the generator produces it
+  FAIL the corpus carries the verdict of each of the 519 units
+  FAIL the corpus differs from the Session 83 snapshot in exactly the 5 cells the layer changes, each 1.0 to 0.5 (the four owner items as the adjudication reads them, and Participatory Economics' C1.2b); CCO-PTF-PTH-SZH-CIP's C3.4 holds at 1.0
+  FAIL the entry is shown as CCO-PTF-PTH-SZH-CIP in the corpus, the CSV and the blocks; its key keeps the identifier
+  FAIL each total and failure count in the CSV is the sum of the corpus vector
+  FAIL each block's vector and total equal the corpus's, and each changed unit with a flag is a close call toward its alternative
+  FAIL CCO-PTF-PTH-SZH-CIP is first alone at 16.5; Participatory Economics 15.5, level with the next
+  PASS no tier changes
+  FAIL on the readings alone (the raises of 58.1 and 79.1 to 79.4 reversed), CCO-PTF-PTH-SZH-CIP stands at 14.5, below the first place at 15.5
+
+OWNER ITEMS OF SESSION 84: CHECKS FAILED.

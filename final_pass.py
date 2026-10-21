@@ -131,6 +131,43 @@ def adjudicated_state(p):
     return units, part_of, new_units, new_part_of, final_part_of, owner_part_of
 
 
+def settled_units(units, new_units):
+    """Session 84's units (owner_s84.py): the four owner items as the adjudication reads them, CCO-PTF-CIP-SZH's C3.4 with
+    clauses 1 and 3 re-read (every other clause carried, the verdict by D28), and Participatory Economics' C1.2b."""
+    with redirect_stdout(io.StringIO()):
+        adj = pc.load("adjudicate_s83", "adjudicate_s83.py")
+        s84 = pc.load("owner_s84", "owner_s84.py")
+    out = {}
+    for k in s84.OWNER:
+        u = adj.OWNER[k]["unit"]
+        out[k] = {x: u[x] for x in ("verdict", "clauses", "flag", "note", "zero")}
+    for k, rv in s84.REVISIONS.items():
+        prior = new_units[k] if k in new_units else units[k]
+        cl = [tuple(c) for c in prior["clauses"]]
+        for n, c in rv["clauses"].items():
+            cl[n - 1] = tuple(c)
+        out[k] = {"verdict": pc.verdict_of(cl), "clauses": cl, "flag": prior["flag"],
+                  "note": prior["note"] + "; " + rv["note"], "zero": None}
+    for k, u in s84.UNITS.items():
+        out[k] = {x: u[x] for x in ("verdict", "clauses", "flag", "note", "zero")}
+    return s84, out
+
+
+def settled_state(p):
+    """adjudicated_state(p) with Session 84's layer laid over it (owner_s84.py: the owner's answers to D66 and D67, and two
+    consistency gaps closed): (units, part_of, new_units, new_part_of, final_part_of, owner_part_of, adj_part_of), where
+    adj_part_of is the part, group or layer that read each unit before this layer."""
+    units, part_of, new_units, new_part_of, final_part_of, owner_part_of = adjudicated_state(p)
+    adj_part_of = {**part_of, **new_part_of}
+    s84, rev = settled_units(units, new_units)
+    for k, u in rev.items():
+        if k in new_units:
+            new_units[k], new_part_of[k] = u, s84.TAG
+        else:
+            units[k], part_of[k] = u, s84.TAG
+    return units, part_of, new_units, new_part_of, final_part_of, owner_part_of, adj_part_of
+
+
 def selftest():
     ok = True
 
@@ -185,6 +222,25 @@ def selftest():
     ok6 = pc.check_rule({k: a_all[k] for k in lay}, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
     check(ok5 and ok6, "every adjudicated unit has one status per v2.0 clause with estimate and source, and follows D28 (0.0 "
                        "only on a stated whole-criterion reason)", "; ".join(l for l in lines if l.startswith("FAIL"))[:200])
+    # Session 84's layer: the four owner items, CCO-PTF-CIP-SZH C3.4's two re-read clauses, Participatory Economics' C1.2b
+    with redirect_stdout(io.StringIO()):
+        s84 = pc.load("owner_s84", "owner_s84.py")
+    s_units, s_part, s_new, s_new_part, _, _, _ = settled_state(p)
+    s_all = {**s_units, **s_new}
+    lay = {k for k in s_all if s_all[k] != a_all.get(k)}
+    keys = set(s84.OWNER) | set(s84.REVISIONS) | set(s84.UNITS)
+    check(lay == keys and all({**s_part, **s_new_part}[k] == s84.TAG for k in lay)
+          and all(s_all[k]["clauses"] == [tuple(c) for c in adj.OWNER[k]["unit"]["clauses"]] for k in s84.OWNER)
+          and all(sum(a != b for a, b in zip(a_all[k]["clauses"], s_all[k]["clauses"])) == len(r["clauses"])
+                  and s_all[k]["verdict"] == a_all[k]["verdict"] for k, r in s84.REVISIONS.items()),
+          f"Session 84's layer (owner_s84.py) writes exactly its {len(keys)} units: the four owner items as the adjudication "
+          "reads them, the revised unit with only its re-read clauses changed and its verdict held, and the class reading")
+    lines = []
+    ok7 = pc.check_records(p, {k: s_all[k] for k in lay}, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    ok8 = pc.check_rule({k: s_all[k] for k in lay}, lambda c, t, d="": lines.append(f"{'PASS' if c else 'FAIL'} {t} {d}") or c)
+    check(ok7 and ok8 and all("as audited" not in c[2] for c in s_all[("CCO", "C3.4")]["clauses"]),
+          "every unit of Session 84's layer has one status per v2.0 clause with estimate and source, and follows D28; no "
+          "clause of CCO-PTF-CIP-SZH's C3.4 rests on the unit's own text", "; ".join(l for l in lines if l.startswith("FAIL"))[:200])
     print("\nFINAL PASS MODULE SELFTEST: ALL CHECKS PASSED." if ok else "\nFINAL PASS MODULE SELFTEST: CHECKS FAILED.")
     return 0 if ok else 1
 

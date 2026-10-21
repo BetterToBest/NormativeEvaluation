@@ -7,7 +7,8 @@ generator if they change anything (`adjudicate_s83.OWNER` holds the units); if y
 scores as they stand and state both readings. Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 83 (the outside review's 177 disagreements adjudicated; decisions 83.1 to 83.13) (2026-10-20). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 84 (the owner's items applied, two consistency gaps closed, the entry renamed, Report v2.0 Part I
+begun; decisions 84.1 to 84.8) (2026-10-21). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -70,6 +71,23 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
+- **Standing now (Session 84, ledger S68 and S69 done; decisions 84.1 to 84.8; `NEEC_OwnerItems_s84.md`).** The adjudicated
+  state with Session 84's layer laid over it (`owner_s84.py`, `final_pass.settled_state()`, written by `apply_owner_s84.py`):
+  the owner's answers applied as the adjudication reads them (D66: Degrowth's and Participatory Economics' C3.4 1.0 to 0.5;
+  D67: CCO-PTF-PTH-SZH-CIP's C2.2 and C5.3 1.0 to 0.5), CCO-PTF-PTH-SZH-CIP C3.4's clauses 1 and 3 sourced (the verdict holds
+  at 1.0 on decision 79.3), and Participatory Economics' C1.2b 1.0 to 0.5 by the adjudication's rule 4. **CCO-PTF-PTH-SZH-CIP
+  16.5 first alone**; Nordic Social Democracy, Market Socialism and Participatory Economics 15.5; Integral, Sovereign Wealth
+  Fund Statism and Ostrom 15.0; UBI, Degrowth, Georgism and Islamic Finance 14.0; no tier changes. First under all four
+  weighting schemes and every single-criterion drop. **On the readings alone** (the owner's raises 58.1 and 79.1 to 79.4
+  reversed) CCO-PTF-PTH-SZH-CIP stands at 14.5, fifth, and Market Socialism, Nordic Social Democracy and Participatory
+  Economics share first at 15.5 (the record, section 5, gives every decision singly). **The scores freeze at the `s84` tag**
+  (decision 83.13 moved on), except through the push-back route (S72). The Session 83 state is kept as
+  `neec_corpus_v2_s83_snapshot.json` and its two companions (`apply_adjudication_s83.py` writes them).
+- **The entry's name (decision 84.5, ledger D68, S69 done).** The entry is shown as **CCO-PTF-PTH-SZH-CIP** everywhere the
+  current state is generated (corpus `display_name`, CSV, blocks, evidence reports, site and its visual suite), through one
+  mapping, `display_names.py`. Its `key` (`CCO-PTF-CIP-SZH`) and code (`CCO`) are identifiers and do not change. **The records
+  of Sessions 1 to 83, and the generators that rebuild them, keep the old name CCO-PTF-CIP-SZH**; it names the same entry.
+  Quotations of published documents keep their words (the v1 rationales quoted in the evidence reports).
 - **Outside review adjudicated (Session 83, ledger S65 done; decisions 83.1 to 83.13; ledger D65, D66, I12; I9 settled).** Every one
   of the 177 disagreements was adjudicated on the sources by one rule (`NEEC_Adjudication_s83.md`, section 2; `adjudicate_s83.py`):
   150 hold NEEC's verdict, 17 adopt the reader's, 1 reaches a third reading, 4 go to the owner, 5 are owner-decided cells that
@@ -105,7 +123,8 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   units. It is not the pack's length alone (failures start at 60,676 characters; ok requests reach 104,048), and 35
   requests had their pack cut at 200,000 characters. Cause unknown; no key here to test. The workflow keeps retrying them
   every 4 hours at no cost, and no `DONE` is written while any is missing. Harness unchanged (v50, 140 checks). **Superseded on 2026-10-20 13:41Z:** the 105 units were rerun under D63 and `DONE` was written; see the bullet above.
-- **Harness:** v52, 145 checks (`apply_adjudication_s83.py --check` and its negative control, `weighting_s83.py`, since Session 83;
+- **Harness:** v53, 147 checks (`apply_owner_s84.py --check` and its negative control, since Session 84;
+  `apply_adjudication_s83.py --check` and its negative control, `weighting_s83.py`, since Session 83;
   `compare_outside.py` and its negative control, since Session 82; `outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
   `outside_review_runner.py --selftest`, since Session 80; `evidence_cache_s77.py` and `blind_s77.py`, since Session 77; `evidence_cache_s76.py` and `blind_s76.py`, since Session 76; `evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
@@ -117,7 +136,7 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   score, each clause's status, reading and source with the `evidence_cache/` files linked, the close call, the pass's note, and links by line to the
   pass record and the published (v1) rationale (quoted). 667 sections: 427 re-read, 69 new in v2.0, 171 held (no unit reads them; the published
   rationale is shown). Never edited by hand (check 113).
-- **Standing now** (Session 79; published provisionally on the site, `NEEC_OwnerDecisions_s79.md`, section 3). The
+- **Standing after Session 79** (superseded by Sessions 83 and 84 above; published provisionally then, `NEEC_OwnerDecisions_s79.md`, section 3). The
   Session 78 state with the owner's decisions 79.1 to 79.4 laid over it (`final_pass.owner_state()`, `apply_owner_s79.py`):
   seven cells 0.5 to 1.0, CCO-PTF-CIP-SZH C1.2a, C2.5 and C3.4, and C3.4 for Integral, Participatory Economics, Degrowth
   Economics and Ostrom-Style Commons Governance. **CCO-PTF-CIP-SZH 17.5 alone first**, Participatory Economics 17.0,

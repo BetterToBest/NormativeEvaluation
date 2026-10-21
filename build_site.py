@@ -19,6 +19,9 @@ has exactly the criteria of criteria.json and every total, failure count and tie
   python3 build_site.py --preview DIR   write a preview to DIR (never docs/) that shows the corpus's
                                         published scores whatever the gate says, under a preview banner
 
+Every displayed name passes through display_names.py, the one display-name mapping (Session 84, decision 84.5: the entry
+shown as CCO-PTF-PTH-SZH-CIP).
+
 Standard library only. The output is byte-deterministic: no dates, no random ordering.
 """
 import argparse
@@ -40,6 +43,8 @@ from urllib.parse import quote
 
 VERSION = "1.0"
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import display_names as dn  # noqa: E402
 
 
 def P(*a):
@@ -390,7 +395,8 @@ class Site:
 
     def put(self, rel, text):
         assert rel not in self.files, rel
-        self.files[rel] = text.encode("utf-8") if isinstance(text, str) else text
+        # every displayed name from the one mapping (display_names.py, decision 84.5)
+        self.files[rel] = dn.rename(text).encode("utf-8") if isinstance(text, str) else text
 
     def page(self, rel, pid, title, desc, main, data=None, jsonld=None, absolute=False):
         depth = rel.count("/")

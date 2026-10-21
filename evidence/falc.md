@@ -10,7 +10,7 @@
 
 ## How to read this report
 
-Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).
+Each criterion has one section, linked from the table below. A section gives the score (1.0 pass, 0.5 partial, 0.0 structural failure), then one row per clause of the criterion's v2.0 Pass Threshold: its status (cleared, short, not shown, out of reach, or moot), the reading, and the source, with each data file in `evidence_cache/` linked. Links at the foot of a section go straight to the line: the pass record that read the unit, for a unit re-read blind the blind re-read record whose final reading is shown, and the published (v1) rationale in the long scoring document. A cell the pass did not read says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-PTH-SZH-CIP and owner-decided cell, the section gives the reader's verdict and the adjudication's outcome (Session 83), and where the owner applied an outcome, the decision (Session 84).
 
 ## Contents
 
@@ -555,7 +555,7 @@ Criterion in v2.0: class W (wording, commentary or disclosure only). Pass Thresh
 
 **Note.** Adjudicated in Session 83 (adopt): the published text, components proven individually but not integrated, is the 0.5 band
 
-**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication adopted the reader's verdict: NEEC's own text (components proven individually, not integrated) is the 0.5 band, as for Participatory Economics, Integral and CCO-PTF-CIP-SZH. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
+**Outside review.** The outside blind reader (run r1) read this unit 0.5, against NEEC's 0.0; the adjudication adopted the reader's verdict: NEEC's own text (components proven individually, not integrated) is the 0.5 band, as for Participatory Economics, Integral and CCO-PTF-PTH-SZH-CIP. Record: [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md).
 
 Adjudicated after the outside review (Session 83): [NEEC_Adjudication_s83.md](https://github.com/BetterToBest/NormativeEvaluation/blob/main/NEEC_Adjudication_s83.md), [adjudicate_s83.py](https://github.com/BetterToBest/NormativeEvaluation/blob/main/adjudicate_s83.py)
 
