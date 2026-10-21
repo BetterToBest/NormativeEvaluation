@@ -9,8 +9,11 @@ schemes (equal; Domain 1 doubled; Domain 5 halved; C1.4 and C4.2 tripled) to the
 two tests of first place: dropping each criterion in turn, and resolving every registered close call against the leader and
 for the runner-up.
 
-Three states: Session 79 (neec_corpus_v2_s79_snapshot.json), the adjudicated scores (neec_corpus_v2.json), and the
-adjudicated scores with the four owner items applied as the adjudication reads them (adjudicate_s83.OWNER; never written).
+Four states (since Session 84): Session 79 (neec_corpus_v2_s79_snapshot.json), the adjudicated scores of Session 83
+(neec_corpus_v2_s83_snapshot.json), the scores of Session 84 with the owner's items applied (neec_corpus_v2.json), and the
+Session 84 scores on the readings alone, with the owner's raises (decisions 58.1, 79.1 to 79.4) reversed
+(apply_owner_s84.READINGS; never written). Session 83's third state, the four owner items applied as the adjudication reads
+them, is now written: it is the Session 84 state less Participatory Economics' C1.2b (decision 84.4).
 
 Usage: python3 weighting_s83.py   (prints the tables; writes nothing). Deterministic.
 """
@@ -45,17 +48,14 @@ def vectors(name):
     return {e["code"]: e["vector"] for e in load(name)["entries"]}, {e["code"]: e["display_name"] for e in load(name)["entries"]}
 
 
-def owner_applied(vec):
+def readings_alone(vec):
     with open(os.devnull, "w") as dn:
         stdout, sys.stdout = sys.stdout, dn
         try:
-            adj = pc.load("adjudicate_s83", "adjudicate_s83.py")
+            a84 = pc.load("apply_owner_s84", "apply_owner_s84.py")
         finally:
             sys.stdout = stdout
-    out = {c: dict(v) for c, v in vec.items()}
-    for (c, k), it in adj.OWNER.items():
-        out[c][k] = it["proposed"]
-    return out
+    return a84.without(vec, a84.READINGS)
 
 
 def ranked(vec, w):
@@ -67,11 +67,15 @@ def ranked(vec, w):
 
 def main():
     v79, names = vectors("neec_corpus_v2_s79_snapshot.json")
-    vadj, _ = vectors("neec_corpus_v2.json")
-    vown = owner_applied(vadj)
-    blocks = {b["code"]: b for b in load("summary_blocks_v2.json")}
-    states = [("Session 79", v79), ("Adjudicated (Session 83)", vadj), ("Adjudicated, with the four owner items", vown)]
-    print("weighting_s83.py: the four weighting schemes on the v2.0 corpus (29 criteria), three states\n")
+    vadj, _ = vectors("neec_corpus_v2_s83_snapshot.json")
+    v84, _ = vectors("neec_corpus_v2.json")
+    valone = readings_alone(v84)
+    b83 = {b["code"]: b for b in load("summary_blocks_v2_s83_snapshot.json")}
+    b84 = {b["code"]: b for b in load("summary_blocks_v2.json")}
+    states = [("Session 79", v79), ("Adjudicated (Session 83)", vadj), ("Session 84, the owner's items applied", v84),
+              ("Session 84, on the readings alone", valone)]
+    blocks_of = {"Adjudicated (Session 83)": b83}
+    print("weighting_s83.py: the four weighting schemes on the v2.0 corpus (29 criteria), four states\n")
     firsts = {}
     for label, vec in states:
         print(f"== {label}")
@@ -93,26 +97,34 @@ def main():
     print("\n== Dropping one criterion at a time (equal weights): where first place changes")
     for label, vec in states:
         w = schemes()["Equal (baseline)"]
-        base = ranked(vec, w)[2][0]
+        tot, _, order = ranked(vec, w)
+        base = [c for c in order if tot[c] == tot[order[0]]]
         moved = []
         for k in ORDER:
             ww = dict(w, **{k: 0.0})
             tot, _, order = ranked(vec, ww)
             lead = [c for c in order if tot[c] == tot[order[0]]]
-            if lead != [base]:
+            if lead != base:
                 moved.append(f"{k} ({' and '.join(lead)})")
-        print(f"  {label}: first {base} alone in {29 - len(moved)} of 29; " + ("otherwise " + ", ".join(moved) if moved else
-                                                                               "never changes"))
+        print(f"  {label}: first {' and '.join(base)}{' alone' if len(base) == 1 else ''} in {29 - len(moved)} of 29; "
+              + ("otherwise " + ", ".join(moved) if moved else "never changes"))
     print("\n== Close calls (equal weights): the leader's flagged calls all resolved down, the runner-up's all up")
     for label, vec in states[1:]:
+        blocks = blocks_of.get(label, b84)
         tot, _, order = ranked(vec, schemes()["Equal (baseline)"])
-        a, b = order[0], order[1]
+        lead = [c for c in order if tot[c] == tot[order[0]]]
+        if len(lead) > 1:
+            print(f"  {label}: first place is shared ({' and '.join(lead)} at {tot[lead[0]]:.1f}); no single leader to test")
+            continue
+        a = lead[0]
         down = sum(min(f["alternatives"] + [f["scored"]]) - f["scored"] for f in blocks[a]["flags"]
                    if vec[a].get(f["criterion"]) == f["scored"])
-        up = sum(max(f["alternatives"] + [f["scored"]]) - f["scored"] for f in blocks[b]["flags"]
-                 if vec[b].get(f["criterion"]) == f["scored"])
-        print(f"  {label}: {a} {tot[a]:.1f} to {tot[a] + down:.1f}; {b} {tot[b]:.1f} to {tot[b] + up:.1f}: "
-              + (f"{b} first" if tot[b] + up > tot[a] + down else (f"{a} first" if tot[a] + down > tot[b] + up else "tied")))
+        up = {b: sum(max(f["alternatives"] + [f["scored"]]) - f["scored"] for f in blocks[b]["flags"]
+                     if vec[b].get(f["criterion"]) == f["scored"]) for b in order if b != a and tot[b] == tot[order[1]]}
+        b = max(up, key=lambda x: (up[x], -order.index(x)))
+        print(f"  {label}: {a} {tot[a]:.1f} to {tot[a] + down:.1f}; {b} {tot[b]:.1f} to {tot[b] + up[b]:.1f}"
+              + (f" (the most of the {len(up)} level at {tot[b]:.1f})" if len(up) > 1 else "") + ": "
+              + (f"{b} first" if tot[b] + up[b] > tot[a] + down else (f"{a} first" if tot[a] + down > tot[b] + up[b] else "tied")))
     print("\nSUMMARY: " + "; ".join(f"{label}: first {' and '.join(firsts[(label, 'Equal (baseline)')][0])} by "
                                     f"{firsts[(label, 'Equal (baseline)')][1]:.1f} on equal weights" for label, _ in states))
     return 0

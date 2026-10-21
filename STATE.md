@@ -1,13 +1,13 @@
 # NEEC state
 
-**Next session (84, the prose): Opus 5.5 at high** (ledger S41, Report v2.0 Part I). Reason: the adjudication is done
-(`NEEC_Adjudication_s83.md`) and the scores freeze at the `s83` tag except the four owner items (ledger D65, D66); the prose is
-judgment work on settled scores, not contested readings, so high, not xhigh. First step: apply your answers to D65 and D66 by
-generator if they change anything (`adjudicate_s83.OWNER` holds the units); if you have not answered, write the prose on the
-scores as they stand and state both readings. Send `Continue NEEC.`
+**Next session (85, the Paper's disclosures and the limits page): Opus 5.5 at high** (ledger S42, then S44). Reason: both
+are judgment prose on settled scores, as S41 was; nothing contested remains to read, so high, not xhigh. First step: read
+`NEEC_OwnerItems_s84.md` (sections 1 and 5: the standing with and without every owner decision) and the Report draft's
+front matter. Send `Continue NEEC.`
 
 **What is true now.** Rewritten by every session before its pull request (`CLAUDE.md`); the handoff says what
-changed, this file says what holds. Last rewritten by Session 83 (the outside review's 177 disagreements adjudicated; decisions 83.1 to 83.13) (2026-10-20). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
+changed, this file says what holds. Last rewritten by Session 84 (the owner's items applied, two consistency gaps closed, the entry renamed, Report v2.0 Part I
+begun; decisions 84.1 to 84.8) (2026-10-21). It consolidates the standing notes and open items of Handoffs 43 to 58, which no longer
 need to be read for them.
 
 ## Position
@@ -70,6 +70,23 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   Groups 2.1 to 2.3 read `5a7a7b1` (v4.20) and stand as the pass's history. **Research Hub pin:** `8e8a6ba` (its later
   commits, to `1f7781d` on 2026-10-15, move only the simulation's replication page and README and the wiki index; no
   design paper changed).
+- **Standing now (Session 84, ledger S68 and S69 done; decisions 84.1 to 84.8; `NEEC_OwnerItems_s84.md`).** The adjudicated
+  state with Session 84's layer laid over it (`owner_s84.py`, `final_pass.settled_state()`, written by `apply_owner_s84.py`):
+  the owner's answers applied as the adjudication reads them (D66: Degrowth's and Participatory Economics' C3.4 1.0 to 0.5;
+  D67: CCO-PTF-PTH-SZH-CIP's C2.2 and C5.3 1.0 to 0.5), CCO-PTF-PTH-SZH-CIP C3.4's clauses 1 and 3 sourced (the verdict holds
+  at 1.0 on decision 79.3), and Participatory Economics' C1.2b 1.0 to 0.5 by the adjudication's rule 4. **CCO-PTF-PTH-SZH-CIP
+  16.5 first alone**; Nordic Social Democracy, Market Socialism and Participatory Economics 15.5; Integral, Sovereign Wealth
+  Fund Statism and Ostrom 15.0; UBI, Degrowth, Georgism and Islamic Finance 14.0; no tier changes. First under all four
+  weighting schemes and every single-criterion drop. **On the readings alone** (the owner's raises 58.1 and 79.1 to 79.4
+  reversed) CCO-PTF-PTH-SZH-CIP stands at 14.5, fifth, and Market Socialism, Nordic Social Democracy and Participatory
+  Economics share first at 15.5 (the record, section 5, gives every decision singly). **The scores freeze at the `s84` tag**
+  (decision 83.13 moved on), except through the push-back route (S72). The Session 83 state is kept as
+  `neec_corpus_v2_s83_snapshot.json` and its two companions (`apply_adjudication_s83.py` writes them).
+- **The entry's name (decision 84.5, ledger D68, S69 done).** The entry is shown as **CCO-PTF-PTH-SZH-CIP** everywhere the
+  current state is generated (corpus `display_name`, CSV, blocks, evidence reports, site and its visual suite), through one
+  mapping, `display_names.py`. Its `key` (`CCO-PTF-CIP-SZH`) and code (`CCO`) are identifiers and do not change. **The records
+  of Sessions 1 to 83, and the generators that rebuild them, keep the old name CCO-PTF-CIP-SZH**; it names the same entry.
+  Quotations of published documents keep their words (the v1 rationales quoted in the evidence reports).
 - **Outside review adjudicated (Session 83, ledger S65 done; decisions 83.1 to 83.13; ledger D65, D66, I12; I9 settled).** Every one
   of the 177 disagreements was adjudicated on the sources by one rule (`NEEC_Adjudication_s83.md`, section 2; `adjudicate_s83.py`):
   150 hold NEEC's verdict, 17 adopt the reader's, 1 reaches a third reading, 4 go to the owner, 5 are owner-decided cells that
@@ -105,7 +122,8 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   units. It is not the pack's length alone (failures start at 60,676 characters; ok requests reach 104,048), and 35
   requests had their pack cut at 200,000 characters. Cause unknown; no key here to test. The workflow keeps retrying them
   every 4 hours at no cost, and no `DONE` is written while any is missing. Harness unchanged (v50, 140 checks). **Superseded on 2026-10-20 13:41Z:** the 105 units were rerun under D63 and `DONE` was written; see the bullet above.
-- **Harness:** v52, 145 checks (`apply_adjudication_s83.py --check` and its negative control, `weighting_s83.py`, since Session 83;
+- **Harness:** v53, 147 checks (`apply_owner_s84.py --check` and its negative control, since Session 84;
+  `apply_adjudication_s83.py --check` and its negative control, `weighting_s83.py`, since Session 83;
   `compare_outside.py` and its negative control, since Session 82; `outside_kit.py --check` and its negative control, `outside_kit_check.py` and `--negative`,
   `outside_review_runner.py --selftest`, since Session 80; `evidence_cache_s77.py` and `blind_s77.py`, since Session 77; `evidence_cache_s76.py` and `blind_s76.py`, since Session 76; `evidence_cache_s75.py` and `blind_s75.py`, since Session 75; `evidence_cache_s74.py` and `blind_s74.py`, since Session 74; `evidence_cache_s73.py` and `blind_s73.py`, since Session 73; `evidence_cache_s72.py` and `blind_s72.py`, since Session 72; `evidence_cache_s71.py` and `blind_s71.py`, since Session 71; `evidence_cache_s70.py`, since Session 70; `blind_review.py --selftest`, since Session 69;
   build_evidence.py --check and its negative control, since Session 68; rescoring_s65.py, apply_pass_s65.py --check),
@@ -117,7 +135,7 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   score, each clause's status, reading and source with the `evidence_cache/` files linked, the close call, the pass's note, and links by line to the
   pass record and the published (v1) rationale (quoted). 667 sections: 427 re-read, 69 new in v2.0, 171 held (no unit reads them; the published
   rationale is shown). Never edited by hand (check 113).
-- **Standing now** (Session 79; published provisionally on the site, `NEEC_OwnerDecisions_s79.md`, section 3). The
+- **Standing after Session 79** (superseded by Sessions 83 and 84 above; published provisionally then, `NEEC_OwnerDecisions_s79.md`, section 3). The
   Session 78 state with the owner's decisions 79.1 to 79.4 laid over it (`final_pass.owner_state()`, `apply_owner_s79.py`):
   seven cells 0.5 to 1.0, CCO-PTF-CIP-SZH C1.2a, C2.5 and C3.4, and C3.4 for Integral, Participatory Economics, Degrowth
   Economics and Ostrom-Style Commons Governance. **CCO-PTF-CIP-SZH 17.5 alone first**, Participatory Economics 17.0,
@@ -242,6 +260,11 @@ provisional notice (decision 66.1; the owner confirmed d49, decision 67.1).** Th
   2.6.1 to 4.6.4 are in the record, section 4.
 
 ## Next work, in order
+
+**First: Session 85, Opus 5.5 at high** (S42, the Paper v2.0 disclosures, then S44, the limits page; judgment prose on
+settled scores). Then S73 (Report v2.0 front matter and Part II, Opus 5.5 at high), then S43 (landing, Sonnet 5.5 at
+medium, which first fills I13's template fields by generator), then S49 (the PDF, Sonnet 5.5). Items 10 to 12 below say
+more.
 
 Stage 3b, the blind re-read (decisions 69.1, 69.2), ran Sessions 70 to 78 (complete); stage 4 (the Report and Paper prose) and
 landing now run Sessions 79 to 83. Every blind-review session works the same way, on `blind_review.py` (built Session
@@ -386,19 +409,25 @@ prose (decision 79.6, `NEEC_OutsideReview_Plan_s79.md`), with Jev as a second in
     (`NEEC_Adjudication_s83.md`, `adjudicate_s83.py`, `apply_adjudication_s83.py`); 18 verdicts changed by generator; four
     readings to the owner; the outside result on every CCO-PTF-CIP-SZH and owner-decided cell published (evidence reports and
     the record, section 6); I9 settled (decision 83.10); the weighting robustness rerun on the v2 corpus (`weighting_s83.py`).
-11. **The scores freeze at the `s83` tag** (decision 83.13; `land-session.yml` creates it when this pull request is merged),
-    except the four owner items: CCO-PTF-CIP-SZH's C2.2 and C5.3 (ledger D65) and Degrowth's and Participatory Economics'
-    C3.4 (D66). The owner's half of I7 stays the owner's. Session 84's first step applies the owner's answers to D65 and D66
-    by generator (a layer like `adjudicate_s83.UNITS`, or `adjudicate_s83.OWNER`'s units moved into it), if they change
-    anything; Report and Paper v2.0 state the standing with and without the owner's decisions and items.
-12. **Sessions 84 to 88, the prose and landing**, in the ledger's order: S41 Report v2.0 Part I (Opus 5.5 at high), S42
-    Paper v2.0 disclosures (Opus 5.5 at high; the owner's decisions, the standing with and without them, the outside
-    review's result and its adjudication, with the result on every CCO-PTF-CIP-SZH and owner-decided unit, up or down), S44
-    the limits page (Opus 5.5 at high; now also the class notes of `NEEC_Adjudication_s83.md`, sections 7 to 9, and ledger
-    I12), S43 land the drafts (Sonnet 5.5 at medium: remove `provisional_note`, rebuild, harness, pull request), S49 the
-    PDF (Sonnet 5.5).
+11. **Done: Session 84** (Opus 5.5 at high; ledger S67, S68, S69 done, S41 drafted; decisions 84.1 to 84.10;
+    `NEEC_OwnerItems_s84.md`). The owner's answers to D66 and D67 applied by generator (`owner_s84.py`,
+    `apply_owner_s84.py`); CCO-PTF-PTH-SZH-CIP C3.4's clauses 1 and 3 sourced; Participatory Economics' C1.2b 0.5 by rule 4
+    (I12 item 1); the standing with and without every owner decision recorded (the record, section 5); the entry renamed
+    through `display_names.py` (S69); Report v2.0 Part I drafted, all five domains (`NEEC_Report_v2_0_Part_I.md`, its
+    scorecards generated by `build_report_v2.py`, decision 52.8; its prose by hand). **The scores freeze at the `s84` tag**
+    (decision 83.13, moved on), except through the push-back route (S72). The owner's half of I7 stays the owner's.
+12. **Sessions 85 to 88, the prose and landing**, in the ledger's order: S42 Paper v2.0 disclosures (Opus 5.5 at high; the
+    owner's decisions with the standing with and without each, from `NEEC_OwnerItems_s84.md` section 5; the conflict of
+    interest in the body; the outside review's result and its adjudication; that on the readings alone CCO-PTF-PTH-SZH-CIP
+    stands fifth at 14.5 and Market Socialism, Nordic Social Democracy and Participatory Economics share first at 15.5; the
+    name change), S44 the limits page (Opus 5.5 at high; open items (a) to (e) below, the class notes of
+    `NEEC_Adjudication_s83.md` sections 7 to 9, I12 items 2 and 3, and the clause readings that rest on a design's own text,
+    such as CCO-PTF-PTH-SZH-CIP C5.3's clauses 2 to 4), S73 the Report's front matter and Part II (Opus 5.5 at high; the
+    comparative analysis on the settled standing and `weighting_s83.py`'s four states), S43 land the drafts (Sonnet 5.5 at
+    medium: first fill I13's template fields by generator and regenerate `evidence/` and the Report's scorecards; then
+    remove `provisional_note`, rebuild, harness, pull request), S49 the PDF (Sonnet 5.5).
 
-This order is also in the ledger (`steps` S63 to S66, S41 to S44, S49, each with its own model and effort; `next`); a
+This order is also in the ledger (`steps` S42, S44, S73, S43, S49, each with its own model and effort; `next`); a
 session that finishes early, runs long, or finds a group needs splitting updates both there and here.
 
 **Open items, each folded into a session above (none changes a verdict as recorded; each is a challenge route until
@@ -425,6 +454,22 @@ condition), and clause 3 on v2.0's wording clears for every C3.4 1.0 while no ot
     (Session 67) lists the eight. The blind groups read CCO's units on their criteria under this rule (Session 75's
     C2.5 and Session 76's C2.6, C3.6 and C4.6 agreed at 0.5); Session 77's group held no CCO unit.
 14. The site's contribution route (the Contribute page) is how users challenge a score or threshold; no code change needed.
+
+## Decided (Session 84; `NEEC_OwnerItems_s84.md`, section 7)
+
+**84.1** (owner, recorded; ledger D66) Degrowth's and Participatory Economics' C3.4 to 0.5, the adjudication's reading.
+**84.2** (owner, recorded; ledger D67, superseding D65's hold under 69.4) CCO-PTF-PTH-SZH-CIP's C2.2 and C5.3 to 0.5.
+**84.3** (correction to the record) CCO-PTF-PTH-SZH-CIP C3.4's clauses 1 and 3 re-read on cited sources (the Hub's inflation
+paper, integrated framework, CIP paper and PTH charter template); both clear; the verdict holds at 1.0 on 79.3. **84.4**
+(correction under the delegation; I12 item 1) Participatory Economics' C1.2b 1.0 to 0.5 by rule 4 of 83.4. **84.5** (owner,
+recorded; D68) the entry shown as CCO-PTF-PTH-SZH-CIP through `display_names.py`; key and code unchanged; earlier records keep
+the old name. **84.6** (record) I12 items 2 and 3 to the limits page (S44). **84.7** (owner, recorded; D69 and its note)
+v2.0 lands with 23 entries; OEIAS (S70) the 24th and Claude's system (S71) the 25th, both in v2.1. **84.8** (optional,
+tooling) the layer, the generator, the Session 83 snapshots, `weighting_s83.py`'s four states, harness v53. **84.9**
+(method, optional) Report v2.0 Part I is ordered domain, criterion, entry; its scorecards are generated by
+`build_report_v2.py` from the units' readings and the published rationales (decision 52.8), checked by the harness; the prose
+is by hand. **84.10** (record; ledger I13) three of Nordic Social Democracy's stored readings (C4.3, C4.4, C5.4) carry unfilled
+template fields from `rescoring_s48.py` to `rescoring_s50.py`; scores unaffected; filled by generator before landing (S43).
 
 ## Decided (Session 83; `NEEC_Adjudication_s83.md`, section 10)
 
@@ -767,6 +812,12 @@ at `5a7a7b1` for v2.0, W9 landing by pull request, W10 chat path.
 
 ## Awaiting the owner
 
+Session 84 added: **ledger I13** (three Nordic Social Democracy readings carry unfilled template fields; fixed by generator
+in S43, nothing for the owner to decide) and **S73** (the Report's front matter and Part II, a step the plan lacked); it
+asks the owner to **review the Report v2.0 Part I draft** (`NEEC_Report_v2_0_Part_I.md`) and to note that, on the readings
+alone, CCO-PTF-PTH-SZH-CIP stands fifth (`NEEC_OwnerItems_s84.md`, section 5), which the Paper must state. The owner's
+answers to D66 to D69 are recorded (decisions 84.1, 84.2, 84.5, 84.7); D65 is superseded by D67; I12's item 1 is read
+(84.4) and items 2 and 3 go to S44 (84.6), so I12 is ready to confirm once S44 states them.
 Session 83 added: **ledger D65** (CCO-PTF-CIP-SZH's C2.2 and C5.3: the adjudication reads both 0.5; held at 1.0 under
 decision 69.4 unless you apply them), **D66** (Degrowth's and Participatory Economics' C3.4: decision 79.4's condition is not
 shown for them; kept at 1.0 unless you return them to 0.5), **I12** (three consistency items outside the adjudication's scope)
@@ -801,9 +852,12 @@ eight C4.1 design units should be re-read on v2.0's clauses (Handoff 68, section
 | — | Re-read the 8 C4.1 and 10 C2.5 pre-v2.0-clause units on v2.0's clauses? | Handoff 68, section 3, item 1 | D54 | 69.2: yes, in the blind-review pass (sessions 72, 75) |
 | S71-6 | Apply Session 71's five verdict changes at S61 (Participatory Economics alone first)? | `NEEC_BlindReview_s71.md` 6 to 8 | D55 | 72.1: apply all five as read |
 | S71-9 | Libertarian Minarchism and Centrally Planned Socialism on C4.5; C3.4's clause 3 for 16 units | `NEEC_BlindReview_s71.md` 9 | I9 | 83.10: settled; confirm in the ledger |
-| S83-6a | CCO-PTF-CIP-SZH C2.2 and C5.3 read 0.5 (held at 1.0 under 69.4) | `NEEC_Adjudication_s83.md` 6 | D65 | open |
-| S83-6b | Degrowth and Participatory Economics C3.4: decision 79.4's condition not shown | `NEEC_Adjudication_s83.md` 6 | D66 | open |
-| S83-9 | PE C1.2b; C2.2's means-tested floors; C2.1's measure | `NEEC_Adjudication_s83.md` 9 | I12 | open |
+| S83-6a | CCO-PTF-CIP-SZH C2.2 and C5.3 read 0.5 (held at 1.0 under 69.4) | `NEEC_Adjudication_s83.md` 6 | D65, D67 | 84.2: apply both at 0.5 (D67 supersedes D65) |
+| S83-6b | Degrowth and Participatory Economics C3.4: decision 79.4's condition not shown | `NEEC_Adjudication_s83.md` 6 | D66 | 84.1: return both to 0.5 |
+| S83-9 | PE C1.2b; C2.2's means-tested floors; C2.1's measure | `NEEC_Adjudication_s83.md` 9 | I12 | 84.4 (item 1, 0.5); 84.6 (items 2 and 3 to S44) |
+| S84-name | Rename the entry; OEIAS a 24th entry | `NEEC_OwnerItems_s84.md` 7 | D68 | 84.5: CCO-PTF-PTH-SZH-CIP |
+| S84-v21 | When OEIAS joins; Claude's system | `NEEC_OwnerItems_s84.md` 7 | D69 | 84.7: v2.1, with Claude's system as the 25th |
+| S84-tmpl | Unfilled template fields in three NSD readings | `NEEC_OwnerItems_s84.md` 7 (84.10) | I13 | open: fixed by generator in S43 |
 | S73-6 | Apply Session 73's eight verdict changes at S61 (Sovereign Wealth Fund Statism to Potentially Adequate)? | `NEEC_BlindReview_s73.md` 6 to 8 | D56 | 74.1: apply all eight as read |
 | S75-9 | Apply Session 75's six C2.5 verdict changes at S61 (Universal Basic Income to Partially Adequate)? | `NEEC_BlindReview_s75.md` 6 to 9 | D57 | 76.1: apply all six as read |
 | S74-7 | The Nordic finding: Nordic Social Democracy's C1.1 (clause 1 short, verdict 0.5 unchanged) | `NEEC_BlindReview_s74.md` 7 | I7 | the owner's review (item 2) |

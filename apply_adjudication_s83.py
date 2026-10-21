@@ -6,14 +6,17 @@ The outside review's reader disagreed with NEEC's verdict on 177 of 667 units (c
 each on the sources (adjudicate_s83.py; the record NEEC_Adjudication_s83.md). final_pass.adjudicated_state() lays the
 adjudication's units over the owner's decisions of Session 79; this script writes, never by hand:
 
-  neec_corpus_v2.json         the 23 entries on the 29 criteria, with the adjudication applied
-  neec_scores_v2.csv          their totals, domain sums, failures and tiers
-  summary_blocks_v2.json      the site's per-entry blocks (each changed or flagged unit's alternative is its close call)
+  neec_corpus_v2_s83_snapshot.json     the 23 entries on the 29 criteria, with the adjudication applied
+  neec_scores_v2_s83_snapshot.csv      their totals, domain sums, failures and tiers
+  summary_blocks_v2_s83_snapshot.json  the site's per-entry blocks (each changed or flagged unit's alternative is its
+                                       close call)
   NEEC_Adjudication_s83.md    the generated tables only, between the record's '<!-- generated:NAME -->' and
                               '<!-- /generated -->' markers: the 177 outcomes, the changes, the standing, the summary
 
 The Session 79 state is kept as neec_corpus_v2_s79_snapshot.json and its two companions (apply_owner_s79.py writes them);
-compare_outside.py and outside_kit.py read those, the files the pre-registration and the kit name.
+compare_outside.py and outside_kit.py read those, the files the pre-registration and the kit name. Since Session 84 this
+script writes the Session 83 state as the three *_s83_snapshot files above; apply_owner_s84.py writes the v2 files with the
+owner's items of Session 84 laid over this state.
 
 Usage: python3 apply_adjudication_s83.py           write the three files and the record's generated tables
        python3 apply_adjudication_s83.py --check   recompute and compare with the files on disk (exit 1 on any difference);
@@ -36,7 +39,8 @@ import apply_pass_s65 as ap  # noqa: E402
 import final_pass as fp  # noqa: E402
 import pass_common as pc  # noqa: E402
 
-OUT = {"corpus": "neec_corpus_v2.json", "csv": "neec_scores_v2.csv", "blocks": "summary_blocks_v2.json"}
+OUT = {"corpus": "neec_corpus_v2_s83_snapshot.json", "csv": "neec_scores_v2_s83_snapshot.csv",
+       "blocks": "summary_blocks_v2_s83_snapshot.json"}
 SNAP = {"corpus": "neec_corpus_v2_s79_snapshot.json", "csv": "neec_scores_v2_s79_snapshot.csv",
         "blocks": "summary_blocks_v2_s79_snapshot.json"}
 RECORD = "NEEC_Adjudication_s83.md"

@@ -16,7 +16,10 @@ section per criterion (29 per system) that gives:
     rescoring record that read it;
   * since Session 83, the outside blind review's verdict wherever its reader disagreed with NEEC (177 cells) and on every
     CCO-PTF-CIP-SZH and owner-decided cell, with the adjudication's outcome and a link to its record; a cell the pass held
-    at its published score but the adjudication read shows the adjudication's reading.
+    at its published score but the adjudication read shows the adjudication's reading;
+  * since Session 84, the owner's items and the two consistency readings of owner_s84.py (final_pass.settled_state), with
+    the decision that applied each and a link to its record. Every displayed name comes from display_names.py (the entry
+    shown as CCO-PTF-PTH-SZH-CIP, decision 84.5); a quotation of a published document keeps its words.
 
 Nothing in a report is typed by hand or newly judged. Every score, clause reading, source, flag and note is read from the
 files the pass already holds (criteria.json, neec_corpus_v2.json, summary_blocks_v2.json, neec_scores_v2.csv, the pass's
@@ -40,6 +43,7 @@ from urllib.parse import quote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+import display_names as dn  # noqa: E402
 import final_pass as fp  # noqa: E402
 import pass_common as pc  # noqa: E402
 import gzip  # noqa: E402
@@ -98,13 +102,17 @@ class Ctx:
         # Session 79: the owner's decisions 79.1 to 79.4 laid over them (final_pass.owner_state); `final_part` is the part or
         # blind group that read each unit before the owner's layer
         # Session 83: the adjudication of the outside review laid over the owner's state (final_pass.adjudicated_state)
-        units, part, new_units, new_part, final_part, _ = fp.adjudicated_state(self.p)
+        # Session 84: the owner's items and two consistency readings over that (final_pass.settled_state); `prev_part` is the
+        # part, group or layer that read each unit before Session 84's layer
+        units, part, new_units, new_part, final_part, _, adj_part = fp.settled_state(self.p)
         self.units = {**units, **new_units}
         self.part = {**part, **new_part}
         self.final_part = final_part
         with redirect_stdout(io.StringIO()):
             self.owner = pc.load("owner_s79", "owner_s79.py")
             self.adj = pc.load("adjudicate_s83", "adjudicate_s83.py")
+            self.s84 = pc.load("owner_s84", "owner_s84.py")
+        self.prev_part = {k: (adj_part.get(k) if t == self.s84.TAG else t) for k, t in self.part.items()}
         self.outside, self.stage_b = outside_verdicts()
         self.pass_part = {**self.p.part_of, **{k: self.last.TAG for k in self.last.NEW_UNITS}}
         self.parts = {tag: (mod, path, sess) for (tag, mod, path, sess), m in zip(pc.PARTS, self.p.mods)}
@@ -132,11 +140,27 @@ class Ctx:
         txt = f"{part_label(pt)} (Session {self.sess[pt]})"
         bt = self.final_part[(code, crit)]
         txt += f" and re-read blind in Session {self.sess[bt]}" if bt != pt else ""
-        if self.part[(code, crit)] == self.owner.TAG:
+        if self.prev_part[(code, crit)] == self.owner.TAG:
             txt += f", then raised by the owner's decision {self.owner.CHANGES[(code, crit)]['decision']} (Session {self.owner.SESSION})"
-        if self.part[(code, crit)] == self.adj.TAG:
+        if self.prev_part[(code, crit)] == self.adj.TAG:
             txt += f", then adjudicated after the outside review (Session {self.adj.SESSION})"
-        return txt
+        return txt + self.s84_in(code, crit)
+
+    def s84_in(self, code, crit):
+        """Session 84's clause: '', or how its layer read the cell."""
+        if self.part[(code, crit)] != self.s84.TAG:
+            return ""
+        k, s = (code, crit), self.s84.SESSION
+        if k in self.s84.OWNER:
+            it = self.s84.OWNER[k]
+            return (f", then lowered to the adjudication's reading by the owner's decision {it['decision']} (ledger "
+                    f"{it['ledger']}, Session {s})")
+        if k in self.s84.REVISIONS:
+            rv = self.s84.REVISIONS[k]
+            return (f", then clause{'s' if len(rv['clauses']) > 1 else ''} "
+                    f"{' and '.join(str(n) for n in rv['clauses'])} re-read on cited sources (decision {rv['decision']}, "
+                    f"Session {s})")
+        return f", then read by rule 4 of decision 83.4 (decision {self.s84.UNITS[k]['decision']}, Session {s})"
 
     def blob(self, path, line=None):
         u = f"{self.repo}/blob/main/{quote(path)}"
@@ -234,10 +258,17 @@ def outside_line(ctx, code, crit):
     owner_cell = (code, crit) in ctx.owner.CHANGES or (code, crit) == ("CCO", "C3.2")
     o = ctx.adj.OUTCOMES.get((code, crit))
     r = ctx.outside.get((code, crit))
-    if o is None and not (code == "CCO" or owner_cell) or r is None:
+    s84 = (code, crit) in ctx.s84.UNITS
+    if o is None and not (code == "CCO" or owner_cell or s84) or r is None:
         return None
     rec = f"[{ctx.adj.RECORD}]({ctx.blob(ctx.adj.RECORD)})"
-    if o is None:
+    if s84 and o is None:
+        u = ctx.s84.UNITS[(code, crit)]
+        txt = (f"The outside blind reader (run r1) read this unit {fmt(r)}, as NEEC then did, so the adjudication did not "
+               f"reach it; Session {ctx.s84.SESSION} read it {fmt(u['verdict'])} by the adjudication's rule 4 (decision "
+               f"{u['decision']}).")
+        rec += f", [{ctx.s84.RECORD}]({ctx.blob(ctx.s84.RECORD)})"
+    elif o is None:
         txt = f"The outside blind reader (run r1) read this unit {fmt(r)}, as NEEC does."
     else:
         it = ctx.adj.OWNER.get((code, crit), {})
@@ -245,6 +276,12 @@ def outside_line(ctx, code, crit):
                      if code == "CCO" else "decision 79.4, whose rule raised the cell, is the owner's")
         out = OUTCOME[o["outcome"]].format(stands=fmt(o["stands"]), neec=fmt(o["neec"]),
                                            proposed=fmt(it.get("proposed", o["stands"])), why_owner=why_owner)
+        if (code, crit) in ctx.s84.OWNER:
+            it = ctx.s84.OWNER[(code, crit)]
+            out = (f"the adjudication read it {fmt(ctx.adj.OWNER[(code, crit)]['proposed'])}, which went to the owner "
+                   f"({why_owner}); the owner applied it (decision {it['decision']}, ledger {it['ledger']}, Session "
+                   f"{ctx.s84.SESSION})")
+            rec += f", [{ctx.s84.RECORD}]({ctx.blob(ctx.s84.RECORD)})"
         txt = (f"The outside blind reader (run r1) read this unit {fmt(r)}, against NEEC's {fmt(o['neec'])}; {out}: "
                f"{linked(ctx, o['why'])}.")
     if owner_cell and (code, crit) in ctx.stage_b:
@@ -302,17 +339,29 @@ def cell(ctx, code, crit, stats):
     unit = ctx.units.get((code, crit))
     rev = c["revision"]["cls"]
     out = [f'<a id="{anchor(crit)}"></a>', f'### {crit} {c["name"]}: {fmt(v)} ({WORD[v]})', ""]
-    adjud = unit is not None and ctx.part[(code, crit)] == ctx.adj.TAG
+    adjud = unit is not None and ctx.prev_part[(code, crit)] == ctx.adj.TAG
+    late = unit is not None and ctx.part[(code, crit)] == ctx.s84.TAG
     if unit is not None and (code, crit) not in ctx.pass_part:
-        assert adjud and unit["verdict"] == v and pub is not None, f"{code} {crit}: a unit outside the pass that is not the adjudication's"
+        assert (adjud or late) and unit["verdict"] == v and pub is not None, \
+            f"{code} {crit}: a unit outside the pass that is not the adjudication's or Session 84's"
         stats["adjudicated"] += 1
-        prov = (f"No unit of the rescoring pass read this cell; {ctx.adj.LABEL} read it after the outside review disagreed "
-                f"(the adjudicated reading is shown). Published (v1) score {fmt(pub)}; v2.0 score {fmt(v)}"
+        if adjud:
+            who = f"{ctx.adj.LABEL} read it after the outside review disagreed (the adjudicated reading is shown)"
+        elif (code, crit) in ctx.s84.OWNER:
+            it = ctx.s84.OWNER[(code, crit)]
+            who = (f"{ctx.adj.LABEL} read it after the outside review disagreed, and the owner applied that reading "
+                   f"(decision {it['decision']}, ledger {it['ledger']}, Session {ctx.s84.SESSION}; the adjudicated reading is "
+                   f"shown)")
+        else:
+            who = (f"Session {ctx.s84.SESSION} read it by the adjudication's rule 4, one reading per class (decision "
+                   f"{ctx.s84.UNITS[(code, crit)]['decision']}; that reading is shown)")
+        prov = (f"No unit of the rescoring pass read this cell; {who}. Published (v1) score {fmt(pub)}; v2.0 score {fmt(v)}"
                 + (": changed." if pub != v else ": unchanged."))
     elif unit is not None:
         assert unit["verdict"] == v, f"{code} {crit}: the unit's verdict {unit['verdict']} is not the corpus score {v}"
-        blind = ctx.part[(code, crit)] in ctx.blind_record or ctx.part[(code, crit)] == ctx.owner.TAG
-        shown = " (the adjudicated reading is shown)" if adjud else (" (the final reading is shown)" if blind else "")
+        blind = ctx.prev_part[(code, crit)] in ctx.blind_record or ctx.prev_part[(code, crit)] == ctx.owner.TAG
+        shown = (" (the adjudicated reading is shown)" if adjud or (code, crit) in ctx.s84.OWNER else
+                 " (Session 84's reading is shown)" if late else (" (the final reading is shown)" if blind else ""))
         if pub is None:
             stats["new"] += 1
             prov = (f"New in v2.0: scored for the first time in {ctx.read_in(code, crit)}, "
@@ -378,13 +427,16 @@ def cell(ctx, code, crit, stats):
         btag = ctx.final_part[(code, crit)]
         if btag in ctx.blind_record:
             refs.append(f"Blind re-read record: [{ctx.blind_record[btag]}]({ctx.blob(ctx.blind_record[btag])})")
-        if ctx.part[(code, crit)] == ctx.owner.TAG:
+        if ctx.prev_part[(code, crit)] == ctx.owner.TAG:
             d = ctx.owner.CHANGES[(code, crit)]["decision"]
             refs.append(f"Applied by the owner's decision {d}: [{ctx.owner.RECORD}]({ctx.blob(ctx.owner.RECORD)}), "
                         f"[owner_s79.py]({ctx.blob('owner_s79.py')})")
-    if adjud:
+    if adjud or (code, crit) in ctx.s84.OWNER:
         refs.append(f"Adjudicated after the outside review (Session {ctx.adj.SESSION}): [{ctx.adj.RECORD}]"
                     f"({ctx.blob(ctx.adj.RECORD)}), [adjudicate_s83.py]({ctx.blob('adjudicate_s83.py')})")
+    if late:
+        refs.append(f"Applied in Session {ctx.s84.SESSION}: [{ctx.s84.RECORD}]({ctx.blob(ctx.s84.RECORD)}), "
+                    f"[owner_s84.py]({ctx.blob('owner_s84.py')})")
     if refs:
         out += ["  \n".join(refs), ""]
     if pub is not None:
@@ -433,7 +485,8 @@ def report(ctx, code, rk, stats):
             "published (v1) rationale in the long scoring document. A cell the pass did not read "
             "says so and keeps its published rationale. Close calls are scores a reasonable scorer could set differently. "
             "Where the outside blind review's reader disagreed with NEEC, and on every CCO-PTF-CIP-SZH and owner-decided "
-            "cell, the section gives the reader's verdict and the adjudication's outcome (Session 83).", "",
+            "cell, the section gives the reader's verdict and the adjudication's outcome (Session 83), and where the owner "
+            "applied an outcome, the decision (Session 84).", "",
             "## Contents", ""]
     body = []
     for d in ctx.domains:
@@ -449,7 +502,8 @@ def report(ctx, code, rk, stats):
             if unit is None:
                 basis = "held at the published score"
             elif (code, crit) not in ctx.pass_part:
-                basis = (f"adjudicated after the outside review (Session {ctx.adj.SESSION})"
+                basis = ((f"adjudicated after the outside review (Session {ctx.adj.SESSION})" if ctx.prev_part[(code, crit)]
+                          == ctx.adj.TAG else "held at the published score") + ctx.s84_in(code, crit)
                          + (f", changed from {fmt(pub)}" if pub != v else ""))
             elif pub is None:
                 basis = f"new in v2.0, scored in {ctx.read_in(code, crit)}"
@@ -469,7 +523,7 @@ def report(ctx, code, rk, stats):
 def index(ctx, rk):
     tiers = {t["name"]: i for i, t in enumerate(ctx.crit["tiers"])}
     codes = sorted(ctx.blocks, key=lambda c: (tiers[ctx.blocks[c]["summary"]["tier"]], -ctx.blocks[c]["summary"]["total"],
-                                              ctx.cfg["systems"][c]["short"].lower()))
+                                              ctx.cfg["systems"][c].get("short", ctx.entries[c]["display_name"]).lower()))
     out = ["# NEEC evidence reports", "",
            "> Generated by `build_evidence.py`; never edit by hand. The v2.0 scores are provisional until Report and Paper v2.0.",
            "",
@@ -493,8 +547,8 @@ def build():
     stats = dict(new=0, read=0, held=0, adjudicated=0, flag=0, structure=0, recline=0, rat=0, rattext=0, outside=0)
     files = {}
     for code in ctx.entries:
-        files[f"{OUTDIR}/{slug(code)}.md"] = report(ctx, code, rk, stats)
-    files[f"{OUTDIR}/index.md"] = index(ctx, rk)
+        files[f"{OUTDIR}/{slug(code)}.md"] = dn.keep_quotes(report(ctx, code, rk, stats))
+    files[f"{OUTDIR}/index.md"] = dn.keep_quotes(index(ctx, rk))
     # totals in the corpus equal the blocks' (the reports show the blocks' totals; the sections show the corpus' scores)
     for code, e in ctx.entries.items():
         t = sum(e["vector"][c] for c in ctx.order)
@@ -527,9 +581,9 @@ def main():
                 f.write(text)
     print(f"{'CHECK' if check else 'WROTE'} {len(files)} files in {OUTDIR}/: the index and {len(files) - 1} system reports")
     print(f"  {cells} criterion sections: {stats['read']} read by the pass, {stats['new']} new in v2.0, {stats['adjudicated']} read "
-          f"only by the adjudication of Session 83, {stats['held']} held at the published score")
-    print(f"  {stats['outside']} sections give the outside review's verdict (its disagreements, and every CCO-PTF-CIP-SZH and "
-          "owner-decided cell)")
+          f"only by the adjudication of Session 83 or Session 84's layer, {stats['held']} held at the published score")
+    print(f"  {stats['outside']} sections give the outside review's verdict (its disagreements, every {dn.DISPLAY['CCO']} and "
+          "owner-decided cell, and Session 84's class reading)")
     print(f"  {stats['flag']} close calls shown; {stats['rat']} published rationales linked by line, {stats['rattext']} quoted; "
           f"{stats['recline']} of {stats['read'] + stats['new']} pass units linked to their record's line")
     print(f"  {stats['structure']} units shown on the clause structure they were read on (it differs from v2.0's)")

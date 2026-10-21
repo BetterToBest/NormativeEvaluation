@@ -1,4 +1,4 @@
-weighting_s83.py: the four weighting schemes on the v2.0 corpus (29 criteria), three states
+weighting_s83.py: the four weighting schemes on the v2.0 corpus (29 criteria), four states
 
 == Session 79
   Equal (baseline)                   first CCO by 0.50; top six: CCO 60.3%, PE 58.6%, INT 55.2%, DG 53.4%, NSD 53.4%, MS 51.7%
@@ -12,24 +12,33 @@ weighting_s83.py: the four weighting schemes on the v2.0 corpus (29 criteria), t
   Feasibility discounted (D5 x0.5)   first CCO by 0.75; top six: CCO 60.4%, PE 57.5%, MS 53.8%, NSD 52.8%, INT 51.9%, DG 50.9%
   Crisis risk (C1.4, C4.2 x3)        first CCO by 1.00; top six: CCO 59.1%, PE 56.1%, MS 53.0%, NSD 53.0%, INT 51.5%, OS 51.5%
 
-== Adjudicated, with the four owner items
-  Equal (baseline)                   first CCO by 0.50; top six: CCO 56.9%, PE 55.2%, MS 53.4%, NSD 53.4%, INT 51.7%, OS 51.7%
-  Material security (D1 x2)          first CCO by 0.50; top six: CCO 57.1%, PE 55.7%, NSD 54.3%, MS 52.9%, SWF 50.0%, DG 48.6%
-  Feasibility discounted (D5 x0.5)   first CCO by 0.50; top six: CCO 57.5%, PE 55.7%, MS 53.8%, NSD 52.8%, INT 51.9%, SWF 50.0%
-  Crisis risk (C1.4, C4.2 x3)        first CCO by 0.50; top six: CCO 56.1%, PE 54.5%, MS 53.0%, NSD 53.0%, INT 51.5%, OS 51.5%
+== Session 84, the owner's items applied
+  Equal (baseline)                   first CCO by 1.00; top six: CCO 56.9%, MS 53.4%, NSD 53.4%, PE 53.4%, INT 51.7%, OS 51.7%
+  Material security (D1 x2)          first CCO by 1.00; top six: CCO 57.1%, NSD 54.3%, MS 52.9%, PE 52.9%, SWF 50.0%, DG 48.6%
+  Feasibility discounted (D5 x0.5)   first CCO by 1.00; top six: CCO 57.5%, MS 53.8%, PE 53.8%, NSD 52.8%, INT 51.9%, SWF 50.0%
+  Crisis risk (C1.4, C4.2 x3)        first CCO by 1.00; top six: CCO 56.1%, MS 53.0%, NSD 53.0%, PE 53.0%, INT 51.5%, OS 51.5%
+
+== Session 84, on the readings alone
+  Equal (baseline)                   first MS and NSD and PE by 0.50; top six: MS 53.4%, NSD 53.4%, PE 53.4%, SWF 51.7%, CCO 50.0%, INT 50.0%
+  Material security (D1 x2)          first NSD by 0.50; top six: NSD 54.3%, MS 52.9%, PE 52.9%, CCO 50.0%, SWF 50.0%, DG 48.6%
+  Feasibility discounted (D5 x0.5)   first MS and PE by 0.25; top six: MS 53.8%, PE 53.8%, NSD 52.8%, CCO 50.0%, INT 50.0%, SWF 50.0%
+  Crisis risk (C1.4, C4.2 x3)        first MS and NSD and PE by 0.50; top six: MS 53.0%, NSD 53.0%, PE 53.0%, SWF 51.5%, CCO 50.0%, INT 50.0%
 
 == First place under each scheme
   Session 79: the same entry first under all four schemes: CCO
   Adjudicated (Session 83): the same entry first under all four schemes: CCO
-  Adjudicated, with the four owner items: the same entry first under all four schemes: CCO
+  Session 84, the owner's items applied: the same entry first under all four schemes: CCO
+  Session 84, on the readings alone: first place changes with the scheme: Equal (baseline) MS and NSD and PE; Material security (D1 x2) NSD; Feasibility discounted (D5 x0.5) MS and PE; Crisis risk (C1.4, C4.2 x3) MS and NSD and PE
 
 == Dropping one criterion at a time (equal weights): where first place changes
   Session 79: first CCO alone in 24 of 29; otherwise C1.2a (CCO and PE), C2.2 (CCO and PE), C2.5 (CCO and PE), C3.2 (CCO and PE), C5.3 (CCO and PE)
   Adjudicated (Session 83): first CCO alone in 29 of 29; never changes
-  Adjudicated, with the four owner items: first CCO alone in 25 of 29; otherwise C1.2a (CCO and PE), C2.5 (CCO and PE), C3.2 (CCO and PE), C3.4 (CCO and PE)
+  Session 84, the owner's items applied: first CCO alone in 29 of 29; never changes
+  Session 84, on the readings alone: first MS and NSD and PE in 23 of 29; otherwise C1.3 (MS and NSD and PE and SWF), C1.5 (MS and PE), C3.4 (NSD and PE), C4.4 (NSD), C4.5 (MS and NSD and SWF), C5.4 (MS and PE)
 
 == Close calls (equal weights): the leader's flagged calls all resolved down, the runner-up's all up
   Adjudicated (Session 83): CCO 17.5 to 15.5; PE 16.5 to 17.0: PE first
-  Adjudicated, with the four owner items: CCO 16.5 to 14.5; PE 16.0 to 16.5: PE first
+  Session 84, the owner's items applied: CCO 16.5 to 14.5; NSD 15.5 to 17.5 (the most of the 3 level at 15.5): NSD first
+  Session 84, on the readings alone: first place is shared (MS and NSD and PE at 15.5); no single leader to test
 
-SUMMARY: Session 79: first CCO by 0.5 on equal weights; Adjudicated (Session 83): first CCO by 1.0 on equal weights; Adjudicated, with the four owner items: first CCO by 0.5 on equal weights
+SUMMARY: Session 79: first CCO by 0.5 on equal weights; Adjudicated (Session 83): first CCO by 1.0 on equal weights; Session 84, the owner's items applied: first CCO by 1.0 on equal weights; Session 84, on the readings alone: first MS and NSD and PE by 0.5 on equal weights

@@ -1,0 +1,1 @@
+NEEC_Report_v2_0_Part_I.md: 7 generated parts (D1, D2, D3, D4, D5, counts, standing) equal what the script generates
