@@ -4968,7 +4968,7 @@ fail.
 **C5.3, partial and parallel deployment.** Seven pass, the domain's most: five held at their published 1.0 (Sovereign Wealth
 Fund Statism, Ostrom, Georgism, Islamic Finance, Status Quo) and two re-read (Universal Basic Income; Universal Basic
 Services, whose sectors were adopted one at a time, as Quebec's low-fee childcare raised mothers' employment and scaled to
-all of Canada by 2022). The seven that fall from 1.0 fall on the third or fourth clause, a modelled scaling pathway or
+all of Canada by 2022). Seven of the eight that fall from 1.0 fall on the third or fourth clause, a modelled scaling pathway or
 coordination protocols in operation (Market Socialism's largest federation, Mondragon, has about 70,000 workers). CCO-PTF-PTH-SZH-CIP's
 falls by the owner's decision 84.2: its own papers put minimum viable participation at 55% to 65%, against the threshold's
 30%. Fully Automated Luxury Communism and Centrally Planned Socialism are held at 0.0.
