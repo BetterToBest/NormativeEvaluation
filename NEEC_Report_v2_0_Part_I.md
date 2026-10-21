@@ -2398,7 +2398,68 @@ Read in group 2.11 (Session 65) and re-read blind in Session 77.
 Close call: a reasonable scorer could set 0.5. 0.0: the rating's two lowest bands, consent and compulsion outside law and court
 <!-- /generated -->
 
-## Domain 3
+## Domain 3: System Resilience
+
+Six criteria: crisis response (C3.1), inflation control (C3.2), resistance to compound failures (C3.3), adaptability (C3.4),
+transparency about failure (C3.5), and, new in v2.0, productive and innovative capacity (C3.6). v1 scored 40 of the 115 cells
+it scored at 1.0; v2.0 scores ten of 138, three of them on the new criterion. Resilience is the domain where a design's
+description of a mechanism most often stood in for a record of it working, and the domain where v2.0's thresholds ask most
+often for a record.
+
+**C3.1, crisis response.** None of the seven v1 passes holds. The designs clear the first clause (a response within 72 hours)
+on their automatic stabilisers and fall on the second, support that rises one for one with the severity of the crisis:
+Nordic Social Democracy's support rises by widening coverage at fixed replacement rates, not per person. Status Quo rises
+from 0.0 to 0.5: in 2020 social benefits to households rose 35.5% while real GDP fell 2.1%, which clears the second clause,
+but the first official data showing the shock came on 26 March and 78.8% of the population is covered by a cash benefit.
+Three fail: Libertarian Minarchism; Doughnut Economics, which adopts no stabilisation instrument (down from 0.5); and Qatar,
+where 4.1% of residents are covered by a cash benefit and the migrant majority by none (down from 0.5).
+
+**C3.2, inflation control.** Two pass. CCO-PTF-PTH-SZH-CIP holds its 1.0 on the owner's decision 58.1, which reads the
+design's backing of the currency by creative output as backing what it pays; its second clause (inflation of 5% or less when
+outside inflation is 8%) is carried on the framework paper's 8% scenario (local inflation 3.2% against national 8.1%), since
+the design's published model runs no 8% scenario. China's v1 1.0 is held at the published score, with a close call toward
+0.5. Seven v1 passes fall. The decisive record is 2022: every Nordic economy ran inflation above 5% in every month from May
+to October (Denmark 11.4% in October), so Nordic Social Democracy is short on the stress clause. Centrally Planned Socialism
+falls because official prices held by decree hid inflation in queues and rationing rather than preventing it.
+
+**C3.3, compound failures.** A class W criterion; no entry passes. The four v1 passes fall: Degrowth's, Participatory
+Economics' and Integral's in the adjudication, since none models the four compound scenarios, and CCO-PTF-PTH-SZH-CIP's on its
+own model, whose one compound scenario (the Adverse environment) is milder than the criterion's. Status Quo rises from 0.0
+to 0.5 in the adjudication: on the criterion's own poverty measure the 2008 to 2009 shock did not degrade the function.
+Libertarian Minarchism and Centrally Planned Socialism are held at 0.0.
+
+**C3.4, adaptability.** Five pass, each with a close call toward 0.5, and twelve of v1's seventeen passes fall. Market
+Socialism passes on a record: Mondragon's pay-ratio cap moved from 1:3 at founding to 1:6 in 1988, a 100% range, decided by
+the cooperatives' General Assemblies, with no collapse caused by an adjustment located. CCO-PTF-PTH-SZH-CIP passes on the
+owner's decision 79.3, which reads clause 4 (zero collapses during parameter adjustments) as excluding a smaller
+allowance's direct effect, with clauses 1 and 3 sourced in Session 84 (`NEEC_OwnerItems_s84.md`, section 3). Integral and
+Ostrom-Style Commons Governance pass on the owner's decision 79.4 (clause 4 cleared where clauses 1 to 3 are cleared and no
+collapse is located); Sovereign Wealth Fund Statism passes on Norway's record (the fund's equity share moved from 40% to 70%
+between 1998 and 2017 without collapse, the 2017 decisions eleven weeks after the central bank's advice) and Alaska's
+(the 2016 dividend veto challenged in the state Supreme Court). Degrowth and Participatory Economics, raised by 79.4, return
+to 0.5 by the owner's decision 84.1: clauses that 79.4's rule needs cleared were not shown on sources.
+Nordic Social Democracy is short on the fourth: the financial liberalisation of the 1980s led to systemic banking crises in
+Finland, Norway and Sweden. Fully Automated Luxury Communism falls to 0.0 (no procedure for adjusting its rules is specified)
+and Libertarian Minarchism rises from 0.0 to 0.5.
+
+**C3.5, transparency about failure.** No entry passes; the three v1 passes fall, Centrally Planned Socialism's to 0.0 on its
+active suppression of failure information (the Kyshtym accident of 1957 acknowledged only in 1989; the famine of 1932 to 1933
+denied). China fails on the same ground (the epidemic warning punished as false information; a State Council investigation
+found deaths in the Henan floods withheld). Three mechanisms fail because a transfer or a guarantee has no channel that
+detects or corrects failures (Universal Basic Income, Universal Basic Services, MMT + Job Guarantee). Four entries rise from
+0.0 to 0.5, among them Nordic Social Democracy (implicit fossil-fuel subsidies under 1% of GDP; Sweden's audit office reports
+action on nearly 85% of its recommendations within a year).
+
+**C3.6, productive and innovative capacity (new).** Three pass, all configured economies, each with a close call toward 0.5:
+Status Quo (output per hour up 1.30% a year and total factor productivity 0.45% a year over 20 years), China (8.18% and
+3.02%) and Singapore (2.31% and 0.36%). Nordic Social Democracy is short on total factor productivity, which fell in Finland and Norway over the
+20 years. No design shows the clauses: their productivity figures are projections, and none accounts for basic-needs output
+at its own working time; the mechanisms are out of reach. So the criterion separates the measured economies from the
+designs by evidence, not by a finding that the designs would be less productive.
+
+**What the domain does not show.** The designs' resilience is read on their own models and texts; none has an
+implementation that has met a compound shock. The limits page states it, with the clause readings that rest on a design's
+own text.
 
 <!-- generated:D3 -->
 ### C3.1 Crisis Response Capacity
