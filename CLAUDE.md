@@ -46,7 +46,8 @@ request. Ask nothing the repository answers. Where the opening message carries d
 
 ## Finish: how a session lands
 
-- Work on your own `claude/` branch. Never push to main, merge into main, or create or push tags.
+- **Landing rule (Duke's instruction, Oct 28, 2026; replaces the owner-review rule above and in the paragraph at the top, NEEC stays paused until the plan reaches it):** open a pull request from a `claude/<step>-<topic>` branch and, once its checks pass, merge it yourself; Duke is not asked to review or merge, and answers ledger decisions only. If checks fail and you cannot fix them, leave the pull request open and say so in the handoff. Never push to main directly, force-push, rewrite history, or move, delete or re-create a tag.
+- Work on your own `claude/` branch. Never push to main directly or create or push tags by hand.
 - Before the last commit, `python3 run_all_checks.py > /tmp/out.txt; cmp /tmp/out.txt run_all_checks_output.txt`
   must report no difference, `NEEC_Project_Handoff_<n>.md` (n = this session's number) must exist, and `STATE.md`
   must be rewritten to the state the session leaves.
@@ -56,9 +57,8 @@ request. Ask nothing the repository answers. Where the opening message carries d
   the REST API (`gh api repos/BetterToBest/NormativeEvaluation/pulls -f title=... -f head=<branch> -f base=main -f
   body=...`). Title: the last commit's subject line. Body, short: what changed; the decisions the session made, each
   marked correction or optional; the items awaiting the owner; the suggested model and effort for the next session;
-  whether the session stopped at a limit; and, if the branch stacks on another open pull request, its number. Never
-  merge it.
-- The owner reviews and merges. `.github/workflows/harness.yml` runs every check on the pull request;
+  whether the session stopped at a limit; and, if the branch stacks on another open pull request, its number. Merge it yourself once checks pass (Landing rule).
+- On merge, `.github/workflows/harness.yml` runs every check on the pull request;
   `.github/workflows/land-session.yml` runs when it is merged, reruns every check on `main`, tags each
   `NEEC Session <n>` commit the pull request carries `s<n>`, publishes a release and requests a Pages build.
 - Workflow files (`.github/workflows/`) are changed only with the owner's approval in review: the app a session
